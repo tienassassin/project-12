@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf6fbc977f94c12a0caabb0f50307db, type: 3}
+  m_Name: Nina
+  m_EditorClassIdentifier: 
+  element: 0
+  weakness: 0300000002000000
+  race: 1
+  stats:
+    health: 120
+    pDmg: 0
+    mDmg: 18
+    eDmg: 25
+    armor: 7
+    magicResistance: 7
+    energyRegen: 23
+    speed: 20
+    critRate: 2
+    critDmg: 210
+    lifeSteal: 5
+    armorPenetration: 0
+    mRPenetration: 15
