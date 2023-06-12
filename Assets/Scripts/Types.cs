@@ -1,28 +1,27 @@
 using System;
 using UnityEngine;
 
-public enum Elements
+public enum Element
 {
     Fire,
     Ice,
     Wind,
     Thunder,
-    Cosmos,
-    Shadow,
 }
 
-public enum Races
+public enum Faction
 {
-    Human,
-    Beast,
-    Mecha,
+    Legion,
+    Dynasty,
+    Herald,
+    Cosmos,
 }
 
 public enum DamageType
 {
     Physical,
     Magical,
-    Pure
+    Pure,
 }
 
 public enum EquipmentType
@@ -43,7 +42,6 @@ public struct Stats
     public float health;
     public float pDmg;
     public float mDmg;
-    public float eDmg;
     public float armor;
     public float magicResistance;
     public float energyRegen;
@@ -63,7 +61,6 @@ public struct Stats
             health = st1.health + st2.health,
             pDmg = st1.pDmg + st2.pDmg,
             mDmg = st1.mDmg + st2.mDmg,
-            eDmg = ClampRate(st1.eDmg + st2.eDmg),
             armor = st1.armor + st2.armor,
             magicResistance = st1.magicResistance + st2.magicResistance,
             energyRegen = ClampRate(st1.energyRegen + st2.energyRegen),
@@ -73,8 +70,8 @@ public struct Stats
             critDmg = st1.critDmg + st2.critDmg,
             
             lifeSteal = st1.lifeSteal + st2.lifeSteal,
-            armorPenetration = ClampRate(st1.armorPenetration + st2.armorPenetration),
-            mRPenetration = ClampRate(st1.mRPenetration + st2.mRPenetration),
+            armorPenetration = ClampRate(st1.armorPenetration + st2.armorPenetration, 80),
+            mRPenetration = ClampRate(st1.mRPenetration + st2.mRPenetration, 80),
         };
     }
     
@@ -85,7 +82,6 @@ public struct Stats
             health = st1.health * rate,
             pDmg = st1.pDmg * rate,
             mDmg = st1.mDmg * rate,
-            eDmg = ClampRate(st1.eDmg * rate),
             armor = st1.armor * rate,
             magicResistance = st1.magicResistance * rate,
             energyRegen = ClampRate(st1.energyRegen * rate),
@@ -95,8 +91,8 @@ public struct Stats
             critDmg = st1.critDmg * rate,
             
             lifeSteal = st1.lifeSteal * rate,
-            armorPenetration = (ClampRate(st1.armorPenetration * rate)),
-            mRPenetration = ClampRate(st1.mRPenetration * rate),
+            armorPenetration = (ClampRate(st1.armorPenetration * rate, 80)),
+            mRPenetration = ClampRate(st1.mRPenetration * rate, 80),
         };
     }
 

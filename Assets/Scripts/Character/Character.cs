@@ -1,17 +1,27 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Character : MonoBehaviour, IAttacker, IDefender
 {
+    [TitleGroup("BASE DATA:")]
     [SerializeField] protected CharacterData charData;
-
-    [SerializeField]
-    private List<Equipment> equipmentList = new(); 
     
-    [ShowInInspector] private Stats stats;
+    [TitleGroup("DATA")]
+    [ShowInInspector] protected Element element;
+    [ShowInInspector] protected Faction faction;
+    [ShowInInspector] protected Stats stats;
+
+    [TitleGroup("IN-GAME STATS")]
+    [ShowInInspector] protected float curHP;
+    [ShowInInspector] protected float energy;
+    [ShowInInspector] protected float agility;
+    [ShowInInspector] protected float virtualHP;
+
+    protected bool canUseSkill;
 
     #region Public properties
 
@@ -21,43 +31,37 @@ public class Character : MonoBehaviour, IAttacker, IDefender
 
     private DamageType GetDamageType()
     {
-        switch (charData.element)
+        switch (element)
         {
-            case Elements.Fire:
-            case Elements.Ice:
-            case Elements.Shadow:
+            case Element.Fire:
+            case Element.Thunder:
                 return DamageType.Magical;
             
-            case Elements.Wind:
-            case Elements.Thunder:
-            case Elements.Cosmos:
+            case Element.Wind:
+            case Element.Ice:
                 return DamageType.Physical;
         }
 
-        return DamageType.Magical;
+        return 0;
     }
-
-    [ShowInInspector] protected float curHP;
-    [ShowInInspector] protected float energy;
-    [ShowInInspector] protected float agility;
-    [ShowInInspector] protected float virtualHP;
-    [ShowInInspector] protected float endurance;
-
-    protected bool canUseSkill;
-
+    
     private void Awake()
     {
-        stats = charData.stats;
-        equipmentList.ForEach(e=>
+        name = charData.baseData.characterName;
+        
+        element = charData.baseData.element;
+        faction = charData.baseData.faction;
+        stats = charData.baseData.stats;
+        
+        charData.equipmentList.ForEach(e=>
         {
-            stats += e.GetEquipmentStats(charData.race);
+            stats += e.GetFullStats(faction);
         });
         
         curHP = stats.health;
         energy = 0;
         agility = 0;
         virtualHP = 0;
-        endurance = 100;
         canUseSkill = false;
         
         OnRegistration();
@@ -76,12 +80,6 @@ public class Character : MonoBehaviour, IAttacker, IDefender
         agility = 0;
     }
 
-    protected void ResetEndurance()
-    {
-        endurance = 100;
-    }
-    
-
     protected void Attack(Character target)
     {
         bool isCrit = Utils.GetRandomResult(stats.critRate);
@@ -93,7 +91,6 @@ public class Character : MonoBehaviour, IAttacker, IDefender
         }
         
         DealDamage(target, dmg, dmgType);
-        DealElementalDamage(target, stats.eDmg, charData.element);
     }
 
     public void DealDamage(IDefender target, float dmgAmount, DamageType dmgType)
@@ -126,12 +123,6 @@ public class Character : MonoBehaviour, IAttacker, IDefender
         
         target.TakeDamage(dmgAmount,dmgType,penetration);
     }
-
-    public void DealElementalDamage(IDefender target, float dmgAmount, Elements element)
-    {
-        target.TakeElementalDamage(dmgAmount, element);
-    }
-
     public void TakeDamage(float dmgAmount, DamageType dmgType, float penetration)
     {
         float defense = 0;
@@ -163,18 +154,6 @@ public class Character : MonoBehaviour, IAttacker, IDefender
         }
     }
 
-    public void TakeElementalDamage(float dmgAmount, Elements element)
-    {
-        if (!charData.weakness.Contains(element) && element != Elements.Cosmos) return;
-
-        endurance -= dmgAmount;
-        if (endurance <= 0)
-        {
-            ExposeWeakness();
-            ResetEndurance();
-        }
-    }
-
     public void RegenHP(float hpAmount, bool allowOverflow = false)
     {
         float expectedHP = curHP + hpAmount;
@@ -192,8 +171,17 @@ public class Character : MonoBehaviour, IAttacker, IDefender
         Debug.Log($"{name} dead");
     }
 
-    private void ExposeWeakness()
+    private string json;
+
+    [Button]
+    public void Export()
     {
-        Debug.Log($"{name} exposed weakness");
+        json = JsonUtility.ToJson(charData);
+    }
+
+    [Button]
+    public void Import()
+    {
+        charData = JsonUtility.FromJson<CharacterData>(json);
     }
 }

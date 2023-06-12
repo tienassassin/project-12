@@ -33,13 +33,13 @@ public class Tester : MonoBehaviour
     [Button]
     public string ExportJson(Character c)
     {
-        return JsonConvert.SerializeObject(c);
+        return JsonUtility.ToJson(c);
     }
 
     [Button]
     public void ImportJson(string s)
     {
-        var c = JsonConvert.DeserializeObject<Character>(s);
+        var c = JsonUtility.FromJson<Character>(s);
         Instantiate(c);
     }
 }
