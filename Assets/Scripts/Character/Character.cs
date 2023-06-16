@@ -17,38 +17,82 @@ public class Character : MonoBehaviour, IAttacker, IDefender
 
     [TitleGroup("IN-GAME STATS")]
     [ShowInInspector] protected float curHP;
+    [ShowInInspector] protected float virtualHP;
     [ShowInInspector] protected float energy;
     [ShowInInspector] protected float agility;
-    [ShowInInspector] protected float virtualHP;
+    [ShowInInspector] protected float anger;
+    
+    [TitleGroup("DEBUFF STATUS")]
+    [ShowInInspector] protected bool hasStun;
+    [ShowInInspector] protected bool hasSilent;
+    [ShowInInspector] protected bool hasBleeding;
 
-    protected bool canUseSkill;
-
+    [ShowInInspector] private bool isUltimateReady = false;
+    
     #region Public properties
 
-    public float Speed => stats.speed;
+    public Stats Stats => stats;
+
+    public bool IsAlive => curHP > 0;
+    public bool CanTakeTurn => !hasStun;
+    public bool CanUseSkill => !hasSilent;
+    public bool HasHeal => !hasBleeding;
+    
+    public DamageType DamageType
+    {
+        get
+        {
+            switch (element)
+            {
+                case Element.Fire:
+                case Element.Thunder:
+                    return DamageType.Magical;
+
+                case Element.Wind:
+                case Element.Ice:
+                    return DamageType.Physical;
+            }
+
+            return 0;
+        }
+    }
+
+    public bool IsUltimateReady
+    {
+        get => isUltimateReady;
+        protected set
+        {
+            isUltimateReady = value;
+            if (value)
+            {
+                // todo: enable ultimate skill
+            }
+            else
+            {
+                // todo: disable ultimate skill
+            }
+        }
+    }
 
     #endregion
 
-    private DamageType GetDamageType()
-    {
-        switch (element)
-        {
-            case Element.Fire:
-            case Element.Thunder:
-                return DamageType.Magical;
-            
-            case Element.Wind:
-            case Element.Ice:
-                return DamageType.Physical;
-        }
-
-        return 0;
-    }
+    #region Callbacks
+    
+    public Action<float,float,float> OnUpdateHp;
+    public Action<float> OnUpdateAnger;
+    
+    #endregion
     
     private void Awake()
     {
         name = charData.baseData.characterName;
         
+        Initialize();
+        OnRegistration();
+    }
+
+    private void Initialize()
+    {
         element = charData.baseData.element;
         faction = charData.baseData.faction;
         stats = charData.baseData.stats;
@@ -59,100 +103,65 @@ public class Character : MonoBehaviour, IAttacker, IDefender
         });
         
         curHP = stats.health;
-        energy = 0;
-        agility = 0;
         virtualHP = 0;
-        canUseSkill = false;
+        energy = 0;
         
-        OnRegistration();
+        agility = 0;
+        anger = 0;
+
+        hasStun = false;
+        hasSilent = false;
+        hasBleeding = false;
     }
 
-    protected virtual void OnRegistration(){}
-
-    protected void ResetEnergy()
+    private void Start()
     {
-        energy = 0;
+        OnStart();
+        UpdateHp();
+        UpdateAnger();
+    }
+
+    protected virtual void OnRegistration() { }
+
+    protected virtual void OnStart() { }
+
+    #region Consume Energy/Agility/...
+    
+    protected bool HasFullEnergy()
+    {
+        if (energy < 100) return false;
+        energy -= 100;
+        return true;
     }
     
-
-    protected void ResetAgility()
+    protected bool HasFullAgility()
     {
-        agility = 0;
+        if (agility < 100) return false;
+        agility -= 100;
+        return true;
     }
 
-    protected void Attack(Character target)
+    #endregion
+
+    #region Update UI
+
+    protected void UpdateHp()
     {
-        bool isCrit = Utils.GetRandomResult(stats.critRate);
-        DamageType dmgType = GetDamageType();
-        float dmg = (dmgType == DamageType.Physical) ? stats.pDmg : stats.mDmg;
-        if (isCrit)
-        {
-            dmg *= (stats.critDmg / 100f);
-        }
-        
-        DealDamage(target, dmg, dmgType);
+        OnUpdateHp?.Invoke(curHP, virtualHP, stats.health);
     }
 
-    public void DealDamage(IDefender target, float dmgAmount, DamageType dmgType)
+    protected void UpdateAnger()
     {
-        float penetration = 0;
-        switch (dmgType)
-        {
-            case DamageType.Physical:
-                penetration = stats.armorPenetration;
-                break;
-            case DamageType.Magical:
-                penetration = stats.mRPenetration;
-                break;
-            case DamageType.Pure:
-                penetration = 0;
-                break;
-        }
-
-        energy += stats.energyRegen;
-        if (energy >= 100)
-        {
-            ResetEnergy();
-        }
-
-        agility += stats.speed;
-        if (agility >= 100)
-        {
-            ResetAgility();
-        }
-        
-        target.TakeDamage(dmgAmount,dmgType,penetration);
+        OnUpdateAnger?.Invoke(anger);
     }
-    public void TakeDamage(float dmgAmount, DamageType dmgType, float penetration)
-    {
-        float defense = 0;
-        switch (dmgType)
-        {
-            case DamageType.Physical:
-                defense = stats.armor;
-                break;
-            case DamageType.Magical:
-                defense = stats.magicResistance;
-                break;
-            case DamageType.Pure:
-                defense = 0;
-                break;
-        }
 
-        float dmgReduction = defense * (1 - penetration/100f);
-        float takenDmg = Mathf.Max(1, dmgAmount - dmgReduction);
+    #endregion
 
-        float dmgLoss = Mathf.Min(takenDmg, virtualHP);
-        takenDmg -= dmgLoss;
-        virtualHP -= dmgLoss;
-        
-        curHP -= takenDmg;
+    public virtual void Attack(Character target) { }
 
-        if (curHP <= 0)
-        {
-            Die();
-        }
-    }
+    public virtual void DealDamage(IDefender target, float dmgAmount, DamageType dmgType) { }
+
+    public virtual void TakeDamage(float dmgAmount, DamageType dmgType, float penetration) { }
 
     public void RegenHP(float hpAmount, bool allowOverflow = false)
     {
@@ -166,7 +175,7 @@ public class Character : MonoBehaviour, IAttacker, IDefender
         curHP = Mathf.Min(expectedHP, stats.health);
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         Debug.Log($"{name} dead");
     }

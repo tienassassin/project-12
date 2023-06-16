@@ -16,15 +16,15 @@ MonoBehaviour:
   element: 2
   faction: 2
   stats:
-    health: 100
+    health: 300
     pDmg: 45
     mDmg: 0
     armor: 30
     magicResistance: 26
     energyRegen: 25
     speed: 20
-    critRate: 33.3
-    critDmg: 175
+    critRate: 30
+    critDmg: 150
     lifeSteal: 5
     armorPenetration: 20
     mRPenetration: 20
