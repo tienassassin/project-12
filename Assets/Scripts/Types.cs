@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public enum Element
@@ -9,12 +10,21 @@ public enum Element
     Thunder,
 }
 
-public enum Faction
+public enum Race
 {
-    Legion,
-    Dynasty,
-    Herald,
-    Cosmos,
+    Human,
+    Beast,
+    Mecha,
+}
+
+public enum Tier
+{
+    C,
+    B,
+    A,
+    S,
+    SSS,
+    X,
 }
 
 public enum DamageType
@@ -24,54 +34,82 @@ public enum DamageType
     Pure,
 }
 
-public enum EquipmentType
+public enum Range
 {
+    Ranged,
+    Melee,
+}
+
+public enum Rarity
+{
+    Normal,
+    Rare,
+    Epic,
+    Legendary,
+    Mythic,
+    Relic,
+}
+
+public enum Slot
+{
+    Weapon,
     Headgear,
     Garment,
-    Footwear,
-    
-    LArm,
-    RArm,
-    
-    Relic,
+    Jewelry,
+}
+
+public enum Requirement
+{
+    None,
+    Physical,
+    Magical,
 }
 
 [Serializable]
 public struct Stats
 {
+    [HideInInspector]
+    public bool showFull;
+    
+    [ShowIf("@showFull || this.health > 0")]
     public float health;
-    public float pDmg;
-    public float mDmg;
+    [ShowIf("@showFull || this.damage > 0")]
+    public float damage;
+    [ShowIf("@showFull || this.armor > 0")]
     public float armor;
-    public float magicResistance;
-    public float energyRegen;
-
+    [ShowIf("@showFull || this.resistance > 0")]
+    public float resistance; 
+    
+    [ShowIf("@showFull || this.intelligence > 0")]
+    public float intelligence;
+    [ShowIf("@showFull || this.speed > 0")]
     public float speed;
-    public float critRate;
-    public float critDmg;
-
+    [ShowIf("@showFull || this.luck > 0")]
+    public float luck;
+    [ShowIf("@showFull || this.critDamage > 0")]
+    public float critDamage;
+    
+    [ShowIf("@showFull || this.lifeSteal > 0")]
     public float lifeSteal;
-    public float armorPenetration;
-    public float mRPenetration;
+    [ShowIf("@showFull || this.accuracy > 0")]
+    public float accuracy;
 
     public static Stats operator +(Stats st1, Stats st2)
     {
         return new Stats
         {
             health = st1.health + st2.health,
-            pDmg = st1.pDmg + st2.pDmg,
-            mDmg = st1.mDmg + st2.mDmg,
+            damage = st1.damage + st2.damage,
             armor = st1.armor + st2.armor,
-            magicResistance = st1.magicResistance + st2.magicResistance,
-            energyRegen = ClampRate(st1.energyRegen + st2.energyRegen),
+            resistance = st1.resistance + st2.resistance,
             
-            speed = ClampRate(st1.speed + st2.speed),
-            critRate = ClampRate(st1.critRate + st2.critRate),
-            critDmg = st1.critDmg + st2.critDmg,
+            intelligence = Clamp(st1.intelligence + st2.intelligence, 100),
+            speed = Clamp(st1.speed + st2.speed, 100),
+            luck = Clamp(st1.luck + st2.luck, 100),
+            critDamage = st1.critDamage + st2.critDamage,
             
             lifeSteal = st1.lifeSteal + st2.lifeSteal,
-            armorPenetration = ClampRate(st1.armorPenetration + st2.armorPenetration, 80),
-            mRPenetration = ClampRate(st1.mRPenetration + st2.mRPenetration, 80),
+            accuracy = Clamp(st1.accuracy + st2.accuracy, 80),
         };
     }
     
@@ -80,23 +118,21 @@ public struct Stats
         return new Stats
         {
             health = st1.health * rate,
-            pDmg = st1.pDmg * rate,
-            mDmg = st1.mDmg * rate,
+            damage = st1.damage * rate,
             armor = st1.armor * rate,
-            magicResistance = st1.magicResistance * rate,
-            energyRegen = ClampRate(st1.energyRegen * rate),
+            resistance = st1.resistance * rate,
             
-            speed = ClampRate(st1.speed * rate),
-            critRate = ClampRate(st1.critRate * rate),
-            critDmg = st1.critDmg * rate,
+            intelligence = Clamp(st1.intelligence * rate, 100),
+            speed = Clamp(st1.speed * rate, 100),
+            luck = Clamp(st1.luck * rate, 100),
+            critDamage = st1.critDamage * rate,
             
             lifeSteal = st1.lifeSteal * rate,
-            armorPenetration = (ClampRate(st1.armorPenetration * rate, 80)),
-            mRPenetration = ClampRate(st1.mRPenetration * rate, 80),
+            accuracy = Clamp(st1.accuracy * rate, 80),
         };
     }
 
-    private static float ClampRate(float value, float limit = 100)
+    private static float Clamp(float value, float limit)
     {
         return Mathf.Min(value, limit);
     }

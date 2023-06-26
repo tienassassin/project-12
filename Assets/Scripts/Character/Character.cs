@@ -12,7 +12,7 @@ public class Character : MonoBehaviour, IAttacker, IDefender
     
     [TitleGroup("DATA")]
     [ShowInInspector] protected Element element;
-    [ShowInInspector] protected Faction faction;
+    [ShowInInspector] protected Race Race;
     [ShowInInspector] protected Stats stats;
 
     [TitleGroup("IN-GAME STATS")]
@@ -38,25 +38,6 @@ public class Character : MonoBehaviour, IAttacker, IDefender
     public bool CanUseSkill => !hasSilent;
     public bool HasHeal => !hasBleeding;
     
-    public DamageType DamageType
-    {
-        get
-        {
-            switch (element)
-            {
-                case Element.Fire:
-                case Element.Thunder:
-                    return DamageType.Magical;
-
-                case Element.Wind:
-                case Element.Ice:
-                    return DamageType.Physical;
-            }
-
-            return 0;
-        }
-    }
-
     public bool IsUltimateReady
     {
         get => isUltimateReady;
@@ -94,12 +75,12 @@ public class Character : MonoBehaviour, IAttacker, IDefender
     private void Initialize()
     {
         element = charData.baseData.element;
-        faction = charData.baseData.faction;
+        Race = charData.baseData.race;
         stats = charData.baseData.stats;
         
         charData.equipmentList.ForEach(e=>
         {
-            stats += e.GetFullStats(faction);
+            stats += e.GetFullStats(Race);
         });
         
         curHP = stats.health;

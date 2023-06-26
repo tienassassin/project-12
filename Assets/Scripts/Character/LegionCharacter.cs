@@ -22,19 +22,19 @@ public class LegionCharacter : Character
     public override void Attack(Character target)
     {
         bool isCrit = Utils.GetRandomResult(anger);
-        float dmg = (DamageType == DamageType.Physical) ? stats.pDmg : stats.mDmg;
+        float dmg = stats.damage;
         if (isCrit)
         {
-            dmg *= (stats.critDmg / 100f);
+            dmg *= (stats.critDamage / 100f);
             anger = Mathf.Max(anger - 100, 0);
         }
         else
         {
-            anger += stats.critRate;
+            anger += stats.luck;
         }
         
         UpdateAnger();
-        DealDamage(target, dmg, DamageType);
+        DealDamage(target, dmg, 0);
     }
 
     public override void DealDamage(IDefender target, float dmgAmount, DamageType dmgType)
@@ -43,17 +43,17 @@ public class LegionCharacter : Character
         switch (dmgType)
         {
             case DamageType.Physical:
-                penetration = stats.armorPenetration;
+                penetration = stats.accuracy;
                 break;
             case DamageType.Magical:
-                penetration = stats.mRPenetration;
+                penetration = stats.accuracy;
                 break;
             case DamageType.Pure:
                 penetration = 0;
                 break;
         }
 
-        energy += stats.energyRegen;
+        energy += stats.intelligence;
         if (HasFullEnergy())
         {
             IsUltimateReady = true;
@@ -71,7 +71,7 @@ public class LegionCharacter : Character
                 defense = stats.armor;
                 break;
             case DamageType.Magical:
-                defense = stats.magicResistance;
+                defense = stats.resistance;
                 break;
             case DamageType.Pure:
                 defense = 0;

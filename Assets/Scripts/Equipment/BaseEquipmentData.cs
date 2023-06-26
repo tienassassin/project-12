@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Base Equipment Data", menuName = "Equipment/Base Equipment Data")]
 public class BaseEquipmentData : ScriptableObject
 {
-    public EquipmentType type;
-    public Faction faction;
+    public Slot type;
+    public Race race;
     public Stats stats;
     public float levelBonus;
     public float raceBonus;
@@ -18,7 +18,7 @@ public class EquipmentData
     public BaseEquipmentData baseData;
     public int level = 1;
     
-    public Stats GetFullStats(Faction ownerFaction)
+    public Stats GetFullStats(Race ownerRace)
     {
         var stats = baseData.stats;
         for (int i = 0; i < level; i++)
@@ -26,7 +26,7 @@ public class EquipmentData
             stats *= (1 + baseData.levelBonus);
         }
         
-        if (baseData.faction == ownerFaction)
+        if (baseData.race == ownerRace)
         {
             return stats * (1 + baseData.raceBonus);
         }

@@ -8,7 +8,7 @@ public class BaseCharacterData : ScriptableObject
 {
     public string characterName = "New Character";
     public Element element;
-    public Faction faction;
+    public Race race;
     public Stats stats;
 }
 
