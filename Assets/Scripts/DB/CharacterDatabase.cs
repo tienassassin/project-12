@@ -75,7 +75,7 @@ public class CharacterDatabase : ScriptableDatabase
 [Serializable]
 public class BaseCharacter
 {
-    [TableColumnWidth(40, Resizable = false)] 
+    [VerticalGroup("Information")] 
     public string id;
     
     [VerticalGroup("Information")] 

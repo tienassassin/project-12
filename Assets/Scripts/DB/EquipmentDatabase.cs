@@ -50,7 +50,7 @@ public class EquipmentDatabase : ScriptableDatabase
         e.slot = slot;
         e.requirement = req;
         e.race = race;
-        e.raceBonus = Utils.Parse<float>((string)jObject["race bonus"]);
+        e.raceBonus = Utils.Parse<float>((string)jObject["race bonus(%)"]) / 100f;
         e.stats = new Stats
         {
             showFull = false,
@@ -71,7 +71,7 @@ public class EquipmentDatabase : ScriptableDatabase
 [Serializable]
 public class BaseEquipment
 {
-    [TableColumnWidth(40, Resizable = false)] 
+    [VerticalGroup("Information")]
     public string id;
     
     [VerticalGroup("Information")] 

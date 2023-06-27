@@ -72,8 +72,8 @@ public class Database : MonoBehaviour
 
     IEnumerator FetchLevelBonusLegend()
     {
-        var cUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/CharacterLevelBonus");
-        var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/EquipmentLevelBonus");
+        var cUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/CharacterGrowth");
+        var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/EquipmentGrowth");
         var dataC = "";
         yield return cUwr.SendWebRequest();
         if (cUwr.result != UnityWebRequest.Result.Success)

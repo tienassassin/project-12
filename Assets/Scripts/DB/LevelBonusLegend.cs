@@ -50,7 +50,7 @@ public class LevelBonusLegend : ScriptableDatabase
         c = new CharacterLevelBonus
         {
             tier = tier,
-            bonus = Utils.Parse<float>((string)jObject["bonus"])
+            growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
         };
     }
     
@@ -61,7 +61,7 @@ public class LevelBonusLegend : ScriptableDatabase
         e = new EquipmentLevelBonus
         {
             rarity = rarity,
-            bonus = Utils.Parse<float>((string)jObject["bonus"])
+            growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
         };
     }
     
@@ -72,12 +72,12 @@ public class LevelBonusLegend : ScriptableDatabase
 public struct CharacterLevelBonus
 {
     public Tier tier;
-    public float bonus;
+    public float growth;
 }
 
 [Serializable]
 public struct EquipmentLevelBonus
 {
     public Rarity rarity;
-    public float bonus;
+    public float growth;
 }
