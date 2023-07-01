@@ -14,27 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charLvlBonusList:
   - tier: 0
-    bonus: 0.05
+    growth: 0.05
+  - tier: 0
+    growth: 0.055
   - tier: 1
-    bonus: 0.055
+    growth: 0.06
   - tier: 2
-    bonus: 0.06
+    growth: 0.065
   - tier: 3
-    bonus: 0.065
-  - tier: 4
-    bonus: 0.075
+    growth: 0.075
   - tier: 5
-    bonus: 0.099
+    growth: 0.0999
   eqmLvlBonusList:
   - rarity: 0
-    bonus: 0.2
+    growth: 0.2
   - rarity: 1
-    bonus: 0.25
+    growth: 0.25
   - rarity: 2
-    bonus: 0.3
+    growth: 0.3
   - rarity: 3
-    bonus: 0.35
+    growth: 0.35
   - rarity: 4
-    bonus: 0.5
+    growth: 0.5
   - rarity: 5
-    bonus: 0.75
+    growth: 0.75

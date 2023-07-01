@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Database : MonoBehaviour
+public class Database : Singleton<Database>
 {
     [SerializeField] private string apiUrl = "https://opensheet.elk.sh/";
     [SerializeField] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
@@ -14,8 +14,9 @@ public class Database : MonoBehaviour
     [SerializeField] private ScriptableDatabase statsDesc;
     [SerializeField] private ScriptableDatabase lvlBonusLeg;
 
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
         FetchData();
     }
 
