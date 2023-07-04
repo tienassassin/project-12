@@ -11,7 +11,7 @@ public class StatsDescriptions : ScriptableDatabase
     [TableList]
     public List<StatDesc> statList = new();
 
-    private Dictionary<string, StatDesc> cachedDic = new();
+    private Dictionary<string, StatDesc> cachedDict = new();
 
     public override void Import(params string[] data)
     {
@@ -41,9 +41,9 @@ public class StatsDescriptions : ScriptableDatabase
 
     public StatDesc GetStatDescription(string stat)
     {
-        cachedDic.TryAdd(stat, statList.Find(s => s.stat == stat));
-        if (cachedDic[stat] == null) Debug.LogError($"Stat {stat} is not defined");
-        return cachedDic[stat];
+        cachedDict.TryAdd(stat, statList.Find(s => s.stat == stat));
+        if (cachedDict[stat] == null) Debug.LogError($"Stat {stat} is not defined");
+        return cachedDict[stat];
     }
     
     

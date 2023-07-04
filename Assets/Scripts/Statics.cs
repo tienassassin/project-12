@@ -39,7 +39,7 @@ public static class Utils
 
 public static class StaticData
 {
-    private static Dictionary<Element, string> elementDescDic = new()
+    private static Dictionary<Element, string> elementDescDict = new()
     {
         [Element.Fire] = "Hỏa",
         [Element.Ice] = "Băng",
@@ -49,7 +49,7 @@ public static class StaticData
 
     public static string GetElementDescription(Element e)
     {
-        if (elementDescDic.ContainsKey(e)) return elementDescDic[e];
+        if (elementDescDict.ContainsKey(e)) return elementDescDict[e];
         Debug.LogError($"Element {e} is not defined!!!");
         return "";
     }
