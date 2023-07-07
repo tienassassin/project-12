@@ -11,6 +11,6 @@ public class QuestUI : MonoBehaviour
 
     public static void Hide()
     {
-        UIManager.Instance.ShowUI(nameof(QuestUI));
+        UIManager.Instance.HideUI(nameof(QuestUI));
     }
 }

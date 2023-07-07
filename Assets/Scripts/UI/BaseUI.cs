@@ -7,7 +7,7 @@ public abstract class BaseUI : DuztineBehavior
 {
     [SerializeField] private Canvas canvas;
     
-    protected void Awake()
+    protected virtual void Awake()
     {
         canvas.worldCamera = Camera.main;
     }

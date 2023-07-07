@@ -652,7 +652,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7333686920401229090}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4602463017395544677}
+        m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
+        m_MethodName: OnClickQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3282562775137842857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: characters
+  m_text: valhalla
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1431,7 +1443,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: team
+  m_text: line up
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1710,7 +1722,7 @@ GameObject:
   - component: {fileID: 7333969000825632269}
   - component: {fileID: 1862762230458838814}
   m_Layer: 0
-  m_Name: team
+  m_Name: line-up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1818,7 +1830,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7333969000825632269}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4602463017395544677}
+        m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
+        m_MethodName: OnClickLineUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6615423981328018553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1893,7 +1917,7 @@ GameObject:
   - component: {fileID: 7506379130691884980}
   - component: {fileID: 7241593883689945547}
   m_Layer: 0
-  m_Name: characters
+  m_Name: valhalla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2001,7 +2025,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7506379130691884980}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4602463017395544677}
+        m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
+        m_MethodName: OnClickValhalla
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6773499395202174173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,7 +2330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8262742464944773373}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4602463017395544677}
+        m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
+        m_MethodName: OnClickInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7844873689167230042
 GameObject:
   m_ObjectHideFlags: 0

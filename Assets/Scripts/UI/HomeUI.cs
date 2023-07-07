@@ -7,7 +7,7 @@
 
     public static void Hide()
     {
-        UIManager.Instance.ShowUI(nameof(HomeUI));
+        UIManager.Instance.HideUI(nameof(HomeUI));
     }
 
     private void OpenValhalla()
@@ -32,22 +32,22 @@
 
     #region Buttons
 
-    private void OnClickValhallaBtn()
+    public void OnClickValhalla()
     {
         OpenValhalla();
     }
 
-    private void OnClickLineUpBtn()
+    public void OnClickLineUp()
     {
         OpenLineUp();
     }
 
-    private void OnClickQuestBtn()
+    public void OnClickQuest()
     {
         OpenQuest();
     }
 
-    private void OnClickInventory()
+    public void OnClickInventory()
     {
         OpenInventory();
     }

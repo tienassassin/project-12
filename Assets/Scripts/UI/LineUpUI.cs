@@ -11,6 +11,6 @@ public class LineUpUI : MonoBehaviour
 
     public static void Hide()
     {
-        UIManager.Instance.ShowUI(nameof(LineUpUI));
+        UIManager.Instance.HideUI(nameof(LineUpUI));
     }
 }

@@ -11,6 +11,6 @@ public class InventoryUI : MonoBehaviour
 
     public static void Hide()
     {
-        UIManager.Instance.ShowUI(nameof(InventoryUI));
+        UIManager.Instance.HideUI(nameof(InventoryUI));
     }
 }

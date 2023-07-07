@@ -19,11 +19,11 @@ public enum Race
 
 public enum Tier
 {
+    D,
     C,
     B,
     A,
     S,
-    SSS,
     X,
 }
 
