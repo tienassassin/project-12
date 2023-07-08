@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class ValhallaUI : BaseUI
@@ -33,19 +35,31 @@ public class ValhallaUI : BaseUI
 
         foreach (var opt in elementFilterOptions)
         {
-            opt.SetEvent((o) =>
-            {
-                opt.SetEvent(AddOptionToFilter);
-            });
+            opt.SetEvent(AddOptionToFilter);
         }
 
         foreach (var opt in raceFilterOptions)
         {
-            opt.SetEvent((o) =>
-            {
-                opt.SetEvent(AddOptionToFilter);
-            });
+            opt.SetEvent(AddOptionToFilter);
         }
+    }
+
+    private void OnEnable()
+    {
+        tierOptList.Clear();
+        elementOptList.Clear();
+        raceOptList.Clear();
+        
+        Refresh();
+    }
+
+    private void Refresh()
+    {
+        bool acpAllTier = tierOptList.Count < 1;
+        bool acpAllElement = elementOptList.Count < 1;
+        bool acpAllRace = raceOptList.Count < 1;
+        
+        //todo: refresh characters based on sort/filter
     }
 
     private void AddOptionToFilter(object o)
@@ -72,16 +86,41 @@ public class ValhallaUI : BaseUI
                 break;
             default:
                 Debug.LogError($"Object {o} is not a valid filter option");
-                break;
+                return;
         }
+        
+        Refresh();
+    }
+
+    private void SortByLevel(bool asc)
+    {
+        //todo: sort characters
+        
+        Refresh();
+    }
+
+    private void SortByTier(bool asc)
+    {
+        //todo: sort characters
+        
+        Refresh();
     }
 
     #region Buttons
 
     public void OnClickBack()
     {
-        Debug.Log("back");
         ValhallaUI.Hide();
+    }
+
+    public void OnClickSortByType(bool ascending)
+    {
+        SortByLevel(ascending);
+    }
+
+    public void OnClickSortByTier(bool ascending)
+    {
+        SortByTier(ascending);
     }
 
     #endregion
