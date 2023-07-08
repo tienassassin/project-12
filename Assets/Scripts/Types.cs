@@ -65,6 +65,18 @@ public enum Requirement
     Magical,
 }
 
+public enum Effect
+{
+    //buff
+    Invincible,
+    Undying,
+    
+    //debuff
+    Stun,
+    Silent,
+    Bleeding,
+}
+
 [Serializable]
 public struct Stats
 {
@@ -110,6 +122,25 @@ public struct Stats
             
             lifeSteal = st1.lifeSteal + st2.lifeSteal,
             accuracy = Clamp(st1.accuracy + st2.accuracy, 80),
+        };
+    }
+    
+    public static Stats operator -(Stats st1, Stats st2)
+    {
+        return new Stats
+        {
+            health = st1.health - st2.health,
+            damage = st1.damage - st2.damage,
+            armor = st1.armor + st2.armor,
+            resistance = st1.resistance + st2.resistance,
+            
+            intelligence = st1.intelligence - st2.intelligence,
+            speed = st1.speed - st2.speed,
+            luck = st1.luck - st2.luck,
+            critDamage = st1.critDamage - st2.critDamage,
+            
+            lifeSteal = st1.lifeSteal - st2.lifeSteal,
+            accuracy = st1.accuracy - st2.accuracy,
         };
     }
     

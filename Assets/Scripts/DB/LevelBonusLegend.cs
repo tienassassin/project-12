@@ -9,74 +9,72 @@ using UnityEngine;
 public class LevelBonusLegend : ScriptableDatabase
 {
     [TableList]
-    public List<CharacterLevelBonus> charLvlBonusList = new();
+    public List<CharacterGrowth> chrGrowthList = new();
 
     [TableList]
-    public List<EquipmentLevelBonus> eqmLvlBonusList = new();
+    public List<EquipmentGrowth> eqmGrowthList = new();
 
     public override void Import(params string[] data)
     {
         GUIUtility.systemCopyBuffer = data[0] + "\n" + data[1];
         
-        charLvlBonusList = new List<CharacterLevelBonus>();
-        eqmLvlBonusList = new List<EquipmentLevelBonus>();
+        chrGrowthList = new List<CharacterGrowth>();
+        eqmGrowthList = new List<EquipmentGrowth>();
 
         var jArrayChar = JArray.Parse(data[0]);
         foreach (var jToken in jArrayChar)
         {
-            ConvertDataFromJObject((JObject)jToken, out CharacterLevelBonus c);
-            charLvlBonusList.Add(c);
+            ConvertDataFromJObject((JObject)jToken, out CharacterGrowth c);
+            chrGrowthList.Add(c);
         }
         
         var jArrayEqm = JArray.Parse(data[1]);
         foreach (var jToken in jArrayEqm)
         {
-            ConvertDataFromJObject((JObject)jToken, out EquipmentLevelBonus e);
-            eqmLvlBonusList.Add(e);
+            ConvertDataFromJObject((JObject)jToken, out EquipmentGrowth e);
+            eqmGrowthList.Add(e);
         }
     }
 
     [Button]
     protected override void DeleteAll()
     {
-        charLvlBonusList.Clear();
-        eqmLvlBonusList.Clear();
+        chrGrowthList.Clear();
+        eqmGrowthList.Clear();
     }
 
-    private void ConvertDataFromJObject(JObject jObject, out CharacterLevelBonus c)
+    private void ConvertDataFromJObject(JObject jObject, out CharacterGrowth c)
     {
         Enum.TryParse((string)jObject["tier"], out Tier tier);
         
-        c = new CharacterLevelBonus
+        c = new CharacterGrowth
         {
             tier = tier,
             growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
         };
     }
     
-    private void ConvertDataFromJObject(JObject jObject, out EquipmentLevelBonus e)
+    private void ConvertDataFromJObject(JObject jObject, out EquipmentGrowth e)
     {
         Enum.TryParse((string)jObject["rarity"], out Rarity rarity);
         
-        e = new EquipmentLevelBonus
+        e = new EquipmentGrowth
         {
             rarity = rarity,
             growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
         };
     }
-    
-    
 }
 
 [Serializable]
-public struct CharacterLevelBonus
+public struct CharacterGrowth
 {
     public Tier tier;
     public float growth;
 }
 
 [Serializable]
-public struct EquipmentLevelBonus
+public struct EquipmentGrowth
 {
     public Rarity rarity;
     public float growth;

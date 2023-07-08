@@ -9,10 +9,10 @@ public class Database : Singleton<Database>
 {
     [SerializeField] private string apiUrl = "https://opensheet.elk.sh/";
     [SerializeField] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
-    [SerializeField] private ScriptableDatabase charDB;
-    [SerializeField] private ScriptableDatabase eqmDB;
-    [SerializeField] private ScriptableDatabase statsDesc;
-    [SerializeField] private ScriptableDatabase lvlBonusLeg;
+    [SerializeField] private CharacterDatabase charDB;
+    [SerializeField] private EquipmentDatabase eqmDB;
+    [SerializeField] private StatsDescriptions statsDesc;
+    [SerializeField] private LevelBonusLegend lvlBonusLeg;
 
     protected override void Awake()
     {
@@ -98,5 +98,27 @@ public class Database : Singleton<Database>
         }
 
         lvlBonusLeg.Import(dataC, dataE);
+    }
+    
+    public float GetCharacterGrowth(Tier t)
+    {
+        return lvlBonusLeg.chrGrowthList.Find(x => x.tier == t).growth;
+    }
+    public float GetEquipmentGrowth(Rarity r)
+    {
+        return lvlBonusLeg.eqmGrowthList.Find(x => x.rarity == r).growth;
+    }
+}
+
+public static class DatabaseExtension
+{
+    public static float GetCharacterGrowth(this BaseCharacter chr)
+    {
+        return Database.Instance.GetCharacterGrowth(chr.tier);
+    }
+
+    public static float GetEquipmentGrowth(this BaseEquipment eqm)
+    {
+        return Database.Instance.GetEquipmentGrowth(eqm.rarity);
     }
 }

@@ -9,11 +9,11 @@ using Random = UnityEngine.Random;
 
 public class Tester : MonoBehaviour
 {
-    public List<Character> leftTeam;
-    public List<Character> rightTeam;
+    public List<CharacterInBattle> leftTeam;
+    public List<CharacterInBattle> rightTeam;
 
     [ShowInInspector]
-    public Queue<Character> turn = new();
+    public Queue<CharacterInBattle> turn = new();
 
     public bool isEndBattle = false;
 
@@ -25,9 +25,9 @@ public class Tester : MonoBehaviour
     [Button]
     public void SetUpTurnQueue()
     {
-        var mergedList = new List<Character>(leftTeam);
+        var mergedList = new List<CharacterInBattle>(leftTeam);
         mergedList.AddRange(rightTeam);
-        mergedList.Sort((c1, c2) => c1.Stats.speed.CompareTo(c2.Stats.speed));
+        // mergedList.Sort((c1, c2) => c1.Stats.speed.CompareTo(c2.Stats.speed));
         mergedList.ForEach(c =>
         {
             turn.Enqueue(c);
@@ -84,24 +84,24 @@ public class Tester : MonoBehaviour
         }
     }
 
-    private Character GetRandomTarget(List<Character> enemyTeam)
+    private CharacterInBattle GetRandomTarget(List<CharacterInBattle> enemyTeam)
     {
         var aliveEnemyList = GetAliveCharacterList(enemyTeam);
         if (aliveEnemyList.Count < 1) return null;
         return aliveEnemyList[Random.Range(0, aliveEnemyList.Count)];
     }
 
-    private List<Character> GetAllyTeam(Character c)
+    private List<CharacterInBattle> GetAllyTeam(CharacterInBattle c)
     {
         return leftTeam.Contains(c) ? leftTeam : rightTeam;
     }
 
-    private List<Character> GetEnemyTeam(Character c)
+    private List<CharacterInBattle> GetEnemyTeam(CharacterInBattle c)
     {
         return leftTeam.Contains(c) ? rightTeam : leftTeam;
     }
 
-    private List<Character> GetAliveCharacterList(List<Character> team)
+    private List<CharacterInBattle> GetAliveCharacterList(List<CharacterInBattle> team)
     {
         return team.FindAll(c => c.IsAlive);
     }
