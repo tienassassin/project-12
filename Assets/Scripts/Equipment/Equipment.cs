@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class Equipment : DuztineBehavior
+public class Equipment : DuztineBehaviour
 {
     [TitleGroup("BASE DATA")]
     protected BaseEquipment baseEqm;

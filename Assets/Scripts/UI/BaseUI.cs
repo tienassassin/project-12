@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseUI : DuztineBehavior
+public abstract class BaseUI : DuztineBehaviour
 {
     [SerializeField] private Canvas canvas;
     

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DuztineBehavior : MonoBehaviour
+public class DuztineBehaviour : MonoBehaviour
 {
     private Transform cachedTransform;
 

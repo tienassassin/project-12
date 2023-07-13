@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class Character : DuztineBehavior
+public class Character : DuztineBehaviour
 {
     [Title("BASE DATA")]
     protected BaseCharacter baseChr;
