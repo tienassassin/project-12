@@ -42,7 +42,7 @@ public class StatsDescriptions : ScriptableDatabase
     public StatDesc GetStatDescription(string stat)
     {
         cachedDict.TryAdd(stat, statList.Find(s => s.stat == stat));
-        if (cachedDict[stat] == null) Debug.LogError($"Stat {stat} is not defined");
+        if (cachedDict[stat] == null) EditorLog.Error($"Stat {stat} is not defined");
         return cachedDict[stat];
     }
     

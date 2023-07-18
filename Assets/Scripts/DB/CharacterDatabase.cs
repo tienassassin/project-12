@@ -36,8 +36,10 @@ public class CharacterDatabase : ScriptableDatabase
             c = null;
             return;
         }
+
+        string tierValue = Utils.GetNormalizedString((string)jObject["tier"]);
         
-        Enum.TryParse((string)jObject["tier"], out Tier tier);
+        Enum.TryParse(tierValue, out Tier tier);
         Enum.TryParse((string)jObject["element"], out Element element);
         Enum.TryParse((string)jObject["race"], out Race race);
         Enum.TryParse((string)jObject["damage type"], out DamageType dmgType);

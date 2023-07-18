@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Text.RegularExpressions;
 using Sirenix.Serialization;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -34,7 +35,21 @@ public static class Utils
         }
         
         return default;
-    } 
+    }
+
+    public static string GetNormalizedString(string raw)
+    {
+        string pattern = @"^\d+_([a-zA-Z]+)$";
+        
+        Match match = Regex.Match(raw, pattern);
+        if (match.Success)
+        {
+            return match.Groups[1].Value;
+        }
+        
+        EditorLog.Error($"{raw} not match pattern {pattern}");
+        return raw;
+    }
 }
 
 public static class StaticData
@@ -50,7 +65,7 @@ public static class StaticData
     public static string GetElementDescription(Element e)
     {
         if (elementDescDict.ContainsKey(e)) return elementDescDict[e];
-        Debug.LogError($"Element {e} is not defined!!!");
+        EditorLog.Error($"Element {e} is not defined!!!");
         return "";
     }
 }

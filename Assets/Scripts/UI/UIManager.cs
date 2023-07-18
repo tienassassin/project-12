@@ -28,7 +28,7 @@ public class UIManager : Singleton<UIManager>
             }
             else
             {
-                Debug.Log($"UI {key} is undefined!");
+                EditorLog.Error($"UI {key} is undefined!");
             } 
         }
 

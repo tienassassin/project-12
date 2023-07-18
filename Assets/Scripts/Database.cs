@@ -35,7 +35,7 @@ public class Database : Singleton<Database>
         yield return uwr.SendWebRequest();
         if (uwr.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogError(uwr.error);
+            EditorLog.Error(uwr.error);
         }
         else
         {
@@ -49,7 +49,7 @@ public class Database : Singleton<Database>
         yield return uwr.SendWebRequest();
         if (uwr.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogError(uwr.error);
+            EditorLog.Error(uwr.error);
         }
         else
         {
@@ -63,7 +63,7 @@ public class Database : Singleton<Database>
         yield return uwr.SendWebRequest();
         if (uwr.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogError(uwr.error);
+            EditorLog.Error(uwr.error);
         }
         else
         {
@@ -79,7 +79,7 @@ public class Database : Singleton<Database>
         yield return cUwr.SendWebRequest();
         if (cUwr.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogError(cUwr.error);
+            EditorLog.Error(cUwr.error);
         }
         else
         {
@@ -90,7 +90,7 @@ public class Database : Singleton<Database>
         yield return eUwr.SendWebRequest();
         if (eUwr.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogError(eUwr.error);
+            EditorLog.Error(eUwr.error);
         }
         else
         {

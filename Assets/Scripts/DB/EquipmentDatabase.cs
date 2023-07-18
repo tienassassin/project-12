@@ -36,8 +36,10 @@ public class EquipmentDatabase : ScriptableDatabase
             e = null;
             return;
         }
+
+        string rarityValue = Utils.GetNormalizedString((string)jObject["rarity"]);
         
-        Enum.TryParse((string)jObject["rarity"], out Rarity rarity);
+        Enum.TryParse(rarityValue, out Rarity rarity);
         Enum.TryParse((string)jObject["race"], out Race race);
         Enum.TryParse((string)jObject["slot"], out Slot slot);
         Enum.TryParse((string)jObject["requirement"], out Requirement req);

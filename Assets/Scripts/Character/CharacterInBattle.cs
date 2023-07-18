@@ -142,6 +142,6 @@ public class CharacterInBattle : Character, IAttacker, IDefender
 
     protected virtual void Die()
     {
-        Debug.Log($"{name} dead");
+        EditorLog.Message($"{name} dead");
     }
 }

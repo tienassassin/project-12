@@ -85,7 +85,7 @@ public class ValhallaUI : BaseUI
                 raceOptList.Add(r);
                 break;
             default:
-                Debug.LogError($"Object {o} is not a valid filter option");
+                EditorLog.Error($"Object {o} is not a valid filter option");
                 return;
         }
         
