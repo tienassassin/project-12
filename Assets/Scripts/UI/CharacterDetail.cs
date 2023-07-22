@@ -66,7 +66,7 @@ public class CharacterDetail : DuztineBehaviour
 
         foreach (var statDetail in statDetails)
         {
-            statDetail.Init(baseStats, nonEqmStats, overallStats);
+            statDetail.Init(baseStats, nonEqmStats, overallStats, baseChr.damageType);
         }
         
         var stats = baseChr.stats;

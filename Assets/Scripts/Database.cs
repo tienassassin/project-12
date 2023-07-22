@@ -179,6 +179,16 @@ public class Database : Singleton<Database>
     {
         return expDatabase.levelMax;
     }
+
+    public string GetStatDescription(string key)
+    {
+        return statsDesc.GetStatDescription(key).description;
+    }
+
+    public float GetStatLimit(string key)
+    {
+        return statsDesc.GetStatDescription(key).limit;
+    }
 }
 
 public static class DatabaseExtension

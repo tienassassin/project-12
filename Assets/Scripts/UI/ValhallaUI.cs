@@ -56,6 +56,8 @@ public class ValhallaUI : BaseUI
         {
             cardList.Add(child.gameObject.GetComponent<CharacterCard>());
         }
+        
+        charDetail.gameObject.SetActive(false);
     }
 
     private void OnEnable()
