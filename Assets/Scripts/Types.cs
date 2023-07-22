@@ -77,6 +77,13 @@ public enum Effect
     Bleeding,
 }
 
+public enum SortType
+{
+    None,
+    Ascending,
+    Descending,
+}
+
 [Serializable]
 public struct Stats
 {

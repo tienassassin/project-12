@@ -47,17 +47,17 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   chrSaveDataList:
   - chrId: t763l
-    totalExp: 101
+    totalExp: 12000
     curHp: 20
     energy: 20
     eqmList: []
   - chrId: c616s
-    totalExp: 1000
+    totalExp: 7000
     curHp: 50
     energy: 0
     eqmList: []
   - chrId: h811y
-    totalExp: 7000
+    totalExp: 1000
     curHp: 90
     energy: 50
     eqmList: []

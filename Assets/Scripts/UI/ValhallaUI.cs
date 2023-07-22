@@ -18,6 +18,8 @@ public class ValhallaUI : BaseUI
     private List<Tier> tierOptList = new();
     private List<Element> elementOptList = new();
     private List<Race> raceOptList = new();
+    private SortType lvSort;
+    private SortType tierSort;
 
     private List<CharacterCard> cardList = new();
     private List<CharacterSaveData> chrSaveDataList = new();
@@ -68,10 +70,13 @@ public class ValhallaUI : BaseUI
         elementOptList.Clear();
         raceOptList.Clear();
 
+        lvSort = SortType.Descending;
+        tierSort = SortType.None;
+
         chrSaveDataList = UserManager.Instance.chrSaveDataList;
         
         LoadCharacterCards();
-        // Refresh();
+        Refresh();
     }
 
     private void LoadCharacterCards()
@@ -102,9 +107,25 @@ public class ValhallaUI : BaseUI
         bool acpAllTier = tierOptList.Count < 1;
         bool acpAllElement = elementOptList.Count < 1;
         bool acpAllRace = raceOptList.Count < 1;
-        
+
+        if (lvSort != SortType.None)
+        {
+            cardList.Sort((c1, c2) =>
+            
+                lvSort == SortType.Ascending ? CompareLevel(c1, c2) : CompareLevel(c2,c1)
+            );
+        }
+        else if (tierSort != SortType.None)
+        {
+            cardList.Sort((c1, c2) =>
+            
+                tierSort == SortType.Ascending ? CompareTier(c1, c2) : CompareTier(c2,c1)
+            );
+        }
+
         cardList.ForEach(c =>
         {
+            c.transform.SetAsLastSibling();
             if (c.name == EMPTY_CARD_MARK) return;
             
             bool match = (tierOptList.Contains(c.Tier) || acpAllTier)
@@ -113,6 +134,26 @@ public class ValhallaUI : BaseUI
 
             c.gameObject.SetActive(match);
         });
+
+        int CompareLevel(CharacterCard c1, CharacterCard c2)
+        {
+            if (c1.name == EMPTY_CARD_MARK) return 1;
+            if (c2.name == EMPTY_CARD_MARK) return -1;
+
+            if (c1.Level > c2.Level) return 1;
+            if (c1.Level < c2.Level) return -1;
+            return CompareTier(c1, c2);
+        }
+        
+        int CompareTier(CharacterCard c1, CharacterCard c2)
+        {
+            if (c1.name == EMPTY_CARD_MARK) return 1;
+            if (c2.name == EMPTY_CARD_MARK) return -1;
+
+            if ((int)c1.Tier > (int)c2.Tier) return 1;
+            if ((int)c1.Tier < (int)c2.Tier) return -1;
+            return CompareLevel(c1, c2);
+        }
     }
 
     private void ShowCardDetail(CharacterSaveData saveData)
@@ -151,17 +192,17 @@ public class ValhallaUI : BaseUI
         Refresh();
     }
 
-    private void SortByLevel(bool asc)
+    public void SortByLevel(bool asc)
     {
-        //todo: sort characters
-        
+        lvSort = (asc ? SortType.Ascending : SortType.Descending);
+        tierSort = SortType.None;
         Refresh();
     }
 
-    private void SortByTier(bool asc)
+    public void SortByTier(bool asc)
     {
-        //todo: sort characters
-        
+        lvSort = SortType.None;
+        tierSort = (asc ? SortType.Ascending : SortType.Descending);
         Refresh();
     }
 
