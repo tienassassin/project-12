@@ -22,6 +22,8 @@ public class ValhallaUI : BaseUI
     private List<CharacterCard> cardList = new();
     private List<CharacterSaveData> chrSaveDataList = new();
 
+    private const string EMPTY_CARD_MARK = "(empty)";
+
     public static void Show()
     {
         UIManager.Instance.ShowUI(nameof(ValhallaUI));
@@ -69,7 +71,7 @@ public class ValhallaUI : BaseUI
         chrSaveDataList = UserManager.Instance.chrSaveDataList;
         
         LoadCharacterCards();
-        Refresh();
+        // Refresh();
     }
 
     private void LoadCharacterCards()
@@ -85,6 +87,7 @@ public class ValhallaUI : BaseUI
             if (i >= chrSaveDataList.Count)
             {
                 cardList[i].gameObject.SetActive(false);
+                cardList[i].gameObject.name = EMPTY_CARD_MARK;
                 continue;
             }
 
@@ -100,7 +103,16 @@ public class ValhallaUI : BaseUI
         bool acpAllElement = elementOptList.Count < 1;
         bool acpAllRace = raceOptList.Count < 1;
         
-        //todo: refresh characters based on sort/filter
+        cardList.ForEach(c =>
+        {
+            if (c.name == EMPTY_CARD_MARK) return;
+            
+            bool match = (tierOptList.Contains(c.Tier) || acpAllTier)
+                && (elementOptList.Contains(c.Element) || acpAllElement)
+                && (raceOptList.Contains(c.Race) || acpAllRace);
+
+            c.gameObject.SetActive(match);
+        });
     }
 
     private void ShowCardDetail(CharacterSaveData saveData)

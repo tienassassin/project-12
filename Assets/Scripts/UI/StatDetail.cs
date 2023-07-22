@@ -35,8 +35,8 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         string diff1Value = "";
         List<string> valueList = new();
         List<string> colorList = new();
-        string mDmgColorHex = "#854DFF";
-        string pDmgColorHex = "#FFAA33";
+        string dmgTypeName = dmgType != DamageType.Physical ? "ma thuật" : "vật lý";
+        string dmgTypeColorHex = dmgType != DamageType.Physical ? "#854DFF" : "#FFAA33";
 
         switch (key)
         {
@@ -53,8 +53,8 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
                 diff0Value = " (+" + Utils.GetIntString(diff0.damage) + ")";
                 diff1Value = " (+" + Utils.GetIntString(diff1.damage) + ")";
                 valueList.Add(statValueTxt.text);
-                valueList.Add(dmgType != DamageType.Physical ? "ma thuật" : "vật lý");
-                colorList.Add(dmgType != DamageType.Physical ? mDmgColorHex : pDmgColorHex);
+                valueList.Add(dmgTypeName);
+                colorList.Add(dmgTypeColorHex);
                 break;
             case "armor":
                 statValueTxt.text = Utils.GetIntString(overallStats.armor);
@@ -99,8 +99,8 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
                 diff0Value = Utils.GetIntString(diff0.critDamage);
                 diff1Value = " (+" + Utils.GetIntString(diff1.critDamage) + ")";
                 valueList.Add(statValueTxt.text);
-                valueList.Add(dmgType != DamageType.Physical ? "ma thuật" : "vật lý");
-                colorList.Add(dmgType != DamageType.Physical ? mDmgColorHex : pDmgColorHex);
+                valueList.Add(dmgTypeName);
+                colorList.Add(dmgTypeColorHex);
                 break;
             case "life steal":
                 statValueTxt.text = Utils.GetFloatString(overallStats.lifeSteal, 1);
@@ -108,8 +108,8 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
                 diff0Value = Utils.GetFloatString(diff0.lifeSteal, 1);
                 diff1Value = " (+" + Utils.GetFloatString(diff1.lifeSteal, 1) + ")";
                 valueList.Add(statValueTxt.text);
-                valueList.Add(dmgType != DamageType.Physical ? "ma thuật" : "vật lý");
-                colorList.Add(dmgType != DamageType.Physical ? mDmgColorHex : pDmgColorHex);
+                valueList.Add(dmgTypeName);
+                colorList.Add(dmgTypeColorHex);
                 break;
             case "accuracy":
                 statValueTxt.text = Utils.GetFloatString(overallStats.accuracy, 1);

@@ -9,6 +9,7 @@ public abstract class Character : DuztineBehaviour
     public int Level => level;
     public Tier Tier => baseChr.tier;
     public Element Element => baseChr.element;
+    public Race Race => baseChr.race;
     
     [Title("BASE DATA")]
     protected CharacterSaveData saveData;
