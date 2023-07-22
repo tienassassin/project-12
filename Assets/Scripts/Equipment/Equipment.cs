@@ -9,6 +9,12 @@ public class Equipment : DuztineBehaviour
     protected BaseEquipment baseEqm;
     protected int level = 0;
 
+    public void Init(string eqmId, int lv)
+    {
+        baseEqm = Database.Instance.GetEquipmentWithID(eqmId);
+        level = lv;
+    }
+
     public Stats GetStats(Race ownerRace)
     {
         var stats = baseEqm.stats * (baseEqm.race != ownerRace ? 1 : baseEqm.raceBonus);

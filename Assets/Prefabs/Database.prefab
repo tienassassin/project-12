@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1127257017095718341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1127257017095718339}
+  - component: {fileID: 1127257017095718340}
+  m_Layer: 0
+  m_Name: Database
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1127257017095718339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127257017095718341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.82838994, y: 0.8585098, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127257017095718340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127257017095718341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd7eafccc3dc664d829d13826cb1e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  apiUrl: https://opensheet.elk.sh/
+  databaseId: 18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY
+  charDB: {fileID: 11400000, guid: dc6b8dd33d66eb74092cc2915e0597d9, type: 2}
+  eqmDB: {fileID: 11400000, guid: 2a6706d9b4266494ea1598360a4b1c0f, type: 2}
+  statsDesc: {fileID: 11400000, guid: aa9adeae2f81b1b40926a723128158b9, type: 2}
+  lvlBonusLeg: {fileID: 11400000, guid: 456ddfa250bad1a41904cd0d234156e8, type: 2}
+  expDatabase: {fileID: 11400000, guid: c5f54621cf749de45a1b9c9e1d693a42, type: 2}

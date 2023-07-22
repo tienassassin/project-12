@@ -13,11 +13,18 @@ public class Database : Singleton<Database>
     [SerializeField] private EquipmentDatabase eqmDB;
     [SerializeField] private StatsDescriptions statsDesc;
     [SerializeField] private LevelBonusLegend lvlBonusLeg;
+    [SerializeField] private ExpDatabase expDatabase;
 
     protected override void Awake()
     {
         base.Awake();
         FetchData();
+    }
+
+    [Button]
+    public void OpenGoogleSheet()
+    {
+        Application.OpenURL($"https://docs.google.com/spreadsheets/d/{databaseId}/");
     }
 
     [Button]
@@ -27,8 +34,11 @@ public class Database : Singleton<Database>
         StartCoroutine(FetchEquipmentDB());
         StartCoroutine(FetchStatsDescriptions());
         StartCoroutine(FetchLevelBonusLegend());
+        StartCoroutine(FetchExpDatabase());
     }
 
+    #region Data fetching
+    
     IEnumerator FetchCharacterDB()
     {
         var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/Characters");
@@ -100,6 +110,22 @@ public class Database : Singleton<Database>
         lvlBonusLeg.Import(dataC, dataE);
     }
     
+    IEnumerator FetchExpDatabase()
+    {
+        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/Exp");
+        yield return uwr.SendWebRequest();
+        if (uwr.result != UnityWebRequest.Result.Success)
+        {
+            EditorLog.Error(uwr.error);
+        }
+        else
+        {
+            expDatabase.Import(uwr.downloadHandler.text);
+        }
+    }
+    
+    #endregion
+    
     public float GetCharacterGrowth(Tier t)
     {
         return lvlBonusLeg.chrGrowthList.Find(x => x.tier == t).growth;
@@ -107,6 +133,51 @@ public class Database : Singleton<Database>
     public float GetEquipmentGrowth(Rarity r)
     {
         return lvlBonusLeg.eqmGrowthList.Find(x => x.rarity == r).growth;
+    }
+
+    public BaseCharacter GetCharacterWithID(string id)
+    {
+        return charDB.charList.Find(x => x.id == id);
+    }
+
+    public BaseEquipment GetEquipmentWithID(string id)
+    {
+        return eqmDB.eqmList.Find(x => x.id == id);
+    }
+
+    [Button]
+    public int GetLevel(int totalExp)
+    {
+        var expList = expDatabase.expList;
+        for (int i = expList.Count - 1; i >= 0; i--)
+        {
+            if (totalExp >= expList[i].totalExp)
+            {
+                return expList[i].level;
+            }
+        }
+
+        return 1;
+    }
+    
+    [Button]
+    public Tuple<int, int> GetExp(int totalExp)
+    {
+        var expList = expDatabase.expList;
+        for (int i = expList.Count - 1; i >= 0; i--)
+        {
+            if (totalExp >= expList[i].totalExp)
+            {
+                return new Tuple<int, int>(totalExp - expList[i].totalExp, expList[i].exp);
+            }
+        }
+
+        return new Tuple<int, int>(0, expList[0].exp);
+    }
+
+    public int GetLevelMax()
+    {
+        return expDatabase.levelMax;
     }
 }
 
@@ -120,5 +191,15 @@ public static class DatabaseExtension
     public static float GetEquipmentGrowth(this BaseEquipment eqm)
     {
         return Database.Instance.GetEquipmentGrowth(eqm.rarity);
+    }
+
+    public static int GetLevel(this CharacterSaveData csd)
+    {
+        return Database.Instance.GetLevel(csd.totalExp);
+    }
+
+    public static Tuple<int, int> GetExp(this CharacterSaveData csd)
+    {
+        return Database.Instance.GetExp(csd.totalExp);
     }
 }

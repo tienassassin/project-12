@@ -8,13 +8,10 @@ using UnityEngine;
 public class CharacterInBattle : Character, IAttacker, IDefender
 {
     [TitleGroup("BASE DATA:")]
-    protected BaseCharacter baseCharacter;
 
     [TitleGroup("IN-GAME STATS")]
     [SerializeField] protected Stats stats;
-    [SerializeField] protected float curHP;
     [SerializeField] protected float virtualHP;
-    [SerializeField] protected float energy;
     [SerializeField] protected float agility;
     [SerializeField] protected float rage;
     
@@ -27,9 +24,9 @@ public class CharacterInBattle : Character, IAttacker, IDefender
     
     #region Public properties
 
-    public Element Element => baseCharacter.element;
-    public Race Race => baseCharacter.race;
-    public DamageType DmgType => baseCharacter.damageType;
+    public Element Element => baseChr.element;
+    public Race Race => baseChr.race;
+    public DamageType DmgType => baseChr.damageType;
     public bool IsAlive => curHP > 0;
     public bool CanTakeTurn => !hasStun;
     public bool CanUseSkill => !hasSilent;
@@ -61,21 +58,15 @@ public class CharacterInBattle : Character, IAttacker, IDefender
     
     #endregion
 
-    private void SetUp(BaseCharacter character)
+    public override void Init(CharacterSaveData saveData)
     {
-        baseCharacter = character;
-        name = baseCharacter.name;
-        stats = baseCharacter.stats;
-        Initialize();
-    }
-
-    private void Initialize()
-    {
-        //todo: add equipment stats to overall stats
+        base.Init(saveData);
         
-        curHP = stats.health;
+        //todo: add equipment stats to overall stats
+
+        stats = baseChr.stats;
+         
         virtualHP = 0;
-        energy = 0;
         agility = 0;
         rage = 0;
 

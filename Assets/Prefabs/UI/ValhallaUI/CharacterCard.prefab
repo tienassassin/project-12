@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 4009721612242773135}
   - component: {fileID: 2136282847673532233}
   m_Layer: 0
-  m_Name: level
+  m_Name: level num
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 8913211760622333933}
   - component: {fileID: 8037941099700517911}
   m_Layer: 0
-  m_Name: race
+  m_Name: level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,9 +641,10 @@ GameObject:
   - component: {fileID: 1586606060894614702}
   - component: {fileID: 972009928514271381}
   - component: {fileID: 2867958252728695799}
+  - component: {fileID: 8230984445489841705}
   - component: {fileID: 4432756764372830267}
   m_Layer: 0
-  m_Name: Character
+  m_Name: CharacterCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -712,6 +713,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8230984445489841705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8180879665051084581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b01778f5a38f781499bf961b0e3a2d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementImg: {fileID: 5757610557985217560}
+  levelTxt: {fileID: 2136282847673532233}
+  hpImg: {fileID: 953711756508074415}
+  energyImg: {fileID: 4253586810936601288}
+  elementColors:
+  - {r: 1, g: 0.4160226, b: 0.3726415, a: 1}
+  - {r: 0.5330188, g: 0.8913232, b: 1, a: 1}
+  - {r: 0.383277, g: 0.9339623, b: 0.469852, a: 1}
+  - {r: 0.9430002, g: 1, b: 0.19339621, a: 1}
 --- !u!114 &4432756764372830267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,9 +777,27 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2867958252728695799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8230984445489841705}
+        m_TargetAssemblyTypeName: CharacterCard, Assembly-CSharp
+        m_MethodName: OnClickCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  allowHold: 0
   holdTime: 1
   onHold:
+    m_PersistentCalls:
+      m_Calls: []
+  allowDoubleClick: 0
+  doubleClickInterval: 0.2
+  onDoubleClick:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8544122096855273328

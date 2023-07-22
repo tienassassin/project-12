@@ -106,6 +106,25 @@ public struct Stats
     [ShowIf("@showFull || this.accuracy > 0")]
     public float accuracy;
 
+    public Stats GetStatsByLevel(int level, float growth)
+    {
+        return new Stats
+        {
+            health = health * Mathf.Pow(1 + growth, level - 1),
+            damage = damage * Mathf.Pow(1 + growth, level - 1),
+            armor = armor * Mathf.Pow(1 + growth, level - 1),
+            resistance = resistance * Mathf.Pow(1 + growth, level - 1),
+            
+            intelligence = intelligence,
+            speed = speed,
+            luck = luck,
+            critDamage = critDamage,
+            
+            lifeSteal = lifeSteal,
+            accuracy = accuracy,
+        };
+    }
+
     public static Stats operator +(Stats st1, Stats st2)
     {
         return new Stats
@@ -131,8 +150,8 @@ public struct Stats
         {
             health = st1.health - st2.health,
             damage = st1.damage - st2.damage,
-            armor = st1.armor + st2.armor,
-            resistance = st1.resistance + st2.resistance,
+            armor = st1.armor - st2.armor,
+            resistance = st1.resistance - st2.resistance,
             
             intelligence = st1.intelligence - st2.intelligence,
             speed = st1.speed - st2.speed,

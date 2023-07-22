@@ -37,6 +37,17 @@ public static class Utils
         return default;
     }
 
+    public static string GetIntString(float num)
+    {
+        return ((int)num).ToString();
+    }
+
+    public static string GetFloatString(float num, int digit)
+    {
+        var culture = new CultureInfo("en-US");
+        return Math.Round(num, digit).ToString(culture);
+    }
+
     public static string GetNormalizedString(string raw)
     {
         string pattern = @"^\d+_([a-zA-Z]+)$";

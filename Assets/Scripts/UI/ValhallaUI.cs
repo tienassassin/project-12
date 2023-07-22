@@ -6,13 +6,21 @@ using UnityEngine;
 
 public class ValhallaUI : BaseUI
 {
+    [SerializeField] private Transform chrCardContainer;
+    [SerializeField] private CharacterCard chrCardPref;
+    
     [SerializeField] private FilterOption[] tierFilterOptions;
     [SerializeField] private FilterOption[] elementFilterOptions;
     [SerializeField] private FilterOption[] raceFilterOptions;
+
+    [SerializeField] private CharacterDetail charDetail;
     
     private List<Tier> tierOptList = new();
     private List<Element> elementOptList = new();
     private List<Race> raceOptList = new();
+
+    private List<CharacterCard> cardList = new();
+    private List<CharacterSaveData> chrSaveDataList = new();
 
     public static void Show()
     {
@@ -42,6 +50,12 @@ public class ValhallaUI : BaseUI
         {
             opt.SetEvent(AddOptionToFilter);
         }
+
+        cardList = new List<CharacterCard>();
+        foreach (Transform child in chrCardContainer)
+        {
+            cardList.Add(child.gameObject.GetComponent<CharacterCard>());
+        }
     }
 
     private void OnEnable()
@@ -49,8 +63,33 @@ public class ValhallaUI : BaseUI
         tierOptList.Clear();
         elementOptList.Clear();
         raceOptList.Clear();
+
+        chrSaveDataList = UserManager.Instance.chrSaveDataList;
         
+        LoadCharacterCards();
         Refresh();
+    }
+
+    private void LoadCharacterCards()
+    {
+        while (chrCardContainer.childCount < chrSaveDataList.Count)
+        {
+            var o = Instantiate(chrCardPref, chrCardContainer);
+            cardList.Add(o);
+        }
+
+        for (int i = 0; i < cardList.Count; i++)
+        {
+            if (i >= chrSaveDataList.Count)
+            {
+                cardList[i].gameObject.SetActive(false);
+                continue;
+            }
+
+            cardList[i].gameObject.SetActive(true);
+            cardList[i].Init(chrSaveDataList[i]);
+            cardList[i].OnShowCardDetail = ShowCardDetail;
+        }
     }
 
     private void Refresh()
@@ -60,6 +99,12 @@ public class ValhallaUI : BaseUI
         bool acpAllRace = raceOptList.Count < 1;
         
         //todo: refresh characters based on sort/filter
+    }
+
+    private void ShowCardDetail(CharacterSaveData saveData)
+    {
+        charDetail.gameObject.SetActive(true);
+        charDetail.Init(saveData);
     }
 
     private void AddOptionToFilter(object o)
@@ -111,16 +156,6 @@ public class ValhallaUI : BaseUI
     public void OnClickBack()
     {
         ValhallaUI.Hide();
-    }
-
-    public void OnClickSortByType(bool ascending)
-    {
-        SortByLevel(ascending);
-    }
-
-    public void OnClickSortByTier(bool ascending)
-    {
-        SortByTier(ascending);
     }
 
     #endregion
