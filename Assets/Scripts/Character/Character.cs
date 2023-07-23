@@ -29,20 +29,3 @@ public abstract class Character : DuztineBehaviour
         energy = saveData.energy;
     }
 }
-
-[Serializable]
-public struct CharacterSaveData
-{
-    public string chrId;
-    public int totalExp;
-    public float curHp;
-    public float energy;
-    public List<EquipmentSaveData> eqmList;
-}
-
-[Serializable]
-public struct EquipmentSaveData
-{
-    public string eqmId;
-    public int level;
-}

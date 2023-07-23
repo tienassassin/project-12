@@ -75,7 +75,7 @@ public class ValhallaUI : BaseUI
         lvSort = SortType.Descending;
         tierSort = SortType.None;
 
-        chrSaveDataList = UserManager.Instance.chrSaveDataList;
+        chrSaveDataList = UserManager.Instance.GetAllCharacters();
         
         LoadCharacterCards();
         Refresh();
