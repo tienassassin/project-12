@@ -185,6 +185,11 @@ public class Database : Singleton<Database>
         return statsDesc.GetStatDescription(key).description;
     }
 
+    public string GetStatName(string key)
+    {
+        return statsDesc.GetStatDescription(key).name;
+    }
+    
     public float GetStatLimit(string key)
     {
         return statsDesc.GetStatDescription(key).limit;

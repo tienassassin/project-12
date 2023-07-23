@@ -61,6 +61,11 @@ public static class Utils
         EditorLog.Error($"{raw} not match pattern {pattern}");
         return raw;
     }
+
+    public static string GetTitleCaseString(string raw)
+    {
+        return Regex.Replace(raw, @"\b\w", match => match.Value.ToUpper());
+    }
 }
 
 public static class StaticData

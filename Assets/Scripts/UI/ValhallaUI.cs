@@ -22,6 +22,8 @@ public class ValhallaUI : BaseUI
     private SortType tierSort;
 
     private List<CharacterCard> cardList = new();
+    private List<CharacterCard> activeCardList = new();
+    private CharacterCard selectedCard;
     private List<CharacterSaveData> chrSaveDataList = new();
 
     private const string EMPTY_CARD_MARK = "(empty)";
@@ -89,16 +91,21 @@ public class ValhallaUI : BaseUI
 
         for (int i = 0; i < cardList.Count; i++)
         {
+            var card = cardList[i];
             if (i >= chrSaveDataList.Count)
             {
-                cardList[i].gameObject.SetActive(false);
-                cardList[i].gameObject.name = EMPTY_CARD_MARK;
+                card.gameObject.SetActive(false);
+                card.name = EMPTY_CARD_MARK;
                 continue;
             }
 
-            cardList[i].gameObject.SetActive(true);
-            cardList[i].Init(chrSaveDataList[i]);
-            cardList[i].OnShowCardDetail = ShowCardDetail;
+            card.gameObject.SetActive(true);
+            card.Init(chrSaveDataList[i]);
+            card.OnShowCardDetail = (saveData)=>
+            {
+                ShowCardDetail(saveData);
+                selectedCard = card;
+            };
         }
     }
 
@@ -122,7 +129,9 @@ public class ValhallaUI : BaseUI
                 tierSort == SortType.Ascending ? CompareTier(c1, c2) : CompareTier(c2,c1)
             );
         }
-
+        
+        activeCardList.Clear();
+        
         cardList.ForEach(c =>
         {
             c.transform.SetAsLastSibling();
@@ -133,6 +142,8 @@ public class ValhallaUI : BaseUI
                 && (raceOptList.Contains(c.Race) || acpAllRace);
 
             c.gameObject.SetActive(match);
+
+            if (match) activeCardList.Add(c);
         });
 
         int CompareLevel(CharacterCard c1, CharacterCard c2)
@@ -160,6 +171,30 @@ public class ValhallaUI : BaseUI
     {
         charDetail.gameObject.SetActive(true);
         charDetail.Init(saveData);
+    }
+
+    public void HideCardDetail()
+    {
+        charDetail.gameObject.SetActive(false);
+        selectedCard = null;
+    }
+
+    public void SelectNextCard()
+    {
+        if (!selectedCard || activeCardList.Count < 2) return;
+        
+        int nextIndex = activeCardList.IndexOf(selectedCard) + 1;
+        if (nextIndex >= activeCardList.Count) nextIndex = 0;
+        activeCardList[nextIndex].OnClickCard();
+    }
+
+    public void SelectPreviousCard()
+    {
+        if (!selectedCard || activeCardList.Count < 2) return;
+        
+        int nextIndex = activeCardList.IndexOf(selectedCard) - 1;
+        if (nextIndex < 0) nextIndex = activeCardList.Count - 1;
+        activeCardList[nextIndex].OnClickCard();
     }
 
     private void AddOptionToFilter(object o)

@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private string key;
+    [SerializeField] private TextMeshProUGUI titleTxt;
     [SerializeField] private TextMeshProUGUI descriptionTxt;
     [SerializeField] private TextMeshProUGUI statValueTxt;
     [SerializeField] private TextMeshProUGUI statDetailValueTxt;
@@ -136,8 +137,9 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             rawDesc = rawDesc.Replace($"#color{i}", $"{colorList[i]}");
         }
+        
         descriptionTxt.text = rawDesc;
-        // Canvas.ForceUpdateCanvases();
+        titleTxt.text = Utils.GetTitleCaseString(Database.Instance.GetStatName(key));
     }
 
     public void OnPointerEnter(PointerEventData eventData)

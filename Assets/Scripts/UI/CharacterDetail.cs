@@ -16,17 +16,6 @@ public class CharacterDetail : DuztineBehaviour
     [SerializeField] private Image race;
     [SerializeField] private Image damageType;
 
-    [SerializeField] private TextMeshProUGUI healthTxt;
-    [SerializeField] private TextMeshProUGUI damageTxt;
-    [SerializeField] private TextMeshProUGUI armorTxt;
-    [SerializeField] private TextMeshProUGUI resistanceTxt;
-    [SerializeField] private TextMeshProUGUI intelligenceTxt;
-    [SerializeField] private TextMeshProUGUI speedTxt;
-    [SerializeField] private TextMeshProUGUI luckTxt;
-    [SerializeField] private TextMeshProUGUI critDamageTxt;
-    [SerializeField] private TextMeshProUGUI lifeStealTxt;
-    [SerializeField] private TextMeshProUGUI accuracyTxt;
-
     [SerializeField] private StatDetail[] statDetails;
 
     private BaseCharacter baseChr;
@@ -68,18 +57,6 @@ public class CharacterDetail : DuztineBehaviour
         {
             statDetail.Init(baseStats, nonEqmStats, overallStats, baseChr.damageType);
         }
-        
-        var stats = baseChr.stats;
-        healthTxt.text = Utils.GetIntString(overallStats.health);
-        damageTxt.text = Utils.GetIntString(overallStats.damage);
-        armorTxt.text = Utils.GetIntString(overallStats.armor);
-        resistanceTxt.text = Utils.GetIntString(overallStats.resistance);
-        intelligenceTxt.text = Utils.GetFloatString(overallStats.intelligence, 1);
-        speedTxt.text = Utils.GetFloatString(overallStats.speed, 1);
-        luckTxt.text = Utils.GetIntString(overallStats.luck);
-        critDamageTxt.text = Utils.GetIntString(overallStats.critDamage);
-        lifeStealTxt.text = Utils.GetFloatString(overallStats.lifeSteal, 1);
-        accuracyTxt.text = Utils.GetFloatString(overallStats.accuracy, 1);
     }
 
     public void SwitchTab(int index)
@@ -88,10 +65,5 @@ public class CharacterDetail : DuztineBehaviour
         {
             tabs[i].SetActive(i == index);
         }
-    }
-
-    public void Close()
-    {
-        gameObject.SetActive(false);
     }
 }
