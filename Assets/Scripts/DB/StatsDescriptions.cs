@@ -32,11 +32,13 @@ public class StatsDescriptions : ScriptableDatabase
     
     private void ConvertDataFromJObject(JObject jObject, out StatDesc s)
     {
-        s = new StatDesc();
-        s.stat = (string)jObject["stat"];
-        s.name = (string)jObject["name"];
-        s.limit = Utils.Parse<float>((string)jObject["limit"]);
-        s.description = (string)jObject["description"];
+        s = new StatDesc
+        {
+            stat = (string)jObject["stat"],
+            name = (string)jObject["name"],
+            limit = Utils.Parse<float>((string)jObject["limit"]),
+            description = (string)jObject["description"]
+        };
     }
 
     public StatDesc GetStatDescription(string stat)

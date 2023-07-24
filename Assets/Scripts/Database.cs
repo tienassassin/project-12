@@ -14,6 +14,7 @@ public class Database : Singleton<Database>
     [SerializeField] private StatsDescriptions statsDesc;
     [SerializeField] private LevelBonusLegend lvlBonusLeg;
     [SerializeField] private ExpDatabase expDatabase;
+    [SerializeField] private BackstoryDatabase bsDB;
 
     protected override void Awake()
     {
@@ -35,6 +36,7 @@ public class Database : Singleton<Database>
         StartCoroutine(FetchStatsDescriptions());
         StartCoroutine(FetchLevelBonusLegend());
         StartCoroutine(FetchExpDatabase());
+        StartCoroutine(FetchBackstoryDatabase());
     }
 
     #region Data fetching
@@ -121,6 +123,20 @@ public class Database : Singleton<Database>
         else
         {
             expDatabase.Import(uwr.downloadHandler.text);
+        }
+    }
+    
+    IEnumerator FetchBackstoryDatabase()
+    {
+        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/Backstory");
+        yield return uwr.SendWebRequest();
+        if (uwr.result != UnityWebRequest.Result.Success)
+        {
+            EditorLog.Error(uwr.error);
+        }
+        else
+        {
+            bsDB.Import(uwr.downloadHandler.text);
         }
     }
     
