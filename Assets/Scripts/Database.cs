@@ -13,7 +13,7 @@ public class Database : Singleton<Database>
     [SerializeField] private EquipmentDatabase eqmDB;
     [SerializeField] private StatsDescriptions statsDesc;
     [SerializeField] private LevelBonusLegend lvlBonusLeg;
-    [SerializeField] private ExpDatabase expDatabase;
+    [SerializeField] private ExpDatabase expDB;
     [SerializeField] private BackstoryDatabase bsDB;
 
     protected override void Awake()
@@ -122,7 +122,7 @@ public class Database : Singleton<Database>
         }
         else
         {
-            expDatabase.Import(uwr.downloadHandler.text);
+            expDB.Import(uwr.downloadHandler.text);
         }
     }
     
@@ -153,47 +153,29 @@ public class Database : Singleton<Database>
 
     public BaseCharacter GetCharacterWithID(string id)
     {
-        return charDB.charList.Find(x => x.id == id);
+        return charDB.GetCharacterWithID(id);
     }
 
     public BaseEquipment GetEquipmentWithID(string id)
     {
-        return eqmDB.eqmList.Find(x => x.id == id);
+        return eqmDB.GetEquipmentWithID(id);
     }
 
     [Button]
     public int GetLevel(int totalExp)
     {
-        var expList = expDatabase.expList;
-        for (int i = expList.Count - 1; i >= 0; i--)
-        {
-            if (totalExp >= expList[i].totalExp)
-            {
-                return expList[i].level;
-            }
-        }
-
-        return 1;
+        return expDB.GetLevel(totalExp);
     }
     
     [Button]
     public Tuple<int, int> GetExp(int totalExp)
     {
-        var expList = expDatabase.expList;
-        for (int i = expList.Count - 1; i >= 0; i--)
-        {
-            if (totalExp >= expList[i].totalExp)
-            {
-                return new Tuple<int, int>(totalExp - expList[i].totalExp, expList[i].exp);
-            }
-        }
-
-        return new Tuple<int, int>(0, expList[0].exp);
+        return expDB.GetExp(totalExp);
     }
 
     public int GetLevelMax()
     {
-        return expDatabase.levelMax;
+        return expDB.levelMax;
     }
 
     public string GetStatDescription(string key)

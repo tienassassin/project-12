@@ -11,7 +11,9 @@ public class EquipmentDatabase : ScriptableDatabase
 {
     [TableList]
     public List<BaseEquipment> eqmList = new();
-    
+
+    private Dictionary<string, BaseEquipment> cachedDict = new();
+
     public override void Import(params string[] data)
     {
         eqmList = new List<BaseEquipment>();
@@ -67,6 +69,13 @@ public class EquipmentDatabase : ScriptableDatabase
             lifeSteal = Utils.Parse<float>((string)jObject["life steal"]),
             accuracy = Utils.Parse<float>((string)jObject["accuracy"]),
         };
+    }
+
+    public BaseEquipment GetEquipmentWithID(string eqmId)
+    {
+        cachedDict.TryAdd(eqmId, eqmList.Find(e => e.id == eqmId));
+        if (cachedDict[eqmId] == null) EditorLog.Error($"Equipment {eqmId} is not defined");
+        return cachedDict[eqmId];
     }
 }
 

@@ -36,6 +36,32 @@ public class ExpDatabase : ScriptableDatabase
     {
         expList.Clear();
     }
+
+    public int GetLevel(int totalExp)
+    {
+        for (int i = expList.Count - 1; i >= 0; i--)
+        {
+            if (totalExp >= expList[i].totalExp)
+            {
+                return expList[i].level;
+            }
+        }
+
+        return 1;
+    }
+
+    public Tuple<int, int> GetExp(int totalExp)
+    {
+        for (int i = expList.Count - 1; i >= 0; i--)
+        {
+            if (totalExp >= expList[i].totalExp)
+            {
+                return Tuple.Create(totalExp - expList[i].totalExp, expList[i].exp);
+            }
+        }
+
+        return Tuple.Create(0, expList[0].exp);
+    }
 }
 
 [Serializable]

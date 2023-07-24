@@ -12,6 +12,8 @@ public class CharacterDatabase : ScriptableDatabase
     [TableList]
     public List<BaseCharacter> charList = new();
 
+    private Dictionary<string, BaseCharacter> cachedDict = new();
+
     public override void Import(params string[] data)
     {
         charList = new List<BaseCharacter>();
@@ -71,7 +73,55 @@ public class CharacterDatabase : ScriptableDatabase
         };
     }
 
-    
+    public BaseCharacter GetCharacterWithID(string charId)
+    {
+        cachedDict.TryAdd(charId, charList.Find(c => c.id == charId));
+        if (cachedDict[charId] == null) EditorLog.Error($"Character {charId} is not defined");
+        return cachedDict[charId];
+    }
+
+    public List<BaseCharacter> GetCharactersWithConditions(params object[] conditions)
+    {
+        var matchCharList = new List<BaseCharacter>();
+        
+        var raceOptList = new List<Race>();
+        var elementOptList = new List<Element>();
+        var tierOptList = new List<Tier>();
+        bool acpAllRace = true;
+        bool acpAllElement = true;
+        bool acpAllTier = true;
+        
+        foreach (var condition in conditions)
+        {
+            switch (condition)
+            {
+                case Race race:
+                    raceOptList.Add(race);
+                    acpAllRace = false;
+                    break;
+                case Element element:
+                    elementOptList.Add(element);
+                    acpAllElement = false;
+                    break;
+                case Tier tier:
+                    tierOptList.Add(tier);
+                    acpAllTier = false;
+                    break;
+            }
+        }
+
+        charList.ForEach(c =>
+        {
+            if ((raceOptList.Contains(c.race) || acpAllRace)
+                && (elementOptList.Contains(c.element) || acpAllElement)
+                && (tierOptList.Contains(c.tier) || acpAllTier))
+            {
+                matchCharList.Add(c);
+            }
+        });
+        
+        return matchCharList;
+    }
 }
 
 [Serializable]
