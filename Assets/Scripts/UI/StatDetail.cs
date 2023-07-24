@@ -8,10 +8,10 @@ using UnityEngine.EventSystems;
 public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private string key;
-    [SerializeField] private TextMeshProUGUI titleTxt;
-    [SerializeField] private TextMeshProUGUI descriptionTxt;
-    [SerializeField] private TextMeshProUGUI statValueTxt;
-    [SerializeField] private TextMeshProUGUI statDetailValueTxt;
+    [SerializeField] private TMP_Text titleTxt;
+    [SerializeField] private TMP_Text descriptionTxt;
+    [SerializeField] private TMP_Text statValueTxt;
+    [SerializeField] private TMP_Text statDetailValueTxt;
     [SerializeField] private Color diff0Color;
     [SerializeField] private Color diff1Color;
     [SerializeField] private GameObject detailPanel;

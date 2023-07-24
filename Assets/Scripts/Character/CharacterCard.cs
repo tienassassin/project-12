@@ -8,7 +8,7 @@ public class CharacterCard : Character
     public Action<CharacterSaveData> OnShowCardDetail = null;
     
     [SerializeField] private Image elementImg;
-    [SerializeField] private TextMeshProUGUI levelTxt;
+    [SerializeField] private TMP_Text levelTxt;
     [SerializeField] private Image hpImg;
     [SerializeField] private Image energyImg;
 
