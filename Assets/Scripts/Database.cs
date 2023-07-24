@@ -192,6 +192,16 @@ public class Database : Singleton<Database>
     {
         return statsDesc.GetStatDescription(key).limit;
     }
+
+    public string GetCharacterAlias(string charId)
+    {
+        return bsDB.GetBackstory(charId).alias;
+    }
+    
+    public string GetCharacterStory(string charId)
+    {
+        return bsDB.GetBackstory(charId).story;
+    }
 }
 
 public static class DatabaseExtension

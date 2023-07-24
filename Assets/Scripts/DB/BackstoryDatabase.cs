@@ -40,11 +40,11 @@ public class BackstoryDatabase : ScriptableDatabase
         };
     }
 
-    public Backstory GetBackstory(string chrName)
+    public Backstory GetBackstory(string charId)
     {
-        cachedDict.TryAdd(chrName, storyList.Find(s => s.name == chrName));
-        if (cachedDict[chrName] == null) EditorLog.Error($"Backstory of {chrName} is not defined");
-        return cachedDict[chrName];
+        cachedDict.TryAdd(charId, storyList.Find(s => s.id == charId));
+        if (cachedDict[charId] == null) EditorLog.Error($"Backstory of {charId} is not defined");
+        return cachedDict[charId];
     }
 }
 

@@ -8,13 +8,15 @@ public class CharacterDetail : DuztineBehaviour
 {
     [SerializeField] private GameObject[] tabs;
 
-    [SerializeField] private TextMeshProUGUI chrName;
+    [SerializeField] private TMP_Text chrNameTxt;
     [SerializeField] private Image elementIcon;
-    [SerializeField] private TextMeshProUGUI levelTxt;
-    [SerializeField] private TextMeshProUGUI expTxt;
+    [SerializeField] private TMP_Text levelTxt;
+    [SerializeField] private TMP_Text expTxt;
     [SerializeField] private Slider exp;
     [SerializeField] private Image race;
     [SerializeField] private Image damageType;
+    [SerializeField] private TMP_Text aliasTxt;
+    [SerializeField] private TMP_Text storyTxt;
 
     [SerializeField] private StatDetail[] statDetails;
 
@@ -35,7 +37,7 @@ public class CharacterDetail : DuztineBehaviour
     public void Init(CharacterSaveData saveData)
     {
         baseChr = Database.Instance.GetCharacterWithID(saveData.chrId);
-        chrName.text = baseChr.name;
+        chrNameTxt.text = baseChr.name;
         level = saveData.GetLevel();
         (curExp, nextExp) = saveData.GetExp();
         
@@ -45,6 +47,7 @@ public class CharacterDetail : DuztineBehaviour
         exp.value = (float)curExp / nextExp;
         
         LoadStatsTab();
+        LoadStoryTab();
     }
 
     private void LoadStatsTab()
@@ -57,6 +60,12 @@ public class CharacterDetail : DuztineBehaviour
         {
             statDetail.Init(baseStats, nonEqmStats, overallStats, baseChr.damageType);
         }
+    }
+
+    private void LoadStoryTab()
+    {
+        aliasTxt.text = $"[ {baseChr.name} - {Database.Instance.GetCharacterAlias(baseChr.id)} ]";
+        storyTxt.text = Database.Instance.GetCharacterStory(baseChr.id);
     }
 
     public void SwitchTab(int index)
