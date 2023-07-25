@@ -22,7 +22,7 @@ public abstract class Character : DuztineBehaviour
     public virtual void Init(CharacterSaveData data)
     {
         saveData = data;
-        baseChr = Database.Instance.GetCharacterWithID(saveData.chrId);
+        baseChr = saveData.GetCharacterWithID();
         name = baseChr.name;
         level = saveData.GetLevel();
         curHP = saveData.curHp;

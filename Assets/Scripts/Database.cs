@@ -206,14 +206,29 @@ public class Database : Singleton<Database>
 
 public static class DatabaseExtension
 {
-    public static float GetCharacterGrowth(this BaseCharacter chr)
+    public static float GetCharacterGrowth(this BaseCharacter c)
     {
-        return Database.Instance.GetCharacterGrowth(chr.tier);
+        return Database.Instance.GetCharacterGrowth(c.tier);
     }
 
-    public static float GetEquipmentGrowth(this BaseEquipment eqm)
+    public static string GetCharacterAlias(this BaseCharacter c)
     {
-        return Database.Instance.GetEquipmentGrowth(eqm.rarity);
+        return Database.Instance.GetCharacterAlias(c.id);
+    }
+
+    public static string GetCharacterStory(this BaseCharacter c)
+    {
+        return Database.Instance.GetCharacterStory(c.id);
+    }
+
+    public static float GetEquipmentGrowth(this BaseEquipment e)
+    {
+        return Database.Instance.GetEquipmentGrowth(e.rarity);
+    }
+
+    public static BaseCharacter GetCharacterWithID(this CharacterSaveData csd)
+    {
+        return Database.Instance.GetCharacterWithID(csd.chrId);
     }
 
     public static int GetLevel(this CharacterSaveData csd)

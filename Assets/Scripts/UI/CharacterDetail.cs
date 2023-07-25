@@ -36,7 +36,7 @@ public class CharacterDetail : DuztineBehaviour
 
     public void Init(CharacterSaveData saveData)
     {
-        baseChr = Database.Instance.GetCharacterWithID(saveData.chrId);
+        baseChr = saveData.GetCharacterWithID();
         chrNameTxt.text = baseChr.name;
         level = saveData.GetLevel();
         (curExp, nextExp) = saveData.GetExp();
@@ -64,8 +64,8 @@ public class CharacterDetail : DuztineBehaviour
 
     private void LoadStoryTab()
     {
-        aliasTxt.text = $"[ {baseChr.name} - {Database.Instance.GetCharacterAlias(baseChr.id)} ]";
-        storyTxt.text = Database.Instance.GetCharacterStory(baseChr.id);
+        aliasTxt.text = $"[ {baseChr.name} - {baseChr.GetCharacterAlias()} ]";
+        storyTxt.text = baseChr.GetCharacterStory();
     }
 
     public void SwitchTab(int index)
