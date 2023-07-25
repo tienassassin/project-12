@@ -13,4 +13,16 @@ public static class EditorLog
     {
         Debug.Log(msg);
     }
+
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    public static void Assert(bool condition)
+    {
+        if (!condition) throw new UnityException();
+    }
+    
+    [System.Diagnostics.Conditional("UNITY_EDITOR")]
+    public static void Assert(bool condition, string msg)
+    {
+        if (!condition) throw new UnityException(msg);
+    }
 }
