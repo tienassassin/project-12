@@ -1274,6 +1274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4602463018247835366}
+  fpsTxt: {fileID: 3753508355999511629}
+  logFpsDelay: 1
 --- !u!1 &4602463018247835362
 GameObject:
   m_ObjectHideFlags: 0

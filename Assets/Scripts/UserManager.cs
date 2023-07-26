@@ -13,6 +13,7 @@ public class UserManager : Singleton<UserManager>
     {
         base.Awake();
         
+        Application.targetFrameRate = 144;
         LoadHeroDB();
     }
 
