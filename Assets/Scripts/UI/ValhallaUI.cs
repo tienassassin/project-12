@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class ValhallaUI : BaseUI
 {
-    [SerializeField] private Transform chrCardContainer;
-    [SerializeField] private CharacterCard chrCardPref;
+    [SerializeField] private Transform heroCardContainer;
+    [SerializeField] private HeroCard heroCardPref;
     
     [SerializeField] private FilterOption[] tierFilterOptions;
     [SerializeField] private FilterOption[] elementFilterOptions;
     [SerializeField] private FilterOption[] raceFilterOptions;
 
-    [SerializeField] private CharacterDetail charDetail;
+    [SerializeField] private HeroDetail heroDetail;
     
     private List<Tier> tierOptList = new();
     private List<Element> elementOptList = new();
@@ -21,10 +21,10 @@ public class ValhallaUI : BaseUI
     private SortType lvSort;
     private SortType tierSort;
 
-    private List<CharacterCard> cardList = new();
-    private List<CharacterCard> activeCardList = new();
-    private CharacterCard selectedCard;
-    private List<CharacterSaveData> chrSaveDataList = new();
+    private List<HeroCard> cardList = new();
+    private List<HeroCard> activeCardList = new();
+    private HeroCard selectedCard;
+    private List<HeroSaveData> heroSaveDataList = new();
 
     private const string EMPTY_CARD_MARK = "(empty)";
 
@@ -57,13 +57,13 @@ public class ValhallaUI : BaseUI
             opt.SetEvent(AddOptionToFilter);
         }
 
-        cardList = new List<CharacterCard>();
-        foreach (Transform child in chrCardContainer)
+        cardList = new List<HeroCard>();
+        foreach (Transform child in heroCardContainer)
         {
-            cardList.Add(child.gameObject.GetComponent<CharacterCard>());
+            cardList.Add(child.gameObject.GetComponent<HeroCard>());
         }
         
-        charDetail.gameObject.SetActive(false);
+        heroDetail.gameObject.SetActive(false);
     }
 
     private void OnEnable()
@@ -75,24 +75,24 @@ public class ValhallaUI : BaseUI
         lvSort = SortType.Descending;
         tierSort = SortType.None;
 
-        chrSaveDataList = UserManager.Instance.GetAllCharacters();
+        heroSaveDataList = UserManager.Instance.GetAllHeroes();
         
-        LoadCharacterCards();
+        LoadHeroCards();
         Refresh();
     }
 
-    private void LoadCharacterCards()
+    private void LoadHeroCards()
     {
-        while (chrCardContainer.childCount < chrSaveDataList.Count)
+        while (heroCardContainer.childCount < heroSaveDataList.Count)
         {
-            var o = Instantiate(chrCardPref, chrCardContainer);
+            var o = Instantiate(heroCardPref, heroCardContainer);
             cardList.Add(o);
         }
 
         for (int i = 0; i < cardList.Count; i++)
         {
             var card = cardList[i];
-            if (i >= chrSaveDataList.Count)
+            if (i >= heroSaveDataList.Count)
             {
                 card.gameObject.SetActive(false);
                 card.name = EMPTY_CARD_MARK;
@@ -100,7 +100,7 @@ public class ValhallaUI : BaseUI
             }
 
             card.gameObject.SetActive(true);
-            card.Init(chrSaveDataList[i]);
+            card.Init(heroSaveDataList[i]);
             card.OnShowCardDetail = (saveData)=>
             {
                 ShowCardDetail(saveData);
@@ -146,36 +146,36 @@ public class ValhallaUI : BaseUI
             if (match) activeCardList.Add(c);
         });
 
-        int CompareLevel(CharacterCard c1, CharacterCard c2)
+        int CompareLevel(HeroCard c1, HeroCard c2, int comparision = 0)
         {
             if (c1.name == EMPTY_CARD_MARK) return 1;
             if (c2.name == EMPTY_CARD_MARK) return -1;
 
             if (c1.Level > c2.Level) return 1;
             if (c1.Level < c2.Level) return -1;
-            return CompareTier(c1, c2);
+            return (comparision >= 1) ? 0 : CompareTier(c1, c2, comparision + 1);
         }
         
-        int CompareTier(CharacterCard c1, CharacterCard c2)
+        int CompareTier(HeroCard c1, HeroCard c2, int comparision = 0)
         {
             if (c1.name == EMPTY_CARD_MARK) return 1;
             if (c2.name == EMPTY_CARD_MARK) return -1;
 
             if ((int)c1.Tier > (int)c2.Tier) return 1;
             if ((int)c1.Tier < (int)c2.Tier) return -1;
-            return CompareLevel(c1, c2);
+            return (comparision >= 1) ? 0 : CompareLevel(c1, c2, comparision + 1);
         }
     }
 
-    private void ShowCardDetail(CharacterSaveData saveData)
+    private void ShowCardDetail(HeroSaveData saveData)
     {
-        charDetail.gameObject.SetActive(true);
-        charDetail.Init(saveData);
+        heroDetail.gameObject.SetActive(true);
+        heroDetail.Init(saveData);
     }
 
     public void HideCardDetail()
     {
-        charDetail.gameObject.SetActive(false);
+        heroDetail.gameObject.SetActive(false);
         selectedCard = null;
     }
 

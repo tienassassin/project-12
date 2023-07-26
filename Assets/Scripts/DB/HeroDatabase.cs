@@ -1,41 +1,40 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CharacterDatabase",menuName = "Database/Characters")]
-public class CharacterDatabase : ScriptableDatabase
+[CreateAssetMenu(fileName = "HeroDatabase",menuName = "Database/Hero")]
+public class HeroDatabase : ScriptableDatabase
 {
     [TableList]
-    public List<BaseCharacter> charList = new();
+    public List<BaseHero> heroList = new();
 
-    private Dictionary<string, BaseCharacter> cachedDict = new();
+    private Dictionary<string, BaseHero> cachedDict = new();
 
     public override void Import(params string[] data)
     {
-        charList = new List<BaseCharacter>();
+        heroList = new List<BaseHero>();
         var jArray = JArray.Parse(data[0]);
         foreach (var jToken in jArray)
         {
-            ConvertDataFromJObject((JObject)jToken, out var c);
-            if (c != null) charList.Add(c);
+            ConvertDataFromJObject((JObject)jToken, out var h);
+            if (h != null) heroList.Add(h);
         }
     }
     
     [Button]
     protected override void DeleteAll()
     {
-        charList.Clear();
+        heroList.Clear();
     } 
 
-    private void ConvertDataFromJObject(JObject jObject, out BaseCharacter c)
+    private void ConvertDataFromJObject(JObject jObject, out BaseHero h)
     {
         if (((string)jObject["name"]).IsNullOrWhitespace())
         {
-            c = null;
+            h = null;
             return;
         }
 
@@ -47,7 +46,7 @@ public class CharacterDatabase : ScriptableDatabase
         Enum.TryParse((string)jObject["damage type"], out DamageType dmgType);
         Enum.TryParse((string)jObject["range"], out Range range);
         
-        c = new BaseCharacter
+        h = new BaseHero
         {
             id = (string)jObject["ID"],
             name = (string)jObject["name"],
@@ -73,16 +72,16 @@ public class CharacterDatabase : ScriptableDatabase
         };
     }
 
-    public BaseCharacter GetCharacterWithID(string charId)
+    public BaseHero GetHeroWithID(string heroId)
     {
-        cachedDict.TryAdd(charId, charList.Find(c => c.id == charId));
-        if (cachedDict[charId] == null) EditorLog.Error($"Character {charId} is not defined");
-        return cachedDict[charId];
+        cachedDict.TryAdd(heroId, heroList.Find(h => h.id == heroId));
+        if (cachedDict[heroId] == null) EditorLog.Error($"Character {heroId} is not defined");
+        return cachedDict[heroId];
     }
 
-    public List<BaseCharacter> GetCharactersWithConditions(params object[] conditions)
+    public List<BaseHero> GetHeroesWithConditions(params object[] conditions)
     {
-        var matchCharList = new List<BaseCharacter>();
+        var matchHeroesList = new List<BaseHero>();
         
         var raceOptList = new List<Race>();
         var elementOptList = new List<Element>();
@@ -110,22 +109,22 @@ public class CharacterDatabase : ScriptableDatabase
             }
         }
 
-        charList.ForEach(c =>
+        heroList.ForEach(h =>
         {
-            if ((raceOptList.Contains(c.race) || acpAllRace)
-                && (elementOptList.Contains(c.element) || acpAllElement)
-                && (tierOptList.Contains(c.tier) || acpAllTier))
+            if ((raceOptList.Contains(h.race) || acpAllRace)
+                && (elementOptList.Contains(h.element) || acpAllElement)
+                && (tierOptList.Contains(h.tier) || acpAllTier))
             {
-                matchCharList.Add(c);
+                matchHeroesList.Add(h);
             }
         });
         
-        return matchCharList;
+        return matchHeroesList;
     }
 }
 
 [Serializable]
-public class BaseCharacter
+public class BaseHero
 {
     [VerticalGroup("Information")] 
     public string id;

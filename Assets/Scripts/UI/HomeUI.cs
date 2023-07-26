@@ -10,47 +10,23 @@
         UIManager.Instance.HideUI(nameof(HomeUI));
     }
 
-    private void OpenValhalla()
+    public void OpenValhalla()
     {
         ValhallaUI.Show();
     }
 
-    private void OpenLineUp()
+    public void OpenLineUp()
     {
         LineUpUI.Show();
     }
 
-    private void OpenQuest()
+    public void OpenQuest()
     {
         QuestUI.Show();
     }
 
-    private void OpenInventory()
+    public void OpenInventory()
     {
         InventoryUI.Show();
     }
-
-    #region Buttons
-
-    public void OnClickValhalla()
-    {
-        OpenValhalla();
-    }
-
-    public void OnClickLineUp()
-    {
-        OpenLineUp();
-    }
-
-    public void OnClickQuest()
-    {
-        OpenQuest();
-    }
-
-    public void OnClickInventory()
-    {
-        OpenInventory();
-    }
-
-    #endregion
 }

@@ -5823,7 +5823,7 @@ MonoBehaviour:
   - {fileID: 119599893269876944}
   - {fileID: 546871841773715586}
   - {fileID: 1718810443737148044}
-  chrNameTxt: {fileID: 741838669244369415}
+  nameTxt: {fileID: 741838669244369415}
   elementIcon: {fileID: 4664727154623186271}
   levelTxt: {fileID: 1341173721664443885}
   expTxt: {fileID: 6552353077531329046}
@@ -7196,8 +7196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4602463018247835366}
-  chrCardContainer: {fileID: 1545659131705966327}
-  chrCardPref: {fileID: 8230984445489841705, guid: 6b7a0c6d1c8ef314caef73fb06da29c6, type: 3}
+  heroCardContainer: {fileID: 1545659131705966327}
+  heroCardPref: {fileID: 8230984445489841705, guid: 6b7a0c6d1c8ef314caef73fb06da29c6, type: 3}
   tierFilterOptions:
   - {fileID: 8775797819103279491}
   - {fileID: 5069158677921597158}
@@ -7214,7 +7214,7 @@ MonoBehaviour:
   - {fileID: 8043665628512437725}
   - {fileID: 7402329765027666632}
   - {fileID: 6031912175524786604}
-  charDetail: {fileID: 5907582492466150310}
+  heroDetail: {fileID: 5907582492466150310}
 --- !u!1 &4602463018247835362
 GameObject:
   m_ObjectHideFlags: 0

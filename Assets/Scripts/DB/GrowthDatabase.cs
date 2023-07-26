@@ -1,15 +1,14 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LevelBonusLegend", menuName = "Legend/LevelBonus")]
-public class LevelBonusLegend : ScriptableDatabase
+[CreateAssetMenu(fileName = "GrowthDatabase", menuName = "Database/Growth")]
+public class GrowthDatabase : ScriptableDatabase
 {
     [TableList]
-    public List<CharacterGrowth> chrGrowthList = new();
+    public List<HeroGrowth> heroGrowthList = new();
 
     [TableList]
     public List<EquipmentGrowth> eqmGrowthList = new();
@@ -18,14 +17,14 @@ public class LevelBonusLegend : ScriptableDatabase
     {
         GUIUtility.systemCopyBuffer = data[0] + "\n" + data[1];
         
-        chrGrowthList = new List<CharacterGrowth>();
+        heroGrowthList = new List<HeroGrowth>();
         eqmGrowthList = new List<EquipmentGrowth>();
 
         var jArrayChar = JArray.Parse(data[0]);
         foreach (var jToken in jArrayChar)
         {
-            ConvertDataFromJObject((JObject)jToken, out CharacterGrowth c);
-            chrGrowthList.Add(c);
+            ConvertDataFromJObject((JObject)jToken, out HeroGrowth h);
+            heroGrowthList.Add(h);
         }
         
         var jArrayEqm = JArray.Parse(data[1]);
@@ -39,15 +38,15 @@ public class LevelBonusLegend : ScriptableDatabase
     [Button]
     protected override void DeleteAll()
     {
-        chrGrowthList.Clear();
+        heroGrowthList.Clear();
         eqmGrowthList.Clear();
     }
 
-    private void ConvertDataFromJObject(JObject jObject, out CharacterGrowth c)
+    private void ConvertDataFromJObject(JObject jObject, out HeroGrowth h)
     {
         Enum.TryParse((string)jObject["tier"], out Tier tier);
         
-        c = new CharacterGrowth
+        h = new HeroGrowth
         {
             tier = tier,
             growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
@@ -67,7 +66,7 @@ public class LevelBonusLegend : ScriptableDatabase
 }
 
 [Serializable]
-public struct CharacterGrowth
+public struct HeroGrowth
 {
     public Tier tier;
     public float growth;

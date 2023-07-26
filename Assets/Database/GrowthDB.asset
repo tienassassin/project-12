@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef3e008c901876043afddd994d286310, type: 3}
-  m_Name: LevelBonusLegend
+  m_Name: GrowthDB
   m_EditorClassIdentifier: 
   charLvlBonusList:
   - tier: 0

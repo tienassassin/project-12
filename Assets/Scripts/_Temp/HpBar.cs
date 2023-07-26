@@ -6,20 +6,20 @@ using UnityEngine.UI;
 
 public class HpBar : MonoBehaviour
 {
-    [SerializeField] private CharacterInBattle characterInBattle;
+    [SerializeField] private HeroInBattle heroInBattle;
     [SerializeField] private Image hpBar;
     [SerializeField] private Image angerBar;
 
     private void OnEnable()
     {
-        characterInBattle.OnUpdateHp += UpdateHpBar;
-        characterInBattle.OnUpdateAnger += UpdateAngerBar;
+        heroInBattle.OnUpdateHp += UpdateHpBar;
+        heroInBattle.OnUpdateAnger += UpdateAngerBar;
     }
 
     private void OnDisable()
     {
-        characterInBattle.OnUpdateHp -= UpdateHpBar;
-        characterInBattle.OnUpdateAnger -= UpdateAngerBar;
+        heroInBattle.OnUpdateHp -= UpdateHpBar;
+        heroInBattle.OnUpdateAnger -= UpdateAngerBar;
     }
 
     private void UpdateHpBar(float curHp, float virtualHp, float maxHp)

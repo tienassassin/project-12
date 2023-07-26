@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 8230984445489841705}
   - component: {fileID: 4432756764372830267}
   m_Layer: 0
-  m_Name: CharacterCard
+  m_Name: HeroCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

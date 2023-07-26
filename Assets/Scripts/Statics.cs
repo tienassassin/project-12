@@ -17,6 +17,19 @@ public static class Utils
         return num <= rate;
     }
 
+    public static int GetRandomResult(List<int> list)
+    {
+        int rand = Random.Range(1, 101);
+        int sum = 0;
+        for (int i = 0; i < list.Count; i++)
+        {
+            sum += list[i];
+            if (sum >= rand) return i;
+        }
+
+        return 0;
+    }
+
     public static T Parse<T>(string value) 
         where T : struct, IComparable, IConvertible, IFormattable
     {
@@ -65,23 +78,5 @@ public static class Utils
     public static string GetTitleCaseString(string raw)
     {
         return Regex.Replace(raw, @"\b\w", match => match.Value.ToUpper());
-    }
-}
-
-public static class StaticData
-{
-    private static Dictionary<Element, string> elementDescDict = new()
-    {
-        [Element.Fire] = "Hỏa",
-        [Element.Ice] = "Băng",
-        [Element.Wind] = "Phong",
-        [Element.Thunder] = "Lôi",
-    };
-
-    public static string GetElementDescription(Element e)
-    {
-        if (elementDescDict.ContainsKey(e)) return elementDescDict[e];
-        EditorLog.Error($"Element {e} is not defined!!!");
-        return "";
     }
 }

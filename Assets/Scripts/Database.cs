@@ -1,28 +1,42 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Networking;
 
 public class Database : Singleton<Database>
 {
-    [SerializeField] private string apiUrl = "https://opensheet.elk.sh/";
-    [SerializeField] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
-    [SerializeField] private CharacterDatabase charDB;
-    [SerializeField] private EquipmentDatabase eqmDB;
-    [SerializeField] private StatsDescriptions statsDesc;
-    [SerializeField] private LevelBonusLegend lvlBonusLeg;
-    [SerializeField] private ExpDatabase expDB;
-    [SerializeField] private BackstoryDatabase bsDB;
+    [HorizontalGroup("ApiGithub"), SerializeField, LabelWidth(125)] private string apiUrl = "https://opensheet.elk.sh/";
+    [HorizontalGroup("GoogleSheet"), SerializeField, LabelWidth(125)] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
+    
+    [FoldoutGroup("DB"), SerializeField] private HeroDatabase heroDB;
+    [FoldoutGroup("DB"), SerializeField] private EquipmentDatabase eqmDB;
+    [FoldoutGroup("DB"), SerializeField] private StatsDescriptions statsDesc;
+    [FoldoutGroup("DB"), SerializeField] private GrowthDatabase growthDB;
+    [FoldoutGroup("DB"), SerializeField] private ExpDatabase expDB;
+    [FoldoutGroup("DB"), SerializeField] private BackstoryDatabase bsDB;
 
+    private const string HERO_SHEET = "Heroes";
+    private const string EQM_SHEET = "Equipments";
+    private const string STATS_SHEET = "Stats";
+    private const string HERO_GROWTH_SHEET = "CharacterGrowth";
+    private const string EQM_GROWTH_SHEET = "EquipmentGrowth";
+    private const string EXP_SHEET = "Exp";
+    private const string BACKSTORY_SHEET = "Backstory";
+    
     protected override void Awake()
     {
         base.Awake();
         FetchData();
     }
 
-    [Button]
+    [HorizontalGroup("ApiGithub", Width = 0.1f), Button("Open")]
+    public void OpenApiGithub()
+    {
+        Application.OpenURL("https://github.com/benborgers/opensheet");
+    }
+
+    [HorizontalGroup("GoogleSheet", Width = 0.1f), Button("Open")]
     public void OpenGoogleSheet()
     {
         Application.OpenURL($"https://docs.google.com/spreadsheets/d/{databaseId}/");
@@ -31,19 +45,19 @@ public class Database : Singleton<Database>
     [Button]
     public void FetchData()
     {
-        StartCoroutine(FetchCharacterDB());
+        StartCoroutine(FetchHeroDB());
         StartCoroutine(FetchEquipmentDB());
         StartCoroutine(FetchStatsDescriptions());
-        StartCoroutine(FetchLevelBonusLegend());
-        StartCoroutine(FetchExpDatabase());
-        StartCoroutine(FetchBackstoryDatabase());
+        StartCoroutine(FetchGrowthDB());
+        StartCoroutine(FetchExpDB());
+        StartCoroutine(FetchBackstoryDB());
     }
 
     #region Data fetching
     
-    IEnumerator FetchCharacterDB()
+    IEnumerator FetchHeroDB()
     {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/Characters");
+        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{HERO_SHEET}");
         yield return uwr.SendWebRequest();
         if (uwr.result != UnityWebRequest.Result.Success)
         {
@@ -51,13 +65,13 @@ public class Database : Singleton<Database>
         }
         else
         {
-            charDB.Import(uwr.downloadHandler.text);
+            heroDB.Import(uwr.downloadHandler.text);
         }
     }
     
     IEnumerator FetchEquipmentDB()
     {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/Equipments");
+        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EQM_SHEET}");
         yield return uwr.SendWebRequest();
         if (uwr.result != UnityWebRequest.Result.Success)
         {
@@ -71,7 +85,7 @@ public class Database : Singleton<Database>
 
     IEnumerator FetchStatsDescriptions()
     {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/Stats");
+        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{STATS_SHEET}");
         yield return uwr.SendWebRequest();
         if (uwr.result != UnityWebRequest.Result.Success)
         {
@@ -83,10 +97,10 @@ public class Database : Singleton<Database>
         }
     }
 
-    IEnumerator FetchLevelBonusLegend()
+    IEnumerator FetchGrowthDB()
     {
-        var cUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/CharacterGrowth");
-        var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/EquipmentGrowth");
+        var cUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{HERO_GROWTH_SHEET}");
+        var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EQM_GROWTH_SHEET}");
         var dataC = "";
         yield return cUwr.SendWebRequest();
         if (cUwr.result != UnityWebRequest.Result.Success)
@@ -109,12 +123,12 @@ public class Database : Singleton<Database>
             dataE = eUwr.downloadHandler.text;
         }
 
-        lvlBonusLeg.Import(dataC, dataE);
+        growthDB.Import(dataC, dataE);
     }
     
-    IEnumerator FetchExpDatabase()
+    IEnumerator FetchExpDB()
     {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/Exp");
+        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EXP_SHEET}");
         yield return uwr.SendWebRequest();
         if (uwr.result != UnityWebRequest.Result.Success)
         {
@@ -126,9 +140,9 @@ public class Database : Singleton<Database>
         }
     }
     
-    IEnumerator FetchBackstoryDatabase()
+    IEnumerator FetchBackstoryDB()
     {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/Backstory");
+        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{BACKSTORY_SHEET}");
         yield return uwr.SendWebRequest();
         if (uwr.result != UnityWebRequest.Result.Success)
         {
@@ -142,18 +156,18 @@ public class Database : Singleton<Database>
     
     #endregion
     
-    public float GetCharacterGrowth(Tier t)
+    public float GetHeroGrowth(Tier t)
     {
-        return lvlBonusLeg.chrGrowthList.Find(x => x.tier == t).growth;
+        return growthDB.heroGrowthList.Find(x => x.tier == t).growth;
     }
     public float GetEquipmentGrowth(Rarity r)
     {
-        return lvlBonusLeg.eqmGrowthList.Find(x => x.rarity == r).growth;
+        return growthDB.eqmGrowthList.Find(x => x.rarity == r).growth;
     }
 
-    public BaseCharacter GetCharacterWithID(string id)
+    public BaseHero GetHeroWithID(string id)
     {
-        return charDB.GetCharacterWithID(id);
+        return heroDB.GetHeroWithID(id);
     }
 
     public BaseEquipment GetEquipmentWithID(string id)
@@ -193,32 +207,32 @@ public class Database : Singleton<Database>
         return statsDesc.GetStatDescription(key).limit;
     }
 
-    public string GetCharacterAlias(string charId)
+    public string GetHeroAlias(string heroId)
     {
-        return bsDB.GetBackstory(charId).alias;
+        return bsDB.GetBackstory(heroId).alias;
     }
     
-    public string GetCharacterStory(string charId)
+    public string GetHeroStory(string heroId)
     {
-        return bsDB.GetBackstory(charId).story;
+        return bsDB.GetBackstory(heroId).story;
     }
 }
 
 public static class DatabaseExtension
 {
-    public static float GetCharacterGrowth(this BaseCharacter c)
+    public static float GetHeroGrowth(this BaseHero h)
     {
-        return Database.Instance.GetCharacterGrowth(c.tier);
+        return Database.Instance.GetHeroGrowth(h.tier);
     }
 
-    public static string GetCharacterAlias(this BaseCharacter c)
+    public static string GetHeroAlias(this BaseHero h)
     {
-        return Database.Instance.GetCharacterAlias(c.id);
+        return Database.Instance.GetHeroAlias(h.id);
     }
 
-    public static string GetCharacterStory(this BaseCharacter c)
+    public static string GetHeroStory(this BaseHero h)
     {
-        return Database.Instance.GetCharacterStory(c.id);
+        return Database.Instance.GetHeroStory(h.id);
     }
 
     public static float GetEquipmentGrowth(this BaseEquipment e)
@@ -226,18 +240,18 @@ public static class DatabaseExtension
         return Database.Instance.GetEquipmentGrowth(e.rarity);
     }
 
-    public static BaseCharacter GetCharacterWithID(this CharacterSaveData csd)
+    public static BaseHero GetHeroWithID(this HeroSaveData hsd)
     {
-        return Database.Instance.GetCharacterWithID(csd.chrId);
+        return Database.Instance.GetHeroWithID(hsd.heroId);
     }
 
-    public static int GetLevel(this CharacterSaveData csd)
+    public static int GetLevel(this HeroSaveData hsd)
     {
-        return Database.Instance.GetLevel(csd.totalExp);
+        return Database.Instance.GetLevel(hsd.totalExp);
     }
 
-    public static Tuple<int, int> GetExp(this CharacterSaveData csd)
+    public static Tuple<int, int> GetExp(this HeroSaveData hsd)
     {
-        return Database.Instance.GetExp(csd.totalExp);
+        return Database.Instance.GetExp(hsd.totalExp);
     }
 }

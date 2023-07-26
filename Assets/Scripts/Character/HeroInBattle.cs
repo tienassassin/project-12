@@ -1,14 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class CharacterInBattle : Character, IAttacker, IDefender
+public class HeroInBattle : Hero, IAttacker, IDefender
 {
-    [TitleGroup("BASE DATA:")]
-
     [TitleGroup("IN-GAME STATS")]
     [SerializeField] protected Stats stats;
     [SerializeField] protected float virtualHP;
@@ -24,9 +19,7 @@ public class CharacterInBattle : Character, IAttacker, IDefender
     
     #region Public properties
 
-    public Element Element => baseChr.element;
-    public Race Race => baseChr.race;
-    public DamageType DmgType => baseChr.damageType;
+    public DamageType DmgType => baseHero.damageType;
     public bool IsAlive => curHP > 0;
     public bool CanTakeTurn => !hasStun;
     public bool CanUseSkill => !hasSilent;
@@ -58,13 +51,13 @@ public class CharacterInBattle : Character, IAttacker, IDefender
     
     #endregion
 
-    public override void Init(CharacterSaveData saveData)
+    public override void Init(HeroSaveData saveData)
     {
         base.Init(saveData);
         
         //todo: add equipment stats to overall stats
 
-        stats = baseChr.stats;
+        stats = baseHero.stats;
          
         virtualHP = 0;
         agility = 0;
@@ -113,7 +106,7 @@ public class CharacterInBattle : Character, IAttacker, IDefender
 
     #endregion
 
-    public virtual void Attack(CharacterInBattle target) { }
+    public virtual void Attack(HeroInBattle target) { }
 
     public virtual void DealDamage(IDefender target, float dmgAmount, DamageType dmgType) { }
 

@@ -5,36 +5,36 @@ using UnityEngine;
 
 public class UserManager : Singleton<UserManager>
 {
-    public UserCharacterDB chrDB;
+    public UserHeroDB uHeroDB;
 
-    private const string CHARACTER_DB_KEY = "CHARACTER_DB";
+    private const string HERO_DB_KEY = "HERO_DB";
 
     protected override void Awake()
     {
         base.Awake();
         
-        LoadCharacterDB();
+        LoadHeroDB();
     }
 
-    public List<CharacterSaveData> GetAllCharacters()
+    public List<HeroSaveData> GetAllHeroes()
     {
-        return chrDB.allChrList;
+        return uHeroDB.allHeroList;
     }
 
-    public List<CharacterSaveData> GetReadyCharacters()
+    public List<HeroSaveData> GetReadyHeroes()
     {
-        return chrDB.allChrList.FindAll(x => chrDB.readyChrList.Contains(x.chrId));
+        return uHeroDB.allHeroList.FindAll(x => uHeroDB.readyHeroList.Contains(x.heroId));
     }
 
-    public void LoadCharacterDB()
+    public void LoadHeroDB()
     {
-        if (PlayerPrefs.HasKey(CHARACTER_DB_KEY))
+        if (PlayerPrefs.HasKey(HERO_DB_KEY))
         {
-            chrDB = JsonUtility.FromJson<UserCharacterDB>(PlayerPrefs.GetString(CHARACTER_DB_KEY));
+            uHeroDB = JsonUtility.FromJson<UserHeroDB>(PlayerPrefs.GetString(HERO_DB_KEY));
         }
         else
         {
-            chrDB = new UserCharacterDB();
+            uHeroDB = new UserHeroDB();
             SaveCharacterDB();
         }
     }
@@ -42,27 +42,27 @@ public class UserManager : Singleton<UserManager>
     [Button]
     public void SaveCharacterDB()
     {
-        PlayerPrefs.SetString(CHARACTER_DB_KEY, JsonUtility.ToJson(chrDB));
+        PlayerPrefs.SetString(HERO_DB_KEY, JsonUtility.ToJson(uHeroDB));
     }
 
     [Button]
     public void DeleteUserDB()
     {
-        PlayerPrefs.DeleteKey(CHARACTER_DB_KEY);
+        PlayerPrefs.DeleteKey(HERO_DB_KEY);
     }
 }
 
 [Serializable]
-public class UserCharacterDB
+public class UserHeroDB
 {
-    public List<CharacterSaveData> allChrList = new();
-    public List<string> readyChrList = new();
+    public List<HeroSaveData> allHeroList = new();
+    public List<string> readyHeroList = new();
 }
 
 [Serializable]
-public struct CharacterSaveData
+public struct HeroSaveData
 {
-    public string chrId;
+    public string heroId;
     public int totalExp;
     public float curHp;
     public float energy;

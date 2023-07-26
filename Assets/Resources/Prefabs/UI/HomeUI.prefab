@@ -655,7 +655,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4602463017395544677}
         m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
-        m_MethodName: OnClickQuest
+        m_MethodName: OpenQuest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1833,7 +1833,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4602463017395544677}
         m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
-        m_MethodName: OnClickLineUp
+        m_MethodName: OpenLineUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2028,7 +2028,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4602463017395544677}
         m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
-        m_MethodName: OnClickValhalla
+        m_MethodName: OpenValhalla
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2333,7 +2333,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4602463017395544677}
         m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
-        m_MethodName: OnClickInventory
+        m_MethodName: OpenInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

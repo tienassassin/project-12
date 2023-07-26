@@ -3,9 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterCard : Character
+public class HeroCard : Hero
 {
-    public Action<CharacterSaveData> OnShowCardDetail = null;
+    public Action<HeroSaveData> OnShowCardDetail = null;
     
     [SerializeField] private Image elementImg;
     [SerializeField] private TMP_Text levelTxt;
@@ -14,7 +14,7 @@ public class CharacterCard : Character
 
     [SerializeField] private Color[] elementColors;
 
-    public override void Init(CharacterSaveData data)
+    public override void Init(HeroSaveData data)
     {
         base.Init(data);
         
@@ -23,9 +23,9 @@ public class CharacterCard : Character
 
     private void Refresh()
     {
-        elementImg.color = elementColors[(int)baseChr.element];
+        elementImg.color = elementColors[(int)baseHero.element];
         levelTxt.text = level.ToString();
-        hpImg.fillAmount = curHP / baseChr.stats.health;
+        hpImg.fillAmount = curHP / baseHero.stats.health;
         energyImg.fillAmount = energy / 100;
     }
 

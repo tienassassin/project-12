@@ -4,11 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterDetail : DuztineBehaviour
+public class HeroDetail : DuztineBehaviour
 {
     [SerializeField] private GameObject[] tabs;
 
-    [SerializeField] private TMP_Text chrNameTxt;
+    [SerializeField] private TMP_Text nameTxt;
     [SerializeField] private Image elementIcon;
     [SerializeField] private TMP_Text levelTxt;
     [SerializeField] private TMP_Text expTxt;
@@ -20,7 +20,7 @@ public class CharacterDetail : DuztineBehaviour
 
     [SerializeField] private StatDetail[] statDetails;
 
-    private BaseCharacter baseChr;
+    private BaseHero baseHero;
     private int level;
     private int curExp;
     private int nextExp;
@@ -34,10 +34,10 @@ public class CharacterDetail : DuztineBehaviour
         SwitchTab(0);
     }
 
-    public void Init(CharacterSaveData saveData)
+    public void Init(HeroSaveData saveData)
     {
-        baseChr = saveData.GetCharacterWithID();
-        chrNameTxt.text = baseChr.name;
+        baseHero = saveData.GetHeroWithID();
+        nameTxt.text = baseHero.name;
         level = saveData.GetLevel();
         (curExp, nextExp) = saveData.GetExp();
         
@@ -52,20 +52,20 @@ public class CharacterDetail : DuztineBehaviour
 
     private void LoadStatsTab()
     {
-        baseStats = baseChr.stats;
-        nonEqmStats = baseStats.GetStatsByLevel(level, baseChr.GetCharacterGrowth());
+        baseStats = baseHero.stats;
+        nonEqmStats = baseStats.GetStatsByLevel(level, baseHero.GetHeroGrowth());
         overallStats = nonEqmStats;
 
         foreach (var statDetail in statDetails)
         {
-            statDetail.Init(baseStats, nonEqmStats, overallStats, baseChr.damageType);
+            statDetail.Init(baseStats, nonEqmStats, overallStats, baseHero.damageType);
         }
     }
 
     private void LoadStoryTab()
     {
-        aliasTxt.text = $"[ {baseChr.name} - {baseChr.GetCharacterAlias()} ]";
-        storyTxt.text = baseChr.GetCharacterStory();
+        aliasTxt.text = $"[ {baseHero.name} - {baseHero.GetHeroAlias()} ]";
+        storyTxt.text = baseHero.GetHeroStory();
     }
 
     public void SwitchTab(int index)
