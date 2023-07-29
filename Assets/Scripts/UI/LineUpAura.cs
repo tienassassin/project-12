@@ -1,18 +1,21 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] private int minRank;
     [SerializeField] private int maxRank;
     [SerializeField] private GameObject detailPanel;
     [SerializeField] private float delayShowPanel = 0.3f;
     [SerializeField] private TMP_Text[] rankTexts;
     [SerializeField] private Color color0;
-    [SerializeField] private Color color1;
+    [SerializeField] private Color[] color1;
     [SerializeField] private float fontSize0;
     [SerializeField] private float fontSize1;
     [SerializeField] private TMP_Text titleTxt;
@@ -24,25 +27,57 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     private void Awake()
     {
         detailPanel.SetActive(false);
-        color0Hex = "#" + ColorUtility.ToHtmlStringRGBA(color0);
-        color1Hex = "#" + ColorUtility.ToHtmlStringRGBA(color1);
     }
 
     [Button]
-    public void Init(Race race, int rank, string[] auraDesc)
+    public void Init(Race race, int rank)
     {
-        rank = Mathf.Clamp(rank, 0, maxRank - 1);
+        titleTxt.text = $"{race} Aura";
+        var auraList = Database.Instance.GetRaceAura(race);
+        RefreshRank(rank);
+        RefreshContent(auraList, rank);
+    }
+
+    public void Init(Element element, int rank)
+    {
+        titleTxt.text = $"{element} Aura";
+        var auraList = Database.Instance.GetElementAura(element);
+        RefreshRank(rank);
+        RefreshContent(auraList, rank);
+    }
+
+    private void RefreshRank(int rank)
+    {
+        rank = Mathf.Clamp(rank, minRank, maxRank);
+        int rankIndex = rank - minRank;
         
         for (int i = 0; i < rankTexts.Length; i++)
         {
-            rankTexts[i].fontSize = (i != rank) ? fontSize0 : fontSize1;
-            rankTexts[i].color = (i != rank) ? color0 : color1;
+            rankTexts[i].fontSize = (i != rankIndex) ? fontSize0 : fontSize1;
+            rankTexts[i].color = (i != rankIndex) ? color0 : color1[maxRank - rank];
         }
     }
 
-    public void Init(Element element, int rank, string[] auraDesc)
+    private void RefreshContent(List<Aura> auraList, int rank)
     {
+        color0Hex = "#" + ColorUtility.ToHtmlStringRGBA(color0);
+        color1Hex = "#" + ColorUtility.ToHtmlStringRGBA(color1[1]);
         
+        string content = "";
+        for (int i = 0; i < auraList.Count; i++)
+        {
+            var aura = auraList[i];
+            bool isCurRank = (rank == aura.rank);
+            bool emptyName = aura.name.IsNullOrWhitespace();
+            bool isLastAura = (i >= auraList.Count - 1);
+            content += $"<color={(isCurRank ? color1Hex : color0Hex)}>" +
+                        $"{aura.name}{(emptyName ? "" : " ")}" +
+                        $"({aura.rank}): {aura.description}" +
+                        "</color>" +
+                        $"{(isLastAura ? "" : "\n\n")}";
+        }
+
+        contentTxt.text = content.Replace("#color","#FFFFFFFF");
     }
 
     public void OnPointerEnter(PointerEventData eventData)

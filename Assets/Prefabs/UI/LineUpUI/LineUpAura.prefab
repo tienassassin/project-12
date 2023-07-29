@@ -75,8 +75,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282335039
-  m_fontColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+    rgba: 4285756275
+  m_fontColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 20, y: 20, z: 20, w: 0}
+  m_margin: {x: 20, y: 20, z: 20, w: 20}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -847,6 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f904da093881f14788dc0a01c595b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minRank: 0
   maxRank: 0
   detailPanel: {fileID: 2533452702448177863}
   delayShowPanel: 0.1
@@ -854,8 +855,11 @@ MonoBehaviour:
   - {fileID: 7925543072813056357}
   - {fileID: 5065016917216479924}
   - {fileID: 3735667702202110812}
-  color0: {r: 0.24705882, g: 0.24705882, b: 0.24705882, a: 1}
-  color1: {r: 1, g: 0.6039216, b: 0.015686275, a: 1}
+  color0: {r: 0.26666668, g: 0.26666668, b: 0.26666668, a: 1}
+  color1:
+  - {r: 0.7028302, g: 0.94265145, b: 1, a: 1}
+  - {r: 1, g: 0.8585626, b: 0.2688679, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
   fontSize0: 32
   fontSize1: 56
   titleTxt: {fileID: 1664323854590451676}

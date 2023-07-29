@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -48,7 +49,7 @@ public class Database : Singleton<Database>
     [Button]
     public void FetchData()
     {
-        if (Application.internetReachability != NetworkReachability.NotReachable) return;
+        if (Application.internetReachability == NetworkReachability.NotReachable) return;
         
         StartCoroutine(FetchHeroDB());
         StartCoroutine(FetchEquipmentDB());
@@ -250,6 +251,16 @@ public class Database : Singleton<Database>
     public string GetHeroStory(string heroId)
     {
         return bsDB.GetBackstory(heroId).story;
+    }
+
+    public List<Aura> GetRaceAura(Race race)
+    {
+        return auraDB.raceAuraList.Find(x => x.race == race).auraList;
+    }
+
+    public List<Aura> GetElementAura(Element element)
+    {
+        return auraDB.elementAuraList.Find(x => x.element == element).auraList;
     }
 }
 

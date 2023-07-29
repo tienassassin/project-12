@@ -15,8 +15,6 @@ public class GrowthDatabase : ScriptableDatabase
 
     public override void Import(params string[] data)
     {
-        GUIUtility.systemCopyBuffer = data[0] + "\n" + data[1];
-        
         heroGrowthList = new List<HeroGrowth>();
         eqmGrowthList = new List<EquipmentGrowth>();
 

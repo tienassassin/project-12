@@ -12,3 +12,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aeae6f53890ea543babefe1ac4b7419, type: 3}
   m_Name: HeroDB
   m_EditorClassIdentifier: 
+  heroList:
+  - id: a484n
+    name: Arslan
+    tier: 0
+    element: 1
+    race: 0
+    damageType: 0
+    range: 0
+    stats:
+      showFull: 1
+      health: 100
+      damage: 30
+      armor: 12
+      resistance: 15
+      intelligence: 20
+      speed: 20
+      luck: 10
+      critDamage: 150
+      lifeSteal: 0
+      accuracy: 0
+  - id: h811y
+    name: Harry
+    tier: 0
+    element: 1
+    race: 0
+    damageType: 1
+    range: 0
+    stats:
+      showFull: 1
+      health: 145
+      damage: 25
+      armor: 17
+      resistance: 19
+      intelligence: 22.5
+      speed: 19
+      luck: 5
+      critDamage: 150
+      lifeSteal: 0
+      accuracy: 0
+  - id: c616s
+    name: Claws
+    tier: 0
+    element: 2
+    race: 1
+    damageType: 1
+    range: 1
+    stats:
+      showFull: 1
+      health: 80
+      damage: 40
+      armor: 10
+      resistance: 10
+      intelligence: 10
+      speed: 21
+      luck: 15
+      critDamage: 150
+      lifeSteal: 0
+      accuracy: 0
+  - id: g763d
+    name: Guard
+    tier: 1
+    element: 2
+    race: 0
+    damageType: 0
+    range: 1
+    stats:
+      showFull: 1
+      health: 125
+      damage: 32
+      armor: 10
+      resistance: 17
+      intelligence: 22.5
+      speed: 20
+      luck: 15
+      critDamage: 175
+      lifeSteal: 10
+      accuracy: 0
