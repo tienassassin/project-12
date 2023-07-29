@@ -837,8 +837,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementImg: {fileID: 9128412574609511419}
   levelTxt: {fileID: 6900994244964659300}
-  hpImg: {fileID: 8273433102112914531}
-  energyImg: {fileID: 5505678699177967261}
+  hpSlider: {fileID: 8273433102112914531}
+  energySlider: {fileID: 5505678699177967261}
   elementColors:
   - {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
   - {r: 0.36320752, g: 0.770863, b: 1, a: 1}

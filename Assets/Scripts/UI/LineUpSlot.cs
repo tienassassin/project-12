@@ -12,8 +12,8 @@ public class LineUpSlot : DuztineBehaviour
     [SerializeField] private GameObject heroInfo;
 
     [SerializeField] private TMP_Text levelTxt;
-    [SerializeField] private Slider curHp;
-    [SerializeField] private Slider energy;
+    [SerializeField] private Slider hpSlider;
+    [SerializeField] private Slider energySlider;
 
     private HeroSaveData saveData;
     private BaseHero baseHero;
@@ -34,8 +34,8 @@ public class LineUpSlot : DuztineBehaviour
         if (saveData == null) return;
         
         levelTxt.text = saveData.GetLevel().ToString();
-        curHp.value = saveData.curHp / baseHero.stats.health;
-        energy.value = saveData.energy / 100;
+        hpSlider.value = saveData.curHp / baseHero.stats.health;
+        energySlider.value = saveData.energy / 100;
     }
     
     public void OnClickSlot()

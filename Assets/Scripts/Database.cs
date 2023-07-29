@@ -48,6 +48,8 @@ public class Database : Singleton<Database>
     [Button]
     public void FetchData()
     {
+        if (Application.internetReachability != NetworkReachability.NotReachable) return;
+        
         StartCoroutine(FetchHeroDB());
         StartCoroutine(FetchEquipmentDB());
         StartCoroutine(FetchStatsDescriptions());
