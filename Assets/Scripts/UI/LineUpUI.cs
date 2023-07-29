@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LineUpUI : MonoBehaviour
+public class LineUpUI : BaseUI
 {
     public static void Show()
     {
