@@ -9,8 +9,8 @@ public class HeroCard : Hero
     
     [SerializeField] private Image elementImg;
     [SerializeField] private TMP_Text levelTxt;
-    [SerializeField] private Image hpImg;
-    [SerializeField] private Image energyImg;
+    [SerializeField] private Slider hpImg;
+    [SerializeField] private Slider energyImg;
 
     [SerializeField] private Color[] elementColors;
 
@@ -25,8 +25,8 @@ public class HeroCard : Hero
     {
         elementImg.color = elementColors[(int)baseHero.element];
         levelTxt.text = level.ToString();
-        hpImg.fillAmount = curHP / baseHero.stats.health;
-        energyImg.fillAmount = energy / 100;
+        hpImg.value = curHP / baseHero.stats.health;
+        energyImg.value = energy / 100;
     }
 
     public void OnClickCard()

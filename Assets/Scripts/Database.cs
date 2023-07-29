@@ -15,6 +15,7 @@ public class Database : Singleton<Database>
     [FoldoutGroup("DB"), SerializeField] private GrowthDatabase growthDB;
     [FoldoutGroup("DB"), SerializeField] private ExpDatabase expDB;
     [FoldoutGroup("DB"), SerializeField] private BackstoryDatabase bsDB;
+    [FoldoutGroup("DB"), SerializeField] private AuraDatabase auraDB;
 
     private const string HERO_SHEET = "Heroes";
     private const string EQM_SHEET = "Equipments";
@@ -23,7 +24,9 @@ public class Database : Singleton<Database>
     private const string EQM_GROWTH_SHEET = "EquipmentGrowth";
     private const string EXP_SHEET = "Exp";
     private const string BACKSTORY_SHEET = "Backstory";
-    
+    private const string RACE_AURA_SHEET = "RaceAura";
+    private const string ELEMENT_AURA_SHEET = "ElementAura";
+
     protected override void Awake()
     {
         base.Awake();
@@ -51,6 +54,7 @@ public class Database : Singleton<Database>
         StartCoroutine(FetchGrowthDB());
         StartCoroutine(FetchExpDB());
         StartCoroutine(FetchBackstoryDB());
+        StartCoroutine(FetchAuraDB());
     }
 
     #region Data fetching
@@ -152,6 +156,35 @@ public class Database : Singleton<Database>
         {
             bsDB.Import(uwr.downloadHandler.text);
         }
+    }
+    
+    IEnumerator FetchAuraDB()
+    {
+        var rUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{RACE_AURA_SHEET}");
+        var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{ELEMENT_AURA_SHEET}");
+        var dataR = "";
+        yield return rUwr.SendWebRequest();
+        if (rUwr.result != UnityWebRequest.Result.Success)
+        {
+            EditorLog.Error(rUwr.error);
+        }
+        else
+        {
+            dataR = rUwr.downloadHandler.text;
+        }
+        
+        var dataE = "";
+        yield return eUwr.SendWebRequest();
+        if (eUwr.result != UnityWebRequest.Result.Success)
+        {
+            EditorLog.Error(eUwr.error);
+        }
+        else
+        {
+            dataE = eUwr.downloadHandler.text;
+        }
+
+        auraDB.Import(dataR, dataE);
     }
     
     #endregion

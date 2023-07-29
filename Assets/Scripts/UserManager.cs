@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 
 public class UserManager : Singleton<UserManager>
@@ -24,7 +25,27 @@ public class UserManager : Singleton<UserManager>
 
     public List<HeroSaveData> GetReadyHeroes()
     {
-        return uHeroDB.allHeroList.FindAll(x => uHeroDB.readyHeroList.Contains(x.heroId));
+        var readyHeroList = new List<HeroSaveData>();
+        uHeroDB.readyHeroList.ForEach(x =>
+        {
+            readyHeroList.Add(uHeroDB.allHeroList.Find(y => y.heroId == x));
+        });
+
+        return readyHeroList;
+    }
+
+    public void AddHeroToLineUp(int slotId, string heroId)
+    {
+        int oldSlotId = uHeroDB.readyHeroList.IndexOf(heroId);
+        string oldHeroId = uHeroDB.readyHeroList[slotId];
+        if (oldSlotId >= 0)
+        {
+            uHeroDB.readyHeroList[oldSlotId] = oldHeroId;
+        }
+        
+        // uHeroDB.readyHeroList.Remove(heroId);
+        uHeroDB.readyHeroList[slotId] = heroId;
+        SaveCharacterDB();
     }
 
     public void LoadHeroDB()
@@ -61,7 +82,7 @@ public class UserHeroDB
 }
 
 [Serializable]
-public struct HeroSaveData
+public class HeroSaveData
 {
     public string heroId;
     public int totalExp;
@@ -71,7 +92,7 @@ public struct HeroSaveData
 }
 
 [Serializable]
-public struct EquipmentSaveData
+public class EquipmentSaveData
 {
     public string eqmId;
     public int level;
