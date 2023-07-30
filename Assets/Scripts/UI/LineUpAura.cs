@@ -92,13 +92,13 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (c != null) StopCoroutine(c);
         detailPanel.SetActive(false);
-        this.PostEvent(EventID.HIGHLIGHT_LINEUP_SLOT, null);
+        this.PostEvent(EventID.ON_HIGHLIGHT_AURA, null);
     }
 
     IEnumerator ShowDetailPanel()
     {
         yield return new WaitForSeconds(delayShowPanel);
         detailPanel.SetActive(true);
-        this.PostEvent(EventID.HIGHLIGHT_LINEUP_SLOT, auraType);
+        this.PostEvent(EventID.ON_HIGHLIGHT_AURA, auraType);
     }
 }

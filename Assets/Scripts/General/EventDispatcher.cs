@@ -70,7 +70,8 @@ public class EventDispatcher : Singleton<EventDispatcher>
 
 public enum EventID
 {
-    HIGHLIGHT_LINEUP_SLOT,
+    ON_HIGHLIGHT_AURA,
+    ON_LINEUP_CHANGED,
 }
 
 public static class EventDispatcherExtension

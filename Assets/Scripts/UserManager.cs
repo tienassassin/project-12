@@ -46,12 +46,16 @@ public class UserManager : Singleton<UserManager>
         // uHeroDB.readyHeroList.Remove(heroId);
         uHeroDB.readyHeroList[slotId] = heroId;
         SaveCharacterDB();
+        
+        this.PostEvent(EventID.ON_LINEUP_CHANGED);
     }
 
     public void RemoveHeroFromLineUp(int slotId)
     {
         uHeroDB.readyHeroList[slotId] = "";
         SaveCharacterDB();
+        
+        this.PostEvent(EventID.ON_LINEUP_CHANGED);
     }
 
     public bool IsHeroReady(string heroId)
