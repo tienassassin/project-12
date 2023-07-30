@@ -34,7 +34,9 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     public void Init(Race race, int rank)
     {
         auraType = race;
-        titleTxt.text = $"{race} Aura";
+        titleTxt.text = $"<color={ColorPalette.Instance.GetRaceColorHex(race)}>" +
+                        $"<ico>" +
+                        $"{race} Aura</color>";
         var auraList = Database.Instance.GetRaceAura(race);
         RefreshRank(rank);
         RefreshContent(auraList, rank);
@@ -43,10 +45,13 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     public void Init(Element element, int rank)
     {
         auraType = element;
-        titleTxt.text = $"{element} Aura";
+        titleTxt.text = $"<color={ColorPalette.Instance.GetElementColorHex(element)}>" +
+                        $"<ico>" +
+                        $"{element} Aura</color>";
         var auraList = Database.Instance.GetElementAura(element);
+        var colorList = new List<string> { ColorPalette.Instance.GetElementColorHex(element) };
         RefreshRank(rank);
-        RefreshContent(auraList, rank);
+        RefreshContent(auraList, rank, colorList);
     }
 
     private void RefreshRank(int rank)
@@ -61,7 +66,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         }
     }
 
-    private void RefreshContent(List<Aura> auraList, int rank)
+    private void RefreshContent(List<Aura> auraList, int rank, List<string> colorList = null)
     {
         color0Hex = "#" + ColorUtility.ToHtmlStringRGBA(color0);
         color1Hex = "#" + ColorUtility.ToHtmlStringRGBA(color1[1]);
@@ -80,7 +85,14 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
                         $"{(isLastAura ? "" : "\n\n")}";
         }
 
-        contentTxt.text = content.Replace("#color","#FFFFFFFF");
+        int index = 0;
+        colorList?.ForEach(x =>
+        {
+            content = content.Replace($"#color{index}", x);
+            index++;
+        });
+
+        contentTxt.text = content;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

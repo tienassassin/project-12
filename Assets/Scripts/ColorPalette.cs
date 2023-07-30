@@ -12,14 +12,18 @@ public class ColorPalette : Singleton<ColorPalette>
     [ColorPalette(PaletteName = "Element")]
     public Color[] elementColors;
 
+    [ColorPalette(PaletteName = "Race")]
+    public Color[] raceColors;
+
     public Color GetRarityColor(Rarity r)
     {
         return rarityColors[(int)r];
     }
     
-    public string GetRarityColorHex(Rarity r)
+    public string GetRarityColorHex(Rarity r, bool hasPrefix = true)
     {
-        return ColorUtility.ToHtmlStringRGBA(rarityColors[(int)r]);
+        string prefix = (hasPrefix ? "#" : "");
+        return prefix + ColorUtility.ToHtmlStringRGBA(rarityColors[(int)r]);
     }
     
     public Color GetTierColor(Tier t)
@@ -27,9 +31,10 @@ public class ColorPalette : Singleton<ColorPalette>
         return tierColors[(int)t];
     }
     
-    public string GetTierColorHex(Tier t)
+    public string GetTierColorHex(Tier t, bool hasPrefix = true)
     {
-        return ColorUtility.ToHtmlStringRGBA(tierColors[(int)t]);
+        string prefix = (hasPrefix ? "#" : "");
+        return prefix + ColorUtility.ToHtmlStringRGBA(tierColors[(int)t]);
     }
     
     public Color GetElementColor(Element e)
@@ -37,8 +42,20 @@ public class ColorPalette : Singleton<ColorPalette>
         return elementColors[(int)e];
     }
     
-    public string GetElementColorHex(Element e)
+    public string GetElementColorHex(Element e, bool hasPrefix = true)
     {
-        return ColorUtility.ToHtmlStringRGBA(elementColors[(int)e]);
+        string prefix = (hasPrefix ? "#" : "");
+        return prefix + ColorUtility.ToHtmlStringRGBA(elementColors[(int)e]);
+    }
+    
+    public Color GetRaceColor(Race r)
+    {
+        return raceColors[(int)r];
+    }
+    
+    public string GetRaceColorHex(Race r, bool hasPrefix = true)
+    {
+        string prefix = (hasPrefix ? "#" : "");
+        return prefix + ColorUtility.ToHtmlStringRGBA(raceColors[(int)r]);
     }
 }

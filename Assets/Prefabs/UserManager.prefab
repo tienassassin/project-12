@@ -45,24 +45,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  chrSaveDataList:
-  - chrId: t763l
-    totalExp: 12000
-    curHp: 20
-    energy: 20
-    eqmList: []
-  - chrId: c616s
-    totalExp: 7000
-    curHp: 50
-    energy: 0
-    eqmList: []
-  - chrId: h811y
-    totalExp: 1000
-    curHp: 90
-    energy: 50
-    eqmList: []
-  - chrId: a484n
-    totalExp: 20000
-    curHp: 25
-    energy: 90
-    eqmList: []
+  uHeroDB:
+    allHeroList:
+    - heroId: 00
+      totalExp: 1000
+      curHp: 50
+      energy: 20
+      eqmList: []
+    - heroId: 01
+      totalExp: 2000
+      curHp: 10
+      energy: 10
+      eqmList: []
+    - heroId: 02
+      totalExp: 200
+      curHp: 100
+      energy: 75
+      eqmList: []
+    - heroId: 03
+      totalExp: 9000
+      curHp: 20
+      energy: 40
+      eqmList: []
+    - heroId: 04
+      totalExp: 5000
+      curHp: 100
+      energy: 100
+      eqmList: []
+    - heroId: 05
+      totalExp: 200
+      curHp: 90
+      energy: 75
+      eqmList: []
+    readyHeroList:
+    - 
+    - 03
+    - 
+    - 00
