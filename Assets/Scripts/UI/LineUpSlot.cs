@@ -15,8 +15,20 @@ public class LineUpSlot : DuztineBehaviour
     [SerializeField] private Slider hpSlider;
     [SerializeField] private Slider energySlider;
 
+    [SerializeField] private GameObject highlight;
+
     private HeroSaveData saveData;
     private BaseHero baseHero;
+
+    private void OnEnable()
+    {
+        this.AddListener(EventID.HIGHLIGHT_LINEUP_SLOT, SwitchHighlight);
+    }
+
+    private void OnDisable()
+    {
+        this.RemoveListener(EventID.HIGHLIGHT_LINEUP_SLOT, SwitchHighlight);
+    }
 
     public void Init(HeroSaveData data)
     {
@@ -24,7 +36,7 @@ public class LineUpSlot : DuztineBehaviour
         baseHero = saveData?.GetHeroWithID();
         hero.SetActive(saveData != null);
         heroInfo.SetActive(saveData != null);
-        name = (baseHero != null ? baseHero.name : "(empty)");
+        name = (baseHero != null ? baseHero.name : Constants.EMPTY_MARK);
         
         Refresh();
     }
@@ -36,6 +48,26 @@ public class LineUpSlot : DuztineBehaviour
         levelTxt.text = saveData.GetLevel().ToString();
         hpSlider.value = saveData.curHp / baseHero.stats.health;
         energySlider.value = saveData.energy / 100;
+    }
+
+    private void SwitchHighlight(object condition)
+    {
+        bool active = false;
+        
+        if (baseHero != null)
+        {
+            switch (condition)
+            {
+                case Race r:
+                    active = (baseHero.race == r);
+                    break;
+                case Element e:
+                    active = (baseHero.element == e);
+                    break;
+            }
+        }
+
+        highlight.SetActive(active);
     }
     
     public void OnClickSlot()

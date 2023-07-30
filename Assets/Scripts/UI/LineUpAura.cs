@@ -23,6 +23,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     private Coroutine c;
     private string color0Hex;
     private string color1Hex;
+    private object auraType;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     [Button]
     public void Init(Race race, int rank)
     {
+        auraType = race;
         titleTxt.text = $"{race} Aura";
         var auraList = Database.Instance.GetRaceAura(race);
         RefreshRank(rank);
@@ -40,6 +42,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void Init(Element element, int rank)
     {
+        auraType = element;
         titleTxt.text = $"{element} Aura";
         var auraList = Database.Instance.GetElementAura(element);
         RefreshRank(rank);
@@ -89,11 +92,13 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (c != null) StopCoroutine(c);
         detailPanel.SetActive(false);
+        this.PostEvent(EventID.HIGHLIGHT_LINEUP_SLOT, null);
     }
 
     IEnumerator ShowDetailPanel()
     {
         yield return new WaitForSeconds(delayShowPanel);
         detailPanel.SetActive(true);
+        this.PostEvent(EventID.HIGHLIGHT_LINEUP_SLOT, auraType);
     }
 }
