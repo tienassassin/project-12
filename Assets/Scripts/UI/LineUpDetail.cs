@@ -25,7 +25,6 @@ public class LineUpDetail : DuztineBehaviour
     private List<EquipmentCard> eqmCardList = new();
 
     private List<HeroSaveData> heroSaveDataList = new();
-    private const string EMPTY_CARD_MARK = "(empty)";
 
     private void Awake()
     {
@@ -67,7 +66,7 @@ public class LineUpDetail : DuztineBehaviour
             if (i >= heroSaveDataList.Count)
             {
                 card.gameObject.SetActive(false);
-                card.name = EMPTY_CARD_MARK;
+                card.name = Constants.EMPTY_MARK;
                 continue;
             }
 
@@ -75,11 +74,30 @@ public class LineUpDetail : DuztineBehaviour
             card.Init(heroSaveDataList[i]);
             card.OnShowCardDetail = (data)=>
             {
-                if (data == saveData) return;
-                AddHeroToLineUp(data.heroId);
-                Init(curSlotId, data);
+                if (data != saveData)
+                {
+                    AddHeroToLineUp(data.heroId);
+                    Init(curSlotId, data);
+                }
+                else
+                {
+                    RemoveHeroFromLineUp();
+                    Init(curSlotId, null);
+                }
+                
+                RefreshHeroCards();
             };
         }
+        
+        RefreshHeroCards();
+    }
+
+    private void RefreshHeroCards()
+    {
+        heroCardList.ForEach(x =>
+        {
+            x.UpdateReadyState();
+        });
     }
 
     private void Refresh()
@@ -92,5 +110,10 @@ public class LineUpDetail : DuztineBehaviour
     private void AddHeroToLineUp(string heroId)
     {
         UserManager.Instance.AddHeroToLineUp(curSlotId, heroId);
+    }
+
+    private void RemoveHeroFromLineUp()
+    {
+        UserManager.Instance.RemoveHeroFromLineUp(curSlotId);
     }
 }

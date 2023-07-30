@@ -25,9 +25,7 @@ public class ValhallaUI : BaseUI
     private List<HeroCard> activeCardList = new();
     private HeroCard selectedCard;
     private List<HeroSaveData> heroSaveDataList = new();
-
-    private const string EMPTY_CARD_MARK = "(empty)";
-
+    
     public static void Show()
     {
         UIManager.Instance.ShowUI(nameof(ValhallaUI));
@@ -95,7 +93,7 @@ public class ValhallaUI : BaseUI
             if (i >= heroSaveDataList.Count)
             {
                 card.gameObject.SetActive(false);
-                card.name = EMPTY_CARD_MARK;
+                card.name = Constants.EMPTY_MARK;
                 continue;
             }
 
@@ -135,7 +133,7 @@ public class ValhallaUI : BaseUI
         cardList.ForEach(c =>
         {
             c.transform.SetAsLastSibling();
-            if (c.name == EMPTY_CARD_MARK) return;
+            if (c.name == Constants.EMPTY_MARK) return;
             
             bool match = (tierOptList.Contains(c.Tier) || acpAllTier)
                 && (elementOptList.Contains(c.Element) || acpAllElement)
@@ -148,8 +146,8 @@ public class ValhallaUI : BaseUI
 
         int CompareLevel(HeroCard c1, HeroCard c2, int comparision = 0)
         {
-            if (c1.name == EMPTY_CARD_MARK) return 1;
-            if (c2.name == EMPTY_CARD_MARK) return -1;
+            if (c1.name == Constants.EMPTY_MARK) return 1;
+            if (c2.name == Constants.EMPTY_MARK) return -1;
 
             if (c1.Level > c2.Level) return 1;
             if (c1.Level < c2.Level) return -1;
@@ -158,8 +156,8 @@ public class ValhallaUI : BaseUI
         
         int CompareTier(HeroCard c1, HeroCard c2, int comparision = 0)
         {
-            if (c1.name == EMPTY_CARD_MARK) return 1;
-            if (c2.name == EMPTY_CARD_MARK) return -1;
+            if (c1.name == Constants.EMPTY_MARK) return 1;
+            if (c2.name == Constants.EMPTY_MARK) return -1;
 
             if ((int)c1.Tier > (int)c2.Tier) return 1;
             if ((int)c1.Tier < (int)c2.Tier) return -1;

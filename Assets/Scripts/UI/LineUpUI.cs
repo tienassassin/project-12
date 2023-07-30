@@ -27,13 +27,6 @@ public class LineUpUI : BaseUI
         UIManager.Instance.HideUI(nameof(LineUpUI));
     }
 
-    protected override void Awake()
-    {
-        base.Awake();
-        
-        
-    }
-
     private void OnEnable()
     {
         RefreshMainView();
@@ -55,6 +48,11 @@ public class LineUpUI : BaseUI
 
         GetRaceAura(readyHeroList);
         GetElementAura(readyHeroList);
+
+        string auraStatistics = "Aura statistics: ";
+        foreach (var kv in raceCount) auraStatistics += $"\n{kv.Key} x {kv.Value}";
+        foreach (var kv in elementCount) auraStatistics += $"\n{kv.Key} x {kv.Value}";
+        EditorLog.Message(auraStatistics);
     }
 
     private void RefreshDetailView(int slotId, HeroSaveData saveData)
@@ -83,7 +81,6 @@ public class LineUpUI : BaseUI
         int index = 0;
         foreach (var kv in raceCount)
         {
-            EditorLog.Message(kv.Key + " " + kv.Value);
             if (kv.Value < 3) continue;
             raceAuras[index].gameObject.SetActive(true);
             raceAuras[index].Init(kv.Key, kv.Value);
@@ -106,7 +103,6 @@ public class LineUpUI : BaseUI
         int index = 0;
         foreach (var kv in elementCount)
         {
-            EditorLog.Message(kv.Key + " " + kv.Value);
             if (kv.Value < 2) continue;
             elementAuras[index].gameObject.SetActive(true);
             elementAuras[index].Init(kv.Key, kv.Value);

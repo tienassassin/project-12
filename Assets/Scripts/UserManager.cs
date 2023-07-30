@@ -48,6 +48,17 @@ public class UserManager : Singleton<UserManager>
         SaveCharacterDB();
     }
 
+    public void RemoveHeroFromLineUp(int slotId)
+    {
+        uHeroDB.readyHeroList[slotId] = "";
+        SaveCharacterDB();
+    }
+
+    public bool IsHeroReady(string heroId)
+    {
+        return uHeroDB.readyHeroList.Contains(heroId);
+    }
+
     public void LoadHeroDB()
     {
         if (PlayerPrefs.HasKey(HERO_DB_KEY))
