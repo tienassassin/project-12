@@ -18,16 +18,25 @@ public class LineUpDetail : DuztineBehaviour
     [SerializeField] private Transform eqmCardContainer;
     [SerializeField] private EquipmentCard eqmCardPref;
 
+    [SerializeField] private FilterOption[] raceFilterOptions;
+
     private int curSlotId;
     private HeroSaveData saveData;
     private BaseHero baseHero;
+    private List<HeroSaveData> heroSaveDataList = new();
+    
     private List<LineUpHeroCard> heroCardList = new();
     private List<EquipmentCard> eqmCardList = new();
 
-    private List<HeroSaveData> heroSaveDataList = new();
+    private List<Race> raceOptList = new();
 
     private void Awake()
     {
+        foreach (var opt in raceFilterOptions)
+        {
+            opt.SetEvent(AddOptionToFilter);
+        }
+        
         heroCardList = new List<LineUpHeroCard>();
         foreach (Transform child in heroCardContainer)
         {
@@ -37,7 +46,10 @@ public class LineUpDetail : DuztineBehaviour
 
     private void OnEnable()
     {
+        raceOptList.Clear();
+        
         heroSaveDataList = UserManager.Instance.GetAllHeroes();
+        
         LoadHeroCards();
     }
 
@@ -51,6 +63,8 @@ public class LineUpDetail : DuztineBehaviour
         
         Refresh();
     }
+
+    #region Hero Cards
 
     private void LoadHeroCards()
     {
@@ -85,20 +99,73 @@ public class LineUpDetail : DuztineBehaviour
                     Init(curSlotId, null);
                 }
                 
-                RefreshHeroCards();
+                UpdateHeroCards();
             };
         }
         
-        RefreshHeroCards();
+        UpdateHeroCards();
+        SortHeroCards();
     }
 
-    private void RefreshHeroCards()
+    private void UpdateHeroCards()
     {
         heroCardList.ForEach(x =>
         {
             x.UpdateReadyState();
         });
     }
+
+    private void ApplyHeroCardFilter()
+    {
+        bool acpAllRace = raceOptList.Count < 1;
+        
+        heroCardList.ForEach(c =>
+        {
+            if (c.name == Constants.EMPTY_MARK) return;
+
+            bool match = (raceOptList.Contains(c.Race) || acpAllRace);
+            c.gameObject.SetActive(match);
+        });
+    }
+    
+    private void SortHeroCards()
+    {
+        heroCardList.Sort((c1, c2) => CompareLevel(c2, c1));
+        
+        heroCardList.ForEach(c =>
+        {
+            c.transform.SetAsLastSibling();
+        });
+        
+        int CompareLevel(HeroCard c1, HeroCard c2)
+        {
+            if (c1.name == Constants.EMPTY_MARK) return 1;
+            if (c2.name == Constants.EMPTY_MARK) return -1;
+
+            if (c1.Level > c2.Level) return 1;
+            if (c1.Level < c2.Level) return -1;
+            return CompareTier(c1, c2);
+        }
+        
+        int CompareTier(HeroCard c1, HeroCard c2)
+        {
+            if (c1.name == Constants.EMPTY_MARK) return 1;
+            if (c2.name == Constants.EMPTY_MARK) return -1;
+
+            if ((int)c1.Tier > (int)c2.Tier) return 1;
+            if ((int)c1.Tier < (int)c2.Tier) return -1;
+            return 0;
+        }
+    }
+    
+    #endregion
+
+    
+    #region Equipment Cards
+
+    // todo    
+
+    #endregion
 
     private void Refresh()
     {
@@ -115,5 +182,23 @@ public class LineUpDetail : DuztineBehaviour
     private void RemoveHeroFromLineUp()
     {
         UserManager.Instance.RemoveHeroFromLineUp(curSlotId);
+    }
+    
+    private void AddOptionToFilter(object o)
+    {
+        switch (o)
+        {
+            case Race r when raceOptList.Contains(r):
+                raceOptList.Remove(r);
+                break;
+            case Race r:
+                raceOptList.Add(r);
+                break;
+            default:
+                EditorLog.Error($"Object {o} is not a valid filter option");
+                return;
+        }
+        
+       ApplyHeroCardFilter();
     }
 }
