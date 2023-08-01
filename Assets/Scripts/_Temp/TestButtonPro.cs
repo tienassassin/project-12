@@ -1,14 +1,20 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class TestButtonPro : DuztineBehaviour
 {
-    public void Test()
+    public SpriteRenderer sr;
+    
+    [Button]
+    public void Test(string s, string subSprite)
     {
-        Debug.Log("Hold done!");
-    }
-
-    public void Test2()
-    {
-        Debug.Log("Double click done!");
+        var arr = Resources.LoadAll<Sprite>("Icons/" + s);
+        foreach (var i in arr)
+        {
+            if (i.name == subSprite)
+            {
+                sr.sprite = i;
+            }
+        }
     }
 }

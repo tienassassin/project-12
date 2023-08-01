@@ -264,7 +264,7 @@ public class Database : Singleton<Database>
     }
 }
 
-public static class DatabaseExtension
+public static class DatabaseExtensions
 {
     public static float GetHeroGrowth(this BaseHero h)
     {

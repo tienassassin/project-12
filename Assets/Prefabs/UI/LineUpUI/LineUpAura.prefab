@@ -282,7 +282,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -361.5, y: -24}
-  m_SizeDelta: {x: 400, y: 398.28998}
+  m_SizeDelta: {x: 400, y: 433.02}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7127683793533256533
 CanvasRenderer:
@@ -418,8 +418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -226.325}
-  m_SizeDelta: {x: 400, y: 343.93}
+  m_AnchoredPosition: {x: 200, y: -251.055}
+  m_SizeDelta: {x: 400, y: 363.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &932649638650424210
 CanvasRenderer:
@@ -695,8 +695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -27.18}
-  m_SizeDelta: {x: 400, y: 54.36}
+  m_AnchoredPosition: {x: 200, y: -34.545}
+  m_SizeDelta: {x: 400, y: 69.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7751095319093603206
 CanvasRenderer:
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <icon>Mecha Aura
+  m_text: <sprite name=element-Ice> Mecha Aura
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06539b1861670df43b220b9dc70dd458, type: 2}
   m_sharedMaterial: {fileID: -8163299698736034341, guid: 06539b1861670df43b220b9dc70dd458, type: 2}
@@ -753,8 +753,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

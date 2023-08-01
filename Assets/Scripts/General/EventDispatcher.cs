@@ -74,7 +74,7 @@ public enum EventID
     ON_LINEUP_CHANGED,
 }
 
-public static class EventDispatcherExtension
+public static class EventDispatcherExtensions
 {
     public static void AddListener(this MonoBehaviour obj, EventID eventID, Action<object> listener)
     {

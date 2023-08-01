@@ -46,7 +46,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         auraType = element;
         titleTxt.text = $"<color={ColorPalette.Instance.GetElementColorHex(element)}>" +
-                        $"<ico>" +
+                        $"<size=50><sprite name=element-{element}></size> " +
                         $"{element} Aura</color>";
         var auraList = Database.Instance.GetElementAura(element);
         var colorList = new List<string> { ColorPalette.Instance.GetElementColorHex(element) };
