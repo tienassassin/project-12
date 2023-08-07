@@ -11,6 +11,7 @@ public class Database : Singleton<Database>
     [HorizontalGroup("GoogleSheet"), SerializeField, LabelWidth(125)] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
     
     [FoldoutGroup("DB"), SerializeField] private HeroDatabase heroDB;
+    [FoldoutGroup("DB"), SerializeField] private DevilDatabase devilDB;
     [FoldoutGroup("DB"), SerializeField] private EquipmentDatabase eqmDB;
     [FoldoutGroup("DB"), SerializeField] private StatsDescriptions statsDesc;
     [FoldoutGroup("DB"), SerializeField] private GrowthDatabase growthDB;
@@ -19,9 +20,10 @@ public class Database : Singleton<Database>
     [FoldoutGroup("DB"), SerializeField] private AuraDatabase auraDB;
 
     private const string HERO_SHEET = "Heroes";
+    private const string DEVIL_SHEET = "Devils";
     private const string EQM_SHEET = "Equipments";
     private const string STATS_SHEET = "Stats";
-    private const string HERO_GROWTH_SHEET = "CharacterGrowth";
+    private const string ENTITY_GROWTH_SHEET = "EntityGrowth";
     private const string EQM_GROWTH_SHEET = "EquipmentGrowth";
     private const string EXP_SHEET = "Exp";
     private const string BACKSTORY_SHEET = "Backstory";
@@ -52,6 +54,7 @@ public class Database : Singleton<Database>
         if (Application.internetReachability == NetworkReachability.NotReachable) return;
         
         StartCoroutine(FetchHeroDB());
+        StartCoroutine(FetchDevilDB());
         StartCoroutine(FetchEquipmentDB());
         StartCoroutine(FetchStatsDescriptions());
         StartCoroutine(FetchGrowthDB());
@@ -73,6 +76,20 @@ public class Database : Singleton<Database>
         else
         {
             heroDB.Import(uwr.downloadHandler.text);
+        }
+    }
+    
+    IEnumerator FetchDevilDB()
+    {
+        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{DEVIL_SHEET}");
+        yield return uwr.SendWebRequest();
+        if (uwr.result != UnityWebRequest.Result.Success)
+        {
+            EditorLog.Error(uwr.error);
+        }
+        else
+        {
+            devilDB.Import(uwr.downloadHandler.text);
         }
     }
     
@@ -106,7 +123,7 @@ public class Database : Singleton<Database>
 
     IEnumerator FetchGrowthDB()
     {
-        var cUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{HERO_GROWTH_SHEET}");
+        var cUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{ENTITY_GROWTH_SHEET}");
         var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EQM_GROWTH_SHEET}");
         var dataC = "";
         yield return cUwr.SendWebRequest();
@@ -191,10 +208,12 @@ public class Database : Singleton<Database>
     }
     
     #endregion
+
+    #region Characters & Equipments
     
-    public float GetHeroGrowth(Tier t)
+    public float GetEntityGrowth(Tier t)
     {
-        return growthDB.heroGrowthList.Find(x => x.tier == t).growth;
+        return growthDB.entityGrowthList.Find(x => x.tier == t).growth;
     }
     public float GetEquipmentGrowth(Rarity r)
     {
@@ -206,11 +225,20 @@ public class Database : Singleton<Database>
         return heroDB.GetHeroWithID(id);
     }
 
+    public BaseDevil GetDevilWithID(string id)
+    {
+        return devilDB.GetDevilWithID(id);
+    }
+
     public BaseEquipment GetEquipmentWithID(string id)
     {
         return eqmDB.GetEquipmentWithID(id);
     }
+    
+    #endregion
 
+    #region EXP
+    
     [Button]
     public int GetLevel(int totalExp)
     {
@@ -227,12 +255,16 @@ public class Database : Singleton<Database>
     {
         return expDB.levelMax;
     }
+    
+    #endregion
 
+    #region Stats
+    
     public string GetStatDescription(string key)
     {
         return statsDesc.GetStatDescription(key).description;
     }
-
+    
     public string GetStatName(string key)
     {
         return statsDesc.GetStatDescription(key).name;
@@ -242,7 +274,11 @@ public class Database : Singleton<Database>
     {
         return statsDesc.GetStatDescription(key).limit;
     }
+    
+    #endregion
 
+    #region Backstory
+    
     public string GetHeroAlias(string heroId)
     {
         return bsDB.GetBackstory(heroId).alias;
@@ -252,7 +288,11 @@ public class Database : Singleton<Database>
     {
         return bsDB.GetBackstory(heroId).story;
     }
+    
+    #endregion
 
+    #region Aura
+    
     public List<Aura> GetRaceAura(Race race)
     {
         return auraDB.raceAuraList.Find(x => x.race == race).auraList;
@@ -262,13 +302,15 @@ public class Database : Singleton<Database>
     {
         return auraDB.elementAuraList.Find(x => x.element == element).auraList;
     }
+    
+    #endregion
 }
 
 public static class DatabaseExtensions
 {
     public static float GetHeroGrowth(this BaseHero h)
     {
-        return Database.Instance.GetHeroGrowth(h.tier);
+        return Database.Instance.GetEntityGrowth(h.tier);
     }
 
     public static string GetHeroAlias(this BaseHero h)

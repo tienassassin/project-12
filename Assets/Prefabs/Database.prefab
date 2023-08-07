@@ -48,6 +48,7 @@ MonoBehaviour:
   apiUrl: https://opensheet.elk.sh/
   databaseId: 18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY
   heroDB: {fileID: 11400000, guid: dc6b8dd33d66eb74092cc2915e0597d9, type: 2}
+  devilDB: {fileID: 11400000, guid: 7b22303869b94844da2b6d8df4188b12, type: 2}
   eqmDB: {fileID: 11400000, guid: 2a6706d9b4266494ea1598360a4b1c0f, type: 2}
   statsDesc: {fileID: 11400000, guid: aa9adeae2f81b1b40926a723128158b9, type: 2}
   growthDB: {fileID: 11400000, guid: 456ddfa250bad1a41904cd0d234156e8, type: 2}
