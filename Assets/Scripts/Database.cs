@@ -313,6 +313,11 @@ public static class DatabaseExtensions
         return Database.Instance.GetEntityGrowth(h.tier);
     }
 
+    public static float GetDevilGrowth(this BaseDevil d)
+    {
+        return Database.Instance.GetEntityGrowth(d.tier);
+    }
+
     public static string GetHeroAlias(this BaseHero h)
     {
         return Database.Instance.GetHeroAlias(h.id);
