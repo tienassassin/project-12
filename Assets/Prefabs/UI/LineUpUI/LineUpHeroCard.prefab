@@ -975,12 +975,7 @@ MonoBehaviour:
   levelTxt: {fileID: 6900994244964659300}
   hpSlider: {fileID: 8273433102112914531}
   energySlider: {fileID: 5505678699177967261}
-  elementColors:
-  - {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
-  - {r: 0.36320752, g: 0.770863, b: 1, a: 1}
-  - {r: 0.4142761, g: 0.8679245, b: 0.38892844, a: 1}
-  - {r: 1, g: 0.9467869, b: 0.3726415, a: 1}
-  readyPanel: {fileID: 382579053390457990}
+  readyMark: {fileID: 382579053390457990}
 --- !u!1 &6933896910652712118
 GameObject:
   m_ObjectHideFlags: 0

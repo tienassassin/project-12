@@ -102,18 +102,16 @@ public class ValhallaUI : BaseUI
             if (UserManager.Instance.IsHeroUnlocked(heroList[i].id, out var hsd))
             {
                 // unlocked hero
-                card.Init(hsd);
-                card.OnShowCardDetail = (saveData) =>
-                {
-                    ShowCardDetail(saveData);
-                    selectedCard = card;
-                };
+                card.Init(hsd, (saveData) =>
+                    {
+                        ShowCardDetail(saveData);
+                        selectedCard = card;
+                    });
             }
             else
             {
                 // locked hero
                 card.Init(heroList[i]);
-                card.OnShowCardDetail = null;
             }
             
         }

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class HeroCard : Hero
 {
     public bool IsLocked => isLocked;
-    public Action<HeroSaveData> OnShowCardDetail = null;
     
     [SerializeField] private Image elementImg;
     [SerializeField] private TMP_Text levelTxt;
@@ -14,13 +13,15 @@ public class HeroCard : Hero
     [SerializeField] private Slider energySlider;
     [SerializeField] private GameObject lockedMark;
 
+    private Action<HeroSaveData> onShowCardDetail = null;
     private bool isLocked;
 
-    public void Init(HeroSaveData data)
+    public void Init(HeroSaveData data, Action<HeroSaveData> onShow)
     {
         base.Init(data);
 
         isLocked = false;
+        onShowCardDetail = onShow;
         Refresh();
     }
 
@@ -29,6 +30,7 @@ public class HeroCard : Hero
         baseHero = data;
         name = baseHero.name + " (locked)";
         isLocked = true;
+        onShowCardDetail = null;
         Refresh();
     }
 
@@ -43,6 +45,6 @@ public class HeroCard : Hero
 
     public void OnClickCard()
     {
-        OnShowCardDetail?.Invoke(saveData);
+        onShowCardDetail?.Invoke(saveData);
     }
 }

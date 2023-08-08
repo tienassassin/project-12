@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class LineUpSlot : DuztineBehaviour
 {
-    public Action<int, HeroSaveData> OnShowSlotDetail = null;
-
     [SerializeField] private int slotId;
     [SerializeField] private GameObject hero;
     [SerializeField] private GameObject heroInfo;
@@ -17,6 +15,7 @@ public class LineUpSlot : DuztineBehaviour
 
     [SerializeField] private GameObject highlight;
 
+    private Action<int, HeroSaveData> onShowSlotDetail = null;
     private HeroSaveData saveData;
     private BaseHero baseHero;
 
@@ -30,14 +29,15 @@ public class LineUpSlot : DuztineBehaviour
         this.RemoveListener(EventID.ON_HIGHLIGHT_AURA, SwitchHighlight);
     }
 
-    public void Init(HeroSaveData data)
+    public void Init(HeroSaveData data, Action<int, HeroSaveData> onShow)
     {
         saveData = data;
         baseHero = saveData?.GetHeroWithID();
         hero.SetActive(saveData != null);
         heroInfo.SetActive(saveData != null);
         name = (baseHero != null ? baseHero.name : Constants.EMPTY_MARK);
-        
+
+        onShowSlotDetail = onShow;
         Refresh();
     }
 
@@ -72,6 +72,6 @@ public class LineUpSlot : DuztineBehaviour
     
     public void OnClickSlot()
     {
-        OnShowSlotDetail?.Invoke(slotId, saveData);
+        onShowSlotDetail?.Invoke(slotId, saveData);
     }
 }

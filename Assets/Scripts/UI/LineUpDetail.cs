@@ -85,22 +85,21 @@ public class LineUpDetail : DuztineBehaviour
             }
 
             card.gameObject.SetActive(true);
-            card.Init(heroSaveDataList[i]);
-            card.OnShowCardDetail = (data)=>
-            {
-                if (data != saveData)
+            card.Init(heroSaveDataList[i], (data)=>
                 {
-                    AddHeroToLineUp(data.heroId);
-                    Init(curSlotId, data);
-                }
-                else
-                {
-                    RemoveHeroFromLineUp();
-                    Init(curSlotId, null);
-                }
-                
-                UpdateHeroCards();
-            };
+                    if (data != saveData)
+                    {
+                        AddHeroToLineUp(data.heroId);
+                        Init(curSlotId, data);
+                    }
+                    else
+                    {
+                        RemoveHeroFromLineUp();
+                        Init(curSlotId, null);
+                    }
+                    
+                    UpdateHeroCards();
+                });
         }
         
         UpdateHeroCards();
@@ -130,31 +129,22 @@ public class LineUpDetail : DuztineBehaviour
     
     private void SortHeroCards()
     {
-        heroCardList.Sort((c1, c2) => CompareLevel(c2, c1));
+        heroCardList.Sort((c1, c2) => CompareLevel(c1, c2, false));
         
         heroCardList.ForEach(c =>
         {
             c.transform.SetAsLastSibling();
         });
         
-        int CompareLevel(HeroCard c1, HeroCard c2)
+        int CompareLevel(LineUpHeroCard c1, LineUpHeroCard c2, bool ascending)
         {
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;
 
-            if (c1.Level > c2.Level) return 1;
-            if (c1.Level < c2.Level) return -1;
-            return CompareTier(c1, c2);
-        }
-        
-        int CompareTier(HeroCard c1, HeroCard c2)
-        {
-            if (c1.name == Constants.EMPTY_MARK) return 1;
-            if (c2.name == Constants.EMPTY_MARK) return -1;
-
-            if ((int)c1.Tier > (int)c2.Tier) return 1;
-            if ((int)c1.Tier < (int)c2.Tier) return -1;
-            return 0;
+            int levelComparision = c1.Level.CompareTo(c2.Level);
+            if (levelComparision != 0) return ascending ? levelComparision : -levelComparision;
+            int tierComparision = c1.Tier.CompareTo(c2.Tier);
+            return ascending ? tierComparision : -tierComparision;
         }
     }
     

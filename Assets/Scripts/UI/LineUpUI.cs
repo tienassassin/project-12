@@ -38,12 +38,11 @@ public class LineUpUI : BaseUI
         var readyHeroList = UserManager.Instance.GetReadyHeroes();
         for (int i = 0; i < readyHeroList.Count; i++)
         {
-            slots[i].Init(readyHeroList[i]);
-            slots[i].OnShowSlotDetail += (slotId, saveData) =>
-            {
-                RefreshDetailView(slotId, saveData);
-                SwitchView(1);
-            };
+            slots[i].Init(readyHeroList[i], (slotId, saveData) =>
+                {
+                    RefreshDetailView(slotId, saveData);
+                    SwitchView(1);
+                });
         }
 
         GetRaceAura(readyHeroList);
