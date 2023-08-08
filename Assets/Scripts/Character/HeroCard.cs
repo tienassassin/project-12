@@ -5,28 +5,40 @@ using UnityEngine.UI;
 
 public class HeroCard : Hero
 {
+    public bool IsLocked => isLocked;
     public Action<HeroSaveData> OnShowCardDetail = null;
     
     [SerializeField] private Image elementImg;
     [SerializeField] private TMP_Text levelTxt;
     [SerializeField] private Slider hpSlider;
     [SerializeField] private Slider energySlider;
+    [SerializeField] private GameObject lockedMark;
 
-    [SerializeField] private Color[] elementColors;
+    private bool isLocked;
 
-    public override void Init(HeroSaveData data)
+    public void Init(HeroSaveData data)
     {
         base.Init(data);
-        
+
+        isLocked = false;
+        Refresh();
+    }
+
+    public void Init(BaseHero data)
+    {
+        baseHero = data;
+        name = baseHero.name + " (locked)";
+        isLocked = true;
         Refresh();
     }
 
     private void Refresh()
     {
-        elementImg.color = elementColors[(int)baseHero.element];
-        levelTxt.text = level.ToString();
-        hpSlider.value = curHP / baseHero.stats.health;
-        energySlider.value = energy / 100;
+        lockedMark.SetActive(isLocked);
+        elementImg.color = ColorPalette.Instance.GetElementColor(baseHero.element);
+        levelTxt.text = isLocked ? "1" : level.ToString();
+        hpSlider.value = isLocked ? 1 : (curHP / baseHero.stats.health);
+        energySlider.value = isLocked ? 1:  (energy / 100);
     }
 
     public void OnClickCard()

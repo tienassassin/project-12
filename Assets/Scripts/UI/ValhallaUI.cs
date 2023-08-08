@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -24,7 +25,7 @@ public class ValhallaUI : BaseUI
     private List<HeroCard> cardList = new();
     private List<HeroCard> activeCardList = new();
     private HeroCard selectedCard;
-    private List<HeroSaveData> heroSaveDataList = new();
+    private List<BaseHero> heroList = new();
     
     public static void Show()
     {
@@ -73,7 +74,7 @@ public class ValhallaUI : BaseUI
         lvSort = SortType.Descending;
         tierSort = SortType.None;
 
-        heroSaveDataList = UserManager.Instance.GetAllHeroes();
+        heroList = Database.Instance.GetAllBaseHeroes();
         
         LoadHeroCards();
         Refresh();
@@ -81,7 +82,7 @@ public class ValhallaUI : BaseUI
 
     private void LoadHeroCards()
     {
-        while (heroCardContainer.childCount < heroSaveDataList.Count)
+        while (heroCardContainer.childCount < heroList.Count)
         {
             var o = Instantiate(heroCardPref, heroCardContainer);
             cardList.Add(o);
@@ -90,7 +91,7 @@ public class ValhallaUI : BaseUI
         for (int i = 0; i < cardList.Count; i++)
         {
             var card = cardList[i];
-            if (i >= heroSaveDataList.Count)
+            if (i >= heroList.Count)
             {
                 card.gameObject.SetActive(false);
                 card.name = Constants.EMPTY_MARK;
@@ -98,12 +99,23 @@ public class ValhallaUI : BaseUI
             }
 
             card.gameObject.SetActive(true);
-            card.Init(heroSaveDataList[i]);
-            card.OnShowCardDetail = (saveData)=>
+            if (UserManager.Instance.IsHeroUnlocked(heroList[i].id, out var hsd))
             {
-                ShowCardDetail(saveData);
-                selectedCard = card;
-            };
+                // unlocked hero
+                card.Init(hsd);
+                card.OnShowCardDetail = (saveData) =>
+                {
+                    ShowCardDetail(saveData);
+                    selectedCard = card;
+                };
+            }
+            else
+            {
+                // locked hero
+                card.Init(heroList[i]);
+                card.OnShowCardDetail = null;
+            }
+            
         }
     }
 
@@ -117,14 +129,14 @@ public class ValhallaUI : BaseUI
         {
             cardList.Sort((c1, c2) =>
             
-                lvSort == SortType.Ascending ? CompareLevel(c1, c2) : CompareLevel(c2,c1)
+                CompareLevel(c1, c2, lvSort != SortType.Descending)
             );
         }
         else if (tierSort != SortType.None)
         {
             cardList.Sort((c1, c2) =>
-            
-                tierSort == SortType.Ascending ? CompareTier(c1, c2) : CompareTier(c2,c1)
+
+                CompareTier(c1, c2, tierSort != SortType.Descending)
             );
         }
         
@@ -144,24 +156,30 @@ public class ValhallaUI : BaseUI
             if (match) activeCardList.Add(c);
         });
 
-        int CompareLevel(HeroCard c1, HeroCard c2, int comparision = 0)
+        int CompareLevel(HeroCard c1, HeroCard c2, bool ascending)
         {
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;
-
-            if (c1.Level > c2.Level) return 1;
-            if (c1.Level < c2.Level) return -1;
-            return (comparision >= 1) ? 0 : CompareTier(c1, c2, comparision + 1);
+            
+            int lockComparision = c1.IsLocked.CompareTo(c2.IsLocked);
+            if (lockComparision != 0) return lockComparision;
+            int levelComparision = c1.Level.CompareTo(c2.Level);
+            if (levelComparision != 0) return ascending ? levelComparision : -levelComparision;
+            int tierComparision = c1.Tier.CompareTo(c2.Tier);
+            return ascending ? tierComparision : -tierComparision;
         }
         
-        int CompareTier(HeroCard c1, HeroCard c2, int comparision = 0)
+        int CompareTier(HeroCard c1, HeroCard c2, bool ascending)
         {
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;
 
-            if ((int)c1.Tier > (int)c2.Tier) return 1;
-            if ((int)c1.Tier < (int)c2.Tier) return -1;
-            return (comparision >= 1) ? 0 : CompareLevel(c1, c2, comparision + 1);
+            int lockComparision = c1.IsLocked.CompareTo(c2.IsLocked);
+            if (lockComparision != 0) return lockComparision;
+            int tierComparision = c1.Tier.CompareTo(c2.Tier);
+            if (tierComparision != 0) return ascending ? tierComparision : -tierComparision;
+            int levelComparision = c1.Level.CompareTo(c2.Level);
+            return ascending ? levelComparision : -levelComparision;
         }
     }
 

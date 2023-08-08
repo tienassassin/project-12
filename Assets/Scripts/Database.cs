@@ -210,7 +210,12 @@ public class Database : Singleton<Database>
     #endregion
 
     #region Characters & Equipments
-    
+
+    public List<BaseHero> GetAllBaseHeroes()
+    {
+        return heroDB.heroList;
+    }
+
     public float GetEntityGrowth(Tier t)
     {
         return growthDB.entityGrowthList.Find(x => x.tier == t).growth;

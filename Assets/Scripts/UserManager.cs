@@ -43,7 +43,6 @@ public class UserManager : Singleton<UserManager>
             uHeroDB.readyHeroList[oldSlotId] = oldHeroId;
         }
         
-        // uHeroDB.readyHeroList.Remove(heroId);
         uHeroDB.readyHeroList[slotId] = heroId;
         SaveCharacterDB();
         
@@ -61,6 +60,12 @@ public class UserManager : Singleton<UserManager>
     public bool IsHeroReady(string heroId)
     {
         return uHeroDB.readyHeroList.Contains(heroId);
+    }
+
+    public bool IsHeroUnlocked(string heroId, out HeroSaveData hsd)
+    {
+        hsd = uHeroDB.allHeroList.Find(h => h.heroId == heroId);
+        return hsd != null;
     }
 
     public void LoadHeroDB()
