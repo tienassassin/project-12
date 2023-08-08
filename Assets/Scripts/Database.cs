@@ -7,6 +7,8 @@ using UnityEngine.Networking;
 
 public class Database : Singleton<Database>
 {
+    public bool IsAllDBLoaded => dbLoaded >= DB_COUNT;
+    
     [HorizontalGroup("ApiGithub"), SerializeField, LabelWidth(125)] private string apiUrl = "https://opensheet.elk.sh/";
     [HorizontalGroup("GoogleSheet"), SerializeField, LabelWidth(125)] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
     
@@ -29,6 +31,9 @@ public class Database : Singleton<Database>
     private const string BACKSTORY_SHEET = "Backstory";
     private const string RACE_AURA_SHEET = "RaceAura";
     private const string ELEMENT_AURA_SHEET = "ElementAura";
+
+    private int dbLoaded = 0;
+    private const int DB_COUNT = 10;
 
     protected override void Awake()
     {
@@ -77,6 +82,8 @@ public class Database : Singleton<Database>
         {
             heroDB.Import(uwr.downloadHandler.text);
         }
+
+        dbLoaded++;
     }
     
     IEnumerator FetchDevilDB()
@@ -91,6 +98,8 @@ public class Database : Singleton<Database>
         {
             devilDB.Import(uwr.downloadHandler.text);
         }
+        
+        dbLoaded++;
     }
     
     IEnumerator FetchEquipmentDB()
@@ -105,6 +114,8 @@ public class Database : Singleton<Database>
         {
             eqmDB.Import(uwr.downloadHandler.text);
         }
+        
+        dbLoaded++;
     }
 
     IEnumerator FetchStatsDescriptions()
@@ -119,6 +130,8 @@ public class Database : Singleton<Database>
         {
             statsDesc.Import(uwr.downloadHandler.text);
         }
+        
+        dbLoaded++;
     }
 
     IEnumerator FetchGrowthDB()
@@ -136,6 +149,8 @@ public class Database : Singleton<Database>
             dataC = cUwr.downloadHandler.text;
         }
         
+        dbLoaded++;
+        
         var dataE = "";
         yield return eUwr.SendWebRequest();
         if (eUwr.result != UnityWebRequest.Result.Success)
@@ -146,6 +161,8 @@ public class Database : Singleton<Database>
         {
             dataE = eUwr.downloadHandler.text;
         }
+        
+        dbLoaded++;
 
         growthDB.Import(dataC, dataE);
     }
@@ -162,6 +179,8 @@ public class Database : Singleton<Database>
         {
             expDB.Import(uwr.downloadHandler.text);
         }
+        
+        dbLoaded++;
     }
     
     IEnumerator FetchBackstoryDB()
@@ -176,6 +195,8 @@ public class Database : Singleton<Database>
         {
             bsDB.Import(uwr.downloadHandler.text);
         }
+        
+        dbLoaded++;
     }
     
     IEnumerator FetchAuraDB()
@@ -193,6 +214,8 @@ public class Database : Singleton<Database>
             dataR = rUwr.downloadHandler.text;
         }
         
+        dbLoaded++;
+        
         var dataE = "";
         yield return eUwr.SendWebRequest();
         if (eUwr.result != UnityWebRequest.Result.Success)
@@ -203,6 +226,8 @@ public class Database : Singleton<Database>
         {
             dataE = eUwr.downloadHandler.text;
         }
+        
+        dbLoaded++;
 
         auraDB.Import(dataR, dataE);
     }

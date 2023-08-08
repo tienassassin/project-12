@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd7eafccc3dc664d829d13826cb1e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
+  dontDestroyOnLoad: 1
   apiUrl: https://opensheet.elk.sh/
   databaseId: 18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY
   heroDB: {fileID: 11400000, guid: dc6b8dd33d66eb74092cc2915e0597d9, type: 2}

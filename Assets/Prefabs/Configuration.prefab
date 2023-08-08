@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692b006bfe5bff2428047873ad1ee782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
+  dontDestroyOnLoad: 1
   rarityColors:
   - {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
   - {r: 0.49483803, g: 0.754717, b: 0.5690892, a: 1}
