@@ -1,151 +1,157 @@
-using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "HeroDatabase",menuName = "Database/Hero")]
-public class HeroDatabase : ScriptableDatabase
+namespace System.DB
 {
-    [TableList]
-    public List<BaseHero> heroList = new();
-
-    private Dictionary<string, BaseHero> cachedDict = new();
-
-    public override void Import(params string[] data)
+    [CreateAssetMenu(fileName = "HeroDatabase", menuName = "Database/Hero")]
+    internal class HeroDatabase : ScriptableDatabase
     {
-        heroList = new List<BaseHero>();
-        var jArray = JArray.Parse(data[0]);
-        foreach (var jToken in jArray)
-        {
-            ConvertDataFromJObject((JObject)jToken, out var h);
-            if (h != null) heroList.Add(h);
-        }
-    }
-    
-    [Button]
-    protected override void DeleteAll()
-    {
-        heroList.Clear();
-    } 
+        [TableList]
+        private List<Hero> _heroes = new();
+        private readonly Dictionary<string, Hero> _cachedDict = new();
 
-    private void ConvertDataFromJObject(JObject jObject, out BaseHero h)
-    {
-        if (((string)jObject["name"]).IsNullOrWhitespace())
+        internal override void Import(params string[] data)
         {
-            h = null;
-            return;
-        }
-
-        string tierValue = Utils.GetNormalizedString((string)jObject["tier"]);
-        
-        Enum.TryParse(tierValue, out Tier tier);
-        Enum.TryParse((string)jObject["element"], out Element element);
-        Enum.TryParse((string)jObject["race"], out Race race);
-        Enum.TryParse((string)jObject["damage type"], out DamageType dmgType);
-        Enum.TryParse((string)jObject["range"], out Range range);
-        
-        h = new BaseHero
-        {
-            id = (string)jObject["ID"],
-            name = (string)jObject["name"],
-            tier = tier,
-            element = element,
-            race = race,
-            damageType = dmgType,
-            range = range,
-            stats = new Stats
+            _heroes = new List<Hero>();
+            var jArray = JArray.Parse(data[0]);
+            foreach (var jToken in jArray)
             {
-                showFull = true,
-                health = Utils.Parse<float>((string)jObject["health"]),
-                damage = Utils.Parse<float>((string)jObject["damage"]),
-                armor = Utils.Parse<float>((string)jObject["armor"]),
-                resistance = Utils.Parse<float>((string)jObject["resistance"]),
-                intelligence = Utils.Parse<float>((string)jObject["intelligence"]),
-                speed = Utils.Parse<float>((string)jObject["speed"]),
-                luck = Utils.Parse<float>((string)jObject["luck"]),
-                critDamage = Utils.Parse<float>((string)jObject["crit damage"]),
-                lifeSteal = Utils.Parse<float>((string)jObject["life steal"]),
-                accuracy = Utils.Parse<float>((string)jObject["accuracy"]),
-            }
-        };
-    }
-
-    public BaseHero GetHeroWithID(string heroId)
-    {
-        cachedDict.TryAdd(heroId, heroList.Find(h => h.id == heroId));
-        if (cachedDict[heroId] == null) EditorLog.Error($"Character {heroId} is not defined");
-        return cachedDict[heroId];
-    }
-
-    public List<BaseHero> GetHeroesWithConditions(params object[] conditions)
-    {
-        var matchHeroesList = new List<BaseHero>();
-        
-        var raceOptList = new List<Race>();
-        var elementOptList = new List<Element>();
-        var tierOptList = new List<Tier>();
-        bool acpAllRace = true;
-        bool acpAllElement = true;
-        bool acpAllTier = true;
-        
-        foreach (var condition in conditions)
-        {
-            switch (condition)
-            {
-                case Race race:
-                    raceOptList.Add(race);
-                    acpAllRace = false;
-                    break;
-                case Element element:
-                    elementOptList.Add(element);
-                    acpAllElement = false;
-                    break;
-                case Tier tier:
-                    tierOptList.Add(tier);
-                    acpAllTier = false;
-                    break;
+                ConvertDataFromJObject((JObject)jToken, out var h);
+                if (h != null) _heroes.Add(h);
             }
         }
 
-        heroList.ForEach(h =>
+        [Button]
+        internal override void DeleteAll()
         {
-            if ((raceOptList.Contains(h.race) || acpAllRace)
-                && (elementOptList.Contains(h.element) || acpAllElement)
-                && (tierOptList.Contains(h.tier) || acpAllTier))
-            {
-                matchHeroesList.Add(h);
-            }
-        });
-        
-        return matchHeroesList;
-    }
-}
+            _heroes.Clear();
+        }
 
-[Serializable]
-public class BaseHero
-{
-    [VerticalGroup("Information")] 
-    public string id;
-    
-    [VerticalGroup("Information")] 
-    public string name;
-    
-    [VerticalGroup("Information")] 
-    public Tier tier;
-    
-    [VerticalGroup("Information")] 
-    public Element element;
-    
-    [VerticalGroup("Information")] 
-    public Race race;
-    
-    [VerticalGroup("Information")] 
-    public DamageType damageType;
-    
-    [VerticalGroup("Information")] 
-    public Range range;
-    
-    public Stats stats;
+        internal List<Hero> GetHeroes()
+        {
+            return _heroes;
+        }
+
+        private void ConvertDataFromJObject(JObject jObject, out Hero h)
+        {
+            if (((string)jObject["name"]).IsNullOrWhitespace())
+            {
+                h = null;
+                return;
+            }
+
+            string tierValue = Utils.GetNormalizedString((string)jObject["tier"]);
+
+            Enum.TryParse(tierValue, out Tier tier);
+            Enum.TryParse((string)jObject["element"], out Element element);
+            Enum.TryParse((string)jObject["race"], out Race race);
+            Enum.TryParse((string)jObject["damage type"], out DamageType dmgType);
+            Enum.TryParse((string)jObject["range"], out Range range);
+
+            h = new Hero
+            {
+                Id = (string)jObject["ID"],
+                Name = (string)jObject["name"],
+                Tier = tier,
+                Element = element,
+                Race = race,
+                DamageType = dmgType,
+                Range = range,
+                Stats = new Stats
+                {
+                    showFull = true,
+                    health = Utils.Parse<float>((string)jObject["health"]),
+                    damage = Utils.Parse<float>((string)jObject["damage"]),
+                    armor = Utils.Parse<float>((string)jObject["armor"]),
+                    resistance = Utils.Parse<float>((string)jObject["resistance"]),
+                    intelligence = Utils.Parse<float>((string)jObject["intelligence"]),
+                    speed = Utils.Parse<float>((string)jObject["speed"]),
+                    luck = Utils.Parse<float>((string)jObject["luck"]),
+                    critDamage = Utils.Parse<float>((string)jObject["crit damage"]),
+                    lifeSteal = Utils.Parse<float>((string)jObject["life steal"]),
+                    accuracy = Utils.Parse<float>((string)jObject["accuracy"]),
+                }
+            };
+        }
+
+        public Hero GetHeroWithID(string heroId)
+        {
+            _cachedDict.TryAdd(heroId, _heroes.Find(h => h.Id == heroId));
+            if (_cachedDict[heroId] == null) EditorLog.Error($"Character {heroId} is not defined");
+            return _cachedDict[heroId];
+        }
+
+        public List<Hero> GetHeroesWithConditions(params object[] conditions)
+        {
+            var matchHeroes = new List<Hero>();
+
+            var raceOpts = new List<Race>();
+            var elementOpts = new List<Element>();
+            var tierOpts = new List<Tier>();
+            bool acpAllRace = true;
+            bool acpAllElement = true;
+            bool acpAllTier = true;
+
+            foreach (var condition in conditions)
+            {
+                switch (condition)
+                {
+                    case Race race:
+                        raceOpts.Add(race);
+                        acpAllRace = false;
+                        break;
+                    case Element element:
+                        elementOpts.Add(element);
+                        acpAllElement = false;
+                        break;
+                    case Tier tier:
+                        tierOpts.Add(tier);
+                        acpAllTier = false;
+                        break;
+                }
+            }
+
+            _heroes.ForEach(h =>
+            {
+                if ((raceOpts.Contains(h.Race) || acpAllRace)
+                    && (elementOpts.Contains(h.Element) || acpAllElement)
+                    && (tierOpts.Contains(h.Tier) || acpAllTier))
+                {
+                    matchHeroes.Add(h);
+                }
+            });
+
+            return matchHeroes;
+        }
+    }
+
+    [Serializable]
+    public class Hero
+    {
+        [VerticalGroup("Information")]
+        internal string Id;
+
+        [VerticalGroup("Information")]
+        internal string Name;
+
+        [VerticalGroup("Information")]
+        internal Tier Tier;
+
+        [VerticalGroup("Information")]
+        internal Element Element;
+
+        [VerticalGroup("Information")]
+        internal Race Race;
+
+        [VerticalGroup("Information")]
+        internal DamageType DamageType;
+
+        [VerticalGroup("Information")]
+        internal Range Range;
+
+        internal Stats Stats;
+    }
 }

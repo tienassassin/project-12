@@ -12,14 +12,14 @@ public class HpBar : MonoBehaviour
 
     private void OnEnable()
     {
-        heroInBattle.OnUpdateHp += UpdateHpBar;
-        heroInBattle.OnUpdateAnger += UpdateAngerBar;
+        heroInBattle.hpUpdated += UpdateHpBar;
+        heroInBattle.angerUpdated += UpdateAngerBar;
     }
 
     private void OnDisable()
     {
-        heroInBattle.OnUpdateHp -= UpdateHpBar;
-        heroInBattle.OnUpdateAnger -= UpdateAngerBar;
+        heroInBattle.hpUpdated -= UpdateHpBar;
+        heroInBattle.angerUpdated -= UpdateAngerBar;
     }
 
     private void UpdateHpBar(float curHp, float virtualHp, float maxHp)

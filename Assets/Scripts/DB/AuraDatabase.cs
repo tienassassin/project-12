@@ -1,103 +1,118 @@
-using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AuraDatabase", menuName = "Database/Aura")]
-public class AuraDatabase : ScriptableDatabase
+namespace System.DB
 {
-    public List<RaceAura> raceAuraList = new();
-    public List<ElementAura> elementAuraList = new();
-
-    public override void Import(params string[] data)
+    [CreateAssetMenu(fileName = "AuraDatabase", menuName = "Database/Aura")]
+    internal class AuraDatabase : ScriptableDatabase
     {
-        raceAuraList = new List<RaceAura>();
-        elementAuraList = new List<ElementAura>();
+        private List<RaceAura> _raceAuras = new();
+        private List<ElementAura> _elementAuras = new();
 
-        var jArrayRace = JArray.Parse(data[0]);
-        foreach (var jToken in jArrayRace)
+        internal override void Import(params string[] data)
         {
-            ConvertDataFromJObject((JObject)jToken, out Race r, out Aura a);
-            var matchRaceAura = raceAuraList.Find(x => x.race == r);
-            if (matchRaceAura != null) matchRaceAura.auraList.Add(a);
-            else
+            _raceAuras = new List<RaceAura>();
+            _elementAuras = new List<ElementAura>();
+
+            var jArrayRace = JArray.Parse(data[0]);
+            foreach (var jToken in jArrayRace)
             {
-                matchRaceAura = new RaceAura
+                ConvertDataFromJObject((JObject)jToken, out Race r, out Aura a);
+                var matchRaceAura = _raceAuras.Find(x => x.Race == r);
+                if (matchRaceAura != null) matchRaceAura.Auras.Add(a);
+                else
                 {
-                    race = r,
-                    auraList = new List<Aura> { a }
-                };
-                raceAuraList.Add(matchRaceAura);
+                    matchRaceAura = new RaceAura
+                    {
+                        Race = r,
+                        Auras = new List<Aura> { a }
+                    };
+                    _raceAuras.Add(matchRaceAura);
+                }
+            }
+
+            var jArrayElement = JArray.Parse(data[1]);
+            foreach (var jToken in jArrayElement)
+            {
+                ConvertDataFromJObject((JObject)jToken, out Element e, out Aura a);
+                var matchElementAura = _elementAuras.Find(x => x.Element == e);
+                if (matchElementAura != null) matchElementAura.Auras.Add(a);
+                else
+                {
+                    matchElementAura = new ElementAura
+                    {
+                        Element = e,
+                        Auras = new List<Aura> { a },
+                    };
+                    _elementAuras.Add(matchElementAura);
+                }
             }
         }
 
-        var jArrayElement = JArray.Parse(data[1]);
-        foreach (var jToken in jArrayElement)
+        internal override void DeleteAll()
         {
-            ConvertDataFromJObject((JObject)jToken, out Element e, out Aura a);
-            var matchElementAura = elementAuraList.Find(x => x.element == e);
-            if (matchElementAura != null) matchElementAura.auraList.Add(a);
-            else
+            _raceAuras.Clear();
+            _elementAuras.Clear();
+        }
+
+        internal List<Aura> GetAuras(object obj)
+        {
+            switch (obj)
             {
-                matchElementAura = new ElementAura
-                {
-                    element = e,
-                    auraList = new List<Aura> { a },
-                };
-                elementAuraList.Add(matchElementAura);
+                case Race r:
+                    return _raceAuras.Find(x => x.Race == r).Auras;
+                case Element e:
+                    return _elementAuras.Find(x => x.Element == e).Auras;
+                default:
+                    return null;
             }
+        }
+
+        private void ConvertDataFromJObject(JObject jObject, out Race r, out Aura a)
+        {
+            Enum.TryParse((string)jObject["race"], out r);
+            a = new Aura
+            {
+                Rank = Utils.Parse<int>((string)jObject["rank"]),
+                Name = (string)jObject["name"],
+                Description = (string)jObject["description"],
+            };
+        }
+        
+        private void ConvertDataFromJObject(JObject jObject, out Element e, out Aura a)
+        {
+            Enum.TryParse((string)jObject["element"], out e);
+            a = new Aura
+            {
+                Rank = Utils.Parse<int>((string)jObject["rank"]),
+                Name = (string)jObject["name"],
+                Description = (string)jObject["description"],
+            };
         }
     }
 
-    protected override void DeleteAll()
+    [Serializable]
+    public class RaceAura
     {
-        raceAuraList.Clear();
-        elementAuraList.Clear();
+        [HideLabel] public Race Race;
+        public List<Aura> Auras;
     }
 
-    private void ConvertDataFromJObject(JObject jObject, out Race r, out Aura a)
+    [Serializable]
+    public class ElementAura
     {
-        Enum.TryParse((string)jObject["race"], out r);
-        a = new Aura
-        {
-            rank = Utils.Parse<int>((string)jObject["rank"]),
-            name = (string)jObject["name"],
-            description = (string)jObject["description"],
-        };
+        [HideLabel] public Element Element;
+        public List<Aura> Auras;
     }
-    
-    private void ConvertDataFromJObject(JObject jObject, out Element e, out Aura a)
+
+    [Serializable]
+    public struct Aura
     {
-        Enum.TryParse((string)jObject["element"], out e);
-        a = new Aura
-        {
-            rank = Utils.Parse<int>((string)jObject["rank"]),
-            name = (string)jObject["name"],
-            description = (string)jObject["description"],
-        };
+        public int Rank;
+        public string Name;
+        [TextArea(5,10)]
+        public string Description;
     }
-}
-
-[Serializable]
-public class RaceAura
-{
-    [HideLabel] public Race race;
-    public List<Aura> auraList;
-}
-
-[Serializable]
-public class ElementAura
-{
-    [HideLabel] public Element element;
-    public List<Aura> auraList;
-}
-
-[Serializable]
-public struct Aura
-{
-    public int rank;
-    public string name;
-    [TextArea(5,10)]
-    public string description;
 }

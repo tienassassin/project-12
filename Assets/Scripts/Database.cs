@@ -1,380 +1,373 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Database : Singleton<Database>
+namespace System.DB
 {
-    public bool IsAllDBLoaded => dbLoaded >= DB_COUNT;
-    
-    [HorizontalGroup("ApiGithub"), SerializeField, LabelWidth(125)] private string apiUrl = "https://opensheet.elk.sh/";
-    [HorizontalGroup("GoogleSheet"), SerializeField, LabelWidth(125)] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
-    
-    [FoldoutGroup("DB"), SerializeField] private HeroDatabase heroDB;
-    [FoldoutGroup("DB"), SerializeField] private DevilDatabase devilDB;
-    [FoldoutGroup("DB"), SerializeField] private EquipmentDatabase eqmDB;
-    [FoldoutGroup("DB"), SerializeField] private StatsDescriptions statsDesc;
-    [FoldoutGroup("DB"), SerializeField] private GrowthDatabase growthDB;
-    [FoldoutGroup("DB"), SerializeField] private ExpDatabase expDB;
-    [FoldoutGroup("DB"), SerializeField] private BackstoryDatabase bsDB;
-    [FoldoutGroup("DB"), SerializeField] private AuraDatabase auraDB;
-
-    private const string HERO_SHEET = "Heroes";
-    private const string DEVIL_SHEET = "Devils";
-    private const string EQM_SHEET = "Equipments";
-    private const string STATS_SHEET = "Stats";
-    private const string ENTITY_GROWTH_SHEET = "EntityGrowth";
-    private const string EQM_GROWTH_SHEET = "EquipmentGrowth";
-    private const string EXP_SHEET = "Exp";
-    private const string BACKSTORY_SHEET = "Backstory";
-    private const string RACE_AURA_SHEET = "RaceAura";
-    private const string ELEMENT_AURA_SHEET = "ElementAura";
-
-    private int dbLoaded = 0;
-    private const int DB_COUNT = 10;
-
-    protected override void Awake()
+    public class Database : Singleton<Database>
     {
-        base.Awake();
-        FetchData();
-    }
-
-    [HorizontalGroup("ApiGithub", Width = 0.1f), Button("Open")]
-    public void OpenApiGithub()
-    {
-        Application.OpenURL("https://github.com/benborgers/opensheet");
-    }
-
-    [HorizontalGroup("GoogleSheet", Width = 0.1f), Button("Open")]
-    public void OpenGoogleSheet()
-    {
-        Application.OpenURL($"https://docs.google.com/spreadsheets/d/{databaseId}/");
-    }
-
-    [Button]
-    public void FetchData()
-    {
-        if (Application.internetReachability == NetworkReachability.NotReachable) return;
+        public bool IsAllDBLoaded => _dbLoaded >= DB_COUNT;
         
-        StartCoroutine(FetchHeroDB());
-        StartCoroutine(FetchDevilDB());
-        StartCoroutine(FetchEquipmentDB());
-        StartCoroutine(FetchStatsDescriptions());
-        StartCoroutine(FetchGrowthDB());
-        StartCoroutine(FetchExpDB());
-        StartCoroutine(FetchBackstoryDB());
-        StartCoroutine(FetchAuraDB());
-    }
+        [HorizontalGroup("ApiGithub"), SerializeField, LabelWidth(125)] private string apiUrl = "https://opensheet.elk.sh/";
+        [HorizontalGroup("GoogleSheet"), SerializeField, LabelWidth(125)] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
+        
+        [FoldoutGroup("DB"), SerializeField] private HeroDatabase heroDB;
+        [FoldoutGroup("DB"), SerializeField] private DevilDatabase devilDB;
+        [FoldoutGroup("DB"), SerializeField] private EquipmentDatabase eqmDB;
+        [FoldoutGroup("DB"), SerializeField] private StatsDescriptions statsDesc;
+        [FoldoutGroup("DB"), SerializeField] private GrowthDatabase growthDB;
+        [FoldoutGroup("DB"), SerializeField] private ExpDatabase expDB;
+        [FoldoutGroup("DB"), SerializeField] private BackstoryDatabase bsDB;
+        [FoldoutGroup("DB"), SerializeField] private AuraDatabase auraDB;
 
-    #region Data fetching
-    
-    IEnumerator FetchHeroDB()
-    {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{HERO_SHEET}");
-        yield return uwr.SendWebRequest();
-        if (uwr.result != UnityWebRequest.Result.Success)
+        private const string HERO_SHEET = "Heroes";
+        private const string DEVIL_SHEET = "Devils";
+        private const string EQM_SHEET = "Equipments";
+        private const string STATS_SHEET = "Stats";
+        private const string ENTITY_GROWTH_SHEET = "EntityGrowth";
+        private const string EQM_GROWTH_SHEET = "EquipmentGrowth";
+        private const string EXP_SHEET = "Exp";
+        private const string BACKSTORY_SHEET = "Backstory";
+        private const string RACE_AURA_SHEET = "RaceAura";
+        private const string ELEMENT_AURA_SHEET = "ElementAura";
+
+        private int _dbLoaded = 0;
+        private const int DB_COUNT = 10;
+
+        protected override void Awake()
         {
-            EditorLog.Error(uwr.error);
-        }
-        else
-        {
-            heroDB.Import(uwr.downloadHandler.text);
+            base.Awake();
+            FetchData();
         }
 
-        dbLoaded++;
-    }
-    
-    IEnumerator FetchDevilDB()
-    {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{DEVIL_SHEET}");
-        yield return uwr.SendWebRequest();
-        if (uwr.result != UnityWebRequest.Result.Success)
+        [HorizontalGroup("ApiGithub", Width = 0.1f), Button("Open")]
+        public void OpenApiGithub()
         {
-            EditorLog.Error(uwr.error);
+            Application.OpenURL("https://github.com/benborgers/opensheet");
         }
-        else
+
+        [HorizontalGroup("GoogleSheet", Width = 0.1f), Button("Open")]
+        public void OpenGoogleSheet()
         {
-            devilDB.Import(uwr.downloadHandler.text);
+            Application.OpenURL($"https://docs.google.com/spreadsheets/d/{databaseId}/");
+        }
+
+        [Button]
+        public void FetchData()
+        {
+            if (Application.internetReachability == NetworkReachability.NotReachable) return;
+            
+            StartCoroutine(FetchHeroDB());
+            StartCoroutine(FetchDevilDB());
+            StartCoroutine(FetchEquipmentDB());
+            StartCoroutine(FetchStatsDescriptions());
+            StartCoroutine(FetchGrowthDB());
+            StartCoroutine(FetchExpDB());
+            StartCoroutine(FetchBackstoryDB());
+            StartCoroutine(FetchAuraDB());
+        }
+
+        #region Data fetching
+        
+        IEnumerator FetchHeroDB()
+        {
+            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{HERO_SHEET}");
+            yield return uwr.SendWebRequest();
+            if (uwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(uwr.error);
+            }
+            else
+            {
+                heroDB.Import(uwr.downloadHandler.text);
+            }
+
+            _dbLoaded++;
         }
         
-        dbLoaded++;
-    }
-    
-    IEnumerator FetchEquipmentDB()
-    {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EQM_SHEET}");
-        yield return uwr.SendWebRequest();
-        if (uwr.result != UnityWebRequest.Result.Success)
+        IEnumerator FetchDevilDB()
         {
-            EditorLog.Error(uwr.error);
-        }
-        else
-        {
-            eqmDB.Import(uwr.downloadHandler.text);
-        }
-        
-        dbLoaded++;
-    }
-
-    IEnumerator FetchStatsDescriptions()
-    {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{STATS_SHEET}");
-        yield return uwr.SendWebRequest();
-        if (uwr.result != UnityWebRequest.Result.Success)
-        {
-            EditorLog.Error(uwr.error);
-        }
-        else
-        {
-            statsDesc.Import(uwr.downloadHandler.text);
+            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{DEVIL_SHEET}");
+            yield return uwr.SendWebRequest();
+            if (uwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(uwr.error);
+            }
+            else
+            {
+                devilDB.Import(uwr.downloadHandler.text);
+            }
+            
+            _dbLoaded++;
         }
         
-        dbLoaded++;
-    }
+        IEnumerator FetchEquipmentDB()
+        {
+            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EQM_SHEET}");
+            yield return uwr.SendWebRequest();
+            if (uwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(uwr.error);
+            }
+            else
+            {
+                eqmDB.Import(uwr.downloadHandler.text);
+            }
+            
+            _dbLoaded++;
+        }
 
-    IEnumerator FetchGrowthDB()
-    {
-        var cUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{ENTITY_GROWTH_SHEET}");
-        var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EQM_GROWTH_SHEET}");
-        var dataC = "";
-        yield return cUwr.SendWebRequest();
-        if (cUwr.result != UnityWebRequest.Result.Success)
+        IEnumerator FetchStatsDescriptions()
         {
-            EditorLog.Error(cUwr.error);
+            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{STATS_SHEET}");
+            yield return uwr.SendWebRequest();
+            if (uwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(uwr.error);
+            }
+            else
+            {
+                statsDesc.Import(uwr.downloadHandler.text);
+            }
+            
+            _dbLoaded++;
         }
-        else
-        {
-            dataC = cUwr.downloadHandler.text;
-        }
-        
-        dbLoaded++;
-        
-        var dataE = "";
-        yield return eUwr.SendWebRequest();
-        if (eUwr.result != UnityWebRequest.Result.Success)
-        {
-            EditorLog.Error(eUwr.error);
-        }
-        else
-        {
-            dataE = eUwr.downloadHandler.text;
-        }
-        
-        dbLoaded++;
 
-        growthDB.Import(dataC, dataE);
-    }
-    
-    IEnumerator FetchExpDB()
-    {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EXP_SHEET}");
-        yield return uwr.SendWebRequest();
-        if (uwr.result != UnityWebRequest.Result.Success)
+        IEnumerator FetchGrowthDB()
         {
-            EditorLog.Error(uwr.error);
-        }
-        else
-        {
-            expDB.Import(uwr.downloadHandler.text);
-        }
-        
-        dbLoaded++;
-    }
-    
-    IEnumerator FetchBackstoryDB()
-    {
-        var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{BACKSTORY_SHEET}");
-        yield return uwr.SendWebRequest();
-        if (uwr.result != UnityWebRequest.Result.Success)
-        {
-            EditorLog.Error(uwr.error);
-        }
-        else
-        {
-            bsDB.Import(uwr.downloadHandler.text);
-        }
-        
-        dbLoaded++;
-    }
-    
-    IEnumerator FetchAuraDB()
-    {
-        var rUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{RACE_AURA_SHEET}");
-        var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{ELEMENT_AURA_SHEET}");
-        var dataR = "";
-        yield return rUwr.SendWebRequest();
-        if (rUwr.result != UnityWebRequest.Result.Success)
-        {
-            EditorLog.Error(rUwr.error);
-        }
-        else
-        {
-            dataR = rUwr.downloadHandler.text;
+            var cUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{ENTITY_GROWTH_SHEET}");
+            var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EQM_GROWTH_SHEET}");
+            var dataC = "";
+            yield return cUwr.SendWebRequest();
+            if (cUwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(cUwr.error);
+            }
+            else
+            {
+                dataC = cUwr.downloadHandler.text;
+            }
+            
+            _dbLoaded++;
+            
+            var dataE = "";
+            yield return eUwr.SendWebRequest();
+            if (eUwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(eUwr.error);
+            }
+            else
+            {
+                dataE = eUwr.downloadHandler.text;
+            }
+            
+            _dbLoaded++;
+
+            growthDB.Import(dataC, dataE);
         }
         
-        dbLoaded++;
-        
-        var dataE = "";
-        yield return eUwr.SendWebRequest();
-        if (eUwr.result != UnityWebRequest.Result.Success)
+        IEnumerator FetchExpDB()
         {
-            EditorLog.Error(eUwr.error);
-        }
-        else
-        {
-            dataE = eUwr.downloadHandler.text;
+            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EXP_SHEET}");
+            yield return uwr.SendWebRequest();
+            if (uwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(uwr.error);
+            }
+            else
+            {
+                expDB.Import(uwr.downloadHandler.text);
+            }
+            
+            _dbLoaded++;
         }
         
-        dbLoaded++;
+        IEnumerator FetchBackstoryDB()
+        {
+            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{BACKSTORY_SHEET}");
+            yield return uwr.SendWebRequest();
+            if (uwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(uwr.error);
+            }
+            else
+            {
+                bsDB.Import(uwr.downloadHandler.text);
+            }
+            
+            _dbLoaded++;
+        }
+        
+        IEnumerator FetchAuraDB()
+        {
+            var rUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{RACE_AURA_SHEET}");
+            var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{ELEMENT_AURA_SHEET}");
+            var dataR = "";
+            yield return rUwr.SendWebRequest();
+            if (rUwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(rUwr.error);
+            }
+            else
+            {
+                dataR = rUwr.downloadHandler.text;
+            }
+            
+            _dbLoaded++;
+            
+            var dataE = "";
+            yield return eUwr.SendWebRequest();
+            if (eUwr.result != UnityWebRequest.Result.Success)
+            {
+                EditorLog.Error(eUwr.error);
+            }
+            else
+            {
+                dataE = eUwr.downloadHandler.text;
+            }
+            
+            _dbLoaded++;
 
-        auraDB.Import(dataR, dataE);
+            auraDB.Import(dataR, dataE);
+        }
+        
+        #endregion
+
+        #region Characters & Equipments
+
+        public List<Hero> GetAllHeroes()
+        {
+            return heroDB.GetHeroes();
+        }
+        
+        public float GetGrowth(object obj)
+        {
+            return growthDB.GetGrowth(obj);
+        }
+
+        public Hero GetHeroWithID(string id)
+        {
+            return heroDB.GetHeroWithID(id);
+        }
+
+        public Devil GetDevilWithID(string id)
+        {
+            return devilDB.GetDevilWithID(id);
+        }
+
+        public Equipment GetEquipmentWithID(string id)
+        {
+            return eqmDB.GetEquipmentWithID(id);
+        }
+        
+        #endregion
+
+        #region EXP
+        
+        [Button]
+        public int GetLevel(int totalExp)
+        {
+            return expDB.GetLevel(totalExp);
+        }
+        
+        [Button]
+        public Tuple<int, int> GetExp(int totalExp)
+        {
+            return expDB.GetExp(totalExp);
+        }
+
+        public int GetLevelMax()
+        {
+            return expDB.LevelMax;
+        }
+        
+        #endregion
+
+        #region Stats
+        
+        public string GetStatDescription(string key)
+        {
+            return statsDesc.GetStatDescription(key).Description;
+        }
+        
+        public string GetStatName(string key)
+        {
+            return statsDesc.GetStatDescription(key).Name;
+        }
+        
+        public float GetStatLimit(string key)
+        {
+            return statsDesc.GetStatDescription(key).Limit;
+        }
+        
+        #endregion
+
+        #region Backstory
+        
+        public string GetHeroAlias(string heroId)
+        {
+            return bsDB.GetBackstory(heroId).Alias;
+        }
+        
+        public string GetHeroStory(string heroId)
+        {
+            return bsDB.GetBackstory(heroId).Story;
+        }
+        
+        #endregion
+
+        #region Aura
+        
+        public List<Aura> GetAuras(object obj)
+        {
+            return auraDB.GetAuras(obj);
+        }
+        
+        #endregion
     }
     
-    #endregion
+    public static class DatabaseExtensions
+    {
+        public static float GetHeroGrowth(this Hero h)
+        {
+            return Database.Instance.GetGrowth(h.Tier);
+        }
 
-    #region Characters & Equipments
+        public static float GetDevilGrowth(this Devil d)
+        {
+            return Database.Instance.GetGrowth(d.Tier);
+        }
 
-    public List<BaseHero> GetAllBaseHeroes()
-    {
-        return heroDB.heroList;
-    }
+        public static string GetHeroAlias(this Hero h)
+        {
+            return Database.Instance.GetHeroAlias(h.Id);
+        }
 
-    public float GetEntityGrowth(Tier t)
-    {
-        return growthDB.entityGrowthList.Find(x => x.tier == t).growth;
-    }
-    public float GetEquipmentGrowth(Rarity r)
-    {
-        return growthDB.eqmGrowthList.Find(x => x.rarity == r).growth;
-    }
+        public static string GetHeroStory(this Hero h)
+        {
+            return Database.Instance.GetHeroStory(h.Id);
+        }
 
-    public BaseHero GetHeroWithID(string id)
-    {
-        return heroDB.GetHeroWithID(id);
-    }
+        public static float GetEquipmentGrowth(this Equipment e)
+        {
+            return Database.Instance.GetGrowth(e.Rarity);
+        }
 
-    public BaseDevil GetDevilWithID(string id)
-    {
-        return devilDB.GetDevilWithID(id);
-    }
+        public static Hero GetHeroWithID(this Player.DB.Hero hsd)
+        {
+            return Database.Instance.GetHeroWithID(hsd.heroId);
+        }
 
-    public BaseEquipment GetEquipmentWithID(string id)
-    {
-        return eqmDB.GetEquipmentWithID(id);
-    }
-    
-    #endregion
+        public static int GetLevel(this Player.DB.Hero hsd)
+        {
+            return Database.Instance.GetLevel(hsd.totalExp);
+        }
 
-    #region EXP
-    
-    [Button]
-    public int GetLevel(int totalExp)
-    {
-        return expDB.GetLevel(totalExp);
-    }
-    
-    [Button]
-    public Tuple<int, int> GetExp(int totalExp)
-    {
-        return expDB.GetExp(totalExp);
-    }
-
-    public int GetLevelMax()
-    {
-        return expDB.levelMax;
-    }
-    
-    #endregion
-
-    #region Stats
-    
-    public string GetStatDescription(string key)
-    {
-        return statsDesc.GetStatDescription(key).description;
-    }
-    
-    public string GetStatName(string key)
-    {
-        return statsDesc.GetStatDescription(key).name;
-    }
-    
-    public float GetStatLimit(string key)
-    {
-        return statsDesc.GetStatDescription(key).limit;
-    }
-    
-    #endregion
-
-    #region Backstory
-    
-    public string GetHeroAlias(string heroId)
-    {
-        return bsDB.GetBackstory(heroId).alias;
-    }
-    
-    public string GetHeroStory(string heroId)
-    {
-        return bsDB.GetBackstory(heroId).story;
-    }
-    
-    #endregion
-
-    #region Aura
-    
-    public List<Aura> GetRaceAura(Race race)
-    {
-        return auraDB.raceAuraList.Find(x => x.race == race).auraList;
-    }
-
-    public List<Aura> GetElementAura(Element element)
-    {
-        return auraDB.elementAuraList.Find(x => x.element == element).auraList;
-    }
-    
-    #endregion
-}
-
-public static class DatabaseExtensions
-{
-    public static float GetHeroGrowth(this BaseHero h)
-    {
-        return Database.Instance.GetEntityGrowth(h.tier);
-    }
-
-    public static float GetDevilGrowth(this BaseDevil d)
-    {
-        return Database.Instance.GetEntityGrowth(d.tier);
-    }
-
-    public static string GetHeroAlias(this BaseHero h)
-    {
-        return Database.Instance.GetHeroAlias(h.id);
-    }
-
-    public static string GetHeroStory(this BaseHero h)
-    {
-        return Database.Instance.GetHeroStory(h.id);
-    }
-
-    public static float GetEquipmentGrowth(this BaseEquipment e)
-    {
-        return Database.Instance.GetEquipmentGrowth(e.rarity);
-    }
-
-    public static BaseHero GetHeroWithID(this HeroSaveData hsd)
-    {
-        return Database.Instance.GetHeroWithID(hsd.heroId);
-    }
-
-    public static int GetLevel(this HeroSaveData hsd)
-    {
-        return Database.Instance.GetLevel(hsd.totalExp);
-    }
-
-    public static Tuple<int, int> GetExp(this HeroSaveData hsd)
-    {
-        return Database.Instance.GetExp(hsd.totalExp);
+        public static Tuple<int, int> GetExp(this Player.DB.Hero hsd)
+        {
+            return Database.Instance.GetExp(hsd.totalExp);
+        }
     }
 }

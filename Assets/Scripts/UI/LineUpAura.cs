@@ -1,6 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.DB;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using TMPro;
@@ -20,10 +20,11 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private float fontSize1;
     [SerializeField] private TMP_Text titleTxt;
     [SerializeField] private TMP_Text contentTxt;
-    private Coroutine c;
-    private string color0Hex;
-    private string color1Hex;
-    private object auraType;
+    
+    private Coroutine _coroutine;
+    private string _hexColor0;
+    private string _hexColor1;
+    private object _auraType;
 
     private void Awake()
     {
@@ -33,22 +34,22 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     [Button]
     public void Init(Race race, int rank)
     {
-        auraType = race;
+        _auraType = race;
         titleTxt.text = $"<color={ColorPalette.Instance.GetRaceColorHex(race)}>" +
                         $"<ico>" +
                         $"{race} Aura</color>";
-        var auraList = Database.Instance.GetRaceAura(race);
+        var auraList = Database.Instance.GetAuras(race);
         RefreshRank(rank);
         RefreshContent(auraList, rank);
     }
 
     public void Init(Element element, int rank)
     {
-        auraType = element;
+        _auraType = element;
         titleTxt.text = $"<color={ColorPalette.Instance.GetElementColorHex(element)}>" +
                         $"<size=50><sprite name=element-{element}></size> " +
                         $"{element} Aura</color>";
-        var auraList = Database.Instance.GetElementAura(element);
+        var auraList = Database.Instance.GetAuras(element);
         var colorList = new List<string> { ColorPalette.Instance.GetElementColorHex(element) };
         RefreshRank(rank);
         RefreshContent(auraList, rank, colorList);
@@ -68,19 +69,19 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private void RefreshContent(List<Aura> auraList, int rank, List<string> colorList = null)
     {
-        color0Hex = "#" + ColorUtility.ToHtmlStringRGBA(color0);
-        color1Hex = "#" + ColorUtility.ToHtmlStringRGBA(color1[1]);
+        _hexColor0 = "#" + ColorUtility.ToHtmlStringRGBA(color0);
+        _hexColor1 = "#" + ColorUtility.ToHtmlStringRGBA(color1[1]);
         
         string content = "";
         for (int i = 0; i < auraList.Count; i++)
         {
             var aura = auraList[i];
-            bool isCurRank = (rank == aura.rank);
-            bool emptyName = aura.name.IsNullOrWhitespace();
+            bool isCurRank = (rank == aura.Rank);
+            bool emptyName = aura.Name.IsNullOrWhitespace();
             bool isLastAura = (i >= auraList.Count - 1);
-            content += $"<color={(isCurRank ? color1Hex : color0Hex)}>" +
-                        $"{aura.name}{(emptyName ? "" : " ")}" +
-                        $"({aura.rank}): {aura.description}" +
+            content += $"<color={(isCurRank ? _hexColor1 : _hexColor0)}>" +
+                        $"{aura.Name}{(emptyName ? "" : " ")}" +
+                        $"({aura.Rank}): {aura.Description}" +
                         "</color>" +
                         $"{(isLastAura ? "" : "\n\n")}";
         }
@@ -97,20 +98,20 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        c = StartCoroutine(ShowDetailPanel());
+        _coroutine = StartCoroutine(ShowDetailPanel());
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (c != null) StopCoroutine(c);
+        if (_coroutine != null) StopCoroutine(_coroutine);
         detailPanel.SetActive(false);
-        this.PostEvent(EventID.ON_HIGHLIGHT_AURA, null);
+        this.PostEvent(EventID.ON_HIGHLIGHT_AURA);
     }
 
     IEnumerator ShowDetailPanel()
     {
         yield return new WaitForSeconds(delayShowPanel);
         detailPanel.SetActive(true);
-        this.PostEvent(EventID.ON_HIGHLIGHT_AURA, auraType);
+        this.PostEvent(EventID.ON_HIGHLIGHT_AURA, _auraType);
     }
 }

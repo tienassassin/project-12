@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class EventDispatcher : Singleton<EventDispatcher>
 {
-    private Dictionary<EventID, Action<object>> eventDict = new();
+    private readonly Dictionary<EventID, Action<object>> _eventDict = new();
 
     /// <summary>
     /// Add a listener to EventDispatcher
@@ -19,8 +19,8 @@ public class EventDispatcher : Singleton<EventDispatcher>
     /// <param name="listener">Callback will be invoked when post this EventID</param>
     public void AddListener(EventID eventID, Action<object> listener)
     {
-        eventDict.TryAdd(eventID, null);
-        eventDict[eventID] += listener;
+        _eventDict.TryAdd(eventID, null);
+        _eventDict[eventID] += listener;
     }
 
     /// <summary>
@@ -30,17 +30,17 @@ public class EventDispatcher : Singleton<EventDispatcher>
     /// <param name="listener">Callback will not be invoked anymore when post this EventID</param>
     public void RemoveListener(EventID eventID, Action<object> listener)
     {
-        if (!eventDict.ContainsKey(eventID))
+        if (!_eventDict.ContainsKey(eventID))
         {
             EditorLog.Error($"Event {eventID} has 0 listeners");
             return;
         }
         
-        eventDict[eventID] -= listener;
-        if (eventDict[eventID] != null) return;
+        _eventDict[eventID] -= listener;
+        if (_eventDict[eventID] != null) return;
         
         EditorLog.Message($"Event {eventID} will be removed because all its listeners have been removed");
-        eventDict.Remove(eventID);
+        _eventDict.Remove(eventID);
     }
 
     /// <summary>
@@ -50,13 +50,13 @@ public class EventDispatcher : Singleton<EventDispatcher>
     /// <param name="payload">Attached data, can be anything (class, struct...)</param>
     public void PostEvent(EventID eventID, object payload = null)
     {
-        if (!eventDict.ContainsKey(eventID))
+        if (!_eventDict.ContainsKey(eventID))
         {
             EditorLog.Error($"Event {eventID} has 0 listeners");
             return;
         }
 
-        eventDict[eventID]?.Invoke(payload);
+        _eventDict[eventID]?.Invoke(payload);
     }
 
     /// <summary>
@@ -64,7 +64,7 @@ public class EventDispatcher : Singleton<EventDispatcher>
     /// </summary>
     public void RemoveAllListener()
     {
-        eventDict.Clear();
+        _eventDict.Clear();
     }
 }
 

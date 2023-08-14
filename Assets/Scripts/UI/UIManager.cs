@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,8 +5,8 @@ using UnityEngine;
 public class UIManager : Singleton<UIManager>
 {
     [SerializeField] private List<BaseUI> preloadUIList; 
-    private Dictionary<string, BaseUI> UIDict = new();
-    private string uiPath = "Prefabs/UI/";
+    private readonly Dictionary<string, BaseUI> _uiDict = new();
+    private const string PATH = "Prefabs/UI/";
 
     private void Start()
     {
@@ -17,14 +15,14 @@ public class UIManager : Singleton<UIManager>
 
     public BaseUI GetUI(string key)
     {
-        if (!UIDict.ContainsKey(key))
+        if (!_uiDict.ContainsKey(key))
         {
-            var uiPref = Resources.Load<BaseUI>(uiPath + key);
+            var uiPref = Resources.Load<BaseUI>(PATH + key);
             if (uiPref)
             {
                 var newUI = Instantiate(uiPref, transform);
                 newUI.name = key;
-                UIDict.Add(newUI.name, newUI);
+                _uiDict.Add(newUI.name, newUI);
             }
             else
             {
@@ -32,7 +30,7 @@ public class UIManager : Singleton<UIManager>
             } 
         }
 
-        UIDict.TryGetValue(key, out var ui);
+        _uiDict.TryGetValue(key, out var ui);
         return ui;
     }
 
@@ -61,7 +59,7 @@ public class UIManager : Singleton<UIManager>
 
     public void HideAllUI(params string[] exceptions)
     {
-        foreach (var itm in UIDict)
+        foreach (var itm in _uiDict)
         {
             if (exceptions.Contains(itm.Key)) continue;
             itm.Value.Hide();

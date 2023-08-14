@@ -1,8 +1,7 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.DB;
 using System.Linq;
-using Sirenix.OdinInspector;
+using Player.DB;
 using UnityEngine;
 
 public class LineUpUI : BaseUI
@@ -13,9 +12,9 @@ public class LineUpUI : BaseUI
     [SerializeField] private LineUpAura[] elementAuras;
     [SerializeField] private LineUpDetail detail;
 
-    private int curView;
-    private Dictionary<Race, int> raceCount = new();
-    private Dictionary<Element, int> elementCount = new();
+    private int _curView;
+    private Dictionary<Race, int> _raceCountDict = new();
+    private Dictionary<Element, int> _elementCountDict = new();
     
     public static void Show()
     {
@@ -49,12 +48,12 @@ public class LineUpUI : BaseUI
         GetElementAura(readyHeroList);
 
         string auraStatistics = "Aura statistics: ";
-        foreach (var kv in raceCount) auraStatistics += $"\n{kv.Key} x {kv.Value}";
-        foreach (var kv in elementCount) auraStatistics += $"\n{kv.Key} x {kv.Value}";
+        foreach (var kv in _raceCountDict) auraStatistics += $"\n{kv.Key} x {kv.Value}";
+        foreach (var kv in _elementCountDict) auraStatistics += $"\n{kv.Key} x {kv.Value}";
         EditorLog.Message(auraStatistics);
     }
 
-    private void RefreshDetailView(int slotId, HeroSaveData saveData)
+    private void RefreshDetailView(int slotId, Player.DB.Hero saveData)
     {
         detail.Init(slotId, saveData);
     }
@@ -62,7 +61,7 @@ public class LineUpUI : BaseUI
     public void SwitchView(int index)
     {
         index = Mathf.Clamp(index, 0, views.Length - 1);
-        curView = index;
+        _curView = index;
         
         for (int i = 0; i < views.Length; i++)
         {
@@ -70,15 +69,15 @@ public class LineUpUI : BaseUI
         }
     }
 
-    private void GetRaceAura(List<HeroSaveData> heroList)
+    private void GetRaceAura(List<Player.DB.Hero> heroList)
     {
-        var raceList = heroList.Where(x => x != null).Select(x => x.GetHeroWithID().race).ToList();
+        var raceList = heroList.Where(x => x != null).Select(x => x.GetHeroWithID().Race).ToList();
         
-        raceCount = raceList.GroupBy(x => x)
+        _raceCountDict = raceList.GroupBy(x => x)
             .ToDictionary(x => x.Key, x => x.Count());
 
         int index = 0;
-        foreach (var kv in raceCount)
+        foreach (var kv in _raceCountDict)
         {
             if (kv.Value < 3) continue;
             raceAuras[index].gameObject.SetActive(true);
@@ -92,15 +91,15 @@ public class LineUpUI : BaseUI
         }
     }
     
-    private void GetElementAura(List<HeroSaveData> heroList)
+    private void GetElementAura(List<Player.DB.Hero> heroList)
     {
-        var elementList = heroList.Where(x => x != null).Select(x => x.GetHeroWithID().element).ToList();
+        var elementList = heroList.Where(x => x != null).Select(x => x.GetHeroWithID().Element).ToList();
         
-        elementCount = elementList.GroupBy(x => x)
+        _elementCountDict = elementList.GroupBy(x => x)
             .ToDictionary(x => x.Key, x => x.Count());
         
         int index = 0;
-        foreach (var kv in elementCount)
+        foreach (var kv in _elementCountDict)
         {
             if (kv.Value < 2) continue;
             elementAuras[index].gameObject.SetActive(true);
@@ -116,7 +115,7 @@ public class LineUpUI : BaseUI
 
     public void OnClickBack()
     {
-        switch (curView)
+        switch (_curView)
         {
             case 0:
                 LineUpUI.Hide();

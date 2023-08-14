@@ -1128,7 +1128,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8230984445489841705}
         m_TargetAssemblyTypeName: CharacterCard, Assembly-CSharp
-        m_MethodName: OnClickCard
+        m_MethodName: SelectCard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

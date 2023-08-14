@@ -1,4 +1,5 @@
 using System;
+using System.DB;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,15 +10,15 @@ public class LineUpSlot : DuztineBehaviour
     [SerializeField] private GameObject hero;
     [SerializeField] private GameObject heroInfo;
 
-    [SerializeField] private TMP_Text levelTxt;
-    [SerializeField] private Slider hpSlider;
-    [SerializeField] private Slider energySlider;
+    [SerializeField] private TMP_Text txtLevel;
+    [SerializeField] private Slider sldHp;
+    [SerializeField] private Slider sldEnergy;
 
     [SerializeField] private GameObject highlight;
 
-    private Action<int, HeroSaveData> onShowSlotDetail = null;
-    private HeroSaveData saveData;
-    private BaseHero baseHero;
+    private Action<int, Player.DB.Hero> _slotHighlighted;
+    private Player.DB.Hero _saveData;
+    private System.DB.Hero _baseData;
 
     private void OnEnable()
     {
@@ -29,40 +30,40 @@ public class LineUpSlot : DuztineBehaviour
         this.RemoveListener(EventID.ON_HIGHLIGHT_AURA, SwitchHighlight);
     }
 
-    public void Init(HeroSaveData data, Action<int, HeroSaveData> onShow)
+    public void Init(Player.DB.Hero data, Action<int, Player.DB.Hero> slotHighlighted)
     {
-        saveData = data;
-        baseHero = saveData?.GetHeroWithID();
-        hero.SetActive(saveData != null);
-        heroInfo.SetActive(saveData != null);
-        name = (baseHero != null ? baseHero.name : Constants.EMPTY_MARK);
+        _saveData = data;
+        _baseData = _saveData?.GetHeroWithID();
+        hero.SetActive(_saveData != null);
+        heroInfo.SetActive(_saveData != null);
+        name = (_baseData != null ? _baseData.Name : Constants.EMPTY_MARK);
 
-        onShowSlotDetail = onShow;
+        _slotHighlighted = slotHighlighted;
         Refresh();
     }
 
     private void Refresh()
     {
-        if (saveData == null) return;
+        if (_saveData == null) return;
         
-        levelTxt.text = saveData.GetLevel().ToString();
-        hpSlider.value = saveData.curHp / baseHero.stats.health;
-        energySlider.value = saveData.energy / 100;
+        txtLevel.text = _saveData.GetLevel().ToString();
+        sldHp.value = _saveData.curHp / _baseData.Stats.health;
+        sldEnergy.value = _saveData.energy / 100;
     }
 
     private void SwitchHighlight(object condition)
     {
         bool active = false;
         
-        if (baseHero != null)
+        if (_baseData != null)
         {
             switch (condition)
             {
                 case Race r:
-                    active = (baseHero.race == r);
+                    active = (_baseData.Race == r);
                     break;
                 case Element e:
-                    active = (baseHero.element == e);
+                    active = (_baseData.Element == e);
                     break;
             }
         }
@@ -72,6 +73,6 @@ public class LineUpSlot : DuztineBehaviour
     
     public void OnClickSlot()
     {
-        onShowSlotDetail?.Invoke(slotId, saveData);
+        _slotHighlighted?.Invoke(slotId, _saveData);
     }
 }

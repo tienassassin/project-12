@@ -1,119 +1,121 @@
 using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using Sirenix.Utilities;
 using UnityEngine;
 
-public class UserManager : Singleton<UserManager>
+namespace Player.DB
 {
-    public UserHeroDB uHeroDB;
-
-    private const string HERO_DB_KEY = "HERO_DB";
-
-    protected override void Awake()
+    public class UserManager : Singleton<UserManager>
     {
-        base.Awake();
-        
-        Application.targetFrameRate = 144;
-        LoadHeroDB();
-    }
+        public HeroDatabase heroDB;
 
-    public List<HeroSaveData> GetAllHeroes()
-    {
-        return uHeroDB.allHeroList;
-    }
+        private const string HERO_DB_KEY = "HERO_DB";
 
-    public List<HeroSaveData> GetReadyHeroes()
-    {
-        var readyHeroList = new List<HeroSaveData>();
-        uHeroDB.readyHeroList.ForEach(x =>
+        protected override void Awake()
         {
-            readyHeroList.Add(uHeroDB.allHeroList.Find(y => y.heroId == x));
-        });
-
-        return readyHeroList;
-    }
-
-    public void AddHeroToLineUp(int slotId, string heroId)
-    {
-        int oldSlotId = uHeroDB.readyHeroList.IndexOf(heroId);
-        string oldHeroId = uHeroDB.readyHeroList[slotId];
-        if (oldSlotId >= 0)
-        {
-            uHeroDB.readyHeroList[oldSlotId] = oldHeroId;
+            base.Awake();
+            
+            Application.targetFrameRate = 144;
+            LoadHeroDB();
         }
-        
-        uHeroDB.readyHeroList[slotId] = heroId;
-        SaveCharacterDB();
-        
-        this.PostEvent(EventID.ON_LINEUP_CHANGED);
-    }
 
-    public void RemoveHeroFromLineUp(int slotId)
-    {
-        uHeroDB.readyHeroList[slotId] = "";
-        SaveCharacterDB();
-        
-        this.PostEvent(EventID.ON_LINEUP_CHANGED);
-    }
-
-    public bool IsHeroReady(string heroId)
-    {
-        return uHeroDB.readyHeroList.Contains(heroId);
-    }
-
-    public bool IsHeroUnlocked(string heroId, out HeroSaveData hsd)
-    {
-        hsd = uHeroDB.allHeroList.Find(h => h.heroId == heroId);
-        return hsd != null;
-    }
-
-    public void LoadHeroDB()
-    {
-        if (PlayerPrefs.HasKey(HERO_DB_KEY))
+        public List<Hero> GetAllHeroes()
         {
-            uHeroDB = JsonUtility.FromJson<UserHeroDB>(PlayerPrefs.GetString(HERO_DB_KEY));
+            return heroDB.allHeroes;
         }
-        else
+
+        public List<Hero> GetReadyHeroes()
         {
-            uHeroDB = new UserHeroDB();
+            var readyHeroList = new List<Hero>();
+            heroDB.readyHeroes.ForEach(x =>
+            {
+                readyHeroList.Add(heroDB.allHeroes.Find(y => y.heroId == x));
+            });
+
+            return readyHeroList;
+        }
+
+        public void AddHeroToLineUp(int slotId, string heroId)
+        {
+            int oldSlotId = heroDB.readyHeroes.IndexOf(heroId);
+            string oldHeroId = heroDB.readyHeroes[slotId];
+            if (oldSlotId >= 0)
+            {
+                heroDB.readyHeroes[oldSlotId] = oldHeroId;
+            }
+            
+            heroDB.readyHeroes[slotId] = heroId;
             SaveCharacterDB();
+            
+            this.PostEvent(EventID.ON_LINEUP_CHANGED);
+        }
+
+        public void RemoveHeroFromLineUp(int slotId)
+        {
+            heroDB.readyHeroes[slotId] = "";
+            SaveCharacterDB();
+            
+            this.PostEvent(EventID.ON_LINEUP_CHANGED);
+        }
+
+        public bool IsHeroReady(string heroId)
+        {
+            return heroDB.readyHeroes.Contains(heroId);
+        }
+
+        public bool IsHeroUnlocked(string heroId, out Hero hsd)
+        {
+            hsd = heroDB.allHeroes.Find(h => h.heroId == heroId);
+            return hsd != null;
+        }
+
+        public void LoadHeroDB()
+        {
+            if (PlayerPrefs.HasKey(HERO_DB_KEY))
+            {
+                heroDB = JsonUtility.FromJson<HeroDatabase>(PlayerPrefs.GetString(HERO_DB_KEY));
+            }
+            else
+            {
+                heroDB = new HeroDatabase();
+                SaveCharacterDB();
+            }
+        }
+
+        [Button]
+        public void SaveCharacterDB()
+        {
+            PlayerPrefs.SetString(HERO_DB_KEY, JsonUtility.ToJson(heroDB));
+        }
+
+        [Button]
+        public void DeleteUserDB()
+        {
+            PlayerPrefs.DeleteKey(HERO_DB_KEY);
         }
     }
 
-    [Button]
-    public void SaveCharacterDB()
+    [Serializable]
+    public class HeroDatabase
     {
-        PlayerPrefs.SetString(HERO_DB_KEY, JsonUtility.ToJson(uHeroDB));
+        public List<Hero> allHeroes = new();
+        public List<string> readyHeroes = new();
     }
 
-    [Button]
-    public void DeleteUserDB()
+    [Serializable]
+    public class Hero
     {
-        PlayerPrefs.DeleteKey(HERO_DB_KEY);
+        public string heroId;
+        public int totalExp;
+        public float curHp;
+        public float energy;
+        public List<Equipment> eqmList;
     }
-}
 
-[Serializable]
-public class UserHeroDB
-{
-    public List<HeroSaveData> allHeroList = new();
-    public List<string> readyHeroList = new();
-}
-
-[Serializable]
-public class HeroSaveData
-{
-    public string heroId;
-    public int totalExp;
-    public float curHp;
-    public float energy;
-    public List<EquipmentSaveData> eqmList;
-}
-
-[Serializable]
-public class EquipmentSaveData
-{
-    public string eqmId;
-    public int level;
+    [Serializable]
+    public class Equipment
+    {
+        public string eqmId;
+        public int level;
+    }
 }

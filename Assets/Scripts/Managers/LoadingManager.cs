@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using System.DB;
 using System.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.OdinInspector;
@@ -88,7 +88,7 @@ public class LoadingManager : Singleton<LoadingManager>
     }
 }
 
-public class SceneName
+public static class SceneName
 {
     public const string HOME_SCENE = "HomeScene";
     public const string BATTLE_SCENE = "BattleScene";

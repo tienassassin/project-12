@@ -1,23 +1,21 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.DB;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HeroAvatar : DuztineBehaviour
 {
-   [SerializeField] private Image avatarImg;
-   [SerializeField] private Image hpImg;
-   [SerializeField] private Image energyImg;
+   [SerializeField] private Image imgAvatar;
+   [SerializeField] private Image imgHp;
+   [SerializeField] private Image imgEnergy;
 
-   private HeroSaveData saveData;
-   private BaseHero baseHero;
+   private Player.DB.Hero _saveData;
+   private System.DB.Hero _baseData;
    
-   public void Init(HeroSaveData data)
+   public void Init(Player.DB.Hero data)
    {
-      saveData = data;
-      baseHero = saveData?.GetHeroWithID();
-      name = (baseHero != null ? baseHero.name : Constants.EMPTY_MARK);
+      _saveData = data;
+      _baseData = _saveData?.GetHeroWithID();
+      name = (_baseData != null ? _baseData.Name : Constants.EMPTY_MARK);
 
       Refresh();
    }
@@ -26,13 +24,13 @@ public class HeroAvatar : DuztineBehaviour
    {
       if (name == Constants.EMPTY_MARK)
       {
-         hpImg.fillAmount = 0;
-         energyImg.fillAmount = 0;
+         imgHp.fillAmount = 0;
+         imgEnergy.fillAmount = 0;
          return;
       }
 
-      hpImg.fillAmount = (saveData.curHp / baseHero.stats.health) / 2;
-      energyImg.fillAmount = (saveData.energy / 100) / 2;
+      imgHp.fillAmount = (_saveData.curHp / _baseData.Stats.health) / 2;
+      imgEnergy.fillAmount = (_saveData.energy / 100) / 2;
    }
 
    public void OnClickAvatar()

@@ -1,21 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DuztineBehaviour : MonoBehaviour
 {
-    private Transform cachedTransform;
+    private Transform _cachedTransform;
 
     public Transform Transform
     {
         get
         {
-            if (!cachedTransform)
+            if (!_cachedTransform)
             {
-                cachedTransform = this.transform;
+                _cachedTransform = this.transform;
             }
 
-            return cachedTransform;
+            return _cachedTransform;
         }   
     }
 }

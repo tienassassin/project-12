@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RaceFilterOption : FilterOption
@@ -8,6 +6,6 @@ public class RaceFilterOption : FilterOption
 
     public override void OnSelect()
     {
-        OnApplyFilter?.Invoke(race);
+        FilterApplied?.Invoke(race);
     }
 }

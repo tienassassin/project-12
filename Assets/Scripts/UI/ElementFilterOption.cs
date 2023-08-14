@@ -6,6 +6,6 @@ public class ElementFilterOption : FilterOption
 
     public override void OnSelect()
     {
-        OnApplyFilter?.Invoke(element);
+        FilterApplied?.Invoke(element);
     }
 }

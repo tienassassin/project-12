@@ -1,5 +1,6 @@
-using System;
 using System.Collections.Generic;
+using System.DB;
+using Player.DB;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,9 +10,9 @@ public class LineUpDetail : DuztineBehaviour
     [SerializeField] private GameObject info;
     [SerializeField] private GameObject equipmentGroup;
     
-    [SerializeField] private TMP_Text nameTxt;
-    [SerializeField] private Image raceImg;
-    [SerializeField] private Image elementImg;
+    [SerializeField] private TMP_Text txtName;
+    [SerializeField] private Image imgRace;
+    [SerializeField] private Image imgElement;
 
     [SerializeField] private Transform heroCardContainer;
     [SerializeField] private LineUpHeroCard heroCardPref;
@@ -20,15 +21,15 @@ public class LineUpDetail : DuztineBehaviour
 
     [SerializeField] private FilterOption[] raceFilterOptions;
 
-    private int curSlotId;
-    private HeroSaveData saveData;
-    private BaseHero baseHero;
-    private List<HeroSaveData> heroSaveDataList = new();
+    private int _curSlotId;
+    private Player.DB.Hero _saveData;
+    private System.DB.Hero _baseData;
+    private List<Player.DB.Hero> _heroSaveDataList = new();
     
-    private List<LineUpHeroCard> heroCardList = new();
-    private List<EquipmentCard> eqmCardList = new();
+    private List<LineUpHeroCard> _heroCards = new();
+    private List<EquipmentCard> _equipmentCards = new();
 
-    private List<Race> raceOptList = new();
+    private readonly List<Race> _raceOpts = new();
 
     private void Awake()
     {
@@ -37,29 +38,29 @@ public class LineUpDetail : DuztineBehaviour
             opt.SetEvent(AddOptionToFilter);
         }
         
-        heroCardList = new List<LineUpHeroCard>();
+        _heroCards = new List<LineUpHeroCard>();
         foreach (Transform child in heroCardContainer)
         {
-            heroCardList.Add(child.gameObject.GetComponent<LineUpHeroCard>());
+            _heroCards.Add(child.gameObject.GetComponent<LineUpHeroCard>());
         }
     }
 
     private void OnEnable()
     {
-        raceOptList.Clear();
+        _raceOpts.Clear();
         
-        heroSaveDataList = UserManager.Instance.GetAllHeroes();
+        _heroSaveDataList = UserManager.Instance.GetAllHeroes();
         
         LoadHeroCards();
     }
 
-    public void Init(int slotId, HeroSaveData data)
+    public void Init(int slotId, Player.DB.Hero data)
     {
-        curSlotId = slotId;
-        saveData = data;
-        baseHero = saveData?.GetHeroWithID();
-        info.SetActive(saveData != null);
-        equipmentGroup.SetActive(saveData != null);
+        _curSlotId = slotId;
+        _saveData = data;
+        _baseData = _saveData?.GetHeroWithID();
+        info.SetActive(_saveData != null);
+        equipmentGroup.SetActive(_saveData != null);
         
         Refresh();
     }
@@ -68,16 +69,16 @@ public class LineUpDetail : DuztineBehaviour
 
     private void LoadHeroCards()
     {
-        while (heroCardContainer.childCount < heroSaveDataList.Count)
+        while (heroCardContainer.childCount < _heroSaveDataList.Count)
         {
             var o = Instantiate(heroCardPref, heroCardContainer);
-            heroCardList.Add(o);
+            _heroCards.Add(o);
         }
         
-        for (int i = 0; i < heroCardList.Count; i++)
+        for (int i = 0; i < _heroCards.Count; i++)
         {
-            var card = heroCardList[i];
-            if (i >= heroSaveDataList.Count)
+            var card = _heroCards[i];
+            if (i >= _heroSaveDataList.Count)
             {
                 card.gameObject.SetActive(false);
                 card.name = Constants.EMPTY_MARK;
@@ -85,17 +86,17 @@ public class LineUpDetail : DuztineBehaviour
             }
 
             card.gameObject.SetActive(true);
-            card.Init(heroSaveDataList[i], (data)=>
+            card.Init(_heroSaveDataList[i], (data)=>
                 {
-                    if (data != saveData)
+                    if (data != _saveData)
                     {
                         AddHeroToLineUp(data.heroId);
-                        Init(curSlotId, data);
+                        Init(_curSlotId, data);
                     }
                     else
                     {
                         RemoveHeroFromLineUp();
-                        Init(curSlotId, null);
+                        Init(_curSlotId, null);
                     }
                     
                     UpdateHeroCards();
@@ -108,7 +109,7 @@ public class LineUpDetail : DuztineBehaviour
 
     private void UpdateHeroCards()
     {
-        heroCardList.ForEach(x =>
+        _heroCards.ForEach(x =>
         {
             x.UpdateReadyState();
         });
@@ -116,22 +117,22 @@ public class LineUpDetail : DuztineBehaviour
 
     private void ApplyHeroCardFilter()
     {
-        bool acpAllRace = raceOptList.Count < 1;
+        bool acpAllRace = _raceOpts.Count < 1;
         
-        heroCardList.ForEach(c =>
+        _heroCards.ForEach(c =>
         {
             if (c.name == Constants.EMPTY_MARK) return;
 
-            bool match = (raceOptList.Contains(c.Race) || acpAllRace);
+            bool match = (_raceOpts.Contains(c.Race) || acpAllRace);
             c.gameObject.SetActive(match);
         });
     }
     
     private void SortHeroCards()
     {
-        heroCardList.Sort((c1, c2) => CompareLevel(c1, c2, false));
+        _heroCards.Sort((c1, c2) => CompareLevel(c1, c2, false));
         
-        heroCardList.ForEach(c =>
+        _heroCards.ForEach(c =>
         {
             c.transform.SetAsLastSibling();
         });
@@ -159,30 +160,30 @@ public class LineUpDetail : DuztineBehaviour
 
     private void Refresh()
     {
-        if (saveData == null) return;
+        if (_saveData == null) return;
 
-        nameTxt.text = baseHero.name;
+        txtName.text = _baseData.Name;
     }
 
     private void AddHeroToLineUp(string heroId)
     {
-        UserManager.Instance.AddHeroToLineUp(curSlotId, heroId);
+        UserManager.Instance.AddHeroToLineUp(_curSlotId, heroId);
     }
 
     private void RemoveHeroFromLineUp()
     {
-        UserManager.Instance.RemoveHeroFromLineUp(curSlotId);
+        UserManager.Instance.RemoveHeroFromLineUp(_curSlotId);
     }
     
     private void AddOptionToFilter(object o)
     {
         switch (o)
         {
-            case Race r when raceOptList.Contains(r):
-                raceOptList.Remove(r);
+            case Race r when _raceOpts.Contains(r):
+                _raceOpts.Remove(r);
                 break;
             case Race r:
-                raceOptList.Add(r);
+                _raceOpts.Add(r);
                 break;
             default:
                 EditorLog.Error($"Object {o} is not a valid filter option");

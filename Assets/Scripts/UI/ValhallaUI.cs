@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Sirenix.OdinInspector;
+using System.DB;
+using Player.DB;
 using UnityEngine;
 
 public class ValhallaUI : BaseUI
@@ -16,16 +14,16 @@ public class ValhallaUI : BaseUI
 
     [SerializeField] private HeroDetail heroDetail;
     
-    private List<Tier> tierOptList = new();
-    private List<Element> elementOptList = new();
-    private List<Race> raceOptList = new();
-    private SortType lvSort;
-    private SortType tierSort;
+    private readonly List<Tier> _tierOpts = new();
+    private readonly List<Element> _elementOpts = new();
+    private readonly List<Race> _raceOpts = new();
+    private SortType _lvSort;
+    private SortType _tierSort;
 
-    private List<HeroCard> cardList = new();
-    private List<HeroCard> activeCardList = new();
-    private HeroCard selectedCard;
-    private List<BaseHero> heroList = new();
+    private List<HeroCard> _cards = new();
+    private readonly List<HeroCard> _activeCards = new();
+    private HeroCard _selectedCard;
+    private List<System.DB.Hero> _heroes = new();
     
     public static void Show()
     {
@@ -56,10 +54,10 @@ public class ValhallaUI : BaseUI
             opt.SetEvent(AddOptionToFilter);
         }
 
-        cardList = new List<HeroCard>();
+        _cards = new List<HeroCard>();
         foreach (Transform child in heroCardContainer)
         {
-            cardList.Add(child.gameObject.GetComponent<HeroCard>());
+            _cards.Add(child.gameObject.GetComponent<HeroCard>());
         }
         
         heroDetail.gameObject.SetActive(false);
@@ -67,14 +65,14 @@ public class ValhallaUI : BaseUI
 
     private void OnEnable()
     {
-        tierOptList.Clear();
-        elementOptList.Clear();
-        raceOptList.Clear();
+        _tierOpts.Clear();
+        _elementOpts.Clear();
+        _raceOpts.Clear();
 
-        lvSort = SortType.Descending;
-        tierSort = SortType.None;
+        _lvSort = SortType.Descending;
+        _tierSort = SortType.None;
 
-        heroList = Database.Instance.GetAllBaseHeroes();
+        _heroes = Database.Instance.GetAllHeroes();
         
         LoadHeroCards();
         Refresh();
@@ -82,16 +80,16 @@ public class ValhallaUI : BaseUI
 
     private void LoadHeroCards()
     {
-        while (heroCardContainer.childCount < heroList.Count)
+        while (heroCardContainer.childCount < _heroes.Count)
         {
             var o = Instantiate(heroCardPref, heroCardContainer);
-            cardList.Add(o);
+            _cards.Add(o);
         }
 
-        for (int i = 0; i < cardList.Count; i++)
+        for (int i = 0; i < _cards.Count; i++)
         {
-            var card = cardList[i];
-            if (i >= heroList.Count)
+            var card = _cards[i];
+            if (i >= _heroes.Count)
             {
                 card.gameObject.SetActive(false);
                 card.name = Constants.EMPTY_MARK;
@@ -99,19 +97,19 @@ public class ValhallaUI : BaseUI
             }
 
             card.gameObject.SetActive(true);
-            if (UserManager.Instance.IsHeroUnlocked(heroList[i].id, out var hsd))
+            if (UserManager.Instance.IsHeroUnlocked(_heroes[i].Id, out var hsd))
             {
                 // unlocked hero
                 card.Init(hsd, (saveData) =>
                     {
                         ShowCardDetail(saveData);
-                        selectedCard = card;
+                        _selectedCard = card;
                     });
             }
             else
             {
                 // locked hero
-                card.Init(heroList[i]);
+                card.Init(_heroes[i]);
             }
             
         }
@@ -119,39 +117,39 @@ public class ValhallaUI : BaseUI
 
     private void Refresh()
     {
-        bool acpAllTier = tierOptList.Count < 1;
-        bool acpAllElement = elementOptList.Count < 1;
-        bool acpAllRace = raceOptList.Count < 1;
+        bool acpAllTier = _tierOpts.Count < 1;
+        bool acpAllElement = _elementOpts.Count < 1;
+        bool acpAllRace = _raceOpts.Count < 1;
 
-        if (lvSort != SortType.None)
+        if (_lvSort != SortType.None)
         {
-            cardList.Sort((c1, c2) =>
+            _cards.Sort((c1, c2) =>
             
-                CompareLevel(c1, c2, lvSort != SortType.Descending)
+                CompareLevel(c1, c2, _lvSort != SortType.Descending)
             );
         }
-        else if (tierSort != SortType.None)
+        else if (_tierSort != SortType.None)
         {
-            cardList.Sort((c1, c2) =>
+            _cards.Sort((c1, c2) =>
 
-                CompareTier(c1, c2, tierSort != SortType.Descending)
+                CompareTier(c1, c2, _tierSort != SortType.Descending)
             );
         }
         
-        activeCardList.Clear();
+        _activeCards.Clear();
         
-        cardList.ForEach(c =>
+        _cards.ForEach(c =>
         {
             c.transform.SetAsLastSibling();
             if (c.name == Constants.EMPTY_MARK) return;
             
-            bool match = (tierOptList.Contains(c.Tier) || acpAllTier)
-                && (elementOptList.Contains(c.Element) || acpAllElement)
-                && (raceOptList.Contains(c.Race) || acpAllRace);
+            bool match = (_tierOpts.Contains(c.Tier) || acpAllTier)
+                && (_elementOpts.Contains(c.Element) || acpAllElement)
+                && (_raceOpts.Contains(c.Race) || acpAllRace);
 
             c.gameObject.SetActive(match);
 
-            if (match) activeCardList.Add(c);
+            if (match) _activeCards.Add(c);
         });
 
         int CompareLevel(HeroCard c1, HeroCard c2, bool ascending)
@@ -181,7 +179,7 @@ public class ValhallaUI : BaseUI
         }
     }
 
-    private void ShowCardDetail(HeroSaveData saveData)
+    private void ShowCardDetail(Player.DB.Hero saveData)
     {
         heroDetail.gameObject.SetActive(true);
         heroDetail.Init(saveData);
@@ -190,48 +188,48 @@ public class ValhallaUI : BaseUI
     public void HideCardDetail()
     {
         heroDetail.gameObject.SetActive(false);
-        selectedCard = null;
+        _selectedCard = null;
     }
 
     public void SelectNextCard()
     {
-        if (!selectedCard || activeCardList.Count < 2) return;
+        if (!_selectedCard || _activeCards.Count < 2) return;
         
-        int nextIndex = activeCardList.IndexOf(selectedCard) + 1;
-        if (nextIndex >= activeCardList.Count) nextIndex = 0;
-        activeCardList[nextIndex].OnClickCard();
+        int nextIndex = _activeCards.IndexOf(_selectedCard) + 1;
+        if (nextIndex >= _activeCards.Count) nextIndex = 0;
+        _activeCards[nextIndex].SelectCard();
     }
 
     public void SelectPreviousCard()
     {
-        if (!selectedCard || activeCardList.Count < 2) return;
+        if (!_selectedCard || _activeCards.Count < 2) return;
         
-        int nextIndex = activeCardList.IndexOf(selectedCard) - 1;
-        if (nextIndex < 0) nextIndex = activeCardList.Count - 1;
-        activeCardList[nextIndex].OnClickCard();
+        int nextIndex = _activeCards.IndexOf(_selectedCard) - 1;
+        if (nextIndex < 0) nextIndex = _activeCards.Count - 1;
+        _activeCards[nextIndex].SelectCard();
     }
 
     private void AddOptionToFilter(object o)
     {
         switch (o)
         {
-            case Tier t when tierOptList.Contains(t):
-                tierOptList.Remove(t);
+            case Tier t when _tierOpts.Contains(t):
+                _tierOpts.Remove(t);
                 break;
             case Tier t:
-                tierOptList.Add(t);
+                _tierOpts.Add(t);
                 break;
-            case Element e when elementOptList.Contains(e):
-                elementOptList.Remove(e);
+            case Element e when _elementOpts.Contains(e):
+                _elementOpts.Remove(e);
                 break;
             case Element e:
-                elementOptList.Add(e);
+                _elementOpts.Add(e);
                 break;
-            case Race r when raceOptList.Contains(r):
-                raceOptList.Remove(r);
+            case Race r when _raceOpts.Contains(r):
+                _raceOpts.Remove(r);
                 break;
             case Race r:
-                raceOptList.Add(r);
+                _raceOpts.Add(r);
                 break;
             default:
                 EditorLog.Error($"Object {o} is not a valid filter option");
@@ -243,15 +241,15 @@ public class ValhallaUI : BaseUI
 
     public void SortByLevel(bool asc)
     {
-        lvSort = (asc ? SortType.Ascending : SortType.Descending);
-        tierSort = SortType.None;
+        _lvSort = (asc ? SortType.Ascending : SortType.Descending);
+        _tierSort = SortType.None;
         Refresh();
     }
 
     public void SortByTier(bool asc)
     {
-        lvSort = SortType.None;
-        tierSort = (asc ? SortType.Ascending : SortType.Descending);
+        _lvSort = SortType.None;
+        _tierSort = (asc ? SortType.Ascending : SortType.Descending);
         Refresh();
     }
 

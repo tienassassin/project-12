@@ -1,15 +1,13 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class FilterOption : MonoBehaviour
 {
-    protected Action<object> OnApplyFilter;
+    protected Action<object> FilterApplied;
 
-    public void SetEvent(Action<object> cb)
+    public void SetEvent(Action<object> filterApplied)
     {
-        OnApplyFilter = cb;
+        FilterApplied = filterApplied;
     }
     
     public abstract void OnSelect();

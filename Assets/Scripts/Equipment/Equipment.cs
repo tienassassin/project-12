@@ -1,29 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.DB;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Equipment : DuztineBehaviour
 {
     [TitleGroup("BASE DATA")]
-    protected BaseEquipment baseEqm;
-    protected int level = 0;
+    protected System.DB.Equipment SystemData;
+    protected int Level = 0;
 
     public void Init(string eqmId, int lv)
     {
-        baseEqm = Database.Instance.GetEquipmentWithID(eqmId);
-        level = lv;
+        SystemData = Database.Instance.GetEquipmentWithID(eqmId);
+        Level = lv;
     }
 
     public Stats GetStats(Race ownerRace)
     {
-        var stats = baseEqm.stats * (baseEqm.race != ownerRace ? 1 : baseEqm.raceBonus);
-        stats *= Mathf.Pow(baseEqm.GetEquipmentGrowth(), level);
-        return stats;
+        // todo: review later
+        // var stats = baseEqm.stats * (baseEqm.race != ownerRace ? 1 : baseEqm.raceBonus);
+        // stats *= Mathf.Pow(baseEqm.GetEquipmentGrowth(), level);
+        // return stats;
+        return default;
     }
 
     public Stats GetEnhancement(Race ownerRace)
     {
-        return GetStats(ownerRace) - baseEqm.stats;
+        // todo: review later
+        // return GetStats(ownerRace) - baseEqm.stats;
+        return default;
     }
 }

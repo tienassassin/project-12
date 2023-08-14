@@ -6,31 +6,31 @@ public class HeroInBattle : Hero, IAttacker, IDefender
 {
     [TitleGroup("IN-GAME STATS")]
     [SerializeField] protected Stats stats;
-    [SerializeField] protected float virtualHP;
+    [SerializeField] protected float virtualHp;
     [SerializeField] protected float agility;
     [SerializeField] protected float rage;
     
     [TitleGroup("DEBUFF STATUS")]
-    [SerializeField] protected bool hasStun;
-    [SerializeField] protected bool hasSilent;
-    [SerializeField] protected bool hasBleeding;
+    [ShowInInspector] protected bool IsStun;
+    [ShowInInspector] protected bool IsSilent;
+    [ShowInInspector] protected bool IsBleeding;
 
-    [SerializeField] private bool isUltimateReady = false;
+    [ShowInInspector] private bool _isUltimateReady;
     
     #region Public properties
 
-    public DamageType DmgType => baseHero.damageType;
-    public bool IsAlive => curHP > 0;
-    public bool CanTakeTurn => !hasStun;
-    public bool CanUseSkill => !hasSilent;
-    public bool HasHeal => !hasBleeding;
+    public DamageType DamageType => BaseData.DamageType;
+    public bool IsAlive => Hp > 0;
+    public bool CanTakeTurn => !IsStun;
+    public bool CanUseSkill => !IsSilent;
+    public bool CanHeal => !IsBleeding;
     
     public bool IsUltimateReady
     {
-        get => isUltimateReady;
+        get => _isUltimateReady;
         protected set
         {
-            isUltimateReady = value;
+            _isUltimateReady = value;
             if (value)
             {
                 // todo: enable ultimate skill
@@ -46,26 +46,26 @@ public class HeroInBattle : Hero, IAttacker, IDefender
 
     #region Callbacks
     
-    public Action<float,float,float> OnUpdateHp;
-    public Action<float> OnUpdateAnger;
+    public Action<float,float,float> hpUpdated;
+    public Action<float> angerUpdated;
     
     #endregion
 
-    public override void Init(HeroSaveData saveData)
+    public override void Init(Player.DB.Hero saveData)
     {
         base.Init(saveData);
         
         //todo: add equipment stats to overall stats
 
-        stats = baseHero.stats;
+        stats = BaseData.Stats;
          
-        virtualHP = 0;
+        virtualHp = 0;
         agility = 0;
         rage = 0;
 
-        hasStun = false;
-        hasSilent = false;
-        hasBleeding = false;
+        IsStun = false;
+        IsSilent = false;
+        IsBleeding = false;
     }
 
     private void Start()
@@ -78,8 +78,8 @@ public class HeroInBattle : Hero, IAttacker, IDefender
     
     protected bool HasFullEnergy()
     {
-        if (energy < 100) return false;
-        energy -= 100;
+        if (Energy < 100) return false;
+        Energy -= 100;
         return true;
     }
     
@@ -96,12 +96,12 @@ public class HeroInBattle : Hero, IAttacker, IDefender
 
     protected void UpdateHp()
     {
-        OnUpdateHp?.Invoke(curHP, virtualHP, stats.health);
+        hpUpdated?.Invoke(Hp, virtualHp, stats.health);
     }
 
     protected void UpdateAnger()
     {
-        OnUpdateAnger?.Invoke(rage);
+        angerUpdated?.Invoke(rage);
     }
 
     #endregion
@@ -112,16 +112,16 @@ public class HeroInBattle : Hero, IAttacker, IDefender
 
     public virtual void TakeDamage(float dmgAmount, DamageType dmgType, float penetration) { }
 
-    public void RegenHP(float hpAmount, bool allowOverflow = false)
+    public void RegenHp(float hpAmount, bool allowOverflow = false)
     {
-        float expectedHP = curHP + hpAmount;
-        if (expectedHP > stats.health && allowOverflow)
+        float expectedHp = Hp + hpAmount;
+        if (expectedHp > stats.health && allowOverflow)
         {
-            float overflowAmount = expectedHP - stats.health;
-            virtualHP += overflowAmount;
+            float overflowAmount = expectedHp - stats.health;
+            virtualHp += overflowAmount;
         }
 
-        curHP = Mathf.Min(expectedHP, stats.health);
+        Hp = Mathf.Min(expectedHp, stats.health);
     }
 
     protected virtual void Die()

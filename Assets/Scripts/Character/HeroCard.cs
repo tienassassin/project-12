@@ -1,50 +1,50 @@
 using System;
+using System.DB;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HeroCard : Hero
 {
-    public bool IsLocked => isLocked;
-    
-    [SerializeField] private Image elementImg;
-    [SerializeField] private TMP_Text levelTxt;
-    [SerializeField] private Slider hpSlider;
-    [SerializeField] private Slider energySlider;
+    public bool IsLocked { get; private set; }
+
+    [SerializeField] private Image imgElement;
+    [SerializeField] private TMP_Text txtLevel;
+    [SerializeField] private Slider sldHp;
+    [SerializeField] private Slider sldEnergy;
     [SerializeField] private GameObject lockedMark;
 
-    private Action<HeroSaveData> onShowCardDetail = null;
-    private bool isLocked;
+    private Action<Player.DB.Hero> _cardSelected;
 
-    public void Init(HeroSaveData data, Action<HeroSaveData> onShow)
+    public void Init(Player.DB.Hero saveData, Action<Player.DB.Hero> cardSelected)
     {
-        base.Init(data);
+        base.Init(saveData);
 
-        isLocked = false;
-        onShowCardDetail = onShow;
+        IsLocked = false;
+        _cardSelected = cardSelected;
         Refresh();
     }
 
-    public void Init(BaseHero data)
+    public void Init(System.DB.Hero baseData)
     {
-        baseHero = data;
-        name = baseHero.name + " (locked)";
-        isLocked = true;
-        onShowCardDetail = null;
+        BaseData = baseData;
+        name = BaseData.Name + " (locked)";
+        IsLocked = true;
+        _cardSelected = null;
         Refresh();
     }
 
     private void Refresh()
     {
-        lockedMark.SetActive(isLocked);
-        elementImg.color = ColorPalette.Instance.GetElementColor(baseHero.element);
-        levelTxt.text = isLocked ? "1" : level.ToString();
-        hpSlider.value = isLocked ? 1 : (curHP / baseHero.stats.health);
-        energySlider.value = isLocked ? 1:  (energy / 100);
+        lockedMark.SetActive(IsLocked);
+        imgElement.color = ColorPalette.Instance.GetElementColor(BaseData.Element);
+        txtLevel.text = IsLocked ? "1" : Level.ToString();
+        sldHp.value = IsLocked ? 1 : (Hp / BaseData.Stats.health);
+        sldEnergy.value = IsLocked ? 1:  (Energy / 100);
     }
 
-    public void OnClickCard()
+    public void SelectCard()
     {
-        onShowCardDetail?.Invoke(saveData);
+        _cardSelected?.Invoke(SaveData);
     }
 }

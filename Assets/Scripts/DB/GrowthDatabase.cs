@@ -1,78 +1,93 @@
-using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GrowthDatabase", menuName = "Database/Growth")]
-public class GrowthDatabase : ScriptableDatabase
+namespace System.DB
 {
-    [TableList]
-    public List<EntityGrowth> entityGrowthList = new();
-
-    [TableList]
-    public List<EquipmentGrowth> eqmGrowthList = new();
-
-    public override void Import(params string[] data)
+    [CreateAssetMenu(fileName = "GrowthDatabase", menuName = "Database/Growth")]
+    internal class GrowthDatabase : ScriptableDatabase
     {
-        entityGrowthList = new List<EntityGrowth>();
-        eqmGrowthList = new List<EquipmentGrowth>();
+        [TableList]
+        private List<EntityGrowth> _entityGrowths = new();
 
-        var jArrayChar = JArray.Parse(data[0]);
-        foreach (var jToken in jArrayChar)
+        [TableList]
+        private List<EquipmentGrowth> _equipmentGrowths = new();
+
+        internal override void Import(params string[] data)
         {
-            ConvertDataFromJObject((JObject)jToken, out EntityGrowth h);
-            entityGrowthList.Add(h);
+            _entityGrowths = new List<EntityGrowth>();
+            _equipmentGrowths = new List<EquipmentGrowth>();
+
+            var jArrayChar = JArray.Parse(data[0]);
+            foreach (var jToken in jArrayChar)
+            {
+                ConvertDataFromJObject((JObject)jToken, out EntityGrowth h);
+                _entityGrowths.Add(h);
+            }
+
+            var jArrayEqm = JArray.Parse(data[1]);
+            foreach (var jToken in jArrayEqm)
+            {
+                ConvertDataFromJObject((JObject)jToken, out EquipmentGrowth e);
+                _equipmentGrowths.Add(e);
+            }
         }
-        
-        var jArrayEqm = JArray.Parse(data[1]);
-        foreach (var jToken in jArrayEqm)
+
+        [Button]
+        internal override void DeleteAll()
         {
-            ConvertDataFromJObject((JObject)jToken, out EquipmentGrowth e);
-            eqmGrowthList.Add(e);
+            _entityGrowths.Clear();
+            _equipmentGrowths.Clear();
+        }
+
+        internal float GetGrowth(object obj)
+        {
+            switch (obj)
+            {
+                case Tier t:
+                    return _entityGrowths.Find(x => x.Tier == t).Growth;
+                case Rarity r:
+                    return _equipmentGrowths.Find(x => x.Rarity == r).Growth;
+                default:
+                    return 0;
+            }
+        }
+
+        private void ConvertDataFromJObject(JObject jObject, out EntityGrowth g)
+        {
+            Enum.TryParse((string)jObject["tier"], out Tier tier);
+
+            g = new EntityGrowth
+            {
+                Tier = tier,
+                Growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
+            };
+        }
+
+        private void ConvertDataFromJObject(JObject jObject, out EquipmentGrowth g)
+        {
+            Enum.TryParse((string)jObject["rarity"], out Rarity rarity);
+
+            g = new EquipmentGrowth
+            {
+                Rarity = rarity,
+                Growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
+            };
         }
     }
 
-    [Button]
-    protected override void DeleteAll()
+    [Serializable]
+    public struct EntityGrowth
     {
-        entityGrowthList.Clear();
-        eqmGrowthList.Clear();
+        public Tier Tier;
+        public float Growth;
     }
 
-    private void ConvertDataFromJObject(JObject jObject, out EntityGrowth e)
+    [Serializable]
+    public struct EquipmentGrowth
     {
-        Enum.TryParse((string)jObject["tier"], out Tier tier);
-        
-        e = new EntityGrowth
-        {
-            tier = tier,
-            growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
-        };
+        public Rarity Rarity;
+        public float Growth;
     }
-    
-    private void ConvertDataFromJObject(JObject jObject, out EquipmentGrowth e)
-    {
-        Enum.TryParse((string)jObject["rarity"], out Rarity rarity);
-        
-        e = new EquipmentGrowth
-        {
-            rarity = rarity,
-            growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
-        };
-    }
-}
-
-[Serializable]
-public struct EntityGrowth
-{
-    public Tier tier;
-    public float growth;
-}
-
-[Serializable]
-public struct EquipmentGrowth
-{
-    public Rarity rarity;
-    public float growth;
 }

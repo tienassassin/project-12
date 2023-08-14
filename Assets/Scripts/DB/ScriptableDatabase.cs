@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public abstract class ScriptableDatabase : ScriptableObject
+namespace System.DB
 {
-    public abstract void Import(params string[] data);
-    protected abstract void DeleteAll();
+    internal abstract class ScriptableDatabase : ScriptableObject
+    {
+        internal abstract void Import(params string[] data);
+        internal abstract void DeleteAll();
+    }
 }

@@ -6,6 +6,6 @@ public class TierFilterOption : FilterOption
 
     public override void OnSelect()
     {
-        OnApplyFilter?.Invoke(tier);
+        FilterApplied?.Invoke(tier);
     }
 }

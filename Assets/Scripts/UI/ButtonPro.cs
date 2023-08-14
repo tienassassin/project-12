@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -12,43 +10,45 @@ using UnityEditor;
 
 public class ButtonPro : Button
 {
+    // hold handler
     public bool allowHold = true;
     public float holdTime = 1;
-    public UnityEvent onHold = new ();
-    private Coroutine coroutine;
+    public UnityEvent holdEvent = new ();
+    private Coroutine _coroutine;
     
-    public bool allowDoubleClick = false;
+    // double click handler
+    public bool allowDoubleClick;
     public float doubleClickInterval = 0.2f;
-    public UnityEvent onDoubleClick = new();
-    private float lastTimeClick;
-    private bool firstClick;
+    public UnityEvent doubleClickEvent = new();
+    private float _lastTimeClick;
+    private bool _firstClick;
 
     public override void OnPointerDown(PointerEventData eventData)
     {
         base.OnPointerDown(eventData);
-        coroutine = StartCoroutine(InvokeHoldEvent());
+        _coroutine = StartCoroutine(InvokeHoldEvent());
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
         base.OnPointerUp(eventData);
-        if (coroutine != null) StopCoroutine(coroutine);
+        if (_coroutine != null) StopCoroutine(_coroutine);
 
-        if (!firstClick)
+        if (!_firstClick)
         {
-            firstClick = true;
-            lastTimeClick = Time.unscaledTime;
+            _firstClick = true;
+            _lastTimeClick = Time.unscaledTime;
         }
         else
         {
-            if (Time.unscaledTime - lastTimeClick <= doubleClickInterval)
+            if (Time.unscaledTime - _lastTimeClick <= doubleClickInterval)
             {
-                onDoubleClick?.Invoke();
-                firstClick = false;
+                doubleClickEvent?.Invoke();
+                _firstClick = false;
             }
             else
             {
-                lastTimeClick = Time.unscaledTime;
+                _lastTimeClick = Time.unscaledTime;
             }
         }
     }
@@ -56,7 +56,7 @@ public class ButtonPro : Button
     IEnumerator InvokeHoldEvent()
     {
         yield return new WaitForSeconds(holdTime);
-        onHold?.Invoke();
+        holdEvent?.Invoke();
     }
 }
 
@@ -64,24 +64,24 @@ public class ButtonPro : Button
 [CustomEditor(typeof(ButtonPro))]
 public class ButtonProEditor : UnityEditor.UI.ButtonEditor
 {
-    private SerializedProperty allowHold;
-    private SerializedProperty holdTime;
-    private SerializedProperty onHold;
+    private SerializedProperty _allowHold;
+    private SerializedProperty _holdTime;
+    private SerializedProperty _onHold;
 
-    private SerializedProperty allowDoubleClick;
-    private SerializedProperty doubleClickInterval;
-    private SerializedProperty onDoubleClick;
+    private SerializedProperty _allowDoubleClick;
+    private SerializedProperty _doubleClickInterval;
+    private SerializedProperty _onDoubleClick;
 
     protected override void OnEnable()
     {
         base.OnEnable();
         
-        allowHold = serializedObject.FindProperty("allowHold");
-        holdTime = serializedObject.FindProperty("holdTime");
-        onHold = serializedObject.FindProperty("onHold");
-        allowDoubleClick = serializedObject.FindProperty("allowDoubleClick");
-        doubleClickInterval = serializedObject.FindProperty("doubleClickInterval");
-        onDoubleClick = serializedObject.FindProperty("onDoubleClick");
+        _allowHold = serializedObject.FindProperty("allowHold");
+        _holdTime = serializedObject.FindProperty("holdTime");
+        _onHold = serializedObject.FindProperty("onHold");
+        _allowDoubleClick = serializedObject.FindProperty("allowDoubleClick");
+        _doubleClickInterval = serializedObject.FindProperty("doubleClickInterval");
+        _onDoubleClick = serializedObject.FindProperty("onDoubleClick");
     }
 
     public override void OnInspectorGUI()
@@ -93,19 +93,19 @@ public class ButtonProEditor : UnityEditor.UI.ButtonEditor
 
         EditorGUILayout.LabelField("[ CUSTOMIZED BUTTON PROPERTIES ]", EditorStyles.boldLabel);
         EditorGUILayout.LabelField("> Hold Event:");
-        EditorGUILayout.PropertyField(allowHold);
+        EditorGUILayout.PropertyField(_allowHold);
         if (component.allowHold)
         {
-            EditorGUILayout.PropertyField(holdTime, new GUIContent("Hold Time (sec)"));
-            EditorGUILayout.PropertyField(onHold);
+            EditorGUILayout.PropertyField(_holdTime, new GUIContent("Hold Time (sec)"));
+            EditorGUILayout.PropertyField(_onHold);
         }
 
         EditorGUILayout.LabelField("> Double Click Event:");
-        EditorGUILayout.PropertyField(allowDoubleClick);
+        EditorGUILayout.PropertyField(_allowDoubleClick);
         if (component.allowDoubleClick)
         {
-            EditorGUILayout.PropertyField(doubleClickInterval, new GUIContent("Double Click Interval (sec)"));
-            EditorGUILayout.PropertyField(onDoubleClick);
+            EditorGUILayout.PropertyField(_doubleClickInterval, new GUIContent("Double Click Interval (sec)"));
+            EditorGUILayout.PropertyField(_onDoubleClick);
         }
         
         serializedObject.ApplyModifiedProperties();

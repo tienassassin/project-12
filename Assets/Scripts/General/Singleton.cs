@@ -2,40 +2,40 @@ using UnityEngine;
 
 public class Singleton<T> : DuztineBehaviour where T : DuztineBehaviour
 {
-    [SerializeField] private bool dontDestroyOnLoad = false;
+    [SerializeField] private bool dontDestroyOnLoad;
     
-    private static T instance;
+    private static T _instance;
 
     public static T Instance
     {
         get
         {
-            if (instance == null)
+            if (_instance == null)
             {
-                instance = FindObjectOfType<T>();
+                _instance = FindObjectOfType<T>();
 
-                if (instance == null)
+                if (_instance == null)
                 {
                     GameObject singletonObject = new GameObject();
-                    instance = singletonObject.AddComponent<T>();
-                    singletonObject.name = typeof(T).ToString() + " (Singleton)";
+                    _instance = singletonObject.AddComponent<T>();
+                    singletonObject.name = typeof(T) + " (Singleton)";
 
                     DontDestroyOnLoad(singletonObject);
                 }
             }
 
-            return instance;
+            return _instance;
         }
     }
 
     protected virtual void Awake()
     {
-        if (instance == null)
+        if (_instance == null)
         {
-            instance = this as T;
+            _instance = this as T;
             if (dontDestroyOnLoad) DontDestroyOnLoad(gameObject);
         }
-        else if (instance != this)
+        else if (_instance != this)
         {
             Destroy(gameObject);
         }

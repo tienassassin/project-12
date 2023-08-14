@@ -1,80 +1,78 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
-using Sirenix.Utilities;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ExpDatabase",menuName = "Database/Exp")]
-public class ExpDatabase : ScriptableDatabase
+namespace System.DB
 {
-    public int levelMax;
-    
-    [TableList]
-    public List<ExpData> expList = new();
-
-    public override void Import(params string[] data)
+    [CreateAssetMenu(fileName = "ExpDatabase", menuName = "Database/Exp")]
+    internal class ExpDatabase : ScriptableDatabase
     {
-        int totalExp = 0;
-        int lastLevelExp = 0;
-        expList = new List<ExpData>();
-        var jArray = JArray.Parse(data[0]);
-        levelMax = jArray.Count;
-        for (int i=0; i<levelMax; i++)
+        internal int LevelMax;
+        [TableList] private List<ExpData> _expList = new();
+
+        internal override void Import(params string[] data)
         {
-            var jObject = (JObject)jArray[i];
-            int exp = Utils.Parse<int>((string)jObject["exp"]);
-            if (i > 0) totalExp += lastLevelExp;
-            lastLevelExp = exp;
-            expList.Add(new ExpData(i + 1, exp, totalExp));
-        }
-    }
-
-    [Button]
-    protected override void DeleteAll()
-    {
-        expList.Clear();
-    }
-
-    public int GetLevel(int totalExp)
-    {
-        for (int i = expList.Count - 1; i >= 0; i--)
-        {
-            if (totalExp >= expList[i].totalExp)
+            int totalExp = 0;
+            int lastLevelExp = 0;
+            _expList = new List<ExpData>();
+            var jArray = JArray.Parse(data[0]);
+            LevelMax = jArray.Count;
+            for (int i = 0; i < LevelMax; i++)
             {
-                return expList[i].level;
+                var jObject = (JObject)jArray[i];
+                int exp = Utils.Parse<int>((string)jObject["exp"]);
+                if (i > 0) totalExp += lastLevelExp;
+                lastLevelExp = exp;
+                _expList.Add(new ExpData(i + 1, exp, totalExp));
             }
         }
 
-        return 1;
-    }
-
-    public Tuple<int, int> GetExp(int totalExp)
-    {
-        for (int i = expList.Count - 1; i >= 0; i--)
+        [Button]
+        internal override void DeleteAll()
         {
-            if (totalExp >= expList[i].totalExp)
-            {
-                return Tuple.Create(totalExp - expList[i].totalExp, expList[i].exp);
-            }
+            _expList.Clear();
         }
 
-        return Tuple.Create(0, expList[0].exp);
+        public int GetLevel(int totalExp)
+        {
+            for (int i = _expList.Count - 1; i >= 0; i--)
+            {
+                if (totalExp >= _expList[i].TotalExp)
+                {
+                    return _expList[i].Level;
+                }
+            }
+
+            return 1;
+        }
+
+        public Tuple<int, int> GetExp(int totalExp)
+        {
+            for (int i = _expList.Count - 1; i >= 0; i--)
+            {
+                if (totalExp >= _expList[i].TotalExp)
+                {
+                    return Tuple.Create(totalExp - _expList[i].TotalExp, _expList[i].Exp);
+                }
+            }
+
+            return Tuple.Create(0, _expList[0].Exp);
+        }
     }
-}
 
-[Serializable]
-public struct ExpData
-{
-    public int level;
-    public int exp;
-    public int totalExp;
-
-    public ExpData(int level, int exp, int totalExp)
+    [Serializable]
+    public struct ExpData
     {
-        this.level = level;
-        this.exp = exp;
-        this.totalExp = totalExp;
+        public int Level;
+        public int Exp;
+        public int TotalExp;
+
+        public ExpData(int level, int exp, int totalExp)
+        {
+            Level = level;
+            Exp = exp;
+            TotalExp = totalExp;
+        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using Player.DB;
 using TMPro;
 using UnityEngine;
 
@@ -10,8 +9,8 @@ public class HomeUI : BaseUI
 
     [SerializeField] private HeroAvatar[] avatars;
 
-    private float curTime = 0;
-    private int frameCount = 0;
+    private float _curTime;
+    private int _frameCount;
     
     public static void Show()
     {
@@ -56,14 +55,14 @@ public class HomeUI : BaseUI
 
     private void Update()
     {
-        curTime += Time.deltaTime;
-        frameCount++;
-        if (curTime >= logInterval)
+        _curTime += Time.deltaTime;
+        _frameCount++;
+        if (_curTime >= logInterval)
         {
-            int fps = Mathf.RoundToInt(frameCount / curTime);
+            int fps = Mathf.RoundToInt(_frameCount / _curTime);
             fpsTxt.text = "FPS: " + fps;
-            curTime -= logInterval;
-            frameCount = 0;
+            _curTime -= logInterval;
+            _frameCount = 0;
         }
     }
 
