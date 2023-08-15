@@ -837,9 +837,9 @@ MonoBehaviour:
   slotId: 0
   hero: {fileID: 3639156835525821519}
   heroInfo: {fileID: 4521744735499807242}
-  levelTxt: {fileID: 4107604071279091113}
-  hpSlider: {fileID: 1360250184335933979}
-  energySlider: {fileID: 788693684297626909}
+  txtLevel: {fileID: 4107604071279091113}
+  sldHp: {fileID: 1360250184335933979}
+  sldEnergy: {fileID: 788693684297626909}
   highlight: {fileID: 7185659101381322747}
 --- !u!1 &4521744735499807242
 GameObject:
@@ -1015,12 +1015,12 @@ MonoBehaviour:
         m_CallState: 2
   allowHold: 0
   holdTime: 1
-  onHold:
+  holdEvent:
     m_PersistentCalls:
       m_Calls: []
   allowDoubleClick: 0
   doubleClickInterval: 0.2
-  onDoubleClick:
+  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &4944799487297389195

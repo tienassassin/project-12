@@ -951,12 +951,12 @@ MonoBehaviour:
         m_CallState: 2
   allowHold: 0
   holdTime: 1
-  onHold:
+  holdEvent:
     m_PersistentCalls:
       m_Calls: []
   allowDoubleClick: 0
   doubleClickInterval: 0.2
-  onDoubleClick:
+  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &8322629482599311193
@@ -971,10 +971,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7faf3f52b956b4c9150f31bba5936d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementImg: {fileID: 9128412574609511419}
-  levelTxt: {fileID: 6900994244964659300}
-  hpSlider: {fileID: 8273433102112914531}
-  energySlider: {fileID: 5505678699177967261}
+  imgElement: {fileID: 9128412574609511419}
+  txtLevel: {fileID: 6900994244964659300}
+  sldHp: {fileID: 8273433102112914531}
+  sldEnergy: {fileID: 5505678699177967261}
   readyMark: {fileID: 382579053390457990}
 --- !u!1 &6933896910652712118
 GameObject:

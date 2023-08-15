@@ -851,7 +851,7 @@ MonoBehaviour:
   maxRank: 0
   detailPanel: {fileID: 2533452702448177863}
   delayShowPanel: 0.1
-  rankTexts:
+  txtRanks:
   - {fileID: 7925543072813056357}
   - {fileID: 5065016917216479924}
   - {fileID: 3735667702202110812}
@@ -862,8 +862,8 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   fontSize0: 32
   fontSize1: 56
-  titleTxt: {fileID: 1664323854590451676}
-  contentTxt: {fileID: 8817894478795397806}
+  txtTitle: {fileID: 1664323854590451676}
+  txtContent: {fileID: 8817894478795397806}
 --- !u!1 &6112913599849118575
 GameObject:
   m_ObjectHideFlags: 0

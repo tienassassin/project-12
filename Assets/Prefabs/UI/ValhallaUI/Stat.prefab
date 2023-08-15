@@ -93,12 +93,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 
-  titleTxt: {fileID: 3509812037143766552}
-  descriptionTxt: {fileID: 779086647684115314}
-  statValueTxt: {fileID: 701515716466826117}
-  statDetailValueTxt: {fileID: 7379556012771411}
-  diff0Color: {r: 0.2612291, g: 0.8113208, b: 0.24110004, a: 1}
-  diff1Color: {r: 1, g: 0.24056602, b: 0.24056602, a: 1}
+  txtTitle: {fileID: 3509812037143766552}
+  txtDescription: {fileID: 779086647684115314}
+  txtStatValue: {fileID: 701515716466826117}
+  txtStatDetailValue: {fileID: 7379556012771411}
+  colorDiff0: {r: 0.36774653, g: 0.6792453, b: 0.34282663, a: 1}
+  colorDiff1: {r: 0.8396226, g: 0.31943467, b: 0.2732734, a: 1}
   detailPanel: {fileID: 493826604792453435}
   delayShowPanel: 0.3
 --- !u!1 &493826604792453435

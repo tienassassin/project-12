@@ -443,9 +443,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07756487063a86d48ac2aae81407a0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarImg: {fileID: 5748458314796066188}
-  hpImg: {fileID: 8694523751067701673}
-  energyImg: {fileID: 1016761726955582638}
+  imgAvatar: {fileID: 5748458314796066188}
+  imgHp: {fileID: 8694523751067701673}
+  imgEnergy: {fileID: 1016761726955582638}
 --- !u!1 &7812187499320170697
 GameObject:
   m_ObjectHideFlags: 0

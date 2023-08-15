@@ -13,13 +13,13 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private int maxRank;
     [SerializeField] private GameObject detailPanel;
     [SerializeField] private float delayShowPanel = 0.3f;
-    [SerializeField] private TMP_Text[] rankTexts;
+    [SerializeField] private TMP_Text[] txtRanks;
     [SerializeField] private Color color0;
     [SerializeField] private Color[] color1;
     [SerializeField] private float fontSize0;
     [SerializeField] private float fontSize1;
-    [SerializeField] private TMP_Text titleTxt;
-    [SerializeField] private TMP_Text contentTxt;
+    [SerializeField] private TMP_Text txtTitle;
+    [SerializeField] private TMP_Text txtContent;
     
     private Coroutine _coroutine;
     private string _hexColor0;
@@ -35,7 +35,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     public void Init(Race race, int rank)
     {
         _auraType = race;
-        titleTxt.text = $"<color={ColorPalette.Instance.GetRaceColorHex(race)}>" +
+        txtTitle.text = $"<color={ColorPalette.Instance.GetRaceColorHex(race)}>" +
                         $"<ico>" +
                         $"{race} Aura</color>";
         var auraList = Database.Instance.GetAuras(race);
@@ -46,7 +46,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     public void Init(Element element, int rank)
     {
         _auraType = element;
-        titleTxt.text = $"<color={ColorPalette.Instance.GetElementColorHex(element)}>" +
+        txtTitle.text = $"<color={ColorPalette.Instance.GetElementColorHex(element)}>" +
                         $"<size=50><sprite name=element-{element}></size> " +
                         $"{element} Aura</color>";
         var auraList = Database.Instance.GetAuras(element);
@@ -60,10 +60,10 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         rank = Mathf.Clamp(rank, minRank, maxRank);
         int rankIndex = rank - minRank;
         
-        for (int i = 0; i < rankTexts.Length; i++)
+        for (int i = 0; i < txtRanks.Length; i++)
         {
-            rankTexts[i].fontSize = (i != rankIndex) ? fontSize0 : fontSize1;
-            rankTexts[i].color = (i != rankIndex) ? color0 : color1[maxRank - rank];
+            txtRanks[i].fontSize = (i != rankIndex) ? fontSize0 : fontSize1;
+            txtRanks[i].color = (i != rankIndex) ? color0 : color1[maxRank - rank];
         }
     }
 
@@ -93,7 +93,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
             index++;
         });
 
-        contentTxt.text = content;
+        txtContent.text = content;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

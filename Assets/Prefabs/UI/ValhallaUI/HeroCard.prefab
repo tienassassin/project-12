@@ -1077,10 +1077,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01778f5a38f781499bf961b0e3a2d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementImg: {fileID: 5757610557985217560}
-  levelTxt: {fileID: 2136282847673532233}
-  hpSlider: {fileID: 3719891603078281657}
-  energySlider: {fileID: 5915206739366467257}
+  imgElement: {fileID: 5757610557985217560}
+  txtLevel: {fileID: 2136282847673532233}
+  sldHp: {fileID: 3719891603078281657}
+  sldEnergy: {fileID: 5915206739366467257}
   lockedMark: {fileID: 8848110715982790057}
 --- !u!114 &4432756764372830267
 MonoBehaviour:
@@ -1140,12 +1140,12 @@ MonoBehaviour:
         m_CallState: 2
   allowHold: 0
   holdTime: 1
-  onHold:
+  holdEvent:
     m_PersistentCalls:
       m_Calls: []
   allowDoubleClick: 0
   doubleClickInterval: 0.2
-  onDoubleClick:
+  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8848110715982790057
