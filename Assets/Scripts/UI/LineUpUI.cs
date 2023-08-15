@@ -34,7 +34,7 @@ public class LineUpUI : BaseUI
 
     private void RefreshMainView()
     {
-        var readyHeroList = UserManager.Instance.GetReadyHeroes();
+        var readyHeroList = PlayerManager.Instance.GetReadyHeroes();
         for (int i = 0; i < readyHeroList.Count; i++)
         {
             slots[i].Init(readyHeroList[i], (slotId, saveData) =>

@@ -11,7 +11,7 @@ public static class EditorLog
     [System.Diagnostics.Conditional("UNITY_EDITOR")]
     public static void Error(string msg)
     {
-        Debug.Log(msg);
+        Debug.LogError(msg);
     }
 
     [System.Diagnostics.Conditional("UNITY_EDITOR")]

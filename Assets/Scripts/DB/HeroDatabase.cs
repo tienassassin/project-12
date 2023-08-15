@@ -7,10 +7,11 @@ using UnityEngine;
 namespace System.DB
 {
     [CreateAssetMenu(fileName = "HeroDatabase", menuName = "Database/Hero")]
-    internal class HeroDatabase : ScriptableDatabase
+    public class HeroDatabase : ScriptableDatabase
     {
-        [TableList]
+        [TableList,ShowInInspector]
         private List<Hero> _heroes = new();
+        
         private readonly Dictionary<string, Hero> _cachedDict = new();
 
         internal override void Import(params string[] data)
@@ -49,7 +50,7 @@ namespace System.DB
             Enum.TryParse((string)jObject["element"], out Element element);
             Enum.TryParse((string)jObject["race"], out Race race);
             Enum.TryParse((string)jObject["damage type"], out DamageType dmgType);
-            Enum.TryParse((string)jObject["range"], out Range range);
+            Enum.TryParse((string)jObject["attack range"], out AttackRange atkRange);
 
             h = new Hero
             {
@@ -59,7 +60,7 @@ namespace System.DB
                 Element = element,
                 Race = race,
                 DamageType = dmgType,
-                Range = range,
+                AttackRange = atkRange,
                 Stats = new Stats
                 {
                     showFull = true,
@@ -77,14 +78,14 @@ namespace System.DB
             };
         }
 
-        public Hero GetHeroWithID(string heroId)
+        internal Hero GetHeroWithID(string heroId)
         {
             _cachedDict.TryAdd(heroId, _heroes.Find(h => h.Id == heroId));
             if (_cachedDict[heroId] == null) EditorLog.Error($"Character {heroId} is not defined");
             return _cachedDict[heroId];
         }
 
-        public List<Hero> GetHeroesWithConditions(params object[] conditions)
+        internal List<Hero> GetHeroesWithConditions(params object[] conditions)
         {
             var matchHeroes = new List<Hero>();
 
@@ -132,26 +133,26 @@ namespace System.DB
     public class Hero
     {
         [VerticalGroup("Information")]
-        internal string Id;
+        public string Id;
 
         [VerticalGroup("Information")]
-        internal string Name;
+        public string Name;
 
         [VerticalGroup("Information")]
-        internal Tier Tier;
+        public Tier Tier;
 
         [VerticalGroup("Information")]
-        internal Element Element;
+        public Element Element;
 
         [VerticalGroup("Information")]
-        internal Race Race;
+        public Race Race;
 
         [VerticalGroup("Information")]
-        internal DamageType DamageType;
+        public DamageType DamageType;
 
         [VerticalGroup("Information")]
-        internal Range Range;
+        public AttackRange AttackRange;
 
-        internal Stats Stats;
+        public Stats Stats;
     }
 }

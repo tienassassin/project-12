@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -8,8 +10,8 @@ namespace System.DB
 {
     public class Database : Singleton<Database>
     {
-        public bool IsAllDBLoaded => _dbLoaded >= DB_COUNT;
-        
+        public bool AllDBLoaded { get; private set; }
+
         [HorizontalGroup("ApiGithub"), SerializeField, LabelWidth(125)] private string apiUrl = "https://opensheet.elk.sh/";
         [HorizontalGroup("GoogleSheet"), SerializeField, LabelWidth(125)] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
         
@@ -24,17 +26,14 @@ namespace System.DB
 
         private const string HERO_SHEET = "Heroes";
         private const string DEVIL_SHEET = "Devils";
-        private const string EQM_SHEET = "Equipments";
+        private const string EQUIPMENT_SHEET = "Equipments";
         private const string STATS_SHEET = "Stats";
         private const string ENTITY_GROWTH_SHEET = "EntityGrowth";
-        private const string EQM_GROWTH_SHEET = "EquipmentGrowth";
+        private const string EQUIPMENT_GROWTH_SHEET = "EquipmentGrowth";
         private const string EXP_SHEET = "Exp";
         private const string BACKSTORY_SHEET = "Backstory";
         private const string RACE_AURA_SHEET = "RaceAura";
         private const string ELEMENT_AURA_SHEET = "ElementAura";
-
-        private int _dbLoaded = 0;
-        private const int DB_COUNT = 10;
 
         protected override void Awake()
         {
@@ -55,186 +54,82 @@ namespace System.DB
         }
 
         [Button]
-        public void FetchData()
+        public async void FetchData()
         {
-            if (Application.internetReachability == NetworkReachability.NotReachable) return;
+            bool hasInternet = await TestConnection();
+            if (!hasInternet)
+            {
+                AllDBLoaded = true;
+                return;
+            }
             
-            StartCoroutine(FetchHeroDB());
-            StartCoroutine(FetchDevilDB());
-            StartCoroutine(FetchEquipmentDB());
-            StartCoroutine(FetchStatsDescriptions());
-            StartCoroutine(FetchGrowthDB());
-            StartCoroutine(FetchExpDB());
-            StartCoroutine(FetchBackstoryDB());
-            StartCoroutine(FetchAuraDB());
+            await FetchDataAsync(
+                new[] {
+                    HERO_SHEET,
+                    DEVIL_SHEET,
+                    EQUIPMENT_SHEET,
+                    STATS_SHEET,
+                    ENTITY_GROWTH_SHEET,
+                    EQUIPMENT_GROWTH_SHEET,
+                    EXP_SHEET,
+                    BACKSTORY_SHEET,
+                    RACE_AURA_SHEET,
+                    ELEMENT_AURA_SHEET,
+                }
+            , (results) =>
+            {
+                heroDB.Import(results[0]);
+                devilDB.Import(results[1]);
+                eqmDB.Import(results[2]);
+                statsDesc.Import(results[3]);
+                growthDB.Import(results[4], results[5]);
+                expDB.Import(results[6]);
+                bsDB.Import(results[7]);
+                auraDB.Import(results[8], results[9]);
+                
+                AllDBLoaded = true;
+            });
         }
 
+        
         #region Data fetching
-        
-        IEnumerator FetchHeroDB()
-        {
-            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{HERO_SHEET}");
-            yield return uwr.SendWebRequest();
-            if (uwr.result != UnityWebRequest.Result.Success)
-            {
-                EditorLog.Error(uwr.error);
-            }
-            else
-            {
-                heroDB.Import(uwr.downloadHandler.text);
-            }
 
-            _dbLoaded++;
+        private async UniTask<bool> TestConnection()
+        {
+            var request = UnityWebRequest.Get("https://www.google.com/");
+            var operation = await request.SendWebRequest();
+            return operation.result == UnityWebRequest.Result.Success;
         }
         
-        IEnumerator FetchDevilDB()
+        private async UniTask<string[]> FetchDataAsync(string[] sheets, Action<string[]> finish = null)
         {
-            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{DEVIL_SHEET}");
-            yield return uwr.SendWebRequest();
-            if (uwr.result != UnityWebRequest.Result.Success)
-            {
-                EditorLog.Error(uwr.error);
-            }
-            else
-            {
-                devilDB.Import(uwr.downloadHandler.text);
-            }
-            
-            _dbLoaded++;
-        }
-        
-        IEnumerator FetchEquipmentDB()
-        {
-            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EQM_SHEET}");
-            yield return uwr.SendWebRequest();
-            if (uwr.result != UnityWebRequest.Result.Success)
-            {
-                EditorLog.Error(uwr.error);
-            }
-            else
-            {
-                eqmDB.Import(uwr.downloadHandler.text);
-            }
-            
-            _dbLoaded++;
+            var tasks = sheets.Select(sheet => FetchDataAsync(sheet)).ToList();
+            var results = await UniTask.WhenAll(tasks);
+            finish?.Invoke(results);
+            return results;
         }
 
-        IEnumerator FetchStatsDescriptions()
+        private async UniTask<string> FetchDataAsync(string sheet, Action<string> finish = null)
         {
-            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{STATS_SHEET}");
-            yield return uwr.SendWebRequest();
-            if (uwr.result != UnityWebRequest.Result.Success)
+            string result = null;
+            var request = UnityWebRequest.Get($"{apiUrl}{databaseId}/{sheet}");
+            var operation = await request.SendWebRequest();
+            if (operation.result != UnityWebRequest.Result.Success)
             {
-                EditorLog.Error(uwr.error);
+                EditorLog.Error(operation.error);
             }
             else
             {
-                statsDesc.Import(uwr.downloadHandler.text);
+                result = operation.downloadHandler.text;
             }
-            
-            _dbLoaded++;
+
+            finish?.Invoke(result);
+            return result;
         }
 
-        IEnumerator FetchGrowthDB()
-        {
-            var cUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{ENTITY_GROWTH_SHEET}");
-            var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EQM_GROWTH_SHEET}");
-            var dataC = "";
-            yield return cUwr.SendWebRequest();
-            if (cUwr.result != UnityWebRequest.Result.Success)
-            {
-                EditorLog.Error(cUwr.error);
-            }
-            else
-            {
-                dataC = cUwr.downloadHandler.text;
-            }
-            
-            _dbLoaded++;
-            
-            var dataE = "";
-            yield return eUwr.SendWebRequest();
-            if (eUwr.result != UnityWebRequest.Result.Success)
-            {
-                EditorLog.Error(eUwr.error);
-            }
-            else
-            {
-                dataE = eUwr.downloadHandler.text;
-            }
-            
-            _dbLoaded++;
-
-            growthDB.Import(dataC, dataE);
-        }
-        
-        IEnumerator FetchExpDB()
-        {
-            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{EXP_SHEET}");
-            yield return uwr.SendWebRequest();
-            if (uwr.result != UnityWebRequest.Result.Success)
-            {
-                EditorLog.Error(uwr.error);
-            }
-            else
-            {
-                expDB.Import(uwr.downloadHandler.text);
-            }
-            
-            _dbLoaded++;
-        }
-        
-        IEnumerator FetchBackstoryDB()
-        {
-            var uwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{BACKSTORY_SHEET}");
-            yield return uwr.SendWebRequest();
-            if (uwr.result != UnityWebRequest.Result.Success)
-            {
-                EditorLog.Error(uwr.error);
-            }
-            else
-            {
-                bsDB.Import(uwr.downloadHandler.text);
-            }
-            
-            _dbLoaded++;
-        }
-        
-        IEnumerator FetchAuraDB()
-        {
-            var rUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{RACE_AURA_SHEET}");
-            var eUwr = UnityWebRequest.Get($"{apiUrl}{databaseId}/{ELEMENT_AURA_SHEET}");
-            var dataR = "";
-            yield return rUwr.SendWebRequest();
-            if (rUwr.result != UnityWebRequest.Result.Success)
-            {
-                EditorLog.Error(rUwr.error);
-            }
-            else
-            {
-                dataR = rUwr.downloadHandler.text;
-            }
-            
-            _dbLoaded++;
-            
-            var dataE = "";
-            yield return eUwr.SendWebRequest();
-            if (eUwr.result != UnityWebRequest.Result.Success)
-            {
-                EditorLog.Error(eUwr.error);
-            }
-            else
-            {
-                dataE = eUwr.downloadHandler.text;
-            }
-            
-            _dbLoaded++;
-
-            auraDB.Import(dataR, dataE);
-        }
-        
         #endregion
 
+        
         #region Characters & Equipments
 
         public List<Hero> GetAllHeroes()

@@ -33,7 +33,7 @@ public class LineUpHeroCard : Hero
     public void UpdateReadyState()
     {
         if (name == Constants.EMPTY_MARK) return;
-        bool ready = UserManager.Instance.IsHeroReady(SaveData.heroId);
+        bool ready = PlayerManager.Instance.IsHeroReady(SaveData.heroId);
         readyMark.SetActive(ready);
     }
 

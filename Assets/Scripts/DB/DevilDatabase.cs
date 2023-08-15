@@ -7,9 +7,11 @@ using UnityEngine;
 namespace System.DB
 {
     [CreateAssetMenu(fileName = "DevilDatabase",menuName = "Database/Devil")]
-    internal class DevilDatabase : ScriptableDatabase
+    public class DevilDatabase : ScriptableDatabase
     {
-        [TableList] private List<Devil> _devils = new();
+        [TableList, ShowInInspector] 
+        private List<Devil> _devils = new();
+        
         private readonly Dictionary<string, Devil> _cachedDict = new();
 
         internal override void Import(params string[] data)
@@ -43,7 +45,7 @@ namespace System.DB
             Enum.TryParse((string)jObject["element"], out Element element);
             Enum.TryParse((string)jObject["race"], out Race race);
             Enum.TryParse((string)jObject["damage type"], out DamageType dmgType);
-            Enum.TryParse((string)jObject["range"], out Range range);
+            Enum.TryParse((string)jObject["attack range"], out AttackRange atkRange);
             
             d = new Devil
             {
@@ -53,7 +55,7 @@ namespace System.DB
                 Element = element,
                 Race = race,
                 DamageType = dmgType,
-                Range = range,
+                AttackRange = atkRange,
                 Stats = new Stats
                 {
                     showFull = true,
@@ -71,14 +73,14 @@ namespace System.DB
             };
         }
 
-        public Devil GetDevilWithID(string devilId)
+        internal Devil GetDevilWithID(string devilId)
         {
             _cachedDict.TryAdd(devilId, _devils.Find(x => x.Id == devilId));
             if (_cachedDict[devilId] == null) EditorLog.Error($"Devil {devilId} is not defined");
             return _cachedDict[devilId];
         }
 
-        public List<Devil> GetDevilsWithConditions(params object[] conditions)
+        internal List<Devil> GetDevilsWithConditions(params object[] conditions)
         {
             var matchDevilsList = new List<Devil>();
             
@@ -144,7 +146,7 @@ namespace System.DB
         public DamageType DamageType;
         
         [VerticalGroup("Information")] 
-        public Range Range;
+        public AttackRange AttackRange;
         
         public Stats Stats;
     }

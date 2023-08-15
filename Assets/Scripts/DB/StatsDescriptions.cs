@@ -6,9 +6,11 @@ using UnityEngine;
 namespace System.DB
 {
     [CreateAssetMenu(fileName = "StatsDescriptions", menuName = "Description/Stats")]
-    internal class StatsDescriptions : ScriptableDatabase
+    public class StatsDescriptions : ScriptableDatabase
     {
-        [TableList] private List<StatDesc> _statDescriptions = new();
+        [TableList, ShowInInspector] 
+        private List<StatDesc> _statDescriptions = new();
+        
         private readonly Dictionary<string, StatDesc> _cachedDict = new();
 
         internal override void Import(params string[] data)
@@ -39,7 +41,7 @@ namespace System.DB
             };
         }
 
-        public StatDesc GetStatDescription(string stat)
+        internal StatDesc GetStatDescription(string stat)
         {
             _cachedDict.TryAdd(stat, _statDescriptions.Find(s => s.Stat == stat));
             if (_cachedDict[stat] == null) EditorLog.Error($"Stat {stat} is not defined");
@@ -58,7 +60,7 @@ namespace System.DB
         [TableColumnWidth(100, Resizable = false)]
         public string Name;
 
-        [TableColumnWidth(70, Resizable = false), ShowIf("@this.limit > 0")]
+        [TableColumnWidth(70, Resizable = false), ShowIf("@this.Limit > 0")]
         public float Limit;
 
         [TextArea(3, 10)]

@@ -34,7 +34,7 @@ public enum DamageType
     Pure,
 }
 
-public enum Range
+public enum AttackRange
 {
     Ranged,
     Melee,

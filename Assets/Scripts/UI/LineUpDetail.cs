@@ -49,7 +49,7 @@ public class LineUpDetail : DuztineBehaviour
     {
         _raceOpts.Clear();
         
-        _heroSaveDataList = UserManager.Instance.GetAllHeroes();
+        _heroSaveDataList = PlayerManager.Instance.GetAllHeroes();
         
         LoadHeroCards();
     }
@@ -167,12 +167,12 @@ public class LineUpDetail : DuztineBehaviour
 
     private void AddHeroToLineUp(string heroId)
     {
-        UserManager.Instance.AddHeroToLineUp(_curSlotId, heroId);
+        PlayerManager.Instance.AddHeroToLineUp(_curSlotId, heroId);
     }
 
     private void RemoveHeroFromLineUp()
     {
-        UserManager.Instance.RemoveHeroFromLineUp(_curSlotId);
+        PlayerManager.Instance.RemoveHeroFromLineUp(_curSlotId);
     }
     
     private void AddOptionToFilter(object o)

@@ -6,10 +6,12 @@ using UnityEngine;
 namespace System.DB
 {
     [CreateAssetMenu(fileName = "ExpDatabase", menuName = "Database/Exp")]
-    internal class ExpDatabase : ScriptableDatabase
+    public class ExpDatabase : ScriptableDatabase
     {
         internal int LevelMax;
-        [TableList] private List<ExpData> _expList = new();
+        
+        [TableList, ShowInInspector] 
+        private List<ExpData> _expList = new();
 
         internal override void Import(params string[] data)
         {
@@ -34,7 +36,7 @@ namespace System.DB
             _expList.Clear();
         }
 
-        public int GetLevel(int totalExp)
+        internal int GetLevel(int totalExp)
         {
             for (int i = _expList.Count - 1; i >= 0; i--)
             {
@@ -47,7 +49,7 @@ namespace System.DB
             return 1;
         }
 
-        public Tuple<int, int> GetExp(int totalExp)
+        internal Tuple<int, int> GetExp(int totalExp)
         {
             for (int i = _expList.Count - 1; i >= 0; i--)
             {

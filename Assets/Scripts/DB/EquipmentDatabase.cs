@@ -7,9 +7,11 @@ using UnityEngine;
 namespace System.DB
 {
     [CreateAssetMenu(fileName = "EquipmentDatabase", menuName = "Database/Equipments")]
-    internal class EquipmentDatabase : ScriptableDatabase
+    public class EquipmentDatabase : ScriptableDatabase
     {
-        [TableList] private List<Equipment> _equipments = new();
+        [TableList, ShowInInspector] 
+        private List<Equipment> _equipments = new();
+        
         private readonly Dictionary<string, Equipment> _cachedDict = new();
 
         internal override void Import(params string[] data)
@@ -69,7 +71,7 @@ namespace System.DB
             };
         }
 
-        public Equipment GetEquipmentWithID(string eqmId)
+        internal Equipment GetEquipmentWithID(string eqmId)
         {
             _cachedDict.TryAdd(eqmId, _equipments.Find(e => e.Id == eqmId));
             if (_cachedDict[eqmId] == null) EditorLog.Error($"Equipment {eqmId} is not defined");
@@ -86,7 +88,7 @@ namespace System.DB
         [VerticalGroup("Information")]
         public string Name;
 
-        [VerticalGroup("Information"), HideIf("@string.IsNullOrWhiteSpace(this.set)")]
+        [VerticalGroup("Information"), HideIf("@string.IsNullOrWhiteSpace(this.Set)")]
         public string Set;
 
         [VerticalGroup("Information")]

@@ -39,7 +39,7 @@ public class HomeUI : BaseUI
 
     private void RefreshHeroAvatars(object _ = null)
     {
-        var readyHeroList = UserManager.Instance.GetReadyHeroes().FindAll(x=>x != null);
+        var readyHeroList = PlayerManager.Instance.GetReadyHeroes().FindAll(x=>x != null);
         for (int i = 0; i < avatars.Length; i++)
         {
             if (i >= readyHeroList.Count)

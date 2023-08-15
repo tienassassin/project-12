@@ -6,9 +6,12 @@ using UnityEngine;
 namespace System.DB
 {
     [CreateAssetMenu(fileName = "AuraDatabase", menuName = "Database/Aura")]
-    internal class AuraDatabase : ScriptableDatabase
+    public class AuraDatabase : ScriptableDatabase
     {
+        [ShowInInspector] 
         private List<RaceAura> _raceAuras = new();
+        
+        [ShowInInspector] 
         private List<ElementAura> _elementAuras = new();
 
         internal override void Import(params string[] data)
@@ -51,6 +54,7 @@ namespace System.DB
             }
         }
 
+        [Button]
         internal override void DeleteAll()
         {
             _raceAuras.Clear();

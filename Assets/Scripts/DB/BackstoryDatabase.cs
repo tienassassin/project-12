@@ -6,9 +6,11 @@ using UnityEngine;
 namespace System.DB
 {
     [CreateAssetMenu(fileName = "BackstoryDatabase", menuName = "Database/Backstory")]
-    internal class BackstoryDatabase : ScriptableDatabase
+    public class BackstoryDatabase : ScriptableDatabase
     {
-        [TableList] private List<Backstory> _stories = new();
+        [TableList, ShowInInspector] 
+        private List<Backstory> _stories = new();
+        
         private readonly Dictionary<string, Backstory> _cachedDict = new();
 
         internal override void Import(params string[] data)
@@ -39,7 +41,7 @@ namespace System.DB
             };
         }
 
-        public Backstory GetBackstory(string charId)
+        internal Backstory GetBackstory(string charId)
         {
             _cachedDict.TryAdd(charId, _stories.Find(x => x.Id == charId));
             if (_cachedDict[charId] == null) EditorLog.Error($"Backstory of {charId} is not defined");

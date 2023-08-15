@@ -35,7 +35,7 @@ public class LoadingManager : Singleton<LoadingManager>
     {
         // await Task.Delay(TimeSpan.FromSeconds(1));
         
-        while (!Database.Instance.IsAllDBLoaded)
+        while (!Database.Instance.AllDBLoaded)
         {
             await Task.Yield();
         }

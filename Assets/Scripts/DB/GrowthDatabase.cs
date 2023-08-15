@@ -6,12 +6,12 @@ using UnityEngine;
 namespace System.DB
 {
     [CreateAssetMenu(fileName = "GrowthDatabase", menuName = "Database/Growth")]
-    internal class GrowthDatabase : ScriptableDatabase
+    public class GrowthDatabase : ScriptableDatabase
     {
-        [TableList]
+        [TableList, ShowInInspector]
         private List<EntityGrowth> _entityGrowths = new();
 
-        [TableList]
+        [TableList, ShowInInspector]
         private List<EquipmentGrowth> _equipmentGrowths = new();
 
         internal override void Import(params string[] data)

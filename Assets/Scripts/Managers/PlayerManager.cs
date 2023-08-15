@@ -5,10 +5,11 @@ using UnityEngine;
 
 namespace Player.DB
 {
-    public class UserManager : Singleton<UserManager>
+    public class PlayerManager : Singleton<PlayerManager>
     {
-        public HeroDatabase heroDB;
-
+        [SerializeField] private bool isDummy; 
+        
+        [ShowInInspector] private HeroDatabase heroDB;
         private const string HERO_DB_KEY = "HERO_DB";
 
         protected override void Awake()
@@ -16,7 +17,9 @@ namespace Player.DB
             base.Awake();
             
             Application.targetFrameRate = 144;
-            LoadHeroDB();
+            
+            if (!isDummy) LoadHeroDB();
+            else GenerateDummyData();
         }
 
         public List<Hero> GetAllHeroes()
@@ -80,6 +83,11 @@ namespace Player.DB
                 heroDB = new HeroDatabase();
                 SaveCharacterDB();
             }
+        }
+
+        private void GenerateDummyData()
+        {
+            
         }
 
         [Button]
