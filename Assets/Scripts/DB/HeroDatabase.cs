@@ -14,7 +14,7 @@ namespace System.DB
         
         private readonly Dictionary<string, Hero> _cachedDict = new();
 
-        internal override void Import(params string[] data)
+        public override void Import(params string[] data)
         {
             _heroes = new List<Hero>();
             var jArray = JArray.Parse(data[0]);
@@ -26,12 +26,12 @@ namespace System.DB
         }
 
         [Button]
-        internal override void DeleteAll()
+        public override void DeleteAll()
         {
             _heroes.Clear();
         }
 
-        internal List<Hero> GetHeroes()
+        public List<Hero> GetHeroes()
         {
             return _heroes;
         }
@@ -78,14 +78,14 @@ namespace System.DB
             };
         }
 
-        internal Hero GetHeroWithID(string heroId)
+        public Hero GetHeroWithID(string heroId)
         {
             _cachedDict.TryAdd(heroId, _heroes.Find(h => h.Id == heroId));
             if (_cachedDict[heroId] == null) EditorLog.Error($"Character {heroId} is not defined");
             return _cachedDict[heroId];
         }
 
-        internal List<Hero> GetHeroesWithConditions(params object[] conditions)
+        public List<Hero> GetHeroesWithConditions(params object[] conditions)
         {
             var matchHeroes = new List<Hero>();
 

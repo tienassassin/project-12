@@ -14,7 +14,7 @@ namespace System.DB
         [TableList, ShowInInspector]
         private List<EquipmentGrowth> _equipmentGrowths = new();
 
-        internal override void Import(params string[] data)
+        public override void Import(params string[] data)
         {
             _entityGrowths = new List<EntityGrowth>();
             _equipmentGrowths = new List<EquipmentGrowth>();
@@ -35,13 +35,13 @@ namespace System.DB
         }
 
         [Button]
-        internal override void DeleteAll()
+        public override void DeleteAll()
         {
             _entityGrowths.Clear();
             _equipmentGrowths.Clear();
         }
 
-        internal float GetGrowth(object obj)
+        public float GetGrowth(object obj)
         {
             switch (obj)
             {

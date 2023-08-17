@@ -14,7 +14,7 @@ namespace System.DB
         [ShowInInspector] 
         private List<ElementAura> _elementAuras = new();
 
-        internal override void Import(params string[] data)
+        public override void Import(params string[] data)
         {
             _raceAuras = new List<RaceAura>();
             _elementAuras = new List<ElementAura>();
@@ -55,13 +55,13 @@ namespace System.DB
         }
 
         [Button]
-        internal override void DeleteAll()
+        public override void DeleteAll()
         {
             _raceAuras.Clear();
             _elementAuras.Clear();
         }
 
-        internal List<Aura> GetAuras(object obj)
+        public List<Aura> GetAuras(object obj)
         {
             switch (obj)
             {

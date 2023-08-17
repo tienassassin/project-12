@@ -14,7 +14,7 @@ namespace System.DB
         
         private readonly Dictionary<string, Equipment> _cachedDict = new();
 
-        internal override void Import(params string[] data)
+        public override void Import(params string[] data)
         {
             _equipments = new List<Equipment>();
             var jArray = JArray.Parse(data[0]);
@@ -26,7 +26,7 @@ namespace System.DB
         }
 
         [Button]
-        internal override void DeleteAll()
+        public override void DeleteAll()
         {
             _equipments.Clear();
         }
@@ -71,7 +71,7 @@ namespace System.DB
             };
         }
 
-        internal Equipment GetEquipmentWithID(string eqmId)
+        public Equipment GetEquipmentWithID(string eqmId)
         {
             _cachedDict.TryAdd(eqmId, _equipments.Find(e => e.Id == eqmId));
             if (_cachedDict[eqmId] == null) EditorLog.Error($"Equipment {eqmId} is not defined");

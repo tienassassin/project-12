@@ -8,12 +8,12 @@ namespace System.DB
     [CreateAssetMenu(fileName = "ExpDatabase", menuName = "Database/Exp")]
     public class ExpDatabase : ScriptableDatabase
     {
-        internal int LevelMax;
+        public int LevelMax;
         
         [TableList, ShowInInspector] 
         private List<ExpData> _expList = new();
 
-        internal override void Import(params string[] data)
+        public override void Import(params string[] data)
         {
             int totalExp = 0;
             int lastLevelExp = 0;
@@ -31,12 +31,12 @@ namespace System.DB
         }
 
         [Button]
-        internal override void DeleteAll()
+        public override void DeleteAll()
         {
             _expList.Clear();
         }
 
-        internal int GetLevel(int totalExp)
+        public int GetLevel(int totalExp)
         {
             for (int i = _expList.Count - 1; i >= 0; i--)
             {
@@ -49,7 +49,7 @@ namespace System.DB
             return 1;
         }
 
-        internal Tuple<int, int> GetExp(int totalExp)
+        public Tuple<int, int> GetExp(int totalExp)
         {
             for (int i = _expList.Count - 1; i >= 0; i--)
             {

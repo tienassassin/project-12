@@ -13,7 +13,7 @@ namespace System.DB
         
         private readonly Dictionary<string, StatDesc> _cachedDict = new();
 
-        internal override void Import(params string[] data)
+        public override void Import(params string[] data)
         {
             _statDescriptions = new List<StatDesc>();
             var jArray = JArray.Parse(data[0]);
@@ -25,7 +25,7 @@ namespace System.DB
         }
 
         [Button]
-        internal override void DeleteAll()
+        public override void DeleteAll()
         {
             _statDescriptions.Clear();
         }
@@ -41,7 +41,7 @@ namespace System.DB
             };
         }
 
-        internal StatDesc GetStatDescription(string stat)
+        public StatDesc GetStatDescription(string stat)
         {
             _cachedDict.TryAdd(stat, _statDescriptions.Find(s => s.Stat == stat));
             if (_cachedDict[stat] == null) EditorLog.Error($"Stat {stat} is not defined");

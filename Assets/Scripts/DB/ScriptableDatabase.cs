@@ -4,7 +4,7 @@ namespace System.DB
 {
     public abstract class ScriptableDatabase : ScriptableObject
     {
-        internal abstract void Import(params string[] data);
-        internal abstract void DeleteAll();
+        public abstract void Import(params string[] data);
+        public abstract void DeleteAll();
     }
 }

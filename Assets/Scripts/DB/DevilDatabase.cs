@@ -14,7 +14,7 @@ namespace System.DB
         
         private readonly Dictionary<string, Devil> _cachedDict = new();
 
-        internal override void Import(params string[] data)
+        public override void Import(params string[] data)
         {
             _devils = new List<Devil>();
             var jArray = JArray.Parse(data[0]);
@@ -26,7 +26,7 @@ namespace System.DB
         }
         
         [Button]
-        internal override void DeleteAll()
+        public override void DeleteAll()
         {
             _devils.Clear();
         } 
@@ -73,14 +73,14 @@ namespace System.DB
             };
         }
 
-        internal Devil GetDevilWithID(string devilId)
+        public Devil GetDevilWithID(string devilId)
         {
             _cachedDict.TryAdd(devilId, _devils.Find(x => x.Id == devilId));
             if (_cachedDict[devilId] == null) EditorLog.Error($"Devil {devilId} is not defined");
             return _cachedDict[devilId];
         }
 
-        internal List<Devil> GetDevilsWithConditions(params object[] conditions)
+        public List<Devil> GetDevilsWithConditions(params object[] conditions)
         {
             var matchDevilsList = new List<Devil>();
             

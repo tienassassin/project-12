@@ -13,7 +13,7 @@ namespace System.DB
         
         private readonly Dictionary<string, Backstory> _cachedDict = new();
 
-        internal override void Import(params string[] data)
+        public override void Import(params string[] data)
         {
             _stories = new List<Backstory>();
             var jArray = JArray.Parse(data[0]);
@@ -25,7 +25,7 @@ namespace System.DB
         }
 
         [Button]
-        internal override void DeleteAll()
+        public override void DeleteAll()
         {
             _stories.Clear();
         }
@@ -41,7 +41,7 @@ namespace System.DB
             };
         }
 
-        internal Backstory GetBackstory(string charId)
+        public Backstory GetBackstory(string charId)
         {
             _cachedDict.TryAdd(charId, _stories.Find(x => x.Id == charId));
             if (_cachedDict[charId] == null) EditorLog.Error($"Backstory of {charId} is not defined");
