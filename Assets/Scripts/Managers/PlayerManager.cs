@@ -7,9 +7,9 @@ namespace DB.Player
 {
     public class PlayerManager : Singleton<PlayerManager>
     {
-        [SerializeField] private bool isDummy; 
+        [SerializeField] private bool isDummy;
+        [SerializeField] private HeroDatabase heroDB;
         
-        [ShowInInspector] private HeroDatabase heroDB;
         private const string HERO_DB_KEY = "HERO_DB";
 
         protected override void Awake()
@@ -106,17 +106,27 @@ namespace DB.Player
     [Serializable]
     public class HeroDatabase
     {
+        [TableList(ShowIndexLabels = true)]
         public List<Hero> allHeroes = new();
+        
         public List<string> readyHeroes = new();
     }
 
     [Serializable]
     public class Hero
     {
+        [VerticalGroup("Information")]
         public string heroId;
+        
+        [VerticalGroup("Information")]
         public int totalExp;
+        
+        [VerticalGroup("Information")]
         public float curHp;
+        
+        [VerticalGroup("Information")]
         public float energy;
+        
         public List<Equipment> eqmList;
     }
 

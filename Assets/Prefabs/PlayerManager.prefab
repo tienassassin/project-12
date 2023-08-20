@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3839167893766902956}
   - component: {fileID: 2381728525947736373}
   m_Layer: 0
-  m_Name: UserManager
+  m_Name: PlayerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,20 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
-  uHeroDB:
-    allHeroList:
-    - heroId: 03
-      totalExp: 9000
-      curHp: 20
-      energy: 40
-      eqmList: []
-    - heroId: 05
-      totalExp: 200
-      curHp: 90
-      energy: 75
-      eqmList: []
-    readyHeroList:
-    - 
-    - 03
-    - 
-    - 05
+  isDummy: 0
