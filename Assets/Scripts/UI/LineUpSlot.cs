@@ -36,7 +36,7 @@ public class LineUpSlot : DuztineBehaviour
         _baseData = _saveData?.GetHeroWithID();
         hero.SetActive(_saveData != null);
         heroInfo.SetActive(_saveData != null);
-        name = (_baseData != null ? _baseData.Name : Constants.EMPTY_MARK);
+        name = (_baseData != null ? _baseData.name : Constants.EMPTY_MARK);
 
         _slotHighlighted = slotHighlighted;
         Refresh();
@@ -47,7 +47,7 @@ public class LineUpSlot : DuztineBehaviour
         if (_saveData == null) return;
         
         txtLevel.text = _saveData.GetLevel().ToString();
-        sldHp.value = _saveData.curHp / _baseData.Stats.health;
+        sldHp.value = _saveData.curHp / _baseData.stats.health;
         sldEnergy.value = _saveData.energy / 100;
     }
 
@@ -60,10 +60,10 @@ public class LineUpSlot : DuztineBehaviour
             switch (condition)
             {
                 case Race r:
-                    active = (_baseData.Race == r);
+                    active = (_baseData.race == r);
                     break;
                 case Element e:
-                    active = (_baseData.Element == e);
+                    active = (_baseData.element == e);
                     break;
             }
         }

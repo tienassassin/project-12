@@ -47,9 +47,9 @@ namespace DB.System
             switch (obj)
             {
                 case Tier t:
-                    return entityGrowths.Find(x => x.Tier == t).Growth;
+                    return entityGrowths.Find(x => x.tier == t).growth;
                 case Rarity r:
-                    return equipmentGrowths.Find(x => x.Rarity == r).Growth;
+                    return equipmentGrowths.Find(x => x.rarity == r).growth;
                 default:
                     return 0;
             }
@@ -61,8 +61,8 @@ namespace DB.System
 
             g = new EntityGrowth
             {
-                Tier = tier,
-                Growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
+                tier = tier,
+                growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
             };
         }
 
@@ -72,8 +72,8 @@ namespace DB.System
 
             g = new EquipmentGrowth
             {
-                Rarity = rarity,
-                Growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
+                rarity = rarity,
+                growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
             };
         }
     }
@@ -81,14 +81,14 @@ namespace DB.System
     [Serializable]
     public struct EntityGrowth
     {
-        public Tier Tier;
-        public float Growth;
+        public Tier tier;
+        public float growth;
     }
 
     [Serializable]
     public struct EquipmentGrowth
     {
-        public Rarity Rarity;
-        public float Growth;
+        public Rarity rarity;
+        public float growth;
     }
 }

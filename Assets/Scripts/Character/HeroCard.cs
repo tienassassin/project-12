@@ -28,7 +28,7 @@ public class HeroCard : Hero
     public void Init(DB.System.Hero baseData)
     {
         BaseData = baseData;
-        name = BaseData.Name + " (locked)";
+        name = BaseData.name + " (locked)";
         IsLocked = true;
         _cardSelected = null;
         Refresh();
@@ -37,9 +37,9 @@ public class HeroCard : Hero
     private void Refresh()
     {
         lockedMark.SetActive(IsLocked);
-        imgElement.color = ColorPalette.Instance.GetElementColor(BaseData.Element);
+        imgElement.color = ColorPalette.Instance.GetElementColor(BaseData.element);
         txtLevel.text = IsLocked ? "1" : Level.ToString();
-        sldHp.value = IsLocked ? 1 : (Hp / BaseData.Stats.health);
+        sldHp.value = IsLocked ? 1 : (Hp / BaseData.stats.health);
         sldEnergy.value = IsLocked ? 1:  (Energy / 100);
     }
 

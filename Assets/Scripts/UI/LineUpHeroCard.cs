@@ -24,9 +24,9 @@ public class LineUpHeroCard : Hero
     
     private void Refresh()
     {
-        imgElement.color = ColorPalette.Instance.GetElementColor(BaseData.Element);
+        imgElement.color = ColorPalette.Instance.GetElementColor(BaseData.element);
         txtLevel.text = Level.ToString();
-        sldHp.value = Hp / BaseData.Stats.health;
+        sldHp.value = Hp / BaseData.stats.health;
         sldEnergy.value = Energy / 100;
     }
 

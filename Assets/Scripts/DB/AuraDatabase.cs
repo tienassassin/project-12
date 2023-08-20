@@ -22,14 +22,14 @@ namespace DB.System
             foreach (var jToken in jArrayRace)
             {
                 ConvertDataFromJObject((JObject)jToken, out Race r, out Aura a);
-                var matchRaceAura = raceAuras.Find(x => x.Race == r);
-                if (matchRaceAura != null) matchRaceAura.Auras.Add(a);
+                var matchRaceAura = raceAuras.Find(x => x.race == r);
+                if (matchRaceAura != null) matchRaceAura.auras.Add(a);
                 else
                 {
                     matchRaceAura = new RaceAura
                     {
-                        Race = r,
-                        Auras = new List<Aura> { a }
+                        race = r,
+                        auras = new List<Aura> { a }
                     };
                     raceAuras.Add(matchRaceAura);
                 }
@@ -39,14 +39,14 @@ namespace DB.System
             foreach (var jToken in jArrayElement)
             {
                 ConvertDataFromJObject((JObject)jToken, out Element e, out Aura a);
-                var matchElementAura = elementAuras.Find(x => x.Element == e);
-                if (matchElementAura != null) matchElementAura.Auras.Add(a);
+                var matchElementAura = elementAuras.Find(x => x.element == e);
+                if (matchElementAura != null) matchElementAura.auras.Add(a);
                 else
                 {
                     matchElementAura = new ElementAura
                     {
-                        Element = e,
-                        Auras = new List<Aura> { a },
+                        element = e,
+                        auras = new List<Aura> { a },
                     };
                     elementAuras.Add(matchElementAura);
                 }
@@ -65,9 +65,9 @@ namespace DB.System
             switch (obj)
             {
                 case Race r:
-                    return raceAuras.Find(x => x.Race == r).Auras;
+                    return raceAuras.Find(x => x.race == r).auras;
                 case Element e:
-                    return elementAuras.Find(x => x.Element == e).Auras;
+                    return elementAuras.Find(x => x.element == e).auras;
                 default:
                     return null;
             }
@@ -78,9 +78,9 @@ namespace DB.System
             Enum.TryParse((string)jObject["race"], out r);
             a = new Aura
             {
-                Rank = Utils.Parse<int>((string)jObject["rank"]),
-                Name = (string)jObject["name"],
-                Description = (string)jObject["description"],
+                rank = Utils.Parse<int>((string)jObject["rank"]),
+                name = (string)jObject["name"],
+                description = (string)jObject["description"],
             };
         }
         
@@ -89,9 +89,9 @@ namespace DB.System
             Enum.TryParse((string)jObject["element"], out e);
             a = new Aura
             {
-                Rank = Utils.Parse<int>((string)jObject["rank"]),
-                Name = (string)jObject["name"],
-                Description = (string)jObject["description"],
+                rank = Utils.Parse<int>((string)jObject["rank"]),
+                name = (string)jObject["name"],
+                description = (string)jObject["description"],
             };
         }
     }
@@ -99,23 +99,23 @@ namespace DB.System
     [Serializable]
     public class RaceAura
     {
-        [HideLabel] public Race Race;
-        public List<Aura> Auras;
+        [HideLabel] public Race race;
+        public List<Aura> auras;
     }
 
     [Serializable]
     public class ElementAura
     {
-        [HideLabel] public Element Element;
-        public List<Aura> Auras;
+        [HideLabel] public Element element;
+        public List<Aura> auras;
     }
 
     [Serializable]
     public struct Aura
     {
-        public int Rank;
-        public string Name;
+        public int rank;
+        public string name;
         [TextArea(5,10)]
-        public string Description;
+        public string description;
     }
 }

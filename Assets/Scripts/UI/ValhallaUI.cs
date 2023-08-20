@@ -97,7 +97,7 @@ public class ValhallaUI : BaseUI
             }
 
             card.gameObject.SetActive(true);
-            if (PlayerManager.Instance.IsHeroUnlocked(_heroes[i].Id, out var hsd))
+            if (PlayerManager.Instance.IsHeroUnlocked(_heroes[i].id, out var hsd))
             {
                 // unlocked hero
                 card.Init(hsd, (saveData) =>

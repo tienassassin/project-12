@@ -162,7 +162,7 @@ public class LineUpDetail : DuztineBehaviour
     {
         if (_saveData == null) return;
 
-        txtName.text = _baseData.Name;
+        txtName.text = _baseData.name;
     }
 
     private void AddHeroToLineUp(string heroId)

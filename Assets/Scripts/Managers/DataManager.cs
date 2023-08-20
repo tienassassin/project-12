@@ -129,17 +129,17 @@ namespace DB.System
         
         public string GetStatDescription(string key)
         {
-            return statDB.GetStatDescription(key).Description;
+            return statDB.GetStatDescription(key).description;
         }
         
         public string GetStatName(string key)
         {
-            return statDB.GetStatDescription(key).Name;
+            return statDB.GetStatDescription(key).name;
         }
         
         public float GetStatLimit(string key)
         {
-            return statDB.GetStatDescription(key).Limit;
+            return statDB.GetStatDescription(key).limit;
         }
         
         #endregion
@@ -148,12 +148,12 @@ namespace DB.System
         
         public string GetHeroAlias(string heroId)
         {
-            return storyDB.GetBackstory(heroId).Alias;
+            return storyDB.GetBackstory(heroId).alias;
         }
         
         public string GetHeroStory(string heroId)
         {
-            return storyDB.GetBackstory(heroId).Story;
+            return storyDB.GetBackstory(heroId).story;
         }
         
         #endregion
@@ -172,27 +172,27 @@ namespace DB.System
     {
         public static float GetHeroGrowth(this Hero h)
         {
-            return DataManager.Instance.GetGrowth(h.Tier);
+            return DataManager.Instance.GetGrowth(h.tier);
         }
 
         public static float GetDevilGrowth(this Devil d)
         {
-            return DataManager.Instance.GetGrowth(d.Tier);
+            return DataManager.Instance.GetGrowth(d.tier);
         }
 
         public static string GetHeroAlias(this Hero h)
         {
-            return DataManager.Instance.GetHeroAlias(h.Id);
+            return DataManager.Instance.GetHeroAlias(h.id);
         }
 
         public static string GetHeroStory(this Hero h)
         {
-            return DataManager.Instance.GetHeroStory(h.Id);
+            return DataManager.Instance.GetHeroStory(h.id);
         }
 
         public static float GetEquipmentGrowth(this Equipment e)
         {
-            return DataManager.Instance.GetGrowth(e.Rarity);
+            return DataManager.Instance.GetGrowth(e.rarity);
         }
 
         public static Hero GetHeroWithID(this DB.Player.Hero hsd)

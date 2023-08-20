@@ -15,7 +15,7 @@ public class HeroAvatar : DuztineBehaviour
    {
       _saveData = data;
       _baseData = _saveData?.GetHeroWithID();
-      name = (_baseData != null ? _baseData.Name : Constants.EMPTY_MARK);
+      name = (_baseData != null ? _baseData.name : Constants.EMPTY_MARK);
 
       Refresh();
    }
@@ -29,7 +29,7 @@ public class HeroAvatar : DuztineBehaviour
          return;
       }
 
-      imgHp.fillAmount = (_saveData.curHp / _baseData.Stats.health) / 2;
+      imgHp.fillAmount = (_saveData.curHp / _baseData.stats.health) / 2;
       imgEnergy.fillAmount = (_saveData.energy / 100) / 2;
    }
 

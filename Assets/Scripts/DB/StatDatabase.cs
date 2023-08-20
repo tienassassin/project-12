@@ -36,16 +36,16 @@ namespace DB.System
         {
             s = new StatDesc
             {
-                Stat = (string)jObject["stat"],
-                Name = (string)jObject["name"],
-                Limit = Utils.Parse<float>((string)jObject["limit"]),
-                Description = (string)jObject["description"]
+                stat = (string)jObject["stat"],
+                name = (string)jObject["name"],
+                limit = Utils.Parse<float>((string)jObject["limit"]),
+                description = (string)jObject["description"]
             };
         }
 
         public StatDesc GetStatDescription(string stat)
         {
-            _cachedDict.TryAdd(stat, stats.Find(s => s.Stat == stat));
+            _cachedDict.TryAdd(stat, stats.Find(s => s.stat == stat));
             if (_cachedDict[stat] == null) EditorLog.Error($"Stat {stat} is not defined");
             return _cachedDict[stat];
         }
@@ -57,16 +57,16 @@ namespace DB.System
     public class StatDesc
     {
         [TableColumnWidth(100, Resizable = false)]
-        public string Stat;
+        public string stat;
 
         [TableColumnWidth(100, Resizable = false)]
-        public string Name;
+        public string name;
 
         [TableColumnWidth(70, Resizable = false), ShowIf("@this.Limit > 0")]
-        public float Limit;
+        public float limit;
 
         [TextArea(3, 10)]
-        public string Description;
+        public string description;
     }
 }
 

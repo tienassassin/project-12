@@ -36,16 +36,16 @@ namespace DB.System
         {
             b = new Backstory
             {
-                Id = (string)jObject["ID"],
-                Name = (string)jObject["name"],
-                Alias = (string)jObject["alias"],
-                Story = (string)jObject["story"]
+                id = (string)jObject["ID"],
+                name = (string)jObject["name"],
+                alias = (string)jObject["alias"],
+                story = (string)jObject["story"]
             };
         }
 
         public Backstory GetBackstory(string charId)
         {
-            _cachedDict.TryAdd(charId, stories.Find(x => x.Id == charId));
+            _cachedDict.TryAdd(charId, stories.Find(x => x.id == charId));
             if (_cachedDict[charId] == null) EditorLog.Error($"Backstory of {charId} is not defined");
             return _cachedDict[charId];
         }
@@ -56,17 +56,17 @@ namespace DB.System
     {
         [VerticalGroup("Information")]
         [TableColumnWidth(200, Resizable = false)] 
-        public string Id;
+        public string id;
         
         [VerticalGroup("Information")] 
-        public string Name;
+        public string name;
 
         [VerticalGroup("Information")]
         [Multiline(2)]
-        public string Alias;
+        public string alias;
 
         [VerticalGroup("Story")]
         [TextArea(7,10), HideLabel]
-        public string Story;
+        public string story;
     }
 }

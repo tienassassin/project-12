@@ -37,7 +37,7 @@ public class HeroDetail : DuztineBehaviour
     public void Init(DB.Player.Hero saveData)
     {
         _baseData = saveData.GetHeroWithID();
-        txtName.text = _baseData.Name;
+        txtName.text = _baseData.name;
         _level = saveData.GetLevel();
         (_curExp, _nextExp) = saveData.GetExp();
         
@@ -52,19 +52,19 @@ public class HeroDetail : DuztineBehaviour
 
     private void LoadStatsTab()
     {
-        _baseStats = _baseData.Stats;
+        _baseStats = _baseData.stats;
         _nonEqmStats = _baseStats.GetStatsByLevel(_level, _baseData.GetHeroGrowth());
         _overallStats = _nonEqmStats;
 
         foreach (var statDetail in statDetails)
         {
-            statDetail.Init(_baseStats, _nonEqmStats, _overallStats, _baseData.DamageType);
+            statDetail.Init(_baseStats, _nonEqmStats, _overallStats, _baseData.damageType);
         }
     }
 
     private void LoadStoryTab()
     {
-        txtAlias.text = $"[ {_baseData.Name} - {_baseData.GetHeroAlias()} ]";
+        txtAlias.text = $"[ {_baseData.name} - {_baseData.GetHeroAlias()} ]";
         txtStory.text = _baseData.GetHeroStory();
     }
 

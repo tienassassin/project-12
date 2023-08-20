@@ -19,7 +19,7 @@ public class HeroInBattle : Hero, IAttacker, IDefender
     
     #region Public properties
 
-    public DamageType DamageType => BaseData.DamageType;
+    public DamageType DamageType => BaseData.damageType;
     public bool IsAlive => Hp > 0;
     public bool CanTakeTurn => !IsStun;
     public bool CanUseSkill => !IsSilent;
@@ -57,7 +57,7 @@ public class HeroInBattle : Hero, IAttacker, IDefender
         
         //todo: add equipment stats to overall stats
 
-        stats = BaseData.Stats;
+        stats = BaseData.stats;
          
         virtualHp = 0;
         agility = 0;

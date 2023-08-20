@@ -42,9 +42,9 @@ namespace DB.System
         {
             for (int i = expList.Count - 1; i >= 0; i--)
             {
-                if (totalExp >= expList[i].TotalExp)
+                if (totalExp >= expList[i].totalExp)
                 {
-                    return expList[i].Level;
+                    return expList[i].level;
                 }
             }
 
@@ -55,28 +55,28 @@ namespace DB.System
         {
             for (int i = expList.Count - 1; i >= 0; i--)
             {
-                if (totalExp >= expList[i].TotalExp)
+                if (totalExp >= expList[i].totalExp)
                 {
-                    return Tuple.Create(totalExp - expList[i].TotalExp, expList[i].Exp);
+                    return Tuple.Create(totalExp - expList[i].totalExp, expList[i].exp);
                 }
             }
 
-            return Tuple.Create(0, expList[0].Exp);
+            return Tuple.Create(0, expList[0].exp);
         }
     }
 
     [Serializable]
     public struct ExpData
     {
-        public int Level;
-        public int Exp;
-        public int TotalExp;
+        public int level;
+        public int exp;
+        public int totalExp;
 
         public ExpData(int level, int exp, int totalExp)
         {
-            Level = level;
-            Exp = exp;
-            TotalExp = totalExp;
+            this.level = level;
+            this.exp = exp;
+            this.totalExp = totalExp;
         }
     }
 }

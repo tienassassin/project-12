@@ -49,15 +49,15 @@ namespace DB.System
             Enum.TryParse((string)jObject["requirement"], out Requirement req);
 
             e = new Equipment();
-            e.Id = (string)jObject["ID"];
-            e.Name = (string)jObject["name"];
-            e.Set = (string)jObject["set"];
-            e.Rarity = rarity;
-            e.Slot = slot;
-            e.Requirement = req;
-            e.Race = race;
-            e.RaceBonus = Utils.Parse<float>((string)jObject["race bonus(%)"]) / 100f;
-            e.Stats = new Stats
+            e.id = (string)jObject["ID"];
+            e.name = (string)jObject["name"];
+            e.set = (string)jObject["set"];
+            e.rarity = rarity;
+            e.slot = slot;
+            e.requirement = req;
+            e.race = race;
+            e.raceBonus = Utils.Parse<float>((string)jObject["race bonus(%)"]) / 100f;
+            e.stats = new Stats
             {
                 showFull = false,
                 health = Utils.Parse<float>((string)jObject["health"]),
@@ -75,7 +75,7 @@ namespace DB.System
 
         public Equipment GetEquipmentWithID(string eqmId)
         {
-            _cachedDict.TryAdd(eqmId, equipments.Find(e => e.Id == eqmId));
+            _cachedDict.TryAdd(eqmId, equipments.Find(e => e.id == eqmId));
             if (_cachedDict[eqmId] == null) EditorLog.Error($"Equipment {eqmId} is not defined");
             return _cachedDict[eqmId];
         }
@@ -85,29 +85,29 @@ namespace DB.System
     public class Equipment
     {
         [VerticalGroup("Information")]
-        public string Id;
+        public string id;
 
         [VerticalGroup("Information")]
-        public string Name;
+        public string name;
 
         [VerticalGroup("Information"), HideIf("@string.IsNullOrWhiteSpace(this.Set)")]
-        public string Set;
+        public string set;
 
         [VerticalGroup("Information")]
-        public Rarity Rarity;
+        public Rarity rarity;
 
         [VerticalGroup("Information")]
-        public Slot Slot;
+        public Slot slot;
 
         [VerticalGroup("Information")]
-        public Requirement Requirement;
+        public Requirement requirement;
 
         [VerticalGroup("Information")]
-        public Race Race;
+        public Race race;
 
         [VerticalGroup("Information")]
-        public float RaceBonus;
+        public float raceBonus;
 
-        public Stats Stats;
+        public Stats stats;
     }
 }

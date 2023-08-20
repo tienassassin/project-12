@@ -76,12 +76,12 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         for (int i = 0; i < auraList.Count; i++)
         {
             var aura = auraList[i];
-            bool isCurRank = (rank == aura.Rank);
-            bool emptyName = aura.Name.IsNullOrWhitespace();
+            bool isCurRank = (rank == aura.rank);
+            bool emptyName = aura.name.IsNullOrWhitespace();
             bool isLastAura = (i >= auraList.Count - 1);
             content += $"<color={(isCurRank ? _hexColor1 : _hexColor0)}>" +
-                        $"{aura.Name}{(emptyName ? "" : " ")}" +
-                        $"({aura.Rank}): {aura.Description}" +
+                        $"{aura.name}{(emptyName ? "" : " ")}" +
+                        $"({aura.rank}): {aura.description}" +
                         "</color>" +
                         $"{(isLastAura ? "" : "\n\n")}";
         }

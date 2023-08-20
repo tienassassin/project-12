@@ -56,14 +56,14 @@ namespace DB.System
 
             h = new Hero
             {
-                Id = (string)jObject["ID"],
-                Name = (string)jObject["name"],
-                Tier = tier,
-                Element = element,
-                Race = race,
-                DamageType = dmgType,
-                AttackRange = atkRange,
-                Stats = new Stats
+                id = (string)jObject["ID"],
+                name = (string)jObject["name"],
+                tier = tier,
+                element = element,
+                race = race,
+                damageType = dmgType,
+                attackRange = atkRange,
+                stats = new Stats
                 {
                     showFull = true,
                     health = Utils.Parse<float>((string)jObject["health"]),
@@ -82,7 +82,7 @@ namespace DB.System
 
         public Hero GetHeroWithID(string heroId)
         {
-            _cachedDict.TryAdd(heroId, heroes.Find(h => h.Id == heroId));
+            _cachedDict.TryAdd(heroId, heroes.Find(h => h.id == heroId));
             if (_cachedDict[heroId] == null) EditorLog.Error($"Character {heroId} is not defined");
             return _cachedDict[heroId];
         }
@@ -119,9 +119,9 @@ namespace DB.System
 
             heroes.ForEach(h =>
             {
-                if ((raceOpts.Contains(h.Race) || acpAllRace)
-                    && (elementOpts.Contains(h.Element) || acpAllElement)
-                    && (tierOpts.Contains(h.Tier) || acpAllTier))
+                if ((raceOpts.Contains(h.race) || acpAllRace)
+                    && (elementOpts.Contains(h.element) || acpAllElement)
+                    && (tierOpts.Contains(h.tier) || acpAllTier))
                 {
                     matchHeroes.Add(h);
                 }
@@ -135,26 +135,26 @@ namespace DB.System
     public class Hero
     {
         [VerticalGroup("Information")]
-        public string Id;
+        public string id;
 
         [VerticalGroup("Information")]
-        public string Name;
+        public string name;
 
         [VerticalGroup("Information")]
-        public Tier Tier;
+        public Tier tier;
 
         [VerticalGroup("Information")]
-        public Element Element;
+        public Element element;
 
         [VerticalGroup("Information")]
-        public Race Race;
+        public Race race;
 
         [VerticalGroup("Information")]
-        public DamageType DamageType;
+        public DamageType damageType;
 
         [VerticalGroup("Information")]
-        public AttackRange AttackRange;
+        public AttackRange attackRange;
 
-        public Stats Stats;
+        public Stats stats;
     }
 }

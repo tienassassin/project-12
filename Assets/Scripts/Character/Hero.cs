@@ -5,9 +5,9 @@ using Sirenix.OdinInspector;
 public abstract class Hero : DuztineBehaviour
 {
     public int Level { get; private set; } = 1;
-    public Tier Tier => BaseData.Tier;
-    public Element Element => BaseData.Element;
-    public Race Race => BaseData.Race;
+    public Tier Tier => BaseData.tier;
+    public Element Element => BaseData.element;
+    public Race Race => BaseData.race;
     
     [Title("BASE DATA")]
     protected DB.Player.Hero SaveData;
@@ -20,7 +20,7 @@ public abstract class Hero : DuztineBehaviour
     {
         SaveData = saveData;
         BaseData = SaveData.GetHeroWithID();
-        name = BaseData.Name;
+        name = BaseData.name;
         Level = SaveData.GetLevel();
         Hp = SaveData.curHp;
         Energy = SaveData.energy;
