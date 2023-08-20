@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.DB;
+using DB.System;
 using Sirenix.OdinInspector;
 
 public abstract class Hero : DuztineBehaviour
@@ -10,13 +10,13 @@ public abstract class Hero : DuztineBehaviour
     public Race Race => BaseData.Race;
     
     [Title("BASE DATA")]
-    protected Player.DB.Hero SaveData;
-    protected System.DB.Hero BaseData;
+    protected DB.Player.Hero SaveData;
+    protected DB.System.Hero BaseData;
     protected float Hp;
     protected float Energy;
     protected List<Equipment> EqmList = new();
 
-    public virtual void Init(Player.DB.Hero saveData)
+    public virtual void Init(DB.Player.Hero saveData)
     {
         SaveData = saveData;
         BaseData = SaveData.GetHeroWithID();

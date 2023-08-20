@@ -1,39 +1,41 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
 
-namespace System.DB
+namespace DB.System
 {
-    [CreateAssetMenu(fileName = "HeroDatabase", menuName = "Database/Hero")]
-    public class HeroDatabase : ScriptableDatabase
+    public class HeroDatabase : Database
     {
-        [TableList,ShowInInspector]
-        private List<Hero> _heroes = new();
+        [TableList]
+        public List<Hero> heroes = new();
         
         private readonly Dictionary<string, Hero> _cachedDict = new();
 
-        public override void Import(params string[] data)
+        protected override void Import()
         {
-            _heroes = new List<Hero>();
-            var jArray = JArray.Parse(data[0]);
+            var data = this.FetchFromLocal(0);
+            
+            heroes = new List<Hero>();
+            var jArray = JArray.Parse(data);
             foreach (var jToken in jArray)
             {
                 ConvertDataFromJObject((JObject)jToken, out var h);
-                if (h != null) _heroes.Add(h);
+                if (h != null) heroes.Add(h);
             }
         }
 
         [Button]
-        public override void DeleteAll()
+        protected override void DeleteAll()
         {
-            _heroes.Clear();
+            heroes.Clear();
         }
 
         public List<Hero> GetHeroes()
         {
-            return _heroes;
+            return heroes;
         }
 
         private void ConvertDataFromJObject(JObject jObject, out Hero h)
@@ -80,7 +82,7 @@ namespace System.DB
 
         public Hero GetHeroWithID(string heroId)
         {
-            _cachedDict.TryAdd(heroId, _heroes.Find(h => h.Id == heroId));
+            _cachedDict.TryAdd(heroId, heroes.Find(h => h.Id == heroId));
             if (_cachedDict[heroId] == null) EditorLog.Error($"Character {heroId} is not defined");
             return _cachedDict[heroId];
         }
@@ -115,7 +117,7 @@ namespace System.DB
                 }
             }
 
-            _heroes.ForEach(h =>
+            heroes.ForEach(h =>
             {
                 if ((raceOpts.Contains(h.Race) || acpAllRace)
                     && (elementOpts.Contains(h.Element) || acpAllElement)

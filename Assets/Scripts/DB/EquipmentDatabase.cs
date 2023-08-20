@@ -1,34 +1,36 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
 
-namespace System.DB
+namespace DB.System
 {
-    [CreateAssetMenu(fileName = "EquipmentDatabase", menuName = "Database/Equipments")]
-    public class EquipmentDatabase : ScriptableDatabase
+    public class EquipmentDatabase : Database
     {
-        [TableList, ShowInInspector] 
-        private List<Equipment> _equipments = new();
+        [TableList] 
+        public List<Equipment> equipments = new();
         
         private readonly Dictionary<string, Equipment> _cachedDict = new();
 
-        public override void Import(params string[] data)
+        protected override void Import()
         {
-            _equipments = new List<Equipment>();
-            var jArray = JArray.Parse(data[0]);
+            var data = this.FetchFromLocal(0);
+            
+            equipments = new List<Equipment>();
+            var jArray = JArray.Parse(data);
             foreach (var jToken in jArray)
             {
                 ConvertDataFromJObject((JObject)jToken, out var e);
-                if (e != null) _equipments.Add(e);
+                if (e != null) equipments.Add(e);
             }
         }
 
         [Button]
-        public override void DeleteAll()
+        protected override void DeleteAll()
         {
-            _equipments.Clear();
+            equipments.Clear();
         }
 
         private void ConvertDataFromJObject(JObject jObject, out Equipment e)
@@ -73,7 +75,7 @@ namespace System.DB
 
         public Equipment GetEquipmentWithID(string eqmId)
         {
-            _cachedDict.TryAdd(eqmId, _equipments.Find(e => e.Id == eqmId));
+            _cachedDict.TryAdd(eqmId, equipments.Find(e => e.Id == eqmId));
             if (_cachedDict[eqmId] == null) EditorLog.Error($"Equipment {eqmId} is not defined");
             return _cachedDict[eqmId];
         }

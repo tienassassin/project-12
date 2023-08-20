@@ -1,4 +1,4 @@
-﻿using Player.DB;
+﻿using DB.Player;
 using TMPro;
 using UnityEngine;
 

@@ -1,33 +1,35 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace System.DB
+namespace DB.System
 {
-    [CreateAssetMenu(fileName = "StatsDescriptions", menuName = "Description/Stats")]
-    public class StatsDescriptions : ScriptableDatabase
+    public class StatDatabase : Database
     {
-        [TableList, ShowInInspector] 
-        private List<StatDesc> _statDescriptions = new();
+        [TableList] 
+        public List<StatDesc> stats = new();
         
         private readonly Dictionary<string, StatDesc> _cachedDict = new();
 
-        public override void Import(params string[] data)
+        protected override void Import()
         {
-            _statDescriptions = new List<StatDesc>();
-            var jArray = JArray.Parse(data[0]);
+            var data = this.FetchFromLocal(0);
+            
+            stats = new List<StatDesc>();
+            var jArray = JArray.Parse(data);
             foreach (var jToken in jArray)
             {
                 ConvertDataFromJObject((JObject)jToken, out var s);
-                _statDescriptions.Add(s);
+                stats.Add(s);
             }
         }
 
         [Button]
-        public override void DeleteAll()
+        protected override void DeleteAll()
         {
-            _statDescriptions.Clear();
+            stats.Clear();
         }
 
         private void ConvertDataFromJObject(JObject jObject, out StatDesc s)
@@ -43,7 +45,7 @@ namespace System.DB
 
         public StatDesc GetStatDescription(string stat)
         {
-            _cachedDict.TryAdd(stat, _statDescriptions.Find(s => s.Stat == stat));
+            _cachedDict.TryAdd(stat, stats.Find(s => s.Stat == stat));
             if (_cachedDict[stat] == null) EditorLog.Error($"Stat {stat} is not defined");
             return _cachedDict[stat];
         }

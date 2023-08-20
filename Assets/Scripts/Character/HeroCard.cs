@@ -1,5 +1,5 @@
 using System;
-using System.DB;
+using DB.System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,9 +14,9 @@ public class HeroCard : Hero
     [SerializeField] private Slider sldEnergy;
     [SerializeField] private GameObject lockedMark;
 
-    private Action<Player.DB.Hero> _cardSelected;
+    private Action<DB.Player.Hero> _cardSelected;
 
-    public void Init(Player.DB.Hero saveData, Action<Player.DB.Hero> cardSelected)
+    public void Init(DB.Player.Hero saveData, Action<DB.Player.Hero> cardSelected)
     {
         base.Init(saveData);
 
@@ -25,7 +25,7 @@ public class HeroCard : Hero
         Refresh();
     }
 
-    public void Init(System.DB.Hero baseData)
+    public void Init(DB.System.Hero baseData)
     {
         BaseData = baseData;
         name = BaseData.Name + " (locked)";

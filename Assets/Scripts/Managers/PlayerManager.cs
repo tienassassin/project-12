@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Player.DB
+namespace DB.Player
 {
     public class PlayerManager : Singleton<PlayerManager>
     {

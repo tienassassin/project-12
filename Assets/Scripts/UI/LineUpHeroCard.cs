@@ -1,5 +1,5 @@
 using System;
-using Player.DB;
+using DB.Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,9 +12,9 @@ public class LineUpHeroCard : Hero
     [SerializeField] private Slider sldEnergy;
     [SerializeField] private GameObject readyMark;
     
-    private Action<Player.DB.Hero> _cardSelected;
+    private Action<DB.Player.Hero> _cardSelected;
 
-    public void Init(Player.DB.Hero data, Action<Player.DB.Hero> cardSelected)
+    public void Init(DB.Player.Hero data, Action<DB.Player.Hero> cardSelected)
     {
         base.Init(data);
 

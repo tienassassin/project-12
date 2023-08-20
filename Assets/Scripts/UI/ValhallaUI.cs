@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using System.DB;
-using Player.DB;
+using DB.System;
+using DB.Player;
 using UnityEngine;
 
 public class ValhallaUI : BaseUI
@@ -23,7 +23,7 @@ public class ValhallaUI : BaseUI
     private List<HeroCard> _cards = new();
     private readonly List<HeroCard> _activeCards = new();
     private HeroCard _selectedCard;
-    private List<System.DB.Hero> _heroes = new();
+    private List<DB.System.Hero> _heroes = new();
     
     public static void Show()
     {
@@ -72,7 +72,7 @@ public class ValhallaUI : BaseUI
         _lvSort = SortType.Descending;
         _tierSort = SortType.None;
 
-        _heroes = Database.Instance.GetAllHeroes();
+        _heroes = DataManager.Instance.GetAllHeroes();
         
         LoadHeroCards();
         Refresh();
@@ -179,7 +179,7 @@ public class ValhallaUI : BaseUI
         }
     }
 
-    private void ShowCardDetail(Player.DB.Hero saveData)
+    private void ShowCardDetail(DB.Player.Hero saveData)
     {
         heroDetail.gameObject.SetActive(true);
         heroDetail.Init(saveData);

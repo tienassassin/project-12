@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.DB;
+using DB.System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Equipment : DuztineBehaviour
 {
     [TitleGroup("BASE DATA")]
-    protected System.DB.Equipment SystemData;
+    protected DB.System.Equipment SystemData;
     protected int Level = 0;
 
     public void Init(string eqmId, int lv)
     {
-        SystemData = Database.Instance.GetEquipmentWithID(eqmId);
+        SystemData = DataManager.Instance.GetEquipmentWithID(eqmId);
         Level = lv;
     }
 

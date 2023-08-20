@@ -1,34 +1,36 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
 
-namespace System.DB
+namespace DB.System
 {
-    [CreateAssetMenu(fileName = "DevilDatabase",menuName = "Database/Devil")]
-    public class DevilDatabase : ScriptableDatabase
+    public class DevilDatabase : Database
     {
-        [TableList, ShowInInspector] 
-        private List<Devil> _devils = new();
+        [TableList] 
+        public List<Devil> devils = new();
         
         private readonly Dictionary<string, Devil> _cachedDict = new();
 
-        public override void Import(params string[] data)
+        protected override void Import()
         {
-            _devils = new List<Devil>();
-            var jArray = JArray.Parse(data[0]);
+            var data = this.FetchFromLocal(0);
+            
+            devils = new List<Devil>();
+            var jArray = JArray.Parse(data);
             foreach (var jToken in jArray)
             {
                 ConvertDataFromJObject((JObject)jToken, out var d);
-                if (d != null) _devils.Add(d);
+                if (d != null) devils.Add(d);
             }
         }
         
         [Button]
-        public override void DeleteAll()
+        protected override void DeleteAll()
         {
-            _devils.Clear();
+            devils.Clear();
         } 
 
         private void ConvertDataFromJObject(JObject jObject, out Devil d)
@@ -75,7 +77,7 @@ namespace System.DB
 
         public Devil GetDevilWithID(string devilId)
         {
-            _cachedDict.TryAdd(devilId, _devils.Find(x => x.Id == devilId));
+            _cachedDict.TryAdd(devilId, devils.Find(x => x.Id == devilId));
             if (_cachedDict[devilId] == null) EditorLog.Error($"Devil {devilId} is not defined");
             return _cachedDict[devilId];
         }
@@ -110,7 +112,7 @@ namespace System.DB
                 }
             }
 
-            _devils.ForEach(d =>
+            devils.ForEach(d =>
             {
                 if ((raceOptList.Contains(d.Race) || acpAllRace)
                     && (elementOptList.Contains(d.Element) || acpAllElement)

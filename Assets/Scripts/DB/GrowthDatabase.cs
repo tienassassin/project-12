@@ -1,44 +1,45 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace System.DB
+namespace DB.System
 {
-    [CreateAssetMenu(fileName = "GrowthDatabase", menuName = "Database/Growth")]
-    public class GrowthDatabase : ScriptableDatabase
+    public class GrowthDatabase : Database
     {
-        [TableList, ShowInInspector]
-        private List<EntityGrowth> _entityGrowths = new();
+        [TableList]
+        public List<EntityGrowth> entityGrowths = new();
+        [TableList]
+        public List<EquipmentGrowth> equipmentGrowths = new();
 
-        [TableList, ShowInInspector]
-        private List<EquipmentGrowth> _equipmentGrowths = new();
-
-        public override void Import(params string[] data)
+        protected override void Import()
         {
-            _entityGrowths = new List<EntityGrowth>();
-            _equipmentGrowths = new List<EquipmentGrowth>();
+            var data = this.FetchFromLocal();
+            
+            entityGrowths = new List<EntityGrowth>();
+            equipmentGrowths = new List<EquipmentGrowth>();
 
             var jArrayChar = JArray.Parse(data[0]);
             foreach (var jToken in jArrayChar)
             {
                 ConvertDataFromJObject((JObject)jToken, out EntityGrowth h);
-                _entityGrowths.Add(h);
+                entityGrowths.Add(h);
             }
 
             var jArrayEqm = JArray.Parse(data[1]);
             foreach (var jToken in jArrayEqm)
             {
                 ConvertDataFromJObject((JObject)jToken, out EquipmentGrowth e);
-                _equipmentGrowths.Add(e);
+                equipmentGrowths.Add(e);
             }
         }
 
         [Button]
-        public override void DeleteAll()
+        protected override void DeleteAll()
         {
-            _entityGrowths.Clear();
-            _equipmentGrowths.Clear();
+            entityGrowths.Clear();
+            equipmentGrowths.Clear();
         }
 
         public float GetGrowth(object obj)
@@ -46,9 +47,9 @@ namespace System.DB
             switch (obj)
             {
                 case Tier t:
-                    return _entityGrowths.Find(x => x.Tier == t).Growth;
+                    return entityGrowths.Find(x => x.Tier == t).Growth;
                 case Rarity r:
-                    return _equipmentGrowths.Find(x => x.Rarity == r).Growth;
+                    return equipmentGrowths.Find(x => x.Rarity == r).Growth;
                 default:
                     return 0;
             }

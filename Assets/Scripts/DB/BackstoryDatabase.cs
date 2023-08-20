@@ -1,33 +1,35 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace System.DB
+namespace DB.System
 {
-    [CreateAssetMenu(fileName = "BackstoryDatabase", menuName = "Database/Backstory")]
-    public class BackstoryDatabase : ScriptableDatabase
+    public class BackstoryDatabase : Database
     {
-        [TableList, ShowInInspector] 
-        private List<Backstory> _stories = new();
+        [TableList]
+        public List<Backstory> stories = new();
         
         private readonly Dictionary<string, Backstory> _cachedDict = new();
 
-        public override void Import(params string[] data)
+        protected override void Import()
         {
-            _stories = new List<Backstory>();
-            var jArray = JArray.Parse(data[0]);
+            var data = this.FetchFromLocal(0);
+            
+            stories = new List<Backstory>();
+            var jArray = JArray.Parse(data);
             foreach (var jToken in jArray)
             {
                 ConvertDataFromJObject((JObject)jToken, out var b);
-                _stories.Add(b);
+                stories.Add(b);
             }
         }
 
         [Button]
-        public override void DeleteAll()
+        protected override void DeleteAll()
         {
-            _stories.Clear();
+            stories.Clear();
         }
 
         private void ConvertDataFromJObject(JObject jObject, out Backstory b)
@@ -43,7 +45,7 @@ namespace System.DB
 
         public Backstory GetBackstory(string charId)
         {
-            _cachedDict.TryAdd(charId, _stories.Find(x => x.Id == charId));
+            _cachedDict.TryAdd(charId, stories.Find(x => x.Id == charId));
             if (_cachedDict[charId] == null) EditorLog.Error($"Backstory of {charId} is not defined");
             return _cachedDict[charId];
         }

@@ -51,7 +51,7 @@ public class HeroInBattle : Hero, IAttacker, IDefender
     
     #endregion
 
-    public override void Init(Player.DB.Hero saveData)
+    public override void Init(DB.Player.Hero saveData)
     {
         base.Init(saveData);
         

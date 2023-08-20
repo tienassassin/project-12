@@ -32,7 +32,7 @@ public class EventDispatcher : Singleton<EventDispatcher>
     {
         if (!_eventDict.ContainsKey(eventID))
         {
-            EditorLog.Error($"Event {eventID} has 0 listeners");
+            EditorLog.Message($"Event {eventID} has 0 listeners");
             return;
         }
         
@@ -52,7 +52,7 @@ public class EventDispatcher : Singleton<EventDispatcher>
     {
         if (!_eventDict.ContainsKey(eventID))
         {
-            EditorLog.Error($"Event {eventID} has 0 listeners");
+            EditorLog.Message($"Event {eventID} has 0 listeners");
             return;
         }
 

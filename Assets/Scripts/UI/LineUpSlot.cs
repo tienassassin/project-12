@@ -1,5 +1,5 @@
 using System;
-using System.DB;
+using DB.System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,9 +16,9 @@ public class LineUpSlot : DuztineBehaviour
 
     [SerializeField] private GameObject highlight;
 
-    private Action<int, Player.DB.Hero> _slotHighlighted;
-    private Player.DB.Hero _saveData;
-    private System.DB.Hero _baseData;
+    private Action<int, DB.Player.Hero> _slotHighlighted;
+    private DB.Player.Hero _saveData;
+    private DB.System.Hero _baseData;
 
     private void OnEnable()
     {
@@ -30,7 +30,7 @@ public class LineUpSlot : DuztineBehaviour
         this.RemoveListener(EventID.ON_HIGHLIGHT_AURA, SwitchHighlight);
     }
 
-    public void Init(Player.DB.Hero data, Action<int, Player.DB.Hero> slotHighlighted)
+    public void Init(DB.Player.Hero data, Action<int, DB.Player.Hero> slotHighlighted)
     {
         _saveData = data;
         _baseData = _saveData?.GetHeroWithID();

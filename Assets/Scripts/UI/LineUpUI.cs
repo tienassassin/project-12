@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using System.DB;
+using DB.System;
 using System.Linq;
-using Player.DB;
+using DB.Player;
 using UnityEngine;
 
 public class LineUpUI : BaseUI
@@ -53,7 +53,7 @@ public class LineUpUI : BaseUI
         EditorLog.Message(auraStatistics);
     }
 
-    private void RefreshDetailView(int slotId, Player.DB.Hero saveData)
+    private void RefreshDetailView(int slotId, DB.Player.Hero saveData)
     {
         detail.Init(slotId, saveData);
     }
@@ -69,7 +69,7 @@ public class LineUpUI : BaseUI
         }
     }
 
-    private void GetRaceAura(List<Player.DB.Hero> heroList)
+    private void GetRaceAura(List<DB.Player.Hero> heroList)
     {
         var raceList = heroList.Where(x => x != null).Select(x => x.GetHeroWithID().Race).ToList();
         
@@ -91,7 +91,7 @@ public class LineUpUI : BaseUI
         }
     }
     
-    private void GetElementAura(List<Player.DB.Hero> heroList)
+    private void GetElementAura(List<DB.Player.Hero> heroList)
     {
         var elementList = heroList.Where(x => x != null).Select(x => x.GetHeroWithID().Element).ToList();
         

@@ -1,4 +1,4 @@
-using System.DB;
+using DB.System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,10 +8,10 @@ public class HeroAvatar : DuztineBehaviour
    [SerializeField] private Image imgHp;
    [SerializeField] private Image imgEnergy;
 
-   private Player.DB.Hero _saveData;
-   private System.DB.Hero _baseData;
+   private DB.Player.Hero _saveData;
+   private DB.System.Hero _baseData;
    
-   public void Init(Player.DB.Hero data)
+   public void Init(DB.Player.Hero data)
    {
       _saveData = data;
       _baseData = _saveData?.GetHeroWithID();

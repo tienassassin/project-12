@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using System.DB;
-using Player.DB;
+using DB.System;
+using DB.Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,9 +22,9 @@ public class LineUpDetail : DuztineBehaviour
     [SerializeField] private FilterOption[] raceFilterOptions;
 
     private int _curSlotId;
-    private Player.DB.Hero _saveData;
-    private System.DB.Hero _baseData;
-    private List<Player.DB.Hero> _heroSaveDataList = new();
+    private DB.Player.Hero _saveData;
+    private DB.System.Hero _baseData;
+    private List<DB.Player.Hero> _heroSaveDataList = new();
     
     private List<LineUpHeroCard> _heroCards = new();
     private List<EquipmentCard> _equipmentCards = new();
@@ -54,7 +54,7 @@ public class LineUpDetail : DuztineBehaviour
         LoadHeroCards();
     }
 
-    public void Init(int slotId, Player.DB.Hero data)
+    public void Init(int slotId, DB.Player.Hero data)
     {
         _curSlotId = slotId;
         _saveData = data;

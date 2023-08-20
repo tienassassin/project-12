@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.DB;
+using DB.System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -78,7 +78,7 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
                 diff0Value = Utils.GetFloatString(diff0.intelligence, 1);
                 diff1Value = " (+" + Utils.GetFloatString(diff1.intelligence, 1) + ")";
                 valueList.Add(txtStatValue.text);
-                valueList.Add(Utils.GetFloatString(Database.Instance.GetStatLimit(key), 1));
+                valueList.Add(Utils.GetFloatString(DataManager.Instance.GetStatLimit(key), 1));
                 break;
             case "speed":
                 txtStatValue.text = Utils.GetFloatString(overallStats.speed, 1);
@@ -86,7 +86,7 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
                 diff0Value = Utils.GetFloatString(diff0.speed, 1);
                 diff1Value = " (+" + Utils.GetFloatString(diff1.speed, 1) + ")";
                 valueList.Add(txtStatValue.text);
-                valueList.Add(Utils.GetFloatString(Database.Instance.GetStatLimit(key), 1));
+                valueList.Add(Utils.GetFloatString(DataManager.Instance.GetStatLimit(key), 1));
                 break;
             case "luck":
                 txtStatValue.text = Utils.GetIntString(overallStats.luck);
@@ -128,7 +128,7 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
                             $"<color={_hexColorDiff0}>{diff0Value}</color>" +
                             $"<color={_hexColorDiff1}>{diff1Value}</color>";
 
-        string rawDesc = Database.Instance.GetStatDescription(key);
+        string rawDesc = DataManager.Instance.GetStatDescription(key);
         for (int i = 0; i < valueList.Count; i++)
         {
             rawDesc = rawDesc.Replace($"#value{i}", $"{valueList[i]}");
@@ -140,7 +140,7 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         }
         
         txtDescription.text = rawDesc;
-        txtTitle.text = Utils.GetTitleCaseString(Database.Instance.GetStatName(key));
+        txtTitle.text = Utils.GetTitleCaseString(DataManager.Instance.GetStatName(key));
     }
 
     public void OnPointerEnter(PointerEventData eventData)

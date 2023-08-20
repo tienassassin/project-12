@@ -1,29 +1,28 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace System.DB
+namespace DB.System
 {
-    [CreateAssetMenu(fileName = "AuraDatabase", menuName = "Database/Aura")]
-    public class AuraDatabase : ScriptableDatabase
+    public class AuraDatabase : Database
     {
-        [ShowInInspector] 
-        private List<RaceAura> _raceAuras = new();
-        
-        [ShowInInspector] 
-        private List<ElementAura> _elementAuras = new();
+        public List<RaceAura> raceAuras = new();
+        public List<ElementAura> elementAuras = new();
 
-        public override void Import(params string[] data)
+        protected override void Import()
         {
-            _raceAuras = new List<RaceAura>();
-            _elementAuras = new List<ElementAura>();
+            var data = this.FetchFromLocal();
+            
+            raceAuras = new List<RaceAura>();
+            elementAuras = new List<ElementAura>();
 
             var jArrayRace = JArray.Parse(data[0]);
             foreach (var jToken in jArrayRace)
             {
                 ConvertDataFromJObject((JObject)jToken, out Race r, out Aura a);
-                var matchRaceAura = _raceAuras.Find(x => x.Race == r);
+                var matchRaceAura = raceAuras.Find(x => x.Race == r);
                 if (matchRaceAura != null) matchRaceAura.Auras.Add(a);
                 else
                 {
@@ -32,7 +31,7 @@ namespace System.DB
                         Race = r,
                         Auras = new List<Aura> { a }
                     };
-                    _raceAuras.Add(matchRaceAura);
+                    raceAuras.Add(matchRaceAura);
                 }
             }
 
@@ -40,7 +39,7 @@ namespace System.DB
             foreach (var jToken in jArrayElement)
             {
                 ConvertDataFromJObject((JObject)jToken, out Element e, out Aura a);
-                var matchElementAura = _elementAuras.Find(x => x.Element == e);
+                var matchElementAura = elementAuras.Find(x => x.Element == e);
                 if (matchElementAura != null) matchElementAura.Auras.Add(a);
                 else
                 {
@@ -49,16 +48,16 @@ namespace System.DB
                         Element = e,
                         Auras = new List<Aura> { a },
                     };
-                    _elementAuras.Add(matchElementAura);
+                    elementAuras.Add(matchElementAura);
                 }
             }
         }
 
         [Button]
-        public override void DeleteAll()
+        protected override void DeleteAll()
         {
-            _raceAuras.Clear();
-            _elementAuras.Clear();
+            raceAuras.Clear();
+            elementAuras.Clear();
         }
 
         public List<Aura> GetAuras(object obj)
@@ -66,9 +65,9 @@ namespace System.DB
             switch (obj)
             {
                 case Race r:
-                    return _raceAuras.Find(x => x.Race == r).Auras;
+                    return raceAuras.Find(x => x.Race == r).Auras;
                 case Element e:
-                    return _elementAuras.Find(x => x.Element == e).Auras;
+                    return elementAuras.Find(x => x.Element == e).Auras;
                 default:
                     return null;
             }

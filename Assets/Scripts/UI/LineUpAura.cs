@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.DB;
+using DB.System;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using TMPro;
@@ -38,7 +38,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         txtTitle.text = $"<color={ColorPalette.Instance.GetRaceColorHex(race)}>" +
                         $"<ico>" +
                         $"{race} Aura</color>";
-        var auraList = Database.Instance.GetAuras(race);
+        var auraList = DataManager.Instance.GetAuras(race);
         RefreshRank(rank);
         RefreshContent(auraList, rank);
     }
@@ -49,7 +49,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         txtTitle.text = $"<color={ColorPalette.Instance.GetElementColorHex(element)}>" +
                         $"<size=50><sprite name=element-{element}></size> " +
                         $"{element} Aura</color>";
-        var auraList = Database.Instance.GetAuras(element);
+        var auraList = DataManager.Instance.GetAuras(element);
         var colorList = new List<string> { ColorPalette.Instance.GetElementColorHex(element) };
         RefreshRank(rank);
         RefreshContent(auraList, rank, colorList);

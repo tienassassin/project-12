@@ -1,5 +1,5 @@
 using System.Collections;
-using System.DB;
+using DB.System;
 using System.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.OdinInspector;
@@ -35,7 +35,7 @@ public class LoadingManager : Singleton<LoadingManager>
     {
         // await Task.Delay(TimeSpan.FromSeconds(1));
         
-        while (!Database.Instance.AllDBLoaded)
+        while (!DataManager.Instance.AllDBLoaded)
         {
             await Task.Yield();
         }
