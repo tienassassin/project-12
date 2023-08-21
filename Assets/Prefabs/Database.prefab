@@ -44,8 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aeae6f53890ea543babefe1ac4b7419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readOnlyMode: 1
+  databaseName: Hero Database
   sheets:
   - Hero
+  heroes: []
 --- !u!1 &1127257017095718341
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,9 +156,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3e008c901876043afddd994d286310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readOnlyMode: 1
+  databaseName: Growth Database
   sheets:
   - EntityGrowth
   - EquipmentGrowth
+  entityGrowths: []
+  equipmentGrowths: []
 --- !u!1 &4045264453219683008
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,9 +207,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cffe0c66d639141a92eefbbd2c8d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readOnlyMode: 1
+  databaseName: Exp Database
   sheets:
   - Exp
-  LevelMax: 0
+  levelMax: 0
+  expList: []
 --- !u!1 &6301450874545695330
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,8 +257,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90ac9d644a4ea445b901af048a911ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readOnlyMode: 1
+  databaseName: Statistic Database
   sheets:
   - Statistic
+  stats: []
 --- !u!1 &7222035259397146932
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,9 +306,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c6edc166c7711448894f5e885e3d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readOnlyMode: 1
+  databaseName: Aura Database
   sheets:
   - RaceAura
   - ElementAura
+  raceAuras: []
+  elementAuras: []
 --- !u!1 &7286509179834647888
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,8 +357,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d537ed353f51c8042a8633d0897728d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readOnlyMode: 1
+  databaseName: Backstory Database
   sheets:
   - Backstory
+  stories: []
 --- !u!1 &7986991300577856867
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,8 +406,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de900b566793fa449d5d513d0aa6c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readOnlyMode: 1
+  databaseName: Equipment Database
   sheets:
   - Equipment
+  equipments: []
 --- !u!1 &8330722005172431557
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,5 +455,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1756e1d34623e8f438c0942773a2a9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readOnlyMode: 1
+  databaseName: Devil Database
   sheets:
   - Devil
+  devils: []

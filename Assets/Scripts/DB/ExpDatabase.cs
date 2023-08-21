@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -13,23 +15,32 @@ namespace DB.System
         [TableList] 
         public List<ExpData> expList = new();
 
-        protected override void Import()
+        protected override async void Import()
         {
             var data = this.FetchFromLocal(0);
             
             int totalExp = 0;
             int lastLevelExp = 0;
             expList = new List<ExpData>();
-            var jArray = JArray.Parse(data);
-            levelMax = jArray.Count;
-            for (int i = 0; i < levelMax; i++)
+            
+            var watch = new Stopwatch();
+            watch.Start();
+            await Task.Run(() =>
             {
-                var jObject = (JObject)jArray[i];
-                int exp = Utils.Parse<int>((string)jObject["exp"]);
-                if (i > 0) totalExp += lastLevelExp;
-                lastLevelExp = exp;
-                expList.Add(new ExpData(i + 1, exp, totalExp));
-            }
+                var jArray = JArray.Parse(data);
+                levelMax = jArray.Count;
+                for (int i = 0; i < levelMax; i++)
+                {
+                    var jObject = (JObject)jArray[i];
+                    int exp = Utils.Parse<int>((string)jObject["exp"]);
+                    if (i > 0) totalExp += lastLevelExp;
+                    lastLevelExp = exp;
+                    expList.Add(new ExpData(i + 1, exp, totalExp));
+                }
+            });
+            
+            watch.Stop();
+            DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
         }
 
         [Button]

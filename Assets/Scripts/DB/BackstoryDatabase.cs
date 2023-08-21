@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -13,17 +15,26 @@ namespace DB.System
         
         private readonly Dictionary<string, Backstory> _cachedDict = new();
 
-        protected override void Import()
+        protected override async void Import()
         {
             var data = this.FetchFromLocal(0);
             
             stories = new List<Backstory>();
-            var jArray = JArray.Parse(data);
-            foreach (var jToken in jArray)
+
+            var watch = new Stopwatch();
+            watch.Start();
+            await Task.Run(() =>
             {
-                ConvertDataFromJObject((JObject)jToken, out var b);
-                stories.Add(b);
-            }
+                var jArray = JArray.Parse(data);
+                foreach (var jToken in jArray)
+                {
+                    ConvertDataFromJObject((JObject)jToken, out var b);
+                    stories.Add(b);
+                }
+            });
+            
+            watch.Stop();
+            DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
         }
 
         [Button]

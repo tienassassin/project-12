@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
-using UnityEngine;
 
 namespace DB.System
 {
@@ -14,17 +15,26 @@ namespace DB.System
         
         private readonly Dictionary<string, Hero> _cachedDict = new();
 
-        protected override void Import()
+        protected override async void Import()
         {
             var data = this.FetchFromLocal(0);
             
             heroes = new List<Hero>();
-            var jArray = JArray.Parse(data);
-            foreach (var jToken in jArray)
+            
+            var watch = new Stopwatch();
+            watch.Start();
+            await Task.Run(() =>
             {
-                ConvertDataFromJObject((JObject)jToken, out var h);
-                if (h != null) heroes.Add(h);
-            }
+                var jArray = JArray.Parse(data);
+                foreach (var jToken in jArray)
+                {
+                    ConvertDataFromJObject((JObject)jToken, out var h);
+                    if (h != null) heroes.Add(h);
+                }
+            });
+            
+            watch.Stop();
+            DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
         }
 
         [Button]

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -11,46 +13,54 @@ namespace DB.System
         public List<RaceAura> raceAuras = new();
         public List<ElementAura> elementAuras = new();
 
-        protected override void Import()
+        protected override async void Import()
         {
             var data = this.FetchFromLocal();
             
             raceAuras = new List<RaceAura>();
             elementAuras = new List<ElementAura>();
 
-            var jArrayRace = JArray.Parse(data[0]);
-            foreach (var jToken in jArrayRace)
+            var watch = new Stopwatch();
+            watch.Start();
+            await Task.Run(() =>
             {
-                ConvertDataFromJObject((JObject)jToken, out Race r, out Aura a);
-                var matchRaceAura = raceAuras.Find(x => x.race == r);
-                if (matchRaceAura != null) matchRaceAura.auras.Add(a);
-                else
+                var jArrayRace = JArray.Parse(data[0]);
+                foreach (var jToken in jArrayRace)
                 {
-                    matchRaceAura = new RaceAura
+                    ConvertDataFromJObject((JObject)jToken, out Race r, out Aura a);
+                    var matchRaceAura = raceAuras.Find(x => x.race == r);
+                    if (matchRaceAura != null) matchRaceAura.auras.Add(a);
+                    else
                     {
-                        race = r,
-                        auras = new List<Aura> { a }
-                    };
-                    raceAuras.Add(matchRaceAura);
+                        matchRaceAura = new RaceAura
+                        {
+                            race = r,
+                            auras = new List<Aura> { a }
+                        };
+                        raceAuras.Add(matchRaceAura);
+                    }
                 }
-            }
 
-            var jArrayElement = JArray.Parse(data[1]);
-            foreach (var jToken in jArrayElement)
-            {
-                ConvertDataFromJObject((JObject)jToken, out Element e, out Aura a);
-                var matchElementAura = elementAuras.Find(x => x.element == e);
-                if (matchElementAura != null) matchElementAura.auras.Add(a);
-                else
+                var jArrayElement = JArray.Parse(data[1]);
+                foreach (var jToken in jArrayElement)
                 {
-                    matchElementAura = new ElementAura
+                    ConvertDataFromJObject((JObject)jToken, out Element e, out Aura a);
+                    var matchElementAura = elementAuras.Find(x => x.element == e);
+                    if (matchElementAura != null) matchElementAura.auras.Add(a);
+                    else
                     {
-                        element = e,
-                        auras = new List<Aura> { a },
-                    };
-                    elementAuras.Add(matchElementAura);
+                        matchElementAura = new ElementAura
+                        {
+                            element = e,
+                            auras = new List<Aura> { a },
+                        };
+                        elementAuras.Add(matchElementAura);
+                    }
                 }
-            }
+            });
+            
+            watch.Stop();
+            DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
         }
 
         [Button]

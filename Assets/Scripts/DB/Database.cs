@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -7,11 +10,14 @@ namespace DB.System
     public abstract class Database : DuztineBehaviour
     {
         public bool readOnlyMode = true;
+
+        [DisableIf("readOnlyMode"), SerializeField]
+        protected string databaseName;
         
         [DisableIf("readOnlyMode")] 
         public string[] sheets;
 
-        protected void Awake()
+        protected void Start()
         {
             Import();
         }

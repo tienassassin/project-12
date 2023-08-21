@@ -11,7 +11,7 @@ namespace DB.System
 {
     public class DataManager : Singleton<DataManager>
     {
-        public bool AllDBLoaded { get; private set; }
+        public bool EverythingLoaded => _loadedDBCount >= TOTAL_DB_COUNT;
 
         [HorizontalGroup("ApiGithub"), SerializeField, LabelWidth(125)] private string apiUrl = "https://opensheet.elk.sh/";
         [HorizontalGroup("GoogleSheet"), SerializeField, LabelWidth(125)] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
@@ -25,10 +25,8 @@ namespace DB.System
         [FoldoutGroup("DB"), SerializeField] private BackstoryDatabase storyDB;
         [FoldoutGroup("DB"), SerializeField] private AuraDatabase auraDB;
 
-        private void Start()
-        {
-            AllDBLoaded = true;
-        }
+        private const int TOTAL_DB_COUNT = 8;
+        private int _loadedDBCount;
 
         [HorizontalGroup("ApiGithub", Width = 0.1f), Button("Open")]
         public void OpenApiGithub()
@@ -42,6 +40,12 @@ namespace DB.System
             Application.OpenURL($"https://docs.google.com/spreadsheets/d/{databaseId}/");
         }
 
+        public void NotifyDBLoaded(string dbName, int time)
+        {
+            _loadedDBCount++;
+            EditorLog.Message($"({_loadedDBCount}/{TOTAL_DB_COUNT}) Loaded {dbName}, elapsed time: {time}ms");
+            if (EverythingLoaded) EditorLog.Message("All Databases loaded!");
+        }
 
         #region Data fetching
 

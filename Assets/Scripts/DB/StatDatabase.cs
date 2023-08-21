@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -13,17 +15,26 @@ namespace DB.System
         
         private readonly Dictionary<string, StatDesc> _cachedDict = new();
 
-        protected override void Import()
+        protected override async void Import()
         {
             var data = this.FetchFromLocal(0);
             
             stats = new List<StatDesc>();
-            var jArray = JArray.Parse(data);
-            foreach (var jToken in jArray)
+            
+            var watch = new Stopwatch();
+            watch.Start();
+            await Task.Run(() =>
             {
-                ConvertDataFromJObject((JObject)jToken, out var s);
-                stats.Add(s);
-            }
+                var jArray = JArray.Parse(data);
+                foreach (var jToken in jArray)
+                {
+                    ConvertDataFromJObject((JObject)jToken, out var s);
+                    stats.Add(s);
+                }
+            });
+            
+            watch.Stop();
+            DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
         }
 
         [Button]
@@ -62,7 +73,7 @@ namespace DB.System
         [TableColumnWidth(100, Resizable = false)]
         public string name;
 
-        [TableColumnWidth(70, Resizable = false), ShowIf("@this.Limit > 0")]
+        [TableColumnWidth(70, Resizable = false), ShowIf("@this.limit > 0")]
         public float limit;
 
         [TextArea(3, 10)]
