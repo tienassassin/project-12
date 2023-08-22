@@ -11,7 +11,7 @@ namespace DB.System
 {
     public class DataManager : Singleton<DataManager>
     {
-        public bool EverythingLoaded => _loadedDBCount >= TOTAL_DB_COUNT;
+        public static bool Ready { get; private set; }
 
         [HorizontalGroup("ApiGithub"), SerializeField, LabelWidth(125)] private string apiUrl = "https://opensheet.elk.sh/";
         [HorizontalGroup("GoogleSheet"), SerializeField, LabelWidth(125)] private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
@@ -27,6 +27,12 @@ namespace DB.System
 
         private const int TOTAL_DB_COUNT = 8;
         private int _loadedDBCount;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            Ready = false;
+        }
 
         [HorizontalGroup("ApiGithub", Width = 0.1f), Button("Open")]
         public void OpenApiGithub()
@@ -44,41 +50,13 @@ namespace DB.System
         {
             _loadedDBCount++;
             EditorLog.Message($"({_loadedDBCount}/{TOTAL_DB_COUNT}) Loaded {dbName}, elapsed time: {time}ms");
-            if (EverythingLoaded) EditorLog.Message("All Databases loaded!");
-        }
-
-        #region Data fetching
-
-        private async UniTask<string[]> FetchDataAsync(string[] sheets, Action<string[]> finish = null)
-        {
-            var tasks = sheets.Select(sheet => FetchDataAsync(sheet)).ToList();
-            var results = await UniTask.WhenAll(tasks);
-            finish?.Invoke(results);
-            return results;
-        }
-
-        private async UniTask<string> FetchDataAsync(string sheet, Action<string> finish = null)
-        {
-            string result = null;
-            var request = UnityWebRequest.Get($"{apiUrl}{databaseId}/{sheet}");
-            var operation = await request.SendWebRequest();
-            if (operation.result != UnityWebRequest.Result.Success)
+            if (_loadedDBCount >= TOTAL_DB_COUNT)
             {
-                EditorLog.Error(operation.error);
+                EditorLog.Message("All Databases loaded!");
+                Ready = true;
             }
-            else
-            {
-                result = operation.downloadHandler.text;
-            }
-
-            EditorLog.Message(result);
-            finish?.Invoke(result);
-            return result;
         }
 
-        #endregion
-
-        
         #region Characters & Equipments
 
         public List<Hero> GetAllHeroes()

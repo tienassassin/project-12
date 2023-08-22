@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using DB.System;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using TMPro;
@@ -15,7 +14,7 @@ public class LoadingManager : Singleton<LoadingManager>
     [SerializeField] private Slider loadingBar;
     [SerializeField] private TMP_Text progressTxt;
 
-    private Func<bool> _wait;
+    private Action _sceneLoaded;
 
     protected override void Awake()
     {
@@ -35,7 +34,7 @@ public class LoadingManager : Singleton<LoadingManager>
     [Button]
     private void StartGame()
     {
-        LoadScene(SceneName.HOME_SCENE, () => DataManager.Instance.EverythingLoaded);
+        LoadScene(SceneName.HOME_SCENE);
     }
 
     private void ResetCanvas()
@@ -44,17 +43,9 @@ public class LoadingManager : Singleton<LoadingManager>
         loadingPanel.GetComponent<Canvas>().worldCamera = Camera.main;
     }
     
-    /// <summary>
-    /// Load scene async
-    /// </summary>
-    /// <param name="sceneName">Target scene (use SceneName.&lt;scene&gt;)</param>
-    /// <param name="wait">
-    /// Condition needs to be met before scene is activated&#xA;
-    /// <b>[WARNING]</b> Invalid condition can lead to <b>INFINITY</b> wait
-    /// </param>
-    public void LoadScene(string sceneName, Func<bool> wait = null)
+    public void LoadScene(string sceneName, Action sceneLoaded = null)
     {
-        _wait = wait;
+        _sceneLoaded = sceneLoaded;
         StartCoroutine(LoadSceneAsync(sceneName));
     }
 
@@ -64,7 +55,7 @@ public class LoadingManager : Singleton<LoadingManager>
         var asyncLoad = SceneManager.LoadSceneAsync(sceneName);
         asyncLoad.allowSceneActivation = false;
 
-        float breakPoint = Random.Range(0.8f, 0.99f);
+        float breakPoint = Random.Range(0.5f, 0.9f);
         DOVirtual.Float(0f, breakPoint, 2f, value =>
         {
             loadingBar.value = value;
@@ -79,8 +70,6 @@ public class LoadingManager : Singleton<LoadingManager>
             yield return null;
         }
 
-        if (_wait != null) yield return new WaitUntil(_wait);
-        
         DOVirtual.Float(breakPoint, 1f, 1f, value =>
         {
             loadingBar.value = value;
@@ -88,7 +77,7 @@ public class LoadingManager : Singleton<LoadingManager>
         }).OnComplete(() =>
         {
             loadingPanel.SetActive(false);
-            this.PostEvent(EventID.ON_BATTLE_SCENE_LOADED);
+            _sceneLoaded?.Invoke();
         });
     }
 }

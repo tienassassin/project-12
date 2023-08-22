@@ -1368,11 +1368,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 8292193285930602265}
   equipmentGroup: {fileID: 1601081839678717536}
-  txtName: {fileID: 0}
+  txtName: {fileID: 7503782587514624824}
   imgRace: {fileID: 0}
   imgElement: {fileID: 0}
   heroCardContainer: {fileID: 2830073062000677902}
-  heroCardPref: {fileID: 0}
+  heroCardPref: {fileID: 8322629482599311193, guid: 9f72ea5c600ebf94eb830ff5b404cd19, type: 3}
   eqmCardContainer: {fileID: 8598572117935403894}
   eqmCardPref: {fileID: 4968992404814508809, guid: 6da60ed9b9937d54d83e99c5a6809ba5, type: 3}
   raceFilterOptions:

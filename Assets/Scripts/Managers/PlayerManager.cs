@@ -1,13 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using Cysharp.Threading.Tasks;
+using DB.System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DB.Player
 {
     public class PlayerManager : Singleton<PlayerManager>
     {
+        [Header("DUMMY")]
         [SerializeField] private bool isDummy;
+        [SerializeField] private int unlockedHeroNum = 4;
+        
+        [Header("DATA")]
         [SerializeField] private HeroDatabase heroDB;
         
         private const string HERO_DB_KEY = "HERO_DB";
@@ -15,16 +23,14 @@ namespace DB.Player
         protected override void Awake()
         {
             base.Awake();
-            
             Application.targetFrameRate = 144;
-            
             if (!isDummy) LoadHeroDB();
             else GenerateDummyData();
         }
 
         public List<Hero> GetAllHeroes()
         {
-            return heroDB.allHeroes;
+            return heroDB.unlockedHeroes;
         }
 
         public List<Hero> GetReadyHeroes()
@@ -32,7 +38,7 @@ namespace DB.Player
             var readyHeroList = new List<Hero>();
             heroDB.readyHeroes.ForEach(x =>
             {
-                readyHeroList.Add(heroDB.allHeroes.Find(y => y.heroId == x));
+                readyHeroList.Add(heroDB.unlockedHeroes.Find(y => y.heroId == x));
             });
 
             return readyHeroList;
@@ -68,7 +74,7 @@ namespace DB.Player
 
         public bool IsHeroUnlocked(string heroId, out Hero hsd)
         {
-            hsd = heroDB.allHeroes.Find(h => h.heroId == heroId);
+            hsd = heroDB.unlockedHeroes.Find(h => h.heroId == heroId);
             return hsd != null;
         }
 
@@ -85,9 +91,29 @@ namespace DB.Player
             }
         }
 
-        private void GenerateDummyData()
+        private async void GenerateDummyData()
         {
-            
+            await UniTask.WaitUntil(() => DataManager.Ready);
+            heroDB = new HeroDatabase();
+            var allHeroIds = DataManager.Instance.GetAllHeroes().Select(x => x.id).ToList();
+            for (int i = 0; i < unlockedHeroNum; i++)
+            {
+                string id = allHeroIds[Random.Range(0, allHeroIds.Count)];
+                allHeroIds.Remove(id);
+                heroDB.unlockedHeroes.Add(new Hero
+                {
+                    heroId = id,
+                    totalExp = Random.Range(1,10000),
+                    curHp = Random.Range(0,1),
+                    energy = Random.Range(0,1),
+                    eqmList = null,
+                });
+
+                if (i < 4)
+                {
+                    heroDB.readyHeroes.Add(id);
+                }
+            }
         }
 
         [Button]
@@ -107,7 +133,7 @@ namespace DB.Player
     public class HeroDatabase
     {
         [TableList(ShowIndexLabels = true)]
-        public List<Hero> allHeroes = new();
+        public List<Hero> unlockedHeroes = new();
         
         public List<string> readyHeroes = new();
     }

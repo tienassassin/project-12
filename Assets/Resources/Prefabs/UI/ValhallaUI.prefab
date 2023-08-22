@@ -5823,15 +5823,15 @@ MonoBehaviour:
   - {fileID: 119599893269876944}
   - {fileID: 546871841773715586}
   - {fileID: 1718810443737148044}
-  txtName: {fileID: 0}
+  txtName: {fileID: 741838669244369415}
   imgElement: {fileID: 0}
-  txtLevel: {fileID: 0}
-  txtExp: {fileID: 0}
-  sldExp: {fileID: 0}
-  imgRace: {fileID: 0}
-  imgDamageType: {fileID: 0}
-  txtAlias: {fileID: 0}
-  txtStory: {fileID: 0}
+  txtLevel: {fileID: 1341173721664443885}
+  txtExp: {fileID: 6552353077531329046}
+  sldExp: {fileID: 800275825865993785}
+  imgRace: {fileID: 6597346600865595279}
+  imgDamageType: {fileID: 4171618001612857305}
+  txtAlias: {fileID: 5840880732452442271}
+  txtStory: {fileID: 7843399346661040295}
   statDetails:
   - {fileID: 4985124306586681899}
   - {fileID: 82242747749206055}
