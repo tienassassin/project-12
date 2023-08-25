@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ValhallaCard : BaseHeroCard
+public class ValhallaHeroCard : HeroCard
 {
     [SerializeField] private Image imgElement;
     [SerializeField] private TMP_Text txtLevel;

@@ -13,7 +13,7 @@ public class LineUpDetail : DuztineBehaviour
     [SerializeField] private Image imgElement;
 
     [SerializeField] private Transform heroCardContainer;
-    [SerializeField] private LineUpCard lineUpCardPref;
+    [SerializeField] private LineUpHeroCard heroCardPref;
     [SerializeField] private Transform eqmCardContainer;
     [SerializeField] private EquipmentCard eqmCardPref;
 
@@ -25,7 +25,7 @@ public class LineUpDetail : DuztineBehaviour
     private int _curSlotId;
     private List<EquipmentCard> _equipmentCards = new();
 
-    private List<LineUpCard> _heroCards = new();
+    private List<LineUpHeroCard> _heroCards = new();
     private List<HeroData> _heroSaveDataList = new();
     private HeroData _saveData;
 
@@ -36,10 +36,10 @@ public class LineUpDetail : DuztineBehaviour
             opt.SetEvent(AddOptionToFilter);
         }
 
-        _heroCards = new List<LineUpCard>();
+        _heroCards = new List<LineUpHeroCard>();
         foreach (Transform child in heroCardContainer)
         {
-            _heroCards.Add(child.gameObject.GetComponent<LineUpCard>());
+            _heroCards.Add(child.gameObject.GetComponent<LineUpHeroCard>());
         }
     }
 
@@ -104,7 +104,7 @@ public class LineUpDetail : DuztineBehaviour
     {
         while (heroCardContainer.childCount < _heroSaveDataList.Count)
         {
-            var o = Instantiate(lineUpCardPref, heroCardContainer);
+            var o = Instantiate(heroCardPref, heroCardContainer);
             _heroCards.Add(o);
         }
 
@@ -164,7 +164,7 @@ public class LineUpDetail : DuztineBehaviour
 
         _heroCards.ForEach(c => { c.transform.SetAsLastSibling(); });
 
-        int CompareLevel(LineUpCard c1, LineUpCard c2, bool ascending)
+        int CompareLevel(LineUpHeroCard c1, LineUpHeroCard c2, bool ascending)
         {
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;

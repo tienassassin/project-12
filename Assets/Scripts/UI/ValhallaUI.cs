@@ -4,23 +4,23 @@ using UnityEngine;
 public class ValhallaUI : BaseUI
 {
     [SerializeField] private Transform heroCardContainer;
-    [SerializeField] private ValhallaCard valhallaCardPref;
+    [SerializeField] private ValhallaHeroCard heroCardPref;
 
     [SerializeField] private FilterOption[] tierFilterOptions;
     [SerializeField] private FilterOption[] elementFilterOptions;
     [SerializeField] private FilterOption[] raceFilterOptions;
 
-    [SerializeField] private HeroDetail heroDetail;
-    private readonly List<ValhallaCard> _activeCards = new();
+    [SerializeField] private ValhallaHeroDetail heroDetail;
+    private readonly List<ValhallaHeroCard> _activeCards = new();
     private readonly List<Element> _elementOpts = new();
     private readonly List<Race> _raceOpts = new();
 
     private readonly List<Tier> _tierOpts = new();
 
-    private List<ValhallaCard> _cards = new();
+    private List<ValhallaHeroCard> _cards = new();
     private List<Hero> _heroes = new();
     private SortType _lvSort;
-    private ValhallaCard _selectedCard;
+    private ValhallaHeroCard _selectedCard;
     private SortType _tierSort;
 
     protected override void Awake()
@@ -42,10 +42,10 @@ public class ValhallaUI : BaseUI
             opt.SetEvent(AddOptionToFilter);
         }
 
-        _cards = new List<ValhallaCard>();
+        _cards = new List<ValhallaHeroCard>();
         foreach (Transform child in heroCardContainer)
         {
-            _cards.Add(child.gameObject.GetComponent<ValhallaCard>());
+            _cards.Add(child.gameObject.GetComponent<ValhallaHeroCard>());
         }
 
         heroDetail.gameObject.SetActive(false);
@@ -80,7 +80,7 @@ public class ValhallaUI : BaseUI
     {
         while (heroCardContainer.childCount < _heroes.Count)
         {
-            var o = Instantiate(valhallaCardPref, heroCardContainer);
+            var o = Instantiate(heroCardPref, heroCardContainer);
             _cards.Add(o);
         }
 
@@ -147,7 +147,7 @@ public class ValhallaUI : BaseUI
             if (match) _activeCards.Add(c);
         });
 
-        int CompareLevel(ValhallaCard c1, ValhallaCard c2, bool ascending)
+        int CompareLevel(ValhallaHeroCard c1, ValhallaHeroCard c2, bool ascending)
         {
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;
@@ -160,7 +160,7 @@ public class ValhallaUI : BaseUI
             return ascending ? tierComparision : -tierComparision;
         }
 
-        int CompareTier(ValhallaCard c1, ValhallaCard c2, bool ascending)
+        int CompareTier(ValhallaHeroCard c1, ValhallaHeroCard c2, bool ascending)
         {
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;

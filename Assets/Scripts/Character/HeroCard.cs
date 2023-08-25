@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 
-public abstract class BaseHeroCard : DuztineBehaviour
+public abstract class HeroCard : DuztineBehaviour
 {
     protected Hero BaseData;
     protected float Energy;

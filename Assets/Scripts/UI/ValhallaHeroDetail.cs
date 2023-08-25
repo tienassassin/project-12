@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HeroDetail : DuztineBehaviour
+public class ValhallaHeroDetail : DuztineBehaviour
 {
     [SerializeField] private GameObject[] tabs;
 
@@ -17,7 +17,7 @@ public class HeroDetail : DuztineBehaviour
     [SerializeField] private TMP_Text txtAlias;
     [SerializeField] private TMP_Text txtStory;
 
-    [SerializeField] private StatDetail[] statDetails;
+    [SerializeField] private ValhallaStatDetail[] statDetails;
 
     private Hero _baseData;
 
