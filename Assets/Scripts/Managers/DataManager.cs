@@ -5,23 +5,24 @@ using UnityEngine;
 
 public class DataManager : Singleton<DataManager>
 {
-    private const int TOTAL_DB_COUNT = 8;
+    public static bool Ready { get; private set; }
 
-    [HorizontalGroup("ApiGithub")] [SerializeField] [LabelWidth(125)]
+    [SerializeField] [HorizontalGroup("ApiGithub")] [LabelWidth(125)]
     private string apiUrl = "https://opensheet.elk.sh/";
-    [HorizontalGroup("GoogleSheet")] [SerializeField] [LabelWidth(125)]
+    [SerializeField] [HorizontalGroup("GoogleSheet")] [LabelWidth(125)]
     private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
 
-    [FoldoutGroup("DB")] [SerializeField] private HeroDatabase heroDB;
-    [FoldoutGroup("DB")] [SerializeField] private DevilDatabase devilDB;
-    [FoldoutGroup("DB")] [SerializeField] private EquipmentDatabase eqmDB;
-    [FoldoutGroup("DB")] [SerializeField] private StatDatabase statDB;
-    [FoldoutGroup("DB")] [SerializeField] private GrowthDatabase growthDB;
-    [FoldoutGroup("DB")] [SerializeField] private ExpDatabase expDB;
-    [FoldoutGroup("DB")] [SerializeField] private BackstoryDatabase storyDB;
-    [FoldoutGroup("DB")] [SerializeField] private AuraDatabase auraDB;
+    [SerializeField] [FoldoutGroup("DB")] private HeroDatabase heroDB;
+    [SerializeField] [FoldoutGroup("DB")] private DevilDatabase devilDB;
+    [SerializeField] [FoldoutGroup("DB")] private EquipmentDatabase eqmDB;
+    [SerializeField] [FoldoutGroup("DB")] private StatDatabase statDB;
+    [SerializeField] [FoldoutGroup("DB")] private GrowthDatabase growthDB;
+    [SerializeField] [FoldoutGroup("DB")] private ExpDatabase expDB;
+    [SerializeField] [FoldoutGroup("DB")] private BackstoryDatabase storyDB;
+    [SerializeField] [FoldoutGroup("DB")] private AuraDatabase auraDB;
+
     private int _loadedDBCount;
-    public static bool Ready { get; private set; }
+    private const int TOTAL_DB_COUNT = 8;
 
     protected override void Awake()
     {

@@ -3,24 +3,26 @@ using UnityEngine;
 
 public class ValhallaUI : BaseUI
 {
-    [SerializeField] private Transform heroCardContainer;
-    [SerializeField] private ValhallaHeroCard heroCardPref;
-
     [SerializeField] private FilterOption[] tierFilterOptions;
     [SerializeField] private FilterOption[] elementFilterOptions;
     [SerializeField] private FilterOption[] raceFilterOptions;
 
-    [SerializeField] private ValhallaHeroDetail heroDetail;
-    private readonly List<ValhallaHeroCard> _activeCards = new();
-    private readonly List<Element> _elementOpts = new();
-    private readonly List<Race> _raceOpts = new();
+    [SerializeField] private ValhallaHeroCard heroCardPref;
+    [SerializeField] private Transform heroCardContainer;
 
-    private readonly List<Tier> _tierOpts = new();
+    [SerializeField] private ValhallaHeroDetail heroDetail;
+
+    private List<Hero> _heroes = new();
 
     private List<ValhallaHeroCard> _cards = new();
-    private List<Hero> _heroes = new();
-    private SortType _lvSort;
+    private List<ValhallaHeroCard> _activeCards = new();
     private ValhallaHeroCard _selectedCard;
+
+    private List<Element> _elementOpts = new();
+    private List<Race> _raceOpts = new();
+    private List<Tier> _tierOpts = new();
+
+    private SortType _lvSort;
     private SortType _tierSort;
 
     protected override void Awake()

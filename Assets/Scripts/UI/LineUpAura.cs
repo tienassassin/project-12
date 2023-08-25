@@ -19,11 +19,13 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private float fontSize1;
     [SerializeField] private TMP_Text txtTitle;
     [SerializeField] private TMP_Text txtContent;
+
     private object _auraType;
 
-    private Coroutine _coroutine;
     private string _hexColor0;
     private string _hexColor1;
+
+    private Coroutine _coroutine;
 
     private void Awake()
     {
