@@ -118,3 +118,11 @@ public class Equipment
 
     public Stats stats;
 }
+
+public static partial class DataExtensions
+{
+    public static float GetEquipmentGrowth(this Equipment e)
+    {
+        return DataManager.Instance.GetGrowth(e.rarity);
+    }
+}

@@ -145,39 +145,14 @@ public class DataManager : Singleton<DataManager>
     #endregion
 }
 
-public static class DataManagerExtensions
+public static partial class DataExtensions
 {
-    public static float GetHeroGrowth(this Hero h)
-    {
-        return DataManager.Instance.GetGrowth(h.tier);
-    }
-
-    public static float GetDevilGrowth(this Devil d)
-    {
-        return DataManager.Instance.GetGrowth(d.tier);
-    }
-
-    public static string GetHeroAlias(this Hero h)
-    {
-        return DataManager.Instance.GetHeroAlias(h.id);
-    }
-
-    public static string GetHeroStory(this Hero h)
-    {
-        return DataManager.Instance.GetHeroStory(h.id);
-    }
-
-    public static float GetEquipmentGrowth(this Equipment e)
-    {
-        return DataManager.Instance.GetGrowth(e.rarity);
-    }
-
-    public static Hero GetHeroWithID(this HeroData h)
+    public static Hero GetHero(this HeroData h)
     {
         return DataManager.Instance.GetHeroWithID(h.heroId);
     }
 
-    public static Devil GetDevilWithID(this DevilData d)
+    public static Devil GetDevil(this DevilData d)
     {
         return DataManager.Instance.GetDevilWithID(d.devilId);
     }

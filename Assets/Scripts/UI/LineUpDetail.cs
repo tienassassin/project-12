@@ -56,7 +56,7 @@ public class LineUpDetail : DuztineBehaviour
     {
         _curSlotId = slotId;
         _saveData = data;
-        _baseData = _saveData?.GetHeroWithID();
+        _baseData = _saveData?.GetHero();
         info.SetActive(_saveData != null);
         equipmentGroup.SetActive(_saveData != null);
 

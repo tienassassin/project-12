@@ -31,7 +31,7 @@ public abstract class BattleEntity : DuztineBehaviour, IAttacker, IDefender
 
     public void Init(HeroData heroData)
     {
-        BaseData = heroData.GetHeroWithID();
+        BaseData = heroData.GetHero();
         Setup();
 
         Hp = (heroData.curHp / 100) * Stats.health;
@@ -40,7 +40,7 @@ public abstract class BattleEntity : DuztineBehaviour, IAttacker, IDefender
 
     public void Init(DevilData devilData)
     {
-        BaseData = devilData.GetDevilWithID();
+        BaseData = devilData.GetDevil();
         Setup();
 
         Hp = Stats.health;

@@ -18,7 +18,7 @@ public abstract class HeroCard : DuztineBehaviour
     public virtual void Init(HeroData saveData)
     {
         SaveData = saveData;
-        BaseData = SaveData.GetHeroWithID();
+        BaseData = SaveData.GetHero();
         name = BaseData.name;
         Level = SaveData.GetLevel();
         Hp = SaveData.curHp;

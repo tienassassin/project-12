@@ -32,7 +32,7 @@ public class LineUpSlot : DuztineBehaviour
     public void Init(HeroData data, Action<int, HeroData> slotHighlighted)
     {
         _saveData = data;
-        _baseData = _saveData?.GetHeroWithID();
+        _baseData = _saveData?.GetHero();
         hero.SetActive(_saveData != null);
         heroInfo.SetActive(_saveData != null);
         name = (_baseData != null ? _baseData.name : Constants.EMPTY_MARK);

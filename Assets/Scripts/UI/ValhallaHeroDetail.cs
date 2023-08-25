@@ -35,7 +35,7 @@ public class ValhallaHeroDetail : DuztineBehaviour
 
     public void Init(HeroData saveData)
     {
-        _baseData = saveData.GetHeroWithID();
+        _baseData = saveData.GetHero();
         txtName.text = _baseData.name;
         _level = saveData.GetLevel();
         (_curExp, _nextExp) = saveData.GetExp();

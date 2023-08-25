@@ -138,3 +138,11 @@ public class DevilDatabase : Database
 public class Devil : Entity
 {
 }
+
+public static partial class DataExtensions
+{
+    public static float GetDevilGrowth(this Devil d)
+    {
+        return DataManager.Instance.GetGrowth(d.tier);
+    }
+}
