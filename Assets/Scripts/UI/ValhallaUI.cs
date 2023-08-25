@@ -1,39 +1,27 @@
 using System.Collections.Generic;
-using DB.System;
-using DB.Player;
 using UnityEngine;
 
 public class ValhallaUI : BaseUI
 {
     [SerializeField] private Transform heroCardContainer;
     [SerializeField] private ValhallaCard valhallaCardPref;
-    
+
     [SerializeField] private FilterOption[] tierFilterOptions;
     [SerializeField] private FilterOption[] elementFilterOptions;
     [SerializeField] private FilterOption[] raceFilterOptions;
 
     [SerializeField] private HeroDetail heroDetail;
-    
-    private readonly List<Tier> _tierOpts = new();
+    private readonly List<ValhallaCard> _activeCards = new();
     private readonly List<Element> _elementOpts = new();
     private readonly List<Race> _raceOpts = new();
-    private SortType _lvSort;
-    private SortType _tierSort;
+
+    private readonly List<Tier> _tierOpts = new();
 
     private List<ValhallaCard> _cards = new();
-    private readonly List<ValhallaCard> _activeCards = new();
+    private List<Hero> _heroes = new();
+    private SortType _lvSort;
     private ValhallaCard _selectedCard;
-    private List<DB.System.Hero> _heroes = new();
-    
-    public static void Show()
-    {
-        UIManager.Instance.ShowUI(nameof(ValhallaUI));
-    }
-
-    public static void Hide()
-    {
-        UIManager.Instance.HideUI(nameof(ValhallaUI));
-    }
+    private SortType _tierSort;
 
     protected override void Awake()
     {
@@ -59,7 +47,7 @@ public class ValhallaUI : BaseUI
         {
             _cards.Add(child.gameObject.GetComponent<ValhallaCard>());
         }
-        
+
         heroDetail.gameObject.SetActive(false);
     }
 
@@ -73,9 +61,19 @@ public class ValhallaUI : BaseUI
         _tierSort = SortType.None;
 
         _heroes = DataManager.Instance.GetAllHeroes();
-        
+
         LoadHeroCards();
         Refresh();
+    }
+
+    public static void Show()
+    {
+        UIManager.Instance.ShowUI(nameof(ValhallaUI));
+    }
+
+    public static void Hide()
+    {
+        UIManager.Instance.HideUI(nameof(ValhallaUI));
     }
 
     private void LoadHeroCards()
@@ -100,18 +98,17 @@ public class ValhallaUI : BaseUI
             if (PlayerManager.Instance.IsHeroUnlocked(_heroes[i].id, out var hsd))
             {
                 // unlocked hero
-                card.Init(hsd, (saveData) =>
-                    {
-                        ShowCardDetail(saveData);
-                        _selectedCard = card;
-                    });
+                card.Init(hsd, saveData =>
+                {
+                    ShowCardDetail(saveData);
+                    _selectedCard = card;
+                });
             }
             else
             {
                 // locked hero
                 card.Init(_heroes[i]);
             }
-            
         }
     }
 
@@ -124,28 +121,26 @@ public class ValhallaUI : BaseUI
         if (_lvSort != SortType.None)
         {
             _cards.Sort((c1, c2) =>
-            
                 CompareLevel(c1, c2, _lvSort != SortType.Descending)
             );
         }
         else if (_tierSort != SortType.None)
         {
             _cards.Sort((c1, c2) =>
-
                 CompareTier(c1, c2, _tierSort != SortType.Descending)
             );
         }
-        
+
         _activeCards.Clear();
-        
+
         _cards.ForEach(c =>
         {
             c.transform.SetAsLastSibling();
             if (c.name == Constants.EMPTY_MARK) return;
-            
+
             bool match = (_tierOpts.Contains(c.Tier) || acpAllTier)
-                && (_elementOpts.Contains(c.Element) || acpAllElement)
-                && (_raceOpts.Contains(c.Race) || acpAllRace);
+                         && (_elementOpts.Contains(c.Element) || acpAllElement)
+                         && (_raceOpts.Contains(c.Race) || acpAllRace);
 
             c.gameObject.SetActive(match);
 
@@ -156,7 +151,7 @@ public class ValhallaUI : BaseUI
         {
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;
-            
+
             int lockComparision = c1.IsLocked.CompareTo(c2.IsLocked);
             if (lockComparision != 0) return lockComparision;
             int levelComparision = c1.Level.CompareTo(c2.Level);
@@ -164,7 +159,7 @@ public class ValhallaUI : BaseUI
             int tierComparision = c1.Tier.CompareTo(c2.Tier);
             return ascending ? tierComparision : -tierComparision;
         }
-        
+
         int CompareTier(ValhallaCard c1, ValhallaCard c2, bool ascending)
         {
             if (c1.name == Constants.EMPTY_MARK) return 1;
@@ -179,7 +174,7 @@ public class ValhallaUI : BaseUI
         }
     }
 
-    private void ShowCardDetail(DB.Player.Hero saveData)
+    private void ShowCardDetail(HeroData saveData)
     {
         heroDetail.gameObject.SetActive(true);
         heroDetail.Init(saveData);
@@ -194,7 +189,7 @@ public class ValhallaUI : BaseUI
     public void SelectNextCard()
     {
         if (!_selectedCard || _activeCards.Count < 2) return;
-        
+
         int nextIndex = _activeCards.IndexOf(_selectedCard) + 1;
         if (nextIndex >= _activeCards.Count) nextIndex = 0;
         _activeCards[nextIndex].SelectCard();
@@ -203,7 +198,7 @@ public class ValhallaUI : BaseUI
     public void SelectPreviousCard()
     {
         if (!_selectedCard || _activeCards.Count < 2) return;
-        
+
         int nextIndex = _activeCards.IndexOf(_selectedCard) - 1;
         if (nextIndex < 0) nextIndex = _activeCards.Count - 1;
         _activeCards[nextIndex].SelectCard();
@@ -235,7 +230,7 @@ public class ValhallaUI : BaseUI
                 EditorLog.Error($"Object {o} is not a valid filter option");
                 return;
         }
-        
+
         Refresh();
     }
 
@@ -257,7 +252,7 @@ public class ValhallaUI : BaseUI
 
     public void OnClickBack()
     {
-        ValhallaUI.Hide();
+        Hide();
     }
 
     #endregion

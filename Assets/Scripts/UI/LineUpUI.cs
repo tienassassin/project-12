@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using DB.System;
 using System.Linq;
-using DB.Player;
 using UnityEngine;
 
 public class LineUpUI : BaseUI
@@ -13,9 +11,15 @@ public class LineUpUI : BaseUI
     [SerializeField] private LineUpDetail detail;
 
     private int _curView;
-    private Dictionary<Race, int> _raceCountDict = new();
     private Dictionary<Element, int> _elementCountDict = new();
-    
+    private Dictionary<Race, int> _raceCountDict = new();
+
+    private void OnEnable()
+    {
+        RefreshMainView();
+        SwitchView(0);
+    }
+
     public static void Show()
     {
         UIManager.Instance.ShowUI(nameof(LineUpUI));
@@ -26,22 +30,16 @@ public class LineUpUI : BaseUI
         UIManager.Instance.HideUI(nameof(LineUpUI));
     }
 
-    private void OnEnable()
-    {
-        RefreshMainView();
-        SwitchView(0);
-    }
-
     private void RefreshMainView()
     {
         var readyHeroList = PlayerManager.Instance.GetReadyHeroes();
         for (int i = 0; i < readyHeroList.Count; i++)
         {
             slots[i].Init(readyHeroList[i], (slotId, saveData) =>
-                {
-                    RefreshDetailView(slotId, saveData);
-                    SwitchView(1);
-                });
+            {
+                RefreshDetailView(slotId, saveData);
+                SwitchView(1);
+            });
         }
 
         GetRaceAura(readyHeroList);
@@ -53,7 +51,7 @@ public class LineUpUI : BaseUI
         EditorLog.Message(auraStatistics);
     }
 
-    private void RefreshDetailView(int slotId, DB.Player.Hero saveData)
+    private void RefreshDetailView(int slotId, HeroData saveData)
     {
         detail.Init(slotId, saveData);
     }
@@ -62,17 +60,17 @@ public class LineUpUI : BaseUI
     {
         index = Mathf.Clamp(index, 0, views.Length - 1);
         _curView = index;
-        
+
         for (int i = 0; i < views.Length; i++)
         {
             views[i].SetActive(i == index);
         }
     }
 
-    private void GetRaceAura(List<DB.Player.Hero> heroList)
+    private void GetRaceAura(List<HeroData> heroList)
     {
         var raceList = heroList.Where(x => x != null).Select(x => x.GetHeroWithID().race).ToList();
-        
+
         _raceCountDict = raceList.GroupBy(x => x)
             .ToDictionary(x => x.Key, x => x.Count());
 
@@ -90,14 +88,14 @@ public class LineUpUI : BaseUI
             raceAuras[index++].gameObject.SetActive(false);
         }
     }
-    
-    private void GetElementAura(List<DB.Player.Hero> heroList)
+
+    private void GetElementAura(List<HeroData> heroList)
     {
         var elementList = heroList.Where(x => x != null).Select(x => x.GetHeroWithID().element).ToList();
-        
+
         _elementCountDict = elementList.GroupBy(x => x)
             .ToDictionary(x => x.Key, x => x.Count());
-        
+
         int index = 0;
         foreach (var kv in _elementCountDict)
         {
@@ -118,13 +116,12 @@ public class LineUpUI : BaseUI
         switch (_curView)
         {
             case 0:
-                LineUpUI.Hide();
+                Hide();
                 break;
             case 1:
                 RefreshMainView();
                 SwitchView(0);
                 break;
         }
-
     }
 }

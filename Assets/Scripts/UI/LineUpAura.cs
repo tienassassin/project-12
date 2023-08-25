@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using DB.System;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using TMPro;
@@ -20,15 +19,27 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private float fontSize1;
     [SerializeField] private TMP_Text txtTitle;
     [SerializeField] private TMP_Text txtContent;
-    
+    private object _auraType;
+
     private Coroutine _coroutine;
     private string _hexColor0;
     private string _hexColor1;
-    private object _auraType;
 
     private void Awake()
     {
         detailPanel.SetActive(false);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        _coroutine = StartCoroutine(ShowDetailPanel());
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (_coroutine != null) StopCoroutine(_coroutine);
+        detailPanel.SetActive(false);
+        this.PostEvent(EventID.ON_HIGHLIGHT_AURA);
     }
 
     [Button]
@@ -36,7 +47,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         _auraType = race;
         txtTitle.text = $"<color={ColorPalette.Instance.GetRaceColorHex(race)}>" +
-                        $"<ico>" +
+                        "<ico>" +
                         $"{race} Aura</color>";
         var auraList = DataManager.Instance.GetAuras(race);
         RefreshRank(rank);
@@ -59,7 +70,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         rank = Mathf.Clamp(rank, minRank, maxRank);
         int rankIndex = rank - minRank;
-        
+
         for (int i = 0; i < txtRanks.Length; i++)
         {
             txtRanks[i].fontSize = (i != rankIndex) ? fontSize0 : fontSize1;
@@ -71,7 +82,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         _hexColor0 = "#" + ColorUtility.ToHtmlStringRGBA(color0);
         _hexColor1 = "#" + ColorUtility.ToHtmlStringRGBA(color1[1]);
-        
+
         string content = "";
         for (int i = 0; i < auraList.Count; i++)
         {
@@ -80,10 +91,10 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
             bool emptyName = aura.name.IsNullOrWhitespace();
             bool isLastAura = (i >= auraList.Count - 1);
             content += $"<color={(isCurRank ? _hexColor1 : _hexColor0)}>" +
-                        $"{aura.name}{(emptyName ? "" : " ")}" +
-                        $"({aura.rank}): {aura.description}" +
-                        "</color>" +
-                        $"{(isLastAura ? "" : "\n\n")}";
+                       $"{aura.name}{(emptyName ? "" : " ")}" +
+                       $"({aura.rank}): {aura.description}" +
+                       "</color>" +
+                       $"{(isLastAura ? "" : "\n\n")}";
         }
 
         int index = 0;
@@ -96,19 +107,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         txtContent.text = content;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        _coroutine = StartCoroutine(ShowDetailPanel());
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        if (_coroutine != null) StopCoroutine(_coroutine);
-        detailPanel.SetActive(false);
-        this.PostEvent(EventID.ON_HIGHLIGHT_AURA);
-    }
-
-    IEnumerator ShowDetailPanel()
+    private IEnumerator ShowDetailPanel()
     {
         yield return new WaitForSeconds(delayShowPanel);
         detailPanel.SetActive(true);

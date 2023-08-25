@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using DB.System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,16 +15,27 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private Color colorDiff1;
     [SerializeField] private GameObject detailPanel;
     [SerializeField] private float delayShowPanel = 0.5f;
-    
+    private Coroutine _coroutine;
+
     private string _hexColorDiff0;
     private string _hexColorDiff1;
-    private Coroutine _coroutine;
 
     private void Awake()
     {
         detailPanel.SetActive(false);
         _hexColorDiff0 = "#" + ColorUtility.ToHtmlStringRGBA(colorDiff0);
         _hexColorDiff1 = "#" + ColorUtility.ToHtmlStringRGBA(colorDiff1);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        _coroutine = StartCoroutine(ShowDetailPanel());
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (_coroutine != null) StopCoroutine(_coroutine);
+        detailPanel.SetActive(false);
     }
 
     public void Init(Stats baseStats, Stats nonEqmStats, Stats overallStats, DamageType dmgType)
@@ -125,8 +135,8 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         if (!diff0Value.Contains("+")) diff0Value = "";
 
         txtStatDetailValue.text = $"{baseValue}" +
-                            $"<color={_hexColorDiff0}>{diff0Value}</color>" +
-                            $"<color={_hexColorDiff1}>{diff1Value}</color>";
+                                  $"<color={_hexColorDiff0}>{diff0Value}</color>" +
+                                  $"<color={_hexColorDiff1}>{diff1Value}</color>";
 
         string rawDesc = DataManager.Instance.GetStatDescription(key);
         for (int i = 0; i < valueList.Count; i++)
@@ -138,23 +148,12 @@ public class StatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             rawDesc = rawDesc.Replace($"#color{i}", $"{colorList[i]}");
         }
-        
+
         txtDescription.text = rawDesc;
         txtTitle.text = Utils.GetTitleCaseString(DataManager.Instance.GetStatName(key));
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        _coroutine = StartCoroutine(ShowDetailPanel());
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        if (_coroutine != null) StopCoroutine(_coroutine);
-        detailPanel.SetActive(false);
-    }
-
-    IEnumerator ShowDetailPanel()
+    private IEnumerator ShowDetailPanel()
     {
         yield return new WaitForSecondsRealtime(delayShowPanel);
         detailPanel.SetActive(true);

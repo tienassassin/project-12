@@ -6,78 +6,72 @@ using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace DB.System
+public class StatDatabase : Database
 {
-    public class StatDatabase : Database
+    [TableList]
+    public List<StatDesc> stats = new();
+
+    private readonly Dictionary<string, StatDesc> _cachedDict = new();
+
+    protected override async void Import()
     {
-        [TableList] 
-        public List<StatDesc> stats = new();
-        
-        private readonly Dictionary<string, StatDesc> _cachedDict = new();
+        var data = this.FetchFromLocal(0);
 
-        protected override async void Import()
+        stats = new List<StatDesc>();
+
+        var watch = new Stopwatch();
+        watch.Start();
+        await Task.Run(() =>
         {
-            var data = this.FetchFromLocal(0);
-            
-            stats = new List<StatDesc>();
-            
-            var watch = new Stopwatch();
-            watch.Start();
-            await Task.Run(() =>
+            var jArray = JArray.Parse(data);
+            foreach (var jToken in jArray)
             {
-                var jArray = JArray.Parse(data);
-                foreach (var jToken in jArray)
-                {
-                    ConvertDataFromJObject((JObject)jToken, out var s);
-                    stats.Add(s);
-                }
-            });
-            
-            watch.Stop();
-            DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
-        }
+                ConvertDataFromJObject((JObject)jToken, out var s);
+                stats.Add(s);
+            }
+        });
 
-        [Button]
-        protected override void DeleteAll()
-        {
-            stats.Clear();
-        }
-
-        private void ConvertDataFromJObject(JObject jObject, out StatDesc s)
-        {
-            s = new StatDesc
-            {
-                stat = (string)jObject["stat"],
-                name = (string)jObject["name"],
-                limit = Utils.Parse<float>((string)jObject["limit"]),
-                description = (string)jObject["description"]
-            };
-        }
-
-        public StatDesc GetStatDescription(string stat)
-        {
-            _cachedDict.TryAdd(stat, stats.Find(s => s.stat == stat));
-            if (_cachedDict[stat] == null) EditorLog.Error($"Stat {stat} is not defined");
-            return _cachedDict[stat];
-        }
-
-
+        watch.Stop();
+        DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
     }
 
-    [Serializable]
-    public class StatDesc
+    [Button]
+    protected override void DeleteAll()
     {
-        [TableColumnWidth(100, Resizable = false)]
-        public string stat;
+        stats.Clear();
+    }
 
-        [TableColumnWidth(100, Resizable = false)]
-        public string name;
+    private void ConvertDataFromJObject(JObject jObject, out StatDesc s)
+    {
+        s = new StatDesc
+        {
+            stat = (string)jObject["stat"],
+            name = (string)jObject["name"],
+            limit = Utils.Parse<float>((string)jObject["limit"]),
+            description = (string)jObject["description"]
+        };
+    }
 
-        [TableColumnWidth(70, Resizable = false), ShowIf("@this.limit > 0")]
-        public float limit;
-
-        [TextArea(3, 10)]
-        public string description;
+    public StatDesc GetStatDescription(string stat)
+    {
+        _cachedDict.TryAdd(stat, stats.Find(s => s.stat == stat));
+        if (_cachedDict[stat] == null) EditorLog.Error($"Stat {stat} is not defined");
+        return _cachedDict[stat];
     }
 }
 
+[Serializable]
+public class StatDesc
+{
+    [TableColumnWidth(100, Resizable = false)]
+    public string stat;
+
+    [TableColumnWidth(100, Resizable = false)]
+    public string name;
+
+    [TableColumnWidth(70, Resizable = false)] [ShowIf("@this.limit > 0")]
+    public float limit;
+
+    [TextArea(3, 10)]
+    public string description;
+}

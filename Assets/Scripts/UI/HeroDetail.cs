@@ -1,5 +1,4 @@
 using System;
-using DB.System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,12 +19,12 @@ public class HeroDetail : DuztineBehaviour
 
     [SerializeField] private StatDetail[] statDetails;
 
-    private DB.System.Hero _baseData;
-    private int _level;
-    private int _curExp;
-    private int _nextExp;
+    private Hero _baseData;
 
     private Stats _baseStats;
+    private int _curExp;
+    private int _level;
+    private int _nextExp;
     private Stats _nonEqmStats;
     private Stats _overallStats;
 
@@ -34,18 +33,18 @@ public class HeroDetail : DuztineBehaviour
         SwitchTab(0);
     }
 
-    public void Init(DB.Player.Hero saveData)
+    public void Init(HeroData saveData)
     {
         _baseData = saveData.GetHeroWithID();
         txtName.text = _baseData.name;
         _level = saveData.GetLevel();
         (_curExp, _nextExp) = saveData.GetExp();
-        
+
         txtLevel.text = _level.ToString();
         bool levelMaxed = _level >= DataManager.Instance.GetLevelMax();
         txtExp.text = levelMaxed ? "MAX" : $"EXP: {_curExp} / {_nextExp} ({_curExp * 100 / _nextExp}%)";
         sldExp.value = (float)_curExp / _nextExp;
-        
+
         LoadStatsTab();
         LoadStoryTab();
     }

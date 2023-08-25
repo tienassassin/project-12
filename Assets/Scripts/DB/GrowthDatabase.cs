@@ -4,102 +4,97 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
-using UnityEngine;
 
-namespace DB.System
+public class GrowthDatabase : Database
 {
-    public class GrowthDatabase : Database
+    [TableList]
+    public List<EntityGrowth> entityGrowths = new();
+    [TableList]
+    public List<EquipmentGrowth> equipmentGrowths = new();
+
+    protected override async void Import()
     {
-        [TableList]
-        public List<EntityGrowth> entityGrowths = new();
-        [TableList]
-        public List<EquipmentGrowth> equipmentGrowths = new();
+        var data = this.FetchFromLocal();
 
-        protected override async void Import()
+        entityGrowths = new List<EntityGrowth>();
+        equipmentGrowths = new List<EquipmentGrowth>();
+
+        var watch = new Stopwatch();
+        watch.Start();
+        await Task.Run(() =>
         {
-            var data = this.FetchFromLocal();
-            
-            entityGrowths = new List<EntityGrowth>();
-            equipmentGrowths = new List<EquipmentGrowth>();
-            
-            var watch = new Stopwatch();
-            watch.Start();
-            await Task.Run(() =>
+            var jArrayEnt = JArray.Parse(data[0]);
+            foreach (var jToken in jArrayEnt)
             {
-                var jArrayEnt = JArray.Parse(data[0]);
-                foreach (var jToken in jArrayEnt)
-                {
-                    ConvertDataFromJObject((JObject)jToken, out EntityGrowth g);
-                    entityGrowths.Add(g);
-                }
-
-                var jArrayEqm = JArray.Parse(data[1]);
-                foreach (var jToken in jArrayEqm)
-                {
-                    ConvertDataFromJObject((JObject)jToken, out EquipmentGrowth g);
-                    equipmentGrowths.Add(g);
-                }
-            });
-            
-            watch.Stop();
-            DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
-
-        }
-
-        [Button]
-        protected override void DeleteAll()
-        {
-            entityGrowths.Clear();
-            equipmentGrowths.Clear();
-        }
-
-        public float GetGrowth(object obj)
-        {
-            switch (obj)
-            {
-                case Tier t:
-                    return entityGrowths.Find(x => x.tier == t).growth;
-                case Rarity r:
-                    return equipmentGrowths.Find(x => x.rarity == r).growth;
-                default:
-                    return 0;
+                ConvertDataFromJObject((JObject)jToken, out EntityGrowth g);
+                entityGrowths.Add(g);
             }
-        }
 
-        private void ConvertDataFromJObject(JObject jObject, out EntityGrowth g)
-        {
-            Enum.TryParse((string)jObject["tier"], out Tier tier);
-
-            g = new EntityGrowth
+            var jArrayEqm = JArray.Parse(data[1]);
+            foreach (var jToken in jArrayEqm)
             {
-                tier = tier,
-                growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
-            };
-        }
+                ConvertDataFromJObject((JObject)jToken, out EquipmentGrowth g);
+                equipmentGrowths.Add(g);
+            }
+        });
 
-        private void ConvertDataFromJObject(JObject jObject, out EquipmentGrowth g)
+        watch.Stop();
+        DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
+    }
+
+    [Button]
+    protected override void DeleteAll()
+    {
+        entityGrowths.Clear();
+        equipmentGrowths.Clear();
+    }
+
+    public float GetGrowth(object obj)
+    {
+        switch (obj)
         {
-            Enum.TryParse((string)jObject["rarity"], out Rarity rarity);
-
-            g = new EquipmentGrowth
-            {
-                rarity = rarity,
-                growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f,
-            };
+            case Tier t:
+                return entityGrowths.Find(x => x.tier == t).growth;
+            case Rarity r:
+                return equipmentGrowths.Find(x => x.rarity == r).growth;
+            default:
+                return 0;
         }
     }
 
-    [Serializable]
-    public struct EntityGrowth
+    private void ConvertDataFromJObject(JObject jObject, out EntityGrowth g)
     {
-        public Tier tier;
-        public float growth;
+        Enum.TryParse((string)jObject["tier"], out Tier tier);
+
+        g = new EntityGrowth
+        {
+            tier = tier,
+            growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f
+        };
     }
 
-    [Serializable]
-    public struct EquipmentGrowth
+    private void ConvertDataFromJObject(JObject jObject, out EquipmentGrowth g)
     {
-        public Rarity rarity;
-        public float growth;
+        Enum.TryParse((string)jObject["rarity"], out Rarity rarity);
+
+        g = new EquipmentGrowth
+        {
+            rarity = rarity,
+            growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f
+        };
     }
+}
+
+[Serializable]
+public struct EntityGrowth
+{
+    public Tier tier;
+    public float growth;
+}
+
+[Serializable]
+public struct EquipmentGrowth
+{
+    public Rarity rarity;
+    public float growth;
 }

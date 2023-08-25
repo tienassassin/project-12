@@ -1,5 +1,4 @@
-﻿using DB.Player;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class HomeUI : BaseUI
@@ -11,46 +10,10 @@ public class HomeUI : BaseUI
 
     private float _curTime;
     private int _frameCount;
-    
-    public static void Show()
-    {
-        UIManager.Instance.ShowUI(nameof(HomeUI));
-    }
-
-    public static void Hide()
-    {
-        UIManager.Instance.HideUI(nameof(HomeUI));
-    }
-
-    private void OnEnable()
-    {
-        this.AddListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
-    }
-
-    private void OnDisable()
-    {
-        this.RemoveListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
-    }
 
     private void Start()
     {
         RefreshHeroAvatars();
-    }
-
-    private void RefreshHeroAvatars(object _ = null)
-    {
-        var readyHeroList = PlayerManager.Instance.GetReadyHeroes().FindAll(x=>x != null);
-        for (int i = 0; i < avatars.Length; i++)
-        {
-            if (i >= readyHeroList.Count)
-            {
-                avatars[i].gameObject.SetActive(false);
-                continue;
-            }
-
-            avatars[i].gameObject.SetActive(true);
-            avatars[i].Init(readyHeroList[i]);
-        }
     }
 
     private void Update()
@@ -63,6 +26,42 @@ public class HomeUI : BaseUI
             fpsTxt.text = "FPS: " + fps;
             _curTime -= logInterval;
             _frameCount = 0;
+        }
+    }
+
+    private void OnEnable()
+    {
+        this.AddListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
+    }
+
+    private void OnDisable()
+    {
+        this.RemoveListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
+    }
+
+    public static void Show()
+    {
+        UIManager.Instance.ShowUI(nameof(HomeUI));
+    }
+
+    public static void Hide()
+    {
+        UIManager.Instance.HideUI(nameof(HomeUI));
+    }
+
+    private void RefreshHeroAvatars(object _ = null)
+    {
+        var readyHeroList = PlayerManager.Instance.GetReadyHeroes().FindAll(x => x != null);
+        for (int i = 0; i < avatars.Length; i++)
+        {
+            if (i >= readyHeroList.Count)
+            {
+                avatars[i].gameObject.SetActive(false);
+                continue;
+            }
+
+            avatars[i].gameObject.SetActive(true);
+            avatars[i].Init(readyHeroList[i]);
         }
     }
 

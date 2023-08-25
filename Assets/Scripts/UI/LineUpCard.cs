@@ -1,5 +1,4 @@
 using System;
-using DB.Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,17 +10,17 @@ public class LineUpCard : BaseHeroCard
     [SerializeField] private Slider sldHp;
     [SerializeField] private Slider sldEnergy;
     [SerializeField] private GameObject readyMark;
-    
-    private Action<DB.Player.Hero> _cardSelected;
 
-    public void Init(DB.Player.Hero data, Action<DB.Player.Hero> cardSelected)
+    private Action<HeroData> _cardSelected;
+
+    public void Init(HeroData data, Action<HeroData> cardSelected)
     {
         base.Init(data);
 
         _cardSelected = cardSelected;
         Refresh();
     }
-    
+
     private void Refresh()
     {
         imgElement.color = ColorPalette.Instance.GetElementColor(BaseData.element);

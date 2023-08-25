@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using DB.System;
-using DB.Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +7,7 @@ public class LineUpDetail : DuztineBehaviour
 {
     [SerializeField] private GameObject info;
     [SerializeField] private GameObject equipmentGroup;
-    
+
     [SerializeField] private TMP_Text txtName;
     [SerializeField] private Image imgRace;
     [SerializeField] private Image imgElement;
@@ -21,15 +19,15 @@ public class LineUpDetail : DuztineBehaviour
 
     [SerializeField] private FilterOption[] raceFilterOptions;
 
+    private readonly List<Race> _raceOpts = new();
+    private Hero _baseData;
+
     private int _curSlotId;
-    private DB.Player.Hero _saveData;
-    private DB.System.Hero _baseData;
-    private List<DB.Player.Hero> _heroSaveDataList = new();
-    
-    private List<LineUpCard> _heroCards = new();
     private List<EquipmentCard> _equipmentCards = new();
 
-    private readonly List<Race> _raceOpts = new();
+    private List<LineUpCard> _heroCards = new();
+    private List<HeroData> _heroSaveDataList = new();
+    private HeroData _saveData;
 
     private void Awake()
     {
@@ -37,7 +35,7 @@ public class LineUpDetail : DuztineBehaviour
         {
             opt.SetEvent(AddOptionToFilter);
         }
-        
+
         _heroCards = new List<LineUpCard>();
         foreach (Transform child in heroCardContainer)
         {
@@ -48,115 +46,22 @@ public class LineUpDetail : DuztineBehaviour
     private void OnEnable()
     {
         _raceOpts.Clear();
-        
+
         _heroSaveDataList = PlayerManager.Instance.GetAllHeroes();
-        
+
         LoadHeroCards();
     }
 
-    public void Init(int slotId, DB.Player.Hero data)
+    public void Init(int slotId, HeroData data)
     {
         _curSlotId = slotId;
         _saveData = data;
         _baseData = _saveData?.GetHeroWithID();
         info.SetActive(_saveData != null);
         equipmentGroup.SetActive(_saveData != null);
-        
+
         Refresh();
     }
-
-    #region Hero Cards
-
-    private void LoadHeroCards()
-    {
-        while (heroCardContainer.childCount < _heroSaveDataList.Count)
-        {
-            var o = Instantiate(lineUpCardPref, heroCardContainer);
-            _heroCards.Add(o);
-        }
-        
-        for (int i = 0; i < _heroCards.Count; i++)
-        {
-            var card = _heroCards[i];
-            if (i >= _heroSaveDataList.Count)
-            {
-                card.gameObject.SetActive(false);
-                card.name = Constants.EMPTY_MARK;
-                continue;
-            }
-
-            card.gameObject.SetActive(true);
-            card.Init(_heroSaveDataList[i], (data)=>
-                {
-                    if (data != _saveData)
-                    {
-                        AddHeroToLineUp(data.heroId);
-                        Init(_curSlotId, data);
-                    }
-                    else
-                    {
-                        RemoveHeroFromLineUp();
-                        Init(_curSlotId, null);
-                    }
-                    
-                    UpdateHeroCards();
-                });
-        }
-        
-        UpdateHeroCards();
-        SortHeroCards();
-    }
-
-    private void UpdateHeroCards()
-    {
-        _heroCards.ForEach(x =>
-        {
-            x.UpdateReadyState();
-        });
-    }
-
-    private void ApplyHeroCardFilter()
-    {
-        bool acpAllRace = _raceOpts.Count < 1;
-        
-        _heroCards.ForEach(c =>
-        {
-            if (c.name == Constants.EMPTY_MARK) return;
-
-            bool match = (_raceOpts.Contains(c.Race) || acpAllRace);
-            c.gameObject.SetActive(match);
-        });
-    }
-    
-    private void SortHeroCards()
-    {
-        _heroCards.Sort((c1, c2) => CompareLevel(c1, c2, false));
-        
-        _heroCards.ForEach(c =>
-        {
-            c.transform.SetAsLastSibling();
-        });
-        
-        int CompareLevel(LineUpCard c1, LineUpCard c2, bool ascending)
-        {
-            if (c1.name == Constants.EMPTY_MARK) return 1;
-            if (c2.name == Constants.EMPTY_MARK) return -1;
-
-            int levelComparision = c1.Level.CompareTo(c2.Level);
-            if (levelComparision != 0) return ascending ? levelComparision : -levelComparision;
-            int tierComparision = c1.Tier.CompareTo(c2.Tier);
-            return ascending ? tierComparision : -tierComparision;
-        }
-    }
-    
-    #endregion
-
-    
-    #region Equipment Cards
-
-    // todo    
-
-    #endregion
 
     private void Refresh()
     {
@@ -174,7 +79,7 @@ public class LineUpDetail : DuztineBehaviour
     {
         PlayerManager.Instance.RemoveHeroFromLineUp(_curSlotId);
     }
-    
+
     private void AddOptionToFilter(object o)
     {
         switch (o)
@@ -189,7 +94,94 @@ public class LineUpDetail : DuztineBehaviour
                 EditorLog.Error($"Object {o} is not a valid filter option");
                 return;
         }
-        
-       ApplyHeroCardFilter();
+
+        ApplyHeroCardFilter();
     }
+
+    #region Hero Cards
+
+    private void LoadHeroCards()
+    {
+        while (heroCardContainer.childCount < _heroSaveDataList.Count)
+        {
+            var o = Instantiate(lineUpCardPref, heroCardContainer);
+            _heroCards.Add(o);
+        }
+
+        for (int i = 0; i < _heroCards.Count; i++)
+        {
+            var card = _heroCards[i];
+            if (i >= _heroSaveDataList.Count)
+            {
+                card.gameObject.SetActive(false);
+                card.name = Constants.EMPTY_MARK;
+                continue;
+            }
+
+            card.gameObject.SetActive(true);
+            card.Init(_heroSaveDataList[i], data =>
+            {
+                if (data != _saveData)
+                {
+                    AddHeroToLineUp(data.heroId);
+                    Init(_curSlotId, data);
+                }
+                else
+                {
+                    RemoveHeroFromLineUp();
+                    Init(_curSlotId, null);
+                }
+
+                UpdateHeroCards();
+            });
+        }
+
+        UpdateHeroCards();
+        SortHeroCards();
+    }
+
+    private void UpdateHeroCards()
+    {
+        _heroCards.ForEach(x => { x.UpdateReadyState(); });
+    }
+
+    private void ApplyHeroCardFilter()
+    {
+        bool acpAllRace = _raceOpts.Count < 1;
+
+        _heroCards.ForEach(c =>
+        {
+            if (c.name == Constants.EMPTY_MARK) return;
+
+            bool match = (_raceOpts.Contains(c.Race) || acpAllRace);
+            c.gameObject.SetActive(match);
+        });
+    }
+
+    private void SortHeroCards()
+    {
+        _heroCards.Sort((c1, c2) => CompareLevel(c1, c2, false));
+
+        _heroCards.ForEach(c => { c.transform.SetAsLastSibling(); });
+
+        int CompareLevel(LineUpCard c1, LineUpCard c2, bool ascending)
+        {
+            if (c1.name == Constants.EMPTY_MARK) return 1;
+            if (c2.name == Constants.EMPTY_MARK) return -1;
+
+            int levelComparision = c1.Level.CompareTo(c2.Level);
+            if (levelComparision != 0) return ascending ? levelComparision : -levelComparision;
+            int tierComparision = c1.Tier.CompareTo(c2.Tier);
+            return ascending ? tierComparision : -tierComparision;
+        }
+    }
+
+    #endregion
+
+
+    #region Equipment Cards
+
+    // todo    
+
+    #endregion
 }

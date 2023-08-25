@@ -1,5 +1,4 @@
 using System;
-using DB.System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,10 +14,10 @@ public class LineUpSlot : DuztineBehaviour
     [SerializeField] private Slider sldEnergy;
 
     [SerializeField] private GameObject highlight;
+    private Hero _baseData;
+    private HeroData _saveData;
 
-    private Action<int, DB.Player.Hero> _slotHighlighted;
-    private DB.Player.Hero _saveData;
-    private DB.System.Hero _baseData;
+    private Action<int, HeroData> _slotHighlighted;
 
     private void OnEnable()
     {
@@ -30,7 +29,7 @@ public class LineUpSlot : DuztineBehaviour
         this.RemoveListener(EventID.ON_HIGHLIGHT_AURA, SwitchHighlight);
     }
 
-    public void Init(DB.Player.Hero data, Action<int, DB.Player.Hero> slotHighlighted)
+    public void Init(HeroData data, Action<int, HeroData> slotHighlighted)
     {
         _saveData = data;
         _baseData = _saveData?.GetHeroWithID();
@@ -45,7 +44,7 @@ public class LineUpSlot : DuztineBehaviour
     private void Refresh()
     {
         if (_saveData == null) return;
-        
+
         txtLevel.text = _saveData.GetLevel().ToString();
         sldHp.value = _saveData.curHp / _baseData.stats.health;
         sldEnergy.value = _saveData.energy / 100;
@@ -54,7 +53,7 @@ public class LineUpSlot : DuztineBehaviour
     private void SwitchHighlight(object condition)
     {
         bool active = false;
-        
+
         if (_baseData != null)
         {
             switch (condition)
@@ -70,7 +69,7 @@ public class LineUpSlot : DuztineBehaviour
 
         highlight.SetActive(active);
     }
-    
+
     public void OnClickSlot()
     {
         _slotHighlighted?.Invoke(slotId, _saveData);

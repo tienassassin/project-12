@@ -1,20 +1,18 @@
-using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using DB.System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class EntitySpawner : DuztineBehaviour
 {
-    [SerializeField, AssetsOnly] private BattleEntity entityPref;
+    [SerializeField] [AssetsOnly] private BattleEntity entityPref;
 
     [SerializeField] private Transform entityContainer;
     [SerializeField] private Transform[] heroPositions;
     [SerializeField] private Transform[] devilPositions;
-    
+
     // fake data
-    public List<DB.Player.Hero> heroes;
+    public List<HeroData> heroes;
     public List<DevilData> devils;
 
     private async void Start()
@@ -29,7 +27,8 @@ public class EntitySpawner : DuztineBehaviour
         int firstIndex = GetFirstPositionIndex(heroes.Count);
         for (int i = 0; i < heroes.Count; i++)
         {
-            var newEntity = Instantiate(entityPref, heroPositions[firstIndex + i].position, Quaternion.identity, entityContainer);
+            var newEntity = Instantiate(entityPref, heroPositions[firstIndex + i].position, Quaternion.identity,
+                entityContainer);
             newEntity.Init(heroes[i]);
         }
     }
@@ -39,7 +38,8 @@ public class EntitySpawner : DuztineBehaviour
         int firstIndex = GetFirstPositionIndex(devils.Count);
         for (int i = 0; i < devils.Count; i++)
         {
-            var newEntity = Instantiate(entityPref, devilPositions[firstIndex + i].position, Quaternion.identity, entityContainer);
+            var newEntity = Instantiate(entityPref, devilPositions[firstIndex + i].position, Quaternion.identity,
+                entityContainer);
             newEntity.Init(devils[i]);
         }
     }
