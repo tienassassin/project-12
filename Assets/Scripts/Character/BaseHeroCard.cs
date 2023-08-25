@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using DB.System;
 using Sirenix.OdinInspector;
 
-public abstract class Hero : DuztineBehaviour
+public abstract class BaseHeroCard : DuztineBehaviour
 {
     public int Level { get; private set; } = 1;
     public Tier Tier => BaseData.tier;

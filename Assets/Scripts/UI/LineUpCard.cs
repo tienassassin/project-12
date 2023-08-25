@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LineUpHeroCard : Hero
+public class LineUpCard : BaseHeroCard
 {
     [SerializeField] private Image imgElement;
     [SerializeField] private TMP_Text txtLevel;

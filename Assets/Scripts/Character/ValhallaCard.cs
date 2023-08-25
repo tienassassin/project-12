@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HeroCard : Hero
+public class ValhallaCard : BaseHeroCard
 {
     public bool IsLocked { get; private set; }
 

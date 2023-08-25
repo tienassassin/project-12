@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 1127257017095718339}
   - component: {fileID: 1127257017095718340}
   m_Layer: 0
-  m_Name: Database
+  m_Name: DataManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -140,9 +140,9 @@ namespace DB.System
             return matchHeroes;
         }
     }
-
+    
     [Serializable]
-    public class Hero
+    public class Entity
     {
         [VerticalGroup("Information")]
         public string id;
@@ -166,5 +166,11 @@ namespace DB.System
         public AttackRange attackRange;
 
         public Stats stats;
+    }
+
+    [Serializable]
+    public class Hero : Entity
+    {
+        
     }
 }

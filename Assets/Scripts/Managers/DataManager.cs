@@ -177,9 +177,14 @@ namespace DB.System
             return DataManager.Instance.GetGrowth(e.rarity);
         }
 
-        public static Hero GetHeroWithID(this DB.Player.Hero hsd)
+        public static Hero GetHeroWithID(this DB.Player.Hero h)
         {
-            return DataManager.Instance.GetHeroWithID(hsd.heroId);
+            return DataManager.Instance.GetHeroWithID(h.heroId);
+        }
+
+        public static Devil GetDevilWithID(this DevilData d)
+        {
+            return DataManager.Instance.GetDevilWithID(d.devilId);
         }
 
         public static int GetLevel(this DB.Player.Hero hsd)

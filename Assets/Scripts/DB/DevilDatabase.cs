@@ -138,29 +138,8 @@ namespace DB.System
     }
 
     [Serializable]
-    public class Devil
+    public class Devil : Entity
     {
-        [VerticalGroup("Information")] 
-        public string id;
         
-        [VerticalGroup("Information")] 
-        public string name;
-        
-        [VerticalGroup("Information")] 
-        public Tier tier;
-        
-        [VerticalGroup("Information")] 
-        public Element element;
-        
-        [VerticalGroup("Information")] 
-        public Race race;
-        
-        [VerticalGroup("Information")] 
-        public DamageType damageType;
-        
-        [VerticalGroup("Information")] 
-        public AttackRange attackRange;
-        
-        public Stats stats;
     }
 }
