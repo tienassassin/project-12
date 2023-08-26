@@ -72,7 +72,9 @@ public enum EventID
 {
     ON_HIGHLIGHT_AURA,
     ON_LINEUP_CHANGED,
-    ON_BATTLE_SCENE_LOADED
+    ON_BATTLE_SCENE_LOADED,
+
+    ON_TAKE_TURN
 }
 
 public static class EventDispatcherExtensions

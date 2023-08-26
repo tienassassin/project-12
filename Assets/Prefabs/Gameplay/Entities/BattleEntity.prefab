@@ -1498,6 +1498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4839870134832062091}
   - component: {fileID: 6069382969725740724}
+  - component: {fileID: 2895096620699468359}
   m_Layer: 0
   m_Name: BattleEntity
   m_TagString: Untagged
@@ -1543,6 +1544,18 @@ MonoBehaviour:
   imgMainEnergy: {fileID: 1214306782}
   imgSubEnergy: {fileID: 1390060249}
   effectContainer: {fileID: 1462264386}
+--- !u!114 &2895096620699468359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4839870134832062093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0073bfca6137134e8b6b779d86dc8eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8598227628744545320
 GameObject:
   m_ObjectHideFlags: 0

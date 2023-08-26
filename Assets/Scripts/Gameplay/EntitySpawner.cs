@@ -12,14 +12,16 @@ public class EntitySpawner : DuztineBehaviour
     [SerializeField] private Transform[] devilPositions;
 
     // fake data
-    public List<HeroData> heroes;
-    public List<DevilData> devils;
+    public List<HeroData> heroes = new();
+    public List<DevilData> devils = new();
+    private List<BattleEntity> _entities = new();
 
     private async void Start()
     {
         await UniTask.WaitUntil(() => DataManager.Ready);
         SpawnHeroes();
         SpawnDevils();
+        ActionQueue.Instance.InitQueue(_entities);
     }
 
     private void SpawnHeroes()
@@ -30,6 +32,7 @@ public class EntitySpawner : DuztineBehaviour
             var newEntity = Instantiate(entityPref, heroPositions[firstIndex + i].position, Quaternion.identity,
                 entityContainer);
             newEntity.Init(heroes[i]);
+            _entities.Add(newEntity);
         }
     }
 
@@ -41,6 +44,7 @@ public class EntitySpawner : DuztineBehaviour
             var newEntity = Instantiate(entityPref, devilPositions[firstIndex + i].position, Quaternion.identity,
                 entityContainer);
             newEntity.Init(devils[i]);
+            _entities.Add(newEntity);
         }
     }
 

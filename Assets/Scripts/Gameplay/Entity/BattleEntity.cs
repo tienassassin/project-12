@@ -6,11 +6,12 @@ using UnityEngine;
 public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTaker
 {
     [TitleGroup("BASE DATA:")]
+    [ShowInInspector] private Faction _faction;
     protected Entity BaseData;
     [ShowInInspector] protected List<Equipment> EqmList = new();
 
     [TitleGroup("IN-GAME STATS:")]
-    [ShowInInspector] protected Stats Stats;
+    [ShowInInspector] private Stats _stats;
     [ShowInInspector] private float _hp;
     [ShowInInspector] private float _virtualHp;
     [ShowInInspector] private float _energy;
@@ -37,6 +38,12 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     #region Public properties
 
+    public Faction Faction => _faction;
+    public Stats Stats
+    {
+        get => _stats;
+        protected set => _stats = value;
+    }
     public DamageType DamageType => BaseData.damageType;
     public Element Element => BaseData.element;
     public Race Race => BaseData.race;
@@ -100,12 +107,14 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             // todo: disable ultimate skill
         }
     }
+    public bool CanTakeTurn => !_isStun;
 
     #endregion
 
 
     public void Init(HeroData heroData)
     {
+        _faction = Faction.Hero;
         BaseData = heroData.GetHero();
         SetupInfo();
 
@@ -116,6 +125,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public void Init(DevilData devilData)
     {
+        _faction = Faction.Devil;
         BaseData = devilData.GetDevil();
         SetupInfo();
 
@@ -319,6 +329,12 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     }
 
     #endregion
+}
+
+public enum Faction
+{
+    Hero,
+    Devil
 }
 
 public struct Damage

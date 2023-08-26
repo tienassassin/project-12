@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class Mecha : BattleEntity, IRaceAura
 {
-    public bool CanTakeTurn => !IsStun && !IsHibernating;
+    public new bool CanTakeTurn => !IsStun && !IsHibernating;
 
     [TitleGroup("MECHA AURA:")]
     [ShowInInspector] protected bool HasResurrected;
