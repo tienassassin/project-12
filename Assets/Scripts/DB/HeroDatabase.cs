@@ -73,7 +73,6 @@ public class HeroDatabase : Database
             attackRange = atkRange,
             stats = new Stats
             {
-                showFull = true,
                 health = Utils.Parse<float>((string)jObject["health"]),
                 damage = Utils.Parse<float>((string)jObject["damage"]),
                 armor = Utils.Parse<float>((string)jObject["armor"]),

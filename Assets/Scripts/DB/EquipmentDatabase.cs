@@ -67,7 +67,7 @@ public class EquipmentDatabase : Database
         e.raceBonus = Utils.Parse<float>((string)jObject["race bonus(%)"]) / 100f;
         e.stats = new Stats
         {
-            showFull = false,
+            hideZero = true,
             health = Utils.Parse<float>((string)jObject["health"]),
             damage = Utils.Parse<float>((string)jObject["damage"]),
             armor = Utils.Parse<float>((string)jObject["armor"]),

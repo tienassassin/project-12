@@ -11,17 +11,17 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     [TitleGroup("IN-GAME STATS:")]
     [ShowInInspector] protected Stats Stats;
-    [ShowInInspector] protected float Hp;
-    [ShowInInspector] protected float VirtualHp;
-    [ShowInInspector] protected float Energy;
-    [ShowInInspector] protected float Agility;
-    [ShowInInspector] protected float Rage;
+    [ShowInInspector] private float _hp;
+    [ShowInInspector] private float _virtualHp;
+    [ShowInInspector] private float _energy;
+    [ShowInInspector] private float _agility;
+    [ShowInInspector] private float _rage;
 
     [TitleGroup("STATUS:")]
-    [ShowInInspector] protected bool IsStun;
-    [ShowInInspector] protected bool IsSilent;
-    [ShowInInspector] protected bool IsBleeding;
-    [ShowInInspector] protected bool IsImmortal;
+    [ShowInInspector] private bool _isStun;
+    [ShowInInspector] private bool _isSilent;
+    [ShowInInspector] private bool _isBleeding;
+    [ShowInInspector] private bool _isImmortal;
     [ShowInInspector] private bool _isUltimateReady;
 
     #region Events
@@ -38,11 +38,53 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     public DamageType DamageType => BaseData.damageType;
     public Element Element => BaseData.element;
     public Race Race => BaseData.race;
-    public bool IsAlive => Hp > 0;
-    public bool CanTakeTurn => !IsStun;
-    public bool CanUseSkill => !IsSilent;
-    public bool CanHeal => !IsBleeding;
-
+    public bool IsAlive => _hp > 0;
+    public float HpPercentage => _hp / Stats.health;
+    public float Hp
+    {
+        get => _hp;
+        protected set => _hp = value;
+    }
+    public float VirtualHp
+    {
+        get => _virtualHp;
+        protected set => _virtualHp = value;
+    }
+    public float Energy
+    {
+        get => _energy;
+        protected set => _energy = value;
+    }
+    public float Agility
+    {
+        get => _agility;
+        protected set => _agility = value;
+    }
+    public float Rage
+    {
+        get => _rage;
+        protected set => _rage = value;
+    }
+    public bool IsStun
+    {
+        get => _isStun;
+        protected set => _isStun = value;
+    }
+    public bool IsSilent
+    {
+        get => _isSilent;
+        protected set => _isSilent = value;
+    }
+    public bool IsBleeding
+    {
+        get => _isBleeding;
+        protected set => _isBleeding = value;
+    }
+    public bool IsImmortal
+    {
+        get => _isImmortal;
+        protected set => _isImmortal = value;
+    }
     public bool IsUltimateReady
     {
         get => _isUltimateReady;
@@ -65,8 +107,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         BaseData = heroData.GetHero();
         Setup();
 
-        Hp = (heroData.curHp / 100) * Stats.health;
-        Energy = heroData.energy;
+        _hp = (heroData.curHp / 100) * Stats.health;
+        _energy = heroData.energy;
     }
 
     public void Init(DevilData devilData)
@@ -74,8 +116,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         BaseData = devilData.GetDevil();
         Setup();
 
-        Hp = Stats.health;
-        Energy = 0;
+        _hp = Stats.health;
+        _energy = 0;
     }
 
     private void Setup()
@@ -83,13 +125,13 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         Stats = BaseData.stats;
         name = BaseData.name;
 
-        VirtualHp = 0;
-        Agility = 0;
-        Rage = 0;
+        _virtualHp = 0;
+        _agility = 0;
+        _rage = 0;
 
-        IsStun = false;
-        IsSilent = false;
-        IsBleeding = false;
+        _isStun = false;
+        _isSilent = false;
+        _isBleeding = false;
 
         UpdateHp();
         UpdateEnergy();
@@ -100,20 +142,20 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     protected virtual void UpdateHp()
     {
-        hpUpdated?.Invoke(Hp, VirtualHp, Stats.health);
+        hpUpdated?.Invoke(_hp, _virtualHp, Stats.health);
     }
 
     protected virtual void UpdateEnergy()
     {
-        energyUpdated?.Invoke(Energy, 100);
+        energyUpdated?.Invoke(_energy, 100);
     }
 
     protected virtual void UpdateRage()
     {
-        rageUpdated?.Invoke(Rage);
+        rageUpdated?.Invoke(_rage);
     }
 
-    private void SpawnHpText(bool isHealing, float amount, int division, float duration)
+    protected void SpawnHpText(bool isHealing, float amount, int division, float duration)
     {
         if (amount < 1)
         {
@@ -141,15 +183,15 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     protected virtual bool HasFullEnergy()
     {
-        if (Energy < 100) return false;
-        Energy -= 100;
+        if (_energy < 100) return false;
+        _energy -= 100;
         return true;
     }
 
     protected virtual bool HasFullAgility()
     {
-        if (Agility < 100) return false;
-        Agility -= 100;
+        if (_agility < 100) return false;
+        _agility -= 100;
         return true;
     }
 
@@ -160,30 +202,30 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public virtual void Attack(IDamageTaker target)
     {
-        Rage += Stats.luck;
-        bool crit = Utils.GetRandomResult(Rage);
+        _rage += Stats.luck;
+        bool crit = Utils.GetRandomResult(_rage);
         if (crit)
         {
-            Rage = Mathf.Max(0, Rage - 100);
+            _rage = Mathf.Max(0, _rage - 100);
         }
 
-        if (Energy < 100) Energy += Stats.intelligence;
+        if (_energy < 100) _energy += Stats.intelligence;
         var dmg = new Damage(Stats.damage, DamageType, Stats.accuracy / 100, crit);
-        float actualDmgDealt = DealDamage(target, dmg);
+        float dmgDealt = DealDamage(target, dmg);
 
-        RegenHp(actualDmgDealt * (Stats.lifeSteal / 100));
+        RegenHp(dmgDealt * (Stats.lifeSteal / 100));
     }
 
     public virtual void RegenHp(float hpAmount, bool allowOverflow = false)
     {
-        float expectedHp = Hp + hpAmount;
+        float expectedHp = _hp + hpAmount;
         if (expectedHp > Stats.health && allowOverflow)
         {
             float overflowAmount = expectedHp - Stats.health;
-            VirtualHp += overflowAmount;
+            _virtualHp += overflowAmount;
         }
 
-        Hp = Mathf.Min(expectedHp, Stats.health);
+        _hp = Mathf.Min(expectedHp, Stats.health);
     }
 
     public virtual float DealDamage(IDamageTaker target, Damage dmg)
@@ -193,7 +235,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public virtual float TakeDamage(IDamageDealer origin, Damage dmg)
     {
-        if (IsImmortal)
+        if (_isImmortal)
         {
             SpawnHpText(false, 0, 1, 0);
             return 0;
@@ -218,17 +260,42 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
         // the displayed damage has no limit,
         // but the actual damage taken cant exceed the current hp
-        float actualDmgTaken = Mathf.Min(dmgTaken, Hp + VirtualHp);
-        float vhpAffected = Mathf.Min(actualDmgTaken, VirtualHp);
+        float actualDmgTaken = Mathf.Min(dmgTaken, _hp + _virtualHp);
+        float vhpAffected = Mathf.Min(actualDmgTaken, _virtualHp);
         float hpAffected = actualDmgTaken - vhpAffected;
 
-        VirtualHp -= vhpAffected;
-        Hp -= hpAffected;
+        _virtualHp -= vhpAffected;
+        _hp -= hpAffected;
 
-        if (Hp < 1)
+        if (_hp < 1)
         {
             Die();
         }
+
+        return actualDmgTaken;
+    }
+
+    public virtual float TakeFatalDamage(IDamageDealer origin)
+    {
+        if (_isImmortal)
+        {
+            SpawnHpText(false, 0, 1, 0);
+            return 0;
+        }
+
+        float fatalDamage = 999;
+        float actualDmgTaken = Hp + VirtualHp;
+        while (fatalDamage < actualDmgTaken)
+        {
+            fatalDamage = fatalDamage * 10 + 9;
+        }
+
+        SpawnHpText(true, fatalDamage, 1, 0);
+
+        VirtualHp = 0;
+        Hp = 0;
+
+        Die();
 
         return actualDmgTaken;
     }

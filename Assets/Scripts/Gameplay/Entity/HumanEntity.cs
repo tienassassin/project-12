@@ -1,7 +1,10 @@
+using Sirenix.OdinInspector;
+
 public abstract class HumanEntity : BattleEntity, IRaceAura
 {
-    protected float InstantKillThreshold;
-    protected float InstantKillMaxDamage;
+    [TitleGroup("HUMAN AURA:")]
+    [ShowInInspector] protected float InstantKillThreshold;
+    [ShowInInspector] protected float InstantKillMaxDamage;
 
     public void ActiveRaceAura(int rank)
     {
@@ -17,5 +20,20 @@ public abstract class HumanEntity : BattleEntity, IRaceAura
                 InstantKillMaxDamage = 3;
                 break;
         }
+    }
+
+    public override float DealDamage(IDamageTaker target, Damage dmg)
+    {
+        float dmgDealt = base.DealDamage(target, dmg);
+        if (target is BattleEntity entity)
+        {
+            if (entity.HpPercentage - 0.001f <= InstantKillThreshold &&
+                entity.Hp <= Stats.damage * InstantKillMaxDamage)
+            {
+                target.TakeFatalDamage(this);
+            }
+        }
+
+        return dmgDealt;
     }
 }

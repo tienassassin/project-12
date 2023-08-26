@@ -1,8 +1,13 @@
+using Sirenix.OdinInspector;
+using UnityEngine;
+
 public abstract class BeastEntity : BattleEntity, IRaceAura
 {
-    protected float ExtraLifeStealPerStack;
-    protected float HpLossPerStack;
-    protected float MaxExtraLifeSteal;
+    [TitleGroup("BEAST AURA:")]
+    [ShowInInspector] protected float ExtraLifeStealPerStack;
+    [ShowInInspector] protected float HpLossPerStack;
+    [ShowInInspector] protected int MaxStack;
+    [ShowInInspector] protected int HungryStack;
 
     public void ActiveRaceAura(int rank)
     {
@@ -11,14 +16,22 @@ public abstract class BeastEntity : BattleEntity, IRaceAura
             case 3:
                 ExtraLifeStealPerStack = 4;
                 HpLossPerStack = 0.1f;
-                MaxExtraLifeSteal = 20;
+                MaxStack = 5;
                 break;
 
             case 4:
                 ExtraLifeStealPerStack = 5;
                 HpLossPerStack = 0.1f;
-                MaxExtraLifeSteal = 35;
+                MaxStack = 7;
                 break;
         }
+    }
+
+    [Button]
+    protected void UpdateHungryStack()
+    {
+        int lastStack = HungryStack;
+        HungryStack = Mathf.Min((int)((1 - HpPercentage + 0.001f) / HpLossPerStack), MaxStack);
+        Stats += new Stats { lifeSteal = (HungryStack - lastStack) * ExtraLifeStealPerStack };
     }
 }

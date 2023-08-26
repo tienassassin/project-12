@@ -6,6 +6,7 @@ public interface IDamageDealer
 public interface IDamageTaker
 {
     float TakeDamage(IDamageDealer origin, Damage dmg);
+    float TakeFatalDamage(IDamageDealer origin);
 }
 
 public interface IRaceAura
