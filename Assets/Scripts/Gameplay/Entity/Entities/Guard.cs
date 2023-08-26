@@ -1,3 +1,3 @@
-public class Guard : MechaEntity
+public class Guard : Mecha
 {
 }

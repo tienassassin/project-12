@@ -1534,6 +1534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f52e4fe1c4581240ae6bebe533ab519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorPositive: {r: 0.22745098, g: 0.78431374, b: 0.43529412, a: 1}
+  colorNegative: {r: 1, g: 0.3702328, b: 0, a: 1}
   imgMainHp: {fileID: 412561421}
   imgSubHp: {fileID: 526181846}
   imgMainVHp: {fileID: 1041014303}

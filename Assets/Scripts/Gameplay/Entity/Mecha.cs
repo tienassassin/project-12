@@ -1,7 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public abstract class MechaEntity : BattleEntity, IRaceAura
+public abstract class Mecha : BattleEntity, IRaceAura
 {
     public bool CanTakeTurn => !IsStun && !IsHibernating;
 

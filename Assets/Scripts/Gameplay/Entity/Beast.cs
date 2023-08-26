@@ -1,7 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public abstract class BeastEntity : BattleEntity, IRaceAura
+public abstract class Beast : BattleEntity, IRaceAura
 {
     [TitleGroup("BEAST AURA:")]
     [ShowInInspector] protected float ExtraLifeStealPerStack;

@@ -1,6 +1,6 @@
 using Sirenix.OdinInspector;
 
-public abstract class HumanEntity : BattleEntity, IRaceAura
+public abstract class Human : BattleEntity, IRaceAura
 {
     [TitleGroup("HUMAN AURA:")]
     [ShowInInspector] protected float InstantKillThreshold;

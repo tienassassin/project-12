@@ -1,3 +1,3 @@
-public class Claws : BeastEntity
+public class Claws : Beast
 {
 }

@@ -26,8 +26,10 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     #region Events
 
-    public Action<float, float, float> hpUpdated;
-    public Action<float, float> energyUpdated;
+    // hp, vHp, maxHp, duration
+    public Action<float, float, float, float> hpUpdated;
+    // energy, maxEnergy, duration
+    public Action<float, float, float> energyUpdated;
     public Action<float> rageUpdated;
 
     #endregion
@@ -105,33 +107,38 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     public void Init(HeroData heroData)
     {
         BaseData = heroData.GetHero();
-        Setup();
+        SetupInfo();
 
-        _hp = (heroData.curHp / 100) * Stats.health;
-        _energy = heroData.energy;
+        Hp = (heroData.curHp / 100) * Stats.health;
+        Energy = heroData.energy;
+        SetupStats();
     }
 
     public void Init(DevilData devilData)
     {
         BaseData = devilData.GetDevil();
-        Setup();
+        SetupInfo();
 
-        _hp = Stats.health;
-        _energy = 0;
+        Hp = Stats.health;
+        Energy = 0;
+        SetupStats();
     }
 
-    private void Setup()
+    private void SetupInfo()
     {
         Stats = BaseData.stats;
         name = BaseData.name;
+    }
 
-        _virtualHp = 0;
-        _agility = 0;
-        _rage = 0;
+    private void SetupStats()
+    {
+        VirtualHp = 0;
+        Agility = 0;
+        Rage = 0;
 
-        _isStun = false;
-        _isSilent = false;
-        _isBleeding = false;
+        IsStun = false;
+        IsSilent = false;
+        IsBleeding = false;
 
         UpdateHp();
         UpdateEnergy();
@@ -140,19 +147,19 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     #region UI
 
-    protected virtual void UpdateHp()
+    protected virtual void UpdateHp(float duration = 1f)
     {
-        hpUpdated?.Invoke(_hp, _virtualHp, Stats.health);
+        hpUpdated?.Invoke(Hp, VirtualHp, Stats.health, duration);
     }
 
-    protected virtual void UpdateEnergy()
+    protected virtual void UpdateEnergy(float duration = 1f)
     {
-        energyUpdated?.Invoke(_energy, 100);
+        energyUpdated?.Invoke(Energy, 100, duration);
     }
 
     protected virtual void UpdateRage()
     {
-        rageUpdated?.Invoke(_rage);
+        rageUpdated?.Invoke(Rage);
     }
 
     protected void SpawnHpText(bool isHealing, float amount, int division, float duration)
@@ -183,15 +190,15 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     protected virtual bool HasFullEnergy()
     {
-        if (_energy < 100) return false;
-        _energy -= 100;
+        if (Energy < 100) return false;
+        Energy -= 100;
         return true;
     }
 
     protected virtual bool HasFullAgility()
     {
-        if (_agility < 100) return false;
-        _agility -= 100;
+        if (Agility < 100) return false;
+        Agility -= 100;
         return true;
     }
 
@@ -202,14 +209,16 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public virtual void Attack(IDamageTaker target)
     {
-        _rage += Stats.luck;
-        bool crit = Utils.GetRandomResult(_rage);
+        Rage += Stats.luck;
+        bool crit = Utils.GetRandomResult(Rage);
         if (crit)
         {
-            _rage = Mathf.Max(0, _rage - 100);
+            Rage = Mathf.Max(0, Rage - 100);
         }
 
-        if (_energy < 100) _energy += Stats.intelligence;
+        if (Energy < 100) Energy += Stats.intelligence;
+        IsUltimateReady = Energy >= 100;
+
         var dmg = new Damage(Stats.damage, DamageType, Stats.accuracy / 100, crit);
         float dmgDealt = DealDamage(target, dmg);
 
@@ -218,14 +227,16 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public virtual void RegenHp(float hpAmount, bool allowOverflow = false)
     {
-        float expectedHp = _hp + hpAmount;
+        float expectedHp = Hp + hpAmount;
         if (expectedHp > Stats.health && allowOverflow)
         {
             float overflowAmount = expectedHp - Stats.health;
-            _virtualHp += overflowAmount;
+            VirtualHp += overflowAmount;
         }
 
-        _hp = Mathf.Min(expectedHp, Stats.health);
+        Hp = Mathf.Min(expectedHp, Stats.health);
+
+        UpdateHp();
     }
 
     public virtual float DealDamage(IDamageTaker target, Damage dmg)
@@ -235,7 +246,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public virtual float TakeDamage(IDamageDealer origin, Damage dmg)
     {
-        if (_isImmortal)
+        if (IsImmortal)
         {
             SpawnHpText(false, 0, 1, 0);
             return 0;
@@ -256,18 +267,20 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         }
 
         float dmgTaken = Mathf.Max(1, dmg.Amount - dmgReduction);
-        SpawnHpText(false, dmgTaken, dmg.Division, dmg.Duration);
 
         // the displayed damage has no limit,
         // but the actual damage taken cant exceed the current hp
-        float actualDmgTaken = Mathf.Min(dmgTaken, _hp + _virtualHp);
-        float vhpAffected = Mathf.Min(actualDmgTaken, _virtualHp);
+        float actualDmgTaken = Mathf.Min(dmgTaken, Hp + VirtualHp);
+        float vhpAffected = Mathf.Min(actualDmgTaken, VirtualHp);
         float hpAffected = actualDmgTaken - vhpAffected;
 
-        _virtualHp -= vhpAffected;
-        _hp -= hpAffected;
+        VirtualHp -= vhpAffected;
+        Hp -= hpAffected;
 
-        if (_hp < 1)
+        SpawnHpText(false, dmgTaken, dmg.Division, dmg.Duration);
+        UpdateHp(dmg.Duration);
+
+        if (Hp < 1)
         {
             Die();
         }
@@ -277,7 +290,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public virtual float TakeFatalDamage(IDamageDealer origin)
     {
-        if (_isImmortal)
+        if (IsImmortal)
         {
             SpawnHpText(false, 0, 1, 0);
             return 0;
@@ -290,11 +303,11 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             fatalDamage = fatalDamage * 10 + 9;
         }
 
-        SpawnHpText(true, fatalDamage, 1, 0);
-
         VirtualHp = 0;
         Hp = 0;
 
+        SpawnHpText(true, fatalDamage, 1, 0);
+        UpdateHp();
         Die();
 
         return actualDmgTaken;
