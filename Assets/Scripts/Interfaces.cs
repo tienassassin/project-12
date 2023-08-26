@@ -1,9 +1,19 @@
-public interface IAttacker
+public interface IDamageDealer
 {
-    void DealDamage(IDefender target, float dmgAmount, DamageType dmgType);
+    float DealDamage(IDamageTaker target, Damage dmg);
 }
 
-public interface IDefender
+public interface IDamageTaker
 {
-    void TakeDamage(float dmgAmount, DamageType dmgType, float penetration);
+    float TakeDamage(IDamageDealer origin, Damage dmg);
+}
+
+public interface IRaceAura
+{
+    void ActiveRaceAura(int rank);
+}
+
+public interface IElementAura
+{
+    void ActiveElementAura(int rank);
 }

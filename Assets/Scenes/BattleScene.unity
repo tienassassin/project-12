@@ -185,67 +185,6 @@ Transform:
   m_Father: {fileID: 1553070380}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &261201888
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 763107515, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1095606506}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062091, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4839870134832062093, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
-      propertyPath: m_Name
-      value: BattleEntity
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
 --- !u!1 &277823276
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +256,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1127257017095718339, guid: 1d0cbccf17c3ac64a9b17ab6708bd43b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1127257017095718339, guid: 1d0cbccf17c3ac64a9b17ab6708bd43b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -447,7 +386,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1353779808
 GameObject:
@@ -582,7 +521,7 @@ Transform:
   - {fileID: 1524878056}
   - {fileID: 157823553}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1553070381
 MonoBehaviour:
@@ -596,7 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d29c5e2b8da6274b9aff0fad4b82f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityPref: {fileID: 4839870134832062092, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
+  entityPref: {fileID: 6825307048660101110, guid: e459b3a0b1c8ac240b97d65e4041408e, type: 3}
   entityContainer: {fileID: 157823553}
   heroPositions:
   - {fileID: 1706383538}
@@ -619,15 +558,7 @@ MonoBehaviour:
     curHp: 50
     energy: 0
     eqmList: []
-  - heroId: 03
-    totalExp: 500
-    curHp: 100
-    energy: 0
-    eqmList: []
   devils:
-  - devilId: 00
-    isBoss: 0
-    level: 1
   - devilId: 00
     isBoss: 0
     level: 1
@@ -790,5 +721,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
