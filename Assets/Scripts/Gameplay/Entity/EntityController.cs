@@ -1,6 +1,5 @@
 public class EntityController : DuztineBehaviour
 {
-    private int _id;
     private BattleEntity _entity;
 
     public bool CanTakeTurn => _entity.CanTakeTurn;
@@ -21,16 +20,21 @@ public class EntityController : DuztineBehaviour
         this.RemoveListener(EventID.ON_TAKE_TURN, OnTakeTurn);
     }
 
-    public void SetID(int id)
-    {
-        _id = id;
-    }
-
     private void OnTakeTurn(object id)
     {
-        if (_id != (int)id) return;
+        if (_entity.ID != (int)id) return;
         if (!IsAlive) return;
 
+        if (!CanTakeTurn)
+        {
+            Invoke(nameof(EndTurn), 1f);
+        }
+
         EditorLog.Message(name + "'s turn!");
+    }
+
+    private void EndTurn()
+    {
+        ActionQueue.Instance.EndTurn();
     }
 }

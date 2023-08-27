@@ -74,7 +74,8 @@ public enum EventID
     ON_LINEUP_CHANGED,
     ON_BATTLE_SCENE_LOADED,
 
-    ON_TAKE_TURN
+    ON_TAKE_TURN,
+    ON_TARGET_FOCUSED
 }
 
 public static class EventDispatcherExtensions

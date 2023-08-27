@@ -17,13 +17,7 @@ public class ActionQueue : Singleton<ActionQueue>
         entities.ForEach(x => sortedEntities.Add(x));
         sortedEntities.Sort((e1, e2) => CompareOrder(e2, e1));
 
-        for (int i = 0; i < sortedEntities.Count; i++)
-        {
-            var o = sortedEntities[i].gameObject;
-            var controller = o.GetComponent<EntityController>();
-            controller.SetID(i);
-            _queue.Add(new Turn(i, o.name, false));
-        }
+        sortedEntities.ForEach(x => { _queue.Add(new Turn(x.ID, x.name, false)); });
 
         NextTurn();
 

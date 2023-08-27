@@ -68,8 +68,7 @@ public enum Requirement
 public enum Effect
 {
     //buff
-    Invincible,
-    Undying,
+    Immortal,
 
     //debuff
     Stun,
@@ -82,6 +81,17 @@ public enum SortType
     None,
     Ascending,
     Descending
+}
+
+public enum SkillTargetType
+{
+    Auto, // automatically cast, no need to choose target
+    Ally, // target can be an ally
+    AllyOrSelf, // target can be an ally or self
+    Enemy, // target can be an enemy
+    EnemyOrSelf, // target can be an enemy or self
+    ExceptSelf, // target can be an ally or an enemy
+    All // target can be anyone
 }
 
 [Serializable]
