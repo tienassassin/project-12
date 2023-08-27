@@ -38,6 +38,7 @@ public class ActionQueue : Singleton<ActionQueue>
     {
         _curTurn = _queue[0];
         this.PostEvent(EventID.ON_TAKE_TURN, _curTurn.info.id);
+        this.PostEvent(EventID.ON_ACTION_QUEUE_CHANGED, _queue);
     }
 
     public void AddExtraTurn(TurnInfo extraTurn)
@@ -51,17 +52,13 @@ public class ActionQueue : Singleton<ActionQueue>
         var lastTurn = _queue[0];
         _queue.RemoveAt(0);
 
-        if (lastTurn.extraTurns != null)
+        for (int i = 0; i < lastTurn.extraTurns.Count; i++)
         {
-            for (int i = 0; i < lastTurn.extraTurns.Count; i++)
-            {
-                var extraTurn = lastTurn.extraTurns[i];
-                _queue.Insert(i, new Turn(extraTurn.id, extraTurn.name, true));
-            }
-
-            lastTurn.extraTurns.Clear();
+            var extraTurn = lastTurn.extraTurns[i];
+            _queue.Insert(i, new Turn(extraTurn.id, extraTurn.name, true));
         }
 
+        lastTurn.extraTurns.Clear();
         if (!lastTurn.isExtra) _queue.Add(lastTurn);
 
         NextTurn();
@@ -79,12 +76,11 @@ public class Turn
     {
         info = new TurnInfo(id, name);
         this.isExtra = isExtra;
-        extraTurns = null;
+        extraTurns = new List<TurnInfo>();
     }
 
     public void AddExtraTurn(TurnInfo extraTurn)
     {
-        extraTurns ??= new List<TurnInfo>();
         extraTurns.Add(extraTurn);
     }
 }

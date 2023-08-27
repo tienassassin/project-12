@@ -1,8 +1,12 @@
 using System;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
 public class BattleManager : Singleton<BattleManager>
 {
+    private int _fireSpirit;
+    private int _maxFireSpirit = 5;
+
     public SkillTargetType targetType;
     public int id;
 
@@ -39,5 +43,17 @@ public class BattleManager : Singleton<BattleManager>
     public void ClearSelectedEntity()
     {
         selectedEntity = null;
+    }
+
+    public void AddSpirit()
+    {
+        _fireSpirit = Mathf.Clamp(_fireSpirit + 1, 0, _maxFireSpirit);
+    }
+
+    public bool HasSpirit()
+    {
+        if (_fireSpirit < 1) return false;
+        _fireSpirit--;
+        return true;
     }
 }
