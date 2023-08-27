@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -25,7 +24,7 @@ public class EntityUI : DuztineBehaviour
 
     [TitleGroup("MARKS:")]
     [SerializeField] private GameObject highlight;
-    [SerializeField] private GameObject focus;
+    [SerializeField] private GameObject actionMenu;
 
     private BattleEntity _entity;
 
@@ -42,18 +41,19 @@ public class EntityUI : DuztineBehaviour
         _entity = GetComponent<BattleEntity>();
         _entity.hpUpdated += UpdateHp;
         _entity.energyUpdated += UpdateEnergy;
+
+        var controller = GetComponent<EntityController>();
+        controller.entitySelected += SwitchActionPanel;
     }
 
     private void OnEnable()
     {
         this.AddListener(EventID.ON_TAKE_TURN, OnTakeTurn);
-        this.AddListener(EventID.ON_TARGET_FOCUSED, OnFocused);
     }
 
     private void OnDisable()
     {
         this.RemoveListener(EventID.ON_TAKE_TURN, OnTakeTurn);
-        this.AddListener(EventID.ON_TARGET_FOCUSED, OnFocused);
     }
 
     private void ResetAll()
@@ -69,42 +69,6 @@ public class EntityUI : DuztineBehaviour
     public void OnTakeTurn(object id)
     {
         highlight.SetActive(_entity.ID == (int)id);
-    }
-
-    public void OnFocused(object data)
-    {
-        if (data == null)
-        {
-            focus.SetActive(false);
-            return;
-        }
-
-        var (targetType, id) = (Tuple<SkillTargetType, int>)data;
-        bool isFocused = false;
-
-        switch (targetType)
-        {
-            case SkillTargetType.Ally:
-                isFocused = _entity.Faction == Faction.Hero && _entity.ID != id;
-                break;
-            case SkillTargetType.AllyOrSelf:
-                isFocused = _entity.Faction == Faction.Hero;
-                break;
-            case SkillTargetType.Enemy:
-                isFocused = _entity.Faction == Faction.Devil;
-                break;
-            case SkillTargetType.EnemyOrSelf:
-                isFocused = _entity.Faction == Faction.Devil || _entity.ID == id;
-                break;
-            case SkillTargetType.ExceptSelf:
-                isFocused = _entity.Faction == Faction.Devil || (_entity.Faction == Faction.Hero && _entity.ID != id);
-                break;
-            case SkillTargetType.All:
-                isFocused = true;
-                break;
-        }
-
-        focus.SetActive(isFocused);
     }
 
     private void UpdateHp(float hp, float virtualHp, float maxHp, float duration)
@@ -184,5 +148,24 @@ public class EntityUI : DuztineBehaviour
 
     private void UpdateEffects()
     {
+    }
+
+    private void SwitchActionPanel(bool active)
+    {
+        actionMenu.SetActive(active);
+    }
+
+    public void ConfirmAction()
+    {
+        SwitchActionPanel(false);
+        BattleManager.Instance.ClearSelectedEntity();
+        EditorLog.Message("Action confirmed!");
+    }
+
+    public void CancelAction()
+    {
+        SwitchActionPanel(false);
+        BattleManager.Instance.ClearSelectedEntity();
+        EditorLog.Message("Action cancelled!");
     }
 }
