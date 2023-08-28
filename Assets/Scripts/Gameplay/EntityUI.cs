@@ -87,7 +87,8 @@ public class EntityUI : DuztineBehaviour
             _hpSeq = DOTween.Sequence();
             _hpSeq.AppendCallback(() => { imgSubHp.fillAmount = hpPct; })
                 .AppendInterval(_fillDelay)
-                .Append(imgMainHp.DOFillAmount(hpPct, duration));
+                .Append(imgMainHp.DOFillAmount(hpPct, duration))
+                .Append(imgSubHp.DOColor(Color.white, 0.25f));
         }
         else if (hpPct < lastHpPct)
         {
@@ -98,13 +99,14 @@ public class EntityUI : DuztineBehaviour
             _hpSeq = DOTween.Sequence();
             _hpSeq.AppendCallback(() => { imgMainHp.fillAmount = hpPct; })
                 .AppendInterval(_fillDelay)
-                .Append(imgSubHp.DOFillAmount(hpPct, duration));
+                .Append(imgSubHp.DOFillAmount(hpPct, duration))
+                .Append(imgSubHp.DOColor(Color.white, 0.25f));
         }
 
         if (vHpPct > lastVHpPct)
         {
             // shield
-            imgSubVHp.color = colorPositive;
+            // imgSubVHp.color = colorPositive;
 
             _vHpSeq?.Kill();
             _vHpSeq = DOTween.Sequence();
@@ -115,7 +117,7 @@ public class EntityUI : DuztineBehaviour
         else if (vHpPct < lastVHpPct)
         {
             // dmg
-            imgSubVHp.color = colorNegative;
+            // imgSubVHp.color = colorNegative;
 
             _vHpSeq?.Kill();
             _vHpSeq = DOTween.Sequence();
