@@ -52,7 +52,7 @@ public class ValhallaHeroDetail : DuztineBehaviour
     private void LoadStatsTab()
     {
         _baseStats = _baseData.stats;
-        _nonEqmStats = _baseStats.GetStatsByLevel(_level, _baseData.GetHeroGrowth());
+        _nonEqmStats = _baseStats.GetStatsByLevel(_level, _baseData.GetEntityGrowth());
         _overallStats = _nonEqmStats;
 
         foreach (var statDetail in statDetails)

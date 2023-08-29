@@ -693,7 +693,7 @@ MonoBehaviour:
   - {fileID: 1719028390}
   heroes:
   - heroId: 00
-    totalExp: 100
+    totalExp: 10000
     curHp: 50
     energy: 0
     eqmList: []
@@ -703,7 +703,7 @@ MonoBehaviour:
     energy: 0
     eqmList: []
   devils:
-  - devilId: 00
+  - devilId: 02
     isBoss: 0
     level: 1
 --- !u!1 &1706383537

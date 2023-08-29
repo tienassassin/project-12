@@ -172,9 +172,9 @@ public class Hero : Entity
 
 public static partial class DataExtensions
 {
-    public static float GetHeroGrowth(this Hero h)
+    public static float GetEntityGrowth(this Entity e)
     {
-        return DataManager.Instance.GetGrowth(h.tier);
+        return DataManager.Instance.GetGrowth(e.tier);
     }
 
     public static string GetHeroAlias(this Hero h)

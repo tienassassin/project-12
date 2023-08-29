@@ -14,6 +14,11 @@ public class EntityUI : DuztineBehaviour
     [SerializeField] private Image imgSubHp;
     [SerializeField] private Image imgMainVHp;
     [SerializeField] private Image imgSubVHp;
+    [SerializeField] private float hpAmountPerSegment = 100;
+    [SerializeField] private GameObject segmentLinePref;
+    [SerializeField] private Transform segmentLineContainer;
+    [SerializeField] private Transform leftLimit;
+    [SerializeField] private Transform rightLimit;
 
     [TitleGroup("Energy:")]
     [SerializeField] private Image imgMainEnergy;
@@ -39,6 +44,7 @@ public class EntityUI : DuztineBehaviour
         ResetAll();
 
         _entity = GetComponent<BattleEntity>();
+        _entity.hpSegmentSetup += SetupHpLines;
         _entity.hpUpdated += UpdateHp;
         _entity.energyUpdated += UpdateEnergy;
 
@@ -71,6 +77,19 @@ public class EntityUI : DuztineBehaviour
         highlight.SetActive(_entity.ID == (int)id);
     }
 
+    private void SetupHpLines(float maxHp)
+    {
+        int lineCount = (int)(maxHp / hpAmountPerSegment);
+        if (lineCount < 1) return;
+        Vector3 lengthPerHp = (rightLimit.position - leftLimit.position) / maxHp;
+        for (int i = 0; i < lineCount; i++)
+        {
+            var o = Instantiate(segmentLinePref, segmentLineContainer);
+            o.SetActive(true);
+            o.transform.position = leftLimit.position + lengthPerHp * hpAmountPerSegment * (i + 1);
+        }
+    }
+
     private void UpdateHp(float hp, float virtualHp, float maxHp, float duration)
     {
         float lastHpPct = imgMainHp.fillAmount;
@@ -88,7 +107,7 @@ public class EntityUI : DuztineBehaviour
             _hpSeq.AppendCallback(() => { imgSubHp.fillAmount = hpPct; })
                 .AppendInterval(_fillDelay)
                 .Append(imgMainHp.DOFillAmount(hpPct, duration))
-                .Append(imgSubHp.DOColor(Color.white, 0.25f));
+                .Append(imgSubHp.DOColor(Color.clear, 0.25f));
         }
         else if (hpPct < lastHpPct)
         {
@@ -100,7 +119,7 @@ public class EntityUI : DuztineBehaviour
             _hpSeq.AppendCallback(() => { imgMainHp.fillAmount = hpPct; })
                 .AppendInterval(_fillDelay)
                 .Append(imgSubHp.DOFillAmount(hpPct, duration))
-                .Append(imgSubHp.DOColor(Color.white, 0.25f));
+                .Append(imgSubHp.DOColor(Color.clear, 0.25f));
         }
 
         if (vHpPct > lastVHpPct)
