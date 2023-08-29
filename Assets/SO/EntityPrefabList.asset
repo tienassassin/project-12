@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834ef8d738b2b424c867cf53334b07c1, type: 3}
+  m_Name: EntityPrefabList
+  m_EditorClassIdentifier: 
+  heroPrefs:
+  - prefabID: 00
+    entity: {fileID: 6825307048660101110, guid: e459b3a0b1c8ac240b97d65e4041408e, type: 3}
+  - prefabID: 01
+    entity: {fileID: 163903273518650942, guid: ec94e21edb88ce44bbe1356ca5014ec6, type: 3}
+  - prefabID: 02
+    entity: {fileID: 6420955520611390653, guid: c6ff401ca3f7e0141bdec827bb1fb104, type: 3}
+  - prefabID: 03
+    entity: {fileID: 8998153549300824228, guid: 2e03bf36fa1a2354f934c00b17400376, type: 3}
+  - prefabID: 04
+    entity: {fileID: 3361109413929677036, guid: 0ba6ce213c900594a8a5763423a38895, type: 3}
+  - prefabID: 05
+    entity: {fileID: 1364022169510953367, guid: 8fb30b14fc3e5ca46871ec1682a1783a, type: 3}
+  devilPrefs:
+  - prefabID: 00
+    entity: {fileID: 2013321260121296818, guid: 804f630e87c1d804bab468a5603e982e, type: 3}
+  - prefabID: 01
+    entity: {fileID: 8340604153361529906, guid: 1c38cd0fbd842e24696ade34163a3e22, type: 3}
+  - prefabID: 02
+    entity: {fileID: 2636638362678320026, guid: a31db35821b05f24cb1fbf17570564c4, type: 3}

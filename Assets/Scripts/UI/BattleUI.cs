@@ -7,9 +7,10 @@ public class BattleUI : BaseUI
     [SerializeField] private Transform turnContainer;
 
     private List<BattleTurn> _turns;
-    private float _turnOffset0 = -120;
-    private float _turnOffset1 = -100;
-    private float _curTurnScale = 1.4f;
+    private float _turnOffset0 = -75;
+    private float _turnOffset1 = -60;
+    private float _curTurnScale = 1;
+    private float _normalTurnScale = 0.8f;
 
     public static void Show()
     {
@@ -69,7 +70,7 @@ public class BattleUI : BaseUI
             bool isCurTurn = (i == 0);
             float offset = isCurTurn ? 0 : (_turnOffset0 + _turnOffset1 * (i - 1));
             turn.transform.localPosition = new Vector3(0, offset, 0);
-            turn.transform.localScale = Vector3.one * (isCurTurn ? _curTurnScale : 1);
+            turn.transform.localScale = Vector3.one * (isCurTurn ? _curTurnScale : _normalTurnScale);
         }
     }
 }

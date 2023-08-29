@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d29c5e2b8da6274b9aff0fad4b82f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityPref: {fileID: 6825307048660101110, guid: e459b3a0b1c8ac240b97d65e4041408e, type: 3}
+  entityPrefList: {fileID: 11400000, guid: 3e88f597925bc6a42b4d654b0d14a9a0, type: 2}
   entityContainer: {fileID: 157823553}
   heroPositions:
   - {fileID: 1706383538}

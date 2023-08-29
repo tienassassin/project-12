@@ -3,29 +3,29 @@ using UnityEngine;
 
 public abstract class Mecha : BattleEntity, IRaceAura
 {
-    public new bool CanTakeTurn => !IsStun && !IsHibernating;
+    public new bool CanTakeTurn => !IsStun && !isHibernating;
 
     [TitleGroup("MECHA AURA:")]
-    [ShowInInspector] protected bool HasResurrected;
-    [ShowInInspector] protected bool IsHibernating;
-    [ShowInInspector] protected float HibernationHpThreshold;
-    [ShowInInspector] protected float ExtraDamageTaken;
-    [ShowInInspector] protected float ResurrectionHpThreshold;
+    [SerializeField] protected bool hasResurrected;
+    [SerializeField] protected bool isHibernating;
+    [SerializeField] protected float hibernationHpThreshold;
+    [SerializeField] protected float extraDamageTaken;
+    [SerializeField] protected float resurrectionHpThreshold;
 
     public void ActiveRaceAura(int rank)
     {
         switch (rank)
         {
             case 3:
-                HibernationHpThreshold = 0.5f;
-                ExtraDamageTaken = 1;
-                ResurrectionHpThreshold = 0.3f;
+                hibernationHpThreshold = 0.5f;
+                extraDamageTaken = 1;
+                resurrectionHpThreshold = 0.3f;
                 break;
 
             case 4:
-                HibernationHpThreshold = 1;
-                ExtraDamageTaken = 1;
-                ResurrectionHpThreshold = 0.5f;
+                hibernationHpThreshold = 1;
+                extraDamageTaken = 1;
+                resurrectionHpThreshold = 0.5f;
                 break;
         }
     }
@@ -53,7 +53,7 @@ public abstract class Mecha : BattleEntity, IRaceAura
         }
 
         float dmgTaken = Mathf.Max(1, dmg.Amount - dmgReduction);
-        if (IsHibernating)
+        if (isHibernating)
         {
             dmgTaken *= 2;
         }
@@ -79,12 +79,12 @@ public abstract class Mecha : BattleEntity, IRaceAura
 
     public override void Die()
     {
-        if (!HasResurrected)
+        if (!hasResurrected)
         {
             EditorLog.Message($"[Mecha] {name} activates hibernation!");
-            HasResurrected = true;
-            IsHibernating = true;
-            RegenHp(Stats.health * HibernationHpThreshold);
+            hasResurrected = true;
+            isHibernating = true;
+            RegenHp(Stats.health * hibernationHpThreshold);
         }
         else
         {

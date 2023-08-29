@@ -1,6 +1,6 @@
 using Sirenix.OdinInspector;
 
-public class Arslan : Human
+public class Hero00 : Human
 {
     [Button]
     public override float TakeDamage(IDamageDealer origin, Damage dmg)
