@@ -27,11 +27,11 @@ public class EntityUI : DuztineBehaviour
     [TitleGroup("Effect:")]
     [SerializeField] private Transform effectContainer;
 
-    [TitleGroup("MARKS:")]
+    [TitleGroup("Marks:")]
     [SerializeField] private GameObject highlight;
+    [SerializeField] private GameObject focus;
     [SerializeField] private GameObject actionMenu;
 
-    private BattleEntity _entity;
 
     private float _fillDelay = 0.5f;
     private Ease _ease = Ease.InCubic;
@@ -41,25 +41,18 @@ public class EntityUI : DuztineBehaviour
 
     private void Awake()
     {
+        ApplyDefaultLayout();
         ResetAll();
-
-        _entity = GetComponent<BattleEntity>();
-        _entity.hpSegmentSetup += SetupHpLines;
-        _entity.hpUpdated += UpdateHp;
-        _entity.energyUpdated += UpdateEnergy;
 
         var controller = GetComponent<EntityController>();
         controller.entitySelected += SwitchActionPanel;
     }
 
-    private void OnEnable()
+    private void ApplyDefaultLayout()
     {
-        this.AddListener(EventID.ON_TAKE_TURN, OnTakeTurn);
-    }
-
-    private void OnDisable()
-    {
-        this.RemoveListener(EventID.ON_TAKE_TURN, OnTakeTurn);
+        highlight.SetActive(false);
+        focus.SetActive(false);
+        actionMenu.SetActive(false);
     }
 
     private void ResetAll()
@@ -72,12 +65,17 @@ public class EntityUI : DuztineBehaviour
         imgSubEnergy.fillAmount = 0;
     }
 
-    public void OnTakeTurn(object id)
+    public void SwitchHighlight(bool active)
     {
-        highlight.SetActive(_entity.ID == (int)id);
+        highlight.SetActive(active);
     }
 
-    private void SetupHpLines(float maxHp)
+    public void SwitchFocus(bool active)
+    {
+        focus.SetActive(active);
+    }
+
+    public void SetupHpSegment(float maxHp)
     {
         int lineCount = (int)(maxHp / hpAmountPerSegment);
         if (lineCount < 1) return;
@@ -90,7 +88,7 @@ public class EntityUI : DuztineBehaviour
         }
     }
 
-    private void UpdateHp(float hp, float virtualHp, float maxHp, float duration)
+    public void UpdateHp(float hp, float virtualHp, float maxHp, float duration)
     {
         float lastHpPct = imgMainHp.fillAmount;
         float lastVHpPct = imgMainVHp.fillAmount;
@@ -146,7 +144,7 @@ public class EntityUI : DuztineBehaviour
         }
     }
 
-    private void UpdateEnergy(float energy, float maxEnergy, float duration)
+    public void UpdateEnergy(float energy, float maxEnergy, float duration)
     {
         float lastEnergyPct = imgMainEnergy.fillAmount;
         float energyPct = energy / maxEnergy;
@@ -167,7 +165,7 @@ public class EntityUI : DuztineBehaviour
         }
     }
 
-    private void UpdateEffects()
+    public void UpdateEffects()
     {
     }
 

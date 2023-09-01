@@ -76,7 +76,11 @@ public enum EventID
 
     ON_TAKE_TURN,
     ON_TARGET_FOCUSED,
-    ON_ACTION_QUEUE_CHANGED
+    ON_ACTION_QUEUE_CHANGED,
+    ON_CURRENT_ENTITY_UPDATED,
+
+    ON_FIRE_SPIRIT_UPDATED,
+    ON_FIRE_SPIRIT_PREVIEWED
 }
 
 public static class EventDispatcherExtensions

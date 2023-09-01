@@ -10,7 +10,13 @@ public class BattleManager : Singleton<BattleManager>
     public SkillTargetType targetType;
     public int id;
 
+    public EntityController currentEntity;
     public EntityController selectedEntity;
+
+    private void Start()
+    {
+        UpdateFireSpirit(0);
+    }
 
     [Button]
     public void Test()
@@ -45,15 +51,39 @@ public class BattleManager : Singleton<BattleManager>
         selectedEntity = null;
     }
 
-    public void AddSpirit()
+    public bool HasEnoughFireSpirit(int amount)
     {
-        _fireSpirit = Mathf.Clamp(_fireSpirit + 1, 0, _maxFireSpirit);
+        return _fireSpirit >= amount;
     }
 
-    public bool HasSpirit()
+    [Button]
+    public void AddFireSpirit(int amount)
     {
-        if (_fireSpirit < 1) return false;
-        _fireSpirit--;
-        return true;
+        UpdateFireSpirit(Mathf.Clamp(_fireSpirit + amount, 0, _maxFireSpirit));
+    }
+
+    [Button]
+    public void ConsumeFireSpirit(int amount)
+    {
+        UpdateFireSpirit(Mathf.Clamp(_fireSpirit - amount, 0, _maxFireSpirit));
+    }
+
+    private void UpdateFireSpirit(int amount)
+    {
+        _fireSpirit = amount;
+        this.PostEvent(EventID.ON_FIRE_SPIRIT_UPDATED, Tuple.Create(_fireSpirit, _maxFireSpirit));
+    }
+
+    [Button]
+    public void PreviewFireSpirit(int difference)
+    {
+        difference = Mathf.Min(difference, _maxFireSpirit - _fireSpirit);
+        this.PostEvent(EventID.ON_FIRE_SPIRIT_PREVIEWED, difference);
+    }
+
+    public void UpdateCurrentEntity(EntityController entity)
+    {
+        currentEntity = entity;
+        this.PostEvent(EventID.ON_CURRENT_ENTITY_UPDATED, entity);
     }
 }

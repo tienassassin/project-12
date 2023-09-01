@@ -3,7 +3,7 @@ using UnityEngine;
 public class Singleton<T> : DuztineBehaviour where T : DuztineBehaviour
 {
     [SerializeField] private bool dontDestroyOnLoad;
-    
+
     private static T _instance;
 
     public static T Instance
@@ -16,11 +16,8 @@ public class Singleton<T> : DuztineBehaviour where T : DuztineBehaviour
 
                 if (_instance == null)
                 {
-                    GameObject singletonObject = new GameObject();
+                    GameObject singletonObject = new GameObject(typeof(T) + " (Singleton)");
                     _instance = singletonObject.AddComponent<T>();
-                    singletonObject.name = typeof(T) + " (Singleton)";
-
-                    DontDestroyOnLoad(singletonObject);
                 }
             }
 

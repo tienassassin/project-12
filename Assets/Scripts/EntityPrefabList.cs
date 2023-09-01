@@ -12,12 +12,12 @@ public class EntityPrefabList : ScriptableObject
     [TableList]
     public List<EntityPrefab> devilPrefs = new();
 
-    public BattleEntity GetHeroPrefab(string id)
+    public EntityController GetHeroPrefab(string id)
     {
         return heroPrefs.Find(x => x.prefabID.Equals(id)).entity;
     }
 
-    public BattleEntity GetDevilPrefab(string id)
+    public EntityController GetDevilPrefab(string id)
     {
         return devilPrefs.Find(x => x.prefabID.Equals(id)).entity;
     }
@@ -28,5 +28,5 @@ public struct EntityPrefab
 {
     [TableColumnWidth(100, false)]
     public string prefabID;
-    public BattleEntity entity;
+    public EntityController entity;
 }

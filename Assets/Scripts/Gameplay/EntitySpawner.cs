@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class EntitySpawner : DuztineBehaviour
@@ -13,7 +15,7 @@ public class EntitySpawner : DuztineBehaviour
     // fake data
     public List<HeroData> heroes = new();
     public List<DevilData> devils = new();
-    private List<BattleEntity> _entities = new();
+    private List<EntityController> _entities = new();
 
     private async void Start()
     {
@@ -31,7 +33,7 @@ public class EntitySpawner : DuztineBehaviour
             var pref = entityPrefList.GetHeroPrefab(heroes[i].heroId);
             var newEntity = Instantiate(pref, heroPositions[firstIndex + i].position, Quaternion.identity,
                 entityContainer);
-            newEntity.Init(heroes[i]);
+            newEntity.Entity.Init(heroes[i]);
             _entities.Add(newEntity);
         }
     }
@@ -44,7 +46,7 @@ public class EntitySpawner : DuztineBehaviour
             var pref = entityPrefList.GetDevilPrefab(devils[i].devilId);
             var newEntity = Instantiate(pref, devilPositions[firstIndex + i].position, Quaternion.identity,
                 entityContainer);
-            newEntity.Init(devils[i]);
+            newEntity.Entity.Init(devils[i]);
             _entities.Add(newEntity);
         }
     }
@@ -58,5 +60,47 @@ public class EntitySpawner : DuztineBehaviour
         // X = 3 -> Y = 0   [x] [x] [x] [ ]
         // X = 4 -> Y = 0   [x] [x] [x] [x]
         return quantity <= 2 ? 1 : 0;
+    }
+
+    [Button]
+    public List<EntityController> GetAllEntities(Faction faction)
+    {
+        return _entities.Where(x => x.Entity.Faction == faction).ToList();
+    }
+
+    [Button]
+    public List<EntityController> GetAdjacentEntities(EntityController entity, bool includeMain = true)
+    {
+        var result = new List<EntityController>();
+        if (includeMain) result.Add(entity);
+        var indexOfMain = _entities.FindIndex(x => x == entity);
+        if (indexOfMain >= 0)
+        {
+            int leftIndex = indexOfMain - 1;
+            if (leftIndex >= 0)
+            {
+                var leftEntity = _entities[leftIndex];
+                if (leftEntity != null
+                    && leftEntity.Entity.IsAlive
+                    && leftEntity.Entity.Faction == entity.Entity.Faction)
+                {
+                    result.Add(leftEntity);
+                }
+            }
+
+            int rightIndex = indexOfMain + 1;
+            if (rightIndex < _entities.Count)
+            {
+                var rightEntity = _entities[rightIndex];
+                if (rightEntity != null
+                    && rightEntity.Entity.IsAlive
+                    && rightEntity.Entity.Faction == entity.Entity.Faction)
+                {
+                    result.Add(rightEntity);
+                }
+            }
+        }
+
+        return result;
     }
 }

@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  _queue: []
+  queue: []
 --- !u!114 &481234558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,6 +356,7 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   targetType: 0
   id: 0
+  currentEntity: {fileID: 0}
   selectedEntity: {fileID: 0}
 --- !u!1001 &957306675
 PrefabInstance:
@@ -702,10 +703,23 @@ MonoBehaviour:
     curHp: 50
     energy: 0
     eqmList: []
+  - heroId: 03
+    totalExp: 20000
+    curHp: 100
+    energy: 30
+    eqmList: []
+  - heroId: 02
+    totalExp: 20000
+    curHp: 80
+    energy: 80
+    eqmList: []
   devils:
   - devilId: 02
     isBoss: 0
-    level: 1
+    level: 20
+  - devilId: 02
+    isBoss: 0
+    level: 20
 --- !u!1 &1706383537
 GameObject:
   m_ObjectHideFlags: 0

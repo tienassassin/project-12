@@ -5,26 +5,26 @@ using UnityEngine;
 
 public class ActionQueue : Singleton<ActionQueue>
 {
-    [SerializeField] private List<Turn> _queue;
+    [SerializeField] private List<Turn> queue;
     private Turn _curTurn;
 
     private int _currentPhase;
     public int CurrentPhase => _currentPhase;
 
-    public void InitQueue(List<BattleEntity> entities)
+    public void InitQueue(List<EntityController> entities)
     {
-        var sortedEntities = new List<BattleEntity>();
+        var sortedEntities = new List<EntityController>();
         entities.ForEach(x => sortedEntities.Add(x));
         sortedEntities.Sort((e1, e2) => CompareOrder(e2, e1));
 
-        sortedEntities.ForEach(x => { _queue.Add(new Turn(x.ID, x.name, false)); });
+        sortedEntities.ForEach(x => { queue.Add(new Turn(x.Entity.ID, x.name, false)); });
 
         NextTurn();
 
-        int CompareOrder(BattleEntity e1, BattleEntity e2)
+        int CompareOrder(EntityController e1, EntityController e2)
         {
-            var s1 = e1.Stats;
-            var s2 = e2.Stats;
+            var s1 = e1.Entity.Stats;
+            var s2 = e2.Entity.Stats;
             int speedComparision = s1.speed.CompareTo(s2.speed);
             if (speedComparision != 0) return speedComparision;
             int luckComparision = s1.luck.CompareTo(s2.luck);
@@ -36,9 +36,9 @@ public class ActionQueue : Singleton<ActionQueue>
 
     private void NextTurn()
     {
-        _curTurn = _queue[0];
+        _curTurn = queue[0];
         this.PostEvent(EventID.ON_TAKE_TURN, _curTurn.info.id);
-        this.PostEvent(EventID.ON_ACTION_QUEUE_CHANGED, _queue);
+        this.PostEvent(EventID.ON_ACTION_QUEUE_CHANGED, queue);
     }
 
     public void AddExtraTurn(TurnInfo extraTurn)
@@ -49,17 +49,17 @@ public class ActionQueue : Singleton<ActionQueue>
     [Button]
     public void EndTurn()
     {
-        var lastTurn = _queue[0];
-        _queue.RemoveAt(0);
+        var lastTurn = queue[0];
+        queue.RemoveAt(0);
 
         for (int i = 0; i < lastTurn.extraTurns.Count; i++)
         {
             var extraTurn = lastTurn.extraTurns[i];
-            _queue.Insert(i, new Turn(extraTurn.id, extraTurn.name, true));
+            queue.Insert(i, new Turn(extraTurn.id, extraTurn.name, true));
         }
 
         lastTurn.extraTurns.Clear();
-        if (!lastTurn.isExtra) _queue.Add(lastTurn);
+        if (!lastTurn.isExtra) queue.Add(lastTurn);
 
         NextTurn();
     }

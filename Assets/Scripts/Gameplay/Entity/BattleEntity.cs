@@ -29,13 +29,10 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     [SerializeField] private bool isImmortal;
     [SerializeField] private bool isUltimateReady;
 
+    private EntityUI _entityUI;
+
     #region Events
 
-    public Action<float> hpSegmentSetup;
-    // hp, vHp, maxHp, duration
-    public Action<float, float, float, float> hpUpdated;
-    // energy, maxEnergy, duration
-    public Action<float, float, float> energyUpdated;
     public Action<float> rageUpdated;
 
     #endregion
@@ -117,6 +114,10 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     #endregion
 
+    private void Awake()
+    {
+        _entityUI = GetComponent<EntityUI>();
+    }
 
     public void Init(HeroData heroData)
     {
@@ -172,17 +173,17 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     protected virtual void SetupHpSegment()
     {
-        hpSegmentSetup?.Invoke(stats.health);
+        _entityUI.SetupHpSegment(stats.health);
     }
 
     protected virtual void UpdateHp(float duration = 1f)
     {
-        hpUpdated?.Invoke(Hp, VirtualHp, Stats.health, duration);
+        _entityUI.UpdateHp(Hp, VirtualHp, Stats.health, duration);
     }
 
     protected virtual void UpdateEnergy(float duration = 1f)
     {
-        energyUpdated?.Invoke(Energy, 100, duration);
+        _entityUI.UpdateEnergy(Energy, 100, duration);
     }
 
     protected virtual void UpdateRage()
@@ -251,6 +252,14 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         float dmgDealt = DealDamage(target, dmg);
 
         RegenHp(dmgDealt * (Stats.lifeSteal / 100));
+    }
+
+    public virtual void UseSkill(IDamageTaker target)
+    {
+    }
+
+    public virtual void UseUltimate(IDamageTaker target)
+    {
     }
 
     public virtual void RegenHp(float hpAmount, bool allowOverflow = false)

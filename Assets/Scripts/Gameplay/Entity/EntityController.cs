@@ -3,21 +3,20 @@ using UnityEngine;
 
 public class EntityController : DuztineBehaviour
 {
-    [SerializeField] private GameObject focus; // just test, remove later
-
     private BattleEntity _entity;
+    private EntityUI _entityUI;
     private Collider2D _collider;
 
     private bool _isFocused;
 
     public Action<bool> entitySelected;
 
-    public bool CanTakeTurn => _entity.CanTakeTurn;
-    public bool IsAlive => _entity.IsAlive;
+    public BattleEntity Entity => _entity;
 
     private void Awake()
     {
         _entity = GetComponent<BattleEntity>();
+        _entityUI = GetComponent<EntityUI>();
         _collider = GetComponent<Collider2D>();
     }
 
@@ -35,15 +34,20 @@ public class EntityController : DuztineBehaviour
 
     private void OnTakeTurn(object id)
     {
-        if (_entity.ID != (int)id) return;
-        if (!IsAlive) return;
+        if (_entity.ID != (int)id || !_entity.IsAlive)
+        {
+            _entityUI.SwitchHighlight(false);
+            return;
+        }
 
-        if (!CanTakeTurn)
+        if (!_entity.CanTakeTurn)
         {
             Invoke(nameof(EndTurn), 1f);
         }
 
         EditorLog.Message(name + "'s turn!");
+        _entityUI.SwitchHighlight(true);
+        BattleManager.Instance.UpdateCurrentEntity(this);
     }
 
     private void OnFocused(object data)
@@ -80,10 +84,14 @@ public class EntityController : DuztineBehaviour
         }
 
         _collider.enabled = _isFocused;
-        focus.SetActive(_isFocused);
+        _entityUI.SwitchFocus(_isFocused);
     }
 
-    private void EndTurn()
+    public void Action()
+    {
+    }
+
+    public void EndTurn()
     {
         ActionQueue.Instance.EndTurn();
     }
