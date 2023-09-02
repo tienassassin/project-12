@@ -37,6 +37,12 @@ public class ActionQueue : Singleton<ActionQueue>
         }
     }
 
+    public void RemoveEntity(int id)
+    {
+        var turn = queue.Find(x => x.info.id == id);
+        queue.Remove(turn);
+    }
+
     private void NextTurn()
     {
         BattleManager.Instance.UnfocusAll();

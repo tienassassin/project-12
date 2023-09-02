@@ -38,11 +38,9 @@ public class EntityController : DuztineBehaviour
             return;
         }
 
-        if (!_entity.IsAlive)
-        {
-            AutoEndTurn();
-            return;
-        }
+        EditorLog.Message(name + "'s turn!");
+        _entityUI.SwitchHighlight(true);
+        BattleManager.Instance.UpdateCurrentEntity(this);
 
         if (!_entity.CanTakeTurn)
         {
@@ -54,10 +52,6 @@ public class EntityController : DuztineBehaviour
         {
             Invoke(nameof(AutoAction), 1f);
         }
-
-        EditorLog.Message(name + "'s turn!");
-        _entityUI.SwitchHighlight(true);
-        BattleManager.Instance.UpdateCurrentEntity(this);
     }
 
     private void OnFocused(object data)

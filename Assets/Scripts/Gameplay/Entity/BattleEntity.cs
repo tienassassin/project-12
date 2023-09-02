@@ -371,6 +371,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     public virtual void Die()
     {
         EditorLog.Message($"{name} dead");
+        gameObject.SetActive(false);
+        ActionQueue.Instance.RemoveEntity(UniqueID);
     }
 
     #endregion
