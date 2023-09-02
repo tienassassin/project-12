@@ -6,6 +6,7 @@ public abstract class Mecha : BattleEntity, IRaceAura
     public new bool CanTakeTurn => !IsStun && !isHibernating;
 
     [TitleGroup("MECHA AURA:")]
+    [SerializeField] protected bool hasAura;
     [SerializeField] protected bool hasResurrected;
     [SerializeField] protected bool isHibernating;
     [SerializeField] protected float hibernationHpThreshold;
@@ -17,21 +18,32 @@ public abstract class Mecha : BattleEntity, IRaceAura
         switch (rank)
         {
             case 3:
+                hasAura = true;
                 hibernationHpThreshold = 0.5f;
                 extraDamageTaken = 1;
                 resurrectionHpThreshold = 0.3f;
                 break;
 
             case 4:
+                hasAura = true;
                 hibernationHpThreshold = 1;
                 extraDamageTaken = 1;
                 resurrectionHpThreshold = 0.5f;
+                break;
+
+            default:
+                hasAura = false;
                 break;
         }
     }
 
     public override float TakeDamage(IDamageDealer origin, Damage dmg)
     {
+        if (!hasAura)
+        {
+            return base.TakeDamage(origin, dmg);
+        }
+
         if (IsImmortal)
         {
             SpawnHpText(HealthImpactType.None, 0, 1, 0);
@@ -79,6 +91,12 @@ public abstract class Mecha : BattleEntity, IRaceAura
 
     public override void Die()
     {
+        if (!hasAura)
+        {
+            base.Die();
+            return;
+        }
+
         if (!hasResurrected)
         {
             EditorLog.Message($"[Mecha] {name} activates hibernation!");

@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class Beast : BattleEntity, IRaceAura
 {
     [TitleGroup("BEAST AURA:")]
+    [SerializeField] protected bool hasAura;
     [SerializeField] protected float extraLifeStealPerStack;
     [SerializeField] protected float hpLossPerStack;
     [SerializeField] protected int maxStack;
@@ -14,15 +15,21 @@ public abstract class Beast : BattleEntity, IRaceAura
         switch (rank)
         {
             case 3:
+                hasAura = true;
                 extraLifeStealPerStack = 4;
                 hpLossPerStack = 0.1f;
                 maxStack = 5;
                 break;
 
             case 4:
+                hasAura = true;
                 extraLifeStealPerStack = 5;
                 hpLossPerStack = 0.1f;
                 maxStack = 7;
+                break;
+
+            default:
+                hasAura = false;
                 break;
         }
     }

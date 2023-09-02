@@ -34,6 +34,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     [SerializeField] private SkillTargetType ultimateTargetType;
 
     private EntityUI _entityUI;
+    private EntityReferenceHolder _ref;
 
 
     #region Public properties
@@ -120,6 +121,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     private void Awake()
     {
         _entityUI = GetComponent<EntityUI>();
+        _ref = GetComponent<EntityReferenceHolder>();
     }
 
     public void Init(HeroData heroData)
@@ -198,6 +200,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         if (amount < 1)
         {
             string dmgTxt = (impactType == HealthImpactType.Healing ? "+0" : "immortal");
+            var o = ObjectPool.Instance.SpawnObject<HpText>(_ref.hpTextPrefab, _ref.hpTextPos.position);
+            o.Init(impactType, dmgTxt);
             EditorLog.Message(name + dmgTxt);
         }
         else
@@ -209,6 +213,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             for (int i = 0; i < division; i++)
             {
                 string dmgTxt = (impactType == HealthImpactType.Healing ? "+" : "-") + amountPerHit;
+                var o = ObjectPool.Instance.SpawnObject<HpText>(_ref.hpTextPrefab, _ref.hpTextPos.position);
+                o.Init(impactType, dmgTxt);
                 EditorLog.Message(name + dmgTxt);
             }
         }

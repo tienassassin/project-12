@@ -1567,6 +1567,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1302945509889675332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3199027184566723878}
+  m_Layer: 0
+  m_Name: hp-text-pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3199027184566723878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302945509889675332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4839870134832062091}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1637845835755216419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,6 +1942,7 @@ GameObject:
   - component: {fileID: 5361184836008676379}
   - component: {fileID: 6069382969725740724}
   - component: {fileID: 2895096620699468359}
+  - component: {fileID: 6293348257817066912}
   m_Layer: 0
   m_Name: BattleEntity
   m_TagString: Untagged
@@ -1934,6 +1966,7 @@ Transform:
   - {fileID: 763107512}
   - {fileID: 1329225237090134105}
   - {fileID: 5821397750093596420}
+  - {fileID: 3199027184566723878}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2004,6 +2037,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0073bfca6137134e8b6b779d86dc8eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6293348257817066912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4839870134832062093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe172e94715b7b469472ea1bf2d99c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpTextPos: {fileID: 3199027184566723878}
+  hpTextPrefab: {fileID: 250540499957073895, guid: 3b15de1ed167df74b930907b159ff660, type: 3}
 --- !u!1 &4902570980851865672
 GameObject:
   m_ObjectHideFlags: 0

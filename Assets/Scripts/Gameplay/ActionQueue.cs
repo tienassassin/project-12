@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -11,13 +12,15 @@ public class ActionQueue : Singleton<ActionQueue>
     private int _currentPhase;
     public int CurrentPhase => _currentPhase;
 
-    public void InitQueue(List<EntityController> entities)
+    public async void InitQueue(List<EntityController> entities)
     {
         var sortedEntities = new List<EntityController>();
         entities.ForEach(x => sortedEntities.Add(x));
         sortedEntities.Sort((e1, e2) => CompareOrder(e2, e1));
 
         sortedEntities.ForEach(x => { queue.Add(new Turn(x.Entity.UniqueID, x.name, false)); });
+
+        await UniTask.Delay(TimeSpan.FromSeconds(3));
 
         NextTurn();
 
