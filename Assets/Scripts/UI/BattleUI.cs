@@ -12,11 +12,16 @@ public class BattleUI : BaseUI
 
     [TitleGroup("Action menu:")]
     [SerializeField] private GameObject actionMenu;
+    [SerializeField] private Image imgSkill;
 
     [TitleGroup("Fire spirit:")]
     [SerializeField] private Image imgMainFireSpirit;
     [SerializeField] private Image imgSubFireSpirit;
     [SerializeField] private float fireSpiritStep = 1.75f;
+
+    [TitleGroup("Ultimate:")]
+    private int _ultimateIndex;
+    [SerializeField] private BattleHeroUltimate[] imgUltimateList;
 
     private List<BattleTurn> _turns;
     private float _turnOffset0 = -75;
@@ -51,26 +56,45 @@ public class BattleUI : BaseUI
 
     private void OnEnable()
     {
-        this.AddListener(EventID.ON_ACTION_QUEUE_CHANGED, Refresh);
+        this.AddListener(EventID.ON_ACTION_QUEUE_CHANGED, RefreshQueue);
         this.AddListener(EventID.ON_CURRENT_ENTITY_UPDATED, OnCurrentEntityUpdated);
         this.AddListener(EventID.ON_FIRE_SPIRIT_UPDATED, UpdateFireSpirit);
         this.AddListener(EventID.ON_FIRE_SPIRIT_PREVIEWED, PreviewFireSpirit);
+        this.AddListener(EventID.ON_HEROES_SPAWNED, SetupUltimateSkills);
     }
 
     private void OnDisable()
     {
-        this.RemoveListener(EventID.ON_ACTION_QUEUE_CHANGED, Refresh);
+        this.RemoveListener(EventID.ON_ACTION_QUEUE_CHANGED, RefreshQueue);
         this.RemoveListener(EventID.ON_CURRENT_ENTITY_UPDATED, OnCurrentEntityUpdated);
         this.RemoveListener(EventID.ON_FIRE_SPIRIT_UPDATED, UpdateFireSpirit);
         this.RemoveListener(EventID.ON_FIRE_SPIRIT_PREVIEWED, PreviewFireSpirit);
+        this.RemoveListener(EventID.ON_HEROES_SPAWNED, SetupUltimateSkills);
     }
 
     private void ApplyDefaultLayout()
     {
         actionMenu.SetActive(false);
+
+        foreach (var img in imgUltimateList)
+        {
+            img.gameObject.SetActive(false);
+        }
     }
 
-    private void Refresh(object data)
+    private void SetupUltimateSkills(object data)
+    {
+        var entity = (BattleEntity)data;
+
+        var ultimateSkill = imgUltimateList[_ultimateIndex];
+        var skillIcon = Common.GetSkillIcon(entity.EntityID, 2);
+        var heroIcon = Common.GetSkillIcon("00", 0); //todo: review later
+        ultimateSkill.gameObject.SetActive(true);
+        ultimateSkill.Init(entity.UniqueID, skillIcon, heroIcon);
+        _ultimateIndex++;
+    }
+
+    private void RefreshQueue(object data)
     {
         var queue = (List<Turn>)data;
         while (turnContainer.childCount < queue.Count)
@@ -103,6 +127,7 @@ public class BattleUI : BaseUI
     {
         var entity = (EntityController)data;
         actionMenu.SetActive(entity.Entity.Faction == Faction.Hero);
+        imgSkill.sprite = Common.GetSkillIcon(entity.Entity.EntityID, 1);
     }
 
     private void UpdateFireSpirit(object data)

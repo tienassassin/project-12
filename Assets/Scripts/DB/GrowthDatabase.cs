@@ -69,7 +69,7 @@ public class GrowthDatabase : Database
         g = new EntityGrowth
         {
             tier = tier,
-            growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f
+            growth = Common.Parse<float>((string)jObject["growth(%)"]) / 100f
         };
     }
 
@@ -80,7 +80,7 @@ public class GrowthDatabase : Database
         g = new EquipmentGrowth
         {
             rarity = rarity,
-            growth = Utils.Parse<float>((string)jObject["growth(%)"]) / 100f
+            growth = Common.Parse<float>((string)jObject["growth(%)"]) / 100f
         };
     }
 }

@@ -47,7 +47,7 @@ public class StatDatabase : Database
         {
             stat = (string)jObject["stat"],
             name = (string)jObject["name"],
-            limit = Utils.Parse<float>((string)jObject["limit"]),
+            limit = Common.Parse<float>((string)jObject["limit"]),
             description = (string)jObject["description"]
         };
     }

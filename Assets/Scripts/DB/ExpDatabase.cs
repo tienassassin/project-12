@@ -29,7 +29,7 @@ public class ExpDatabase : Database
             for (int i = 0; i < levelMax; i++)
             {
                 var jObject = (JObject)jArray[i];
-                int exp = Utils.Parse<int>((string)jObject["exp"]);
+                int exp = Common.Parse<int>((string)jObject["exp"]);
                 if (i > 0) totalExp += lastLevelExp;
                 lastLevelExp = exp;
                 expList.Add(new ExpData(i + 1, exp, totalExp));

@@ -17,7 +17,7 @@ public class ActionQueue : Singleton<ActionQueue>
         entities.ForEach(x => sortedEntities.Add(x));
         sortedEntities.Sort((e1, e2) => CompareOrder(e2, e1));
 
-        sortedEntities.ForEach(x => { queue.Add(new Turn(x.Entity.ID, x.name, false)); });
+        sortedEntities.ForEach(x => { queue.Add(new Turn(x.Entity.UniqueID, x.name, false)); });
 
         NextTurn();
 

@@ -54,7 +54,7 @@ public class HeroDatabase : Database
             return;
         }
 
-        string tierValue = Utils.GetNormalizedString((string)jObject["tier"]);
+        string tierValue = Common.GetNormalizedString((string)jObject["tier"]);
 
         Enum.TryParse(tierValue, out Tier tier);
         Enum.TryParse((string)jObject["element"], out Element element);
@@ -73,16 +73,16 @@ public class HeroDatabase : Database
             attackRange = atkRange,
             stats = new Stats
             {
-                health = Utils.Parse<float>((string)jObject["health"]),
-                damage = Utils.Parse<float>((string)jObject["damage"]),
-                armor = Utils.Parse<float>((string)jObject["armor"]),
-                resistance = Utils.Parse<float>((string)jObject["resistance"]),
-                intelligence = Utils.Parse<float>((string)jObject["intelligence"]),
-                speed = Utils.Parse<float>((string)jObject["speed"]),
-                luck = Utils.Parse<float>((string)jObject["luck"]),
-                critDamage = Utils.Parse<float>((string)jObject["crit damage"]),
-                lifeSteal = Utils.Parse<float>((string)jObject["life steal"]),
-                accuracy = Utils.Parse<float>((string)jObject["accuracy"])
+                health = Common.Parse<float>((string)jObject["health"]),
+                damage = Common.Parse<float>((string)jObject["damage"]),
+                armor = Common.Parse<float>((string)jObject["armor"]),
+                resistance = Common.Parse<float>((string)jObject["resistance"]),
+                intelligence = Common.Parse<float>((string)jObject["intelligence"]),
+                speed = Common.Parse<float>((string)jObject["speed"]),
+                luck = Common.Parse<float>((string)jObject["luck"]),
+                critDamage = Common.Parse<float>((string)jObject["crit damage"]),
+                lifeSteal = Common.Parse<float>((string)jObject["life steal"]),
+                accuracy = Common.Parse<float>((string)jObject["accuracy"])
             }
         };
     }

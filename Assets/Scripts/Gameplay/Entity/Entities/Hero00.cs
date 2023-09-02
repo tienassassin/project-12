@@ -13,4 +13,10 @@ public class Hero00 : Human
     {
         base.RegenHp(hpAmount, allowOverflow);
     }
+
+    [Button]
+    protected override void UpdateEnergy(float duration = 1)
+    {
+        base.UpdateEnergy(duration);
+    }
 }

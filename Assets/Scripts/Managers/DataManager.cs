@@ -45,7 +45,7 @@ public class DataManager : Singleton<DataManager>
     public void NotifyDBLoaded(string dbName, int time)
     {
         _loadedDBCount++;
-        EditorLog.Message($"({_loadedDBCount}/{TOTAL_DB_COUNT}) Loaded {dbName}, elapsed time: {time}ms");
+        // EditorLog.Message($"({_loadedDBCount}/{TOTAL_DB_COUNT}) Loaded {dbName}, elapsed time: {time}ms");
         if (_loadedDBCount >= TOTAL_DB_COUNT)
         {
             EditorLog.Message("All Databases loaded!");

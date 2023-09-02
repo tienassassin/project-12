@@ -5,14 +5,14 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public static class Utils
+public static class Common
 {
     /// <summary>
-    /// Get random result (true/false) from 0-100(%) rate
+    ///     Get random result (true/false) from 0-100(%) rate
     /// </summary>
     public static bool GetRandomResult(float rate)
     {
-        float num = Random.Range(0f,100f);
+        float num = Random.Range(0f, 100f);
         return num <= rate;
     }
 
@@ -29,7 +29,7 @@ public static class Utils
         return 0;
     }
 
-    public static T Parse<T>(string value) 
+    public static T Parse<T>(string value)
         where T : struct, IComparable, IConvertible, IFormattable
     {
         if (typeof(T) == typeof(float))
@@ -39,13 +39,13 @@ public static class Utils
             float.TryParse(value, numStyle, culture, out var result);
             return (T)(object)result;
         }
-        
+
         if (typeof(T) == typeof(int))
         {
             int.TryParse(value, out var result);
             return (T)(object)result;
         }
-        
+
         return default;
     }
 
@@ -63,13 +63,13 @@ public static class Utils
     public static string GetNormalizedString(string raw)
     {
         string pattern = @"^\d+_([a-zA-Z]+)$";
-        
+
         Match match = Regex.Match(raw, pattern);
         if (match.Success)
         {
             return match.Groups[1].Value;
         }
-        
+
         EditorLog.Error($"{raw} not match pattern {pattern}");
         return raw;
     }
@@ -77,6 +77,13 @@ public static class Utils
     public static string GetTitleCaseString(string raw)
     {
         return Regex.Replace(raw, @"\b\w", match => match.Value.ToUpper());
+    }
+
+    private static string _skillIconPath = "Icons/Skill";
+
+    public static Sprite GetSkillIcon(string heroId, int skillId)
+    {
+        return Resources.Load<Sprite>($"{_skillIconPath}/{heroId}/{skillId}");
     }
 }
 
@@ -89,7 +96,7 @@ public static class RectTransformExtensions
         rt.SetTop(top);
         rt.SetBottom(bottom);
     }
-    
+
     public static void SetLeft(this RectTransform rt, float left)
     {
         rt.offsetMin = new Vector2(left, rt.offsetMin.y);

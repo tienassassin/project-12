@@ -1,16 +1,10 @@
-/*
- * Copyright (c) 2023 vergil2k2.
- * All rights reserved.
- * Email: liw140402@gmail.com
- */
-
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EventDispatcher : Singleton<EventDispatcher>
 {
-    private readonly Dictionary<EventID, Action<object>> _eventDict = new();
+    private Dictionary<EventID, Action<object>> _eventDict = new();
 
     /// <summary>
     ///     Add a listener to EventDispatcher
@@ -74,7 +68,10 @@ public enum EventID
     ON_LINEUP_CHANGED,
     ON_BATTLE_SCENE_LOADED,
 
+    ON_HEROES_SPAWNED,
     ON_TAKE_TURN,
+    ON_ENERGY_UPDATED,
+
     ON_TARGET_FOCUSED,
     ON_ACTION_QUEUE_CHANGED,
     ON_CURRENT_ENTITY_UPDATED,

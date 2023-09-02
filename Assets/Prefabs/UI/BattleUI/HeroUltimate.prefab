@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 289469090450986943}
   - component: {fileID: 340659950622132325}
   - component: {fileID: 3863908198394397099}
+  - component: {fileID: 458750088675490470}
   m_Layer: 0
   m_Name: HeroUltimate
   m_TagString: Untagged
@@ -199,6 +200,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &458750088675490470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2443004010077588840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c94cbb8a97ad9444a27c5077037060c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgSkill: {fileID: 6556890510833740347}
+  imgHero: {fileID: 105240258253899039}
 --- !u!1 &3475182789108657262
 GameObject:
   m_ObjectHideFlags: 0

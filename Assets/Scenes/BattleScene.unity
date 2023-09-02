@@ -696,7 +696,7 @@ MonoBehaviour:
   - heroId: 00
     totalExp: 10000
     curHp: 50
-    energy: 0
+    energy: 100
     eqmList: []
   - heroId: 01
     totalExp: 200
@@ -706,12 +706,7 @@ MonoBehaviour:
   - heroId: 03
     totalExp: 20000
     curHp: 100
-    energy: 30
-    eqmList: []
-  - heroId: 02
-    totalExp: 20000
-    curHp: 80
-    energy: 80
+    energy: 100
     eqmList: []
   devils:
   - devilId: 02

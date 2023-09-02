@@ -86,7 +86,7 @@ public class AuraDatabase : Database
         Enum.TryParse((string)jObject["race"], out r);
         a = new Aura
         {
-            rank = Utils.Parse<int>((string)jObject["rank"]),
+            rank = Common.Parse<int>((string)jObject["rank"]),
             name = (string)jObject["name"],
             description = (string)jObject["description"]
         };
@@ -97,7 +97,7 @@ public class AuraDatabase : Database
         Enum.TryParse((string)jObject["element"], out e);
         a = new Aura
         {
-            rank = Utils.Parse<int>((string)jObject["rank"]),
+            rank = Common.Parse<int>((string)jObject["rank"]),
             name = (string)jObject["name"],
             description = (string)jObject["description"]
         };

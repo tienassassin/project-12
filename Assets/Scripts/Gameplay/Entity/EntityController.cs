@@ -34,7 +34,7 @@ public class EntityController : DuztineBehaviour
 
     private void OnTakeTurn(object id)
     {
-        if (_entity.ID != (int)id || !_entity.IsAlive)
+        if (_entity.UniqueID != (int)id || !_entity.IsAlive)
         {
             _entityUI.SwitchHighlight(false);
             return;
@@ -62,7 +62,7 @@ public class EntityController : DuztineBehaviour
             switch (targetType)
             {
                 case SkillTargetType.Ally:
-                    _isFocused = _entity.Faction == Faction.Hero && _entity.ID != id;
+                    _isFocused = _entity.Faction == Faction.Hero && _entity.UniqueID != id;
                     break;
                 case SkillTargetType.AllyOrSelf:
                     _isFocused = _entity.Faction == Faction.Hero;
@@ -71,11 +71,11 @@ public class EntityController : DuztineBehaviour
                     _isFocused = _entity.Faction == Faction.Devil;
                     break;
                 case SkillTargetType.EnemyOrSelf:
-                    _isFocused = _entity.Faction == Faction.Devil || _entity.ID == id;
+                    _isFocused = _entity.Faction == Faction.Devil || _entity.UniqueID == id;
                     break;
                 case SkillTargetType.ExceptSelf:
                     _isFocused = _entity.Faction == Faction.Devil ||
-                                 (_entity.Faction == Faction.Hero && _entity.ID != id);
+                                 (_entity.Faction == Faction.Hero && _entity.UniqueID != id);
                     break;
                 case SkillTargetType.All:
                     _isFocused = true;

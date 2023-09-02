@@ -49,7 +49,7 @@ public class EquipmentDatabase : Database
             return;
         }
 
-        string rarityValue = Utils.GetNormalizedString((string)jObject["rarity"]);
+        string rarityValue = Common.GetNormalizedString((string)jObject["rarity"]);
 
         Enum.TryParse(rarityValue, out Rarity rarity);
         Enum.TryParse((string)jObject["race"], out Race race);
@@ -64,20 +64,20 @@ public class EquipmentDatabase : Database
         e.slot = slot;
         e.requirement = req;
         e.race = race;
-        e.raceBonus = Utils.Parse<float>((string)jObject["race bonus(%)"]) / 100f;
+        e.raceBonus = Common.Parse<float>((string)jObject["race bonus(%)"]) / 100f;
         e.stats = new Stats
         {
             hideZero = true,
-            health = Utils.Parse<float>((string)jObject["health"]),
-            damage = Utils.Parse<float>((string)jObject["damage"]),
-            armor = Utils.Parse<float>((string)jObject["armor"]),
-            resistance = Utils.Parse<float>((string)jObject["resistance"]),
-            intelligence = Utils.Parse<float>((string)jObject["intelligence"]),
-            speed = Utils.Parse<float>((string)jObject["speed"]),
-            luck = Utils.Parse<float>((string)jObject["luck"]),
-            critDamage = Utils.Parse<float>((string)jObject["crit damage"]),
-            lifeSteal = Utils.Parse<float>((string)jObject["life steal"]),
-            accuracy = Utils.Parse<float>((string)jObject["accuracy"])
+            health = Common.Parse<float>((string)jObject["health"]),
+            damage = Common.Parse<float>((string)jObject["damage"]),
+            armor = Common.Parse<float>((string)jObject["armor"]),
+            resistance = Common.Parse<float>((string)jObject["resistance"]),
+            intelligence = Common.Parse<float>((string)jObject["intelligence"]),
+            speed = Common.Parse<float>((string)jObject["speed"]),
+            luck = Common.Parse<float>((string)jObject["luck"]),
+            critDamage = Common.Parse<float>((string)jObject["crit damage"]),
+            lifeSteal = Common.Parse<float>((string)jObject["life steal"]),
+            accuracy = Common.Parse<float>((string)jObject["accuracy"])
         };
     }
 
