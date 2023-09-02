@@ -105,8 +105,7 @@ public class EntityController : DuztineBehaviour
     {
         var target = EntitySpawner.Instance.GetRandomEntity(Faction.Hero);
         EditorLog.Message($"{name} attacked {target.name}");
-        Entity.Attack(target.Entity);
-        AutoEndTurn();
+        Entity.Attack(target.Entity, AutoEndTurn);
     }
 
     private void OnMouseUpAsButton()

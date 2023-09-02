@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public interface IDamageDealer
 {
     float DealDamage(IDamageTaker target, Damage dmg);
@@ -5,6 +7,7 @@ public interface IDamageDealer
 
 public interface IDamageTaker
 {
+    Vector3 GetHitPosition();
     float TakeDamage(IDamageDealer origin, Damage dmg);
     float TakeFatalDamage(IDamageDealer origin);
 }

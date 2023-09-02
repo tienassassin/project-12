@@ -80,7 +80,11 @@ public class BattleManager : Singleton<BattleManager>
         _targetConfirmed = target =>
         {
             EditorLog.Message($"{currentEntity.name} attacked {target.name}");
-            currentEntity.Entity.Attack(target.Entity);
+            currentEntity.Entity.Attack(target.Entity, () =>
+            {
+                _targetConfirmed = null;
+                ActionQueue.Instance.EndTurn();
+            });
             // ActionQueue.Instance.EndTurn();
         };
     }
@@ -93,8 +97,8 @@ public class BattleManager : Singleton<BattleManager>
         _targetConfirmed = target =>
         {
             EditorLog.Message($"{currentEntity.name} used skill on {target.name}");
+            // todo: review later
             currentEntity.Entity.UseSkill(target.Entity);
-            // ActionQueue.Instance.EndTurn();
         };
     }
 
@@ -106,8 +110,8 @@ public class BattleManager : Singleton<BattleManager>
         _targetConfirmed = target =>
         {
             EditorLog.Message($"{currentEntity.name} used ultimate on {target.name}");
+            // todo: review later
             currentEntity.Entity.UseUltimate(target.Entity);
-            // ActionQueue.Instance.EndTurn();
         };
     }
 
@@ -118,7 +122,7 @@ public class BattleManager : Singleton<BattleManager>
         var target = selectedEntity;
         UnfocusAll();
         _targetConfirmed?.Invoke(target);
-        _targetConfirmed = null;
-        ActionQueue.Instance.EndTurn();
+        // _targetConfirmed = null;
+        // ActionQueue.Instance.EndTurn();
     }
 }

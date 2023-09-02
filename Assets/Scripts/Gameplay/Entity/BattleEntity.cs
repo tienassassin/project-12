@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -175,6 +176,11 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         UpdateEnergy();
     }
 
+    public Vector3 GetHitPosition()
+    {
+        return (Faction == Faction.Hero ? _ref.rightHitPos : _ref.leftHitPos).position;
+    }
+
     #region UI
 
     protected virtual void SetupHpSegment()
@@ -240,7 +246,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     #region Actions
 
-    public virtual void Attack(IDamageTaker target)
+    public virtual void Attack(IDamageTaker target, Action finished)
     {
         Rage += Stats.luck;
         bool crit = Common.GetRandomResult(Rage);
@@ -249,12 +255,29 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             Rage = Mathf.Max(0, Rage - 100);
         }
 
-        RegenEnergy(Stats.intelligence);
+        // RegenEnergy(Stats.intelligence);
+        //
+        // var dmg = new Damage(Stats.damage, DamageType, Stats.accuracy / 100, crit);
+        // float dmgDealt = DealDamage(target, dmg);
+        //
+        // RegenHp(dmgDealt * (Stats.lifeSteal / 100));
 
-        var dmg = new Damage(Stats.damage, DamageType, Stats.accuracy / 100, crit);
-        float dmgDealt = DealDamage(target, dmg);
-
-        RegenHp(dmgDealt * (Stats.lifeSteal / 100));
+        float dmgDealt = 0;
+        float pureDmg = Stats.damage * (crit ? Stats.critDamage / 100f : 1f);
+        var dmg = new Damage(pureDmg, DamageType, Stats.accuracy / 100, crit);
+        var origin = transform.position;
+        var seq = DOTween.Sequence();
+        seq.Append(transform.DOMove(target.GetHitPosition(), 0.5f))
+            .AppendInterval(0.25f)
+            .AppendCallback(() => { dmgDealt = DealDamage(target, dmg); })
+            .Append(transform.DOMove(origin, 0.5f))
+            .AppendCallback(() =>
+            {
+                RegenEnergy(Stats.intelligence);
+                RegenHp(dmgDealt * (Stats.lifeSteal / 100));
+            })
+            .AppendInterval(0.25f)
+            .AppendCallback(() => { finished?.Invoke(); });
     }
 
     public virtual void UseSkill(IDamageTaker target)
