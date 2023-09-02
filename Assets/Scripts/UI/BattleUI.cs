@@ -57,7 +57,7 @@ public class BattleUI : BaseUI
     private void OnEnable()
     {
         this.AddListener(EventID.ON_ACTION_QUEUE_CHANGED, RefreshQueue);
-        this.AddListener(EventID.ON_CURRENT_ENTITY_UPDATED, OnCurrentEntityUpdated);
+        this.AddListener(EventID.ON_CURRENT_ENTITY_UPDATED, UpdateCurrentEntity);
         this.AddListener(EventID.ON_FIRE_SPIRIT_UPDATED, UpdateFireSpirit);
         this.AddListener(EventID.ON_FIRE_SPIRIT_PREVIEWED, PreviewFireSpirit);
         this.AddListener(EventID.ON_HEROES_SPAWNED, SetupUltimateSkills);
@@ -66,7 +66,7 @@ public class BattleUI : BaseUI
     private void OnDisable()
     {
         this.RemoveListener(EventID.ON_ACTION_QUEUE_CHANGED, RefreshQueue);
-        this.RemoveListener(EventID.ON_CURRENT_ENTITY_UPDATED, OnCurrentEntityUpdated);
+        this.RemoveListener(EventID.ON_CURRENT_ENTITY_UPDATED, UpdateCurrentEntity);
         this.RemoveListener(EventID.ON_FIRE_SPIRIT_UPDATED, UpdateFireSpirit);
         this.RemoveListener(EventID.ON_FIRE_SPIRIT_PREVIEWED, PreviewFireSpirit);
         this.RemoveListener(EventID.ON_HEROES_SPAWNED, SetupUltimateSkills);
@@ -123,7 +123,7 @@ public class BattleUI : BaseUI
         }
     }
 
-    private void OnCurrentEntityUpdated(object data)
+    private void UpdateCurrentEntity(object data)
     {
         var entity = (EntityController)data;
         actionMenu.SetActive(entity.Entity.Faction == Faction.Hero);
@@ -148,5 +148,21 @@ public class BattleUI : BaseUI
         // {
         //     imgMainFireSpirit.fillAmount += fireSpiritStep * diff;
         // }
+    }
+
+    public void SelectAttack()
+    {
+    }
+
+    public void SelectSpell()
+    {
+    }
+
+    public void SelectSkill()
+    {
+    }
+
+    public void SelectDismiss()
+    {
     }
 }

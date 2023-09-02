@@ -41,7 +41,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (_coroutine != null) StopCoroutine(_coroutine);
         detailPanel.SetActive(false);
-        this.PostEvent(EventID.ON_HIGHLIGHT_AURA);
+        this.PostEvent(EventID.ON_AURA_HIGHLIGHTED);
     }
 
     [Button]
@@ -113,6 +113,6 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         yield return new WaitForSeconds(delayShowPanel);
         detailPanel.SetActive(true);
-        this.PostEvent(EventID.ON_HIGHLIGHT_AURA, _auraType);
+        this.PostEvent(EventID.ON_AURA_HIGHLIGHTED, _auraType);
     }
 }

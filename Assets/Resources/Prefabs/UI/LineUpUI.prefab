@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 59803223922363301}
   - component: {fileID: 1119132124130129508}
   - component: {fileID: 7549018607927587635}
-  - component: {fileID: 4666938200042010619}
+  - component: {fileID: 5543348253945495363}
   m_Layer: 0
   m_Name: Image (2)
   m_TagString: Untagged
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4666938200042010619
+--- !u!114 &5543348253945495363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 635907674869815737}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -195,16 +195,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 7549018607927587635}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &723497347370459161
@@ -1194,7 +1184,7 @@ GameObject:
   - component: {fileID: 2891953749527582716}
   - component: {fileID: 4477086911005712958}
   - component: {fileID: 1537743888757444618}
-  - component: {fileID: 6056599408532213695}
+  - component: {fileID: 6321742204659352954}
   m_Layer: 0
   m_Name: Image (1)
   m_TagString: Untagged
@@ -1260,7 +1250,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6056599408532213695
+--- !u!114 &6321742204659352954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1269,7 +1259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1844667985562618025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1302,16 +1292,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1537743888757444618}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &2055370510103395133
@@ -2791,7 +2771,7 @@ GameObject:
   - component: {fileID: 5945953818313454945}
   - component: {fileID: 2019398672390292522}
   - component: {fileID: 6910504344001684982}
-  - component: {fileID: 5577730724164714585}
+  - component: {fileID: 2721188051000686641}
   m_Layer: 0
   m_Name: Image (5)
   m_TagString: Untagged
@@ -2857,7 +2837,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5577730724164714585
+--- !u!114 &2721188051000686641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2866,7 +2846,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3454990564152156684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -2899,16 +2879,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 6910504344001684982}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &3691870883146237031
@@ -5247,7 +5217,7 @@ GameObject:
   - component: {fileID: 6302287209426585193}
   - component: {fileID: 167035632502324746}
   - component: {fileID: 3671617858049999748}
-  - component: {fileID: 3253112163504675206}
+  - component: {fileID: 8880506483310494864}
   m_Layer: 0
   m_Name: Image (3)
   m_TagString: Untagged
@@ -5313,7 +5283,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3253112163504675206
+--- !u!114 &8880506483310494864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5322,7 +5292,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8502900791488308512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -5357,16 +5327,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &8831315357226075929
 GameObject:
   m_ObjectHideFlags: 0
@@ -5378,7 +5338,7 @@ GameObject:
   - component: {fileID: 787639381819224608}
   - component: {fileID: 4605489422645486993}
   - component: {fileID: 7278405766213900681}
-  - component: {fileID: 2462826698523404524}
+  - component: {fileID: 2020673272963600236}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -5444,7 +5404,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2462826698523404524
+--- !u!114 &2020673272963600236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5453,7 +5413,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8831315357226075929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -5488,16 +5448,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &8895255371945305704
 GameObject:
   m_ObjectHideFlags: 0
@@ -5509,7 +5459,7 @@ GameObject:
   - component: {fileID: 3534771123315934933}
   - component: {fileID: 2794610864804093265}
   - component: {fileID: 3164831340573802064}
-  - component: {fileID: 8169434377269645543}
+  - component: {fileID: 6369793157026461832}
   m_Layer: 0
   m_Name: Image (4)
   m_TagString: Untagged
@@ -5575,7 +5525,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8169434377269645543
+--- !u!114 &6369793157026461832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5584,7 +5534,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8895255371945305704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -5617,16 +5567,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3164831340573802064}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8969771974383983857

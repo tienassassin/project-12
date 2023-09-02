@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 2556221098109625230}
   - component: {fileID: 8290392973201171442}
   - component: {fileID: 8626197194563376974}
-  - component: {fileID: 26316516592000561}
+  - component: {fileID: 7463182278467252064}
   m_Layer: 0
   m_Name: skill 2
   m_TagString: Untagged
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &26316516592000561
+--- !u!114 &7463182278467252064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 282887488365822732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -560,16 +560,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &321895212705375314
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +571,7 @@ GameObject:
   - component: {fileID: 7293133770101610992}
   - component: {fileID: 5354514103925826138}
   - component: {fileID: 1397604862126559730}
-  - component: {fileID: 7105540810638119248}
+  - component: {fileID: 4083098042466527224}
   m_Layer: 0
   m_Name: weapon
   m_TagString: Untagged
@@ -647,7 +637,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7105540810638119248
+--- !u!114 &4083098042466527224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -656,7 +646,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 321895212705375314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -689,16 +679,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1397604862126559730}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &396427178998292435
@@ -2387,7 +2367,7 @@ GameObject:
   - component: {fileID: 3994013650258615305}
   - component: {fileID: 8272966323755184998}
   - component: {fileID: 5599725268031962205}
-  - component: {fileID: 8740587916387957610}
+  - component: {fileID: 5003455595239080311}
   m_Layer: 0
   m_Name: skill 1
   m_TagString: Untagged
@@ -2453,7 +2433,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8740587916387957610
+--- !u!114 &5003455595239080311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2462,7 +2442,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1261604633636298554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -2497,16 +2477,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1279153874168598638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,7 +2488,7 @@ GameObject:
   - component: {fileID: 2897067988111373503}
   - component: {fileID: 8315872566636885288}
   - component: {fileID: 3489878760493673920}
-  - component: {fileID: 6385087208704305970}
+  - component: {fileID: 8137889784315166564}
   m_Layer: 0
   m_Name: jewelry 1
   m_TagString: Untagged
@@ -2584,7 +2554,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6385087208704305970
+--- !u!114 &8137889784315166564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2593,7 +2563,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1279153874168598638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -2626,16 +2596,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3489878760493673920}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1363096598376249382
@@ -2801,7 +2761,7 @@ GameObject:
   - component: {fileID: 6537291586202830210}
   - component: {fileID: 5784438931169652993}
   - component: {fileID: 1649514829546892980}
-  - component: {fileID: 1828548773607257087}
+  - component: {fileID: 5618752536441580694}
   m_Layer: 0
   m_Name: right
   m_TagString: Untagged
@@ -2868,7 +2828,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1828548773607257087
+--- !u!114 &5618752536441580694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2877,7 +2837,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1522259467365364372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -2924,16 +2884,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  allowHold: 0
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1582839508126911276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4760,7 +4710,7 @@ GameObject:
   - component: {fileID: 6519046341400057979}
   - component: {fileID: 9054712067843124955}
   - component: {fileID: 4840220823457252655}
-  - component: {fileID: 904872134371861182}
+  - component: {fileID: 2406919738459774052}
   m_Layer: 0
   m_Name: stats
   m_TagString: Untagged
@@ -4827,7 +4777,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &904872134371861182
+--- !u!114 &2406919738459774052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4836,7 +4786,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2859491640244377680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -4872,7 +4822,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5907582492466150310}
-        m_TargetAssemblyTypeName: CharacterDetail, Assembly-CSharp
+        m_TargetAssemblyTypeName: ValhallaHeroDetail, Assembly-CSharp
         m_MethodName: SwitchTab
         m_Mode: 3
         m_Arguments:
@@ -4883,16 +4833,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  allowHold: 0
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &3021638354041528534
 GameObject:
   m_ObjectHideFlags: 0
@@ -6203,7 +6143,7 @@ GameObject:
   - component: {fileID: 1891771886921182759}
   - component: {fileID: 6847315272452155785}
   - component: {fileID: 3650154321725379745}
-  - component: {fileID: 4811546800849336290}
+  - component: {fileID: 778195519309083149}
   m_Layer: 0
   m_Name: jewelry 0
   m_TagString: Untagged
@@ -6269,7 +6209,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4811546800849336290
+--- !u!114 &778195519309083149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6278,7 +6218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3850512249800003289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -6311,16 +6251,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3650154321725379745}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &3859519419489939065
@@ -7196,8 +7126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4602463018247835366}
-  heroCardContainer: {fileID: 1545659131705966327}
-  heroCardPref: {fileID: 8230984445489841705, guid: 6b7a0c6d1c8ef314caef73fb06da29c6, type: 3}
   tierFilterOptions:
   - {fileID: 8775797819103279491}
   - {fileID: 5069158677921597158}
@@ -7214,6 +7142,8 @@ MonoBehaviour:
   - {fileID: 8043665628512437725}
   - {fileID: 7402329765027666632}
   - {fileID: 6031912175524786604}
+  heroCardPref: {fileID: 8230984445489841705, guid: 6b7a0c6d1c8ef314caef73fb06da29c6, type: 3}
+  heroCardContainer: {fileID: 1545659131705966327}
   heroDetail: {fileID: 5907582492466150310}
 --- !u!1 &4602463018247835362
 GameObject:
@@ -9351,7 +9281,7 @@ GameObject:
   - component: {fileID: 4781789916097534869}
   - component: {fileID: 6630798354335154254}
   - component: {fileID: 7474933977801586376}
-  - component: {fileID: 2643742623800698624}
+  - component: {fileID: 1793826933391940252}
   m_Layer: 0
   m_Name: jewelry 2
   m_TagString: Untagged
@@ -9417,7 +9347,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2643742623800698624
+--- !u!114 &1793826933391940252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9426,7 +9356,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5966913955886285524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -9459,16 +9389,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 7474933977801586376}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &6046264134345836373
@@ -9731,7 +9651,7 @@ GameObject:
   - component: {fileID: 3019349037223176407}
   - component: {fileID: 4376316518452094093}
   - component: {fileID: 5581488703378746190}
-  - component: {fileID: 6585627050386436275}
+  - component: {fileID: 7663001542976491316}
   m_Layer: 0
   m_Name: bg
   m_TagString: Untagged
@@ -9797,7 +9717,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6585627050386436275
+--- !u!114 &7663001542976491316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9806,7 +9726,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6184903584692046172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -9853,16 +9773,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  allowHold: 0
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &6249217404189070581
 GameObject:
   m_ObjectHideFlags: 0
@@ -10686,7 +10596,7 @@ GameObject:
   - component: {fileID: 2501745281015874732}
   - component: {fileID: 8112380514344404854}
   - component: {fileID: 2667990490274379871}
-  - component: {fileID: 5410970417474894286}
+  - component: {fileID: 2418812822359102734}
   m_Layer: 0
   m_Name: skill 3
   m_TagString: Untagged
@@ -10752,7 +10662,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5410970417474894286
+--- !u!114 &2418812822359102734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10761,7 +10671,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6779309368566414866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -10794,16 +10704,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 2667990490274379871}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &6917787087914654204
@@ -10999,7 +10899,7 @@ GameObject:
   - component: {fileID: 5128796791571196215}
   - component: {fileID: 1426295975263372156}
   - component: {fileID: 6344350385791707432}
-  - component: {fileID: 5074740004889602016}
+  - component: {fileID: 7306436763582595221}
   m_Layer: 0
   m_Name: equipments
   m_TagString: Untagged
@@ -11066,7 +10966,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5074740004889602016
+--- !u!114 &7306436763582595221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11075,7 +10975,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7060123481434884887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -11111,7 +11011,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5907582492466150310}
-        m_TargetAssemblyTypeName: CharacterDetail, Assembly-CSharp
+        m_TargetAssemblyTypeName: ValhallaHeroDetail, Assembly-CSharp
         m_MethodName: SwitchTab
         m_Mode: 3
         m_Arguments:
@@ -11122,16 +11022,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  allowHold: 0
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &7144441973765540491
 GameObject:
   m_ObjectHideFlags: 0
@@ -11642,7 +11532,7 @@ GameObject:
   - component: {fileID: 3836915140753086662}
   - component: {fileID: 6609346185974733471}
   - component: {fileID: 5964248515139307290}
-  - component: {fileID: 2470065799185733300}
+  - component: {fileID: 7059109911454098545}
   m_Layer: 0
   m_Name: garment
   m_TagString: Untagged
@@ -11708,7 +11598,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2470065799185733300
+--- !u!114 &7059109911454098545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11717,7 +11607,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7560935375316255111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -11750,16 +11640,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 5964248515139307290}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &7602221215028037409
@@ -11881,7 +11761,7 @@ GameObject:
   - component: {fileID: 2375235982731978784}
   - component: {fileID: 2834536420965087639}
   - component: {fileID: 5665977575275405129}
-  - component: {fileID: 5485301730948368499}
+  - component: {fileID: 7100291691431074789}
   m_Layer: 0
   m_Name: story
   m_TagString: Untagged
@@ -11948,7 +11828,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5485301730948368499
+--- !u!114 &7100291691431074789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11957,7 +11837,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7795576158761384636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -11993,7 +11873,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5907582492466150310}
-        m_TargetAssemblyTypeName: CharacterDetail, Assembly-CSharp
+        m_TargetAssemblyTypeName: ValhallaHeroDetail, Assembly-CSharp
         m_MethodName: SwitchTab
         m_Mode: 3
         m_Arguments:
@@ -12004,16 +11884,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  allowHold: 0
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &7804082355723781040
 GameObject:
   m_ObjectHideFlags: 0
@@ -12258,7 +12128,7 @@ GameObject:
   - component: {fileID: 2295295101799338682}
   - component: {fileID: 6931813545001273489}
   - component: {fileID: 1454225718084617960}
-  - component: {fileID: 5121159044651202619}
+  - component: {fileID: 5751790249019004856}
   m_Layer: 0
   m_Name: skill 0
   m_TagString: Untagged
@@ -12324,7 +12194,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5121159044651202619
+--- !u!114 &5751790249019004856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12333,7 +12203,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7853194022819834970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -12366,16 +12236,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1454225718084617960}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8114103394116971812
@@ -13291,7 +13151,7 @@ GameObject:
   - component: {fileID: 5174184115088981254}
   - component: {fileID: 3470426706216710723}
   - component: {fileID: 8629355407461106230}
-  - component: {fileID: 3276213396951698494}
+  - component: {fileID: 5089138151836137575}
   m_Layer: 0
   m_Name: headgear
   m_TagString: Untagged
@@ -13357,7 +13217,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3276213396951698494
+--- !u!114 &5089138151836137575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13366,7 +13226,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8819622942369440550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -13399,16 +13259,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 8629355407461106230}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-  allowHold: 1
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8838181432507261616
@@ -13574,7 +13424,7 @@ GameObject:
   - component: {fileID: 4275058999530466304}
   - component: {fileID: 3772887308974534263}
   - component: {fileID: 1023033218661781280}
-  - component: {fileID: 3178126270641768675}
+  - component: {fileID: 1042729725298219710}
   m_Layer: 0
   m_Name: left
   m_TagString: Untagged
@@ -13641,7 +13491,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3178126270641768675
+--- !u!114 &1042729725298219710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13650,7 +13500,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8946844228039544518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -13697,16 +13547,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  allowHold: 0
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &9074917283786310091
 GameObject:
   m_ObjectHideFlags: 0

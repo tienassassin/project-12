@@ -57,20 +57,20 @@ public class BattleManager : Singleton<BattleManager>
     }
 
     [Button]
-    public void AddFireSpirit(int amount)
+    public void AddFireSpirit()
     {
-        UpdateFireSpirit(Mathf.Clamp(_fireSpirit + amount, 0, _maxFireSpirit));
+        UpdateFireSpirit(_fireSpirit + 1);
     }
 
     [Button]
-    public void ConsumeFireSpirit(int amount)
+    public void ConsumeFireSpirit()
     {
-        UpdateFireSpirit(Mathf.Clamp(_fireSpirit - amount, 0, _maxFireSpirit));
+        UpdateFireSpirit(_fireSpirit - 1);
     }
 
     private void UpdateFireSpirit(int amount)
     {
-        _fireSpirit = amount;
+        _fireSpirit = Mathf.Clamp(amount, 0, _maxFireSpirit);
         this.PostEvent(EventID.ON_FIRE_SPIRIT_UPDATED, Tuple.Create(_fireSpirit, _maxFireSpirit));
     }
 

@@ -22,13 +22,13 @@ public class EntityController : DuztineBehaviour
 
     private void OnEnable()
     {
-        this.AddListener(EventID.ON_TAKE_TURN, OnTakeTurn);
+        this.AddListener(EventID.ON_TURN_TAKEN, OnTakeTurn);
         this.AddListener(EventID.ON_TARGET_FOCUSED, OnFocused);
     }
 
     private void OnDisable()
     {
-        this.RemoveListener(EventID.ON_TAKE_TURN, OnTakeTurn);
+        this.RemoveListener(EventID.ON_TURN_TAKEN, OnTakeTurn);
         this.AddListener(EventID.ON_TARGET_FOCUSED, OnFocused);
     }
 

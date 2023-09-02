@@ -64,12 +64,12 @@ public class EventDispatcher : Singleton<EventDispatcher>
 
 public enum EventID
 {
-    ON_HIGHLIGHT_AURA,
+    ON_AURA_HIGHLIGHTED,
     ON_LINEUP_CHANGED,
     ON_BATTLE_SCENE_LOADED,
 
     ON_HEROES_SPAWNED,
-    ON_TAKE_TURN,
+    ON_TURN_TAKEN,
     ON_ENERGY_UPDATED,
 
     ON_TARGET_FOCUSED,

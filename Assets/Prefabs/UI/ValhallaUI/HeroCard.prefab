@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 972009928514271381}
   - component: {fileID: 2867958252728695799}
   - component: {fileID: 8230984445489841705}
-  - component: {fileID: 4432756764372830267}
+  - component: {fileID: 2885321933322560074}
   m_Layer: 0
   m_Name: HeroCard
   m_TagString: Untagged
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   sldHp: {fileID: 3719891603078281657}
   sldEnergy: {fileID: 5915206739366467257}
   lockedMark: {fileID: 8848110715982790057}
---- !u!114 &4432756764372830267
+--- !u!114 &2885321933322560074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8180879665051084581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1127,7 +1127,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8230984445489841705}
-        m_TargetAssemblyTypeName: CharacterCard, Assembly-CSharp
+        m_TargetAssemblyTypeName: ValhallaHeroCard, Assembly-CSharp
         m_MethodName: SelectCard
         m_Mode: 1
         m_Arguments:
@@ -1138,16 +1138,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  allowHold: 0
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &8848110715982790057
 GameObject:
   m_ObjectHideFlags: 0

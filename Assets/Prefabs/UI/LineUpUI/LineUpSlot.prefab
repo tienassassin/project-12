@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 5357173149617037692}
   - component: {fileID: 7132043540868269400}
   - component: {fileID: 4521789407917403623}
-  - component: {fileID: 7069763755936098803}
+  - component: {fileID: 4681364486951846872}
   m_Layer: 0
   m_Name: btn
   m_TagString: Untagged
@@ -957,7 +957,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7069763755936098803
+--- !u!114 &4681364486951846872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4730610025489875055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee4256a5cfedb047844fe8a27fbea44, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1013,16 +1013,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  allowHold: 0
-  holdTime: 1
-  holdEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  allowDoubleClick: 0
-  doubleClickInterval: 0.2
-  doubleClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4944799487297389195
 GameObject:
   m_ObjectHideFlags: 0

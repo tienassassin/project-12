@@ -21,12 +21,12 @@ public class LineUpSlot : DuztineBehaviour
 
     private void OnEnable()
     {
-        this.AddListener(EventID.ON_HIGHLIGHT_AURA, SwitchHighlight);
+        this.AddListener(EventID.ON_AURA_HIGHLIGHTED, SwitchHighlight);
     }
 
     private void OnDisable()
     {
-        this.RemoveListener(EventID.ON_HIGHLIGHT_AURA, SwitchHighlight);
+        this.RemoveListener(EventID.ON_AURA_HIGHLIGHTED, SwitchHighlight);
     }
 
     public void Init(HeroData data, Action<int, HeroData> slotHighlighted)

@@ -37,7 +37,7 @@ public class ActionQueue : Singleton<ActionQueue>
     private void NextTurn()
     {
         _curTurn = queue[0];
-        this.PostEvent(EventID.ON_TAKE_TURN, _curTurn.info.id);
+        this.PostEvent(EventID.ON_TURN_TAKEN, _curTurn.info.id);
         this.PostEvent(EventID.ON_ACTION_QUEUE_CHANGED, queue);
     }
 
