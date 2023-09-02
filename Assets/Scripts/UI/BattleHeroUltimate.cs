@@ -9,6 +9,8 @@ public class BattleHeroUltimate : DuztineBehaviour
 
     private int _id = -1;
     private bool _isAvailable;
+    private Color _colorAvailable = Color.white;
+    private Color _colorUnavailable = new(1, 1, 1, 0.2f);
 
     private void OnEnable()
     {
@@ -39,9 +41,7 @@ public class BattleHeroUltimate : DuztineBehaviour
     private void SwitchAvailability(bool available)
     {
         _isAvailable = available;
-        var color = imgSkill.color;
-        color.a = available ? 1f : 0.2f;
-        imgSkill.color = color;
+        imgSkill.color = available ? _colorAvailable : _colorUnavailable;
     }
 
     private void UseUltimateSkill()

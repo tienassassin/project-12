@@ -32,9 +32,9 @@ public class EntityUI : DuztineBehaviour
     [SerializeField] private GameObject focus;
     [SerializeField] private GameObject actionMenu;
 
+    private EntityController _controller;
 
     private float _fillDelay = 0.5f;
-    private Ease _ease = Ease.InCubic;
     private Sequence _hpSeq;
     private Sequence _vHpSeq;
     private Sequence _energySeq;
@@ -44,8 +44,7 @@ public class EntityUI : DuztineBehaviour
         ApplyDefaultLayout();
         ResetAll();
 
-        var controller = GetComponent<EntityController>();
-        controller.entitySelected += SwitchActionPanel;
+        _controller = GetComponent<EntityController>();
     }
 
     private void ApplyDefaultLayout()
@@ -169,22 +168,20 @@ public class EntityUI : DuztineBehaviour
     {
     }
 
-    private void SwitchActionPanel(bool active)
+    public void SwitchActionPanel(bool active)
     {
         actionMenu.SetActive(active);
     }
 
     public void ConfirmAction()
     {
-        SwitchActionPanel(false);
-        BattleManager.Instance.ClearSelectedEntity();
+        BattleManager.Instance.ConfirmAction();
         EditorLog.Message("Action confirmed!");
     }
 
     public void CancelAction()
     {
-        SwitchActionPanel(false);
-        BattleManager.Instance.ClearSelectedEntity();
+        BattleManager.Instance.SelectEntity(null);
         EditorLog.Message("Action cancelled!");
     }
 }

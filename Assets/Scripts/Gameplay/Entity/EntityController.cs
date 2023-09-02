@@ -9,8 +9,6 @@ public class EntityController : DuztineBehaviour
 
     private bool _isFocused;
 
-    public Action<bool> entitySelected;
-
     public BattleEntity Entity => _entity;
 
     private void Awake()
@@ -29,20 +27,32 @@ public class EntityController : DuztineBehaviour
     private void OnDisable()
     {
         this.RemoveListener(EventID.ON_TURN_TAKEN, OnTakeTurn);
-        this.AddListener(EventID.ON_TARGET_FOCUSED, OnFocused);
+        this.RemoveListener(EventID.ON_TARGET_FOCUSED, OnFocused);
     }
 
     private void OnTakeTurn(object id)
     {
-        if (_entity.UniqueID != (int)id || !_entity.IsAlive)
+        if (_entity.UniqueID != (int)id)
         {
             _entityUI.SwitchHighlight(false);
             return;
         }
 
+        if (!_entity.IsAlive)
+        {
+            AutoEndTurn();
+            return;
+        }
+
         if (!_entity.CanTakeTurn)
         {
-            Invoke(nameof(EndTurn), 1f);
+            Invoke(nameof(AutoEndTurn), 1f);
+        }
+
+        // todo: review later
+        if (_entity.Faction != Faction.Hero)
+        {
+            Invoke(nameof(AutoEndTurn), 1f);
         }
 
         EditorLog.Message(name + "'s turn!");
@@ -87,11 +97,12 @@ public class EntityController : DuztineBehaviour
         _entityUI.SwitchFocus(_isFocused);
     }
 
-    public void Action()
+    public void SwitchActionPanel(bool selected)
     {
+        _entityUI.SwitchActionPanel(selected);
     }
 
-    public void EndTurn()
+    public void AutoEndTurn()
     {
         ActionQueue.Instance.EndTurn();
     }

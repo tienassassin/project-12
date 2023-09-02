@@ -1,35 +1,19 @@
 using System;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class BattleManager : Singleton<BattleManager>
 {
-    private int _fireSpirit;
-    private int _maxFireSpirit = 5;
+    [SerializeField] private int fireSpirit;
+    [SerializeField] private int maxFireSpirit = 5;
 
-    public SkillTargetType targetType;
-    public int id;
+    [SerializeField] private EntityController currentEntity;
+    [SerializeField] private EntityController selectedEntity;
 
-    public EntityController currentEntity;
-    public EntityController selectedEntity;
+    private Action<EntityController> _targetConfirmed;
 
     private void Start()
     {
-        UpdateFireSpirit(0);
-    }
-
-    [Button]
-    public void Test()
-    {
-        selectedEntity = null;
-        this.PostEvent(EventID.ON_TARGET_FOCUSED, Tuple.Create(targetType, id));
-    }
-
-    [Button]
-    public void TestUnfocus()
-    {
-        selectedEntity = null;
-        this.PostEvent(EventID.ON_TARGET_FOCUSED);
+        UpdateFireSpirit(1);
     }
 
     public void SelectEntity(EntityController entity)
@@ -38,46 +22,42 @@ public class BattleManager : Singleton<BattleManager>
 
         if (selectedEntity != null)
         {
-            selectedEntity.entitySelected?.Invoke(false);
+            selectedEntity.SwitchActionPanel(false);
         }
 
-        EditorLog.Message("Selected " + entity.name);
         selectedEntity = entity;
-        selectedEntity.entitySelected?.Invoke(true);
+
+        if (selectedEntity)
+        {
+            EditorLog.Message("Selected " + entity.name);
+            selectedEntity.SwitchActionPanel(true);
+        }
     }
 
-    public void ClearSelectedEntity()
+    public bool HasFireSpirit()
     {
-        selectedEntity = null;
+        return fireSpirit > 0;
     }
 
-    public bool HasEnoughFireSpirit(int amount)
-    {
-        return _fireSpirit >= amount;
-    }
-
-    [Button]
     public void AddFireSpirit()
     {
-        UpdateFireSpirit(_fireSpirit + 1);
+        UpdateFireSpirit(fireSpirit + 1);
     }
 
-    [Button]
     public void ConsumeFireSpirit()
     {
-        UpdateFireSpirit(_fireSpirit - 1);
+        UpdateFireSpirit(fireSpirit - 1);
     }
 
     private void UpdateFireSpirit(int amount)
     {
-        _fireSpirit = Mathf.Clamp(amount, 0, _maxFireSpirit);
-        this.PostEvent(EventID.ON_FIRE_SPIRIT_UPDATED, Tuple.Create(_fireSpirit, _maxFireSpirit));
+        fireSpirit = Mathf.Clamp(amount, 0, maxFireSpirit);
+        this.PostEvent(EventID.ON_FIRE_SPIRIT_UPDATED, Tuple.Create(fireSpirit, maxFireSpirit));
     }
 
-    [Button]
     public void PreviewFireSpirit(int difference)
     {
-        difference = Mathf.Min(difference, _maxFireSpirit - _fireSpirit);
+        difference = Mathf.Min(difference, maxFireSpirit - fireSpirit);
         this.PostEvent(EventID.ON_FIRE_SPIRIT_PREVIEWED, difference);
     }
 
@@ -85,5 +65,59 @@ public class BattleManager : Singleton<BattleManager>
     {
         currentEntity = entity;
         this.PostEvent(EventID.ON_CURRENT_ENTITY_UPDATED, entity);
+    }
+
+    public void UnfocusAll()
+    {
+        SelectEntity(null);
+        this.PostEvent(EventID.ON_TARGET_FOCUSED);
+        _targetConfirmed = null;
+    }
+
+    public void RequestAttack()
+    {
+        SelectEntity(null);
+        this.PostEvent(EventID.ON_TARGET_FOCUSED, Tuple.Create(SkillTargetType.Enemy, currentEntity.Entity.UniqueID));
+        _targetConfirmed = target =>
+        {
+            EditorLog.Message($"{currentEntity.name} attacked {target.name}");
+            currentEntity.Entity.Attack(target.Entity);
+            ActionQueue.Instance.EndTurn();
+        };
+    }
+
+    public void RequestUseSkill()
+    {
+        SelectEntity(null);
+        this.PostEvent(EventID.ON_TARGET_FOCUSED,
+            Tuple.Create(currentEntity.Entity.SkillTargetType, currentEntity.Entity.UniqueID));
+        _targetConfirmed = target =>
+        {
+            EditorLog.Message($"{currentEntity.name} used skill on {target.name}");
+            currentEntity.Entity.UseSkill(target.Entity);
+            ActionQueue.Instance.EndTurn();
+        };
+    }
+
+    public void RequestUseUltimate()
+    {
+        SelectEntity(null);
+        this.PostEvent(EventID.ON_TARGET_FOCUSED,
+            Tuple.Create(currentEntity.Entity.UltimateTargetType, currentEntity.Entity.UniqueID));
+        _targetConfirmed = target =>
+        {
+            EditorLog.Message($"{currentEntity.name} used ultimate on {target.name}");
+            currentEntity.Entity.UseUltimate(target.Entity);
+            ActionQueue.Instance.EndTurn();
+        };
+    }
+
+    public void ConfirmAction()
+    {
+        if (!selectedEntity) return;
+
+        var target = selectedEntity;
+        _targetConfirmed?.Invoke(target);
+        UnfocusAll();
     }
 }

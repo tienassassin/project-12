@@ -29,6 +29,10 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     [SerializeField] private bool isImmortal;
     [SerializeField] private bool isUltimateReady;
 
+    [TitleGroup("OTHERS:")]
+    [SerializeField] private SkillTargetType skillTargetType;
+    [SerializeField] private SkillTargetType ultimateTargetType;
+
     private EntityUI _entityUI;
 
 
@@ -108,6 +112,9 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     }
     public bool CanTakeTurn => !isStun;
 
+    public SkillTargetType SkillTargetType => skillTargetType;
+    public SkillTargetType UltimateTargetType => ultimateTargetType;
+
     #endregion
 
     private void Awake()
@@ -186,11 +193,11 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         _entityUI.UpdateEnergy(Energy, 100, duration);
     }
 
-    protected void SpawnHpText(bool isHealing, float amount, int division, float duration)
+    protected void SpawnHpText(HealthImpactType impactType, float amount, int division, float duration)
     {
         if (amount < 1)
         {
-            string dmgTxt = isHealing ? "+0" : "immortal";
+            string dmgTxt = (impactType == HealthImpactType.Healing ? "+0" : "immortal");
             EditorLog.Message(name + dmgTxt);
         }
         else
@@ -201,7 +208,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
             for (int i = 0; i < division; i++)
             {
-                string dmgTxt = (isHealing ? "+" : "-") + amountPerHit;
+                string dmgTxt = (impactType == HealthImpactType.Healing ? "+" : "-") + amountPerHit;
                 EditorLog.Message(name + dmgTxt);
             }
         }
@@ -229,8 +236,6 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public virtual void Attack(IDamageTaker target)
     {
-        EditorLog.Message($"{name} attacked");
-
         Rage += Stats.luck;
         bool crit = Common.GetRandomResult(Rage);
         if (crit)
@@ -248,12 +253,10 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public virtual void UseSkill(IDamageTaker target)
     {
-        EditorLog.Message($"{name} used skill!");
     }
 
     public virtual void UseUltimate(IDamageTaker target)
     {
-        EditorLog.Message($"{name} used ultimate!");
         LoseEnergy(100);
     }
 
@@ -294,7 +297,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     {
         if (IsImmortal)
         {
-            SpawnHpText(false, 0, 1, 0);
+            SpawnHpText(HealthImpactType.None, 0, 1, 0);
             return 0;
         }
 
@@ -323,7 +326,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         VirtualHp -= vhpAffected;
         Hp -= hpAffected;
 
-        SpawnHpText(false, dmgTaken, dmg.Division, dmg.Duration);
+        SpawnHpText(dmg.GetHealthImpactType(), dmgTaken, dmg.Division, dmg.Duration);
         UpdateHp(dmg.Duration);
 
         if (Hp < 1)
@@ -338,7 +341,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     {
         if (IsImmortal)
         {
-            SpawnHpText(false, 0, 1, 0);
+            SpawnHpText(HealthImpactType.None, 0, 1, 0);
             return 0;
         }
 
@@ -352,7 +355,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         VirtualHp = 0;
         Hp = 0;
 
-        SpawnHpText(true, fatalDamage, 1, 0);
+        SpawnHpText(HealthImpactType.CriticalPureDamage, fatalDamage, 1, 0);
         UpdateHp();
         Die();
 
@@ -373,6 +376,18 @@ public enum Faction
     Devil
 }
 
+public enum HealthImpactType
+{
+    None,
+    Healing,
+    PureDamage,
+    CriticalPureDamage,
+    PhysicalDamage,
+    CriticalPhysicalDamage,
+    MagicalDamage,
+    CriticalMagicalDamage
+}
+
 public struct Damage
 {
     public float Amount;
@@ -391,5 +406,19 @@ public struct Damage
         IsCritical = isCritical;
         Division = division;
         Duration = duration;
+    }
+
+    public HealthImpactType GetHealthImpactType()
+    {
+        return Type switch
+        {
+            DamageType.Pure when IsCritical => HealthImpactType.CriticalPureDamage,
+            DamageType.Pure => HealthImpactType.PureDamage,
+            DamageType.Physical when IsCritical => HealthImpactType.CriticalPhysicalDamage,
+            DamageType.Physical => HealthImpactType.PhysicalDamage,
+            DamageType.Magical when IsCritical => HealthImpactType.CriticalMagicalDamage,
+            DamageType.Magical => HealthImpactType.MagicalDamage,
+            _ => HealthImpactType.None
+        };
     }
 }

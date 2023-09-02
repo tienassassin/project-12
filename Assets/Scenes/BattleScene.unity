@@ -354,8 +354,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  targetType: 0
-  id: 0
+  fireSpirit: 0
+  maxFireSpirit: 5
   currentEntity: {fileID: 0}
   selectedEntity: {fileID: 0}
 --- !u!1001 &957306675
@@ -694,27 +694,27 @@ MonoBehaviour:
   - {fileID: 1719028390}
   heroes:
   - heroId: 00
-    totalExp: 10000
-    curHp: 50
-    energy: 100
-    eqmList: []
-  - heroId: 01
-    totalExp: 200
-    curHp: 50
-    energy: 0
-    eqmList: []
-  - heroId: 03
-    totalExp: 20000
+    totalExp: 1
     curHp: 100
     energy: 100
     eqmList: []
+  - heroId: 01
+    totalExp: 1
+    curHp: 100
+    energy: 50
+    eqmList: []
+  - heroId: 03
+    totalExp: 1
+    curHp: 100
+    energy: 50
+    eqmList: []
   devils:
-  - devilId: 02
+  - devilId: 00
     isBoss: 0
-    level: 20
-  - devilId: 02
+    level: 1
+  - devilId: 01
     isBoss: 0
-    level: 20
+    level: 1
 --- !u!1 &1706383537
 GameObject:
   m_ObjectHideFlags: 0

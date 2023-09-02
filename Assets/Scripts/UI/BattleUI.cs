@@ -28,6 +28,8 @@ public class BattleUI : BaseUI
     private float _turnOffset1 = -60;
     private float _curTurnScale = 1;
     private float _normalTurnScale = 0.8f;
+    private Color _colorSkillAvailable = Color.white;
+    private Color _colorSkillUnavailable = new(1, 1, 1, 0.2f);
 
     public static void Show()
     {
@@ -128,6 +130,7 @@ public class BattleUI : BaseUI
         var entity = (EntityController)data;
         actionMenu.SetActive(entity.Entity.Faction == Faction.Hero);
         imgSkill.sprite = Common.GetSkillIcon(entity.Entity.EntityID, 1);
+        imgSkill.color = BattleManager.Instance.HasFireSpirit() ? _colorSkillAvailable : _colorSkillUnavailable;
     }
 
     private void UpdateFireSpirit(object data)
@@ -152,17 +155,22 @@ public class BattleUI : BaseUI
 
     public void SelectAttack()
     {
+        BattleManager.Instance.RequestAttack();
     }
 
     public void SelectSpell()
     {
+        BattleManager.Instance.RequestUseSkill();
     }
 
     public void SelectSkill()
     {
+        if (!BattleManager.Instance.HasFireSpirit()) return;
+        BattleManager.Instance.RequestUseUltimate();
     }
 
     public void SelectDismiss()
     {
+        ActionQueue.Instance.EndTurn();
     }
 }

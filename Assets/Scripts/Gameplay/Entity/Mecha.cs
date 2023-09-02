@@ -34,7 +34,7 @@ public abstract class Mecha : BattleEntity, IRaceAura
     {
         if (IsImmortal)
         {
-            SpawnHpText(false, 0, 1, 0);
+            SpawnHpText(HealthImpactType.None, 0, 1, 0);
             return 0;
         }
 
@@ -58,7 +58,7 @@ public abstract class Mecha : BattleEntity, IRaceAura
             dmgTaken *= 2;
         }
 
-        SpawnHpText(false, dmgTaken, dmg.Division, dmg.Duration);
+        SpawnHpText(dmg.GetHealthImpactType(), dmgTaken, dmg.Division, dmg.Duration);
 
         // the displayed damage has no limit,
         // but the actual damage taken cant exceed the current hp

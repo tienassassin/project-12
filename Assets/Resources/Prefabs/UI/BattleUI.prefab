@@ -1446,6 +1446,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 51d10b54647d22b489d704b20031ab19, type: 3}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2248716007976229928}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BattleUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
 --- !u!224 &4182883912768117563 stripped
@@ -1568,6 +1596,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9b580d33c37e6ad4f83af1d801c3b0d4, type: 3}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2248716007976229928}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectSpell
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BattleUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
 --- !u!224 &3792609179465907730 stripped
@@ -1816,6 +1872,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8c1be41f924c50e4db4252712e97868b, type: 3}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2248716007976229928}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BattleUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
 --- !u!224 &2957118664402829740 stripped
@@ -2208,6 +2292,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8a11d092ef92be049b7f7cef16a50192, type: 3}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2248716007976229928}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectDismiss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BattleUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053301466667815027, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3422a2f5896854408e944dd3e6d60b8, type: 3}
 --- !u!224 &665813908311088068 stripped

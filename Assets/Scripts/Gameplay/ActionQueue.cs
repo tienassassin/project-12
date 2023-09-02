@@ -36,6 +36,8 @@ public class ActionQueue : Singleton<ActionQueue>
 
     private void NextTurn()
     {
+        BattleManager.Instance.UnfocusAll();
+
         _curTurn = queue[0];
         this.PostEvent(EventID.ON_TURN_TAKEN, _curTurn.info.id);
         this.PostEvent(EventID.ON_ACTION_QUEUE_CHANGED, queue);
