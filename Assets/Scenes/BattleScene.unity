@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d29c5e2b8da6274b9aff0fad4b82f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
   entityPrefList: {fileID: 11400000, guid: 3e88f597925bc6a42b4d654b0d14a9a0, type: 2}
   entityContainer: {fileID: 157823553}
   heroPositions:
@@ -711,10 +712,10 @@ MonoBehaviour:
   devils:
   - devilId: 00
     isBoss: 0
-    level: 1
+    level: 10
   - devilId: 01
     isBoss: 0
-    level: 1
+    level: 10
 --- !u!1 &1706383537
 GameObject:
   m_ObjectHideFlags: 0

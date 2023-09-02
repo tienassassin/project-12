@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class EntitySpawner : DuztineBehaviour
+public class EntitySpawner : Singleton<EntitySpawner>
 {
     [SerializeField] private EntityPrefabList entityPrefList;
 
@@ -65,7 +65,14 @@ public class EntitySpawner : DuztineBehaviour
     [Button]
     public List<EntityController> GetAllEntities(Faction faction)
     {
-        return _entities.Where(x => x.Entity.Faction == faction).ToList();
+        return _entities.Where(x => x.Entity.Faction == faction && x.Entity.IsAlive).ToList();
+    }
+
+    public EntityController GetRandomEntity(Faction faction)
+    {
+        var entities = _entities.Where(x => x.Entity.Faction == faction && x.Entity.IsAlive).ToList();
+        if (entities.Count < 1) return null;
+        return entities[Random.Range(0, entities.Count)];
     }
 
     [Button]

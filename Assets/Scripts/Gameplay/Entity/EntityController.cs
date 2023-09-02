@@ -52,7 +52,7 @@ public class EntityController : DuztineBehaviour
         // todo: review later
         if (_entity.Faction != Faction.Hero)
         {
-            Invoke(nameof(AutoEndTurn), 1f);
+            Invoke(nameof(AutoAction), 1f);
         }
 
         EditorLog.Message(name + "'s turn!");
@@ -102,9 +102,17 @@ public class EntityController : DuztineBehaviour
         _entityUI.SwitchActionPanel(selected);
     }
 
-    public void AutoEndTurn()
+    private void AutoEndTurn()
     {
         ActionQueue.Instance.EndTurn();
+    }
+
+    private void AutoAction()
+    {
+        var target = EntitySpawner.Instance.GetRandomEntity(Faction.Hero);
+        EditorLog.Message($"{name} attacked {target.name}");
+        Entity.Attack(target.Entity);
+        AutoEndTurn();
     }
 
     private void OnMouseUpAsButton()

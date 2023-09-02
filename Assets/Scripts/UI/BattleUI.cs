@@ -128,9 +128,20 @@ public class BattleUI : BaseUI
     private void UpdateCurrentEntity(object data)
     {
         var entity = (EntityController)data;
-        actionMenu.SetActive(entity.Entity.Faction == Faction.Hero);
-        imgSkill.sprite = Common.GetSkillIcon(entity.Entity.EntityID, 1);
-        imgSkill.color = BattleManager.Instance.HasFireSpirit() ? _colorSkillAvailable : _colorSkillUnavailable;
+
+        if (entity.Entity.Faction == Faction.Hero)
+        {
+            actionMenu.SetActive(true);
+            imgSkill.sprite = Common.GetSkillIcon(entity.Entity.EntityID, 1);
+            imgSkill.color = BattleManager.Instance.HasFireSpirit() ? _colorSkillAvailable : _colorSkillUnavailable;
+
+            EditorLog.Message("auto select attack");
+            SelectAttack();
+        }
+        else
+        {
+            actionMenu.SetActive(false);
+        }
     }
 
     private void UpdateFireSpirit(object data)

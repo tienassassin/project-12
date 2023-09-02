@@ -175,13 +175,13 @@ public class EntityUI : DuztineBehaviour
 
     public void ConfirmAction()
     {
+        // EditorLog.Message("Action confirmed!");
         BattleManager.Instance.ConfirmAction();
-        EditorLog.Message("Action confirmed!");
     }
 
     public void CancelAction()
     {
+        // EditorLog.Message("Action cancelled!");
         BattleManager.Instance.SelectEntity(null);
-        EditorLog.Message("Action cancelled!");
     }
 }
