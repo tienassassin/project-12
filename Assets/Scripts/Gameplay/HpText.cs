@@ -15,8 +15,8 @@ public class HpText : RecyclableObject
     {
         txtAmount.text = content;
         txtAmount.color = colors.Find(x => x.type == type).color;
-        bool isCritical = type.ToString().Contains("Critical");
-        txtAmount.fontStyle = isCritical ? FontStyles.Bold : FontStyles.Normal;
+        txtAmount.fontStyle = type.IsCriticalHit() ? FontStyles.Bold : FontStyles.Normal;
+        txtAmount.fontSize = type.IsCriticalHit() ? 7 : 5;
         PlayAnimation();
     }
 

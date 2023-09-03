@@ -2118,6 +2118,7 @@ MonoBehaviour:
   hpTextPrefab: {fileID: 250540499957073895, guid: 3b15de1ed167df74b930907b159ff660, type: 3}
   leftHitPos: {fileID: 796780933273672687}
   rightHitPos: {fileID: 4239603231964628337}
+  projectile: {fileID: 5219436243854899318, guid: 11fe3921860e14442b2cd9b65c981447, type: 3}
 --- !u!1 &4902570980851865672
 GameObject:
   m_ObjectHideFlags: 0

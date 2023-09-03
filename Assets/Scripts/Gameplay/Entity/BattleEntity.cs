@@ -205,7 +205,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     {
         if (amount < 1)
         {
-            string dmgTxt = (impactType == HealthImpactType.Healing ? "+0" : "immortal");
+            string dmgTxt = (impactType.IsNull() ? "immortal" : "+0");
             var o = ObjectPool.Instance.SpawnObject<HpText>(_ref.hpTextPrefab, _ref.hpTextPos.position);
             o.Init(impactType, dmgTxt);
             EditorLog.Message(name + dmgTxt);
@@ -218,7 +218,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
             for (int i = 0; i < division; i++)
             {
-                string dmgTxt = (impactType == HealthImpactType.Healing ? "+" : "-") + amountPerHit;
+                string dmgTxt = (impactType.IsHealing() ? "+" : "-") + amountPerHit;
                 var o = ObjectPool.Instance.SpawnObject<HpText>(_ref.hpTextPrefab, _ref.hpTextPos.position);
                 o.Init(impactType, dmgTxt);
                 EditorLog.Message(name + dmgTxt);
@@ -265,19 +265,61 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         float dmgDealt = 0;
         float pureDmg = Stats.damage * (crit ? Stats.critDamage / 100f : 1f);
         var dmg = new Damage(pureDmg, DamageType, Stats.accuracy / 100, crit);
+
+        if (baseData.attackRange == AttackRange.Melee)
+        {
+            PlayMeleeAnimation(target.GetHitPosition(), Hit, Regen, Finish);
+        }
+        else
+        {
+            PlayRangedAnimation(target.GetHitPosition(), Hit, Regen, Finish);
+        }
+
+        void Hit()
+        {
+            dmgDealt = DealDamage(target, dmg);
+        }
+
+        void Regen()
+        {
+            RegenEnergy(Stats.intelligence);
+            RegenHp(dmgDealt * (Stats.lifeSteal / 100));
+        }
+
+        void Finish()
+        {
+            finished?.Invoke();
+        }
+    }
+
+    protected virtual void PlayMeleeAnimation(Vector3 hitPos, Action hitPhase, Action regenPhase, Action finishPhase)
+    {
         var origin = transform.position;
         var seq = DOTween.Sequence();
-        seq.Append(transform.DOMove(target.GetHitPosition(), 0.5f))
-            .AppendInterval(0.25f)
-            .AppendCallback(() => { dmgDealt = DealDamage(target, dmg); })
+        seq.Append(transform.DOMove(hitPos, 0.5f))
+            .AppendInterval(0.1f)
+            .AppendCallback(() => { hitPhase?.Invoke(); })
             .Append(transform.DOMove(origin, 0.5f))
-            .AppendCallback(() =>
+            .AppendCallback(() => { regenPhase?.Invoke(); })
+            .AppendInterval(0.5f)
+            .AppendCallback(() => { finishPhase?.Invoke(); });
+    }
+
+    protected virtual void PlayRangedAnimation(Vector3 hitPos, Action hitPhase, Action regenPhase, Action finishPhase)
+    {
+        var moveTime = 0.5f;
+        var seq = DOTween.Sequence();
+        seq.AppendCallback(() =>
             {
-                RegenEnergy(Stats.intelligence);
-                RegenHp(dmgDealt * (Stats.lifeSteal / 100));
+                var o = ObjectPool.Instance.SpawnObject<Projectile>(_ref.projectile, transform.position);
+                o.Move(hitPos, moveTime, () =>
+                {
+                    hitPhase?.Invoke();
+                    regenPhase?.Invoke();
+                });
             })
-            .AppendInterval(0.25f)
-            .AppendCallback(() => { finished?.Invoke(); });
+            .AppendInterval(moveTime + 0.5f)
+            .AppendCallback(() => { finishPhase?.Invoke(); });
     }
 
     public virtual void UseSkill(IDamageTaker target)
@@ -399,24 +441,6 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     }
 
     #endregion
-}
-
-public enum Faction
-{
-    Hero,
-    Devil
-}
-
-public enum HealthImpactType
-{
-    None,
-    Healing,
-    PureDamage,
-    CriticalPureDamage,
-    PhysicalDamage,
-    CriticalPhysicalDamage,
-    MagicalDamage,
-    CriticalMagicalDamage
 }
 
 public struct Damage

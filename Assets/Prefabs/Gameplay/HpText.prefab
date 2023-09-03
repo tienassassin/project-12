@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalName: 
-  category: 
+  category: Text
   isAutoRecycle: 0
   lifeTime: 0
   txtAmount: {fileID: 8360768913272006510}

@@ -1,5 +1,7 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BattleManager : Singleton<BattleManager>
 {
@@ -122,7 +124,11 @@ public class BattleManager : Singleton<BattleManager>
         var target = selectedEntity;
         UnfocusAll();
         _targetConfirmed?.Invoke(target);
-        // _targetConfirmed = null;
-        // ActionQueue.Instance.EndTurn();
+    }
+
+    [Button]
+    public void Debug_QuickRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

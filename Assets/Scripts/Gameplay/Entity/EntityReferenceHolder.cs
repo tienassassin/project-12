@@ -7,4 +7,6 @@ public class EntityReferenceHolder : DuztineBehaviour
 
     public Transform leftHitPos;
     public Transform rightHitPos;
+
+    public Projectile projectile;
 }

@@ -94,6 +94,56 @@ public enum SkillTargetType
     All // target can be anyone
 }
 
+public enum Faction
+{
+    Hero,
+    Devil
+}
+
+public enum HealthImpactType
+{
+    None,
+    Healing,
+    PureDamage,
+    CriticalPureDamage,
+    PhysicalDamage,
+    CriticalPhysicalDamage,
+    MagicalDamage,
+    CriticalMagicalDamage
+}
+
+public static class TypeExtensions
+{
+    public static bool IsNull(this HealthImpactType type)
+    {
+        return type is HealthImpactType.None;
+    }
+
+    public static bool IsHit(this HealthImpactType type)
+    {
+        return type.IsNormalHit() || type.IsCriticalHit();
+    }
+
+    public static bool IsNormalHit(this HealthImpactType type)
+    {
+        return type is HealthImpactType.PureDamage
+            or HealthImpactType.PhysicalDamage
+            or HealthImpactType.MagicalDamage;
+    }
+
+    public static bool IsCriticalHit(this HealthImpactType type)
+    {
+        return type is HealthImpactType.CriticalPureDamage
+            or HealthImpactType.CriticalPhysicalDamage
+            or HealthImpactType.CriticalMagicalDamage;
+    }
+
+    public static bool IsHealing(this HealthImpactType type)
+    {
+        return type is HealthImpactType.Healing;
+    }
+}
+
 [Serializable]
 public struct Stats
 {
