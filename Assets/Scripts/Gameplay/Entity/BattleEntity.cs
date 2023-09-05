@@ -36,6 +36,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     private EntityUI _entityUI;
     private EntityReferenceHolder _ref;
+    private EntityConfig _config;
 
 
     #region Public properties
@@ -123,6 +124,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     {
         _entityUI = GetComponent<EntityUI>();
         _ref = GetComponent<EntityReferenceHolder>();
+        _config = GetComponent<EntityConfig>();
     }
 
     public void Init(HeroData heroData)
@@ -296,29 +298,28 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     {
         var origin = transform.position;
         var seq = DOTween.Sequence();
-        seq.Append(transform.DOMove(hitPos, 0.5f))
-            .AppendInterval(0.1f)
+        seq.Append(transform.DOMove(hitPos, _config.meleeMoveTime))
+            .AppendInterval(_config.meleeHitTime)
             .AppendCallback(() => { hitPhase?.Invoke(); })
-            .Append(transform.DOMove(origin, 0.5f))
+            .Append(transform.DOMove(origin, _config.meleeReturnTime))
             .AppendCallback(() => { regenPhase?.Invoke(); })
-            .AppendInterval(0.5f)
+            .AppendInterval(_config.restTime)
             .AppendCallback(() => { finishPhase?.Invoke(); });
     }
 
     protected virtual void PlayRangedAnimation(Vector3 hitPos, Action hitPhase, Action regenPhase, Action finishPhase)
     {
-        var moveTime = 0.5f;
         var seq = DOTween.Sequence();
         seq.AppendCallback(() =>
             {
                 var o = ObjectPool.Instance.SpawnObject<Projectile>(_ref.projectile, transform.position);
-                o.Move(hitPos, moveTime, () =>
+                o.Move(hitPos, _config.rangedMoveTime, () =>
                 {
                     hitPhase?.Invoke();
                     regenPhase?.Invoke();
                 });
             })
-            .AppendInterval(moveTime + 0.5f)
+            .AppendInterval(_config.rangedMoveTime + _config.restTime)
             .AppendCallback(() => { finishPhase?.Invoke(); });
     }
 

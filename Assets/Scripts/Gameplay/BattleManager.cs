@@ -87,7 +87,6 @@ public class BattleManager : Singleton<BattleManager>
                 _targetConfirmed = null;
                 ActionQueue.Instance.EndTurn();
             });
-            // ActionQueue.Instance.EndTurn();
         };
     }
 

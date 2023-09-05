@@ -58,28 +58,7 @@ public class ObjectPool : Singleton<ObjectPool>
         return obj;
     }
 
-    public T SpawnObject<T>(RecyclableObject prefab, Transform parent = null)
-    {
-        if (!HasPrefabInPool(prefab.name))
-        {
-            AddToPool(prefab);
-        }
-
-        var obj = GetNewObject(prefab.name);
-
-        if (obj)
-        {
-            if (parent) obj.transform.SetParent(parent);
-            else obj.transform.SetParent(GetCategory(obj.Category));
-            obj.gameObject.SetActive(true);
-            obj.transform.localPosition = Vector3.zero;
-            obj.OnSpawn();
-        }
-
-        return obj.GetComponent<T>();
-    }
-
-    public T SpawnObject<T>(RecyclableObject prefab, Vector3 position)
+    public RecyclableObject SpawnObject(RecyclableObject prefab, Vector3 position, Quaternion rotation)
     {
         if (!HasPrefabInPool(prefab.name))
         {
@@ -93,10 +72,26 @@ public class ObjectPool : Singleton<ObjectPool>
             obj.transform.SetParent(GetCategory(obj.Category));
             obj.gameObject.SetActive(true);
             obj.transform.position = position;
+            obj.transform.rotation = rotation;
             obj.OnSpawn();
         }
 
-        return obj.GetComponent<T>();
+        return obj;
+    }
+
+    public T SpawnObject<T>(RecyclableObject prefab, Transform parent = null) where T : RecyclableObject
+    {
+        return SpawnObject(prefab, parent) as T;
+    }
+
+    public T SpawnObject<T>(RecyclableObject prefab, Vector3 position) where T : RecyclableObject
+    {
+        return SpawnObject(prefab, position) as T;
+    }
+
+    public T SpawnObject<T>(RecyclableObject prefab, Vector3 position, Quaternion rotation) where T : RecyclableObject
+    {
+        return SpawnObject(prefab, position, rotation) as T;
     }
 
     private RecyclableObject GetNewObject(string prefabName)
