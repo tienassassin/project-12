@@ -12,7 +12,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     [SerializeField] private int uniqueID;
     [SerializeField] protected Entity info;
     [SerializeField] private int level;
-    [SerializeField] private Faction faction;
+    [SerializeField] private Side side;
     [SerializeField] protected List<Equipment> eqmList = new();
 
     [TitleGroup("IN-GAME STATS:")]
@@ -52,7 +52,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     ///     Used to retrieve data belonging to that entity (images, sounds...)
     /// </summary>
     public string EntityID => info.id;
-    public Faction Faction => faction;
+    public Side Side => side;
     public Stats Stats
     {
         get => stats;
@@ -129,7 +129,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public void Init(EntitySaveData entitySaveData)
     {
-        faction = Faction.Hero;
+        side = Side.Ally;
         info = entitySaveData.GetEntity();
         level = entitySaveData.GetLevel();
         SetupInfo();
@@ -143,7 +143,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public void Init(EnemyData enemyData)
     {
-        faction = Faction.Devil;
+        side = Side.Enemy;
         info = enemyData.GetEntity();
         level = enemyData.level;
         SetupInfo();
@@ -180,7 +180,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public Vector3 GetHitPosition()
     {
-        return (Faction == Faction.Hero ? _ref.rightHitPos : _ref.leftHitPos).position;
+        return (Side == Side.Ally ? _ref.rightHitPos : _ref.leftHitPos).position;
     }
 
     #region UI

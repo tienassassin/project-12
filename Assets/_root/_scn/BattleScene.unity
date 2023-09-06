@@ -693,26 +693,22 @@ MonoBehaviour:
   - {fileID: 315967768}
   - {fileID: 277823277}
   - {fileID: 1719028390}
-  heroes:
+  allies:
   - entityId: 00
-    totalExp: 5000
+    totalExp: 1
     currentHp: 100
-    energy: 100
+    energy: 0
   - entityId: 01
-    totalExp: 5000
+    totalExp: 1
     currentHp: 100
-    energy: 50
+    energy: 0
+  enemies:
   - entityId: 02
-    totalExp: 5000
-    currentHp: 100
-    energy: 50
-  devils:
+    isBoss: 0
+    level: 1
   - entityId: 03
     isBoss: 0
-    level: 10
-  - entityId: 04
-    isBoss: 0
-    level: 10
+    level: 1
 --- !u!1 &1706383537
 GameObject:
   m_ObjectHideFlags: 0

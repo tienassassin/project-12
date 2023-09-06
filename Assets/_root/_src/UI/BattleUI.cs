@@ -129,7 +129,7 @@ public class BattleUI : BaseUI
     {
         var entity = (EntityController)data;
 
-        if (entity.Entity.Faction == Faction.Hero)
+        if (entity.Entity.Side == Side.Ally)
         {
             actionMenu.SetActive(true);
             imgSkill.sprite = Common.GetSkillIcon(entity.Entity.EntityID, 1);

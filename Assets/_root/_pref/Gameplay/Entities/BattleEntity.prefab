@@ -2008,6 +2008,7 @@ GameObject:
   - component: {fileID: 2895096620699468359}
   - component: {fileID: 6293348257817066912}
   - component: {fileID: 8412212508594355596}
+  - component: {fileID: 3455258629439748537}
   m_Layer: 0
   m_Name: BattleEntity
   m_TagString: Untagged
@@ -2138,6 +2139,23 @@ MonoBehaviour:
   meleeReturnTime: 0.25
   rangedMoveTime: 0.3
   restTime: 0.5
+--- !u!114 &3455258629439748537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4839870134832062093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a290957bcf3769f45a8f8e501abd61c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSelectRates:
+  - condition: 0
+    rate: 99
+  - condition: 1
+    rate: 1
 --- !u!1 &4902570980851865672
 GameObject:
   m_ObjectHideFlags: 0

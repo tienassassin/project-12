@@ -1,10 +1,12 @@
-using System;
 using UnityEngine;
 
 public class EntityController : DuztineBehaviour
 {
+    [SerializeField] private bool automatic;
+
     private BattleEntity _entity;
     private EntityUI _entityUI;
+    private EntityAutomation _automation;
     private Collider2D _collider;
 
     private bool _isFocused;
@@ -15,6 +17,7 @@ public class EntityController : DuztineBehaviour
     {
         _entity = GetComponent<BattleEntity>();
         _entityUI = GetComponent<EntityUI>();
+        _automation = GetComponent<EntityAutomation>();
         _collider = GetComponent<Collider2D>();
     }
 
@@ -28,6 +31,11 @@ public class EntityController : DuztineBehaviour
     {
         this.RemoveListener(EventID.ON_TURN_TAKEN, OnTakeTurn);
         this.RemoveListener(EventID.ON_TARGET_FOCUSED, OnFocused);
+    }
+
+    public void SwitchAutomation(bool active)
+    {
+        automatic = active;
     }
 
     private void OnTakeTurn(object id)
@@ -48,7 +56,7 @@ public class EntityController : DuztineBehaviour
         }
 
         // todo: review later
-        if (_entity.Faction != Faction.Hero)
+        if (automatic)
         {
             Invoke(nameof(AutoAction), 1f);
         }
@@ -62,25 +70,30 @@ public class EntityController : DuztineBehaviour
         }
         else
         {
-            var (targetType, id) = (Tuple<SkillTargetType, int>)data;
+            var targetType = (SkillTargetType)data;
+            var sender = BattleManager.Instance.CurrentEntity.Entity;
             switch (targetType)
             {
                 case SkillTargetType.Ally:
-                    _isFocused = _entity.Faction == Faction.Hero && _entity.UniqueID != id;
+                    _isFocused = _entity.Side == sender.Side && _entity.UniqueID != sender.UniqueID;
                     break;
+
                 case SkillTargetType.AllyOrSelf:
-                    _isFocused = _entity.Faction == Faction.Hero;
+                    _isFocused = _entity.Side == sender.Side;
                     break;
+
                 case SkillTargetType.Enemy:
-                    _isFocused = _entity.Faction == Faction.Devil;
+                    _isFocused = _entity.Side != sender.Side;
                     break;
+
                 case SkillTargetType.EnemyOrSelf:
-                    _isFocused = _entity.Faction == Faction.Devil || _entity.UniqueID == id;
+                    _isFocused = _entity.Side != sender.Side || _entity.UniqueID == sender.UniqueID;
                     break;
+
                 case SkillTargetType.ExceptSelf:
-                    _isFocused = _entity.Faction == Faction.Devil ||
-                                 (_entity.Faction == Faction.Hero && _entity.UniqueID != id);
+                    _isFocused = _entity.UniqueID != sender.UniqueID;
                     break;
+
                 case SkillTargetType.All:
                     _isFocused = true;
                     break;
@@ -103,7 +116,7 @@ public class EntityController : DuztineBehaviour
 
     private void AutoAction()
     {
-        var target = EntitySpawner.Instance.GetRandomEntity(Faction.Hero);
+        var target = _automation.GetTarget();
         EditorLog.Message($"{name} attacked {target.name}");
         Entity.Attack(target.Entity, AutoEndTurn);
     }

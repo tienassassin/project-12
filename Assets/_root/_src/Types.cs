@@ -90,10 +90,10 @@ public enum SkillTargetType
     All // target can be anyone
 }
 
-public enum Faction
+public enum Side
 {
-    Hero,
-    Devil
+    Ally,
+    Enemy
 }
 
 public enum HealthImpactType

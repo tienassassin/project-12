@@ -13,6 +13,8 @@ public class BattleManager : Singleton<BattleManager>
 
     private Action<EntityController> _targetConfirmed;
 
+    public EntityController CurrentEntity => currentEntity;
+
     private void Start()
     {
         UpdateFireSpirit(1);
@@ -78,7 +80,7 @@ public class BattleManager : Singleton<BattleManager>
     public void RequestAttack()
     {
         SelectEntity(null);
-        this.PostEvent(EventID.ON_TARGET_FOCUSED, Tuple.Create(SkillTargetType.Enemy, currentEntity.Entity.UniqueID));
+        this.PostEvent(EventID.ON_TARGET_FOCUSED, SkillTargetType.Enemy);
         _targetConfirmed = target =>
         {
             EditorLog.Message($"{currentEntity.name} attacked {target.name}");
@@ -93,8 +95,7 @@ public class BattleManager : Singleton<BattleManager>
     public void RequestUseSkill()
     {
         SelectEntity(null);
-        this.PostEvent(EventID.ON_TARGET_FOCUSED,
-            Tuple.Create(currentEntity.Entity.SkillTargetType, currentEntity.Entity.UniqueID));
+        this.PostEvent(EventID.ON_TARGET_FOCUSED, currentEntity.Entity.SkillTargetType);
         _targetConfirmed = target =>
         {
             EditorLog.Message($"{currentEntity.name} used skill on {target.name}");
@@ -106,8 +107,7 @@ public class BattleManager : Singleton<BattleManager>
     public void RequestUseUltimate()
     {
         SelectEntity(null);
-        this.PostEvent(EventID.ON_TARGET_FOCUSED,
-            Tuple.Create(currentEntity.Entity.UltimateTargetType, currentEntity.Entity.UniqueID));
+        this.PostEvent(EventID.ON_TARGET_FOCUSED, currentEntity.Entity.UltimateTargetType);
         _targetConfirmed = target =>
         {
             EditorLog.Message($"{currentEntity.name} used ultimate on {target.name}");

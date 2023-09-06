@@ -161,4 +161,9 @@ public static partial class DataExtensions
     {
         return DataManager.Instance.GetExp(hsd.totalExp);
     }
+
+    public static Side GetOpposite(this Side s)
+    {
+        return s == Side.Ally ? Side.Enemy : Side.Ally;
+    }
 }
