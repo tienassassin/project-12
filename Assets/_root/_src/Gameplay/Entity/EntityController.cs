@@ -46,9 +46,9 @@ public class EntityController : DuztineBehaviour
             return;
         }
 
-        EditorLog.Message(name + "'s turn!");
+        EditorLog.Message("=====> " + name + "'s turn!");
         _entityUI.SwitchHighlight(true);
-        BattleManager.Instance.UpdateCurrentEntity(this);
+        BattleManager.Instance.CurrentEntity = this;
 
         if (!_entity.CanTakeTurn)
         {

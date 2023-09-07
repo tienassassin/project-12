@@ -9,7 +9,7 @@ public class ActionQueue : Singleton<ActionQueue>
     [SerializeField] private List<Turn> queue;
     private Turn _curTurn;
 
-    private int _currentPhase;
+    private int _currentPhase = 0;
     public int CurrentPhase => _currentPhase;
 
     public async void InitQueue(List<EntityController> entities)
@@ -20,7 +20,7 @@ public class ActionQueue : Singleton<ActionQueue>
 
         sortedEntities.ForEach(x => { queue.Add(new Turn(x.Entity.UniqueID, x.name, false)); });
 
-        await UniTask.Delay(TimeSpan.FromSeconds(3));
+        await UniTask.WaitUntil(() => BattleManager.Instance.State == BattleState.Playing);
 
         NextTurn();
 
@@ -39,8 +39,8 @@ public class ActionQueue : Singleton<ActionQueue>
 
     public void RemoveEntity(int id)
     {
-        var turn = queue.Find(x => x.info.id == id);
-        queue.Remove(turn);
+        var turns = queue.FindAll(x => x.info.id == id);
+        turns.ForEach(x => queue.Remove(x));
     }
 
     private void NextTurn()
@@ -60,6 +60,8 @@ public class ActionQueue : Singleton<ActionQueue>
     [Button]
     public void EndTurn()
     {
+        if (BattleManager.Instance.State != BattleState.Playing) return;
+
         var lastTurn = queue[0];
         queue.RemoveAt(0);
 

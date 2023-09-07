@@ -1,10 +1,13 @@
 using System;
+using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BattleManager : Singleton<BattleManager>
 {
+    [SerializeField] private BattleState state;
+
     [SerializeField] private int fireSpirit;
     [SerializeField] private int maxFireSpirit = 5;
 
@@ -13,11 +16,48 @@ public class BattleManager : Singleton<BattleManager>
 
     private Action<EntityController> _targetConfirmed;
 
-    public EntityController CurrentEntity => currentEntity;
+    public EntityController CurrentEntity
+    {
+        get => currentEntity;
+        set
+        {
+            currentEntity = value;
+            this.PostEvent(EventID.ON_CURRENT_ENTITY_UPDATED, currentEntity);
+        }
+    }
+    public BattleState State
+    {
+        get => state;
+        set
+        {
+            state = value;
+            switch (state)
+            {
+                case BattleState.Victory:
+                    EditorLog.Message("<color=yellow>BATTLE END: VICTORY</color>");
+                    // todo: review later
+                    break;
+
+                case BattleState.Loss:
+                    EditorLog.Message("<color=yellow>BATTLE END: LOSS</color>");
+                    // todo: review later
+                    break;
+            }
+        }
+    }
 
     private void Start()
     {
+        state = BattleState.Preparing;
         UpdateFireSpirit(1);
+        StartBattle();
+    }
+
+    private async void StartBattle()
+    {
+        await UniTask.Delay(TimeSpan.FromSeconds(3));
+        EditorLog.Message("<color=yellow>BATTLE START!</color>");
+        state = BattleState.Playing;
     }
 
     public void SelectEntity(EntityController entity)
@@ -65,12 +105,6 @@ public class BattleManager : Singleton<BattleManager>
         this.PostEvent(EventID.ON_FIRE_SPIRIT_PREVIEWED, difference);
     }
 
-    public void UpdateCurrentEntity(EntityController entity)
-    {
-        currentEntity = entity;
-        this.PostEvent(EventID.ON_CURRENT_ENTITY_UPDATED, entity);
-    }
-
     public void UnfocusAll()
     {
         SelectEntity(null);
@@ -83,8 +117,8 @@ public class BattleManager : Singleton<BattleManager>
         this.PostEvent(EventID.ON_TARGET_FOCUSED, SkillTargetType.Enemy);
         _targetConfirmed = target =>
         {
-            EditorLog.Message($"{currentEntity.name} attacked {target.name}");
-            currentEntity.Entity.Attack(target.Entity, () =>
+            EditorLog.Message($"{CurrentEntity.name} attacked {target.name}");
+            CurrentEntity.Entity.Attack(target.Entity, () =>
             {
                 _targetConfirmed = null;
                 ActionQueue.Instance.EndTurn();
@@ -95,24 +129,24 @@ public class BattleManager : Singleton<BattleManager>
     public void RequestUseSkill()
     {
         SelectEntity(null);
-        this.PostEvent(EventID.ON_TARGET_FOCUSED, currentEntity.Entity.SkillTargetType);
+        this.PostEvent(EventID.ON_TARGET_FOCUSED, CurrentEntity.Entity.SkillTargetType);
         _targetConfirmed = target =>
         {
-            EditorLog.Message($"{currentEntity.name} used skill on {target.name}");
+            EditorLog.Message($"{CurrentEntity.name} used skill on {target.name}");
             // todo: review later
-            currentEntity.Entity.UseSkill(target.Entity);
+            CurrentEntity.Entity.UseSkill(target.Entity);
         };
     }
 
     public void RequestUseUltimate()
     {
         SelectEntity(null);
-        this.PostEvent(EventID.ON_TARGET_FOCUSED, currentEntity.Entity.UltimateTargetType);
+        this.PostEvent(EventID.ON_TARGET_FOCUSED, CurrentEntity.Entity.UltimateTargetType);
         _targetConfirmed = target =>
         {
-            EditorLog.Message($"{currentEntity.name} used ultimate on {target.name}");
+            EditorLog.Message($"{CurrentEntity.name} used ultimate on {target.name}");
             // todo: review later
-            currentEntity.Entity.UseUltimate(target.Entity);
+            CurrentEntity.Entity.UseUltimate(target.Entity);
         };
     }
 

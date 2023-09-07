@@ -108,6 +108,28 @@ public enum HealthImpactType
     CriticalMagicalDamage
 }
 
+public enum TargetSelectCondition
+{
+    Random,
+    LowestHp,
+    LowestHpPercentage,
+    LowestEnergy,
+    LowestArmor,
+    LowestResistance,
+    HighestDamage,
+    HighestSpeed,
+    HighestIntelligence
+}
+
+public enum BattleState
+{
+    Preparing,
+    Playing,
+    Pausing,
+    Victory,
+    Loss
+}
+
 public static class TypeExtensions
 {
     public static bool IsNull(this HealthImpactType type)

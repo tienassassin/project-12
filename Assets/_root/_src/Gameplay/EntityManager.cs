@@ -17,6 +17,9 @@ public class EntityManager : Singleton<EntityManager>
     public List<EnemyData> enemies = new();
     private List<EntityController> _entities = new();
 
+    private int _allyCount;
+    private int _enemyCount;
+
     private async void Start()
     {
         await UniTask.WaitUntil(() => DataManager.Ready);
@@ -34,9 +37,13 @@ public class EntityManager : Singleton<EntityManager>
             var newEntity = Instantiate(pref, heroPositions[firstIndex + i].position, Quaternion.identity,
                 entityContainer);
             newEntity.Entity.Init(allies[i]);
+            newEntity.name = "(A)" + newEntity.name;
             newEntity.SwitchAutomation(true);
             _entities.Add(newEntity);
+            _allyCount++;
         }
+
+        EditorLog.Message("Ally team loaded");
     }
 
     private void SpawnEnemyTeam()
@@ -48,9 +55,13 @@ public class EntityManager : Singleton<EntityManager>
             var newEntity = Instantiate(pref, devilPositions[firstIndex + i].position, Quaternion.identity,
                 entityContainer);
             newEntity.Entity.Init(enemies[i]);
+            newEntity.name = "(E)" + newEntity.name;
             newEntity.SwitchAutomation(true);
             _entities.Add(newEntity);
+            _enemyCount++;
         }
+
+        EditorLog.Message("Enemy team loaded");
     }
 
     private int GetFirstPositionIndex(int quantity)
@@ -142,6 +153,8 @@ public class EntityManager : Singleton<EntityManager>
         }
     }
 
+    #region Get entity based on condition
+
     private EntityController GetRandomEntity(Side side)
     {
         var list = _entities.Where(x => x.Entity.Side == side && x.Entity.IsAlive).ToList();
@@ -212,17 +225,21 @@ public class EntityManager : Singleton<EntityManager>
         list.Sort((e1, e2) => e2.Entity.Stats.intelligence.CompareTo(e1.Entity.Stats.intelligence));
         return list[0];
     }
-}
 
-public enum TargetSelectCondition
-{
-    Random,
-    LowestHp,
-    LowestHpPercentage,
-    LowestEnergy,
-    LowestArmor,
-    LowestResistance,
-    HighestDamage,
-    HighestSpeed,
-    HighestIntelligence
+    #endregion
+
+    public void OnEntityDead(Side side)
+    {
+        if (side == Side.Ally) _allyCount--;
+        else _enemyCount--;
+
+        if (_allyCount <= 0)
+        {
+            BattleManager.Instance.State = BattleState.Loss;
+        }
+        else if (_enemyCount <= 0)
+        {
+            BattleManager.Instance.State = BattleState.Victory;
+        }
+    }
 }
