@@ -39,8 +39,9 @@ public class ActionQueue : Singleton<ActionQueue>
 
     public void RemoveEntity(int id)
     {
-        var turns = queue.FindAll(x => x.info.id == id);
-        turns.ForEach(x => queue.Remove(x));
+        // var turns = queue.FindAll(x => x.info.id == id);
+        // turns.ForEach(x => queue.Remove(x));
+        queue.RemoveAll(x => x.info.id == id);
     }
 
     private void NextTurn()

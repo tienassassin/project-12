@@ -7,23 +7,19 @@ using Random = UnityEngine.Random;
 
 public static class Common
 {
-    /// <summary>
-    ///     Get random result (true/false) from 0-100(%) rate
-    /// </summary>
     public static bool GetRandomResult(float rate)
     {
-        float num = Random.Range(0f, 100f);
-        return num <= rate;
+        return Random.value <= rate / 100f;
     }
 
-    public static int GetRandomResult(List<int> list)
+    public static int GetRandomResult(List<float> list)
     {
-        int rand = Random.Range(1, 101);
-        int sum = 0;
+        float rand = Random.value;
+        float sum = 0;
         for (int i = 0; i < list.Count; i++)
         {
-            sum += list[i];
-            if (sum >= rand) return i;
+            sum += list[i] / 100f;
+            if (rand <= sum) return i;
         }
 
         return 0;

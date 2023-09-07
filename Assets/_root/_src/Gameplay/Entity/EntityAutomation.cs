@@ -25,7 +25,7 @@ public class EntityAutomation : DuztineBehaviour
     public EntityController GetTarget()
     {
         if (_specificTarget) return _specificTarget;
-        int rand = Common.GetRandomResult(targetSelectRates.Select(x => x.rate).ToList());
+        int rand = Common.GetRandomResult(targetSelectRates.Select(x => (float)x.rate).ToList());
         var condition = targetSelectRates[rand].condition;
         return EntityManager.Instance.GetEntity(_entity.Side.GetOpposite(), condition);
     }
