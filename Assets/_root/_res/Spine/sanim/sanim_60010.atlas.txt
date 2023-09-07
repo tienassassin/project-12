@@ -1,0 +1,69 @@
+
+sanim_60010.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effect_A/line_light_0000
+  rotate: true
+  xy: 1923, 67
+  size: 141, 81
+  orig: 141, 81
+  offset: 0, 0
+  index: -1
+Effect_A/quan_glow_0000
+  rotate: false
+  xy: 1718, 17
+  size: 203, 191
+  orig: 203, 191
+  offset: 0, 0
+  index: -1
+bian/bian_0000
+  rotate: false
+  xy: 2, 2
+  size: 330, 72
+  orig: 330, 72
+  offset: 0, 0
+  index: -1
+bian/bian_0006
+  rotate: false
+  xy: 390, 136
+  size: 330, 72
+  orig: 330, 72
+  offset: 0, 0
+  index: -1
+bian/bian_0013
+  rotate: false
+  xy: 722, 136
+  size: 330, 72
+  orig: 330, 72
+  offset: 0, 0
+  index: -1
+bian/bian_0017
+  rotate: false
+  xy: 1054, 136
+  size: 330, 72
+  orig: 330, 72
+  offset: 0, 0
+  index: -1
+bian/bian_0024
+  rotate: false
+  xy: 1386, 136
+  size: 330, 72
+  orig: 330, 72
+  offset: 0, 0
+  index: -1
+bian/bian_0029
+  rotate: false
+  xy: 390, 62
+  size: 330, 72
+  orig: 330, 72
+  offset: 0, 0
+  index: -1
+fazhang
+  rotate: true
+  xy: 2, 76
+  size: 132, 386
+  orig: 132, 386
+  offset: 0, 0
+  index: -1

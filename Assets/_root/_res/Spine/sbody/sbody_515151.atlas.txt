@@ -1,0 +1,167 @@
+
+sbody_515151.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bu_shou01
+  rotate: false
+  xy: 531, 103
+  size: 40, 41
+  orig: 42, 43
+  offset: 1, 1
+  index: -1
+cm_xiaotuiqian
+  rotate: true
+  xy: 438, 103
+  size: 41, 91
+  orig: 43, 93
+  offset: 1, 1
+  index: -1
+dizuo
+  rotate: false
+  xy: 573, 198
+  size: 171, 56
+  orig: 175, 60
+  offset: 2, 2
+  index: -1
+zc_bozi
+  rotate: false
+  xy: 573, 111
+  size: 25, 32
+  orig: 27, 34
+  offset: 1, 1
+  index: -1
+zc_bq01
+  rotate: true
+  xy: 917, 137
+  size: 40, 81
+  orig: 43, 83
+  offset: 2, 1
+  index: -1
+zc_dabihou
+  rotate: false
+  xy: 453, 39
+  size: 34, 62
+  orig: 38, 68
+  offset: 2, 4
+  index: -1
+zc_daizi01
+  rotate: true
+  xy: 573, 145
+  size: 51, 86
+  orig: 53, 88
+  offset: 1, 1
+  index: -1
+zc_daizi2
+  rotate: true
+  xy: 830, 138
+  size: 38, 85
+  orig: 40, 87
+  offset: 1, 1
+  index: -1
+zc_daizihou
+  rotate: false
+  xy: 917, 179
+  size: 81, 75
+  orig: 83, 77
+  offset: 1, 1
+  index: -1
+zc_jiaohou
+  rotate: false
+  xy: 73, 2
+  size: 67, 48
+  orig: 69, 50
+  offset: 1, 1
+  index: -1
+zc_jiaoqian
+  rotate: true
+  xy: 142, 4
+  size: 46, 52
+  orig: 48, 54
+  offset: 1, 1
+  index: -1
+zc_pifenghou
+  rotate: true
+  xy: 322, 40
+  size: 59, 76
+  orig: 61, 78
+  offset: 1, 1
+  index: -1
+zc_shouq01
+  rotate: false
+  xy: 489, 57
+  size: 36, 44
+  orig: 38, 46
+  offset: 1, 1
+  index: -1
+zc_st
+  rotate: false
+  xy: 438, 146
+  size: 133, 108
+  orig: 135, 110
+  offset: 1, 1
+  index: -1
+zc_tf01
+  rotate: false
+  xy: 2, 52
+  size: 194, 202
+  orig: 196, 205
+  offset: 1, 1
+  index: -1
+zc_tou
+  rotate: false
+  xy: 198, 64
+  size: 122, 190
+  orig: 127, 194
+  offset: 3, 3
+  index: -1
+zc_tuihou
+  rotate: false
+  xy: 661, 125
+  size: 80, 71
+  orig: 81, 72
+  offset: 0, 0
+  index: -1
+zc_tuiqian
+  rotate: true
+  xy: 746, 193
+  size: 61, 84
+  orig: 63, 86
+  offset: 1, 1
+  index: -1
+zc_tunbu
+  rotate: false
+  xy: 832, 178
+  size: 83, 76
+  orig: 86, 78
+  offset: 1, 1
+  index: -1
+zc_xbq01
+  rotate: true
+  xy: 2, 2
+  size: 48, 69
+  orig: 52, 76
+  offset: 2, 5
+  index: -1
+zc_xiaobihou
+  rotate: false
+  xy: 400, 35
+  size: 51, 64
+  orig: 53, 66
+  offset: 1, 2
+  index: -1
+zc_xiaotuihou
+  rotate: true
+  xy: 743, 137
+  size: 54, 85
+  orig: 56, 88
+  offset: 1, 2
+  index: -1
+zc_yao
+  rotate: false
+  xy: 322, 101
+  size: 114, 153
+  orig: 116, 155
+  offset: 1, 1
+  index: -1

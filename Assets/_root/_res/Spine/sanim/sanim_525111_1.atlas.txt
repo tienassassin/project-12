@@ -1,0 +1,426 @@
+
+sanim_525111_1.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bm_bihou
+  rotate: true
+  xy: 1137, 667
+  size: 84, 118
+  orig: 86, 120
+  offset: 1, 1
+  index: -1
+bm_biqian
+  rotate: true
+  xy: 904, 673
+  size: 102, 115
+  orig: 104, 117
+  offset: 1, 1
+  index: -1
+bm_datuiqian
+  rotate: true
+  xy: 1021, 681
+  size: 82, 114
+  orig: 84, 117
+  offset: 1, 2
+  index: -1
+bm_houjia
+  rotate: true
+  xy: 1637, 757
+  size: 55, 68
+  orig: 57, 70
+  offset: 1, 1
+  index: -1
+bm_jiaohou
+  rotate: true
+  xy: 1785, 773
+  size: 49, 53
+  orig: 51, 55
+  offset: 1, 1
+  index: -1
+bm_jiaoqian
+  rotate: false
+  xy: 759, 371
+  size: 79, 45
+  orig: 81, 47
+  offset: 1, 1
+  index: -1
+bm_pf
+  rotate: false
+  xy: 2, 701
+  size: 444, 321
+  orig: 446, 323
+  offset: 1, 1
+  index: -1
+bm_qiandang
+  rotate: true
+  xy: 774, 563
+  size: 56, 98
+  orig: 58, 100
+  offset: 1, 1
+  index: -1
+bm_shenti
+  rotate: true
+  xy: 324, 70
+  size: 133, 102
+  orig: 135, 104
+  offset: 1, 1
+  index: -1
+bm_shouhou
+  rotate: false
+  xy: 898, 518
+  size: 46, 45
+  orig: 48, 47
+  offset: 1, 1
+  index: -1
+bm_shouqian
+  rotate: false
+  xy: 971, 562
+  size: 46, 51
+  orig: 48, 53
+  offset: 1, 1
+  index: -1
+bm_tou
+  rotate: true
+  xy: 1700, 824
+  size: 198, 261
+  orig: 200, 263
+  offset: 1, 1
+  index: -1
+bm_tuihou
+  rotate: false
+  xy: 700, 577
+  size: 72, 111
+  orig: 74, 113
+  offset: 1, 1
+  index: -1
+bm_wuqi
+  rotate: false
+  xy: 783, 855
+  size: 357, 167
+  orig: 360, 170
+  offset: 2, 1
+  index: -1
+bm_xiaobihou
+  rotate: true
+  xy: 2, 2
+  size: 43, 62
+  orig: 45, 64
+  offset: 1, 1
+  index: -1
+bm_xiaobiqian
+  rotate: true
+  xy: 367, 10
+  size: 58, 75
+  orig: 62, 77
+  offset: 2, 1
+  index: -1
+bm_xiaotuihou
+  rotate: true
+  xy: 1140, 753
+  size: 65, 127
+  orig: 67, 129
+  offset: 1, 1
+  index: -1
+bm_xiaotuiqian
+  rotate: true
+  xy: 896, 615
+  size: 56, 118
+  orig: 58, 120
+  offset: 1, 1
+  index: -1
+bm_yao
+  rotate: false
+  xy: 1963, 817
+  size: 77, 71
+  orig: 79, 73
+  offset: 1, 1
+  index: -1
+cm_dabiqian
+  rotate: true
+  xy: 1257, 660
+  size: 78, 115
+  orig: 80, 117
+  offset: 1, 1
+  index: -1
+cm_datuihou
+  rotate: false
+  xy: 720, 690
+  size: 57, 122
+  orig: 59, 124
+  offset: 1, 1
+  index: -1
+cm_datuiqian
+  rotate: false
+  xy: 720, 690
+  size: 57, 122
+  orig: 59, 124
+  offset: 1, 1
+  index: -1
+cm_jiaohou
+  rotate: false
+  xy: 1558, 761
+  size: 77, 51
+  orig: 79, 53
+  offset: 1, 1
+  index: -1
+cm_jiaoqian
+  rotate: false
+  xy: 1558, 761
+  size: 77, 51
+  orig: 79, 53
+  offset: 1, 1
+  index: -1
+cm_kuijia2
+  rotate: true
+  xy: 673, 491
+  size: 84, 94
+  orig: 86, 96
+  offset: 1, 1
+  index: -1
+cm_pfhou
+  rotate: true
+  xy: 2, 47
+  size: 156, 320
+  orig: 158, 322
+  offset: 1, 1
+  index: -1
+cm_qianshou
+  rotate: false
+  xy: 1957, 770
+  size: 48, 45
+  orig: 50, 47
+  offset: 1, 1
+  index: -1
+cm_tou
+  rotate: true
+  xy: 1437, 814
+  size: 208, 261
+  orig: 210, 263
+  offset: 1, 1
+  index: -1
+cm_weibo
+  rotate: false
+  xy: 554, 584
+  size: 144, 120
+  orig: 146, 122
+  offset: 1, 1
+  index: -1
+cm_weij
+  rotate: false
+  xy: 779, 687
+  size: 123, 88
+  orig: 126, 90
+  offset: 1, 1
+  index: -1
+cm_weijinqian
+  rotate: true
+  xy: 783, 777
+  size: 76, 243
+  orig: 78, 245
+  offset: 1, 1
+  index: -1
+cm_xiabai
+  rotate: true
+  xy: 66, 9
+  size: 36, 97
+  orig: 38, 99
+  offset: 1, 1
+  index: -1
+cm_xiaobi
+  rotate: false
+  xy: 324, 2
+  size: 41, 66
+  orig: 44, 68
+  offset: 2, 1
+  index: -1
+cm_xiaotuihou
+  rotate: true
+  xy: 1269, 740
+  size: 78, 126
+  orig: 80, 129
+  offset: 1, 1
+  index: -1
+cm_xiaotuiqian
+  rotate: true
+  xy: 1269, 740
+  size: 78, 126
+  orig: 80, 129
+  offset: 1, 1
+  index: -1
+cm_xiong
+  rotate: false
+  xy: 556, 379
+  size: 121, 105
+  orig: 123, 107
+  offset: 1, 1
+  index: -1
+cm_yao
+  rotate: false
+  xy: 769, 491
+  size: 78, 70
+  orig: 80, 73
+  offset: 1, 2
+  index: -1
+dizuo
+  rotate: true
+  xy: 358, 205
+  size: 171, 56
+  orig: 175, 60
+  offset: 2, 2
+  index: -1
+wq
+  rotate: false
+  xy: 2, 205
+  size: 354, 171
+  orig: 357, 174
+  offset: 1, 1
+  index: -1
+wq2
+  rotate: false
+  xy: 448, 814
+  size: 333, 208
+  orig: 336, 211
+  offset: 2, 2
+  index: -1
+zc_dabihou
+  rotate: true
+  xy: 554, 486
+  size: 96, 117
+  orig: 98, 119
+  offset: 1, 1
+  index: -1
+zc_datuiqian
+  rotate: true
+  xy: 1028, 765
+  size: 88, 110
+  orig: 90, 112
+  offset: 1, 1
+  index: -1
+zc_houjiao
+  rotate: false
+  xy: 1397, 755
+  size: 82, 57
+  orig: 84, 59
+  offset: 1, 1
+  index: -1
+zc_houshou
+  rotate: false
+  xy: 209, 15
+  size: 47, 30
+  orig: 49, 32
+  offset: 1, 1
+  index: -1
+zc_houtui
+  rotate: true
+  xy: 774, 621
+  size: 64, 120
+  orig: 66, 122
+  offset: 1, 1
+  index: -1
+zc_houxiaotui
+  rotate: true
+  xy: 1481, 757
+  size: 55, 75
+  orig: 57, 78
+  offset: 1, 1
+  index: -1
+zc_pf1
+  rotate: true
+  xy: 448, 706
+  size: 106, 270
+  orig: 108, 272
+  offset: 1, 1
+  index: -1
+zc_pifeng
+  rotate: false
+  xy: 2, 378
+  size: 420, 321
+  orig: 422, 323
+  offset: 1, 1
+  index: -1
+zc_qb
+  rotate: false
+  xy: 679, 390
+  size: 78, 99
+  orig: 80, 101
+  offset: 1, 1
+  index: -1
+zc_qianjiao
+  rotate: false
+  xy: 1840, 773
+  size: 52, 49
+  orig: 54, 51
+  offset: 1, 1
+  index: -1
+zc_qianxiaotui
+  rotate: false
+  xy: 1963, 890
+  size: 77, 132
+  orig: 79, 135
+  offset: 1, 1
+  index: -1
+zc_shou
+  rotate: false
+  xy: 849, 514
+  size: 47, 47
+  orig: 49, 49
+  offset: 1, 1
+  index: -1
+zc_shouhou
+  rotate: false
+  xy: 165, 9
+  size: 42, 36
+  orig: 44, 38
+  offset: 1, 1
+  index: -1
+zc_tou
+  rotate: true
+  xy: 1142, 820
+  size: 202, 293
+  orig: 204, 295
+  offset: 1, 1
+  index: -1
+zc_weibo
+  rotate: true
+  xy: 424, 486
+  size: 213, 128
+  orig: 215, 130
+  offset: 1, 1
+  index: -1
+zc_xiabai
+  rotate: true
+  xy: 874, 565
+  size: 48, 95
+  orig: 50, 97
+  offset: 1, 1
+  index: -1
+zc_xiaobi
+  rotate: true
+  xy: 1894, 783
+  size: 39, 61
+  orig: 41, 64
+  offset: 1, 1
+  index: -1
+zc_xiaobihou
+  rotate: true
+  xy: 1707, 773
+  size: 49, 76
+  orig: 51, 78
+  offset: 1, 1
+  index: -1
+zc_xiong
+  rotate: false
+  xy: 424, 381
+  size: 130, 103
+  orig: 132, 105
+  offset: 1, 1
+  index: -1
+zc_yao
+  rotate: false
+  xy: 759, 418
+  size: 77, 71
+  orig: 79, 73
+  offset: 1, 1
+  index: -1

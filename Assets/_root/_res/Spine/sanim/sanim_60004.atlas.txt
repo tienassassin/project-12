@@ -1,0 +1,160 @@
+
+sanim_60004.png
+size: 1163,1163
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/buff/0_00000
+  rotate: false
+  xy: 234, 12
+  size: 106, 52
+  orig: 300, 300
+  offset: 117, 74
+  index: -1
+images/buff/0_00002
+  rotate: false
+  xy: 917, 801
+  size: 186, 126
+  orig: 300, 300
+  offset: 61, 75
+  index: -1
+images/buff/0_00004
+  rotate: true
+  xy: 845, 516
+  size: 191, 148
+  orig: 300, 300
+  offset: 59, 67
+  index: -1
+images/buff/0_00006
+  rotate: true
+  xy: 845, 328
+  size: 186, 157
+  orig: 300, 300
+  offset: 60, 69
+  index: -1
+images/buff/0_00008
+  rotate: false
+  xy: 234, 66
+  size: 191, 165
+  orig: 300, 300
+  offset: 59, 70
+  index: -1
+images/buff/0_00010
+  rotate: false
+  xy: 845, 156
+  size: 181, 170
+  orig: 300, 300
+  offset: 64, 66
+  index: -1
+images/buff/0_00012
+  rotate: true
+  xy: 995, 615
+  size: 184, 163
+  orig: 300, 300
+  offset: 62, 71
+  index: -1
+images/buff/0_00014
+  rotate: false
+  xy: 641, 121
+  size: 186, 154
+  orig: 300, 300
+  offset: 59, 61
+  index: -1
+images/buff/0_00016
+  rotate: true
+  xy: 1004, 434
+  size: 179, 150
+  orig: 300, 300
+  offset: 63, 64
+  index: -1
+images/buff/0_00018
+  rotate: false
+  xy: 829, 12
+  size: 179, 142
+  orig: 300, 300
+  offset: 70, 70
+  index: -1
+images/buff/0_00020
+  rotate: false
+  xy: 448, 139
+  size: 191, 136
+  orig: 300, 300
+  offset: 61, 75
+  index: -1
+images/buff/0_00022
+  rotate: false
+  xy: 427, 12
+  size: 178, 125
+  orig: 300, 300
+  offset: 66, 85
+  index: -1
+images/buff/0_00024
+  rotate: false
+  xy: 607, 28
+  size: 157, 91
+  orig: 300, 300
+  offset: 78, 111
+  index: -1
+images/buff/0_00026
+  rotate: true
+  xy: 1094, 1035
+  size: 126, 50
+  orig: 300, 300
+  offset: 92, 117
+  index: -1
+images/buff/0_00028
+  rotate: false
+  xy: 1004, 395
+  size: 73, 37
+  orig: 300, 300
+  offset: 117, 129
+  index: -1
+images/glow
+  rotate: false
+  xy: 2, 701
+  size: 460, 460
+  orig: 512, 512
+  offset: 26, 26
+  index: -1
+images/lz1
+  rotate: true
+  xy: 2, 233
+  size: 466, 444
+  orig: 500, 500
+  offset: 13, 7
+  index: -1
+images/lz2
+  rotate: false
+  xy: 464, 794
+  size: 451, 367
+  orig: 500, 500
+  offset: 0, 112
+  index: -1
+images/lz3
+  rotate: true
+  xy: 448, 277
+  size: 422, 395
+  orig: 500, 500
+  offset: 36, 85
+  index: -1
+images/q1
+  rotate: false
+  xy: 2, 2
+  size: 230, 229
+  orig: 256, 256
+  offset: 14, 13
+  index: -1
+images/q2
+  rotate: false
+  xy: 464, 709
+  size: 476, 83
+  orig: 512, 512
+  offset: 18, 215
+  index: -1
+images/sb
+  rotate: false
+  xy: 917, 929
+  size: 175, 232
+  orig: 300, 300
+  offset: 63, 34
+  index: -1

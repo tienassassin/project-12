@@ -1,0 +1,241 @@
+{
+"skeleton": { "hash": "MedJxIW+z2dAuY1esdOlAunDK9Y", "spine": "3.5.35", "width": 503.53, "height": 503.53 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "FZ", "parent": "root", "rotation": 315 },
+	{ "name": "FZ1", "parent": "FZ", "scaleX": 1.7, "scaleY": 1.7 },
+	{ "name": "FZ_light", "parent": "FZ", "x": 7.78, "y": 9.19, "scaleX": 1.16, "scaleY": 1.16 }
+],
+"slots": [
+	{ "name": "FZ1", "bone": "FZ1", "attachment": "effect/xjfz_00020" },
+	{ "name": "effect/uieffect_107a1", "bone": "FZ1", "attachment": "effect/uieffect_107a1" },
+	{ "name": "FZ_light", "bone": "FZ_light" }
+],
+"skins": {
+	"default": {
+		"FZ1": {
+			"effect/xjfz_00020": { "x": 4.56, "y": 4.92, "scaleX": 0.68, "scaleY": 0.68, "width": 240, "height": 376 }
+		},
+		"FZ_light": {
+			"effect/guang/guangzi_00000": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00001": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00002": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00003": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00004": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00005": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00006": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00007": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00008": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00009": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00010": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00011": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00012": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00013": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00014": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00015": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00016": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00017": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00018": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00019": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00020": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00021": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00022": { "rotation": 45, "width": 500, "height": 500 },
+			"effect/guang/guangzi_00023": { "rotation": 45, "width": 500, "height": 500 }
+		},
+		"effect/uieffect_107a1": {
+			"effect/uieffect_107a1": { "scaleX": 0.68, "scaleY": 0.68, "width": 250, "height": 250 }
+		}
+	}
+},
+"events": {
+	"back": {},
+	"faqi_1": {}
+},
+"animations": {
+	"att": {
+		"bones": {
+			"FZ": {
+				"rotate": [
+					{
+						"time": 0,
+						"angle": 0,
+						"curve": [ 0.16, 0.29, 0.622, 1 ]
+					},
+					{
+						"time": 0.2667,
+						"angle": -295.79,
+						"curve": [ 0.459, 0.2, 1, 0.77 ]
+					},
+					{
+						"time": 0.3667,
+						"angle": -354.41,
+						"curve": [ 0.16, 0.29, 0.622, 1 ]
+					},
+					{
+						"time": 0.6,
+						"angle": -5,
+						"curve": [ 0.378, 0, 0.622, 1 ]
+					},
+					{
+						"time": 1.3333,
+						"angle": 30237,
+						"curve": [ 0.378, 0, 0.622, 1 ]
+					},
+					{
+						"time": 2.0667,
+						"angle": -5,
+						"curve": [ 0.383, 0, 0.617, 1 ]
+					},
+					{ "time": 2.9, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.16, 0.29, 0.622, 1 ]
+					},
+					{
+						"time": 0.2667,
+						"x": -6,
+						"y": 28,
+						"curve": [ 0.459, 0.2, 1, 0.77 ]
+					},
+					{
+						"time": 0.3667,
+						"x": 29,
+						"y": 24,
+						"curve": [ 0.16, 0.29, 0.622, 1 ]
+					},
+					{
+						"time": 0.6,
+						"x": 35,
+						"y": 23,
+						"curve": [ 0.378, 0, 0.622, 1 ]
+					},
+					{
+						"time": 1.3333,
+						"x": 35,
+						"y": 28,
+						"curve": [ 0.378, 0, 0.622, 1 ]
+					},
+					{
+						"time": 2.0667,
+						"x": 35.09,
+						"y": 23.09,
+						"curve": [ 0.383, 0, 0.617, 1 ]
+					},
+					{ "time": 2.9, "x": 0, "y": 0 }
+				]
+			},
+			"FZ_light": {
+				"scale": [
+					{ "time": 0.2667, "x": 1, "y": 1 },
+					{ "time": 0.3667, "x": 1.2, "y": 1.2 },
+					{ "time": 0.6, "x": 1.4, "y": 1.4, "curve": "stepped" },
+					{ "time": 2.0667, "x": 1.4, "y": 1.4 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.3333, "name": "faqi_1" },
+			{ "time": 2.9, "name": "back" }
+		]
+	},
+	"holdon": {
+		"slots": {
+			"FZ_light": {
+				"attachment": [
+					{ "time": 0, "name": "effect/guang/guangzi_00000" },
+					{ "time": 0.0667, "name": "effect/guang/guangzi_00001" },
+					{ "time": 0.1, "name": "effect/guang/guangzi_00002" },
+					{ "time": 0.1333, "name": "effect/guang/guangzi_00003" },
+					{ "time": 0.2, "name": "effect/guang/guangzi_00004" },
+					{ "time": 0.2667, "name": "effect/guang/guangzi_00005" },
+					{ "time": 0.3, "name": "effect/guang/guangzi_00006" },
+					{ "time": 0.3667, "name": "effect/guang/guangzi_00007" },
+					{ "time": 0.4, "name": "effect/guang/guangzi_00008" },
+					{ "time": 0.4667, "name": "effect/guang/guangzi_00009" },
+					{ "time": 0.5, "name": "effect/guang/guangzi_00010" },
+					{ "time": 0.5667, "name": "effect/guang/guangzi_00011" },
+					{ "time": 0.6, "name": "effect/guang/guangzi_00012" },
+					{ "time": 0.6667, "name": "effect/guang/guangzi_00013" },
+					{ "time": 0.7, "name": "effect/guang/guangzi_00014" },
+					{ "time": 0.7667, "name": "effect/guang/guangzi_00015" },
+					{ "time": 0.8333, "name": "effect/guang/guangzi_00016" },
+					{ "time": 0.8667, "name": "effect/guang/guangzi_00017" },
+					{ "time": 0.9, "name": "effect/guang/guangzi_00018" },
+					{ "time": 0.9667, "name": "effect/guang/guangzi_00019" },
+					{ "time": 1.0333, "name": "effect/guang/guangzi_00020" },
+					{ "time": 1.0667, "name": "effect/guang/guangzi_00021" },
+					{ "time": 1.1, "name": "effect/guang/guangzi_00022" },
+					{ "time": 1.1667, "name": "effect/guang/guangzi_00000" },
+					{ "time": 1.2333, "name": "effect/guang/guangzi_00001" },
+					{ "time": 1.2667, "name": "effect/guang/guangzi_00002" },
+					{ "time": 1.3, "name": "effect/guang/guangzi_00003" },
+					{ "time": 1.3667, "name": "effect/guang/guangzi_00004" },
+					{ "time": 1.4333, "name": "effect/guang/guangzi_00005" },
+					{ "time": 1.4667, "name": "effect/guang/guangzi_00006" },
+					{ "time": 1.5333, "name": "effect/guang/guangzi_00007" },
+					{ "time": 1.5667, "name": "effect/guang/guangzi_00008" },
+					{ "time": 1.6333, "name": "effect/guang/guangzi_00009" },
+					{ "time": 1.6667, "name": "effect/guang/guangzi_00010" },
+					{ "time": 1.7333, "name": "effect/guang/guangzi_00011" },
+					{ "time": 1.7667, "name": "effect/guang/guangzi_00012" },
+					{ "time": 1.8333, "name": "effect/guang/guangzi_00013" },
+					{ "time": 1.8667, "name": "effect/guang/guangzi_00014" },
+					{ "time": 1.9333, "name": "effect/guang/guangzi_00015" },
+					{ "time": 2, "name": "effect/guang/guangzi_00016" },
+					{ "time": 2.0333, "name": "effect/guang/guangzi_00017" },
+					{ "time": 2.0667, "name": "effect/guang/guangzi_00018" },
+					{ "time": 2.1333, "name": "effect/guang/guangzi_00019" },
+					{ "time": 2.2, "name": "effect/guang/guangzi_00020" },
+					{ "time": 2.2333, "name": "effect/guang/guangzi_00021" },
+					{ "time": 2.2667, "name": "effect/guang/guangzi_00022" },
+					{ "time": 2.3333, "name": "effect/guang/guangzi_00023" }
+				]
+			}
+		},
+		"bones": {
+			"FZ": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.388, 0, 0.612, 1 ]
+					},
+					{
+						"time": 1.1667,
+						"x": 0,
+						"y": 24,
+						"curve": [ 0.388, 0, 0.612, 1 ]
+					},
+					{ "time": 2.3333, "x": 0, "y": 0 }
+				]
+			},
+			"FZ_light": {
+				"translate": [
+					{ "time": 0, "x": -21.68, "y": 9.72 }
+				]
+			}
+		}
+	},
+	"black": {
+		"slots": {
+			"effect/uieffect_107a1": {
+				"color": [
+					{ "time": 0, "color": "303030ff" }
+				]
+			}
+		},
+		"bones": {
+			"FZ": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,146 @@
+
+sanim_60007.png
+size: 1295,1295
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/atk/atk_00000
+  rotate: false
+  xy: 717, 644
+  size: 273, 261
+  orig: 700, 700
+  offset: 95, 271
+  index: -1
+images/atk/atk_00001
+  rotate: true
+  xy: 415, 590
+  size: 315, 300
+  orig: 700, 700
+  offset: 116, 140
+  index: -1
+images/atk/atk_00002
+  rotate: true
+  xy: 1007, 931
+  size: 362, 286
+  orig: 700, 700
+  offset: 223, 170
+  index: -1
+images/atk/atk_00003
+  rotate: true
+  xy: 309, 198
+  size: 384, 251
+  orig: 700, 700
+  offset: 203, 280
+  index: -1
+images/atk/atk_00005
+  rotate: true
+  xy: 717, 277
+  size: 365, 262
+  orig: 700, 700
+  offset: 164, 280
+  index: -1
+images/atk/atk_00007
+  rotate: false
+  xy: 1007, 674
+  size: 276, 255
+  orig: 700, 700
+  offset: 148, 278
+  index: -1
+images/atk/atk_00009
+  rotate: true
+  xy: 226, 47
+  size: 139, 200
+  orig: 700, 700
+  offset: 169, 274
+  index: -1
+images/atk/atk_00011
+  rotate: false
+  xy: 562, 163
+  size: 133, 201
+  orig: 700, 700
+  offset: 170, 272
+  index: -1
+images/cast/cast_00000
+  rotate: false
+  xy: 2, 987
+  size: 524, 306
+  orig: 700, 700
+  offset: 59, 253
+  index: -1
+images/cast/cast_00002
+  rotate: false
+  xy: 528, 907
+  size: 477, 386
+  orig: 700, 700
+  offset: 81, 223
+  index: -1
+images/cast/cast_00004
+  rotate: true
+  xy: 2, 584
+  size: 401, 411
+  orig: 700, 700
+  offset: 134, 204
+  index: -1
+images/cast/cast_00006
+  rotate: false
+  xy: 2, 188
+  size: 305, 394
+  orig: 700, 700
+  offset: 192, 181
+  index: -1
+images/cast/cast_00008
+  rotate: true
+  xy: 992, 429
+  size: 243, 270
+  orig: 700, 700
+  offset: 217, 205
+  index: -1
+images/cast/cast_00010
+  rotate: false
+  xy: 819, 53
+  size: 221, 222
+  orig: 700, 700
+  offset: 233, 229
+  index: -1
+images/cast/cast_00012
+  rotate: true
+  xy: 1042, 217
+  size: 210, 222
+  orig: 700, 700
+  offset: 239, 229
+  index: -1
+images/cast/cast_00014
+  rotate: true
+  xy: 1042, 7
+  size: 208, 222
+  orig: 700, 700
+  offset: 235, 229
+  index: -1
+images/cast/cast_00016
+  rotate: true
+  xy: 2, 14
+  size: 172, 222
+  orig: 700, 700
+  offset: 270, 229
+  index: -1
+images/cast/cast_00018
+  rotate: false
+  xy: 562, 366
+  size: 135, 222
+  orig: 700, 700
+  offset: 272, 229
+  index: -1
+images/wq
+  rotate: false
+  xy: 697, 33
+  size: 120, 242
+  orig: 250, 250
+  offset: 75, 4
+  index: -1
+images/wq_eff2
+  rotate: true
+  xy: 428, 44
+  size: 117, 208
+  orig: 250, 250
+  offset: 69, 21
+  index: -1

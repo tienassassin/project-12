@@ -1,0 +1,468 @@
+{
+"skeleton": { "hash": "F/DFSyXPNV1i/6Mlb/+cTzS9ibs", "spine": "3.5.35", "width": 396.9, "height": 1562.13 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "BG", "parent": "root", "y": 113.87, "scaleX": 3.33, "scaleY": 3.33 },
+	{ "name": "moshubangZX", "parent": "root" },
+	{ "name": "tx", "parent": "moshubangZX" },
+	{ "name": "bian", "parent": "tx", "scaleX": 2, "scaleY": 2 },
+	{ "name": "bone", "parent": "moshubangZX", "length": 375.79, "rotation": 0.59, "x": -3671.23, "y": 830.61 },
+	{ "name": "fazhen", "parent": "moshubangZX", "x": -2528.65, "y": 907.86 },
+	{ "name": "zzzz", "parent": "fazhen", "x": 914.21, "y": -433.02 },
+	{ "name": "zz", "parent": "zzzz", "rotation": 360 },
+	{ "name": "z", "parent": "zz", "x": 0.98, "y": 0.13 },
+	{ "name": "bone62", "parent": "z", "length": 644.45, "rotation": 89.79, "x": -0.41, "y": -320.08 },
+	{ "name": "line_light", "parent": "bone62", "rotation": -47.02, "x": 697.11, "y": 6.8, "scaleX": 2, "scaleY": 2 },
+	{ "name": "line_light2", "parent": "bone62", "rotation": -148.27, "x": 697.11, "y": 6.8, "scaleX": 2, "scaleY": 2 },
+	{ "name": "quan_glow", "parent": "bone62", "rotation": -89.79, "x": -148.99, "y": -1614.43, "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "bg", "bone": "BG" },
+	{ "name": "fazhang", "bone": "bone62", "attachment": "fazhang" },
+	{
+		"name": "Effect_A/line_light_0000",
+		"bone": "line_light",
+		"color": "f8fff7ff",
+		"attachment": "Effect_A/line_light_0000",
+		"blend": "additive"
+	},
+	{
+		"name": "Effect_A/line_light_0",
+		"bone": "line_light2",
+		"color": "f8fff7ff",
+		"attachment": "Effect_A/line_light_0000",
+		"blend": "additive"
+	},
+	{ "name": "Effect_A/quan_glow_0", "bone": "quan_glow" },
+	{ "name": "Effect_A/quan_glow_0000", "bone": "quan_glow" },
+	{ "name": "bian", "bone": "bian" },
+	{ "name": "luxian", "bone": "moshubangZX", "attachment": "luxian" }
+],
+"path": [
+	{
+		"name": "zzzzz",
+		"order": 0,
+		"bones": [ "zzzz" ],
+		"target": "luxian",
+		"rotateMix": 0
+	}
+],
+"skins": {
+	"default": {
+		"Effect_A/line_light_0": {
+			"Effect_A/line_light_0000": { "width": 141, "height": 81 }
+		},
+		"Effect_A/line_light_0000": {
+			"Effect_A/line_light_0000": { "width": 141, "height": 81 }
+		},
+		"Effect_A/quan_glow_0": {
+			"Effect_A/quan_glow_0000": { "width": 203, "height": 191 }
+		},
+		"Effect_A/quan_glow_0000": {
+			"Effect_A/quan_glow_0000": { "width": 203, "height": 191 }
+		},
+		"bian": {
+			"bian/bian_0000": { "width": 330, "height": 72 },
+			"bian/bian_0006": { "width": 330, "height": 72 },
+			"bian/bian_0013": { "width": 330, "height": 72 },
+			"bian/bian_0017": { "width": 330, "height": 72 },
+			"bian/bian_0024": { "width": 330, "height": 72 },
+			"bian/bian_0029": { "width": 330, "height": 72 }
+		},
+		"fazhang": {
+			"fazhang": {
+				"type": "mesh",
+				"uvs": [ 0, 0.0944, 0.04066, 0.1369, 0.14753, 0.16951, 0.28492, 0.17126, 0.31545, 0.22774, 0.32209, 0.87098, 0.26601, 0.89948, 0.29293, 0.96185, 0.3692, 1, 0.45445, 0.96031, 0.46567, 0.89101, 0.42529, 0.87098, 0.43875, 0.20837, 0.48192, 0.17937, 0.5597, 0.17634, 0.70821, 0.1909, 0.74887, 0.17148, 0.7365, 0.12354, 0.63396, 0.06953, 0.44479, 0.04282, 0.2733, 0, 0.01342, 0, 0, 0.04282 ],
+				"triangles": [ 1, 0, 22, 2, 1, 21, 1, 22, 21, 20, 2, 21, 3, 20, 19, 2, 20, 3, 14, 19, 18, 13, 19, 14, 12, 3, 19, 15, 18, 17, 15, 17, 16, 14, 18, 15, 13, 12, 19, 4, 3, 12, 11, 5, 4, 12, 11, 4, 9, 11, 10, 7, 6, 5, 8, 5, 11, 8, 11, 9, 7, 5, 8 ],
+				"vertices": [ 695.08, 196.44, 629.53, 174.65, 579.39, 117.83, 576.96, 45, 489.82, 28.5, -503.34, 21.35, -547.44, 50.92, -643.69, 36.3, -702.45, -4.34, -641, -49.3, -533.97, -54.86, -503.14, -33.34, 519.96, -36.74, 564.82, -59.45, 569.65, -100.67, 547.45, -179.46, 577.52, -200.9, 651.51, -194.07, 734.71, -139.42, 775.57, -39.01, 841.36, 52.12, 840.86, 189.86, 774.71, 196.73 ],
+				"hull": 23
+			}
+		},
+		"luxian": {
+			"luxian": {
+				"type": "path",
+				"lengths": [ 2318.75, 3209.77, 4967.63 ],
+				"vertexCount": 9,
+				"vertices": [ 678.82, 1286.23, 678.82, 1286.23, 678.82, 1286.23, -993.7, 1120.13, -1056.67, 3.48, -1085.4, -470.66, -382.28, -222.89, -363.42, -128.57, -344.55, -34.25 ]
+			}
+		}
+	}
+},
+"events": {
+	"back": {},
+	"faqi_1": {}
+},
+"animations": {
+	"holdon": {
+		"slots": {
+			"Effect_A/line_light_0": {
+				"color": [
+					{ "time": 0, "color": "f8fff779" },
+					{ "time": 1.1667, "color": "ff735cff" },
+					{ "time": 2.3333, "color": "f8fff779" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Effect_A/line_light_0000" }
+				]
+			},
+			"Effect_A/line_light_0000": {
+				"color": [
+					{ "time": 0, "color": "f8fff779" },
+					{ "time": 1.1667, "color": "ff735cff" },
+					{ "time": 2.3333, "color": "f8fff779" }
+				]
+			},
+			"Effect_A/quan_glow_0": {
+				"color": [
+					{ "time": 0, "color": "ffffffa8" },
+					{ "time": 1.1667, "color": "ffdad228" },
+					{ "time": 2.3333, "color": "ffffffa8" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Effect_A/quan_glow_0000" }
+				]
+			},
+			"Effect_A/quan_glow_0000": {
+				"color": [
+					{ "time": 0, "color": "ffffffa8" },
+					{ "time": 1.1667, "color": "ffe5efa8" },
+					{ "time": 2.3333, "color": "ffffffa8" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Effect_A/quan_glow_0000" }
+				]
+			},
+			"bg": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"fazhang": {
+				"attachment": [
+					{ "time": 0, "name": "fazhang" }
+				]
+			}
+		},
+		"bones": {
+			"bone62": {
+				"rotate": [
+					{ "time": 0, "angle": -55.92 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": -827.01,
+						"y": -1060.66,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1.1333, "x": -826.4, "y": -1036.77, "curve": "stepped" },
+					{
+						"time": 1.2,
+						"x": -826.4,
+						"y": -1036.77,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 2.3333, "x": -827.01, "y": -1060.66 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.463, "y": 0.463 }
+				]
+			},
+			"quan_glow": {
+				"translate": [
+					{ "time": 0, "x": 838.6, "y": 1628 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.701, "y": 0.701 },
+					{ "time": 1.1667, "x": 1.266, "y": 1.266 },
+					{ "time": 2.3333, "x": 0.701, "y": 0.701 }
+				]
+			},
+			"line_light2": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 1.1667, "x": 2.528, "y": 2.528 },
+					{ "time": 2.3333, "x": 1, "y": 1 }
+				],
+				"shear": [
+					{ "time": 2.3333, "x": 0, "y": 0 }
+				]
+			},
+			"line_light": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 1.1667, "x": 2.528, "y": 2.528 },
+					{ "time": 2.3333, "x": 1, "y": 1 }
+				],
+				"shear": [
+					{ "time": 2.3333, "x": 0, "y": 0 }
+				]
+			},
+			"moshubangZX": {
+				"scale": [
+					{ "time": 0, "x": 0.7, "y": 0.7 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"fazhang": {
+					"fazhang": [
+						{
+							"time": 0,
+							"offset": 10,
+							"vertices": [ 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078 ]
+						}
+					]
+				},
+				"luxian": {
+					"luxian": [
+						{ "time": 0 }
+					]
+				}
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 0,
+				"offsets": [
+					{ "slot": "Effect_A/quan_glow_0000", "offset": -4 }
+				]
+			}
+		]
+	},
+	"att": {
+		"slots": {
+			"Effect_A/line_light_0000": {
+				"color": [
+					{ "time": 0.4, "color": "f8fff700", "curve": "stepped" },
+					{ "time": 4, "color": "f8fff700" }
+				]
+			},
+			"Effect_A/line_light_0": {
+				"color": [
+					{ "time": 0.4, "color": "f8fff700", "curve": "stepped" },
+					{ "time": 4, "color": "f8fff700" }
+				]
+			},
+			"bg": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"bian": {
+				"attachment": [
+					{ "time": 0, "name": "bian/bian_0000" },
+					{ "time": 0.0667, "name": "bian/bian_0006" },
+					{ "time": 0.1333, "name": "bian/bian_0013" },
+					{ "time": 0.2, "name": "bian/bian_0017" },
+					{ "time": 0.2667, "name": "bian/bian_0024" },
+					{ "time": 0.3333, "name": "bian/bian_0029" },
+					{ "time": 0.3667, "name": null },
+					{ "time": 0.4, "name": null },
+					{ "time": 4, "name": null }
+				]
+			},
+			"fazhang": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "fazhang" }
+				]
+			}
+		},
+		"bones": {
+			"bone62": {
+				"rotate": [
+					{ "time": 0, "angle": -55.92, "curve": "stepped" },
+					{ "time": 0.3667, "angle": -55.92, "curve": "stepped" },
+					{ "time": 0.4, "angle": -55.92, "curve": "stepped" },
+					{ "time": 4, "angle": -55.92 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": -851.63,
+						"y": -1077.19,
+						"curve": [ 0.266, 0, 0.618, 0.43 ]
+					},
+					{ "time": 0.3667, "x": -853.37, "y": -1071.52, "curve": "stepped" },
+					{ "time": 0.4, "x": -853.37, "y": -1071.52, "curve": "stepped" },
+					{ "time": 4, "x": -853.37, "y": -1071.52 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.553, "y": 0.553 }
+				]
+			},
+			"moshubangZX": {
+				"scale": [
+					{ "time": 0, "x": 0.7, "y": 0.7 }
+				]
+			},
+			"bian": {
+				"rotate": [
+					{ "time": 0, "angle": 34.99 }
+				],
+				"translate": [
+					{ "time": 0, "x": 99.16, "y": 52.23 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.538, "y": 2.437 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"fazhang": {
+					"fazhang": [
+						{
+							"time": 0,
+							"offset": 10,
+							"vertices": [ 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078 ]
+						}
+					]
+				},
+				"luxian": {
+					"luxian": [
+						{ "time": 0 }
+					]
+				}
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 0,
+				"offsets": [
+					{ "slot": "Effect_A/quan_glow_0000", "offset": -4 }
+				]
+			},
+			{
+				"time": 0.0333,
+				"offsets": [
+					{ "slot": "fazhang", "offset": 4 }
+				]
+			}
+		],
+		"events": [
+			{ "time": 0, "name": "faqi_1" },
+			{ "time": 3.9667, "name": "back" }
+		]
+	},
+	"black": {
+		"slots": {
+			"Effect_A/line_light_0": {
+				"color": [
+					{ "time": 0, "color": "f8fff779" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Effect_A/line_light_0000": {
+				"color": [
+					{ "time": 0, "color": "f8fff779" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Effect_A/quan_glow_0": {
+				"color": [
+					{ "time": 0, "color": "ffffffa8" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Effect_A/quan_glow_0000": {
+				"color": [
+					{ "time": 0, "color": "ffffffa8" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"bg": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"fazhang": {
+				"color": [
+					{ "time": 0, "color": "303030ff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "fazhang" }
+				]
+			}
+		},
+		"bones": {
+			"bone62": {
+				"rotate": [
+					{ "time": 0, "angle": -55.92 }
+				],
+				"translate": [
+					{ "time": 0, "x": -827.01, "y": -1060.66 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.463, "y": 0.463 }
+				]
+			},
+			"quan_glow": {
+				"translate": [
+					{ "time": 0, "x": 838.6, "y": 1628 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.701, "y": 0.701 }
+				]
+			},
+			"line_light2": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"line_light": {
+				"rotate": [
+					{ "time": 0, "angle": -2.48 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moshubangZX": {
+				"scale": [
+					{ "time": 0, "x": 0.7, "y": 0.7 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"fazhang": {
+					"fazhang": [
+						{
+							"time": 0,
+							"offset": 10,
+							"vertices": [ 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078, 711.4557, 13.29078 ]
+						}
+					]
+				},
+				"luxian": {
+					"luxian": [
+						{ "time": 0 }
+					]
+				}
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 0,
+				"offsets": [
+					{ "slot": "Effect_A/quan_glow_0000", "offset": -4 }
+				]
+			}
+		]
+	}
+}
+}
