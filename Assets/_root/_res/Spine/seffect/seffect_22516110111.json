@@ -1,0 +1,1057 @@
+{
+"skeleton": { "hash": "d6vlkwFY9SjWhnc9aeyGnDa/EY0", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "effect", "parent": "root" },
+	{ "name": "skill01", "parent": "effect" },
+	{ "name": "1zha", "parent": "skill01" },
+	{ "name": "1zha1", "parent": "1zha" },
+	{ "name": "1zha2", "parent": "1zha" },
+	{ "name": "1zha3", "parent": "1zha" },
+	{ "name": "1zha4", "parent": "1zha" },
+	{ "name": "1zha5", "parent": "1zha" },
+	{ "name": "1zha6", "parent": "1zha" },
+	{ "name": "1zha7", "parent": "1zha" },
+	{ "name": "1zha8", "parent": "1zha" },
+	{ "name": "1zha9", "parent": "1zha" },
+	{ "name": "1zha10", "parent": "1zha" },
+	{ "name": "1zha11", "parent": "1zha" },
+	{ "name": "1zha12", "parent": "1zha" },
+	{ "name": "2zha", "parent": "skill01" },
+	{ "name": "2zha1", "parent": "2zha" },
+	{ "name": "2zha2", "parent": "2zha" },
+	{ "name": "2zha3", "parent": "2zha" },
+	{ "name": "2zha4", "parent": "2zha" },
+	{ "name": "2zha5", "parent": "2zha" },
+	{ "name": "2zha6", "parent": "2zha" },
+	{ "name": "2zha7", "parent": "2zha" },
+	{ "name": "atk", "parent": "effect" },
+	{ "name": "atk_bao", "parent": "atk", "scaleX": 4.5, "scaleY": 4.5 },
+	{ "name": "atk_dg", "parent": "atk", "scaleX": 5, "scaleY": 5 },
+	{ "name": "bingci", "parent": "skill01" },
+	{ "name": "ci1", "parent": "bingci" },
+	{ "name": "ci2", "parent": "bingci" },
+	{ "name": "ci3", "parent": "bingci" },
+	{ "name": "ci4", "parent": "bingci" },
+	{ "name": "ci5", "parent": "bingci" },
+	{ "name": "ci6", "parent": "bingci" },
+	{ "name": "ci7", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci8", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci9", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci10", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci11", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci12", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci13", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci14", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci15", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci16", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci17", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci18", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci19", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci20", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci21", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "ci22", "parent": "bingci", "x": 18.74, "y": -6.25 },
+	{ "name": "juqi", "parent": "skill01" },
+	{ "name": "wu", "parent": "skill01" }
+],
+"slots": [
+	{ "name": "atk_dg_14", "bone": "atk_dg" },
+	{ "name": "atk_b_15", "bone": "atk_bao" },
+	{ "name": "skill_ju10", "bone": "juqi" },
+	{ "name": "skill_wu_21", "bone": "wu", "blend": "additive" },
+	{ "name": "skill_bc_24", "bone": "ci1" },
+	{ "name": "skill_bc_25", "bone": "ci2" },
+	{ "name": "skill_bc_26", "bone": "ci3" },
+	{ "name": "skill_bc_27", "bone": "ci4" },
+	{ "name": "skill_bc_28", "bone": "ci5" },
+	{ "name": "skill_bc_29", "bone": "ci6" },
+	{ "name": "skill_bc_30", "bone": "ci7" },
+	{ "name": "skill_bc_31", "bone": "ci8" },
+	{ "name": "skill_bc_32", "bone": "ci9" },
+	{ "name": "skill_bc_33", "bone": "ci10" },
+	{ "name": "skill_bc_34", "bone": "ci11" },
+	{ "name": "skill_bc_35", "bone": "ci12" },
+	{ "name": "skill_bc_36", "bone": "ci13" },
+	{ "name": "skill_bc_37", "bone": "ci14" },
+	{ "name": "skill_bc_38", "bone": "ci15" },
+	{ "name": "skill_bc_39", "bone": "ci16" },
+	{ "name": "skill_bc_41", "bone": "ci18" },
+	{ "name": "skill_bc_42", "bone": "ci19" },
+	{ "name": "skill_bc_43", "bone": "ci20" },
+	{ "name": "skill_bc_44", "bone": "ci21" },
+	{ "name": "skill_bc_45", "bone": "ci22" },
+	{ "name": "skill_bc_40", "bone": "ci17" },
+	{ "name": "skill_zha1_54", "bone": "1zha1" },
+	{ "name": "skill_zha1_55", "bone": "1zha2" },
+	{ "name": "skill_zha1_56", "bone": "1zha3" },
+	{ "name": "skill_zha1_57", "bone": "1zha4" },
+	{ "name": "skill_zha1_58", "bone": "1zha5" },
+	{ "name": "skill_zha1_59", "bone": "1zha6" },
+	{ "name": "skill_zha1_60", "bone": "1zha7" },
+	{ "name": "skill_zha1_61", "bone": "1zha8" },
+	{ "name": "skill_zha1_62", "bone": "1zha9" },
+	{ "name": "skill_zha1_63", "bone": "1zha10" },
+	{ "name": "skill_zha1_64", "bone": "1zha11" },
+	{ "name": "skill_zha1_65", "bone": "1zha12" },
+	{ "name": "skill_zha2_60", "bone": "2zha1" },
+	{ "name": "skill_zha2_61", "bone": "2zha2" },
+	{ "name": "skill_zha2_62", "bone": "2zha3" },
+	{ "name": "skill_zha2_63", "bone": "2zha4" },
+	{ "name": "skill_zha2_64", "bone": "2zha5" },
+	{ "name": "skill_zha2_65", "bone": "2zha6" },
+	{ "name": "skill_zha2_66", "bone": "2zha7" }
+],
+"skins": {
+	"default": {
+		"atk_b_15": {
+			"atk_b_15": { "width": 240, "height": 240 },
+			"atk_b_17": { "width": 240, "height": 240 },
+			"atk_b_19": { "width": 240, "height": 240 },
+			"atk_b_21": { "width": 240, "height": 240 },
+			"atk_b_23": { "width": 240, "height": 240 },
+			"atk_b_25": { "width": 240, "height": 240 },
+			"atk_b_27": { "width": 240, "height": 240 },
+			"atk_b_29": { "width": 240, "height": 240 },
+			"atk_b_31": { "width": 240, "height": 240 },
+			"atk_b_33": { "width": 240, "height": 240 }
+		},
+		"atk_dg_14": {
+			"atk_dg_14": { "width": 260, "height": 200 },
+			"atk_dg_15": { "width": 260, "height": 200 },
+			"atk_dg_17": { "width": 260, "height": 200 },
+			"atk_dg_19": { "width": 260, "height": 200 },
+			"atk_dg_21": { "width": 260, "height": 200 },
+			"atk_dg_23": { "width": 260, "height": 200 }
+		},
+		"skill_bc_24": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_25": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_26": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_27": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_28": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_29": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_30": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_31": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_32": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_33": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_34": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_35": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_36": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_37": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_38": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_39": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_40": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_41": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_42": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_43": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_44": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_bc_45": {
+			"skill_bc_24": { "width": 250, "height": 100 },
+			"skill_bc_26": { "width": 250, "height": 100 },
+			"skill_bc_28": { "width": 250, "height": 100 },
+			"skill_bc_30": { "width": 250, "height": 100 },
+			"skill_bc_32": { "width": 250, "height": 100 },
+			"skill_bc_34": { "width": 250, "height": 100 }
+		},
+		"skill_ju10": {
+			"skill_ju4": { "width": 250, "height": 250 },
+			"skill_ju6": { "width": 250, "height": 250 },
+			"skill_ju8": { "width": 250, "height": 250 },
+			"skill_ju10": { "width": 250, "height": 250 },
+			"skill_ju12": { "width": 250, "height": 250 },
+			"skill_ju14": { "width": 250, "height": 250 },
+			"skill_ju16": { "width": 250, "height": 250 },
+			"skill_ju18": { "width": 250, "height": 250 },
+			"skill_ju20": { "width": 250, "height": 250 },
+			"skill_ju22": { "width": 250, "height": 250 },
+			"skill_ju24": { "width": 250, "height": 250 },
+			"skill_ju26": { "width": 250, "height": 250 },
+			"skill_ju28": { "width": 250, "height": 250 },
+			"skill_ju30": { "width": 250, "height": 250 },
+			"skill_ju32": { "width": 250, "height": 250 },
+			"skill_ju34": { "width": 250, "height": 250 },
+			"skill_ju36": { "width": 250, "height": 250 }
+		},
+		"skill_wu_21": {
+			"skill_wu_21": { "width": 250, "height": 250 },
+			"skill_wu_23": { "width": 250, "height": 250 },
+			"skill_wu_25": { "width": 250, "height": 250 },
+			"skill_wu_27": { "width": 250, "height": 250 },
+			"skill_wu_29": { "width": 250, "height": 250 },
+			"skill_wu_31": { "width": 250, "height": 250 },
+			"skill_wu_33": { "width": 250, "height": 250 },
+			"skill_wu_35": { "width": 250, "height": 250 },
+			"skill_wu_37": { "width": 250, "height": 250 },
+			"skill_wu_39": { "width": 250, "height": 250 }
+		},
+		"skill_zha1_54": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_55": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_56": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_57": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_58": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_59": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_60": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_61": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_62": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_63": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_64": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha1_65": {
+			"skill_zha1_54": { "width": 400, "height": 350 },
+			"skill_zha1_56": { "width": 400, "height": 350 },
+			"skill_zha1_58": { "width": 400, "height": 350 },
+			"skill_zha1_60": { "width": 400, "height": 350 },
+			"skill_zha1_62": { "width": 400, "height": 350 },
+			"skill_zha1_64": { "width": 400, "height": 350 },
+			"skill_zha1_66": { "width": 400, "height": 350 },
+			"skill_zha1_68": { "width": 400, "height": 350 },
+			"skill_zha1_70": { "width": 400, "height": 350 },
+			"skill_zha1_72": { "width": 400, "height": 350 }
+		},
+		"skill_zha2_60": {
+			"skill_zha2_60": { "width": 200, "height": 200 },
+			"skill_zha2_62": { "width": 200, "height": 200 },
+			"skill_zha2_64": { "width": 200, "height": 200 },
+			"skill_zha2_66": { "width": 200, "height": 200 },
+			"skill_zha2_68": { "width": 200, "height": 200 },
+			"skill_zha2_70": { "width": 200, "height": 200 }
+		},
+		"skill_zha2_61": {
+			"skill_zha2_60": { "width": 200, "height": 200 },
+			"skill_zha2_62": { "width": 200, "height": 200 },
+			"skill_zha2_64": { "width": 200, "height": 200 },
+			"skill_zha2_66": { "width": 200, "height": 200 },
+			"skill_zha2_68": { "width": 200, "height": 200 },
+			"skill_zha2_70": { "width": 200, "height": 200 }
+		},
+		"skill_zha2_62": {
+			"skill_zha2_60": { "width": 200, "height": 200 },
+			"skill_zha2_62": { "width": 200, "height": 200 },
+			"skill_zha2_64": { "width": 200, "height": 200 },
+			"skill_zha2_66": { "width": 200, "height": 200 },
+			"skill_zha2_68": { "width": 200, "height": 200 },
+			"skill_zha2_70": { "width": 200, "height": 200 }
+		},
+		"skill_zha2_63": {
+			"skill_zha2_60": { "width": 200, "height": 200 },
+			"skill_zha2_62": { "width": 200, "height": 200 },
+			"skill_zha2_64": { "width": 200, "height": 200 },
+			"skill_zha2_66": { "width": 200, "height": 200 },
+			"skill_zha2_68": { "width": 200, "height": 200 },
+			"skill_zha2_70": { "width": 200, "height": 200 }
+		},
+		"skill_zha2_64": {
+			"skill_zha2_60": { "width": 200, "height": 200 },
+			"skill_zha2_62": { "width": 200, "height": 200 },
+			"skill_zha2_64": { "width": 200, "height": 200 },
+			"skill_zha2_66": { "width": 200, "height": 200 },
+			"skill_zha2_68": { "width": 200, "height": 200 },
+			"skill_zha2_70": { "width": 200, "height": 200 }
+		},
+		"skill_zha2_65": {
+			"skill_zha2_60": { "width": 200, "height": 200 },
+			"skill_zha2_62": { "width": 200, "height": 200 },
+			"skill_zha2_64": { "width": 200, "height": 200 },
+			"skill_zha2_66": { "width": 200, "height": 200 },
+			"skill_zha2_68": { "width": 200, "height": 200 },
+			"skill_zha2_70": { "width": 200, "height": 200 }
+		},
+		"skill_zha2_66": {
+			"skill_zha2_60": { "width": 200, "height": 200 },
+			"skill_zha2_62": { "width": 200, "height": 200 },
+			"skill_zha2_64": { "width": 200, "height": 200 },
+			"skill_zha2_66": { "width": 200, "height": 200 },
+			"skill_zha2_68": { "width": 200, "height": 200 },
+			"skill_zha2_70": { "width": 200, "height": 200 }
+		}
+	}
+},
+"events": {
+	"qishou_11_6_1": {},
+	"qishou_11_6_2": {},
+	"qishou_11_6_3": {},
+	"qishou_11_6_4": {},
+	"qishou_11_6_5": {},
+	"qishou_11_6_6": {},
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"atk_b_15": {
+				"attachment": [
+					{ "time": 0, "name": "atk_b_15" },
+					{ "time": 0.0667, "name": "atk_b_17" },
+					{ "time": 0.1333, "name": "atk_b_19" },
+					{ "time": 0.2, "name": "atk_b_21" },
+					{ "time": 0.2667, "name": "atk_b_23" },
+					{ "time": 0.3333, "name": "atk_b_25" },
+					{ "time": 0.4, "name": "atk_b_27" },
+					{ "time": 0.4667, "name": "atk_b_29" },
+					{ "time": 0.5333, "name": "atk_b_31" },
+					{ "time": 0.6, "name": "atk_b_33" },
+					{ "time": 0.6667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"atk_bao": {
+				"rotate": [
+					{ "time": 0, "angle": -13.3 }
+				],
+				"translate": [
+					{ "time": 0, "x": -46.13, "y": 81.17 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "hit_1_1_1" }
+		]
+	},
+	"animation_1": {
+		"slots": {
+			"skill_zha1_54": {
+				"attachment": [
+					{ "time": 0, "name": "skill_zha1_54" },
+					{ "time": 0.0667, "name": "skill_zha1_56" },
+					{ "time": 0.1333, "name": "skill_zha1_58" },
+					{ "time": 0.2, "name": "skill_zha1_60" },
+					{ "time": 0.2667, "name": "skill_zha1_62" },
+					{ "time": 0.3333, "name": "skill_zha1_64" },
+					{ "time": 0.4, "name": "skill_zha1_66" },
+					{ "time": 0.4667, "name": "skill_zha1_68" },
+					{ "time": 0.5333, "name": "skill_zha1_70" },
+					{ "time": 0.6, "name": "skill_zha1_72" },
+					{ "time": 0.6667, "name": null }
+				]
+			},
+			"skill_zha1_55": {
+				"attachment": [
+					{ "time": 0.0333, "name": "skill_zha1_54" },
+					{ "time": 0.1, "name": "skill_zha1_56" },
+					{ "time": 0.1667, "name": "skill_zha1_58" },
+					{ "time": 0.2333, "name": "skill_zha1_60" },
+					{ "time": 0.3, "name": "skill_zha1_62" },
+					{ "time": 0.3667, "name": "skill_zha1_64" },
+					{ "time": 0.4333, "name": "skill_zha1_66" },
+					{ "time": 0.5, "name": "skill_zha1_68" },
+					{ "time": 0.5667, "name": "skill_zha1_70" },
+					{ "time": 0.6333, "name": "skill_zha1_72" },
+					{ "time": 0.7, "name": null }
+				]
+			},
+			"skill_zha1_56": {
+				"attachment": [
+					{ "time": 0.1, "name": "skill_zha1_54" },
+					{ "time": 0.1667, "name": "skill_zha1_56" },
+					{ "time": 0.2333, "name": "skill_zha1_58" },
+					{ "time": 0.3, "name": "skill_zha1_60" },
+					{ "time": 0.3667, "name": "skill_zha1_62" },
+					{ "time": 0.4333, "name": "skill_zha1_64" },
+					{ "time": 0.5, "name": "skill_zha1_66" },
+					{ "time": 0.5667, "name": "skill_zha1_68" },
+					{ "time": 0.6333, "name": "skill_zha1_70" },
+					{ "time": 0.7, "name": "skill_zha1_72" },
+					{ "time": 0.7667, "name": null }
+				]
+			},
+			"skill_zha1_57": {
+				"attachment": [
+					{ "time": 0.1333, "name": "skill_zha1_54" },
+					{ "time": 0.2, "name": "skill_zha1_56" },
+					{ "time": 0.2667, "name": "skill_zha1_58" },
+					{ "time": 0.3333, "name": "skill_zha1_60" },
+					{ "time": 0.4, "name": "skill_zha1_62" },
+					{ "time": 0.4667, "name": "skill_zha1_64" },
+					{ "time": 0.5333, "name": "skill_zha1_66" },
+					{ "time": 0.6, "name": "skill_zha1_68" },
+					{ "time": 0.6667, "name": "skill_zha1_70" },
+					{ "time": 0.7333, "name": "skill_zha1_72" },
+					{ "time": 0.8, "name": null }
+				]
+			},
+			"skill_zha1_58": {
+				"attachment": [
+					{ "time": 0.1667, "name": "skill_zha1_54" },
+					{ "time": 0.2333, "name": "skill_zha1_56" },
+					{ "time": 0.3, "name": "skill_zha1_58" },
+					{ "time": 0.3667, "name": "skill_zha1_60" },
+					{ "time": 0.4333, "name": "skill_zha1_62" },
+					{ "time": 0.5, "name": "skill_zha1_64" },
+					{ "time": 0.5667, "name": "skill_zha1_66" },
+					{ "time": 0.6333, "name": "skill_zha1_68" },
+					{ "time": 0.7, "name": "skill_zha1_70" },
+					{ "time": 0.7667, "name": "skill_zha1_72" },
+					{ "time": 0.8333, "name": null }
+				]
+			},
+			"skill_zha1_59": {
+				"attachment": [
+					{ "time": 0.2, "name": "skill_zha1_54" },
+					{ "time": 0.2667, "name": "skill_zha1_56" },
+					{ "time": 0.3333, "name": "skill_zha1_58" },
+					{ "time": 0.4, "name": "skill_zha1_60" },
+					{ "time": 0.4667, "name": "skill_zha1_62" },
+					{ "time": 0.5333, "name": "skill_zha1_64" },
+					{ "time": 0.6, "name": "skill_zha1_66" },
+					{ "time": 0.6667, "name": "skill_zha1_68" },
+					{ "time": 0.7333, "name": "skill_zha1_70" },
+					{ "time": 0.8, "name": "skill_zha1_72" },
+					{ "time": 0.8667, "name": null }
+				]
+			},
+			"skill_zha1_60": {
+				"attachment": [
+					{ "time": 0.2667, "name": "skill_zha1_54" },
+					{ "time": 0.3333, "name": "skill_zha1_56" },
+					{ "time": 0.4, "name": "skill_zha1_58" },
+					{ "time": 0.4667, "name": "skill_zha1_60" },
+					{ "time": 0.5333, "name": "skill_zha1_62" },
+					{ "time": 0.6, "name": "skill_zha1_64" },
+					{ "time": 0.6667, "name": "skill_zha1_66" },
+					{ "time": 0.7333, "name": "skill_zha1_68" },
+					{ "time": 0.8, "name": "skill_zha1_70" },
+					{ "time": 0.8667, "name": "skill_zha1_72" },
+					{ "time": 0.9333, "name": null }
+				]
+			},
+			"skill_zha1_61": {
+				"attachment": [
+					{ "time": 0.3333, "name": "skill_zha1_54" },
+					{ "time": 0.4, "name": "skill_zha1_56" },
+					{ "time": 0.4667, "name": "skill_zha1_58" },
+					{ "time": 0.5333, "name": "skill_zha1_60" },
+					{ "time": 0.6, "name": "skill_zha1_62" },
+					{ "time": 0.6667, "name": "skill_zha1_64" },
+					{ "time": 0.7333, "name": "skill_zha1_66" },
+					{ "time": 0.8, "name": "skill_zha1_68" },
+					{ "time": 0.8667, "name": "skill_zha1_70" },
+					{ "time": 0.9333, "name": "skill_zha1_72" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"skill_zha1_62": {
+				"attachment": [
+					{ "time": 0.3667, "name": "skill_zha1_54" },
+					{ "time": 0.4333, "name": "skill_zha1_56" },
+					{ "time": 0.5, "name": "skill_zha1_58" },
+					{ "time": 0.5667, "name": "skill_zha1_60" },
+					{ "time": 0.6333, "name": "skill_zha1_62" },
+					{ "time": 0.7, "name": "skill_zha1_64" },
+					{ "time": 0.7667, "name": "skill_zha1_66" },
+					{ "time": 0.8333, "name": "skill_zha1_68" },
+					{ "time": 0.9, "name": "skill_zha1_70" },
+					{ "time": 0.9667, "name": "skill_zha1_72" },
+					{ "time": 1.0333, "name": null }
+				]
+			},
+			"skill_zha1_63": {
+				"attachment": [
+					{ "time": 0.2667, "name": "skill_zha1_54" },
+					{ "time": 0.3333, "name": "skill_zha1_56" },
+					{ "time": 0.4, "name": "skill_zha1_58" },
+					{ "time": 0.4667, "name": "skill_zha1_60" },
+					{ "time": 0.5333, "name": "skill_zha1_62" },
+					{ "time": 0.6, "name": "skill_zha1_64" },
+					{ "time": 0.6667, "name": "skill_zha1_66" },
+					{ "time": 0.7333, "name": "skill_zha1_68" },
+					{ "time": 0.8, "name": "skill_zha1_70" },
+					{ "time": 0.8667, "name": "skill_zha1_72" },
+					{ "time": 0.9333, "name": null }
+				]
+			},
+			"skill_zha1_64": {
+				"attachment": [
+					{ "time": 0.4, "name": "skill_zha1_54" },
+					{ "time": 0.4667, "name": "skill_zha1_56" },
+					{ "time": 0.5333, "name": "skill_zha1_58" },
+					{ "time": 0.6, "name": "skill_zha1_60" },
+					{ "time": 0.6667, "name": "skill_zha1_62" },
+					{ "time": 0.7333, "name": "skill_zha1_64" },
+					{ "time": 0.8, "name": "skill_zha1_66" },
+					{ "time": 0.8667, "name": "skill_zha1_68" },
+					{ "time": 0.9333, "name": "skill_zha1_70" },
+					{ "time": 1, "name": "skill_zha1_72" },
+					{ "time": 1.0667, "name": null }
+				]
+			},
+			"skill_zha1_65": {
+				"attachment": [
+					{ "time": 0.4333, "name": "skill_zha1_54" },
+					{ "time": 0.5, "name": "skill_zha1_56" },
+					{ "time": 0.5667, "name": "skill_zha1_58" },
+					{ "time": 0.6333, "name": "skill_zha1_60" },
+					{ "time": 0.7, "name": "skill_zha1_62" },
+					{ "time": 0.7667, "name": "skill_zha1_64" },
+					{ "time": 0.8333, "name": "skill_zha1_66" },
+					{ "time": 0.9, "name": "skill_zha1_68" },
+					{ "time": 0.9667, "name": "skill_zha1_70" },
+					{ "time": 1.0333, "name": "skill_zha1_72" },
+					{ "time": 1.1, "name": null }
+				]
+			},
+			"skill_zha2_60": {
+				"attachment": [
+					{ "time": 0.2, "name": "skill_zha2_60" },
+					{ "time": 0.2667, "name": "skill_zha2_62" },
+					{ "time": 0.3333, "name": "skill_zha2_64" },
+					{ "time": 0.4, "name": "skill_zha2_66" },
+					{ "time": 0.4667, "name": "skill_zha2_68" },
+					{ "time": 0.5333, "name": "skill_zha2_70" },
+					{ "time": 0.5667, "name": null }
+				]
+			},
+			"skill_zha2_61": {
+				"attachment": [
+					{ "time": 0.3, "name": "skill_zha2_60" },
+					{ "time": 0.3667, "name": "skill_zha2_62" },
+					{ "time": 0.4333, "name": "skill_zha2_64" },
+					{ "time": 0.5, "name": "skill_zha2_66" },
+					{ "time": 0.5667, "name": "skill_zha2_68" },
+					{ "time": 0.6333, "name": "skill_zha2_70" },
+					{ "time": 0.6667, "name": null }
+				]
+			},
+			"skill_zha2_62": {
+				"attachment": [
+					{ "time": 0.3, "name": "skill_zha2_60" },
+					{ "time": 0.3667, "name": "skill_zha2_62" },
+					{ "time": 0.4333, "name": "skill_zha2_64" },
+					{ "time": 0.5, "name": "skill_zha2_66" },
+					{ "time": 0.5667, "name": "skill_zha2_68" },
+					{ "time": 0.6333, "name": "skill_zha2_70" },
+					{ "time": 0.6667, "name": null }
+				]
+			},
+			"skill_zha2_63": {
+				"attachment": [
+					{ "time": 0.3, "name": "skill_zha2_60" },
+					{ "time": 0.3667, "name": "skill_zha2_62" },
+					{ "time": 0.4333, "name": "skill_zha2_64" },
+					{ "time": 0.5, "name": "skill_zha2_66" },
+					{ "time": 0.5667, "name": "skill_zha2_68" },
+					{ "time": 0.6333, "name": "skill_zha2_70" },
+					{ "time": 0.6667, "name": null }
+				]
+			},
+			"skill_zha2_64": {
+				"attachment": [
+					{ "time": 0.4, "name": "skill_zha2_60" },
+					{ "time": 0.4667, "name": "skill_zha2_62" },
+					{ "time": 0.5333, "name": "skill_zha2_64" },
+					{ "time": 0.6, "name": "skill_zha2_66" },
+					{ "time": 0.6667, "name": "skill_zha2_68" },
+					{ "time": 0.7333, "name": "skill_zha2_70" },
+					{ "time": 0.7667, "name": null }
+				]
+			},
+			"skill_zha2_65": {
+				"attachment": [
+					{ "time": 0.5, "name": "skill_zha2_60" },
+					{ "time": 0.5667, "name": "skill_zha2_62" },
+					{ "time": 0.6333, "name": "skill_zha2_64" },
+					{ "time": 0.7, "name": "skill_zha2_66" },
+					{ "time": 0.7667, "name": "skill_zha2_68" },
+					{ "time": 0.8333, "name": "skill_zha2_70" },
+					{ "time": 0.8667, "name": null }
+				]
+			},
+			"skill_zha2_66": {
+				"attachment": [
+					{ "time": 0.5333, "name": "skill_zha2_60" },
+					{ "time": 0.6, "name": "skill_zha2_62" },
+					{ "time": 0.6667, "name": "skill_zha2_64" },
+					{ "time": 0.7333, "name": "skill_zha2_66" },
+					{ "time": 0.8, "name": "skill_zha2_68" },
+					{ "time": 0.8667, "name": "skill_zha2_70" },
+					{ "time": 0.9, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"1zha3": {
+				"rotate": [
+					{ "time": 0.1, "angle": -17.36 }
+				],
+				"translate": [
+					{ "time": 0, "x": 595.98, "y": -105.65 }
+				],
+				"scale": [
+					{ "time": 0.1, "x": 3.5, "y": 3.5 }
+				]
+			},
+			"1zha9": {
+				"rotate": [
+					{ "time": 0.3667, "angle": -20 }
+				],
+				"translate": [
+					{ "time": 0.3667, "x": 590.82, "y": -101.38 }
+				],
+				"scale": [
+					{ "time": 0.3667, "x": 3.2, "y": 3.2 }
+				]
+			},
+			"1zha1": {
+				"translate": [
+					{ "time": 0, "x": 869.59, "y": -376.16 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3.5, "y": 3.5 }
+				]
+			},
+			"2zha4": {
+				"rotate": [
+					{ "time": 0.3, "angle": 26.4 }
+				],
+				"translate": [
+					{ "time": 0.3, "x": 1011.91, "y": -141.82 }
+				],
+				"scale": [
+					{ "time": 0.3, "x": 3.3, "y": 3.3 }
+				]
+			},
+			"2zha2": {
+				"rotate": [
+					{ "time": 0.3, "angle": 20 }
+				],
+				"translate": [
+					{ "time": 0.3, "x": 686.11, "y": 134.16 }
+				],
+				"scale": [
+					{ "time": 0.3, "x": 3.3, "y": 3.3 }
+				]
+			},
+			"1zha8": {
+				"translate": [
+					{ "time": 0.3333, "x": 1199.13, "y": 849.53 }
+				],
+				"scale": [
+					{ "time": 0.3333, "x": 3, "y": 3 }
+				]
+			},
+			"2zha6": {
+				"translate": [
+					{ "time": 0.5, "x": 893.09, "y": 513.62 }
+				],
+				"scale": [
+					{ "time": 0.5, "x": 3.5, "y": 3.5 }
+				]
+			},
+			"1zha7": {
+				"translate": [
+					{ "time": 0.2667, "x": 870.8, "y": -279.9 }
+				],
+				"scale": [
+					{ "time": 0.2667, "x": 3, "y": 3 }
+				]
+			},
+			"1zha10": {
+				"rotate": [
+					{ "time": 0.2667, "angle": -30 }
+				],
+				"translate": [
+					{ "time": 0.2667, "x": 908.96, "y": 1112.51 }
+				],
+				"scale": [
+					{ "time": 0.2667, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"1zha6": {
+				"translate": [
+					{ "time": 0.2, "x": 727.41, "y": 742.52 }
+				],
+				"scale": [
+					{ "time": 0.2, "x": 3.3, "y": 3.3 }
+				]
+			},
+			"2zha5": {
+				"translate": [
+					{ "time": 0.4, "x": 827.93, "y": -521.29 }
+				],
+				"scale": [
+					{ "time": 0.4, "x": 3.5, "y": 3.5 }
+				]
+			},
+			"2zha1": {
+				"translate": [
+					{ "time": 0.2, "x": 501.27, "y": -223.69 }
+				],
+				"scale": [
+					{ "time": 0.2, "x": 3.3, "y": 3.3 }
+				]
+			},
+			"1zha4": {
+				"rotate": [
+					{ "time": 0.1333, "angle": 10 }
+				],
+				"translate": [
+					{ "time": 0.1333, "x": 1165.79, "y": 9.11 }
+				],
+				"scale": [
+					{ "time": 0.1333, "x": 3, "y": 3 }
+				]
+			},
+			"2zha3": {
+				"rotate": [
+					{ "time": 0.3, "angle": -110 }
+				],
+				"translate": [
+					{ "time": 0.3, "x": 973.58, "y": 421.63 }
+				],
+				"scale": [
+					{ "time": 0.3, "x": 3.3, "y": 3.3 }
+				]
+			},
+			"1zha12": {
+				"rotate": [
+					{ "time": 0.4333, "angle": -22.5 }
+				],
+				"translate": [
+					{ "time": 0.4333, "x": 891.48, "y": 311.14 }
+				],
+				"scale": [
+					{ "time": 0.4333, "x": 3, "y": 3 }
+				]
+			},
+			"1zha2": {
+				"rotate": [
+					{ "time": 0.0333, "angle": -30 }
+				],
+				"translate": [
+					{ "time": 0.0333, "x": 785.61, "y": 173.38 }
+				],
+				"scale": [
+					{ "time": 0.0333, "x": 2, "y": 2 }
+				]
+			},
+			"1zha11": {
+				"rotate": [
+					{ "time": 0.4, "angle": 10 }
+				],
+				"translate": [
+					{ "time": 0.4, "x": 1185.14, "y": 13.98 }
+				],
+				"scale": [
+					{ "time": 0.4, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"1zha5": {
+				"rotate": [
+					{ "time": 0.1667, "angle": -22.07 }
+				],
+				"translate": [
+					{ "time": 0.1667, "x": 893.59, "y": 307.89 }
+				],
+				"scale": [
+					{ "time": 0.1667, "x": 3, "y": 3 }
+				]
+			},
+			"2zha7": {
+				"rotate": [
+					{ "time": 0.5333, "angle": 70 }
+				],
+				"translate": [
+					{ "time": 0.5333, "x": 798.67, "y": 785.91 }
+				],
+				"scale": [
+					{ "time": 0.5333, "x": 3.5, "y": 3.5 }
+				]
+			},
+			"1zha": {
+				"translate": [
+					{ "time": 0, "x": -909.51, "y": -316.01 }
+				]
+			},
+			"2zha": {
+				"translate": [
+					{ "time": 0, "x": -909.51, "y": -316.01 }
+				]
+			},
+			"skill01": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 54.11 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 198.72 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "qishou_11_6_6" },
+			{ "time": 0.1667, "name": "qishou_11_6_5" },
+			{ "time": 0.2667, "name": "qishou_11_6_4" },
+			{ "time": 0.4, "name": "qishou_11_6_3" },
+			{ "time": 0.5, "name": "qishou_11_6_2" },
+			{ "time": 0.6, "name": "qishou_11_6_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,41 @@
+
+uieffect_73.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dengdai
+  rotate: true
+  xy: 225, 23
+  size: 88, 96
+  orig: 90, 98
+  offset: 1, 1
+  index: -1
+faguang
+  rotate: false
+  xy: 0, 0
+  size: 103, 111
+  orig: 105, 113
+  offset: 1, 1
+  index: -1
+fangkuai
+  rotate: false
+  xy: 421, 16
+  size: 82, 95
+  orig: 130, 130
+  offset: 24, 17
+  index: -1
+yingyin
+  rotate: false
+  xy: 105, 17
+  size: 118, 94
+  orig: 120, 96
+  offset: 1, 1
+  index: -1
+yingyin7
+  rotate: true
+  xy: 323, 23
+  size: 88, 96
+  orig: 90, 98
+  offset: 1, 1
+  index: -1

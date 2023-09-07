@@ -1,0 +1,41 @@
+
+uieffect_23.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/470843fa73_rec
+  rotate: false
+  xy: 2, 25
+  size: 108, 108
+  orig: 128, 128
+  offset: 10, 10
+  index: -1
+images/SFX_qinbg
+  rotate: false
+  xy: 2, 135
+  size: 116, 115
+  orig: 116, 115
+  offset: 0, 0
+  index: -1
+images/parti_1
+  rotate: false
+  xy: 120, 186
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+images/parti_2
+  rotate: false
+  xy: 186, 186
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+images/parti_3
+  rotate: false
+  xy: 120, 120
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

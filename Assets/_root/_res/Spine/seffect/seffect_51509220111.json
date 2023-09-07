@@ -1,0 +1,186 @@
+{
+"skeleton": { "hash": "kG+yysC16xHeOnQBFB9dl662umg", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "effect", "parent": "root" },
+	{ "name": "skill", "parent": "effect" },
+	{ "name": "dong", "parent": "skill" },
+	{ "name": "xiru", "parent": "skill", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "skill/dong/d_16", "bone": "dong" },
+	{ "name": "skill/xiru/xi_19", "bone": "xiru" }
+],
+"skins": {
+	"default": {
+		"skill/dong/d_16": {
+			"skill/dong/d_16": { "width": 500, "height": 350 },
+			"skill/dong/d_18": { "width": 500, "height": 350 },
+			"skill/dong/d_20": { "width": 500, "height": 350 },
+			"skill/dong/d_22": { "width": 500, "height": 350 },
+			"skill/dong/d_24": { "width": 500, "height": 350 },
+			"skill/dong/d_26": { "width": 500, "height": 350 },
+			"skill/dong/d_28": { "width": 500, "height": 350 }
+		},
+		"skill/xiru/xi_19": {
+			"skill/xiru/xi_19": { "width": 200, "height": 200 },
+			"skill/xiru/xi_20": { "width": 200, "height": 200 },
+			"skill/xiru/xi_22": { "width": 200, "height": 200 },
+			"skill/xiru/xi_23": { "width": 200, "height": 200 },
+			"skill/xiru/xi_25": { "width": 200, "height": 200 },
+			"skill/xiru/xi_26": { "width": 200, "height": 200 },
+			"skill/xiru/xi_28": { "width": 200, "height": 200 },
+			"skill/xiru/xi_29": { "width": 200, "height": 200 },
+			"skill/xiru/xi_31": { "width": 200, "height": 200 },
+			"skill/xiru/xi_32": { "width": 200, "height": 200 },
+			"skill/xiru/xi_34": { "width": 200, "height": 200 },
+			"skill/xiru/xi_35": { "width": 200, "height": 200 },
+			"skill/xiru/xi_37": { "width": 200, "height": 200 },
+			"skill/xiru/xi_38": { "width": 200, "height": 200 },
+			"skill/xiru/xi_40": { "width": 200, "height": 200 },
+			"skill/xiru/xi_41": { "width": 200, "height": 200 },
+			"skill/xiru/xi_43": { "width": 200, "height": 200 },
+			"skill/xiru/xi_44": { "width": 200, "height": 200 },
+			"skill/xiru/xi_46": { "width": 200, "height": 200 },
+			"skill/xiru/xi_47": { "width": 200, "height": 200 },
+			"skill/xiru/xi_49": { "width": 200, "height": 200 },
+			"skill/xiru/xi_50": { "width": 200, "height": 200 },
+			"skill/xiru/xi_52": { "width": 200, "height": 200 },
+			"skill/xiru/xi_53": { "width": 200, "height": 200 },
+			"skill/xiru/xi_55": { "width": 200, "height": 200 },
+			"skill/xiru/xi_56": { "width": 200, "height": 200 },
+			"skill/xiru/xi_58": { "width": 200, "height": 200 },
+			"skill/xiru/xi_59": { "width": 200, "height": 200 },
+			"skill/xiru/xi_61": { "width": 200, "height": 200 },
+			"skill/xiru/xi_62": { "width": 200, "height": 200 },
+			"skill/xiru/xi_64": { "width": 200, "height": 200 },
+			"skill/xiru/xi_65": { "width": 200, "height": 200 },
+			"skill/xiru/xi_67": { "width": 200, "height": 200 },
+			"skill/xiru/xi_68": { "width": 200, "height": 200 },
+			"skill/xiru/xi_70": { "width": 200, "height": 200 },
+			"skill/xiru/xi_71": { "width": 200, "height": 200 },
+			"skill/xiru/xi_73": { "width": 200, "height": 200 },
+			"skill/xiru/xi_74": { "width": 200, "height": 200 },
+			"skill/xiru/xi_76": { "width": 200, "height": 200 },
+			"skill/xiru/xi_77": { "width": 200, "height": 200 },
+			"skill/xiru/xi_79": { "width": 200, "height": 200 },
+			"skill/xiru/xi_80": { "width": 200, "height": 200 },
+			"skill/xiru/xi_82": { "width": 200, "height": 200 },
+			"skill/xiru/xi_83": { "width": 200, "height": 200 },
+			"skill/xiru/xi_85": { "width": 200, "height": 200 },
+			"skill/xiru/xi_86": { "width": 200, "height": 200 },
+			"skill/xiru/xi_88": { "width": 200, "height": 200 },
+			"skill/xiru/xi_89": { "width": 200, "height": 200 },
+			"skill/xiru/xi_91": { "width": 200, "height": 200 },
+			"skill/xiru/xi_92": { "width": 200, "height": 200 },
+			"skill/xiru/xi_94": { "width": 200, "height": 200 }
+		}
+	}
+},
+"events": {
+	"qishou_11_4_1": {},
+	"qishou_11_4_2": {},
+	"qishou_11_4_3": {},
+	"qishou_11_4_4": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"skill/dong/d_16": {
+				"attachment": [
+					{ "time": 0, "name": "skill/dong/d_16" },
+					{ "time": 0.0667, "name": "skill/dong/d_18" },
+					{ "time": 0.1333, "name": "skill/dong/d_20" },
+					{ "time": 0.2, "name": "skill/dong/d_22" },
+					{ "time": 0.2667, "name": "skill/dong/d_24" },
+					{ "time": 0.3333, "name": "skill/dong/d_26" },
+					{ "time": 0.4, "name": "skill/dong/d_28" },
+					{ "time": 0.4667, "name": null }
+				]
+			},
+			"skill/xiru/xi_19": {
+				"attachment": [
+					{ "time": 0.1, "name": "skill/xiru/xi_19" },
+					{ "time": 0.1333, "name": "skill/xiru/xi_20" },
+					{ "time": 0.2, "name": "skill/xiru/xi_22" },
+					{ "time": 0.2333, "name": "skill/xiru/xi_23" },
+					{ "time": 0.3, "name": "skill/xiru/xi_25" },
+					{ "time": 0.3333, "name": "skill/xiru/xi_26" },
+					{ "time": 0.4, "name": "skill/xiru/xi_28" },
+					{ "time": 0.4333, "name": "skill/xiru/xi_29" },
+					{ "time": 0.5, "name": "skill/xiru/xi_31" },
+					{ "time": 0.5333, "name": "skill/xiru/xi_32" },
+					{ "time": 0.6, "name": "skill/xiru/xi_34" },
+					{ "time": 0.6333, "name": "skill/xiru/xi_35" },
+					{ "time": 0.7, "name": "skill/xiru/xi_37" },
+					{ "time": 0.7333, "name": "skill/xiru/xi_38" },
+					{ "time": 0.8, "name": "skill/xiru/xi_40" },
+					{ "time": 0.8333, "name": "skill/xiru/xi_41" },
+					{ "time": 0.9, "name": "skill/xiru/xi_43" },
+					{ "time": 0.9333, "name": "skill/xiru/xi_44" },
+					{ "time": 1, "name": "skill/xiru/xi_46" },
+					{ "time": 1.0333, "name": "skill/xiru/xi_47" },
+					{ "time": 1.1, "name": "skill/xiru/xi_49" },
+					{ "time": 1.1333, "name": "skill/xiru/xi_50" },
+					{ "time": 1.2, "name": "skill/xiru/xi_52" },
+					{ "time": 1.2333, "name": "skill/xiru/xi_53" },
+					{ "time": 1.3, "name": "skill/xiru/xi_55" },
+					{ "time": 1.3333, "name": "skill/xiru/xi_56" },
+					{ "time": 1.4, "name": "skill/xiru/xi_58" },
+					{ "time": 1.4333, "name": "skill/xiru/xi_59" },
+					{ "time": 1.5, "name": "skill/xiru/xi_61" },
+					{ "time": 1.5333, "name": "skill/xiru/xi_62" },
+					{ "time": 1.6, "name": "skill/xiru/xi_64" },
+					{ "time": 1.6333, "name": "skill/xiru/xi_65" },
+					{ "time": 1.7, "name": "skill/xiru/xi_67" },
+					{ "time": 1.7333, "name": "skill/xiru/xi_68" },
+					{ "time": 1.8, "name": "skill/xiru/xi_70" },
+					{ "time": 1.8333, "name": "skill/xiru/xi_71" },
+					{ "time": 1.9, "name": "skill/xiru/xi_73" },
+					{ "time": 1.9333, "name": "skill/xiru/xi_74" },
+					{ "time": 2, "name": "skill/xiru/xi_76" },
+					{ "time": 2.0333, "name": "skill/xiru/xi_77" },
+					{ "time": 2.1, "name": "skill/xiru/xi_79" },
+					{ "time": 2.1333, "name": "skill/xiru/xi_80" },
+					{ "time": 2.2, "name": "skill/xiru/xi_82" },
+					{ "time": 2.2333, "name": "skill/xiru/xi_83" },
+					{ "time": 2.3, "name": "skill/xiru/xi_85" },
+					{ "time": 2.3333, "name": "skill/xiru/xi_86" },
+					{ "time": 2.4, "name": "skill/xiru/xi_88" },
+					{ "time": 2.4333, "name": "skill/xiru/xi_89" },
+					{ "time": 2.5, "name": "skill/xiru/xi_91" },
+					{ "time": 2.5333, "name": "skill/xiru/xi_92" },
+					{ "time": 2.6, "name": "skill/xiru/xi_94" },
+					{ "time": 2.6333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"dong": {
+				"translate": [
+					{ "time": 0, "x": 7.26, "y": 1608.12 }
+				],
+				"scale": [
+					{ "time": 0, "x": 5, "y": 5 }
+				]
+			},
+			"xiru": {
+				"translate": [
+					{ "time": 0, "x": -0.75, "y": 1702.75, "curve": "stepped" },
+					{ "time": 0.7, "x": -0.75, "y": 1702.75 },
+					{ "time": 1.8, "x": -0.75, "y": 492.74 }
+				],
+				"scale": [
+					{ "time": 0, "x": 5, "y": 5 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 1.1, "name": "qishou_11_4_4" },
+			{ "time": 1.3333, "name": "qishou_11_4_3" },
+			{ "time": 1.6667, "name": "qishou_11_4_2" },
+			{ "time": 1.9, "name": "qishou_11_4_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,111 @@
+
+seffect_31510200211.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/boom/boom_a/boom_a_0001
+  rotate: false
+  xy: 294, 81
+  size: 175, 175
+  orig: 245, 270
+  offset: 31, 47
+  index: -1
+effect/boom/boom_a/boom_a_0002
+  rotate: false
+  xy: 2, 243
+  size: 233, 233
+  orig: 245, 270
+  offset: 2, 18
+  index: -1
+effect/boom/boom_a/boom_a_0003
+  rotate: false
+  xy: 237, 258
+  size: 160, 218
+  orig: 245, 270
+  offset: 50, 25
+  index: -1
+effect/boom/boom_a/boom_a_0004
+  rotate: false
+  xy: 2, 2
+  size: 149, 239
+  orig: 245, 270
+  offset: 62, 15
+  index: -1
+effect/boom/boom_b/boom_b_0001
+  rotate: false
+  xy: 471, 78
+  size: 97, 61
+  orig: 276, 224
+  offset: 19, 34
+  index: -1
+effect/boom/boom_b/boom_b_0002
+  rotate: false
+  xy: 816, 323
+  size: 208, 153
+  orig: 276, 224
+  offset: 24, 30
+  index: -1
+effect/boom/boom_b/boom_b_0003
+  rotate: false
+  xy: 1026, 319
+  size: 202, 157
+  orig: 276, 224
+  offset: 36, 27
+  index: -1
+effect/boom/boom_b/boom_b_0004
+  rotate: false
+  xy: 610, 318
+  size: 204, 158
+  orig: 276, 224
+  offset: 34, 26
+  index: -1
+effect/boom/boom_b/boom_b_0005
+  rotate: false
+  xy: 399, 313
+  size: 209, 163
+  orig: 276, 224
+  offset: 29, 23
+  index: -1
+effect/boom/boom_d/boom_d_0001
+  rotate: false
+  xy: 1454, 369
+  size: 222, 107
+  orig: 244, 157
+  offset: 0, 28
+  index: -1
+effect/boom/boom_d/boom_d_0002
+  rotate: false
+  xy: 1230, 353
+  size: 222, 123
+  orig: 244, 157
+  offset: 0, 20
+  index: -1
+effect/boom/boom_d/boom_d_0003
+  rotate: false
+  xy: 1678, 343
+  size: 201, 133
+  orig: 244, 157
+  offset: 21, 15
+  index: -1
+effect/boom/boom_d/boom_d_0004
+  rotate: true
+  xy: 153, 49
+  size: 192, 139
+  orig: 244, 157
+  offset: 21, 12
+  index: -1
+effect/boom/boom_d/boom_d_0005
+  rotate: true
+  xy: 471, 141
+  size: 170, 143
+  orig: 244, 157
+  offset: 41, 10
+  index: -1
+effect/boom/boom_d/boom_d_0006
+  rotate: true
+  xy: 1881, 301
+  size: 175, 145
+  orig: 244, 157
+  offset: 42, 9
+  index: -1

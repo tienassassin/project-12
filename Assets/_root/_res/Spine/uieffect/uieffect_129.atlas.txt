@@ -1,0 +1,118 @@
+
+uieffect_129.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+texture/light01
+  rotate: false
+  xy: 0, 222
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+texture/light02
+  rotate: false
+  xy: 258, 222
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+texture/light03
+  rotate: false
+  xy: 516, 222
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+texture/light04
+  rotate: false
+  xy: 774, 222
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+texture/light05
+  rotate: false
+  xy: 0, 92
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+texture/round/r_0001
+  rotate: false
+  xy: 1032, 388
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0004
+  rotate: false
+  xy: 0, 0
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0005
+  rotate: false
+  xy: 130, 130
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0006
+  rotate: false
+  xy: 1032, 296
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0007
+  rotate: false
+  xy: 1124, 388
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0008
+  rotate: false
+  xy: 222, 130
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0009
+  rotate: false
+  xy: 1124, 296
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0010
+  rotate: false
+  xy: 1216, 388
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0011
+  rotate: false
+  xy: 314, 130
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0012
+  rotate: false
+  xy: 1216, 296
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1
+texture/round/r_0013
+  rotate: false
+  xy: 1308, 388
+  size: 90, 90
+  orig: 100, 100
+  offset: 5, 5
+  index: -1

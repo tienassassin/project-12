@@ -1,0 +1,146 @@
+
+uieffect_121.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+texture/fire01/f_0001
+  rotate: false
+  xy: 0, 34
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+texture/fire01/f_0002
+  rotate: false
+  xy: 260, 164
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+texture/fire01/f_0003
+  rotate: false
+  xy: 34, 34
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+texture/fire01/f_0004
+  rotate: true
+  xy: 0, 0
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+texture/fire01/f_0005
+  rotate: false
+  xy: 294, 164
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+texture/fire01/f_0006
+  rotate: true
+  xy: 260, 130
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+texture/fire01/f_0007
+  rotate: false
+  xy: 68, 34
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+texture/fire01/f_0008
+  rotate: false
+  xy: 328, 164
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+texture/fire01/f_0009
+  rotate: false
+  xy: 102, 34
+  size: 32, 64
+  orig: 32, 64
+  offset: 0, 0
+  index: -1
+texture/fire02/f_20001
+  rotate: true
+  xy: 66, 0
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+texture/fire02/f_20004
+  rotate: false
+  xy: 362, 188
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+texture/fire02/f_20007
+  rotate: false
+  xy: 136, 58
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+texture/fire02/f_20010
+  rotate: false
+  xy: 396, 188
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+texture/fire02/f_20013
+  rotate: false
+  xy: 170, 58
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+texture/fire02/f_20016
+  rotate: false
+  xy: 430, 188
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+texture/fire02/f_20019
+  rotate: false
+  xy: 204, 58
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+texture/fire02/f_20022
+  rotate: false
+  xy: 464, 188
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+texture/fire02/f_20025
+  rotate: true
+  xy: 260, 96
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+texture/smok_01
+  rotate: false
+  xy: 0, 100
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+texture/smok_02
+  rotate: false
+  xy: 130, 100
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,146 @@
+
+uieffect_95.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Texture/blade_01
+  rotate: true
+  xy: 392, 176
+  size: 74, 157
+  orig: 74, 157
+  offset: 0, 0
+  index: -1
+Texture/blade_02
+  rotate: true
+  xy: 551, 198
+  size: 52, 157
+  orig: 74, 157
+  offset: 12, 0
+  index: -1
+Texture/fire/1_01
+  rotate: false
+  xy: 392, 118
+  size: 80, 56
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_03
+  rotate: false
+  xy: 474, 118
+  size: 80, 56
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_05
+  rotate: true
+  xy: 102, 21
+  size: 80, 56
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_07
+  rotate: false
+  xy: 160, 58
+  size: 80, 57
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_09
+  rotate: false
+  xy: 899, 192
+  size: 80, 58
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_11
+  rotate: false
+  xy: 160, 0
+  size: 80, 56
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_13
+  rotate: false
+  xy: 556, 139
+  size: 80, 57
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_15
+  rotate: true
+  xy: 638, 116
+  size: 80, 57
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_17
+  rotate: false
+  xy: 556, 81
+  size: 80, 56
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_19
+  rotate: false
+  xy: 899, 134
+  size: 80, 56
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_21
+  rotate: true
+  xy: 242, 35
+  size: 80, 56
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+Texture/fire/1_23
+  rotate: false
+  xy: 300, 70
+  size: 80, 55
+  orig: 80, 65
+  offset: 0, 0
+  index: -1
+image/hit/uihit05
+  rotate: false
+  xy: 828, 166
+  size: 69, 84
+  orig: 168, 168
+  offset: 51, 38
+  index: -1
+image/hit/uihit08
+  rotate: true
+  xy: 710, 143
+  size: 107, 116
+  orig: 168, 168
+  offset: 32, 28
+  index: -1
+image/hit/uihit10
+  rotate: false
+  xy: 139, 117
+  size: 124, 133
+  orig: 168, 168
+  offset: 22, 21
+  index: -1
+image/hit/uihit12
+  rotate: false
+  xy: 0, 103
+  size: 137, 147
+  orig: 168, 168
+  offset: 14, 16
+  index: -1
+image/hit/uihit14
+  rotate: false
+  xy: 0, 0
+  size: 100, 101
+  orig: 168, 168
+  offset: 7, 39
+  index: -1
+image/light_1015
+  rotate: false
+  xy: 265, 127
+  size: 125, 123
+  orig: 126, 124
+  offset: 0, 0
+  index: -1

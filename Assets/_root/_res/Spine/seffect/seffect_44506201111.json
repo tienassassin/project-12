@@ -1,0 +1,32 @@
+{
+"skeleton": { "hash": "XwgOKVrxNgi+/ft15iNadxMU0ac", "spine": "3.5.35", "width": 97.81, "height": 97.81 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone99", "parent": "root", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "hua-z", "bone": "bone99", "attachment": "hua-z" }
+],
+"skins": {
+	"default": {
+		"hua-z": {
+			"hua-z": { "x": -0.71, "y": -1.29, "rotation": 8.53, "width": 43, "height": 43 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone99": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.5, "angle": -91.39 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

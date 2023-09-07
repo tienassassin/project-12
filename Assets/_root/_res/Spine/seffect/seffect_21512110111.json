@@ -1,0 +1,101 @@
+{
+"skeleton": { "hash": "fPIECjv0vlswonl99x+eNSr7ShY", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/jineng/jinenger/" },
+"bones": [
+	{ "name": "root", "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "boom02", "parent": "root" }
+],
+"slots": [
+	{ "name": "2b_boom", "bone": "root" },
+	{ "name": "boom02", "bone": "boom02" }
+],
+"skins": {
+	"default": {
+		"2b_boom": {
+			"baodian01_00": { "width": 520, "height": 300 },
+			"baodian01_01": { "width": 520, "height": 300 },
+			"baodian01_02": { "width": 520, "height": 300 },
+			"baodian01_03": { "width": 520, "height": 300 },
+			"baodian01_04": { "width": 520, "height": 300 },
+			"baodian01_05": { "width": 520, "height": 300 },
+			"baodian01_06": { "width": 520, "height": 300 },
+			"baodian01_07": { "width": 520, "height": 300 },
+			"baodian01_08": { "width": 520, "height": 300 },
+			"baodian01_09": { "width": 520, "height": 300 },
+			"baodian01_10": { "width": 520, "height": 300 },
+			"baodian01_11": { "width": 520, "height": 300 },
+			"baodian01_12": { "width": 520, "height": 300 },
+			"baodian01_13": { "width": 520, "height": 300 }
+		},
+		"boom02": {
+			"baodian02_00": { "width": 520, "height": 300 },
+			"baodian02_01": { "width": 520, "height": 300 },
+			"baodian02_02": { "width": 520, "height": 300 },
+			"baodian02_03": { "width": 520, "height": 300 },
+			"baodian02_04": { "width": 520, "height": 300 },
+			"baodian02_05": { "width": 520, "height": 300 },
+			"baodian02_06": { "width": 520, "height": 300 },
+			"baodian02_07": { "width": 520, "height": 300 },
+			"baodian02_08": { "width": 520, "height": 300 },
+			"baodian02_09": { "width": 520, "height": 300 },
+			"baodian02_10": { "width": 520, "height": 300 },
+			"baodian02_11": { "width": 520, "height": 300 },
+			"baodian02_12": { "width": 520, "height": 300 },
+			"baodian02_13": { "width": 520, "height": 300 }
+		}
+	}
+},
+"events": {
+	"hit_21_1_1": {}
+},
+"animations": {
+	"animation_2": {
+		"slots": {
+			"2b_boom": {
+				"attachment": [
+					{ "time": 0, "name": "baodian01_00" },
+					{ "time": 0.0333, "name": "baodian01_01" },
+					{ "time": 0.0667, "name": "baodian01_02" },
+					{ "time": 0.1, "name": "baodian01_03" },
+					{ "time": 0.1333, "name": "baodian01_04" },
+					{ "time": 0.1667, "name": "baodian01_05" },
+					{ "time": 0.2, "name": "baodian01_06" },
+					{ "time": 0.2333, "name": "baodian01_07" },
+					{ "time": 0.2667, "name": "baodian01_08" },
+					{ "time": 0.3, "name": "baodian01_09" },
+					{ "time": 0.3333, "name": "baodian01_10" },
+					{ "time": 0.3667, "name": "baodian01_11" },
+					{ "time": 0.4, "name": "baodian01_12" },
+					{ "time": 0.4333, "name": "baodian01_13" },
+					{ "time": 0.4667, "name": null }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0667, "name": "hit_21_1_1" }
+		]
+	},
+	"boom02": {
+		"slots": {
+			"boom02": {
+				"attachment": [
+					{ "time": 0, "name": "baodian02_00" },
+					{ "time": 0.0333, "name": "baodian02_01" },
+					{ "time": 0.0667, "name": "baodian02_02" },
+					{ "time": 0.1, "name": "baodian02_03" },
+					{ "time": 0.1333, "name": "baodian02_04" },
+					{ "time": 0.1667, "name": "baodian02_05" },
+					{ "time": 0.2, "name": "baodian02_06" },
+					{ "time": 0.2333, "name": "baodian02_07" },
+					{ "time": 0.2667, "name": "baodian02_08" },
+					{ "time": 0.3, "name": "baodian02_09" },
+					{ "time": 0.3333, "name": "baodian02_10" },
+					{ "time": 0.3667, "name": "baodian02_11" },
+					{ "time": 0.4, "name": "baodian02_12" },
+					{ "time": 0.4333, "name": "baodian02_13" },
+					{ "time": 0.4667, "name": null }
+				]
+			}
+		}
+	}
+}
+}

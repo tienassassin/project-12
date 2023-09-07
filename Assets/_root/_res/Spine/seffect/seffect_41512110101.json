@@ -1,0 +1,55 @@
+{
+"skeleton": { "hash": "oE7AbppKHzBrxDxoS/Xd0B04bD4", "spine": "3.5.35", "width": 554.4, "height": 201.6 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone27", "parent": "root", "scaleX": 1.8, "scaleY": 1.8 },
+	{ "name": "bone22", "parent": "bone27", "length": 204.68, "x": -47.21, "y": 140.13 }
+],
+"slots": [
+	{ "name": "guangjin", "bone": "bone22", "attachment": "guangjin" }
+],
+"skins": {
+	"default": {
+		"guangjin": {
+			"guangjin": { "x": 73.12, "y": 1.21, "width": 308, "height": 112 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"guangjin": {
+				"attachment": [
+					{ "time": 0, "name": "guangjin" }
+				]
+			}
+		},
+		"bones": {
+			"bone22": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.0333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -47.43, "y": -152.29, "curve": "stepped" },
+					{ "time": 0.0333, "x": -47.43, "y": -152.29 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"bone27": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 28.74, "y": 20.54 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

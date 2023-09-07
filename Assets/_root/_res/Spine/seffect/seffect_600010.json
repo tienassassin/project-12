@@ -1,0 +1,77 @@
+{
+"skeleton": { "hash": "BbZp8PZDLqVLOVl/1MeMca9RROg", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "BG", "parent": "root", "y": 113.87, "scaleX": 3.33, "scaleY": 3.33 },
+	{ "name": "moshubangZX", "parent": "root" },
+	{ "name": "tx", "parent": "moshubangZX" },
+	{ "name": "long_wind", "parent": "tx", "scaleX": 3.33, "scaleY": 3.33 }
+],
+"slots": [
+	{ "name": "bg", "bone": "BG" },
+	{ "name": "long_wine", "bone": "long_wind", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"long_wine": {
+			"Effect_C/long_wind/long_wind_0000": { "width": 303, "height": 127 },
+			"Effect_C/long_wind/long_wind_0002": { "width": 303, "height": 127 },
+			"Effect_C/long_wind/long_wind_0004": { "width": 303, "height": 127 },
+			"Effect_C/long_wind/long_wind_0008": { "width": 303, "height": 127 },
+			"Effect_C/long_wind/long_wind_0010": { "width": 303, "height": 127 },
+			"Effect_C/long_wind/long_wind_0012": { "width": 303, "height": 127 },
+			"Effect_C/long_wind/long_wind_0014": { "width": 303, "height": 127 },
+			"Effect_C/long_wind/long_wind_0018": { "width": 303, "height": 127 },
+			"Effect_C/long_wind/long_wind_0020": { "width": 303, "height": 127 },
+			"Effect_C/long_wind/long_wind_0022": { "width": 303, "height": 127 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"bg": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"long_wine": {
+				"attachment": [
+					{ "time": 0, "name": "Effect_C/long_wind/long_wind_0000" },
+					{ "time": 0.0667, "name": "Effect_C/long_wind/long_wind_0002" },
+					{ "time": 0.1333, "name": "Effect_C/long_wind/long_wind_0004" },
+					{ "time": 0.2, "name": "Effect_C/long_wind/long_wind_0008" },
+					{ "time": 0.2667, "name": "Effect_C/long_wind/long_wind_0010" },
+					{ "time": 0.3333, "name": "Effect_C/long_wind/long_wind_0012" },
+					{ "time": 0.4, "name": "Effect_C/long_wind/long_wind_0014" },
+					{ "time": 0.4667, "name": "Effect_C/long_wind/long_wind_0018" },
+					{ "time": 0.5333, "name": "Effect_C/long_wind/long_wind_0020" },
+					{ "time": 0.6, "name": "Effect_C/long_wind/long_wind_0022" },
+					{ "time": 0.6667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"long_wind": {
+				"translate": [
+					{ "time": 0, "x": -36.7, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.09, "y": 2.09 }
+				]
+			},
+			"moshubangZX": {
+				"scale": [
+					{ "time": 0, "x": 0.25, "y": 0.5 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

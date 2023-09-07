@@ -1,0 +1,90 @@
+
+sbuff_22.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tex/sbuff_22_01
+  rotate: false
+  xy: 0, 320
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_02
+  rotate: false
+  xy: 0, 160
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_03
+  rotate: false
+  xy: 193, 320
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_04
+  rotate: false
+  xy: 0, 0
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_05
+  rotate: false
+  xy: 193, 160
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_06
+  rotate: false
+  xy: 386, 320
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_07
+  rotate: false
+  xy: 193, 0
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_08
+  rotate: false
+  xy: 386, 160
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_09
+  rotate: false
+  xy: 579, 320
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_10
+  rotate: false
+  xy: 386, 0
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_11
+  rotate: false
+  xy: 579, 160
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1
+tex/sbuff_22_12
+  rotate: false
+  xy: 772, 320
+  size: 193, 160
+  orig: 193, 160
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,62 @@
+{
+"skeleton": { "hash": "GHOpY9baCXPZbXfLlTI9ujf1/BQ", "spine": "3.5.35", "width": 0, "height": 0, "images": "" },
+"bones": [
+	{ "name": "root", "rotation": 11.16, "scaleX": 2.5, "scaleY": 2.5 }
+],
+"slots": [
+	{ "name": "1b_boom", "bone": "root" }
+],
+"skins": {
+	"default": {
+		"1b_boom": {
+			"images/jineng/jinengyi/baodian_00": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_01": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_02": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_03": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_04": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_05": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_06": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_07": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_08": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_09": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_10": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_11": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_12": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_13": { "width": 300, "height": 280 },
+			"images/jineng/jinengyi/baodian_14": { "width": 300, "height": 280 }
+		}
+	}
+},
+"events": {
+	"hit_11_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"1b_boom": {
+				"attachment": [
+					{ "time": 0, "name": "images/jineng/jinengyi/baodian_00" },
+					{ "time": 0.0333, "name": "images/jineng/jinengyi/baodian_01" },
+					{ "time": 0.0667, "name": "images/jineng/jinengyi/baodian_02" },
+					{ "time": 0.1, "name": "images/jineng/jinengyi/baodian_03" },
+					{ "time": 0.1333, "name": "images/jineng/jinengyi/baodian_04" },
+					{ "time": 0.1667, "name": "images/jineng/jinengyi/baodian_05" },
+					{ "time": 0.2, "name": "images/jineng/jinengyi/baodian_06" },
+					{ "time": 0.2333, "name": "images/jineng/jinengyi/baodian_07" },
+					{ "time": 0.2667, "name": "images/jineng/jinengyi/baodian_08" },
+					{ "time": 0.3, "name": "images/jineng/jinengyi/baodian_09" },
+					{ "time": 0.3333, "name": "images/jineng/jinengyi/baodian_10" },
+					{ "time": 0.3667, "name": "images/jineng/jinengyi/baodian_11" },
+					{ "time": 0.4, "name": "images/jineng/jinengyi/baodian_12" },
+					{ "time": 0.4333, "name": "images/jineng/jinengyi/baodian_13" },
+					{ "time": 0.4667, "name": "images/jineng/jinengyi/baodian_14" },
+					{ "time": 0.5, "name": null }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0667, "name": "hit_11_1_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,37 @@
+{
+"skeleton": { "hash": "ZK8cPnA2UySRQqQt5WKGJ2KwTzM", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "Skill", "parent": "root", "color": "fff200ff" },
+	{ "name": "dad01_0001", "parent": "Skill", "color": "fff200ff" }
+],
+"slots": [
+	{ "name": "skill/dandao01/dad01_0001", "bone": "dad01_0001" }
+],
+"skins": {
+	"default": {
+		"skill/dandao01/dad01_0001": {
+			"skill/dandao01/dad01_0001": { "width": 300, "height": 60 },
+			"skill/dandao01/dad01_0005": { "width": 300, "height": 60 },
+			"skill/dandao01/dad01_0009": { "width": 300, "height": 60 },
+			"skill/dandao01/dad01_0013": { "width": 300, "height": 60 },
+			"skill/dandao01/dad01_0017": { "width": 300, "height": 60 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"skill/dandao01/dad01_0001": {
+				"attachment": [
+					{ "time": 0, "name": "skill/dandao01/dad01_0001" },
+					{ "time": 0.0333, "name": "skill/dandao01/dad01_0005" },
+					{ "time": 0.0667, "name": "skill/dandao01/dad01_0009" },
+					{ "time": 0.1, "name": "skill/dandao01/dad01_0013" },
+					{ "time": 0.1333, "name": "skill/dandao01/dad01_0017" }
+				]
+			}
+		}
+	}
+}
+}

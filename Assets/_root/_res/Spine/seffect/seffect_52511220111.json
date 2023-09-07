@@ -1,0 +1,133 @@
+{
+"skeleton": { "hash": "PTIa/KtjvX1bXOFDffitFs7y8ag", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "effect", "parent": "root" },
+	{ "name": "att_hit", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "dilie", "parent": "effect", "scaleX": 7.2, "scaleY": 6 },
+	{ "name": "glow01", "parent": "effect", "scaleX": 4, "scaleY": 4 },
+	{ "name": "ultimateskill_blast", "parent": "effect", "scaleX": 4, "scaleY": 4 },
+	{ "name": "white01", "parent": "effect", "scaleX": 50, "scaleY": 50 }
+],
+"slots": [
+	{ "name": "effect/dilie", "bone": "dilie" },
+	{ "name": "effect/attack_hit/0_00000", "bone": "att_hit" },
+	{ "name": "ultimateskill_blast", "bone": "ultimateskill_blast" },
+	{ "name": "effect/glow01", "bone": "glow01", "blend": "additive" },
+	{ "name": "effect/white01", "bone": "white01", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"effect/attack_hit/0_00000": {
+			"effect/attack_hit/0_00000": { "width": 250, "height": 250 },
+			"effect/attack_hit/0_00001": { "width": 250, "height": 250 },
+			"effect/attack_hit/0_00002": { "width": 250, "height": 250 },
+			"effect/attack_hit/0_00004": { "width": 250, "height": 250 },
+			"effect/attack_hit/0_00006": { "width": 250, "height": 250 },
+			"effect/attack_hit/0_00008": { "width": 250, "height": 250 },
+			"effect/attack_hit/0_00010": { "width": 250, "height": 250 },
+			"effect/attack_hit/0_00012": { "width": 250, "height": 250 },
+			"effect/attack_hit/0_00014": { "width": 250, "height": 250 }
+		},
+		"effect/dilie": {
+			"effect/dilie": { "width": 512, "height": 128 }
+		},
+		"effect/glow01": {
+			"effect/glow01": { "width": 256, "height": 256 }
+		},
+		"effect/white01": {
+			"effect/white01": { "width": 128, "height": 128 }
+		},
+		"ultimateskill_blast": {
+			"effect/skill2_hit_blast/0_00001": { "width": 200, "height": 200 },
+			"effect/skill2_hit_blast/0_00003": { "width": 200, "height": 200 },
+			"effect/skill2_hit_blast/0_00005": { "width": 200, "height": 200 },
+			"effect/skill2_hit_blast/0_00007": { "width": 200, "height": 200 },
+			"effect/skill2_hit_blast/0_00009": { "width": 200, "height": 200 },
+			"effect/skill2_hit_blast/0_00011": { "width": 200, "height": 200 }
+		}
+	}
+},
+"events": {
+	"hit_11_1_1": {},
+	"hit_1_1_1": {},
+	"hit_21_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"effect/attack_hit/0_00000": {
+				"attachment": [
+					{ "time": 0, "name": "effect/attack_hit/0_00000" },
+					{ "time": 0.0333, "name": "effect/attack_hit/0_00001" },
+					{ "time": 0.0667, "name": "effect/attack_hit/0_00002" },
+					{ "time": 0.1333, "name": "effect/attack_hit/0_00004" },
+					{ "time": 0.2, "name": "effect/attack_hit/0_00006" },
+					{ "time": 0.2667, "name": "effect/attack_hit/0_00008" },
+					{ "time": 0.3333, "name": "effect/attack_hit/0_00010" },
+					{ "time": 0.4, "name": "effect/attack_hit/0_00012" },
+					{ "time": 0.4667, "name": "effect/attack_hit/0_00014" },
+					{ "time": 0.5333, "name": null }
+				]
+			},
+			"effect/glow01": {
+				"color": [
+					{ "time": 0, "color": "7c27ffff" },
+					{ "time": 0.1667, "color": "7c27ff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "effect/glow01" }
+				]
+			}
+		},
+		"bones": {
+			"att_hit": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"glow01": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "hit_1_1_1" }
+		]
+	},
+	"animation_1": {
+		"slots": {
+			"ultimateskill_blast": {
+				"attachment": [
+					{ "time": 0.4, "name": null }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "hit_11_1_1" }
+		]
+	},
+	"animation_2": {
+		"slots": {
+			"ultimateskill_blast": {
+				"attachment": [
+					{ "time": 0.0333, "name": "effect/skill2_hit_blast/0_00001" },
+					{ "time": 0.1, "name": "effect/skill2_hit_blast/0_00003" },
+					{ "time": 0.1667, "name": "effect/skill2_hit_blast/0_00005" },
+					{ "time": 0.2333, "name": "effect/skill2_hit_blast/0_00007" },
+					{ "time": 0.3, "name": "effect/skill2_hit_blast/0_00009" },
+					{ "time": 0.3667, "name": "effect/skill2_hit_blast/0_00011" },
+					{ "time": 0.4, "name": null }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "hit_21_1_1" }
+		]
+	}
+}
+}

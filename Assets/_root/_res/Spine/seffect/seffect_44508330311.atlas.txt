@@ -1,0 +1,125 @@
+
+seffect_44508330311.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/effect/glow01
+  rotate: false
+  xy: 2, 2
+  size: 230, 230
+  orig: 256, 256
+  offset: 13, 13
+  index: -1
+images/effect/skill02_hit/0_00000
+  rotate: true
+  xy: 333, 30
+  size: 48, 45
+  orig: 250, 250
+  offset: 96, 132
+  index: -1
+images/effect/skill02_hit/0_00002
+  rotate: false
+  xy: 1803, 161
+  size: 69, 71
+  orig: 250, 250
+  offset: 75, 106
+  index: -1
+images/effect/skill02_hit/0_00004
+  rotate: true
+  xy: 234, 10
+  size: 68, 97
+  orig: 250, 250
+  offset: 75, 80
+  index: -1
+images/effect/skill02_hit/0_00006
+  rotate: true
+  xy: 1699, 136
+  size: 96, 102
+  orig: 250, 250
+  offset: 75, 75
+  index: -1
+images/effect/skill02_hit/0_00008
+  rotate: false
+  xy: 1594, 131
+  size: 103, 101
+  orig: 250, 250
+  offset: 75, 76
+  index: -1
+images/effect/skill02_hit/0_00010
+  rotate: false
+  xy: 1384, 130
+  size: 103, 102
+  orig: 250, 250
+  offset: 75, 76
+  index: -1
+images/effect/skill02_hit/0_00012
+  rotate: false
+  xy: 1489, 130
+  size: 103, 102
+  orig: 250, 250
+  offset: 75, 76
+  index: -1
+images/effect/skill02_hit/0_00014
+  rotate: false
+  xy: 988, 100
+  size: 134, 132
+  orig: 250, 250
+  offset: 57, 60
+  index: -1
+images/effect/skill02_hit/0_00016
+  rotate: true
+  xy: 537, 87
+  size: 145, 147
+  orig: 250, 250
+  offset: 51, 52
+  index: -1
+images/effect/skill02_hit/0_00018
+  rotate: false
+  xy: 234, 80
+  size: 145, 152
+  orig: 250, 250
+  offset: 51, 51
+  index: -1
+images/effect/skill02_hit/0_00020
+  rotate: true
+  xy: 381, 89
+  size: 143, 154
+  orig: 250, 250
+  offset: 53, 51
+  index: -1
+images/effect/skill02_hit/0_00022
+  rotate: true
+  xy: 686, 99
+  size: 133, 152
+  orig: 250, 250
+  offset: 59, 53
+  index: -1
+images/effect/skill02_hit/0_00024
+  rotate: true
+  xy: 840, 104
+  size: 128, 146
+  orig: 250, 250
+  offset: 64, 53
+  index: -1
+images/effect/skill02_hit/0_00026
+  rotate: true
+  xy: 1124, 122
+  size: 110, 142
+  orig: 250, 250
+  offset: 68, 52
+  index: -1
+images/effect/skill02_hit/0_00028
+  rotate: true
+  xy: 1268, 123
+  size: 109, 114
+  orig: 250, 250
+  offset: 68, 81
+  index: -1
+images/effect/skill02_hit/0_00030
+  rotate: false
+  xy: 1874, 205
+  size: 109, 27
+  orig: 250, 250
+  offset: 68, 81
+  index: -1

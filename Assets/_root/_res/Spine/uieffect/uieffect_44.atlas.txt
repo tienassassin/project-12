@@ -1,0 +1,125 @@
+
+uieffect_44.png
+size: 487,487
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/glow_line
+  rotate: false
+  xy: 2, 251
+  size: 240, 135
+  orig: 240, 135
+  offset: 0, 0
+  index: -1
+images/hent_bg
+  rotate: false
+  xy: 2, 388
+  size: 344, 97
+  orig: 441, 127
+  offset: 69, 12
+  index: -1
+images/partcul_00
+  rotate: false
+  xy: 212, 2
+  size: 154, 58
+  orig: 360, 668
+  offset: 103, 301
+  index: -1
+images/partcul_01
+  rotate: true
+  xy: 244, 213
+  size: 173, 59
+  orig: 360, 668
+  offset: 108, 301
+  index: -1
+images/partcul_02
+  rotate: true
+  xy: 305, 199
+  size: 187, 59
+  orig: 360, 668
+  offset: 113, 302
+  index: -1
+images/partcul_03
+  rotate: true
+  xy: 366, 249
+  size: 198, 57
+  orig: 360, 668
+  offset: 117, 304
+  index: -1
+images/partcul_04
+  rotate: false
+  xy: 2, 24
+  size: 208, 55
+  orig: 360, 668
+  offset: 120, 307
+  index: -1
+images/partcul_05
+  rotate: false
+  xy: 2, 81
+  size: 216, 54
+  orig: 360, 668
+  offset: 122, 309
+  index: -1
+images/partcul_06
+  rotate: false
+  xy: 2, 137
+  size: 221, 55
+  orig: 360, 668
+  offset: 124, 309
+  index: -1
+images/partcul_07
+  rotate: false
+  xy: 2, 194
+  size: 225, 55
+  orig: 360, 668
+  offset: 126, 309
+  index: -1
+images/partcul_08
+  rotate: true
+  xy: 425, 246
+  size: 201, 53
+  orig: 360, 668
+  offset: 156, 311
+  index: -1
+images/partcul_09
+  rotate: true
+  xy: 366, 64
+  size: 183, 54
+  orig: 360, 668
+  offset: 160, 310
+  index: -1
+images/partcul_10
+  rotate: true
+  xy: 422, 62
+  size: 182, 52
+  orig: 360, 668
+  offset: 163, 310
+  index: -1
+images/sequence_shandian-1x7_000
+  rotate: false
+  xy: 348, 449
+  size: 126, 36
+  orig: 128, 36
+  offset: 0, 0
+  index: -1
+images/sequence_shandian-1x7_002
+  rotate: true
+  xy: 225, 72
+  size: 120, 28
+  orig: 128, 36
+  offset: 8, 7
+  index: -1
+images/sequence_shandian-1x7_004
+  rotate: true
+  xy: 255, 91
+  size: 120, 36
+  orig: 128, 36
+  offset: 4, 0
+  index: -1
+images/sequence_shandian-1x7_006
+  rotate: false
+  xy: 368, 27
+  size: 108, 33
+  orig: 128, 36
+  offset: 16, 0
+  index: -1

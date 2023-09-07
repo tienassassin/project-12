@@ -1,0 +1,103 @@
+{
+"skeleton": { "hash": "THDbTkLwVA8kUF5cPV0hMq5DeL8", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root", "y": 108.15, "scaleX": 1.3, "scaleY": 1.3 },
+	{ "name": "mingzhong", "parent": "root" }
+],
+"slots": [
+	{ "name": "mingzhong", "bone": "mingzhong", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"mingzhong": {
+			"images/skill_zhiliao/0_00000": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00002": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00004": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00006": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00008": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00010": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00012": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00014": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00016": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00018": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00020": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00022": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00024": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00026": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00028": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00030": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00032": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00034": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00036": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00038": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00040": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00042": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00044": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00046": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00048": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00050": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00052": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00054": { "width": 142, "height": 178 },
+			"images/skill_zhiliao/0_00056": { "width": 142, "height": 178 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"mingzhong": {
+				"attachment": [
+					{ "time": 0, "name": "images/skill_zhiliao/0_00000" },
+					{ "time": 0.0333, "name": "images/skill_zhiliao/0_00002" },
+					{ "time": 0.0667, "name": "images/skill_zhiliao/0_00004" },
+					{ "time": 0.1, "name": "images/skill_zhiliao/0_00006" },
+					{ "time": 0.1333, "name": "images/skill_zhiliao/0_00008" },
+					{ "time": 0.1667, "name": "images/skill_zhiliao/0_00010" },
+					{ "time": 0.2, "name": "images/skill_zhiliao/0_00012" },
+					{ "time": 0.2333, "name": "images/skill_zhiliao/0_00014" },
+					{ "time": 0.2667, "name": "images/skill_zhiliao/0_00016" },
+					{ "time": 0.3, "name": "images/skill_zhiliao/0_00018" },
+					{ "time": 0.3667, "name": "images/skill_zhiliao/0_00020" },
+					{ "time": 0.4, "name": "images/skill_zhiliao/0_00022" },
+					{ "time": 0.4333, "name": "images/skill_zhiliao/0_00024" },
+					{ "time": 0.4667, "name": "images/skill_zhiliao/0_00026" },
+					{ "time": 0.5, "name": "images/skill_zhiliao/0_00028" },
+					{ "time": 0.5333, "name": "images/skill_zhiliao/0_00030" },
+					{ "time": 0.5667, "name": "images/skill_zhiliao/0_00032" },
+					{ "time": 0.6, "name": "images/skill_zhiliao/0_00034" },
+					{ "time": 0.6333, "name": "images/skill_zhiliao/0_00036" },
+					{ "time": 0.6667, "name": "images/skill_zhiliao/0_00038" },
+					{ "time": 0.7, "name": "images/skill_zhiliao/0_00040" },
+					{ "time": 0.7333, "name": "images/skill_zhiliao/0_00042" },
+					{ "time": 0.7667, "name": "images/skill_zhiliao/0_00044" },
+					{ "time": 0.8, "name": "images/skill_zhiliao/0_00046" },
+					{ "time": 0.8333, "name": "images/skill_zhiliao/0_00048" },
+					{ "time": 0.8667, "name": "images/skill_zhiliao/0_00050" },
+					{ "time": 0.9, "name": "images/skill_zhiliao/0_00052" },
+					{ "time": 0.9333, "name": "images/skill_zhiliao/0_00054" },
+					{ "time": 0.9667, "name": "images/skill_zhiliao/0_00056" },
+					{ "time": 1, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"mingzhong": {
+				"scale": [
+					{ "time": 0, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0.3667, "angle": 0.1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.3333, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

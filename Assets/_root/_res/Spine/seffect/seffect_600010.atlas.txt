@@ -1,0 +1,76 @@
+
+seffect_600010.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effect_C/long_wind/long_wind_0000
+  rotate: false
+  xy: 1192, 133
+  size: 180, 116
+  orig: 303, 127
+  offset: 66, 5
+  index: -1
+Effect_C/long_wind/long_wind_0002
+  rotate: false
+  xy: 1012, 128
+  size: 178, 121
+  orig: 303, 127
+  offset: 68, 0
+  index: -1
+Effect_C/long_wind/long_wind_0004
+  rotate: false
+  xy: 818, 126
+  size: 192, 123
+  orig: 303, 127
+  offset: 64, 0
+  index: -1
+Effect_C/long_wind/long_wind_0008
+  rotate: false
+  xy: 287, 128
+  size: 268, 121
+  orig: 303, 127
+  offset: 20, 2
+  index: -1
+Effect_C/long_wind/long_wind_0010
+  rotate: false
+  xy: 2, 127
+  size: 283, 122
+  orig: 303, 127
+  offset: 11, 3
+  index: -1
+Effect_C/long_wind/long_wind_0012
+  rotate: false
+  xy: 2, 2
+  size: 270, 123
+  orig: 303, 127
+  offset: 4, 2
+  index: -1
+Effect_C/long_wind/long_wind_0014
+  rotate: false
+  xy: 557, 138
+  size: 259, 111
+  orig: 303, 127
+  offset: 2, 8
+  index: -1
+Effect_C/long_wind/long_wind_0018
+  rotate: false
+  xy: 1543, 174
+  size: 176, 75
+  orig: 303, 127
+  offset: 64, 27
+  index: -1
+Effect_C/long_wind/long_wind_0020
+  rotate: false
+  xy: 1721, 173
+  size: 173, 76
+  orig: 303, 127
+  offset: 69, 34
+  index: -1
+Effect_C/long_wind/long_wind_0022
+  rotate: false
+  xy: 1374, 160
+  size: 167, 89
+  orig: 303, 127
+  offset: 71, 19
+  index: -1

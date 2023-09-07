@@ -1,0 +1,177 @@
+{
+"skeleton": { "hash": "Es6PfEflMQdBcLlMNMHjx/1neiE", "spine": "3.5.35", "width": 0, "height": 0, "images": "./image/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone2", "parent": "root" },
+	{ "name": "bone", "parent": "bone2" },
+	{ "name": "bone4", "parent": "root" }
+],
+"slots": [
+	{ "name": "ui_treasurefete_6", "bone": "bone2" },
+	{ "name": "saoguang/saoguang_00001", "bone": "bone4" },
+	{ "name": "holdon/holdon_00001", "bone": "bone" }
+],
+"skins": {
+	"default": {
+		"holdon/holdon_00001": {
+			"holdon/holdon_00001": { "width": 380, "height": 330 },
+			"holdon/holdon_00003": { "width": 380, "height": 330 },
+			"holdon/holdon_00005": { "width": 380, "height": 330 },
+			"holdon/holdon_00007": { "width": 380, "height": 330 },
+			"holdon/holdon_00009": { "width": 380, "height": 330 },
+			"holdon/holdon_00011": { "width": 380, "height": 330 },
+			"holdon/holdon_00013": { "width": 380, "height": 330 },
+			"holdon/holdon_00015": { "width": 380, "height": 330 },
+			"holdon/holdon_00017": { "width": 380, "height": 330 },
+			"holdon/holdon_00019": { "width": 380, "height": 330 },
+			"holdon/holdon_00021": { "width": 380, "height": 330 },
+			"holdon/holdon_00023": { "width": 380, "height": 330 },
+			"holdon/holdon_00025": { "width": 380, "height": 330 },
+			"holdon/holdon_00027": { "width": 380, "height": 330 },
+			"holdon/holdon_00029": { "width": 380, "height": 330 }
+		},
+		"saoguang/saoguang_00001": {
+			"saoguang/saoguang_00003": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00005": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00007": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00009": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00011": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00013": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00015": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00017": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00019": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00021": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00023": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00025": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00027": { "width": 160, "height": 138 },
+			"saoguang/saoguang_00029": { "width": 160, "height": 138 }
+		},
+		"ui_treasurefete_6": {
+			"ui_treasurefete_6": { "width": 339, "height": 356 }
+		}
+	}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"holdon/holdon_00001": {
+				"color": [
+					{
+						"time": 0.5333,
+						"color": "ffffff00",
+						"curve": [ 0.452, 0.06, 0.56, 0.96 ]
+					},
+					{ "time": 0.8, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.4,
+						"color": "ffffffff",
+						"curve": [ 0.452, 0.06, 0.56, 0.96 ]
+					},
+					{ "time": 1.7333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.5333, "name": "holdon/holdon_00001" },
+					{ "time": 0.6667, "name": "holdon/holdon_00003" },
+					{ "time": 0.7333, "name": "holdon/holdon_00005" },
+					{ "time": 0.8, "name": "holdon/holdon_00007" },
+					{ "time": 0.8667, "name": "holdon/holdon_00009" },
+					{ "time": 0.9333, "name": "holdon/holdon_00011" },
+					{ "time": 1, "name": "holdon/holdon_00013" },
+					{ "time": 1.0667, "name": "holdon/holdon_00015" },
+					{ "time": 1.1333, "name": "holdon/holdon_00017" },
+					{ "time": 1.2, "name": "holdon/holdon_00019" },
+					{ "time": 1.2667, "name": "holdon/holdon_00021" },
+					{ "time": 1.3333, "name": "holdon/holdon_00023" },
+					{ "time": 1.4, "name": "holdon/holdon_00025" },
+					{ "time": 1.4667, "name": "holdon/holdon_00027" },
+					{ "time": 1.5333, "name": "holdon/holdon_00029" }
+				]
+			},
+			"ui_treasurefete_6": {
+				"attachment": [
+					{ "time": 0, "name": "ui_treasurefete_6" }
+				]
+			}
+		},
+		"bones": {
+			"bone4": {
+				"translate": [
+					{ "time": 0, "x": 590.48, "y": -902.08 }
+				],
+				"scale": [
+					{ "time": 0, "x": -1, "y": 1 }
+				]
+			},
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 10.91, "y": -12.46 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			},
+			"bone2": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.452, 0.06, 0.56, 0.96 ]
+					},
+					{
+						"time": 1,
+						"x": 0,
+						"y": 20.25,
+						"curve": [ 0.452, 0.06, 0.56, 0.96 ]
+					},
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"animation_2": {
+		"slots": {
+			"saoguang/saoguang_00001": {
+				"attachment": [
+					{ "time": 0, "name": "saoguang/saoguang_00003" },
+					{ "time": 0.0667, "name": "saoguang/saoguang_00005" },
+					{ "time": 0.1333, "name": "saoguang/saoguang_00007" },
+					{ "time": 0.2, "name": "saoguang/saoguang_00009" },
+					{ "time": 0.2667, "name": "saoguang/saoguang_00011" },
+					{ "time": 0.3333, "name": "saoguang/saoguang_00013" },
+					{ "time": 0.4, "name": "saoguang/saoguang_00015" },
+					{ "time": 0.4667, "name": "saoguang/saoguang_00017" },
+					{ "time": 0.5333, "name": "saoguang/saoguang_00019" },
+					{ "time": 0.6, "name": "saoguang/saoguang_00021" },
+					{ "time": 0.6667, "name": "saoguang/saoguang_00023" },
+					{ "time": 0.7333, "name": "saoguang/saoguang_00025" },
+					{ "time": 0.8, "name": "saoguang/saoguang_00027" },
+					{ "time": 0.8667, "name": "saoguang/saoguang_00029" },
+					{ "time": 0.9333, "name": null }
+				]
+			},
+			"ui_treasurefete_6": {
+				"attachment": [
+					{ "time": 0, "name": "ui_treasurefete_6" }
+				]
+			}
+		},
+		"bones": {
+			"bone4": {
+				"rotate": [
+					{ "time": 0, "angle": -2 }
+				],
+				"translate": [
+					{ "time": 0, "x": 7.79, "y": -10.91 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3.6, "y": 3.6 }
+				]
+			}
+		}
+	}
+}
+}

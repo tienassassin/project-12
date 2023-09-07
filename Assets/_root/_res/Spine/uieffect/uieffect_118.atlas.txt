@@ -1,0 +1,27 @@
+
+uieffect_118.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+texture/ui_atw10
+  rotate: true
+  xy: 398, 23
+  size: 160, 176
+  orig: 210, 210
+  offset: 25, 5
+  index: -1
+texture/ui_atw2
+  rotate: false
+  xy: 0, 0
+  size: 191, 183
+  orig: 210, 210
+  offset: 0, 4
+  index: -1
+texture/ui_atw6
+  rotate: true
+  xy: 193, 15
+  size: 168, 203
+  orig: 210, 210
+  offset: 21, 4
+  index: -1

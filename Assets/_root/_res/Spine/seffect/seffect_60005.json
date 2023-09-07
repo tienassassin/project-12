@@ -1,0 +1,192 @@
+{
+"skeleton": { "hash": "tIAh5/JpS7IRd3uTxS7JUA8Th/8", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": 30.26, "y": 0.97 },
+	{ "name": "ADD", "parent": "bone", "x": -30.26, "y": -0.97, "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "diceng", "parent": "bone", "x": -30.26, "y": -0.97, "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "xialuo", "parent": "bone", "x": -30.26, "y": -0.97, "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "yanwu", "parent": "bone", "x": -30.26, "y": -0.97, "scaleX": 2.5, "scaleY": 2.5 }
+],
+"slots": [
+	{ "name": "diceng", "bone": "diceng" },
+	{ "name": "xialuo", "bone": "xialuo" },
+	{ "name": "yanwu", "bone": "yanwu" },
+	{ "name": "ADD", "bone": "ADD", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"ADD": {
+			"add_00": { "width": 350, "height": 305 },
+			"add_01": { "width": 350, "height": 305 },
+			"add_02": { "width": 350, "height": 305 },
+			"add_03": { "width": 350, "height": 305 },
+			"add_04": { "width": 350, "height": 305 },
+			"add_06": { "width": 350, "height": 305 },
+			"add_08": { "width": 350, "height": 305 },
+			"add_10": { "width": 350, "height": 305 },
+			"add_12": { "width": 350, "height": 305 },
+			"add_14": { "width": 350, "height": 305 }
+		},
+		"diceng": {
+			"diceng_12": { "width": 280, "height": 175 },
+			"diceng_14": { "width": 280, "height": 175 },
+			"diceng_16": { "width": 280, "height": 175 },
+			"diceng_18": { "width": 280, "height": 175 },
+			"diceng_20": { "width": 280, "height": 175 },
+			"diceng_22": { "width": 280, "height": 175 },
+			"diceng_24": { "width": 280, "height": 175 },
+			"diceng_26": { "width": 280, "height": 175 },
+			"diceng_28": { "width": 280, "height": 175 },
+			"diceng_30": { "width": 280, "height": 175 }
+		},
+		"xialuo": {
+			"xialuo_00": { "width": 260, "height": 360 },
+			"xialuo_01": { "width": 260, "height": 360 },
+			"xialuo_02": { "width": 260, "height": 360 },
+			"xialuo_03": { "width": 260, "height": 360 },
+			"xialuo_04": { "width": 260, "height": 360 },
+			"xialuo_05": { "width": 260, "height": 360 },
+			"xialuo_07": { "width": 260, "height": 360 },
+			"xialuo_09": { "width": 260, "height": 360 }
+		},
+		"yanwu": {
+			"yanwu_00": { "width": 315, "height": 250 },
+			"yanwu_02": { "width": 315, "height": 250 },
+			"yanwu_04": { "width": 315, "height": 250 },
+			"yanwu_06": { "width": 315, "height": 250 },
+			"yanwu_08": { "width": 315, "height": 250 },
+			"yanwu_10": { "width": 315, "height": 250 },
+			"yanwu_12": { "width": 315, "height": 250 },
+			"yanwu_14": { "width": 315, "height": 250 },
+			"yanwu_16": { "width": 315, "height": 250 },
+			"yanwu_18": { "width": 315, "height": 250 },
+			"yanwu_20": { "width": 315, "height": 250 }
+		}
+	}
+},
+"events": {
+	"qishou_1_1_1": {},
+	"shakestart_2": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"ADD": {
+				"attachment": [
+					{ "time": 0.4, "name": "add_00" },
+					{ "time": 0.4333, "name": "add_01" },
+					{ "time": 0.4667, "name": "add_02" },
+					{ "time": 0.5, "name": "add_03" },
+					{ "time": 0.5667, "name": "add_04" },
+					{ "time": 0.6333, "name": "add_06" },
+					{ "time": 0.7, "name": "add_08" },
+					{ "time": 0.7667, "name": "add_10" },
+					{ "time": 0.8333, "name": "add_12" },
+					{ "time": 0.9, "name": "add_14" },
+					{ "time": 0.9667, "name": null }
+				]
+			},
+			"diceng": {
+				"color": [
+					{ "time": 1, "color": "ffffffff" },
+					{ "time": 1.2667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.4, "name": "diceng_12" },
+					{ "time": 0.4667, "name": "diceng_14" },
+					{ "time": 0.5333, "name": "diceng_16" },
+					{ "time": 0.6, "name": "diceng_18" },
+					{ "time": 0.6667, "name": "diceng_20" },
+					{ "time": 0.7333, "name": "diceng_22" },
+					{ "time": 0.8, "name": "diceng_24" },
+					{ "time": 0.8667, "name": "diceng_26" },
+					{ "time": 0.9333, "name": "diceng_28" },
+					{ "time": 1, "name": "diceng_30" }
+				]
+			},
+			"xialuo": {
+				"color": [
+					{ "time": 0.2333, "color": "ffffff61" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0.2333, "name": "xialuo_00" },
+					{ "time": 0.2667, "name": "xialuo_01" },
+					{ "time": 0.3, "name": "xialuo_02" },
+					{ "time": 0.3333, "name": "xialuo_03" },
+					{ "time": 0.3667, "name": "xialuo_04" },
+					{ "time": 0.4, "name": "xialuo_05" },
+					{ "time": 0.4333, "name": "xialuo_07" },
+					{ "time": 0.4667, "name": "xialuo_09" },
+					{ "time": 0.5333, "name": null }
+				]
+			},
+			"yanwu": {
+				"attachment": [
+					{ "time": 0.4, "name": "yanwu_00" },
+					{ "time": 0.4667, "name": "yanwu_02" },
+					{ "time": 0.5333, "name": "yanwu_04" },
+					{ "time": 0.6, "name": "yanwu_06" },
+					{ "time": 0.6667, "name": "yanwu_08" },
+					{ "time": 0.7333, "name": "yanwu_10" },
+					{ "time": 0.8, "name": "yanwu_12" },
+					{ "time": 0.8667, "name": "yanwu_14" },
+					{ "time": 0.9333, "name": "yanwu_16" },
+					{ "time": 1, "name": "yanwu_18" },
+					{ "time": 1.0667, "name": "yanwu_20" },
+					{ "time": 1.1667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"diceng": {
+				"translate": [
+					{ "time": 0, "x": 383.27, "y": -31.89 }
+				],
+				"scale": [
+					{ "time": 0.4, "x": 1.2, "y": 1.2 }
+				]
+			},
+			"xialuo": {
+				"translate": [
+					{ "time": 0.2333, "x": -7.53, "y": 344.51 }
+				],
+				"scale": [
+					{ "time": 0.2333, "x": 1.2, "y": 1.2 }
+				]
+			},
+			"ADD": {
+				"translate": [
+					{ "time": 0.4, "x": 299.39, "y": -18.22 }
+				]
+			},
+			"yanwu": {
+				"translate": [
+					{ "time": 0.4, "x": 310.88, "y": -52.7 }
+				]
+			},
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": -261.8, "y": 130.59 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": 0.8 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -95.85 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.3, "y": 1.5 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.4, "name": "qishou_1_1_1" },
+			{ "time": 0.4333, "name": "shakestart_2" }
+		]
+	}
+}
+}

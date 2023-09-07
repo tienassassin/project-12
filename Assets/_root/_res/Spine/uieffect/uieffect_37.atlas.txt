@@ -1,0 +1,83 @@
+
+uieffect_37.png
+size: 610,610
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/part_0000
+  rotate: false
+  xy: 227, 449
+  size: 220, 159
+  orig: 248, 231
+  offset: 12, 29
+  index: -1
+images/part_0020
+  rotate: false
+  xy: 227, 449
+  size: 220, 159
+  orig: 248, 231
+  offset: 12, 29
+  index: -1
+images/part_0002
+  rotate: true
+  xy: 441, 181
+  size: 210, 139
+  orig: 248, 231
+  offset: 12, 50
+  index: -1
+images/part_0004
+  rotate: true
+  xy: 449, 393
+  size: 215, 158
+  orig: 248, 231
+  offset: 13, 36
+  index: -1
+images/part_0006
+  rotate: false
+  xy: 2, 49
+  size: 222, 155
+  orig: 248, 231
+  offset: 0, 35
+  index: -1
+images/part_0008
+  rotate: true
+  xy: 2, 206
+  size: 233, 151
+  orig: 248, 231
+  offset: 0, 34
+  index: -1
+images/part_0010
+  rotate: true
+  xy: 226, 2
+  size: 212, 137
+  orig: 248, 231
+  offset: 14, 54
+  index: -1
+images/part_0012
+  rotate: true
+  xy: 155, 216
+  size: 223, 132
+  orig: 248, 231
+  offset: 2, 46
+  index: -1
+images/part_0014
+  rotate: false
+  xy: 365, 44
+  size: 220, 135
+  orig: 248, 231
+  offset: 8, 45
+  index: -1
+images/part_0016
+  rotate: true
+  xy: 289, 230
+  size: 217, 150
+  orig: 248, 231
+  offset: 7, 50
+  index: -1
+images/part_0018
+  rotate: false
+  xy: 2, 441
+  size: 223, 167
+  orig: 248, 231
+  offset: 10, 22
+  index: -1

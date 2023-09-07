@@ -1,0 +1,219 @@
+{
+"skeleton": { "hash": "L0/eFodzdJOaamPjwUkngPTn/ZI", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "s_3", "parent": "bone", "scaleX": 2, "scaleY": 2 },
+	{ "name": "s_4", "parent": "bone", "scaleX": 2, "scaleY": 2 },
+	{ "name": "s_5", "parent": "bone", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "utskill/boom/boom_0000", "bone": "s_3" },
+	{ "name": "utskill/boom/boom_0", "bone": "s_4" },
+	{ "name": "utskill/boom/boom_1", "bone": "s_5" }
+],
+"skins": {
+	"default": {
+		"utskill/boom/boom_0": {
+			"utskill/boom/boom_0013": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0014": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0015": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0016": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0017": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0018": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0019": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0020": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0021": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0022": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0023": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0024": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0025": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0026": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0027": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0028": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0029": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0030": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0031": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0032": { "width": 276, "height": 238 }
+		},
+		"utskill/boom/boom_0000": {
+			"utskill/boom/boom_0013": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0014": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0015": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0016": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0017": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0018": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0019": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0020": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0021": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0022": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0023": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0024": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0025": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0026": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0027": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0028": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0029": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0030": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0031": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0032": { "width": 276, "height": 238 }
+		},
+		"utskill/boom/boom_1": {
+			"utskill/boom/boom_0013": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0014": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0015": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0016": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0017": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0018": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0019": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0020": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0021": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0022": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0023": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0024": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0025": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0026": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0027": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0028": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0029": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0030": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0031": { "width": 276, "height": 238 },
+			"utskill/boom/boom_0032": { "width": 276, "height": 238 }
+		}
+	}
+},
+"events": {
+	"hit_21_2_1": {},
+	"hit_21_2_2": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"utskill/boom/boom_0000": {
+				"attachment": [
+					{ "time": 0, "name": "utskill/boom/boom_0013" },
+					{ "time": 0.0333, "name": "utskill/boom/boom_0014" },
+					{ "time": 0.0667, "name": "utskill/boom/boom_0015" },
+					{ "time": 0.1, "name": "utskill/boom/boom_0016" },
+					{ "time": 0.1333, "name": "utskill/boom/boom_0017" },
+					{ "time": 0.1667, "name": "utskill/boom/boom_0018" },
+					{ "time": 0.2, "name": "utskill/boom/boom_0019" },
+					{ "time": 0.2333, "name": "utskill/boom/boom_0020" },
+					{ "time": 0.2667, "name": "utskill/boom/boom_0021" },
+					{ "time": 0.3, "name": "utskill/boom/boom_0022" },
+					{ "time": 0.3333, "name": "utskill/boom/boom_0023" },
+					{ "time": 0.3667, "name": "utskill/boom/boom_0024" },
+					{ "time": 0.4, "name": "utskill/boom/boom_0025" },
+					{ "time": 0.4333, "name": "utskill/boom/boom_0026" },
+					{ "time": 0.4667, "name": "utskill/boom/boom_0027" },
+					{ "time": 0.5, "name": "utskill/boom/boom_0028" },
+					{ "time": 0.5333, "name": "utskill/boom/boom_0029" },
+					{ "time": 0.5667, "name": "utskill/boom/boom_0030" },
+					{ "time": 0.6, "name": "utskill/boom/boom_0031" },
+					{ "time": 0.6333, "name": "utskill/boom/boom_0032" },
+					{ "time": 0.6667, "name": null }
+				]
+			},
+			"utskill/boom/boom_0": {
+				"attachment": [
+					{ "time": 0.1, "name": "utskill/boom/boom_0013" },
+					{ "time": 0.1333, "name": "utskill/boom/boom_0014" },
+					{ "time": 0.1667, "name": "utskill/boom/boom_0015" },
+					{ "time": 0.2, "name": "utskill/boom/boom_0016" },
+					{ "time": 0.2333, "name": "utskill/boom/boom_0017" },
+					{ "time": 0.2667, "name": "utskill/boom/boom_0018" },
+					{ "time": 0.3, "name": "utskill/boom/boom_0019" },
+					{ "time": 0.3333, "name": "utskill/boom/boom_0020" },
+					{ "time": 0.3667, "name": "utskill/boom/boom_0021" },
+					{ "time": 0.4, "name": "utskill/boom/boom_0022" },
+					{ "time": 0.4333, "name": "utskill/boom/boom_0023" },
+					{ "time": 0.4667, "name": "utskill/boom/boom_0024" },
+					{ "time": 0.5, "name": "utskill/boom/boom_0025" },
+					{ "time": 0.5333, "name": "utskill/boom/boom_0026" },
+					{ "time": 0.5667, "name": "utskill/boom/boom_0027" },
+					{ "time": 0.6, "name": "utskill/boom/boom_0028" },
+					{ "time": 0.6333, "name": "utskill/boom/boom_0029" },
+					{ "time": 0.6667, "name": "utskill/boom/boom_0030" },
+					{ "time": 0.7, "name": "utskill/boom/boom_0031" },
+					{ "time": 0.7333, "name": "utskill/boom/boom_0032" },
+					{ "time": 0.7667, "name": null }
+				]
+			},
+			"utskill/boom/boom_1": {
+				"attachment": [
+					{ "time": 0.2, "name": "utskill/boom/boom_0013" },
+					{ "time": 0.2333, "name": "utskill/boom/boom_0014" },
+					{ "time": 0.2667, "name": "utskill/boom/boom_0015" },
+					{ "time": 0.3, "name": "utskill/boom/boom_0016" },
+					{ "time": 0.3333, "name": "utskill/boom/boom_0017" },
+					{ "time": 0.3667, "name": "utskill/boom/boom_0018" },
+					{ "time": 0.4, "name": "utskill/boom/boom_0019" },
+					{ "time": 0.4333, "name": "utskill/boom/boom_0020" },
+					{ "time": 0.4667, "name": "utskill/boom/boom_0021" },
+					{ "time": 0.5, "name": "utskill/boom/boom_0022" },
+					{ "time": 0.5333, "name": "utskill/boom/boom_0023" },
+					{ "time": 0.5667, "name": "utskill/boom/boom_0024" },
+					{ "time": 0.6, "name": "utskill/boom/boom_0025" },
+					{ "time": 0.6333, "name": "utskill/boom/boom_0026" },
+					{ "time": 0.6667, "name": "utskill/boom/boom_0027" },
+					{ "time": 0.7, "name": "utskill/boom/boom_0028" },
+					{ "time": 0.7333, "name": "utskill/boom/boom_0029" },
+					{ "time": 0.7667, "name": "utskill/boom/boom_0030" },
+					{ "time": 0.8, "name": "utskill/boom/boom_0031" },
+					{ "time": 0.8333, "name": "utskill/boom/boom_0032" },
+					{ "time": 0.8667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"s_3": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 621.47, "y": 343.85 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"s_4": {
+				"translate": [
+					{ "time": 0.1, "x": 606.19, "y": 631.66 }
+				],
+				"scale": [
+					{ "time": 0.1, "x": 3.5, "y": 2.5 }
+				]
+			},
+			"s_5": {
+				"translate": [
+					{ "time": 0.2, "x": 626.56, "y": -112.07 }
+				],
+				"scale": [
+					{ "time": 0.2, "x": 4, "y": 3 }
+				]
+			},
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": -626.4, "y": 0 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 0.1,
+				"offsets": [
+					{ "slot": "utskill/boom/boom_0000", "offset": 1 }
+				]
+			}
+		],
+		"events": [
+			{ "time": 0.2, "name": "hit_21_2_2" },
+			{ "time": 0.4, "name": "hit_21_2_2" }
+		]
+	}
+}
+}

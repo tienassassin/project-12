@@ -1,0 +1,55 @@
+
+uieffect_20.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/FX_Light_02006_1
+  rotate: false
+  xy: 2, 68
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+images/PointImage
+  rotate: false
+  xy: 237, 198
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+images/SFX_qinbg
+  rotate: false
+  xy: 2, 198
+  size: 233, 230
+  orig: 233, 230
+  offset: 0, 0
+  index: -1
+images/line_glow_l
+  rotate: false
+  xy: 237, 227
+  size: 54, 201
+  orig: 54, 201
+  offset: 0, 0
+  index: -1
+images/parti_1
+  rotate: false
+  xy: 2, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+images/parti_2
+  rotate: false
+  xy: 132, 132
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+images/parti_3
+  rotate: false
+  xy: 293, 364
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

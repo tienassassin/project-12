@@ -1,0 +1,286 @@
+
+uieffect_42.png
+size: 787,787
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Noise_Ober_00
+  rotate: false
+  xy: 221, 12
+  size: 122, 120
+  orig: 128, 128
+  offset: 4, 0
+  index: -1
+images/Noise_Ober_01
+  rotate: false
+  xy: 441, 417
+  size: 128, 123
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+images/Noise_Ober_02
+  rotate: false
+  xy: 202, 265
+  size: 118, 128
+  orig: 128, 128
+  offset: 5, 0
+  index: -1
+images/Noise_Ober_03
+  rotate: false
+  xy: 312, 417
+  size: 127, 125
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+images/Noise_Ober_04
+  rotate: false
+  xy: 322, 290
+  size: 121, 125
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+images/partical_bg_0000
+  rotate: false
+  xy: 221, 134
+  size: 107, 129
+  orig: 256, 256
+  offset: 72, 61
+  index: -1
+images/partical_bg_0002
+  rotate: false
+  xy: 445, 287
+  size: 118, 128
+  orig: 256, 256
+  offset: 74, 66
+  index: -1
+images/partical_bg_0004
+  rotate: false
+  xy: 453, 542
+  size: 138, 125
+  orig: 256, 256
+  offset: 49, 72
+  index: -1
+images/partical_bg_0006
+  rotate: true
+  xy: 195, 395
+  size: 132, 115
+  orig: 256, 256
+  offset: 54, 77
+  index: -1
+images/partical_bg_0008
+  rotate: false
+  xy: 442, 169
+  size: 126, 116
+  orig: 256, 256
+  offset: 58, 82
+  index: -1
+images/partical_bg_0010
+  rotate: false
+  xy: 433, 51
+  size: 118, 116
+  orig: 256, 256
+  offset: 63, 88
+  index: -1
+images/partical_bg_0012
+  rotate: false
+  xy: 330, 172
+  size: 110, 116
+  orig: 256, 256
+  offset: 68, 93
+  index: -1
+images/partical_bg_0014
+  rotate: false
+  xy: 644, 424
+  size: 104, 117
+  orig: 256, 256
+  offset: 72, 98
+  index: -1
+images/partical_bg_0016
+  rotate: false
+  xy: 565, 295
+  size: 75, 117
+  orig: 256, 256
+  offset: 98, 103
+  index: -1
+images/smoke_1012 #0005120
+  rotate: false
+  xy: 2, 529
+  size: 252, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+images/uieffect_42_0001
+  rotate: false
+  xy: 593, 543
+  size: 132, 121
+  orig: 140, 140
+  offset: 3, 9
+  index: -1
+images/uieffect_42_0002
+  rotate: false
+  xy: 644, 314
+  size: 106, 108
+  orig: 140, 140
+  offset: 17, 16
+  index: -1
+images/uieffect_42_0003
+  rotate: true
+  xy: 553, 53
+  size: 112, 110
+  orig: 140, 140
+  offset: 14, 15
+  index: -1
+images/uieffect_42_0004
+  rotate: false
+  xy: 571, 414
+  size: 71, 126
+  orig: 140, 140
+  offset: 34, 7
+  index: -1
+images/xian_cir_0000
+  rotate: false
+  xy: 44, 11
+  size: 42, 29
+  orig: 360, 641
+  offset: 255, 212
+  index: -1
+images/xian_cir_0001
+  rotate: true
+  xy: 727, 566
+  size: 98, 58
+  orig: 360, 641
+  offset: 214, 203
+  index: -1
+images/xian_cir_0002
+  rotate: true
+  xy: 643, 175
+  size: 137, 67
+  orig: 360, 641
+  offset: 177, 197
+  index: -1
+images/xian_cir_0003
+  rotate: true
+  xy: 151, 36
+  size: 166, 68
+  orig: 360, 641
+  offset: 148, 195
+  index: -1
+images/xian_cir_0004
+  rotate: true
+  xy: 130, 204
+  size: 186, 70
+  orig: 360, 641
+  offset: 129, 195
+  index: -1
+images/xian_cir_0005
+  rotate: false
+  xy: 256, 544
+  size: 195, 96
+  orig: 360, 641
+  offset: 119, 195
+  index: -1
+images/xian_cir_0006
+  rotate: false
+  xy: 440, 669
+  size: 191, 116
+  orig: 360, 641
+  offset: 112, 195
+  index: -1
+images/xian_cir_0007
+  rotate: true
+  xy: 2, 197
+  size: 193, 126
+  orig: 360, 641
+  offset: 110, 201
+  index: -1
+images/xian_cir_0008
+  rotate: false
+  xy: 2, 392
+  size: 191, 135
+  orig: 360, 641
+  offset: 110, 203
+  index: -1
+images/xian_cir_0009
+  rotate: false
+  xy: 256, 642
+  size: 182, 143
+  orig: 360, 641
+  offset: 109, 204
+  index: -1
+images/xian_cir_0010
+  rotate: true
+  xy: 2, 42
+  size: 153, 147
+  orig: 360, 641
+  offset: 109, 206
+  index: -1
+images/xian_cir_0011
+  rotate: true
+  xy: 633, 666
+  size: 119, 145
+  orig: 360, 641
+  offset: 112, 207
+  index: -1
+images/xian_cir_0012
+  rotate: false
+  xy: 345, 32
+  size: 86, 138
+  orig: 360, 641
+  offset: 115, 212
+  index: -1
+images/xian_cir_0013
+  rotate: false
+  xy: 570, 167
+  size: 71, 126
+  orig: 360, 641
+  offset: 119, 223
+  index: -1
+images/xian_cir_0014
+  rotate: false
+  xy: 712, 203
+  size: 67, 109
+  orig: 360, 641
+  offset: 122, 239
+  index: -1
+images/xian_cir_0015
+  rotate: false
+  xy: 665, 86
+  size: 65, 87
+  orig: 360, 641
+  offset: 124, 259
+  index: -1
+images/xian_cir_0016
+  rotate: true
+  xy: 665, 22
+  size: 62, 66
+  orig: 360, 641
+  offset: 126, 278
+  index: -1
+images/xian_cir_0017
+  rotate: false
+  xy: 553, 2
+  size: 57, 49
+  orig: 360, 641
+  offset: 130, 293
+  index: -1
+images/xian_cir_0018
+  rotate: false
+  xy: 612, 9
+  size: 50, 42
+  orig: 360, 641
+  offset: 137, 299
+  index: -1
+images/xian_cir_0019
+  rotate: false
+  xy: 2, 3
+  size: 40, 37
+  orig: 360, 641
+  offset: 147, 302
+  index: -1
+images/xian_cir_0020
+  rotate: true
+  xy: 752, 534
+  size: 30, 33
+  orig: 360, 641
+  offset: 157, 304
+  index: -1

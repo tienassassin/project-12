@@ -1,0 +1,13 @@
+
+seffect_54514200111.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/attack_bullet
+  rotate: false
+  xy: 2, 2
+  size: 152, 44
+  orig: 200, 100
+  offset: 25, 28
+  index: -1

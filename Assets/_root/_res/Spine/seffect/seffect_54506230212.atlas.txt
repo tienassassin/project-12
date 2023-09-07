@@ -1,0 +1,545 @@
+
+seffect_54506230212.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+maozihou
+  rotate: false
+  xy: 933, 1645
+  size: 100, 92
+  orig: 102, 94
+  offset: 1, 1
+  index: -1
+maoziqian
+  rotate: false
+  xy: 933, 1551
+  size: 100, 92
+  orig: 102, 94
+  offset: 1, 1
+  index: -1
+qingwa
+  rotate: true
+  xy: 862, 1682
+  size: 55, 69
+  orig: 57, 71
+  offset: 1, 1
+  index: -1
+skill/maozi_light/maozi_light_0000
+  rotate: false
+  xy: 1826, 1463
+  size: 51, 53
+  orig: 270, 440
+  offset: 114, 215
+  index: -1
+skill/maozi_light/maozi_light_0002
+  rotate: false
+  xy: 876, 929
+  size: 78, 81
+  orig: 270, 440
+  offset: 100, 201
+  index: -1
+skill/maozi_light/maozi_light_0004
+  rotate: true
+  xy: 583, 2
+  size: 110, 114
+  orig: 270, 440
+  offset: 84, 184
+  index: -1
+skill/maozi_light/maozi_light_0006
+  rotate: false
+  xy: 724, 916
+  size: 150, 155
+  orig: 270, 440
+  offset: 64, 164
+  index: -1
+skill/maozi_light/maozi_light_0008
+  rotate: true
+  xy: 1789, 1838
+  size: 194, 209
+  orig: 270, 440
+  offset: 39, 137
+  index: -1
+skill/maozi_light/maozi_light_0010
+  rotate: false
+  xy: 794, 1739
+  size: 239, 293
+  orig: 270, 440
+  offset: 17, 92
+  index: -1
+skill/maozi_light/maozi_light_0012
+  rotate: false
+  xy: 2, 847
+  size: 266, 372
+  orig: 270, 440
+  offset: 3, 44
+  index: -1
+skill/maozi_light/maozi_light_0014
+  rotate: false
+  xy: 2, 1221
+  size: 270, 403
+  orig: 270, 440
+  offset: 0, 26
+  index: -1
+skill/maozi_light/maozi_light_0016
+  rotate: false
+  xy: 2, 1626
+  size: 270, 406
+  orig: 270, 440
+  offset: 0, 26
+  index: -1
+skill/maozi_light/maozi_light_0018
+  rotate: false
+  xy: 274, 1638
+  size: 270, 394
+  orig: 270, 440
+  offset: 0, 33
+  index: -1
+tuzi
+  rotate: false
+  xy: 1175, 1457
+  size: 80, 129
+  orig: 83, 131
+  offset: 1, 1
+  index: -1
+utskill/chouma/chouma_0000
+  rotate: false
+  xy: 862, 1600
+  size: 67, 80
+  orig: 323, 394
+  offset: 117, 259
+  index: -1
+utskill/chouma/chouma_0002
+  rotate: true
+  xy: 876, 1278
+  size: 95, 112
+  orig: 323, 394
+  offset: 105, 241
+  index: -1
+utskill/chouma/chouma_0004
+  rotate: false
+  xy: 723, 767
+  size: 122, 147
+  orig: 323, 394
+  offset: 92, 220
+  index: -1
+utskill/chouma/chouma_0006
+  rotate: false
+  xy: 1888, 1496
+  size: 146, 178
+  orig: 323, 394
+  offset: 80, 197
+  index: -1
+utskill/chouma/chouma_0008
+  rotate: true
+  xy: 1474, 1509
+  size: 168, 210
+  orig: 323, 394
+  offset: 69, 168
+  index: -1
+utskill/chouma/chouma_0010
+  rotate: true
+  xy: 1547, 1841
+  size: 191, 240
+  orig: 323, 394
+  offset: 57, 137
+  index: -1
+utskill/chouma/chouma_0012
+  rotate: false
+  xy: 2, 31
+  size: 212, 264
+  orig: 323, 394
+  offset: 46, 106
+  index: -1
+utskill/chouma/chouma_0014
+  rotate: false
+  xy: 1035, 1749
+  size: 229, 283
+  orig: 323, 394
+  offset: 37, 77
+  index: -1
+utskill/chouma/chouma_0016
+  rotate: false
+  xy: 546, 1734
+  size: 246, 298
+  orig: 323, 394
+  offset: 28, 46
+  index: -1
+utskill/chouma/chouma_0018
+  rotate: false
+  xy: 274, 1349
+  size: 258, 287
+  orig: 323, 394
+  offset: 22, 39
+  index: -1
+utskill/chouma/chouma_0020
+  rotate: true
+  xy: 2, 576
+  size: 269, 266
+  orig: 323, 394
+  offset: 16, 42
+  index: -1
+utskill/chouma/chouma_0022
+  rotate: true
+  xy: 2, 297
+  size: 277, 245
+  orig: 323, 394
+  offset: 12, 42
+  index: -1
+utskill/chouma/chouma_0024
+  rotate: false
+  xy: 1266, 1846
+  size: 279, 186
+  orig: 323, 394
+  offset: 12, 71
+  index: -1
+utskill/ripple/ripple_0001
+  rotate: true
+  xy: 876, 1012
+  size: 128, 82
+  orig: 173, 107
+  offset: 16, 6
+  index: -1
+utskill/ripple/ripple_0003
+  rotate: true
+  xy: 876, 1142
+  size: 134, 83
+  orig: 173, 107
+  offset: 15, 5
+  index: -1
+utskill/ripple/ripple_0005
+  rotate: true
+  xy: 1358, 1297
+  size: 136, 83
+  orig: 173, 107
+  offset: 15, 5
+  index: -1
+utskill/ripple/ripple_0007
+  rotate: true
+  xy: 898, 635
+  size: 138, 83
+  orig: 173, 107
+  offset: 14, 5
+  index: -1
+utskill/ripple/ripple_0009
+  rotate: true
+  xy: 1949, 1697
+  size: 139, 84
+  orig: 173, 107
+  offset: 14, 4
+  index: -1
+utskill/ripple/ripple_0011
+  rotate: true
+  xy: 812, 626
+  size: 139, 84
+  orig: 173, 107
+  offset: 14, 5
+  index: -1
+utskill/ripple/ripple_0013
+  rotate: false
+  xy: 442, 28
+  size: 139, 84
+  orig: 173, 107
+  offset: 14, 5
+  index: -1
+utskill/ripple/ripple_0015
+  rotate: true
+  xy: 847, 775
+  size: 139, 84
+  orig: 173, 107
+  offset: 14, 5
+  index: -1
+utskill/ripple/ripple_0017
+  rotate: true
+  xy: 723, 626
+  size: 139, 87
+  orig: 173, 107
+  offset: 14, 5
+  index: -1
+utskill/ripple/ripple_0019
+  rotate: false
+  xy: 723, 537
+  size: 139, 87
+  orig: 173, 107
+  offset: 14, 5
+  index: -1
+utskill/ripple/ripple_0021
+  rotate: false
+  xy: 720, 449
+  size: 139, 86
+  orig: 173, 107
+  offset: 14, 6
+  index: -1
+utskill/ripple/ripple_0023
+  rotate: true
+  xy: 699, 297
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0025
+  rotate: true
+  xy: 787, 309
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0027
+  rotate: true
+  xy: 774, 1594
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0029
+  rotate: false
+  xy: 1035, 1500
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0031
+  rotate: false
+  xy: 1257, 1435
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0033
+  rotate: true
+  xy: 762, 1432
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0035
+  rotate: false
+  xy: 1686, 1430
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0037
+  rotate: false
+  xy: 850, 1463
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0039
+  rotate: false
+  xy: 850, 1375
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0041
+  rotate: false
+  xy: 990, 1412
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0043
+  rotate: false
+  xy: 990, 1324
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0045
+  rotate: false
+  xy: 1218, 1260
+  size: 138, 85
+  orig: 173, 107
+  offset: 15, 7
+  index: -1
+utskill/ripple/ripple_0047
+  rotate: true
+  xy: 1130, 1317
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/ripple/ripple_0049
+  rotate: false
+  xy: 1218, 1347
+  size: 138, 86
+  orig: 173, 107
+  offset: 15, 6
+  index: -1
+utskill/shexian_guang/shexian_light_0001
+  rotate: true
+  xy: 728, 1073
+  size: 173, 146
+  orig: 230, 187
+  offset: 8, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0003
+  rotate: false
+  xy: 1686, 1518
+  size: 200, 156
+  orig: 230, 187
+  offset: 5, 9
+  index: -1
+utskill/shexian_guang/shexian_light_0005
+  rotate: false
+  xy: 1257, 1523
+  size: 215, 159
+  orig: 230, 187
+  offset: 4, 8
+  index: -1
+utskill/shexian_guang/shexian_light_0007
+  rotate: false
+  xy: 1722, 1676
+  size: 225, 160
+  orig: 230, 187
+  offset: 3, 8
+  index: -1
+utskill/shexian_guang/shexian_light_0009
+  rotate: false
+  xy: 274, 1186
+  size: 227, 161
+  orig: 230, 187
+  offset: 3, 8
+  index: -1
+utskill/shexian_guang/shexian_light_0011
+  rotate: false
+  xy: 270, 1023
+  size: 227, 161
+  orig: 230, 187
+  offset: 3, 8
+  index: -1
+utskill/shexian_guang/shexian_light_0013
+  rotate: false
+  xy: 270, 860
+  size: 227, 161
+  orig: 230, 187
+  offset: 3, 8
+  index: -1
+utskill/shexian_guang/shexian_light_0015
+  rotate: false
+  xy: 270, 697
+  size: 227, 161
+  orig: 230, 187
+  offset: 3, 8
+  index: -1
+utskill/shexian_guang/shexian_light_0017
+  rotate: false
+  xy: 270, 533
+  size: 226, 162
+  orig: 230, 187
+  offset: 4, 8
+  index: -1
+utskill/shexian_guang/shexian_light_0019
+  rotate: false
+  xy: 249, 370
+  size: 226, 161
+  orig: 230, 187
+  offset: 4, 9
+  index: -1
+utskill/shexian_guang/shexian_light_0021
+  rotate: false
+  xy: 1266, 1684
+  size: 226, 160
+  orig: 230, 187
+  offset: 4, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0023
+  rotate: false
+  xy: 1494, 1679
+  size: 226, 160
+  orig: 230, 187
+  offset: 4, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0025
+  rotate: false
+  xy: 546, 1572
+  size: 226, 160
+  orig: 230, 187
+  offset: 4, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0027
+  rotate: false
+  xy: 534, 1410
+  size: 226, 160
+  orig: 230, 187
+  offset: 4, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0029
+  rotate: false
+  xy: 249, 208
+  size: 225, 160
+  orig: 230, 187
+  offset: 5, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0031
+  rotate: false
+  xy: 216, 46
+  size: 224, 160
+  orig: 230, 187
+  offset: 6, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0033
+  rotate: false
+  xy: 534, 1248
+  size: 224, 160
+  orig: 230, 187
+  offset: 6, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0035
+  rotate: false
+  xy: 503, 1085
+  size: 223, 161
+  orig: 230, 187
+  offset: 7, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0037
+  rotate: false
+  xy: 499, 923
+  size: 223, 160
+  orig: 230, 187
+  offset: 7, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0039
+  rotate: false
+  xy: 499, 761
+  size: 222, 160
+  orig: 230, 187
+  offset: 8, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0041
+  rotate: false
+  xy: 499, 599
+  size: 222, 160
+  orig: 230, 187
+  offset: 8, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0043
+  rotate: false
+  xy: 498, 437
+  size: 220, 160
+  orig: 230, 187
+  offset: 9, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0045
+  rotate: false
+  xy: 477, 275
+  size: 220, 160
+  orig: 230, 187
+  offset: 9, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0047
+  rotate: false
+  xy: 476, 114
+  size: 220, 159
+  orig: 230, 187
+  offset: 9, 10
+  index: -1
+utskill/shexian_guang/shexian_light_0049
+  rotate: false
+  xy: 1035, 1588
+  size: 220, 159
+  orig: 230, 187
+  offset: 9, 10
+  index: -1

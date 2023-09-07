@@ -1,0 +1,307 @@
+
+seffect_31510200111.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/att/sm_gs_superskill1_45_conjure_0001
+  rotate: false
+  xy: 1006, 588
+  size: 277, 180
+  orig: 700, 700
+  offset: 244, 272
+  index: -1
+effect/att/sm_gs_superskill1_45_conjure_0002
+  rotate: false
+  xy: 1006, 770
+  size: 290, 170
+  orig: 700, 700
+  offset: 230, 248
+  index: -1
+effect/att/sm_gs_superskill1_45_conjure_0003
+  rotate: false
+  xy: 260, 202
+  size: 261, 130
+  orig: 700, 700
+  offset: 246, 255
+  index: -1
+effect/dg_009
+  rotate: false
+  xy: 523, 217
+  size: 106, 115
+  orig: 128, 128
+  offset: 16, 9
+  index: -1
+effect/jianqi/jianqi1
+  rotate: false
+  xy: 505, 510
+  size: 499, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+effect/jianqi/jianqi1/jianqi1_0000
+  rotate: false
+  xy: 2, 510
+  size: 501, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+effect/shanguang
+  rotate: false
+  xy: 1285, 664
+  size: 197, 75
+  orig: 256, 128
+  offset: 29, 25
+  index: -1
+effect/shanguang2
+  rotate: false
+  xy: 2, 252
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+effect/smoke/smoke_0001
+  rotate: false
+  xy: 1555, 949
+  size: 132, 17
+  orig: 187, 37
+  offset: 47, 11
+  index: -1
+effect/smoke/smoke_0003
+  rotate: false
+  xy: 204, 35
+  size: 145, 18
+  orig: 187, 37
+  offset: 28, 10
+  index: -1
+effect/smoke/smoke_0005
+  rotate: false
+  xy: 204, 55
+  size: 162, 19
+  orig: 187, 37
+  offset: 10, 10
+  index: -1
+effect/smoke/smoke_0007
+  rotate: false
+  xy: 1392, 949
+  size: 161, 17
+  orig: 187, 37
+  offset: 7, 9
+  index: -1
+effect/smoke/smoke_0009
+  rotate: false
+  xy: 632, 333
+  size: 165, 12
+  orig: 187, 37
+  offset: 5, 9
+  index: -1
+effect/smoke2/ray_082_L_000
+  rotate: false
+  xy: 1709, 962
+  size: 239, 32
+  orig: 256, 85
+  offset: 6, 23
+  index: -1
+effect/smoke2/ray_082_L_001
+  rotate: false
+  xy: 2, 2
+  size: 243, 30
+  orig: 256, 85
+  offset: 6, 23
+  index: -1
+effect/smoke2/ray_082_L_002
+  rotate: true
+  xy: 2018, 781
+  size: 241, 28
+  orig: 256, 85
+  offset: 6, 23
+  index: -1
+effect/tiji/aas_00000
+  rotate: false
+  xy: 473, 106
+  size: 40, 94
+  orig: 75, 125
+  offset: 16, 15
+  index: -1
+effect/tiji/aas_00001
+  rotate: true
+  xy: 631, 274
+  size: 57, 124
+  orig: 75, 125
+  offset: 7, 0
+  index: -1
+effect/tiji/aas_00002
+  rotate: false
+  xy: 411, 76
+  size: 60, 124
+  orig: 75, 125
+  offset: 6, 0
+  index: -1
+effect/tiji/aas_00003
+  rotate: true
+  xy: 848, 348
+  size: 60, 122
+  orig: 75, 125
+  offset: 6, 1
+  index: -1
+effect/tiji/aas_00004
+  rotate: true
+  xy: 631, 214
+  size: 58, 122
+  orig: 75, 125
+  offset: 7, 1
+  index: -1
+effect/tiji/air_quan_13
+  rotate: false
+  xy: 1382, 493
+  size: 48, 74
+  orig: 101, 92
+  offset: 33, 4
+  index: -1
+effect/tiji/air_quan_17
+  rotate: false
+  xy: 1331, 489
+  size: 49, 78
+  orig: 101, 92
+  offset: 28, 4
+  index: -1
+effect/tiji/air_quan_21
+  rotate: false
+  xy: 1279, 486
+  size: 50, 81
+  orig: 101, 92
+  offset: 23, 4
+  index: -1
+effect/tiji/air_quan_25
+  rotate: false
+  xy: 1491, 869
+  size: 42, 78
+  orig: 101, 92
+  offset: 21, 5
+  index: -1
+effect/tiji/air_quan_29
+  rotate: false
+  xy: 1491, 792
+  size: 42, 75
+  orig: 101, 92
+  offset: 15, 9
+  index: -1
+effect/tiji/air_quan_3
+  rotate: true
+  xy: 1950, 970
+  size: 24, 35
+  orig: 101, 92
+  offset: 66, 5
+  index: -1
+effect/tiji/air_quan_33
+  rotate: true
+  xy: 204, 227
+  size: 23, 51
+  orig: 101, 92
+  offset: 11, 19
+  index: -1
+effect/tiji/air_quan_9
+  rotate: false
+  xy: 1535, 878
+  size: 46, 69
+  orig: 101, 92
+  offset: 39, 4
+  index: -1
+effect/utskill/dao_a/dao_a_0000
+  rotate: false
+  xy: 204, 76
+  size: 205, 124
+  orig: 262, 229
+  offset: 22, 97
+  index: -1
+effect/utskill/dao_a/dao_a_0001
+  rotate: false
+  xy: 1006, 402
+  size: 209, 184
+  orig: 262, 229
+  offset: 26, 41
+  index: -1
+effect/utskill/dao_a/dao_a_0002
+  rotate: false
+  xy: 2, 34
+  size: 200, 216
+  orig: 262, 229
+  offset: 35, 8
+  index: -1
+effect/utskill/dao_a/dao_a_0003
+  rotate: false
+  xy: 1298, 741
+  size: 191, 199
+  orig: 262, 229
+  offset: 46, 9
+  index: -1
+effect/utskill/dao_b/dao_b_0000
+  rotate: false
+  xy: 1285, 569
+  size: 181, 41
+  orig: 233, 95
+  offset: 11, 40
+  index: -1
+effect/utskill/dao_b/dao_b_0001
+  rotate: false
+  xy: 1285, 612
+  size: 204, 50
+  orig: 233, 95
+  offset: 7, 32
+  index: -1
+effect/utskill/dao_b/dao_b_0002
+  rotate: false
+  xy: 632, 347
+  size: 214, 61
+  orig: 233, 95
+  offset: 7, 21
+  index: -1
+effect/utskill/dao_b/dao_b_0003
+  rotate: true
+  xy: 1217, 420
+  size: 166, 60
+  orig: 233, 95
+  offset: 58, 18
+  index: -1
+effect/utskill/dao_e/dao_e_0001
+  rotate: false
+  xy: 1392, 968
+  size: 315, 54
+  orig: 427, 113
+  offset: 41, 31
+  index: -1
+effect/utskill/dao_e/dao_e_0002
+  rotate: false
+  xy: 638, 410
+  size: 358, 98
+  orig: 427, 113
+  offset: 14, 4
+  index: -1
+effect/utskill/dao_e/dao_e_0003
+  rotate: false
+  xy: 260, 334
+  size: 370, 87
+  orig: 427, 113
+  offset: 14, 15
+  index: -1
+effect/utskill/dao_e/dao_e_0004
+  rotate: false
+  xy: 260, 423
+  size: 376, 85
+  orig: 427, 113
+  offset: 14, 23
+  index: -1
+effect/utskill/dao_e/dao_e_0005
+  rotate: false
+  xy: 1006, 942
+  size: 384, 80
+  orig: 427, 113
+  offset: 16, 29
+  index: -1
+effect/utskill/dao_e/dao_e_0006
+  rotate: false
+  xy: 1709, 996
+  size: 307, 26
+  orig: 427, 113
+  offset: 110, 37
+  index: -1

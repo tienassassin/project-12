@@ -1,0 +1,73 @@
+{
+"skeleton": { "hash": "/F5WNiCWnaW+5Iak0Ridy9iY6Zk", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bg", "parent": "root", "y": 113.31, "scaleX": 3.33, "scaleY": 3.33 },
+	{ "name": "jinshanshanpifuZX", "parent": "root" },
+	{ "name": "buff", "parent": "jinshanshanpifuZX" }
+],
+"slots": [
+	{ "name": "bg", "bone": "bg", "color": "a1a1a1ff" },
+	{ "name": "shouxiaobi01", "bone": "root" },
+	{ "name": "shou04", "bone": "root" },
+	{ "name": "shou01", "bone": "root" },
+	{ "name": "buff", "bone": "buff", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"buff": {
+			"Spine_Effect/image/buff/buff_0000": { "width": 278, "height": 57 },
+			"Spine_Effect/image/buff/buff_0002": { "width": 278, "height": 57 },
+			"Spine_Effect/image/buff/buff_0004": { "width": 278, "height": 57 },
+			"Spine_Effect/image/buff/buff_0006": { "width": 278, "height": 57 },
+			"Spine_Effect/image/buff/buff_0008": { "width": 278, "height": 57 },
+			"Spine_Effect/image/buff/buff_0010": { "width": 278, "height": 57 },
+			"Spine_Effect/image/buff/buff_0012": { "width": 278, "height": 57 },
+			"Spine_Effect/image/buff/buff_0014": { "width": 278, "height": 57 },
+			"Spine_Effect/image/buff/buff_0016": { "width": 278, "height": 57 },
+			"Spine_Effect/image/buff/buff_0018": { "width": 278, "height": 57 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"buff": {
+				"attachment": [
+					{ "time": 0, "name": "Spine_Effect/image/buff/buff_0000" },
+					{ "time": 0.0667, "name": "Spine_Effect/image/buff/buff_0002" },
+					{ "time": 0.1333, "name": "Spine_Effect/image/buff/buff_0004" },
+					{ "time": 0.2, "name": "Spine_Effect/image/buff/buff_0006" },
+					{ "time": 0.2667, "name": "Spine_Effect/image/buff/buff_0008" },
+					{ "time": 0.3333, "name": "Spine_Effect/image/buff/buff_0010" },
+					{ "time": 0.4, "name": "Spine_Effect/image/buff/buff_0012" },
+					{ "time": 0.4667, "name": "Spine_Effect/image/buff/buff_0014" },
+					{ "time": 0.5333, "name": "Spine_Effect/image/buff/buff_0016" },
+					{ "time": 0.6, "name": "Spine_Effect/image/buff/buff_0018" },
+					{ "time": 0.6667, "name": "Spine_Effect/image/buff/buff_0000" }
+				]
+			},
+			"shou04": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"shouxiaobi01": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"buff": {
+				"translate": [
+					{ "time": 0, "x": -0.52, "y": 194.59 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.176, "y": 1.728 }
+				]
+			}
+		}
+	}
+}
+}

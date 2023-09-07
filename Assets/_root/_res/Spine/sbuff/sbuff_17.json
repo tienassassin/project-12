@@ -1,0 +1,56 @@
+{
+"skeleton": { "hash": "MUrS9LE06sBIOd7/W2lmb/6N87U", "spine": "3.5.35", "width": 2397.6, "height": 4262.4 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "eff_ultimate", "parent": "root", "y": -100 },
+	{ "name": "bone", "parent": "eff_ultimate", "x": 95.97, "y": 104.35 },
+	{ "name": "bone94", "parent": "bone", "x": 0.16, "y": -0.21 }
+],
+"slots": [
+	{ "name": "sanjiao_0000", "bone": "bone94", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"sanjiao_0000": {
+			"sanjiao_0000": { "x": -6.15, "y": 25.6, "width": 1280, "height": 720 }
+		}
+	}
+},
+"events": {
+	"back": {},
+	"faqi_1": {},
+	"faqi_11": {},
+	"faqi_21": {}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"sanjiao_0000": {
+				"attachment": [
+					{ "time": 0, "name": "sanjiao_0000" }
+				]
+			}
+		},
+		"bones": {
+			"bone94": {
+				"rotate": [
+					{ "time": 0, "angle": -117.56 },
+					{ "time": 0.7333, "angle": 120.24 }
+				],
+				"translate": [
+					{ "time": 0, "x": -61.04, "y": -4.55 },
+					{ "time": 0.7333, "x": -115.67, "y": -4.55 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": 0.8 }
+				]
+			},
+			"bone": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 0.3 }
+				]
+			}
+		}
+	}
+}
+}

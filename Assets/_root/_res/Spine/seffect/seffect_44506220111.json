@@ -1,0 +1,215 @@
+{
+"skeleton": { "hash": "C+TCF6uZwl4ZbsfhCnufVcwfr+A", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone102", "parent": "bone" },
+	{ "name": "bone103", "parent": "bone" },
+	{ "name": "bone104", "parent": "bone" }
+],
+"slots": [
+	{ "name": "skill/xing/sha_star_0001", "bone": "bone102" },
+	{ "name": "skill/hua/yanhua_0004", "bone": "bone103" },
+	{ "name": "skill/zhi/ZI_0007", "bone": "bone104" }
+],
+"skins": {
+	"default": {
+		"skill/hua/yanhua_0004": {
+			"skill/hua/yanhua_0004": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0010": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0012": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0014": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0016": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0018": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0020": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0022": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0024": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0026": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0028": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0030": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0032": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0034": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0036": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0038": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0040": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0042": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0044": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0046": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0048": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0050": { "width": 237, "height": 204 },
+			"skill/hua/yanhua_0052": { "width": 237, "height": 204 }
+		},
+		"skill/xing/sha_star_0001": {
+			"skill/xing/sha_star_0001": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0003": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0005": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0007": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0009": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0011": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0013": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0015": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0017": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0019": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0021": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0023": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0025": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0027": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0029": { "width": 179, "height": 156 },
+			"skill/xing/sha_star_0031": { "width": 179, "height": 156 }
+		},
+		"skill/zhi/ZI_0007": {
+			"skill/zhi/ZI_0007": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0009": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0011": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0013": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0015": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0017": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0019": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0021": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0023": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0025": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0027": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0029": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0031": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0033": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0035": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0037": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0039": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0041": { "width": 540, "height": 392 },
+			"skill/zhi/ZI_0043": { "width": 540, "height": 392 }
+		}
+	}
+},
+"events": {
+	"qishou_11_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"skill/hua/yanhua_0004": {
+				"color": [
+					{
+						"time": 0.6333,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0.6, 0.528, 0.89 ]
+					},
+					{ "time": 0.8667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "skill/hua/yanhua_0004" },
+					{ "time": 0.0333, "name": "skill/hua/yanhua_0010" },
+					{ "time": 0.0667, "name": "skill/hua/yanhua_0012" },
+					{ "time": 0.1, "name": "skill/hua/yanhua_0014" },
+					{ "time": 0.1333, "name": "skill/hua/yanhua_0016" },
+					{ "time": 0.1667, "name": "skill/hua/yanhua_0018" },
+					{ "time": 0.2, "name": "skill/hua/yanhua_0020" },
+					{ "time": 0.2333, "name": "skill/hua/yanhua_0022" },
+					{ "time": 0.2667, "name": "skill/hua/yanhua_0024" },
+					{ "time": 0.3, "name": "skill/hua/yanhua_0026" },
+					{ "time": 0.3333, "name": "skill/hua/yanhua_0028" },
+					{ "time": 0.3667, "name": "skill/hua/yanhua_0030" },
+					{ "time": 0.4, "name": "skill/hua/yanhua_0032" },
+					{ "time": 0.4333, "name": "skill/hua/yanhua_0034" },
+					{ "time": 0.4667, "name": "skill/hua/yanhua_0036" },
+					{ "time": 0.5, "name": "skill/hua/yanhua_0038" },
+					{ "time": 0.5333, "name": "skill/hua/yanhua_0040" },
+					{ "time": 0.5667, "name": "skill/hua/yanhua_0042" },
+					{ "time": 0.6, "name": "skill/hua/yanhua_0044" },
+					{ "time": 0.6333, "name": "skill/hua/yanhua_0046" },
+					{ "time": 0.6667, "name": "skill/hua/yanhua_0048" },
+					{ "time": 0.7333, "name": "skill/hua/yanhua_0050" },
+					{ "time": 0.8, "name": "skill/hua/yanhua_0052" },
+					{ "time": 0.8667, "name": null }
+				]
+			},
+			"skill/xing/sha_star_0001": {
+				"attachment": [
+					{ "time": 0, "name": "skill/xing/sha_star_0001" },
+					{ "time": 0.0333, "name": "skill/xing/sha_star_0003" },
+					{ "time": 0.0667, "name": "skill/xing/sha_star_0005" },
+					{ "time": 0.1, "name": "skill/xing/sha_star_0007" },
+					{ "time": 0.1333, "name": "skill/xing/sha_star_0009" },
+					{ "time": 0.1667, "name": "skill/xing/sha_star_0011" },
+					{ "time": 0.2, "name": "skill/xing/sha_star_0013" },
+					{ "time": 0.2667, "name": "skill/xing/sha_star_0015" },
+					{ "time": 0.3333, "name": "skill/xing/sha_star_0017" },
+					{ "time": 0.4, "name": "skill/xing/sha_star_0019" },
+					{ "time": 0.4333, "name": "skill/xing/sha_star_0021" },
+					{ "time": 0.5, "name": "skill/xing/sha_star_0023" },
+					{ "time": 0.5333, "name": "skill/xing/sha_star_0025" },
+					{ "time": 0.6, "name": "skill/xing/sha_star_0027" },
+					{ "time": 0.6333, "name": "skill/xing/sha_star_0029" },
+					{ "time": 0.7, "name": "skill/xing/sha_star_0031" },
+					{ "time": 0.7667, "name": null }
+				]
+			},
+			"skill/zhi/ZI_0007": {
+				"color": [
+					{ "time": 0.5333, "color": "ffffffff" },
+					{ "time": 0.7, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "skill/zhi/ZI_0007" },
+					{ "time": 0.0333, "name": "skill/zhi/ZI_0009" },
+					{ "time": 0.0667, "name": "skill/zhi/ZI_0011" },
+					{ "time": 0.1, "name": "skill/zhi/ZI_0013" },
+					{ "time": 0.1333, "name": "skill/zhi/ZI_0015" },
+					{ "time": 0.1667, "name": "skill/zhi/ZI_0017" },
+					{ "time": 0.2, "name": "skill/zhi/ZI_0019" },
+					{ "time": 0.2333, "name": "skill/zhi/ZI_0021" },
+					{ "time": 0.2667, "name": "skill/zhi/ZI_0023" },
+					{ "time": 0.3, "name": "skill/zhi/ZI_0025" },
+					{ "time": 0.3333, "name": "skill/zhi/ZI_0027" },
+					{ "time": 0.3667, "name": "skill/zhi/ZI_0029" },
+					{ "time": 0.4, "name": "skill/zhi/ZI_0031" },
+					{ "time": 0.4333, "name": "skill/zhi/ZI_0033" },
+					{ "time": 0.4667, "name": "skill/zhi/ZI_0035" },
+					{ "time": 0.5, "name": "skill/zhi/ZI_0037" },
+					{ "time": 0.5333, "name": "skill/zhi/ZI_0039" },
+					{ "time": 0.5667, "name": "skill/zhi/ZI_0041" },
+					{ "time": 0.6333, "name": "skill/zhi/ZI_0043" },
+					{ "time": 0.7, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone102": {
+				"translate": [
+					{ "time": 0, "x": -789.29, "y": 892 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 },
+					{ "time": 0.2, "x": 6, "y": 6 }
+				]
+			},
+			"bone103": {
+				"translate": [
+					{ "time": 0, "x": -787.58, "y": 889.89 }
+				],
+				"scale": [
+					{ "time": 0, "x": 4, "y": 4 },
+					{ "time": 0.1, "x": 6, "y": 6 }
+				]
+			},
+			"bone104": {
+				"translate": [
+					{ "time": 0, "x": -777.94, "y": 606.47 },
+					{ "time": 0.1, "x": -777.94, "y": 343.66 }
+				],
+				"scale": [
+					{ "time": 0, "x": 4, "y": 4 },
+					{ "time": 0.1, "x": 4, "y": 6 }
+				]
+			},
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 718.31, "y": 0 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.3333, "name": "qishou_11_1_1" }
+		]
+	}
+}
+}

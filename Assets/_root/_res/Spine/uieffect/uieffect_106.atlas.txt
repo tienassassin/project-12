@@ -1,0 +1,27 @@
+
+uieffect_106.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Texture/uieffect_14 (1)
+  rotate: false
+  xy: 0, 0
+  size: 98, 57
+  orig: 98, 57
+  offset: 0, 0
+  index: -1
+Texture/uieffect_14 (2)
+  rotate: false
+  xy: 100, 0
+  size: 98, 57
+  orig: 98, 57
+  offset: 0, 0
+  index: -1
+Texture/uieffect_14 (3)
+  rotate: false
+  xy: 200, 0
+  size: 98, 57
+  orig: 98, 57
+  offset: 0, 0
+  index: -1

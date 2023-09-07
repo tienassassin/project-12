@@ -1,0 +1,573 @@
+
+uieffect_180.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+image/HOESE
+  rotate: false
+  xy: 0, 381
+  size: 92, 129
+  orig: 92, 130
+  offset: 0, 0
+  index: -1
+image/fengche/fengche_0000
+  rotate: true
+  xy: 105, 182
+  size: 110, 106
+  orig: 122, 109
+  offset: 8, 1
+  index: -1
+image/fengche/fengche_0001
+  rotate: false
+  xy: 554, 183
+  size: 108, 105
+  orig: 122, 109
+  offset: 8, 2
+  index: -1
+image/fengche/fengche_0002
+  rotate: false
+  xy: 664, 78
+  size: 105, 103
+  orig: 122, 109
+  offset: 9, 3
+  index: -1
+image/fengche/fengche_0003
+  rotate: true
+  xy: 771, 78
+  size: 103, 102
+  orig: 122, 109
+  offset: 9, 4
+  index: -1
+image/fengche/fengche_0004
+  rotate: true
+  xy: 1200, 298
+  size: 102, 100
+  orig: 122, 109
+  offset: 10, 6
+  index: -1
+image/fengche/fengche_0005
+  rotate: true
+  xy: 1407, 299
+  size: 103, 96
+  orig: 122, 109
+  offset: 11, 8
+  index: -1
+image/fengche/fengche_0006
+  rotate: false
+  xy: 1727, 204
+  size: 104, 94
+  orig: 122, 109
+  offset: 12, 9
+  index: -1
+image/fengche/fengche_0007
+  rotate: true
+  xy: 1078, 189
+  size: 105, 89
+  orig: 122, 109
+  offset: 13, 12
+  index: -1
+image/fengche/fengche_0008
+  rotate: true
+  xy: 1727, 300
+  size: 104, 90
+  orig: 122, 109
+  offset: 15, 9
+  index: -1
+image/fengche/fengche_0009
+  rotate: true
+  xy: 1077, 80
+  size: 107, 90
+  orig: 122, 109
+  offset: 14, 7
+  index: -1
+image/fengche/fengche_0010
+  rotate: false
+  xy: 1617, 220
+  size: 108, 90
+  orig: 122, 109
+  offset: 13, 5
+  index: -1
+image/fengche/fengche_0011
+  rotate: false
+  xy: 551, 86
+  size: 111, 95
+  orig: 122, 109
+  offset: 11, 3
+  index: -1
+image/fengche/fengche_0012
+  rotate: false
+  xy: 215, 196
+  size: 112, 98
+  orig: 122, 109
+  offset: 10, 2
+  index: -1
+image/fengche/fengche_0013
+  rotate: false
+  xy: 329, 194
+  size: 112, 100
+  orig: 122, 109
+  offset: 10, 1
+  index: -1
+image/fengche/fengche_0014
+  rotate: false
+  xy: 1819, 407
+  size: 113, 103
+  orig: 122, 109
+  offset: 9, 0
+  index: -1
+image/fengche/fengche_0015
+  rotate: false
+  xy: 1589, 406
+  size: 113, 104
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0016
+  rotate: false
+  xy: 326, 404
+  size: 113, 106
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0017
+  rotate: false
+  xy: 1359, 404
+  size: 112, 106
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0018
+  rotate: false
+  xy: 215, 296
+  size: 111, 106
+  orig: 122, 109
+  offset: 8, 1
+  index: -1
+image/fengche/fengche_0019
+  rotate: true
+  xy: 105, 70
+  size: 110, 106
+  orig: 122, 109
+  offset: 8, 1
+  index: -1
+image/fengche/fengche_0020
+  rotate: false
+  xy: 443, 189
+  size: 109, 105
+  orig: 122, 109
+  offset: 8, 2
+  index: -1
+image/fengche/fengche_0021
+  rotate: false
+  xy: 877, 296
+  size: 107, 105
+  orig: 122, 109
+  offset: 8, 2
+  index: -1
+image/fengche/fengche_0022
+  rotate: false
+  xy: 971, 86
+  size: 104, 102
+  orig: 122, 109
+  offset: 9, 4
+  index: -1
+image/fengche/fengche_0023
+  rotate: false
+  xy: 1169, 195
+  size: 101, 101
+  orig: 122, 109
+  offset: 10, 5
+  index: -1
+image/fengche/fengche_0024
+  rotate: true
+  xy: 1833, 200
+  size: 103, 98
+  orig: 122, 109
+  offset: 10, 7
+  index: -1
+image/fengche/fengche_0025
+  rotate: false
+  xy: 1471, 201
+  size: 104, 96
+  orig: 122, 109
+  offset: 11, 8
+  index: -1
+image/fengche/fengche_0026
+  rotate: false
+  xy: 1272, 92
+  size: 105, 93
+  orig: 122, 109
+  offset: 12, 10
+  index: -1
+image/fengche/fengche_0027
+  rotate: false
+  xy: 1278, 0
+  size: 105, 90
+  orig: 122, 109
+  offset: 14, 11
+  index: -1
+image/fengche/fengche_0028
+  rotate: true
+  xy: 1379, 92
+  size: 105, 91
+  orig: 122, 109
+  offset: 15, 8
+  index: -1
+image/fengche/fengche_0029
+  rotate: false
+  xy: 1169, 0
+  size: 107, 90
+  orig: 122, 109
+  offset: 14, 6
+  index: -1
+image/fengche/fengche_0030
+  rotate: false
+  xy: 1617, 312
+  size: 108, 92
+  orig: 122, 109
+  offset: 13, 4
+  index: -1
+image/fengche/fengche_0031
+  rotate: true
+  xy: 765, 183
+  size: 111, 97
+  orig: 122, 109
+  offset: 11, 2
+  index: -1
+image/fengche/fengche_0032
+  rotate: false
+  xy: 437, 88
+  size: 112, 99
+  orig: 122, 109
+  offset: 10, 2
+  index: -1
+image/fengche/fengche_0033
+  rotate: true
+  xy: 0, 266
+  size: 113, 101
+  orig: 122, 109
+  offset: 9, 1
+  index: -1
+image/fengche/fengche_0034
+  rotate: false
+  xy: 1704, 406
+  size: 113, 104
+  orig: 122, 109
+  offset: 9, 0
+  index: -1
+image/fengche/fengche_0035
+  rotate: false
+  xy: 672, 405
+  size: 113, 105
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0036
+  rotate: false
+  xy: 441, 404
+  size: 113, 106
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0037
+  rotate: false
+  xy: 902, 403
+  size: 112, 107
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0038
+  rotate: false
+  xy: 328, 296
+  size: 111, 106
+  orig: 122, 109
+  offset: 8, 1
+  index: -1
+image/fengche/fengche_0039
+  rotate: false
+  xy: 213, 88
+  size: 110, 106
+  orig: 122, 109
+  offset: 8, 1
+  index: -1
+image/fengche/fengche_0040
+  rotate: false
+  xy: 766, 296
+  size: 109, 105
+  orig: 122, 109
+  offset: 8, 2
+  index: -1
+image/fengche/fengche_0041
+  rotate: false
+  xy: 864, 190
+  size: 106, 104
+  orig: 122, 109
+  offset: 9, 3
+  index: -1
+image/fengche/fengche_0042
+  rotate: false
+  xy: 1094, 298
+  size: 104, 102
+  orig: 122, 109
+  offset: 9, 4
+  index: -1
+image/fengche/fengche_0043
+  rotate: false
+  xy: 1169, 92
+  size: 101, 101
+  orig: 122, 109
+  offset: 10, 5
+  index: -1
+image/fengche/fengche_0044
+  rotate: false
+  xy: 1933, 199
+  size: 104, 98
+  orig: 122, 109
+  offset: 10, 7
+  index: -1
+image/fengche/fengche_0045
+  rotate: false
+  xy: 1662, 107
+  size: 105, 95
+  orig: 122, 109
+  offset: 11, 9
+  index: -1
+image/fengche/fengche_0046
+  rotate: true
+  xy: 1690, 0
+  size: 105, 92
+  orig: 122, 109
+  offset: 13, 11
+  index: -1
+image/fengche/fengche_0047
+  rotate: false
+  xy: 1784, 12
+  size: 105, 92
+  orig: 122, 109
+  offset: 14, 9
+  index: -1
+image/fengche/fengche_0048
+  rotate: true
+  xy: 1569, 93
+  size: 106, 91
+  orig: 122, 109
+  offset: 15, 7
+  index: -1
+image/fengche/fengche_0049
+  rotate: false
+  xy: 1472, 0
+  size: 108, 91
+  orig: 122, 109
+  offset: 13, 5
+  index: -1
+image/fengche/fengche_0050
+  rotate: true
+  xy: 875, 78
+  size: 110, 94
+  orig: 122, 109
+  offset: 12, 3
+  index: -1
+image/fengche/fengche_0051
+  rotate: true
+  xy: 664, 183
+  size: 111, 99
+  orig: 122, 109
+  offset: 11, 1
+  index: -1
+image/fengche/fengche_0052
+  rotate: false
+  xy: 1934, 299
+  size: 112, 102
+  orig: 122, 109
+  offset: 10, 0
+  index: -1
+image/fengche/fengche_0053
+  rotate: true
+  xy: 0, 151
+  size: 113, 103
+  orig: 122, 109
+  offset: 9, 0
+  index: -1
+image/fengche/fengche_0054
+  rotate: false
+  xy: 556, 405
+  size: 114, 105
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0055
+  rotate: false
+  xy: 94, 404
+  size: 114, 106
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0056
+  rotate: false
+  xy: 787, 403
+  size: 113, 107
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0057
+  rotate: false
+  xy: 1016, 402
+  size: 112, 108
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0058
+  rotate: false
+  xy: 1130, 402
+  size: 112, 108
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0059
+  rotate: false
+  xy: 103, 294
+  size: 110, 108
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0060
+  rotate: false
+  xy: 655, 296
+  size: 109, 107
+  orig: 122, 109
+  offset: 8, 1
+  index: -1
+image/fengche/fengche_0061
+  rotate: false
+  xy: 986, 296
+  size: 106, 104
+  orig: 122, 109
+  offset: 9, 3
+  index: -1
+image/fengche/fengche_0062
+  rotate: false
+  xy: 972, 190
+  size: 104, 104
+  orig: 122, 109
+  offset: 9, 3
+  index: -1
+image/fengche/fengche_0063
+  rotate: false
+  xy: 1302, 301
+  size: 103, 101
+  orig: 122, 109
+  offset: 9, 5
+  index: -1
+image/fengche/fengche_0064
+  rotate: false
+  xy: 1365, 199
+  size: 104, 98
+  orig: 122, 109
+  offset: 11, 7
+  index: -1
+image/fengche/fengche_0065
+  rotate: true
+  xy: 1472, 93
+  size: 106, 95
+  orig: 122, 109
+  offset: 11, 9
+  index: -1
+image/fengche/fengche_0066
+  rotate: false
+  xy: 1892, 105
+  size: 105, 92
+  orig: 122, 109
+  offset: 13, 11
+  index: -1
+image/fengche/fengche_0067
+  rotate: false
+  xy: 1784, 106
+  size: 106, 92
+  orig: 122, 109
+  offset: 14, 9
+  index: -1
+image/fengche/fengche_0068
+  rotate: false
+  xy: 1582, 0
+  size: 106, 91
+  orig: 122, 109
+  offset: 15, 7
+  index: -1
+image/fengche/fengche_0069
+  rotate: true
+  xy: 1272, 187
+  size: 109, 91
+  orig: 122, 109
+  offset: 13, 5
+  index: -1
+image/fengche/fengche_0070
+  rotate: false
+  xy: 1505, 310
+  size: 110, 94
+  orig: 122, 109
+  offset: 12, 3
+  index: -1
+image/fengche/fengche_0071
+  rotate: true
+  xy: 554, 290
+  size: 112, 99
+  orig: 122, 109
+  offset: 10, 1
+  index: -1
+image/fengche/fengche_0072
+  rotate: false
+  xy: 1819, 305
+  size: 113, 100
+  orig: 122, 109
+  offset: 9, 1
+  index: -1
+image/fengche/fengche_0073
+  rotate: true
+  xy: 0, 36
+  size: 113, 103
+  orig: 122, 109
+  offset: 9, 0
+  index: -1
+image/fengche/fengche_0074
+  rotate: false
+  xy: 1473, 406
+  size: 114, 104
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0075
+  rotate: false
+  xy: 210, 404
+  size: 114, 106
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0076
+  rotate: false
+  xy: 1244, 404
+  size: 113, 106
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0077
+  rotate: false
+  xy: 1934, 403
+  size: 112, 107
+  orig: 122, 109
+  offset: 8, 0
+  index: -1
+image/fengche/fengche_0078
+  rotate: false
+  xy: 441, 296
+  size: 111, 106
+  orig: 122, 109
+  offset: 8, 1
+  index: -1
+image/fengche/fengche_0079
+  rotate: false
+  xy: 325, 86
+  size: 110, 106
+  orig: 122, 109
+  offset: 8, 1
+  index: -1

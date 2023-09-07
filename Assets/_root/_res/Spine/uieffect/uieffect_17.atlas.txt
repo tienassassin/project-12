@@ -1,0 +1,111 @@
+
+uieffect_17.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/glow_line
+  rotate: false
+  xy: 260, 375
+  size: 240, 135
+  orig: 240, 135
+  offset: 0, 0
+  index: -1
+images/linesmstom_00
+  rotate: false
+  xy: 302, 343
+  size: 11, 30
+  orig: 105, 55
+  offset: 15, 9
+  index: -1
+images/linesmstom_01
+  rotate: false
+  xy: 260, 306
+  size: 20, 32
+  orig: 105, 55
+  offset: 16, 9
+  index: -1
+images/linesmstom_02
+  rotate: false
+  xy: 2, 2
+  size: 30, 33
+  orig: 105, 55
+  offset: 16, 9
+  index: -1
+images/linesmstom_03
+  rotate: false
+  xy: 448, 340
+  size: 39, 33
+  orig: 105, 55
+  offset: 16, 10
+  index: -1
+images/linesmstom_04
+  rotate: false
+  xy: 2, 72
+  size: 40, 33
+  orig: 105, 55
+  offset: 25, 11
+  index: -1
+images/linesmstom_05
+  rotate: false
+  xy: 260, 340
+  size: 40, 33
+  orig: 105, 55
+  offset: 34, 12
+  index: -1
+images/linesmstom_06
+  rotate: false
+  xy: 318, 210
+  size: 40, 33
+  orig: 105, 55
+  offset: 44, 13
+  index: -1
+images/linesmstom_07
+  rotate: false
+  xy: 2, 37
+  size: 39, 33
+  orig: 105, 55
+  offset: 53, 14
+  index: -1
+images/linesmstom_08
+  rotate: false
+  xy: 44, 74
+  size: 28, 31
+  orig: 105, 55
+  offset: 64, 15
+  index: -1
+images/linesmstom_09
+  rotate: false
+  xy: 318, 180
+  size: 20, 28
+  orig: 105, 55
+  offset: 72, 18
+  index: -1
+images/linesmstom_10
+  rotate: false
+  xy: 360, 227
+  size: 9, 16
+  orig: 105, 55
+  offset: 83, 28
+  index: -1
+images/public_yinshen_mutl_D_00
+  rotate: false
+  xy: 318, 245
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+images/public_yinshen_mutl_D_01
+  rotate: false
+  xy: 2, 254
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+images/uieffect_7 (2)
+  rotate: false
+  xy: 2, 107
+  size: 314, 145
+  orig: 314, 145
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+uieffect_132.png
+size: 128,32
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+texture/red_002_b
+  rotate: false
+  xy: 0, 0
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+texture/red_003_a
+  rotate: false
+  xy: 34, 0
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

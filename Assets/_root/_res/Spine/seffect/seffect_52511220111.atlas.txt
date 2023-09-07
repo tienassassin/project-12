@@ -1,0 +1,132 @@
+
+seffect_52511220111.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/attack_hit/0_00000
+  rotate: false
+  xy: 277, 42
+  size: 105, 98
+  orig: 250, 250
+  offset: 68, 80
+  index: -1
+effect/attack_hit/0_00001
+  rotate: false
+  xy: 1002, 103
+  size: 160, 150
+  orig: 250, 250
+  offset: 46, 54
+  index: -1
+effect/attack_hit/0_00002
+  rotate: false
+  xy: 823, 88
+  size: 177, 165
+  orig: 250, 250
+  offset: 38, 46
+  index: -1
+effect/attack_hit/0_00004
+  rotate: false
+  xy: 2, 2
+  size: 147, 138
+  orig: 250, 250
+  offset: 54, 58
+  index: -1
+effect/attack_hit/0_00006
+  rotate: false
+  xy: 151, 20
+  size: 124, 120
+  orig: 250, 250
+  offset: 60, 66
+  index: -1
+effect/attack_hit/0_00008
+  rotate: false
+  xy: 1904, 169
+  size: 99, 84
+  orig: 250, 250
+  offset: 76, 85
+  index: -1
+effect/attack_hit/0_00010
+  rotate: false
+  xy: 1801, 161
+  size: 101, 92
+  orig: 250, 250
+  offset: 71, 82
+  index: -1
+effect/attack_hit/0_00012
+  rotate: false
+  xy: 1566, 167
+  size: 110, 86
+  orig: 250, 250
+  offset: 64, 76
+  index: -1
+effect/attack_hit/0_00014
+  rotate: false
+  xy: 1678, 179
+  size: 121, 74
+  orig: 250, 250
+  offset: 56, 91
+  index: -1
+effect/dilie
+  rotate: false
+  xy: 2, 142
+  size: 399, 111
+  orig: 512, 128
+  offset: 55, 10
+  index: -1
+effect/glow01
+  rotate: false
+  xy: 403, 23
+  size: 230, 230
+  orig: 256, 256
+  offset: 13, 13
+  index: -1
+effect/skill2_hit_blast/0_00001
+  rotate: false
+  xy: 1164, 111
+  size: 151, 142
+  orig: 200, 200
+  offset: 25, 33
+  index: -1
+effect/skill2_hit_blast/0_00003
+  rotate: false
+  xy: 635, 80
+  size: 186, 173
+  orig: 200, 200
+  offset: 9, 16
+  index: -1
+effect/skill2_hit_blast/0_00005
+  rotate: false
+  xy: 1447, 163
+  size: 117, 90
+  orig: 200, 200
+  offset: 41, 54
+  index: -1
+effect/skill2_hit_blast/0_00007
+  rotate: false
+  xy: 1447, 78
+  size: 89, 83
+  orig: 200, 200
+  offset: 56, 59
+  index: -1
+effect/skill2_hit_blast/0_00009
+  rotate: true
+  xy: 2005, 179
+  size: 74, 40
+  orig: 200, 200
+  offset: 55, 104
+  index: -1
+effect/skill2_hit_blast/0_00011
+  rotate: false
+  xy: 151, 13
+  size: 5, 5
+  orig: 200, 200
+  offset: 90, 144
+  index: -1
+effect/white01
+  rotate: false
+  xy: 1317, 125
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

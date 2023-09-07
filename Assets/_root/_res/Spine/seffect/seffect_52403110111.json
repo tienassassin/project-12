@@ -1,0 +1,59 @@
+{
+"skeleton": { "hash": "zCkOQH6u2qVIDveteYV5ZBsyWqQ", "spine": "3.5.35", "width": 293, "height": 158 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": 26.22, "y": 2.68 }
+],
+"slots": [
+	{ "name": "bone", "bone": "bone", "attachment": "998-1" },
+	{ "name": "dao1", "bone": "bone", "attachment": "dao1" }
+],
+"skins": {
+	"default": {
+		"bone": {
+			"998-1": { "x": -110.12, "width": 293, "height": 158 }
+		},
+		"dao1": {
+			"dao1": { "x": -1.7, "y": 0.85, "scaleY": -1, "rotation": 136.86, "width": 42, "height": 38 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.0333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -17.83, "y": 0, "curve": "stepped" },
+					{ "time": 0.0333, "x": -17.83, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2, "curve": "stepped" },
+					{ "time": 0.0333, "x": 2, "y": 2 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0333, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

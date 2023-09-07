@@ -1,0 +1,83 @@
+
+sbuff_35.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/bf_q/0_00000
+  rotate: false
+  xy: 224, 2
+  size: 199, 233
+  orig: 400, 400
+  offset: 103, 72
+  index: -1
+images/bf_q/0_00002
+  rotate: false
+  xy: 653, 274
+  size: 199, 236
+  orig: 400, 400
+  offset: 93, 78
+  index: -1
+images/bf_q/0_00004
+  rotate: false
+  xy: 2, 4
+  size: 210, 228
+  orig: 400, 400
+  offset: 91, 92
+  index: -1
+images/bf_q/0_00006
+  rotate: false
+  xy: 439, 252
+  size: 212, 258
+  orig: 400, 400
+  offset: 93, 76
+  index: -1
+images/bf_q/0_00008
+  rotate: false
+  xy: 2, 234
+  size: 220, 276
+  orig: 400, 400
+  offset: 93, 77
+  index: -1
+images/bf_q/0_00010
+  rotate: false
+  xy: 224, 237
+  size: 213, 273
+  orig: 400, 400
+  offset: 93, 75
+  index: -1
+images/bf_sd/0_00000
+  rotate: false
+  xy: 854, 309
+  size: 156, 201
+  orig: 400, 400
+  offset: 128, 69
+  index: -1
+images/bf_sd/0_00002
+  rotate: true
+  xy: 653, 99
+  size: 173, 196
+  orig: 400, 400
+  offset: 121, 72
+  index: -1
+images/bf_sd/0_00005
+  rotate: true
+  xy: 439, 77
+  size: 173, 176
+  orig: 400, 400
+  offset: 121, 69
+  index: -1
+images/bf_sd/0_00007
+  rotate: true
+  xy: 854, 170
+  size: 137, 153
+  orig: 400, 400
+  offset: 137, 78
+  index: -1
+images/bf_sd/0_00010
+  rotate: false
+  xy: 851, 34
+  size: 135, 134
+  orig: 400, 400
+  offset: 140, 91
+  index: -1

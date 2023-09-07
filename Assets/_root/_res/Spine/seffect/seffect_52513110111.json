@@ -1,0 +1,129 @@
+{
+"skeleton": { "hash": "zCnSqdliZGNLb3oYdOx5ZcNux8A", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone28", "parent": "bone", "rotation": 74.11 },
+	{ "name": "skill", "parent": "bone", "rotation": 74.11 }
+],
+"slots": [
+	{ "name": "skill/glass/glass_0001", "bone": "skill" },
+	{ "name": "skill/ice/ice_0008", "bone": "bone28" }
+],
+"skins": {
+	"default": {
+		"skill/glass/glass_0001": {
+			"skill/glass/glass_0002": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0004": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0006": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0008": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0010": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0012": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0014": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0016": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0018": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0020": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0022": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0024": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 },
+			"skill/glass/glass_0026": { "x": 141.4, "y": 17.68, "width": 369, "height": 205 }
+		},
+		"skill/ice/ice_0008": {
+			"skill/ice/ice_0008": { "width": 182, "height": 182 },
+			"skill/ice/ice_0009": { "width": 182, "height": 182 },
+			"skill/ice/ice_0010": { "width": 182, "height": 182 },
+			"skill/ice/ice_0011": { "width": 182, "height": 182 },
+			"skill/ice/ice_0012": { "width": 182, "height": 182 },
+			"skill/ice/ice_0013": { "width": 182, "height": 182 },
+			"skill/ice/ice_0014": { "width": 182, "height": 182 }
+		}
+	}
+},
+"events": {
+	"hit_11_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"skill/glass/glass_0001": {
+				"color": [
+					{ "time": 0.7667, "color": "ffffffff" },
+					{ "time": 1.1333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "skill/glass/glass_0002" },
+					{ "time": 0.0667, "name": "skill/glass/glass_0004" },
+					{ "time": 0.1333, "name": "skill/glass/glass_0006" },
+					{ "time": 0.2, "name": "skill/glass/glass_0008" },
+					{ "time": 0.2667, "name": "skill/glass/glass_0010" },
+					{ "time": 0.3333, "name": "skill/glass/glass_0012" },
+					{ "time": 0.4, "name": "skill/glass/glass_0014" },
+					{ "time": 0.4667, "name": "skill/glass/glass_0016" },
+					{ "time": 0.5333, "name": "skill/glass/glass_0018" },
+					{ "time": 0.6, "name": "skill/glass/glass_0020" },
+					{ "time": 0.6667, "name": "skill/glass/glass_0022" },
+					{ "time": 0.7333, "name": "skill/glass/glass_0024" },
+					{ "time": 0.8, "name": "skill/glass/glass_0026" },
+					{ "time": 1.1333, "name": null }
+				]
+			},
+			"skill/ice/ice_0008": {
+				"attachment": [
+					{ "time": 0.2333, "name": "skill/ice/ice_0008" },
+					{ "time": 0.3, "name": "skill/ice/ice_0009" },
+					{ "time": 0.3667, "name": "skill/ice/ice_0010" },
+					{ "time": 0.4333, "name": "skill/ice/ice_0011" },
+					{ "time": 0.5, "name": "skill/ice/ice_0012" },
+					{ "time": 0.5667, "name": "skill/ice/ice_0013" },
+					{ "time": 0.6333, "name": "skill/ice/ice_0014" },
+					{ "time": 0.7, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone28": {
+				"rotate": [
+					{ "time": 0, "angle": -2.31 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.2333, "x": 7.22, "y": 29.34 }
+				],
+				"scale": [
+					{ "time": 0.2333, "x": 2, "y": 2 },
+					{ "time": 0.5, "x": 4, "y": 4 }
+				]
+			},
+			"skill": {
+				"translate": [
+					{ "time": 0, "x": -19.64, "y": -70.9 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": -74.11 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": -1.54 }
+				],
+				"translate": [
+					{ "time": 0, "x": 36.69, "y": -10.44 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.4667, "name": "hit_11_1_1" }
+		]
+	}
+}
+}

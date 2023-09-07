@@ -1,0 +1,125 @@
+
+uieffect_149.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/caidaiFrames/caidai_01
+  rotate: false
+  xy: 1019, 55
+  size: 62, 37
+  orig: 62, 37
+  offset: 0, 0
+  index: -1
+images/caidaiFrames/caidai_02
+  rotate: false
+  xy: 1247, 126
+  size: 50, 49
+  orig: 51, 49
+  offset: 0, 0
+  index: -1
+images/caidaiFrames/caidai_03
+  rotate: false
+  xy: 1702, 217
+  size: 42, 37
+  orig: 43, 42
+  offset: 0, 4
+  index: -1
+images/caidaiFrames/caidai_04
+  rotate: true
+  xy: 1083, 59
+  size: 33, 40
+  orig: 33, 40
+  offset: 0, 0
+  index: -1
+images/caidaiFrames/caidai_05
+  rotate: false
+  xy: 1247, 96
+  size: 28, 28
+  orig: 28, 29
+  offset: 0, 1
+  index: -1
+images/caidaiFrames/caidai_06
+  rotate: false
+  xy: 1299, 141
+  size: 16, 34
+  orig: 16, 34
+  offset: 0, 0
+  index: -1
+images/caidaiFrames/caidai_07
+  rotate: false
+  xy: 1702, 192
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: -1
+images/caidaiFrames/caidai_08
+  rotate: false
+  xy: 1746, 241
+  size: 20, 13
+  orig: 20, 13
+  offset: 0, 0
+  index: -1
+images/caidai_1
+  rotate: false
+  xy: 696, 177
+  size: 634, 77
+  orig: 635, 77
+  offset: 1, 0
+  index: -1
+images/caidai_2
+  rotate: false
+  xy: 0, 0
+  size: 155, 46
+  orig: 155, 47
+  offset: 0, 0
+  index: -1
+images/caidai_3
+  rotate: false
+  xy: 1019, 94
+  size: 226, 81
+  orig: 226, 81
+  offset: 0, 0
+  index: -1
+images/gongxi_1
+  rotate: false
+  xy: 1332, 190
+  size: 189, 64
+  orig: 200, 114
+  offset: 7, 21
+  index: -1
+images/gongxi_2
+  rotate: false
+  xy: 1332, 190
+  size: 189, 64
+  orig: 200, 114
+  offset: 7, 21
+  index: -1
+images/huode_1
+  rotate: false
+  xy: 1523, 192
+  size: 177, 62
+  orig: 178, 105
+  offset: 0, 21
+  index: -1
+images/huode_2
+  rotate: false
+  xy: 1523, 192
+  size: 177, 62
+  orig: 178, 105
+  offset: 0, 21
+  index: -1
+images/shanguang/sg_02
+  rotate: false
+  xy: 0, 49
+  size: 694, 205
+  orig: 718, 210
+  offset: 10, 3
+  index: -1
+images/zhongxinyuan
+  rotate: false
+  xy: 696, 48
+  size: 321, 127
+  orig: 338, 136
+  offset: 6, 0
+  index: -1

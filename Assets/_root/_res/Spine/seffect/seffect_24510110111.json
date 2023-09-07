@@ -1,0 +1,85 @@
+{
+"skeleton": { "hash": "R/8pTPLGBwJJnvrzBjzdgx6shr4", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root", "x": 2274.94, "y": 2495.74 },
+	{ "name": "skill_buff", "parent": "root", "x": -2187.96, "y": -2408.76, "scaleX": 4, "scaleY": 4, "color": "ff8800ff" }
+],
+"slots": [
+	{ "name": "skill/4/000", "bone": "skill_buff" }
+],
+"skins": {
+	"default": {
+		"skill/4/000": {
+			"skill/4/000": { "width": 240, "height": 270 },
+			"skill/4/002": { "width": 240, "height": 270 },
+			"skill/4/004": { "width": 240, "height": 270 },
+			"skill/4/006": { "width": 240, "height": 270 },
+			"skill/4/008": { "width": 240, "height": 270 },
+			"skill/4/010": { "width": 240, "height": 270 },
+			"skill/4/012": { "width": 240, "height": 270 },
+			"skill/4/014": { "width": 240, "height": 270 },
+			"skill/4/016": { "width": 240, "height": 270 },
+			"skill/4/018": { "width": 240, "height": 270 },
+			"skill/4/020": { "width": 240, "height": 270 },
+			"skill/4/022": { "width": 240, "height": 270 },
+			"skill/4/024": { "width": 240, "height": 270 },
+			"skill/4/026": { "width": 240, "height": 270 }
+		}
+	}
+},
+"events": {
+	"hit_11_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"skill/4/000": {
+				"color": [
+					{ "time": 0.8, "color": "ffffffff" },
+					{ "time": 0.9333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "skill/4/000" },
+					{ "time": 0.0667, "name": "skill/4/002" },
+					{ "time": 0.1333, "name": "skill/4/004" },
+					{ "time": 0.2, "name": "skill/4/006" },
+					{ "time": 0.2667, "name": "skill/4/008" },
+					{ "time": 0.3333, "name": "skill/4/010" },
+					{ "time": 0.4, "name": "skill/4/012" },
+					{ "time": 0.4667, "name": "skill/4/014" },
+					{ "time": 0.5333, "name": "skill/4/016" },
+					{ "time": 0.6, "name": "skill/4/018" },
+					{ "time": 0.6667, "name": "skill/4/020" },
+					{ "time": 0.7333, "name": "skill/4/022" },
+					{ "time": 0.8, "name": "skill/4/024" },
+					{ "time": 0.8667, "name": "skill/4/026" },
+					{ "time": 0.9333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"skill_buff": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.9333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -91.45, "y": 45.73 },
+					{ "time": 0.3667, "x": -91.45, "y": 114.32 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.9333, "x": 1, "y": 1 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.9333, "x": 0, "y": 0 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.5, "name": "hit_11_1_1" }
+		]
+	}
+}
+}

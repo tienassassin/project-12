@@ -1,0 +1,87 @@
+{
+"skeleton": { "hash": "NfM3Mf8HU0cwcb4vGMjPWDT0Rc4", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "tx", "parent": "root" },
+	{ "name": "skill", "parent": "tx" },
+	{ "name": "2", "parent": "skill", "x": 2602.62, "y": -595.08, "scaleX": 1.5, "scaleY": 1.5 }
+],
+"slots": [
+	{ "name": "bao2", "bone": "2" }
+],
+"skins": {
+	"default": {
+		"bao2": {
+			"skill/kuoshan/kuoshan_0000": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0003": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0008": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0013": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0015": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0019": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0074": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0078": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0083": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0085": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0088": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0092": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0095": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0097": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0101": { "width": 241, "height": 245 },
+			"skill/kuoshan/kuoshan_0104": { "width": 241, "height": 245 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"bao2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "skill/kuoshan/kuoshan_0000" },
+					{ "time": 0.0667, "name": "skill/kuoshan/kuoshan_0003" },
+					{ "time": 0.1333, "name": "skill/kuoshan/kuoshan_0008" },
+					{ "time": 0.2, "name": "skill/kuoshan/kuoshan_0013" },
+					{ "time": 0.2667, "name": "skill/kuoshan/kuoshan_0015" },
+					{ "time": 0.3333, "name": "skill/kuoshan/kuoshan_0019" },
+					{ "time": 0.4, "name": "skill/kuoshan/kuoshan_0074" },
+					{ "time": 0.4667, "name": "skill/kuoshan/kuoshan_0078" },
+					{ "time": 0.5333, "name": "skill/kuoshan/kuoshan_0083" },
+					{ "time": 0.6, "name": "skill/kuoshan/kuoshan_0085" },
+					{ "time": 0.6667, "name": "skill/kuoshan/kuoshan_0088" },
+					{ "time": 0.7333, "name": "skill/kuoshan/kuoshan_0092" },
+					{ "time": 0.8, "name": "skill/kuoshan/kuoshan_0095" },
+					{ "time": 0.8667, "name": "skill/kuoshan/kuoshan_0097" },
+					{ "time": 0.9333, "name": "skill/kuoshan/kuoshan_0101" },
+					{ "time": 1, "name": "skill/kuoshan/kuoshan_0104" },
+					{ "time": 1.0667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"2": {
+				"translate": [
+					{ "time": 0, "x": -2603.58, "y": 595.14 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.4, "y": 0.4 },
+					{ "time": 0.2333, "x": 4.441, "y": 4.441, "curve": "stepped" },
+					{ "time": 0.6333, "x": 4.441, "y": 4.441 },
+					{ "time": 0.6667, "x": 7.011, "y": 7.011 },
+					{ "time": 0.7, "x": 4.441, "y": 4.441 },
+					{ "time": 0.7333, "x": 1.706, "y": 1.706 },
+					{ "time": 0.7667, "x": 4.441, "y": 4.441 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.6667, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

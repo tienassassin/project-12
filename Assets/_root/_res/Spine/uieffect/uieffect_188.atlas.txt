@@ -1,0 +1,398 @@
+
+uieffect_188.png
+size: 4096,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+image/kuoshan_xian
+  rotate: false
+  xy: 3020, 80
+  size: 232, 232
+  orig: 234, 233
+  offset: 1, 1
+  index: -1
+image/light/light_0003
+  rotate: false
+  xy: 2112, 1242
+  size: 540, 274
+  orig: 540, 274
+  offset: 0, 0
+  index: -1
+image/light/light_0005
+  rotate: true
+  xy: 2153, 371
+  size: 540, 274
+  orig: 540, 274
+  offset: 0, 0
+  index: -1
+image/light/light_0007
+  rotate: false
+  xy: 3210, 1603
+  size: 540, 274
+  orig: 540, 274
+  offset: 0, 0
+  index: -1
+image/light/light_0009
+  rotate: true
+  xy: 2429, 371
+  size: 540, 274
+  orig: 540, 274
+  offset: 0, 0
+  index: -1
+image/light/light_0011
+  rotate: false
+  xy: 2153, 95
+  size: 540, 274
+  orig: 540, 274
+  offset: 0, 0
+  index: -1
+image/light/light_0013
+  rotate: false
+  xy: 3210, 1327
+  size: 540, 274
+  orig: 540, 274
+  offset: 0, 0
+  index: -1
+image/line_light
+  rotate: false
+  xy: 3830, 766
+  size: 232, 131
+  orig: 234, 131
+  offset: 1, 0
+  index: -1
+image/quan
+  rotate: true
+  xy: 2, 13
+  size: 510, 543
+  orig: 518, 543
+  offset: 4, 0
+  index: -1
+image/quan_a
+  rotate: true
+  xy: 2705, 311
+  size: 265, 283
+  orig: 268, 284
+  offset: 3, 1
+  index: -1
+image/quan_b
+  rotate: false
+  xy: 3830, 899
+  size: 227, 227
+  orig: 229, 228
+  offset: 1, 0
+  index: -1
+image/quan_guang
+  rotate: false
+  xy: 3830, 1128
+  size: 228, 228
+  orig: 233, 228
+  offset: 4, 0
+  index: -1
+image/she_xian_guang
+  rotate: false
+  xy: 1816, 16
+  size: 232, 226
+  orig: 232, 226
+  offset: 0, 0
+  index: -1
+image/she_xian_guang_A
+  rotate: false
+  xy: 3712, 539
+  size: 226, 225
+  orig: 233, 225
+  offset: 0, 0
+  index: -1
+image/star/star_0001
+  rotate: true
+  xy: 4047, 1464
+  size: 413, 36
+  orig: 519, 311
+  offset: 60, 56
+  index: -1
+image/star/star_0003
+  rotate: false
+  xy: 616, 1343
+  size: 437, 88
+  orig: 519, 311
+  offset: 41, 23
+  index: -1
+image/star/star_0005
+  rotate: false
+  xy: 1369, 2
+  size: 445, 121
+  orig: 519, 311
+  offset: 37, 10
+  index: -1
+image/star/star_0007
+  rotate: false
+  xy: 3254, 91
+  size: 456, 145
+  orig: 519, 311
+  offset: 36, 3
+  index: -1
+image/star/star_0009
+  rotate: true
+  xy: 2979, 632
+  size: 464, 164
+  orig: 519, 311
+  offset: 36, 1
+  index: -1
+image/star/star_0011
+  rotate: false
+  xy: 2733, 1362
+  size: 473, 184
+  orig: 519, 311
+  offset: 26, 0
+  index: -1
+image/star/star_0013
+  rotate: false
+  xy: 3145, 592
+  size: 499, 208
+  orig: 519, 311
+  offset: 17, 0
+  index: -1
+image/star/star_0015
+  rotate: false
+  xy: 3145, 802
+  size: 516, 237
+  orig: 519, 311
+  offset: 2, 0
+  index: -1
+image/star/star_0017
+  rotate: false
+  xy: 2654, 1098
+  size: 519, 262
+  orig: 519, 311
+  offset: 0, 0
+  index: -1
+image/star/star_0019
+  rotate: false
+  xy: 3175, 1041
+  size: 519, 284
+  orig: 519, 311
+  offset: 0, 2
+  index: -1
+image/star/star_0021
+  rotate: true
+  xy: 3752, 1358
+  size: 519, 293
+  orig: 519, 311
+  offset: 0, 16
+  index: -1
+image/star/star_0023
+  rotate: true
+  xy: 2705, 578
+  size: 518, 272
+  orig: 519, 311
+  offset: 1, 39
+  index: -1
+image/star/star_0025
+  rotate: false
+  xy: 2695, 110
+  size: 323, 199
+  orig: 519, 311
+  offset: 178, 61
+  index: -1
+image/zi
+  rotate: false
+  xy: 944, 16
+  size: 399, 79
+  orig: 409, 112
+  offset: 3, 8
+  index: -1
+image/zi_di
+  rotate: true
+  xy: 3696, 857
+  size: 468, 132
+  orig: 468, 132
+  offset: 0, 0
+  index: -1
+image/zou_xian/zou_xian_0039
+  rotate: false
+  xy: 2050, 143
+  size: 101, 99
+  orig: 733, 972
+  offset: 5, 381
+  index: -1
+image/zou_xian/zou_xian_0040
+  rotate: true
+  xy: 3254, 243
+  size: 69, 110
+  orig: 733, 972
+  offset: 3, 392
+  index: -1
+image/zou_xian/zou_xian_0041
+  rotate: true
+  xy: 2148, 16
+  size: 77, 100
+  orig: 733, 972
+  offset: 1, 407
+  index: -1
+image/zou_xian/zou_xian_0042
+  rotate: true
+  xy: 2654, 1406
+  size: 110, 77
+  orig: 733, 972
+  offset: 3, 432
+  index: -1
+image/zou_xian/zou_xian_0043
+  rotate: true
+  xy: 2090, 913
+  size: 327, 496
+  orig: 733, 972
+  offset: 7, 16
+  index: -1
+image/zou_xian/zou_xian_0044
+  rotate: true
+  xy: 1242, 1779
+  size: 261, 946
+  orig: 733, 972
+  offset: 30, 14
+  index: -1
+image/zou_xian/zou_xian_0045
+  rotate: true
+  xy: 2190, 1858
+  size: 182, 947
+  orig: 733, 972
+  offset: 64, 16
+  index: -1
+image/zou_xian/zou_xian_0046
+  rotate: true
+  xy: 3139, 1879
+  size: 161, 948
+  orig: 733, 972
+  offset: 100, 17
+  index: -1
+image/zou_xian/zou_xian_0047
+  rotate: true
+  xy: 1242, 1518
+  size: 259, 926
+  orig: 733, 972
+  offset: 89, 37
+  index: -1
+image/zou_xian/zou_xian_0048
+  rotate: true
+  xy: 1242, 1277
+  size: 239, 868
+  orig: 733, 972
+  offset: 86, 93
+  index: -1
+image/zou_xian/zou_xian_0049
+  rotate: false
+  xy: 2, 525
+  size: 486, 792
+  orig: 733, 972
+  offset: 88, 148
+  index: -1
+image/zou_xian/zou_xian_0050
+  rotate: false
+  xy: 2, 1319
+  size: 612, 721
+  orig: 733, 972
+  offset: 92, 174
+  index: -1
+image/zou_xian/zou_xian_0051
+  rotate: false
+  xy: 616, 1433
+  size: 624, 607
+  orig: 733, 972
+  offset: 50, 213
+  index: -1
+image/zou_xian/zou_xian_0052
+  rotate: false
+  xy: 926, 766
+  size: 596, 509
+  orig: 733, 972
+  offset: 49, 251
+  index: -1
+image/zou_xian/zou_xian_0053
+  rotate: false
+  xy: 1524, 827
+  size: 564, 448
+  orig: 733, 972
+  offset: 51, 288
+  index: -1
+image/zou_xian/zou_xian_0054
+  rotate: true
+  xy: 490, 623
+  size: 694, 434
+  orig: 733, 972
+  offset: 33, 280
+  index: -1
+image/zou_xian/zou_xian_0055
+  rotate: true
+  xy: 944, 97
+  size: 667, 423
+  orig: 733, 972
+  offset: 32, 290
+  index: -1
+image/zou_xian/zou_xian_0056
+  rotate: true
+  xy: 1369, 125
+  size: 639, 412
+  orig: 733, 972
+  offset: 33, 300
+  index: -1
+image/zou_xian/zou_xian_0057
+  rotate: true
+  xy: 547, 11
+  size: 610, 395
+  orig: 733, 972
+  offset: 33, 310
+  index: -1
+image/zou_xian/zou_xian_0058
+  rotate: true
+  xy: 1783, 244
+  size: 581, 368
+  orig: 733, 972
+  offset: 36, 321
+  index: -1
+image/zou_xian/zou_xian_0059
+  rotate: false
+  xy: 2190, 1518
+  size: 541, 338
+  orig: 733, 972
+  offset: 48, 332
+  index: -1
+image/zou_xian/zou_xian_0060
+  rotate: false
+  xy: 2733, 1548
+  size: 475, 308
+  orig: 733, 972
+  offset: 86, 342
+  index: -1
+image/zou_xian/zou_xian_0061
+  rotate: false
+  xy: 2990, 314
+  size: 412, 276
+  orig: 733, 972
+  offset: 121, 354
+  index: -1
+image/zou_xian/zou_xian_0062
+  rotate: true
+  xy: 3404, 238
+  size: 352, 241
+  orig: 733, 972
+  offset: 153, 365
+  index: -1
+image/zou_xian/zou_xian_0063
+  rotate: false
+  xy: 1055, 1318
+  size: 147, 113
+  orig: 733, 972
+  offset: 185, 444
+  index: -1
+image/zou_xian/zou_xian_0064
+  rotate: true
+  xy: 2050, 23
+  size: 118, 96
+  orig: 733, 972
+  offset: 215, 443
+  index: -1
+image/zou_xian/zou_xian_0065
+  rotate: false
+  xy: 2250, 18
+  size: 89, 75
+  orig: 733, 972
+  offset: 243, 444
+  index: -1

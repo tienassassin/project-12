@@ -1,0 +1,69 @@
+
+seffect_54506220112.png
+size: 2048,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+heitao
+  rotate: false
+  xy: 2, 2
+  size: 25, 37
+  orig: 27, 39
+  offset: 1, 1
+  index: -1
+skill/boom_a/boom_a_0001
+  rotate: false
+  xy: 1679, 23
+  size: 176, 82
+  orig: 231, 122
+  offset: 42, 18
+  index: -1
+skill/boom_a/boom_a_0002
+  rotate: false
+  xy: 516, 14
+  size: 201, 91
+  orig: 231, 122
+  offset: 13, 13
+  index: -1
+skill/boom_a/boom_a_0003
+  rotate: false
+  xy: 1503, 10
+  size: 174, 95
+  orig: 231, 122
+  offset: 42, 14
+  index: -1
+skill/boom_a/boom_a_0004
+  rotate: false
+  xy: 719, 8
+  size: 197, 97
+  orig: 231, 122
+  offset: 19, 14
+  index: -1
+skill/boom_a/boom_a_0005
+  rotate: false
+  xy: 918, 9
+  size: 193, 96
+  orig: 231, 122
+  offset: 19, 15
+  index: -1
+skill/boom_a/boom_a_0006
+  rotate: false
+  xy: 1113, 9
+  size: 193, 96
+  orig: 231, 122
+  offset: 19, 15
+  index: -1
+skill/boom_a/boom_a_0007
+  rotate: false
+  xy: 1308, 9
+  size: 193, 96
+  orig: 231, 122
+  offset: 19, 15
+  index: -1
+skill/dandao
+  rotate: true
+  xy: 2, 41
+  size: 64, 512
+  orig: 64, 512
+  offset: 0, 0
+  index: -1

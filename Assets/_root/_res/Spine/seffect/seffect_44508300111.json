@@ -1,0 +1,54 @@
+{
+"skeleton": { "hash": "Rz8gOMFGW7B+snO/BV6N5b0utv0", "spine": "3.5.35", "width": 78, "height": 88 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "attack_bullet", "parent": "root", "scaleX": 3.33, "scaleY": 3.33 },
+	{ "name": "jianzi", "parent": "root" }
+],
+"slots": [
+	{ "name": "images/attack_bullet", "bone": "attack_bullet" },
+	{ "name": "jianzi", "bone": "jianzi", "attachment": "images/jianzi" }
+],
+"skins": {
+	"default": {
+		"images/attack_bullet": {
+			"images/effect/attack_bullet": { "width": 400, "height": 150 }
+		},
+		"jianzi": {
+			"images/jianzi": { "width": 78, "height": 88 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"images/attack_bullet": {
+				"attachment": [
+					{ "time": 0, "name": "images/effect/attack_bullet" }
+				]
+			}
+		},
+		"bones": {
+			"attack_bullet": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.601, "y": 0.601 }
+				]
+			},
+			"jianzi": {
+				"rotate": [
+					{ "time": 0, "angle": 90 }
+				],
+				"translate": [
+					{ "time": 0, "x": 98.15, "y": -4.97 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.804, "y": 0.8 }
+				]
+			}
+		}
+	}
+}
+}

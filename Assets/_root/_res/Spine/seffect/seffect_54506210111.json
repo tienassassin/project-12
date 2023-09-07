@@ -1,0 +1,47 @@
+{
+"skeleton": { "hash": "N0w/pKHWIe7dYlXBavGwx1hxF4c", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root", "rotation": -62.22 },
+	{ "name": "bone", "parent": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "bone80", "parent": "bone" }
+],
+"slots": [
+	{ "name": "taoxin", "bone": "bone80" }
+],
+"skins": {
+	"default": {
+		"taoxin": {
+			"taoxin": { "x": -0.54, "y": -0.67, "width": 27, "height": 39 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"taoxin": {
+				"attachment": [
+					{ "time": 0, "name": "taoxin" }
+				]
+			}
+		},
+		"bones": {
+			"bone80": {
+				"rotate": [
+					{ "time": 0, "angle": 25.19 },
+					{ "time": 0.0667, "angle": -88.91 },
+					{ "time": 0.1333, "angle": 179.1 },
+					{ "time": 0.2, "angle": 88.74 },
+					{ "time": 0.2667, "angle": 25.19 },
+					{ "time": 0.3333, "angle": -88.91 },
+					{ "time": 0.4, "angle": 179.1 },
+					{ "time": 0.4667, "angle": 88.74 },
+					{ "time": 0.5333, "angle": 25.19 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 }
+		]
+	}
+}
+}

@@ -1,0 +1,77 @@
+{
+"skeleton": { "hash": "XE0gu3fqDyiPrSVb7Q2BzbX1TEg", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "ZX", "parent": "root" },
+	{ "name": "TX", "parent": "ZX" },
+	{ "name": "BAO3", "parent": "TX" }
+],
+"slots": [
+	{ "name": "BAO3", "bone": "BAO3" }
+],
+"skins": {
+	"default": {
+		"BAO3": {
+			"tx/bao2/bao2_24": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_26": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_28": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_30": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_32": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_34": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_36": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_38": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_40": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_42": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_44": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_46": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_48": { "width": 247, "height": 390 },
+			"tx/bao2/bao2_50": { "width": 247, "height": 390 }
+		}
+	}
+},
+"events": {
+	"hit_21_3_1": {},
+	"hit_21_3_2": {},
+	"hit_21_3_3": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"BAO3": {
+				"attachment": [
+					{ "time": 0, "name": "tx/bao2/bao2_24" },
+					{ "time": 0.0667, "name": "tx/bao2/bao2_26" },
+					{ "time": 0.1333, "name": "tx/bao2/bao2_28" },
+					{ "time": 0.2, "name": "tx/bao2/bao2_30" },
+					{ "time": 0.2667, "name": "tx/bao2/bao2_32" },
+					{ "time": 0.3333, "name": "tx/bao2/bao2_34" },
+					{ "time": 0.4, "name": "tx/bao2/bao2_36" },
+					{ "time": 0.4667, "name": "tx/bao2/bao2_38" },
+					{ "time": 0.5333, "name": "tx/bao2/bao2_40" },
+					{ "time": 0.6, "name": "tx/bao2/bao2_42" },
+					{ "time": 0.6667, "name": "tx/bao2/bao2_44" },
+					{ "time": 0.7333, "name": "tx/bao2/bao2_46" },
+					{ "time": 0.8, "name": "tx/bao2/bao2_48" },
+					{ "time": 0.8667, "name": "tx/bao2/bao2_50" },
+					{ "time": 0.9, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"BAO3": {
+				"translate": [
+					{ "time": 0, "x": -31.86, "y": 951.33 }
+				],
+				"scale": [
+					{ "time": 0, "x": 6.435, "y": 6.435 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0667, "name": "hit_21_3_3" },
+			{ "time": 0.1333, "name": "hit_21_3_2" },
+			{ "time": 0.2, "name": "hit_21_3_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,41 @@
+
+uieffect_77.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dengdai
+  rotate: true
+  xy: 110, 0
+  size: 88, 94
+  orig: 90, 96
+  offset: 1, 1
+  index: -1
+faguang
+  rotate: true
+  xy: 399, 20
+  size: 68, 101
+  orig: 70, 103
+  offset: 1, 1
+  index: -1
+hezi
+  rotate: true
+  xy: 301, 5
+  size: 83, 96
+  orig: 130, 130
+  offset: 24, 17
+  index: -1
+yingying2
+  rotate: false
+  xy: 0, 2
+  size: 108, 86
+  orig: 110, 88
+  offset: 1, 1
+  index: -1
+yinying1
+  rotate: true
+  xy: 206, 0
+  size: 88, 93
+  orig: 90, 95
+  offset: 1, 1
+  index: -1

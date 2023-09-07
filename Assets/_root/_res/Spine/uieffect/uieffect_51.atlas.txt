@@ -1,0 +1,202 @@
+
+uieffect_51.png
+size: 729,729
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/glow_point
+  rotate: false
+  xy: 427, 56
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+images/line_up_01
+  rotate: true
+  xy: 557, 54
+  size: 130, 61
+  orig: 360, 640
+  offset: 124, 310
+  index: -1
+images/line_up_02
+  rotate: true
+  xy: 607, 440
+  size: 110, 120
+  orig: 360, 640
+  offset: 154, 316
+  index: -1
+images/line_up_03
+  rotate: false
+  xy: 620, 589
+  size: 102, 138
+  orig: 360, 640
+  offset: 162, 337
+  index: -1
+images/line_up_04
+  rotate: false
+  xy: 607, 294
+  size: 113, 144
+  orig: 360, 640
+  offset: 150, 370
+  index: -1
+images/line_up_05
+  rotate: true
+  xy: 605, 193
+  size: 99, 109
+  orig: 360, 640
+  offset: 150, 407
+  index: -1
+images/line_up_06
+  rotate: false
+  xy: 620, 102
+  size: 74, 89
+  orig: 360, 640
+  offset: 149, 428
+  index: -1
+images/line_up_07
+  rotate: true
+  xy: 620, 50
+  size: 50, 74
+  orig: 360, 640
+  offset: 150, 443
+  index: -1
+images/line_up_08
+  rotate: true
+  xy: 620, 555
+  size: 32, 59
+  orig: 360, 640
+  offset: 150, 457
+  index: -1
+images/line_up_09
+  rotate: true
+  xy: 681, 569
+  size: 18, 46
+  orig: 360, 640
+  offset: 150, 470
+  index: -1
+images/line_up_10
+  rotate: true
+  xy: 143, 16
+  size: 17, 33
+  orig: 360, 640
+  offset: 151, 483
+  index: -1
+images/line_up_11
+  rotate: false
+  xy: 696, 170
+  size: 14, 21
+  orig: 360, 640
+  offset: 153, 494
+  index: -1
+images/line_up_12
+  rotate: true
+  xy: 716, 282
+  size: 10, 11
+  orig: 360, 640
+  offset: 156, 503
+  index: -1
+images/uief_part_00
+  rotate: false
+  xy: 2, 2
+  size: 139, 182
+  orig: 360, 640
+  offset: 103, 314
+  index: -1
+images/uief_part_01
+  rotate: false
+  xy: 466, 369
+  size: 139, 181
+  orig: 360, 640
+  offset: 103, 319
+  index: -1
+images/uief_part_02
+  rotate: false
+  xy: 464, 186
+  size: 139, 181
+  orig: 360, 640
+  offset: 103, 323
+  index: -1
+images/uief_part_03
+  rotate: false
+  xy: 2, 547
+  size: 152, 180
+  orig: 360, 640
+  offset: 104, 327
+  index: -1
+images/uief_part_04
+  rotate: false
+  xy: 2, 366
+  size: 152, 179
+  orig: 360, 640
+  offset: 105, 330
+  index: -1
+images/uief_part_05
+  rotate: false
+  xy: 2, 186
+  size: 152, 178
+  orig: 360, 640
+  offset: 105, 333
+  index: -1
+images/uief_part_06
+  rotate: false
+  xy: 156, 549
+  size: 153, 178
+  orig: 360, 640
+  offset: 105, 335
+  index: -1
+images/uief_part_07
+  rotate: false
+  xy: 156, 369
+  size: 153, 178
+  orig: 360, 640
+  offset: 105, 338
+  index: -1
+images/uief_part_08
+  rotate: false
+  xy: 311, 550
+  size: 153, 177
+  orig: 360, 640
+  offset: 106, 341
+  index: -1
+images/uief_part_09
+  rotate: false
+  xy: 156, 191
+  size: 153, 176
+  orig: 360, 640
+  offset: 106, 344
+  index: -1
+images/uief_part_10
+  rotate: false
+  xy: 311, 372
+  size: 153, 176
+  orig: 360, 640
+  offset: 106, 346
+  index: -1
+images/uief_part_11
+  rotate: false
+  xy: 466, 552
+  size: 152, 175
+  orig: 360, 640
+  offset: 107, 348
+  index: -1
+images/uief_part_12
+  rotate: false
+  xy: 311, 194
+  size: 151, 176
+  orig: 360, 640
+  offset: 108, 349
+  index: -1
+images/uief_part_13
+  rotate: true
+  xy: 143, 35
+  size: 149, 140
+  orig: 360, 640
+  offset: 110, 385
+  index: -1
+images/uief_part_14
+  rotate: true
+  xy: 285, 41
+  size: 148, 140
+  orig: 360, 640
+  offset: 111, 385
+  index: -1

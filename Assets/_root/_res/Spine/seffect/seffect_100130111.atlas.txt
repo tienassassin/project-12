@@ -1,0 +1,27 @@
+
+seffect_100130111.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/belnder00
+  rotate: false
+  xy: 2, 255
+  size: 182, 104
+  orig: 191, 127
+  offset: 9, 9
+  index: -1
+images/belnder01
+  rotate: false
+  xy: 186, 257
+  size: 173, 102
+  orig: 191, 127
+  offset: 11, 7
+  index: -1
+images/belnder02
+  rotate: false
+  xy: 2, 151
+  size: 176, 102
+  orig: 191, 127
+  offset: 8, 8
+  index: -1

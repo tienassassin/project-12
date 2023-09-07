@@ -1,0 +1,146 @@
+
+uieffect_201.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+partical_bg_0000
+  rotate: true
+  xy: 1206, 151
+  size: 103, 127
+  orig: 256, 256
+  offset: 74, 63
+  index: -1
+partical_bg_0001
+  rotate: true
+  xy: 1335, 152
+  size: 102, 127
+  orig: 256, 256
+  offset: 74, 65
+  index: -1
+partical_bg_0002
+  rotate: true
+  xy: 833, 139
+  size: 115, 125
+  orig: 256, 256
+  offset: 75, 68
+  index: -1
+partical_bg_0003
+  rotate: false
+  xy: 293, 130
+  size: 138, 124
+  orig: 256, 256
+  offset: 50, 71
+  index: -1
+partical_bg_0004
+  rotate: false
+  xy: 433, 144
+  size: 133, 110
+  orig: 256, 256
+  offset: 52, 73
+  index: -1
+partical_bg_0005
+  rotate: false
+  xy: 568, 143
+  size: 132, 111
+  orig: 256, 256
+  offset: 54, 76
+  index: -1
+partical_bg_0006
+  rotate: false
+  xy: 702, 143
+  size: 129, 111
+  orig: 256, 256
+  offset: 56, 79
+  index: -1
+partical_bg_0007
+  rotate: true
+  xy: 293, 2
+  size: 126, 112
+  orig: 256, 256
+  offset: 58, 81
+  index: -1
+partical_bg_0008
+  rotate: false
+  xy: 960, 142
+  size: 123, 112
+  orig: 256, 256
+  offset: 60, 84
+  index: -1
+partical_bg_0009
+  rotate: false
+  xy: 1085, 140
+  size: 119, 114
+  orig: 256, 256
+  offset: 62, 86
+  index: -1
+partical_bg_0010
+  rotate: false
+  xy: 1464, 140
+  size: 116, 114
+  orig: 256, 256
+  offset: 64, 89
+  index: -1
+partical_bg_0011
+  rotate: true
+  xy: 1582, 141
+  size: 113, 115
+  orig: 256, 256
+  offset: 66, 91
+  index: -1
+partical_bg_0012
+  rotate: true
+  xy: 1699, 145
+  size: 109, 115
+  orig: 256, 256
+  offset: 69, 94
+  index: -1
+partical_bg_0013
+  rotate: true
+  xy: 1816, 148
+  size: 106, 115
+  orig: 256, 256
+  offset: 70, 96
+  index: -1
+partical_bg_0014
+  rotate: false
+  xy: 1933, 139
+  size: 103, 115
+  orig: 256, 256
+  offset: 72, 99
+  index: -1
+partical_bg_0015
+  rotate: false
+  xy: 483, 26
+  size: 76, 116
+  orig: 256, 256
+  offset: 98, 101
+  index: -1
+partical_bg_0016
+  rotate: false
+  xy: 407, 11
+  size: 74, 117
+  orig: 256, 256
+  offset: 99, 103
+  index: -1
+partical_bg_0017
+  rotate: true
+  xy: 561, 69
+  size: 72, 116
+  orig: 256, 256
+  offset: 100, 106
+  index: -1
+partical_bg_0018
+  rotate: false
+  xy: 2, 58
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+texiao4
+  rotate: true
+  xy: 2, 61
+  size: 193, 289
+  orig: 199, 293
+  offset: 3, 4
+  index: -1

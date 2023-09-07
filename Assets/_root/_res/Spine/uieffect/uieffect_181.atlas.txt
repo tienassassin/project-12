@@ -1,0 +1,34 @@
+
+uieffect_181.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+image/1_0000
+  rotate: false
+  xy: 2, 2
+  size: 200, 95
+  orig: 200, 100
+  offset: 0, 3
+  index: -1
+image/2_0000
+  rotate: false
+  xy: 204, 2
+  size: 192, 95
+  orig: 200, 100
+  offset: 0, 5
+  index: -1
+image/FZ_1
+  rotate: false
+  xy: 553, 40
+  size: 140, 57
+  orig: 141, 57
+  offset: 0, 0
+  index: -1
+image/FZ_2
+  rotate: false
+  xy: 398, 33
+  size: 153, 64
+  orig: 154, 65
+  offset: 1, 0
+  index: -1

@@ -1,0 +1,94 @@
+{
+"skeleton": { "hash": "CvYavnUAuArjKi/0+np8WcJpAqQ", "spine": "3.5.35", "width": 549, "height": 297, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "guang", "parent": "root", "scaleX": 9, "scaleY": 9 },
+	{ "name": "light", "parent": "root" }
+],
+"slots": [
+	{ "name": "kuoshan", "bone": "light" },
+	{ "name": "image/light_0000", "bone": "guang", "attachment": "image/light_0000", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"image/light_0000": {
+			"image/light_0000": { "width": 61, "height": 33 }
+		},
+		"kuoshan": {
+			"image/light/light_0000": { "width": 374, "height": 391 },
+			"image/light/light_0002": { "width": 374, "height": 391 },
+			"image/light/light_0004": { "width": 374, "height": 391 },
+			"image/light/light_0006": { "width": 374, "height": 391 },
+			"image/light/light_0008": { "width": 374, "height": 391 },
+			"image/light/light_0010": { "width": 374, "height": 391 },
+			"image/light/light_0012": { "width": 374, "height": 391 },
+			"image/light/light_0014": { "width": 374, "height": 391 },
+			"image/light/light_0016": { "width": 374, "height": 391 },
+			"image/light/light_0018": { "width": 374, "height": 391 },
+			"image/light/light_0020": { "width": 374, "height": 391 },
+			"image/light/light_0022": { "width": 374, "height": 391 },
+			"image/light/light_0024": { "width": 374, "height": 391 },
+			"image/light/light_0026": { "width": 374, "height": 391 },
+			"image/light/light_0028": { "width": 374, "height": 391 },
+			"image/light/light_0030": { "width": 374, "height": 391 },
+			"image/light/light_0032": { "width": 374, "height": 391 },
+			"image/light/light_0034": { "width": 374, "height": 391 },
+			"image/light/light_0036": { "width": 374, "height": 391 },
+			"image/light/light_0038": { "width": 374, "height": 391 },
+			"image/light/light_0040": { "width": 374, "height": 391 },
+			"image/light/light_0042": { "width": 374, "height": 391 },
+			"image/light/light_0044": { "width": 374, "height": 391 },
+			"image/light/light_0046": { "width": 374, "height": 391 },
+			"image/light/light_0048": { "width": 374, "height": 391 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"kuoshan": {
+				"attachment": [
+					{ "time": 0, "name": "image/light/light_0000" },
+					{ "time": 0.0667, "name": "image/light/light_0002" },
+					{ "time": 0.1333, "name": "image/light/light_0004" },
+					{ "time": 0.2, "name": "image/light/light_0006" },
+					{ "time": 0.2667, "name": "image/light/light_0008" },
+					{ "time": 0.3333, "name": "image/light/light_0010" },
+					{ "time": 0.4, "name": "image/light/light_0012" },
+					{ "time": 0.4667, "name": "image/light/light_0014" },
+					{ "time": 0.5333, "name": "image/light/light_0016" },
+					{ "time": 0.6, "name": "image/light/light_0018" },
+					{ "time": 0.6667, "name": "image/light/light_0020" },
+					{ "time": 0.7333, "name": "image/light/light_0022" },
+					{ "time": 0.8, "name": "image/light/light_0024" },
+					{ "time": 0.8667, "name": "image/light/light_0026" },
+					{ "time": 0.9333, "name": "image/light/light_0028" },
+					{ "time": 1, "name": "image/light/light_0030" },
+					{ "time": 1.0667, "name": "image/light/light_0032" },
+					{ "time": 1.1333, "name": "image/light/light_0034" },
+					{ "time": 1.2, "name": "image/light/light_0036" },
+					{ "time": 1.2667, "name": "image/light/light_0038" },
+					{ "time": 1.3333, "name": "image/light/light_0040" },
+					{ "time": 1.4, "name": "image/light/light_0042" },
+					{ "time": 1.4667, "name": "image/light/light_0044" },
+					{ "time": 1.5333, "name": "image/light/light_0046" },
+					{ "time": 1.6, "name": "image/light/light_0048" },
+					{ "time": 1.6667, "name": "image/light/light_0000" }
+				]
+			}
+		},
+		"bones": {
+			"guang": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -149.12 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 13.87 }
+				]
+			}
+		}
+	}
+}
+}

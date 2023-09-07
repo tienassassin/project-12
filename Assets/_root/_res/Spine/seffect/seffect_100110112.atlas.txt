@@ -1,0 +1,62 @@
+
+seffect_100110112.png
+size: 493,493
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/line
+  rotate: false
+  xy: 2, 8
+  size: 232, 109
+  orig: 720, 1280
+  offset: 247, 588
+  index: -1
+images/part_0000
+  rotate: true
+  xy: 425, 72
+  size: 106, 66
+  orig: 720, 1280
+  offset: 321, 603
+  index: -1
+images/part_0001
+  rotate: false
+  xy: 236, 53
+  size: 187, 125
+  orig: 720, 1280
+  offset: 293, 570
+  index: -1
+images/part_0002
+  rotate: false
+  xy: 236, 326
+  size: 216, 165
+  orig: 720, 1280
+  offset: 274, 552
+  index: -1
+images/part_0003
+  rotate: false
+  xy: 2, 119
+  size: 223, 179
+  orig: 720, 1280
+  offset: 263, 548
+  index: -1
+images/part_0004
+  rotate: false
+  xy: 2, 300
+  size: 232, 191
+  orig: 720, 1280
+  offset: 253, 543
+  index: -1
+images/part_0005
+  rotate: false
+  xy: 236, 180
+  size: 228, 144
+  orig: 720, 1280
+  offset: 253, 539
+  index: -1
+images/part_0006
+  rotate: false
+  xy: 454, 458
+  size: 34, 33
+  orig: 720, 1280
+  offset: 250, 645
+  index: -1

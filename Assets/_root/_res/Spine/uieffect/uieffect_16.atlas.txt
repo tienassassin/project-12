@@ -1,0 +1,41 @@
+
+uieffect_16.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/banz_bg
+  rotate: false
+  xy: 0, 123
+  size: 444, 94
+  orig: 477, 96
+  offset: 24, 2
+  index: -1
+images/glow_line
+  rotate: false
+  xy: 446, 82
+  size: 240, 135
+  orig: 240, 135
+  offset: 0, 0
+  index: -1
+images/glow_line_reblack
+  rotate: false
+  xy: 0, 67
+  size: 335, 54
+  orig: 342, 55
+  offset: 1, 0
+  index: -1
+images/zhanl_1
+  rotate: false
+  xy: 688, 170
+  size: 110, 47
+  orig: 119, 64
+  offset: 5, 8
+  index: -1
+images/zhanl_2
+  rotate: false
+  xy: 0, 0
+  size: 119, 65
+  orig: 122, 68
+  offset: 1, 2
+  index: -1

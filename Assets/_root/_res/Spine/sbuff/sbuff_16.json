@@ -1,0 +1,75 @@
+{
+"skeleton": { "hash": "l66rdWR3n4np5n5fEbi+GjUjfIY", "spine": "3.5.35", "width": 0, "height": 0, "images": "./image/" },
+"bones": [
+	{ "name": "root", "x": 2 },
+	{ "name": "bone", "parent": "root", "rotation": -103.13, "x": -28.12, "y": -1.28 }
+],
+"slots": [
+	{ "name": "image/lig_0001", "bone": "bone" }
+],
+"skins": {
+	"default": {
+		"image/lig_0001": {
+			"image/lig_0001": { "width": 164, "height": 200 },
+			"image/lig_0002": { "width": 164, "height": 200 },
+			"image/lig_0003": { "width": 164, "height": 200 },
+			"image/lig_0004": { "width": 164, "height": 200 },
+			"image/lig_0005": { "width": 164, "height": 200 },
+			"image/lig_0006": { "width": 164, "height": 200 },
+			"image/lig_0007": { "width": 164, "height": 200 },
+			"image/lig_0008": { "width": 164, "height": 200 },
+			"image/lig_0009": { "width": 164, "height": 200 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"image/lig_0001": {
+				"color": [
+					{ "time": 0, "color": "ffffffcc" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "image/lig_0001" },
+					{ "time": 0.0667, "name": null },
+					{ "time": 0.1, "name": "image/lig_0002" },
+					{ "time": 0.1667, "name": null },
+					{ "time": 0.4, "name": "image/lig_0003" },
+					{ "time": 0.4667, "name": null },
+					{ "time": 0.5, "name": "image/lig_0004" },
+					{ "time": 0.5667, "name": null },
+					{ "time": 0.7333, "name": "image/lig_0001" },
+					{ "time": 0.8, "name": null },
+					{ "time": 0.9333, "name": "image/lig_0005" },
+					{ "time": 1, "name": null },
+					{ "time": 1.1667, "name": "image/lig_0006" },
+					{ "time": 1.2333, "name": null },
+					{ "time": 1.2667, "name": "image/lig_0007" },
+					{ "time": 1.3333, "name": null },
+					{ "time": 1.5667, "name": "image/lig_0008" },
+					{ "time": 1.6333, "name": null },
+					{ "time": 1.6667, "name": "image/lig_0009" },
+					{ "time": 1.7333, "name": null },
+					{ "time": 2, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0.9333, "angle": 297.94 }
+				],
+				"translate": [
+					{ "time": 0, "x": 9.75, "y": 223.77 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 }
+		]
+	}
+}
+}

@@ -1,0 +1,87 @@
+{
+"skeleton": { "hash": "rfm3x68QR7eAisa/oToStwtAWBw", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "eff_att", "parent": "root" },
+	{ "name": "bone95", "parent": "eff_att" },
+	{ "name": "bone96", "parent": "eff_att" }
+],
+"slots": [
+	{ "name": "eff/glowlight", "bone": "bone96", "blend": "additive" },
+	{ "name": "eff/fazhen", "bone": "bone95", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"eff/fazhen": {
+			"eff/fazhen": { "width": 249, "height": 253 }
+		},
+		"eff/glowlight": {
+			"eff/glowlight": { "width": 100, "height": 101 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"eff/fazhen": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "eff/fazhen" }
+				]
+			},
+			"eff/glowlight": {
+				"color": [
+					{ "time": 0, "color": "ffffff80" },
+					{ "time": 0.0667, "color": "ffffffa6" },
+					{ "time": 0.1333, "color": "ffffff80" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "eff/glowlight" }
+				]
+			}
+		},
+		"bones": {
+			"bone95": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2667, "angle": 260 },
+					{ "time": 0.5333, "angle": 130 },
+					{ "time": 0.8, "angle": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": 0.8 },
+					{ "time": 0.1, "x": 0.7, "y": 0.7 },
+					{ "time": 0.2, "x": 0.8, "y": 0.8 },
+					{ "time": 0.3, "x": 0.7, "y": 0.7 },
+					{ "time": 0.4, "x": 0.8, "y": 0.8 },
+					{ "time": 0.5, "x": 0.7, "y": 0.7 },
+					{ "time": 0.6, "x": 0.8, "y": 0.8 },
+					{ "time": 0.7, "x": 0.7, "y": 0.7 },
+					{ "time": 0.8, "x": 0.8, "y": 0.8 }
+				]
+			},
+			"bone96": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3 }
+				]
+			},
+			"eff_att": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,68 @@
+{
+"skeleton": { "hash": "eVYIGFuOrOJF6DTjmrEasOyYJLk", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "shouji", "parent": "root", "rotation": -26.76 }
+],
+"slots": [
+	{ "name": "shouji/shouji_00000", "bone": "shouji", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"shouji/shouji_00000": {
+			"shouji/shouji_00000": { "width": 812, "height": 365 },
+			"shouji/shouji_00001": { "width": 812, "height": 365 },
+			"shouji/shouji_00002": { "width": 812, "height": 365 },
+			"shouji/shouji_00003": { "width": 812, "height": 365 },
+			"shouji/shouji_00004": { "width": 812, "height": 365 },
+			"shouji/shouji_00005": { "width": 812, "height": 365 },
+			"shouji/shouji_00006": { "width": 812, "height": 365 },
+			"shouji/shouji_00007": { "width": 812, "height": 365 },
+			"shouji/shouji_00008": { "width": 812, "height": 365 },
+			"shouji/shouji_00009": { "width": 812, "height": 365 },
+			"shouji/shouji_00010": { "width": 812, "height": 365 },
+			"shouji/shouji_00011": { "width": 812, "height": 365 },
+			"shouji/shouji_00012": { "width": 812, "height": 365 },
+			"shouji/shouji_00013": { "width": 812, "height": 365 }
+		}
+	}
+},
+"events": {
+	"hit_21_1_1": {}
+},
+"animations": {
+	"animation_2": {
+		"slots": {
+			"shouji/shouji_00000": {
+				"attachment": [
+					{ "time": 0, "name": "shouji/shouji_00000" },
+					{ "time": 0.0333, "name": "shouji/shouji_00001" },
+					{ "time": 0.0667, "name": "shouji/shouji_00002" },
+					{ "time": 0.1, "name": "shouji/shouji_00003" },
+					{ "time": 0.1333, "name": "shouji/shouji_00004" },
+					{ "time": 0.1667, "name": "shouji/shouji_00005" },
+					{ "time": 0.2, "name": "shouji/shouji_00006" },
+					{ "time": 0.2333, "name": "shouji/shouji_00007" },
+					{ "time": 0.2667, "name": "shouji/shouji_00008" },
+					{ "time": 0.3, "name": "shouji/shouji_00009" },
+					{ "time": 0.3333, "name": "shouji/shouji_00010" },
+					{ "time": 0.3667, "name": "shouji/shouji_00011" },
+					{ "time": 0.4, "name": "shouji/shouji_00012" },
+					{ "time": 0.4333, "name": "shouji/shouji_00013" },
+					{ "time": 0.4667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"shouji": {
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.2, "name": "hit_21_1_1" }
+		]
+	}
+}
+}

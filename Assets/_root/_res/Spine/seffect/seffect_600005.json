@@ -1,0 +1,83 @@
+{
+"skeleton": { "hash": "Qs51eyvZy16aBvZxh2wkE2fEXUM", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "shizi", "parent": "root", "scaleX": 2.5, "scaleY": 2.5 }
+],
+"slots": [
+	{ "name": "shizi", "bone": "shizi" }
+],
+"skins": {
+	"default": {
+		"shizi": {
+			"shizi_00": { "width": 125, "height": 300 },
+			"shizi_01": { "width": 125, "height": 300 },
+			"shizi_02": { "width": 125, "height": 300 },
+			"shizi_03": { "width": 125, "height": 300 },
+			"shizi_04": { "width": 125, "height": 300 },
+			"shizi_05": { "width": 125, "height": 300 },
+			"shizi_06": { "width": 125, "height": 300 },
+			"shizi_07": { "width": 125, "height": 300 },
+			"shizi_08": { "width": 125, "height": 300 },
+			"shizi_09": { "width": 125, "height": 300 },
+			"shizi_10": { "width": 125, "height": 300 },
+			"shizi_11": { "width": 125, "height": 300 },
+			"shizi_12": { "width": 125, "height": 300 },
+			"shizi_13": { "width": 125, "height": 300 },
+			"shizi_14": { "width": 125, "height": 300 },
+			"shizi_15": { "width": 125, "height": 300 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"shizi": {
+				"attachment": [
+					{ "time": 0, "name": "shizi_00" },
+					{ "time": 0.0333, "name": "shizi_01" },
+					{ "time": 0.0667, "name": "shizi_02" },
+					{ "time": 0.1, "name": "shizi_03" },
+					{ "time": 0.1333, "name": "shizi_04" },
+					{ "time": 0.1667, "name": "shizi_05" },
+					{ "time": 0.2, "name": "shizi_06" },
+					{ "time": 0.2333, "name": "shizi_07" },
+					{ "time": 0.2667, "name": "shizi_08" },
+					{ "time": 0.3, "name": "shizi_09" },
+					{ "time": 0.3333, "name": "shizi_10" },
+					{ "time": 0.3667, "name": "shizi_11" },
+					{ "time": 0.4, "name": "shizi_12" },
+					{ "time": 0.4333, "name": "shizi_13" },
+					{ "time": 0.4667, "name": "shizi_14" },
+					{ "time": 0.5, "name": "shizi_15" },
+					{ "time": 0.5333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"shizi": {
+				"translate": [
+					{ "time": 0, "x": -3.18, "y": 98.43 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.4, "y": 0.4 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 5.17, "y": -82.3 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3.6, "y": 3.6 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.2, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

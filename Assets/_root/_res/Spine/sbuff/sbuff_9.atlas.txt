@@ -1,0 +1,426 @@
+
+sbuff_9.png
+size: 1046,1046
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+buff_00
+  rotate: false
+  xy: 238, 3
+  size: 160, 88
+  orig: 175, 120
+  offset: 8, 13
+  index: -1
+buff_01
+  rotate: true
+  xy: 726, 725
+  size: 158, 88
+  orig: 175, 120
+  offset: 8, 13
+  index: -1
+buff_02
+  rotate: false
+  xy: 400, 2
+  size: 158, 89
+  orig: 175, 120
+  offset: 8, 12
+  index: -1
+buff_03
+  rotate: true
+  xy: 946, 565
+  size: 159, 90
+  orig: 175, 120
+  offset: 8, 11
+  index: -1
+buff_04
+  rotate: true
+  xy: 946, 884
+  size: 160, 90
+  orig: 175, 120
+  offset: 8, 11
+  index: -1
+buff_05
+  rotate: false
+  xy: 560, 3
+  size: 161, 90
+  orig: 175, 120
+  offset: 8, 11
+  index: -1
+buff_06
+  rotate: false
+  xy: 558, 539
+  size: 159, 93
+  orig: 175, 120
+  offset: 9, 9
+  index: -1
+buff_07
+  rotate: true
+  xy: 469, 634
+  size: 158, 94
+  orig: 175, 120
+  offset: 9, 9
+  index: -1
+buff_08
+  rotate: true
+  xy: 803, 310
+  size: 155, 94
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_09
+  rotate: false
+  xy: 861, 25
+  size: 156, 93
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_10
+  rotate: false
+  xy: 398, 534
+  size: 158, 96
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_11
+  rotate: false
+  xy: 852, 214
+  size: 155, 94
+  orig: 175, 120
+  offset: 9, 9
+  index: -1
+buff_12
+  rotate: true
+  xy: 899, 310
+  size: 155, 93
+  orig: 175, 120
+  offset: 9, 9
+  index: -1
+buff_13
+  rotate: true
+  xy: 946, 726
+  size: 156, 92
+  orig: 175, 120
+  offset: 9, 9
+  index: -1
+buff_14
+  rotate: false
+  xy: 852, 120
+  size: 158, 92
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_15
+  rotate: false
+  xy: 785, 467
+  size: 159, 92
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_16
+  rotate: false
+  xy: 624, 444
+  size: 159, 93
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_17
+  rotate: false
+  xy: 463, 437
+  size: 159, 95
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_18
+  rotate: true
+  xy: 708, 283
+  size: 159, 93
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_19
+  rotate: true
+  xy: 466, 95
+  size: 159, 95
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_20
+  rotate: false
+  xy: 237, 532
+  size: 159, 97
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_21
+  rotate: true
+  xy: 514, 276
+  size: 159, 95
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_22
+  rotate: true
+  xy: 563, 115
+  size: 159, 95
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_23
+  rotate: true
+  xy: 611, 276
+  size: 159, 95
+  orig: 175, 120
+  offset: 9, 8
+  index: -1
+buff_24
+  rotate: true
+  xy: 660, 115
+  size: 159, 95
+  orig: 175, 120
+  offset: 9, 9
+  index: -1
+buff_25
+  rotate: false
+  xy: 519, 950
+  size: 159, 94
+  orig: 175, 120
+  offset: 9, 9
+  index: -1
+buff_26
+  rotate: true
+  xy: 757, 122
+  size: 159, 93
+  orig: 175, 120
+  offset: 9, 9
+  index: -1
+buff_27
+  rotate: false
+  xy: 565, 699
+  size: 159, 93
+  orig: 175, 120
+  offset: 9, 9
+  index: -1
+buff_28
+  rotate: true
+  xy: 726, 885
+  size: 159, 88
+  orig: 175, 120
+  offset: 9, 11
+  index: -1
+buff_29
+  rotate: true
+  xy: 816, 746
+  size: 160, 87
+  orig: 175, 120
+  offset: 8, 12
+  index: -1
+bufflizi_00
+  rotate: false
+  xy: 829, 908
+  size: 104, 136
+  orig: 140, 150
+  offset: 14, 5
+  index: -1
+bufflizi_01
+  rotate: false
+  xy: 719, 561
+  size: 108, 136
+  orig: 140, 150
+  offset: 14, 5
+  index: -1
+bufflizi_02
+  rotate: true
+  xy: 723, 2
+  size: 111, 136
+  orig: 140, 150
+  offset: 14, 5
+  index: -1
+bufflizi_03
+  rotate: false
+  xy: 469, 794
+  size: 111, 136
+  orig: 140, 150
+  offset: 14, 5
+  index: -1
+bufflizi_04
+  rotate: false
+  xy: 349, 394
+  size: 112, 136
+  orig: 140, 150
+  offset: 14, 5
+  index: -1
+bufflizi_05
+  rotate: false
+  xy: 400, 256
+  size: 112, 136
+  orig: 140, 150
+  offset: 14, 5
+  index: -1
+bufflizi_06
+  rotate: false
+  xy: 121, 346
+  size: 112, 138
+  orig: 140, 150
+  offset: 14, 3
+  index: -1
+bufflizi_07
+  rotate: true
+  xy: 121, 232
+  size: 112, 138
+  orig: 140, 150
+  offset: 14, 3
+  index: -1
+bufflizi_08
+  rotate: false
+  xy: 355, 792
+  size: 112, 137
+  orig: 140, 150
+  offset: 14, 4
+  index: -1
+bufflizi_09
+  rotate: true
+  xy: 380, 932
+  size: 112, 137
+  orig: 140, 150
+  offset: 14, 4
+  index: -1
+bufflizi_10
+  rotate: false
+  xy: 238, 93
+  size: 112, 137
+  orig: 140, 150
+  offset: 14, 4
+  index: -1
+bufflizi_11
+  rotate: true
+  xy: 261, 232
+  size: 112, 137
+  orig: 140, 150
+  offset: 14, 4
+  index: -1
+bufflizi_12
+  rotate: true
+  xy: 240, 931
+  size: 113, 138
+  orig: 140, 150
+  offset: 14, 4
+  index: -1
+bufflizi_13
+  rotate: false
+  xy: 121, 626
+  size: 113, 140
+  orig: 140, 150
+  offset: 14, 4
+  index: -1
+bufflizi_14
+  rotate: false
+  xy: 352, 93
+  size: 112, 137
+  orig: 140, 150
+  offset: 14, 3
+  index: -1
+bufflizi_15
+  rotate: false
+  xy: 2, 906
+  size: 117, 138
+  orig: 140, 150
+  offset: 14, 3
+  index: -1
+bufflizi_16
+  rotate: false
+  xy: 2, 766
+  size: 117, 138
+  orig: 140, 150
+  offset: 14, 3
+  index: -1
+bufflizi_17
+  rotate: false
+  xy: 2, 626
+  size: 117, 138
+  orig: 140, 150
+  offset: 14, 3
+  index: -1
+bufflizi_18
+  rotate: false
+  xy: 235, 346
+  size: 112, 138
+  orig: 140, 150
+  offset: 14, 3
+  index: -1
+bufflizi_19
+  rotate: false
+  xy: 121, 486
+  size: 114, 138
+  orig: 140, 150
+  offset: 12, 3
+  index: -1
+bufflizi_20
+  rotate: false
+  xy: 121, 768
+  size: 115, 138
+  orig: 140, 150
+  offset: 11, 3
+  index: -1
+bufflizi_21
+  rotate: false
+  xy: 2, 68
+  size: 116, 138
+  orig: 140, 150
+  offset: 11, 3
+  index: -1
+bufflizi_22
+  rotate: false
+  xy: 2, 486
+  size: 117, 138
+  orig: 140, 150
+  offset: 10, 3
+  index: -1
+bufflizi_23
+  rotate: false
+  xy: 120, 68
+  size: 116, 138
+  orig: 140, 150
+  offset: 11, 3
+  index: -1
+bufflizi_24
+  rotate: false
+  xy: 121, 908
+  size: 117, 136
+  orig: 140, 150
+  offset: 11, 4
+  index: -1
+bufflizi_25
+  rotate: false
+  xy: 2, 347
+  size: 117, 137
+  orig: 140, 150
+  offset: 11, 3
+  index: -1
+bufflizi_26
+  rotate: false
+  xy: 2, 208
+  size: 117, 137
+  orig: 140, 150
+  offset: 11, 3
+  index: -1
+bufflizi_27
+  rotate: false
+  xy: 236, 631
+  size: 116, 135
+  orig: 140, 150
+  offset: 12, 5
+  index: -1
+bufflizi_28
+  rotate: false
+  xy: 238, 770
+  size: 115, 136
+  orig: 140, 150
+  offset: 12, 5
+  index: -1
+bufflizi_29
+  rotate: false
+  xy: 354, 632
+  size: 113, 136
+  orig: 140, 150
+  offset: 13, 5
+  index: -1

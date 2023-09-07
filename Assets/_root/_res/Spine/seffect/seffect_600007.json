@@ -1,0 +1,47 @@
+{
+"skeleton": { "hash": "OvHtCRmS32+DWkP63jKzWVGozlE", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "hit", "parent": "root", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "images/hit/hit_00000", "bone": "hit" }
+],
+"skins": {
+	"default": {
+		"images/hit/hit_00000": {
+			"images/hit/hit_00000": { "width": 500, "height": 500 },
+			"images/hit/hit_00001": { "width": 500, "height": 500 },
+			"images/hit/hit_00002": { "width": 500, "height": 500 },
+			"images/hit/hit_00003": { "width": 500, "height": 500 },
+			"images/hit/hit_00004": { "width": 500, "height": 500 },
+			"images/hit/hit_00005": { "width": 500, "height": 500 },
+			"images/hit/hit_00006": { "width": 500, "height": 500 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"images/hit/hit_00000": {
+				"attachment": [
+					{ "time": 0, "name": "images/hit/hit_00001" },
+					{ "time": 0.0333, "name": "images/hit/hit_00000" },
+					{ "time": 0.0667, "name": "images/hit/hit_00002" },
+					{ "time": 0.1, "name": "images/hit/hit_00003" },
+					{ "time": 0.1333, "name": "images/hit/hit_00004" },
+					{ "time": 0.2, "name": "images/hit/hit_00005" },
+					{ "time": 0.2667, "name": "images/hit/hit_00006" },
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0667, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

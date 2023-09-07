@@ -1,0 +1,63 @@
+{
+"skeleton": { "hash": "mfUNBZEV29MVO7i5KBwf49286wY", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root", "y": -2, "scaleX": 3, "scaleY": 4 },
+	{ "name": "juedoupanZX", "parent": "root" },
+	{ "name": "05", "parent": "juedoupanZX" },
+	{ "name": "lightning", "parent": "05", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "lightning_", "bone": "lightning", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"lightning_": {
+			"image/05/lightning/lightning_0000": { "width": 244, "height": 486 },
+			"image/05/lightning/lightning_0001": { "width": 244, "height": 486 },
+			"image/05/lightning/lightning_0002": { "width": 244, "height": 486 },
+			"image/05/lightning/lightning_0003": { "width": 244, "height": 486 },
+			"image/05/lightning/lightning_0004": { "width": 244, "height": 486 },
+			"image/05/lightning/lightning_0005": { "width": 244, "height": 486 },
+			"image/05/lightning/lightning_0006": { "width": 244, "height": 486 },
+			"image/05/lightning/lightning_0007": { "width": 244, "height": 486 },
+			"image/05/lightning/lightning_0008": { "width": 244, "height": 486 },
+			"image/05/lightning/lightning_0009": { "width": 244, "height": 486 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"lightning_": {
+				"attachment": [
+					{ "time": 0, "name": "image/05/lightning/lightning_0000" },
+					{ "time": 0.0333, "name": "image/05/lightning/lightning_0001" },
+					{ "time": 0.0667, "name": "image/05/lightning/lightning_0002" },
+					{ "time": 0.1, "name": "image/05/lightning/lightning_0003" },
+					{ "time": 0.1333, "name": "image/05/lightning/lightning_0004" },
+					{ "time": 0.1667, "name": "image/05/lightning/lightning_0005" },
+					{ "time": 0.2, "name": "image/05/lightning/lightning_0006" },
+					{ "time": 0.2333, "name": "image/05/lightning/lightning_0007" },
+					{ "time": 0.2667, "name": "image/05/lightning/lightning_0008" },
+					{ "time": 0.3, "name": "image/05/lightning/lightning_0009" },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.4333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"lightning": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 364.14 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0667, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

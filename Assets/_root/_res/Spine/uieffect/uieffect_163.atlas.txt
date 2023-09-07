@@ -1,0 +1,48 @@
+
+uieffect_163.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+box_1
+  rotate: false
+  xy: 262, 163
+  size: 80, 68
+  orig: 86, 72
+  offset: 2, 1
+  index: -1
+box_1L
+  rotate: false
+  xy: 262, 163
+  size: 80, 68
+  orig: 86, 72
+  offset: 2, 1
+  index: -1
+box_2
+  rotate: false
+  xy: 2, 2
+  size: 111, 99
+  orig: 118, 110
+  offset: 0, 3
+  index: -1
+box_2L
+  rotate: false
+  xy: 2, 2
+  size: 111, 99
+  orig: 118, 110
+  offset: 0, 3
+  index: -1
+glow_027
+  rotate: false
+  xy: 2, 103
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+glow_030
+  rotate: false
+  xy: 132, 103
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

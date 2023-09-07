@@ -1,0 +1,67 @@
+{
+"skeleton": { "hash": "59ss2OHU5nHrcucqxntgBYDABaE", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root", "rotation": -15.81 },
+	{ "name": "Efect", "parent": "root" }
+],
+"slots": [
+	{ "name": "light", "bone": "Efect", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"light": {
+			"light/light_0000": { "width": 120, "height": 120 },
+			"light/light_0002": { "width": 120, "height": 120 },
+			"light/light_0004": { "width": 120, "height": 120 },
+			"light/light_0006": { "width": 120, "height": 120 },
+			"light/light_0008": { "width": 120, "height": 120 },
+			"light/light_0010": { "width": 120, "height": 120 },
+			"light/light_0012": { "width": 120, "height": 120 },
+			"light/light_0014": { "width": 120, "height": 120 },
+			"light/light_0016": { "width": 120, "height": 120 },
+			"light/light_0018": { "width": 120, "height": 120 },
+			"light/light_0020": { "width": 120, "height": 120 },
+			"light/light_0022": { "width": 120, "height": 120 },
+			"light/light_0024": { "width": 120, "height": 120 },
+			"light/light_0026": { "width": 120, "height": 120 },
+			"light/light_0028": { "width": 120, "height": 120 },
+			"light/light_0030": { "width": 120, "height": 120 },
+			"light/light_0032": { "width": 120, "height": 120 },
+			"light/light_0034": { "width": 120, "height": 120 },
+			"light/light_0036": { "width": 120, "height": 120 },
+			"light/light_0038": { "width": 120, "height": 120 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"light": {
+				"attachment": [
+					{ "time": 0, "name": "light/light_0000" },
+					{ "time": 0.0667, "name": "light/light_0002" },
+					{ "time": 0.1333, "name": "light/light_0004" },
+					{ "time": 0.2, "name": "light/light_0006" },
+					{ "time": 0.2667, "name": "light/light_0008" },
+					{ "time": 0.3333, "name": "light/light_0010" },
+					{ "time": 0.4, "name": "light/light_0012" },
+					{ "time": 0.4667, "name": "light/light_0014" },
+					{ "time": 0.5333, "name": "light/light_0016" },
+					{ "time": 0.6, "name": "light/light_0018" },
+					{ "time": 0.6667, "name": "light/light_0020" },
+					{ "time": 0.7333, "name": "light/light_0022" },
+					{ "time": 0.8, "name": "light/light_0024" },
+					{ "time": 0.8667, "name": "light/light_0026" },
+					{ "time": 0.9333, "name": "light/light_0028" },
+					{ "time": 1, "name": "light/light_0030" },
+					{ "time": 1.0667, "name": "light/light_0032" },
+					{ "time": 1.1333, "name": "light/light_0034" },
+					{ "time": 1.2, "name": "light/light_0036" },
+					{ "time": 1.2667, "name": "light/light_0038" },
+					{ "time": 1.3333, "name": "light/light_0000" }
+				]
+			}
+		}
+	}
+}
+}

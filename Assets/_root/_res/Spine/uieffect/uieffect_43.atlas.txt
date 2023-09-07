@@ -1,0 +1,13 @@
+
+uieffect_43.png
+size: 44,44
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/glow_point
+  rotate: false
+  xy: 2, 2
+  size: 40, 40
+  orig: 60, 60
+  offset: 10, 10
+  index: -1

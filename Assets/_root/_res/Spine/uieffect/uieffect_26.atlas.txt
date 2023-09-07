@@ -1,0 +1,62 @@
+
+uieffect_26.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/light_sweep_0000
+  rotate: false
+  xy: 108, 183
+  size: 74, 74
+  orig: 116, 116
+  offset: 4, 39
+  index: -1
+images/light_sweep_0002
+  rotate: false
+  xy: 2, 259
+  size: 104, 105
+  orig: 116, 116
+  offset: 4, 8
+  index: -1
+images/light_sweep_0004
+  rotate: false
+  xy: 2, 152
+  size: 104, 105
+  orig: 116, 116
+  offset: 4, 8
+  index: -1
+images/light_sweep_0006
+  rotate: false
+  xy: 108, 259
+  size: 104, 105
+  orig: 116, 116
+  offset: 4, 8
+  index: -1
+images/light_sweep_0008
+  rotate: false
+  xy: 2, 54
+  size: 94, 96
+  orig: 116, 116
+  offset: 14, 8
+  index: -1
+images/light_sweep_0009
+  rotate: false
+  xy: 214, 291
+  size: 72, 73
+  orig: 116, 116
+  offset: 36, 8
+  index: -1
+images/light_sweep_0010
+  rotate: false
+  xy: 2, 2
+  size: 49, 50
+  orig: 116, 116
+  offset: 59, 8
+  index: -1
+images/light_sweep_0011
+  rotate: false
+  xy: 108, 154
+  size: 26, 27
+  orig: 116, 116
+  offset: 82, 8
+  index: -1

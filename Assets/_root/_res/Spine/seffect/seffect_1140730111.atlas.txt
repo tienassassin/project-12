@@ -1,0 +1,34 @@
+
+seffect_1140730111.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/d_00039
+  rotate: false
+  xy: 217, 382
+  size: 218, 53
+  orig: 218, 53
+  offset: 0, 0
+  index: -1
+images/down_30
+  rotate: false
+  xy: 2, 352
+  size: 213, 83
+  orig: 290, 113
+  offset: 46, 15
+  index: -1
+images/down_32
+  rotate: false
+  xy: 2, 272
+  size: 213, 78
+  orig: 290, 113
+  offset: 56, 18
+  index: -1
+images/glow
+  rotate: false
+  xy: 2, 150
+  size: 120, 120
+  orig: 128, 128
+  offset: 4, 3
+  index: -1

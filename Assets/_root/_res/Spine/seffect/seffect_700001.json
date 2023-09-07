@@ -1,0 +1,65 @@
+{
+"skeleton": { "hash": "hONiNClXcnmmQG3wSCjXn6OlXRY", "spine": "3.5.35", "width": 316, "height": 304 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "buffZX", "parent": "root", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "buffFrames", "bone": "buffZX", "attachment": "images/duanpai/duanpai_0001" }
+],
+"skins": {
+	"default": {
+		"buffFrames": {
+			"images/duanpai/duanpai_0001": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0003": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0005": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0007": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0009": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0011": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0013": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0015": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0017": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0019": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0021": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0023": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0025": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0027": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0029": { "width": 158, "height": 152 },
+			"images/duanpai/duanpai_0031": { "width": 158, "height": 152 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"buffFrames": {
+				"attachment": [
+					{ "time": 0.0333, "name": "images/duanpai/duanpai_0001" },
+					{ "time": 0.1, "name": "images/duanpai/duanpai_0003" },
+					{ "time": 0.1667, "name": "images/duanpai/duanpai_0005" },
+					{ "time": 0.2333, "name": "images/duanpai/duanpai_0007" },
+					{ "time": 0.3, "name": "images/duanpai/duanpai_0009" },
+					{ "time": 0.3667, "name": "images/duanpai/duanpai_0011" },
+					{ "time": 0.4333, "name": "images/duanpai/duanpai_0013" },
+					{ "time": 0.5, "name": "images/duanpai/duanpai_0015" },
+					{ "time": 0.5667, "name": "images/duanpai/duanpai_0017" },
+					{ "time": 0.6333, "name": "images/duanpai/duanpai_0019" },
+					{ "time": 0.7, "name": "images/duanpai/duanpai_0021" },
+					{ "time": 0.7667, "name": "images/duanpai/duanpai_0023" },
+					{ "time": 0.8333, "name": "images/duanpai/duanpai_0025" },
+					{ "time": 0.9, "name": "images/duanpai/duanpai_0027" },
+					{ "time": 0.9667, "name": "images/duanpai/duanpai_0029" },
+					{ "time": 1.0333, "name": "images/duanpai/duanpai_0031" },
+					{ "time": 1.0667, "name": null }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.3333, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

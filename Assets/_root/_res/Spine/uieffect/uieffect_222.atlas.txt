@@ -1,0 +1,27 @@
+
+uieffect_222.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/cloud_1
+  rotate: false
+  xy: 0, 0
+  size: 674, 190
+  orig: 674, 190
+  offset: 0, 0
+  index: -1
+images/cloud_2
+  rotate: false
+  xy: 676, 66
+  size: 418, 124
+  orig: 418, 124
+  offset: 0, 0
+  index: -1
+images/cloud_3
+  rotate: false
+  xy: 1096, 110
+  size: 264, 80
+  orig: 264, 80
+  offset: 0, 0
+  index: -1

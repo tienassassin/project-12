@@ -1,0 +1,41 @@
+
+uieffect_192.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/banz_bg
+  rotate: false
+  xy: 2, 125
+  size: 491, 93
+  orig: 491, 93
+  offset: 0, 0
+  index: -1
+images/glow_line
+  rotate: false
+  xy: 495, 83
+  size: 240, 135
+  orig: 240, 135
+  offset: 0, 0
+  index: -1
+images/glow_line_reblack
+  rotate: false
+  xy: 2, 68
+  size: 342, 55
+  orig: 342, 55
+  offset: 0, 0
+  index: -1
+images/zhanl_1
+  rotate: false
+  xy: 2, 2
+  size: 226, 64
+  orig: 226, 64
+  offset: 0, 0
+  index: -1
+images/zhanl_2
+  rotate: false
+  xy: 737, 150
+  size: 122, 68
+  orig: 122, 68
+  offset: 0, 0
+  index: -1

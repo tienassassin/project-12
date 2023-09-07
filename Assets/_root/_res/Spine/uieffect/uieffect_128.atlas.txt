@@ -1,0 +1,62 @@
+
+uieffect_128.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+texture/boss_0
+  rotate: false
+  xy: 0, 108
+  size: 598, 143
+  orig: 598, 143
+  offset: 0, 0
+  index: -1
+texture/boss_1
+  rotate: false
+  xy: 1046, 122
+  size: 381, 129
+  orig: 381, 129
+  offset: 0, 0
+  index: -1
+texture/boss_3
+  rotate: false
+  xy: 1735, 119
+  size: 242, 132
+  orig: 242, 132
+  offset: 0, 0
+  index: -1
+texture/boss_a0001
+  rotate: false
+  xy: 600, 121
+  size: 444, 130
+  orig: 480, 160
+  offset: 18, 15
+  index: -1
+texture/boss_a0002
+  rotate: false
+  xy: 1429, 119
+  size: 304, 132
+  orig: 480, 160
+  offset: 88, 14
+  index: -1
+texture/dian_0
+  rotate: false
+  xy: 1979, 203
+  size: 54, 48
+  orig: 54, 48
+  offset: 0, 0
+  index: -1
+texture/dian_1
+  rotate: false
+  xy: 600, 0
+  size: 138, 119
+  orig: 138, 119
+  offset: 0, 0
+  index: -1
+texture/dian_2
+  rotate: false
+  xy: 0, 17
+  size: 82, 89
+  orig: 82, 89
+  offset: 0, 0
+  index: -1

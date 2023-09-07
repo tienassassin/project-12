@@ -1,0 +1,74 @@
+{
+"skeleton": { "hash": "zTKWQYEP4JZDy1M74vZ5UdpKUbY", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": 26.22, "y": 2.68 }
+],
+"slots": [
+	{ "name": "dao02_00000", "bone": "bone" }
+],
+"skins": {
+	"default": {
+		"dao02_00000": {
+			"dao02_00000": { "width": 500, "height": 500 },
+			"dao02_00001": { "width": 500, "height": 500 },
+			"dao02_00002": { "width": 500, "height": 500 },
+			"dao02_00003": { "width": 500, "height": 500 },
+			"dao02_00004": { "width": 500, "height": 500 },
+			"dao02_00005": { "width": 500, "height": 500 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"dao02_00000": {
+				"attachment": [
+					{ "time": 0, "name": "dao02_00000" },
+					{ "time": 0.0333, "name": "dao02_00001" },
+					{ "time": 0.0667, "name": "dao02_00002" },
+					{ "time": 0.1, "name": "dao02_00003" },
+					{ "time": 0.1333, "name": "dao02_00004" },
+					{ "time": 0.1667, "name": "dao02_00005" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 363.93, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0333, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

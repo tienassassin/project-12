@@ -1,0 +1,55 @@
+
+seffect_51502150111.png
+size: 516,516
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/chi_2_0000
+  rotate: false
+  xy: 329, 414
+  size: 89, 100
+  orig: 128, 128
+  offset: 6, 21
+  index: -1
+images/chi_2_0001
+  rotate: true
+  xy: 329, 315
+  size: 97, 77
+  orig: 128, 128
+  offset: 10, 28
+  index: -1
+images/chi_2_0002
+  rotate: false
+  xy: 420, 439
+  size: 75, 75
+  orig: 128, 128
+  offset: 24, 31
+  index: -1
+images/jianline
+  rotate: false
+  xy: 263, 2
+  size: 64, 512
+  orig: 64, 512
+  offset: 0, 0
+  index: -1
+images/mikoto_s2_000
+  rotate: false
+  xy: 2, 2
+  size: 85, 512
+  orig: 85, 512
+  offset: 0, 0
+  index: -1
+images/mikoto_s2_001
+  rotate: false
+  xy: 89, 2
+  size: 85, 512
+  orig: 85, 512
+  offset: 0, 0
+  index: -1
+images/mikoto_s2_002
+  rotate: false
+  xy: 176, 2
+  size: 85, 512
+  orig: 85, 512
+  offset: 0, 0
+  index: -1

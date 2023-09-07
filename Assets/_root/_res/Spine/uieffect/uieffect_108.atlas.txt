@@ -1,0 +1,83 @@
+
+uieffect_108.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Texture/uieffect_xx0003
+  rotate: false
+  xy: 919, 72
+  size: 25, 52
+  orig: 647, 132
+  offset: 4, 76
+  index: -1
+Texture/uieffect_xx0004
+  rotate: false
+  xy: 808, 0
+  size: 73, 124
+  orig: 647, 132
+  offset: 4, 4
+  index: -1
+Texture/uieffect_xx0006
+  rotate: false
+  xy: 0, 0
+  size: 146, 124
+  orig: 647, 132
+  offset: 28, 4
+  index: -1
+Texture/uieffect_xx0008
+  rotate: false
+  xy: 148, 0
+  size: 146, 124
+  orig: 647, 132
+  offset: 125, 4
+  index: -1
+Texture/uieffect_xx0015
+  rotate: false
+  xy: 148, 0
+  size: 146, 124
+  orig: 647, 132
+  offset: 464, 4
+  index: -1
+Texture/uieffect_xx0010
+  rotate: false
+  xy: 444, 0
+  size: 145, 124
+  orig: 647, 132
+  offset: 222, 4
+  index: -1
+Texture/uieffect_xx0012
+  rotate: false
+  xy: 444, 0
+  size: 145, 124
+  orig: 647, 132
+  offset: 319, 4
+  index: -1
+Texture/uieffect_xx0014
+  rotate: false
+  xy: 296, 0
+  size: 146, 124
+  orig: 647, 132
+  offset: 415, 4
+  index: -1
+Texture/uieffect_xx0016
+  rotate: false
+  xy: 591, 0
+  size: 131, 124
+  orig: 647, 132
+  offset: 512, 4
+  index: -1
+Texture/uieffect_xx0017
+  rotate: false
+  xy: 724, 0
+  size: 82, 124
+  orig: 647, 132
+  offset: 561, 4
+  index: -1
+Texture/uieffect_xx0018
+  rotate: false
+  xy: 883, 53
+  size: 34, 71
+  orig: 647, 132
+  offset: 609, 4
+  index: -1

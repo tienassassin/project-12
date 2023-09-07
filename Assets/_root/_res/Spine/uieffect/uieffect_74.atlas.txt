@@ -1,0 +1,48 @@
+
+uieffect_74.png
+size: 375,375
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+champion_3_1
+  rotate: false
+  xy: 2, 151
+  size: 188, 222
+  orig: 223, 237
+  offset: 17, 9
+  index: -1
+shikuai1
+  rotate: true
+  xy: 132, 16
+  size: 82, 124
+  orig: 84, 126
+  offset: 1, 1
+  index: -1
+shikuai2
+  rotate: false
+  xy: 192, 230
+  size: 137, 143
+  orig: 139, 145
+  offset: 1, 1
+  index: -1
+shikuai3
+  rotate: true
+  xy: 132, 100
+  size: 49, 58
+  orig: 51, 60
+  offset: 1, 1
+  index: -1
+shikuai4
+  rotate: false
+  xy: 2, 2
+  size: 128, 147
+  orig: 130, 149
+  offset: 1, 1
+  index: -1
+shikuai5
+  rotate: true
+  xy: 192, 101
+  size: 127, 152
+  orig: 129, 154
+  offset: 1, 1
+  index: -1

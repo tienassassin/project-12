@@ -1,0 +1,272 @@
+
+seffect_44508120111.png
+size: 1132,1132
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack/jiaxue/guangshu/gus_0003
+  rotate: true
+  xy: 904, 29
+  size: 73, 91
+  orig: 75, 215
+  offset: 0, 0
+  index: -1
+attack/jiaxue/guangshu/gus_0005
+  rotate: false
+  xy: 721, 1
+  size: 67, 101
+  orig: 75, 215
+  offset: 3, 0
+  index: -1
+attack/jiaxue/guangshu/gus_0007
+  rotate: false
+  xy: 706, 213
+  size: 61, 138
+  orig: 75, 215
+  offset: 6, 0
+  index: -1
+attack/jiaxue/guangshu/gus_0009
+  rotate: false
+  xy: 651, 164
+  size: 53, 177
+  orig: 75, 215
+  offset: 10, 0
+  index: -1
+attack/jiaxue/guangshu/gus_0011
+  rotate: false
+  xy: 981, 261
+  size: 46, 215
+  orig: 75, 215
+  offset: 13, 0
+  index: -1
+attack/jiaxue/guangshu/gus_0013
+  rotate: false
+  xy: 1088, 681
+  size: 36, 215
+  orig: 75, 215
+  offset: 18, 0
+  index: -1
+attack/jiaxue/shangshenglizi/shs_0003
+  rotate: true
+  xy: 1029, 398
+  size: 103, 89
+  orig: 125, 175
+  offset: 12, 11
+  index: -1
+attack/jiaxue/shangshenglizi/shs_0005
+  rotate: true
+  xy: 903, 104
+  size: 112, 117
+  orig: 125, 175
+  offset: 10, 4
+  index: -1
+attack/jiaxue/shangshenglizi/shs_0007
+  rotate: false
+  xy: 1021, 541
+  size: 110, 129
+  orig: 125, 175
+  offset: 12, 3
+  index: -1
+attack/jiaxue/shangshenglizi/shs_0009
+  rotate: true
+  xy: 769, 104
+  size: 112, 132
+  orig: 125, 175
+  offset: 9, 11
+  index: -1
+attack/jiaxue/shangshenglizi/shs_0011
+  rotate: true
+  xy: 769, 218
+  size: 112, 147
+  orig: 125, 175
+  offset: 8, 4
+  index: -1
+attack/jiaxue/shangshenglizi/shs_0013
+  rotate: false
+  xy: 1022, 142
+  size: 105, 117
+  orig: 125, 175
+  offset: 14, 39
+  index: -1
+attack/jiaxue/shangshenglizi/shs_0015
+  rotate: true
+  xy: 790, 18
+  size: 84, 112
+  orig: 125, 175
+  offset: 15, 52
+  index: -1
+attack/jiaxue/shangshenglizi/shs_0017
+  rotate: false
+  xy: 1029, 293
+  size: 80, 103
+  orig: 125, 175
+  offset: 18, 66
+  index: -1
+skill/faz01_0000
+  rotate: false
+  xy: 490, 738
+  size: 342, 142
+  orig: 350, 150
+  offset: 4, 5
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0001
+  rotate: true
+  xy: 427, 764
+  size: 80, 60
+  orig: 150, 200
+  offset: 69, 15
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0003
+  rotate: false
+  xy: 246, 119
+  size: 107, 197
+  orig: 150, 200
+  offset: 42, 2
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0005
+  rotate: false
+  xy: 671, 536
+  size: 148, 200
+  orig: 150, 200
+  offset: 1, 0
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0007
+  rotate: false
+  xy: 515, 343
+  size: 149, 185
+  orig: 150, 200
+  offset: 0, 2
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0009
+  rotate: false
+  xy: 502, 155
+  size: 147, 185
+  orig: 150, 200
+  offset: 0, 1
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0011
+  rotate: true
+  xy: 536, 10
+  size: 143, 183
+  orig: 150, 200
+  offset: 0, 2
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0013
+  rotate: false
+  xy: 666, 353
+  size: 144, 175
+  orig: 150, 200
+  offset: 1, 1
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0015
+  rotate: true
+  xy: 812, 332
+  size: 144, 167
+  orig: 150, 200
+  offset: 1, 1
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0017
+  rotate: true
+  xy: 383, 14
+  size: 128, 151
+  orig: 150, 200
+  offset: 17, 2
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0019
+  rotate: true
+  xy: 246, 2
+  size: 115, 135
+  orig: 150, 200
+  offset: 30, 5
+  index: -1
+skill/jiaxue01/shangsheng01/shs01_0021
+  rotate: false
+  xy: 918, 265
+  size: 40, 65
+  orig: 150, 200
+  offset: 80, 57
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0001
+  rotate: false
+  xy: 326, 342
+  size: 187, 186
+  orig: 500, 300
+  offset: 156, 16
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0003
+  rotate: false
+  xy: 834, 672
+  size: 252, 224
+  orig: 500, 300
+  offset: 124, 10
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0005
+  rotate: false
+  xy: 826, 898
+  size: 299, 233
+  orig: 500, 300
+  offset: 101, 7
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0013
+  rotate: true
+  xy: 1, 1
+  size: 315, 243
+  orig: 500, 300
+  offset: 95, 8
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0017
+  rotate: false
+  xy: 1, 318
+  size: 323, 247
+  orig: 500, 300
+  offset: 90, 8
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0019
+  rotate: false
+  xy: 490, 882
+  size: 334, 249
+  orig: 500, 300
+  offset: 83, 7
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0021
+  rotate: false
+  xy: 1, 846
+  size: 487, 285
+  orig: 500, 300
+  offset: 8, 8
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0023
+  rotate: false
+  xy: 1, 567
+  size: 424, 277
+  orig: 500, 300
+  offset: 38, 7
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0025
+  rotate: false
+  xy: 427, 530
+  size: 242, 206
+  orig: 500, 300
+  offset: 133, 13
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0027
+  rotate: true
+  xy: 821, 478
+  size: 192, 198
+  orig: 500, 300
+  offset: 170, 25
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0029
+  rotate: true
+  xy: 355, 144
+  size: 196, 145
+  orig: 500, 300
+  offset: 169, 23
+  index: -1
+skill/jiaxue01/tianshi01/tis01_0031
+  rotate: true
+  xy: 1021, 503
+  size: 36, 96
+  orig: 500, 300
+  offset: 168, 72
+  index: -1

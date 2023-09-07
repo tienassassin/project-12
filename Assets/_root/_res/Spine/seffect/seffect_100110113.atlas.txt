@@ -1,0 +1,83 @@
+
+seffect_100110113.png
+size: 263,263
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/sequence_11001_000
+  rotate: true
+  xy: 233, 7
+  size: 44, 27
+  orig: 128, 42
+  offset: 16, 8
+  index: -1
+images/sequence_11001_001
+  rotate: false
+  xy: 196, 95
+  size: 65, 36
+  orig: 128, 42
+  offset: 21, 2
+  index: -1
+images/sequence_11001_002
+  rotate: false
+  xy: 64, 24
+  size: 67, 41
+  orig: 128, 42
+  offset: 29, 0
+  index: -1
+images/sequence_11001_003
+  rotate: false
+  xy: 196, 53
+  size: 58, 40
+  orig: 128, 42
+  offset: 39, 0
+  index: -1
+images/sequence_11001_004
+  rotate: false
+  xy: 184, 9
+  size: 47, 42
+  orig: 128, 42
+  offset: 56, 0
+  index: -1
+images/sequence_11001_005
+  rotate: false
+  xy: 134, 27
+  size: 48, 42
+  orig: 128, 42
+  offset: 56, 0
+  index: -1
+images/trail_9003
+  rotate: false
+  xy: 2, 133
+  size: 256, 128
+  orig: 256, 128
+  offset: 0, 0
+  index: -1
+images/xulie038_t_000
+  rotate: false
+  xy: 2, 67
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+images/xulie038_t_001
+  rotate: false
+  xy: 68, 67
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+images/xulie038_t_002
+  rotate: false
+  xy: 2, 5
+  size: 60, 60
+  orig: 64, 64
+  offset: 4, 0
+  index: -1
+images/xulie038_t_003
+  rotate: false
+  xy: 134, 71
+  size: 60, 60
+  orig: 64, 64
+  offset: 4, 0
+  index: -1

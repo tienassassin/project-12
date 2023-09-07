@@ -1,0 +1,97 @@
+
+uieffect_8.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/FX_ani_04013_1_2
+  rotate: false
+  xy: 952, 188
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+images/icon
+  rotate: true
+  xy: 526, 125
+  size: 20, 19
+  orig: 24, 24
+  offset: 2, 3
+  index: -1
+images/maos (1)
+  rotate: false
+  xy: 0, 16
+  size: 25, 24
+  orig: 25, 24
+  offset: 0, 0
+  index: -1
+images/maos (2)
+  rotate: false
+  xy: 345, 9
+  size: 64, 55
+  orig: 64, 55
+  offset: 0, 0
+  index: -1
+images/maos (3)
+  rotate: false
+  xy: 498, 69
+  size: 51, 54
+  orig: 51, 54
+  offset: 0, 0
+  index: -1
+images/maos (4)
+  rotate: false
+  xy: 551, 91
+  size: 43, 54
+  orig: 43, 54
+  offset: 0, 0
+  index: -1
+images/public_yinshen_01_wb
+  rotate: false
+  xy: 411, 0
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+images/zhaocm
+  rotate: false
+  xy: 883, 167
+  size: 67, 85
+  orig: 70, 88
+  offset: 1, 2
+  index: -1
+images/zhaocm_bg
+  rotate: false
+  xy: 345, 66
+  size: 151, 57
+  orig: 356, 107
+  offset: 98, 19
+  index: -1
+images/zhaocm_bgb_half
+  rotate: false
+  xy: 526, 147
+  size: 191, 105
+  orig: 205, 205
+  offset: 4, 71
+  index: -1
+images/zhaocm_bgb_half_lig
+  rotate: false
+  xy: 719, 157
+  size: 162, 95
+  orig: 205, 205
+  offset: 18, 85
+  index: -1
+images/zhaocm_font
+  rotate: false
+  xy: 0, 125
+  size: 524, 127
+  orig: 528, 163
+  offset: 3, 0
+  index: -1
+images/zhaocm_font_half
+  rotate: false
+  xy: 0, 42
+  size: 343, 81
+  orig: 528, 163
+  offset: 95, 5
+  index: -1

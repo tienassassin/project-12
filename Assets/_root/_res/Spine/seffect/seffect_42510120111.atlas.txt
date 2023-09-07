@@ -1,0 +1,125 @@
+
+seffect_42510120111.png
+size: 2048,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/glow_78
+  rotate: false
+  xy: 1666, 78
+  size: 48, 48
+  orig: 50, 50
+  offset: 1, 1
+  index: -1
+images/qiya_brust1
+  rotate: true
+  xy: 1543, 13
+  size: 70, 79
+  orig: 129, 129
+  offset: 30, 22
+  index: -1
+images/qiya_brust10
+  rotate: false
+  xy: 1223, 23
+  size: 115, 103
+  orig: 129, 129
+  offset: 14, 14
+  index: -1
+images/qiya_brust12
+  rotate: false
+  xy: 1340, 25
+  size: 102, 101
+  orig: 129, 129
+  offset: 16, 15
+  index: -1
+images/qiya_brust14
+  rotate: false
+  xy: 1444, 30
+  size: 97, 96
+  orig: 129, 129
+  offset: 19, 18
+  index: -1
+images/qiya_brust2
+  rotate: true
+  xy: 395, 11
+  size: 115, 124
+  orig: 129, 129
+  offset: 0, 0
+  index: -1
+images/qiya_brust3
+  rotate: true
+  xy: 264, 9
+  size: 117, 129
+  orig: 129, 129
+  offset: 0, 0
+  index: -1
+images/qiya_brust4
+  rotate: true
+  xy: 133, 4
+  size: 122, 129
+  orig: 129, 129
+  offset: 0, 0
+  index: -1
+images/qiya_brust6
+  rotate: true
+  xy: 2, 3
+  size: 123, 129
+  orig: 129, 129
+  offset: 2, 0
+  index: -1
+images/qiya_brust8
+  rotate: false
+  xy: 521, 15
+  size: 120, 111
+  orig: 129, 129
+  offset: 6, 7
+  index: -1
+images/skill_pg0
+  rotate: true
+  xy: 643, 25
+  size: 27, 67
+  orig: 74, 151
+  offset: 24, 54
+  index: -1
+images/skill_pg11
+  rotate: true
+  xy: 1543, 85
+  size: 41, 121
+  orig: 74, 151
+  offset: 10, 14
+  index: -1
+images/skill_pg2
+  rotate: true
+  xy: 792, 2
+  size: 52, 121
+  orig: 74, 151
+  offset: 20, 7
+  index: -1
+images/skill_pg3
+  rotate: true
+  xy: 792, 56
+  size: 70, 146
+  orig: 74, 151
+  offset: 3, 5
+  index: -1
+images/skill_pg4
+  rotate: true
+  xy: 940, 60
+  size: 66, 143
+  orig: 74, 151
+  offset: 2, 3
+  index: -1
+images/skill_pg5
+  rotate: true
+  xy: 643, 54
+  size: 72, 147
+  orig: 74, 151
+  offset: 2, 4
+  index: -1
+images/skill_pg8
+  rotate: true
+  xy: 1085, 72
+  size: 54, 136
+  orig: 74, 151
+  offset: 8, 3
+  index: -1

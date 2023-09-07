@@ -1,0 +1,48 @@
+
+uieffect_71.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+diceng
+  rotate: true
+  xy: 321, 11
+  size: 258, 260
+  orig: 260, 262
+  offset: 1, 1
+  index: -1
+dierceng
+  rotate: true
+  xy: 583, 36
+  size: 233, 226
+  orig: 235, 228
+  offset: 1, 1
+  index: -1
+yinying
+  rotate: true
+  xy: 634, 272
+  size: 236, 274
+  orig: 238, 276
+  offset: 1, 1
+  index: -1
+youban
+  rotate: true
+  xy: 0, 0
+  size: 181, 255
+  orig: 183, 257
+  offset: 1, 1
+  index: -1
+zuiwaiceng
+  rotate: false
+  xy: 0, 183
+  size: 319, 325
+  orig: 321, 327
+  offset: 1, 1
+  index: -1
+zuoban
+  rotate: false
+  xy: 321, 271
+  size: 311, 237
+  orig: 313, 239
+  offset: 1, 1
+  index: -1

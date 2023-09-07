@@ -1,0 +1,50 @@
+{
+"skeleton": { "hash": "WurUZlWCGr3WdvNf/fdebWAJ29U", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone2", "parent": "bone", "y": 150, "scaleX": 3, "scaleY": 3 }
+],
+"slots": [
+	{ "name": "tex/sbuff_21_01", "bone": "bone2" }
+],
+"skins": {
+	"default": {
+		"tex/sbuff_21_01": {
+			"tex/sbuff_21_01": { "width": 130, "height": 180 },
+			"tex/sbuff_21_02": { "width": 130, "height": 180 },
+			"tex/sbuff_21_03": { "width": 130, "height": 180 },
+			"tex/sbuff_21_04": { "width": 130, "height": 180 },
+			"tex/sbuff_21_05": { "width": 130, "height": 180 },
+			"tex/sbuff_21_06": { "width": 130, "height": 180 },
+			"tex/sbuff_21_07": { "width": 130, "height": 180 },
+			"tex/sbuff_21_08": { "width": 130, "height": 180 },
+			"tex/sbuff_21_09": { "width": 130, "height": 180 },
+			"tex/sbuff_21_10": { "width": 130, "height": 180 },
+			"tex/sbuff_21_11": { "width": 130, "height": 180 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"tex/sbuff_21_01": {
+				"attachment": [
+					{ "time": 0, "name": "tex/sbuff_21_11" },
+					{ "time": 0.0667, "name": "tex/sbuff_21_01" },
+					{ "time": 0.1333, "name": "tex/sbuff_21_02" },
+					{ "time": 0.2, "name": "tex/sbuff_21_03" },
+					{ "time": 0.2667, "name": "tex/sbuff_21_04" },
+					{ "time": 0.3333, "name": "tex/sbuff_21_05" },
+					{ "time": 0.4, "name": "tex/sbuff_21_06" },
+					{ "time": 0.4667, "name": "tex/sbuff_21_07" },
+					{ "time": 0.5333, "name": "tex/sbuff_21_08" },
+					{ "time": 0.6, "name": "tex/sbuff_21_09" },
+					{ "time": 0.6667, "name": "tex/sbuff_21_10" },
+					{ "time": 0.7333, "name": "tex/sbuff_21_11" }
+				]
+			}
+		}
+	}
+}
+}

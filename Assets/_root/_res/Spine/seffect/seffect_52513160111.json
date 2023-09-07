@@ -1,0 +1,215 @@
+{
+"skeleton": { "hash": "sMfrrkF6ZM6kIXph+zryuEPlN8w", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "superskill", "parent": "root" },
+	{ "name": "s_3", "parent": "superskill", "scaleX": 2, "scaleY": 2 },
+	{ "name": "s_4", "parent": "superskill", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "superskill/3/004", "bone": "s_3" },
+	{ "name": "superskill/3/4", "bone": "s_4" }
+],
+"skins": {
+	"default": {
+		"superskill/3/004": {
+			"superskill/3/005": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/007": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/009": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/011": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/013": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/015": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/017": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/019": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/021": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/023": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/025": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/027": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/029": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/031": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/033": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/035": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/037": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/039": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/041": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/043": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/045": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/047": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/049": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/051": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/053": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/055": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/057": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/059": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/061": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/063": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/065": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/067": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/069": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 }
+		},
+		"superskill/3/4": {
+			"superskill/3/005": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/007": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/009": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/011": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/013": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/015": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/017": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/019": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/021": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/023": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/025": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/027": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/029": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/031": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/033": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/035": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/037": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/039": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/041": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/043": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/045": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/047": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/049": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/051": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/053": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/055": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/057": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/059": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/061": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/063": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/065": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/067": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 },
+			"superskill/3/069": { "scaleX": 2, "scaleY": 2, "width": 275, "height": 427 }
+		}
+	}
+},
+"events": {
+	"qishou_21_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"superskill/3/004": {
+				"color": [
+					{ "time": 2.1333, "color": "ffffffff" },
+					{ "time": 2.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "superskill/3/005" },
+					{ "time": 0.0667, "name": "superskill/3/007" },
+					{ "time": 0.1333, "name": "superskill/3/009" },
+					{ "time": 0.2, "name": "superskill/3/011" },
+					{ "time": 0.2667, "name": "superskill/3/013" },
+					{ "time": 0.3333, "name": "superskill/3/015" },
+					{ "time": 0.4, "name": "superskill/3/017" },
+					{ "time": 0.4667, "name": "superskill/3/019" },
+					{ "time": 0.5333, "name": "superskill/3/021" },
+					{ "time": 0.6, "name": "superskill/3/023" },
+					{ "time": 0.6667, "name": "superskill/3/025" },
+					{ "time": 0.7333, "name": "superskill/3/027" },
+					{ "time": 0.8, "name": "superskill/3/029" },
+					{ "time": 0.8667, "name": "superskill/3/031" },
+					{ "time": 0.9333, "name": "superskill/3/033" },
+					{ "time": 1, "name": "superskill/3/035" },
+					{ "time": 1.0667, "name": "superskill/3/037" },
+					{ "time": 1.1333, "name": "superskill/3/039" },
+					{ "time": 1.2, "name": "superskill/3/041" },
+					{ "time": 1.2667, "name": "superskill/3/043" },
+					{ "time": 1.3333, "name": "superskill/3/045" },
+					{ "time": 1.4, "name": "superskill/3/047" },
+					{ "time": 1.4667, "name": "superskill/3/049" },
+					{ "time": 1.5333, "name": "superskill/3/051" },
+					{ "time": 1.6, "name": "superskill/3/053" },
+					{ "time": 1.6667, "name": "superskill/3/055" },
+					{ "time": 1.7333, "name": "superskill/3/057" },
+					{ "time": 1.8, "name": "superskill/3/059" },
+					{ "time": 1.8667, "name": "superskill/3/061" },
+					{ "time": 1.9333, "name": "superskill/3/063" },
+					{ "time": 2, "name": "superskill/3/065" },
+					{ "time": 2.0667, "name": "superskill/3/067" },
+					{ "time": 2.1333, "name": "superskill/3/069" },
+					{ "time": 2.3333, "name": null }
+				]
+			},
+			"superskill/3/4": {
+				"color": [
+					{ "time": 2.1333, "color": "ffffffff" },
+					{ "time": 2.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "superskill/3/005" },
+					{ "time": 0.0667, "name": "superskill/3/007" },
+					{ "time": 0.1333, "name": "superskill/3/009" },
+					{ "time": 0.2, "name": "superskill/3/011" },
+					{ "time": 0.2667, "name": "superskill/3/013" },
+					{ "time": 0.3333, "name": "superskill/3/015" },
+					{ "time": 0.4, "name": "superskill/3/017" },
+					{ "time": 0.4667, "name": "superskill/3/019" },
+					{ "time": 0.5333, "name": "superskill/3/021" },
+					{ "time": 0.6, "name": "superskill/3/023" },
+					{ "time": 0.6667, "name": "superskill/3/025" },
+					{ "time": 0.7333, "name": "superskill/3/027" },
+					{ "time": 0.8, "name": "superskill/3/029" },
+					{ "time": 0.8667, "name": "superskill/3/031" },
+					{ "time": 0.9333, "name": "superskill/3/033" },
+					{ "time": 1, "name": "superskill/3/035" },
+					{ "time": 1.0667, "name": "superskill/3/037" },
+					{ "time": 1.1333, "name": "superskill/3/039" },
+					{ "time": 1.2, "name": "superskill/3/041" },
+					{ "time": 1.2667, "name": "superskill/3/043" },
+					{ "time": 1.3333, "name": "superskill/3/045" },
+					{ "time": 1.4, "name": "superskill/3/047" },
+					{ "time": 1.4667, "name": "superskill/3/049" },
+					{ "time": 1.5333, "name": "superskill/3/051" },
+					{ "time": 1.6, "name": "superskill/3/053" },
+					{ "time": 1.6667, "name": "superskill/3/055" },
+					{ "time": 1.7333, "name": "superskill/3/057" },
+					{ "time": 1.8, "name": "superskill/3/059" },
+					{ "time": 1.8667, "name": "superskill/3/061" },
+					{ "time": 1.9333, "name": "superskill/3/063" },
+					{ "time": 2, "name": "superskill/3/065" },
+					{ "time": 2.0667, "name": "superskill/3/067" },
+					{ "time": 2.1333, "name": "superskill/3/069" },
+					{ "time": 2.3333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"s_3": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 1255.27, "y": 338.05 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"s_4": {
+				"translate": [
+					{ "time": 0, "x": -2030.61, "y": 338.64 }
+				],
+				"scale": [
+					{ "time": 0, "x": -3, "y": 3 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.5, "name": "qishou_21_1_1" }
+		]
+	}
+}
+}

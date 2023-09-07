@@ -1,0 +1,88 @@
+{
+"skeleton": { "hash": "6fiEVtVoSz83w/Zxm0J/nDmcAN8", "spine": "3.5.35", "width": 150, "height": 130 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": 36.92, "y": 1.4 },
+	{ "name": "bone2", "parent": "bone", "x": -11.12, "y": -0.21, "scaleY": 1.5 }
+],
+"slots": [
+	{ "name": "yueyatianchong/0", "bone": "bone", "attachment": "yueyatianchong/0" },
+	{ "name": "yueyatianchong/suduxian_00000", "bone": "bone2" }
+],
+"skins": {
+	"default": {
+		"yueyatianchong/0": {
+			"yueyatianchong/0": { "width": 150, "height": 130 }
+		},
+		"yueyatianchong/suduxian_00000": {
+			"yueyatianchong/suduxian_00000": { "width": 135, "height": 84 },
+			"yueyatianchong/suduxian_00001": { "width": 135, "height": 84 },
+			"yueyatianchong/suduxian_00002": { "width": 135, "height": 84 },
+			"yueyatianchong/suduxian_00003": { "width": 135, "height": 84 },
+			"yueyatianchong/suduxian_00004": { "width": 135, "height": 84 },
+			"yueyatianchong/suduxian_00005": { "width": 135, "height": 84 }
+		}
+	}
+},
+"events": {
+	"back": {},
+	"chufa_21_2_1": {},
+	"chufa_21_2_2": {},
+	"chufa_31_3_1": {},
+	"chufa_31_3_2": {},
+	"chufa_31_3_3": {},
+	"faqi_1": {},
+	"faqi_11": {}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"yueyatianchong/0": {
+				"attachment": [
+					{ "time": 0, "name": "yueyatianchong/0" }
+				]
+			},
+			"yueyatianchong/suduxian_00000": {
+				"attachment": [
+					{ "time": 0, "name": "yueyatianchong/suduxian_00000" },
+					{ "time": 0.0667, "name": "yueyatianchong/suduxian_00001" },
+					{ "time": 0.1333, "name": "yueyatianchong/suduxian_00002" },
+					{ "time": 0.2, "name": "yueyatianchong/suduxian_00003" },
+					{ "time": 0.2667, "name": "yueyatianchong/suduxian_00004" },
+					{ "time": 0.3333, "name": "yueyatianchong/suduxian_00005" },
+					{ "time": 0.4, "name": "yueyatianchong/suduxian_00000" },
+					{ "time": 0.4667, "name": "yueyatianchong/suduxian_00001" },
+					{ "time": 0.5333, "name": "yueyatianchong/suduxian_00002" },
+					{ "time": 0.6, "name": "yueyatianchong/suduxian_00003" },
+					{ "time": 0.6667, "name": "yueyatianchong/suduxian_00004" },
+					{ "time": 0.7333, "name": "yueyatianchong/suduxian_00005" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": -37.8, "y": 1.6 }
+				],
+				"scale": [
+					{ "time": 0, "x": 5, "y": 5 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": -32.4 }
+				]
+			},
+			"bone2": {
+				"translate": [
+					{ "time": 0, "x": -27.72, "y": -2.41 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.4, "y": 1.33 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 24.74 }
+				]
+			}
+		}
+	}
+}
+}

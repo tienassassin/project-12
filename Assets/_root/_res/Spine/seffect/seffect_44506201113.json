@@ -1,0 +1,72 @@
+{
+"skeleton": { "hash": "hvQqEQeIejvwuRUHAuXcJNUJw9I", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "BG", "parent": "root", "y": 116.32, "scaleX": 3.33, "scaleY": 3.33 },
+	{ "name": "beiludandipifuZX", "parent": "root", "x": -272.83, "y": -196.82 },
+	{ "name": "tx", "parent": "beiludandipifuZX", "x": 272.83, "y": 215.3 },
+	{ "name": "dan", "parent": "tx" }
+],
+"slots": [
+	{ "name": "bg", "bone": "BG" },
+	{ "name": "dan", "bone": "dan" }
+],
+"skins": {
+	"default": {
+		"dan": {
+			"dan/dan_0000": { "width": 525, "height": 285 },
+			"dan/dan_0002": { "width": 525, "height": 285 },
+			"dan/dan_0004": { "width": 525, "height": 285 },
+			"dan/dan_0006": { "width": 525, "height": 285 },
+			"dan/dan_0008": { "width": 525, "height": 285 },
+			"dan/dan_0010": { "width": 525, "height": 285 },
+			"dan/dan_0012": { "width": 525, "height": 285 },
+			"dan/dan_0014": { "width": 525, "height": 285 },
+			"dan/dan_0016": { "width": 525, "height": 285 },
+			"dan/dan_0018": { "width": 525, "height": 285 },
+			"dan/dan_0020": { "width": 525, "height": 285 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"dan": {
+				"attachment": [
+					{ "time": 0, "name": "dan/dan_0000" },
+					{ "time": 0.0667, "name": "dan/dan_0002" },
+					{ "time": 0.1333, "name": "dan/dan_0004" },
+					{ "time": 0.2, "name": "dan/dan_0006" },
+					{ "time": 0.2667, "name": "dan/dan_0008" },
+					{ "time": 0.3333, "name": "dan/dan_0010" },
+					{ "time": 0.4, "name": "dan/dan_0012" },
+					{ "time": 0.4667, "name": "dan/dan_0014" },
+					{ "time": 0.5333, "name": "dan/dan_0016" },
+					{ "time": 0.6, "name": "dan/dan_0018" },
+					{ "time": 0.6667, "name": "dan/dan_0020" },
+					{ "time": 0.7, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"dan": {
+				"translate": [
+					{ "time": 0, "x": -231.14, "y": -33.09 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.574, "y": 2.574 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0.3333 }
+		],
+		"events": [
+			{ "time": 0.3, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,74 @@
+{
+"skeleton": { "hash": "k6rUM7+DAN4kR0lBv/GTrMtOUw8", "spine": "3.5.35", "width": 1235, "height": 862, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone2", "parent": "bone", "length": 200, "x": 16, "y": 120, "scaleX": 4, "scaleY": 4 }
+],
+"slots": [
+	{ "name": "tex/sbuff_18_01", "bone": "bone2" }
+],
+"skins": {
+	"default": {
+		"tex/sbuff_18_01": {
+			"tex/sbuff_18_01": { "width": 112, "height": 150 },
+			"tex/sbuff_18_02": { "width": 112, "height": 150 },
+			"tex/sbuff_18_03": { "width": 112, "height": 150 },
+			"tex/sbuff_18_04": { "width": 112, "height": 150 },
+			"tex/sbuff_18_05": { "width": 112, "height": 150 },
+			"tex/sbuff_18_06": { "width": 112, "height": 150 },
+			"tex/sbuff_18_07": { "width": 112, "height": 150 },
+			"tex/sbuff_18_08": { "width": 112, "height": 150 },
+			"tex/sbuff_18_09": { "width": 112, "height": 150 },
+			"tex/sbuff_18_10": { "width": 112, "height": 150 },
+			"tex/sbuff_18_11": { "width": 112, "height": 150 },
+			"tex/sbuff_18_12": { "width": 112, "height": 150 },
+			"tex/sbuff_18_13": { "width": 112, "height": 150 },
+			"tex/sbuff_18_14": { "width": 112, "height": 150 },
+			"tex/sbuff_18_15": { "width": 112, "height": 150 },
+			"tex/sbuff_18_16": { "width": 112, "height": 150 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"tex/sbuff_18_01": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff2c",
+						"curve": [ 0.401, 0, 0.618, 1 ]
+					},
+					{ "time": 0.4, "color": "ffffffd6", "curve": "stepped" },
+					{
+						"time": 0.6667,
+						"color": "ffffffd6",
+						"curve": [ 0.401, 0, 0.618, 1 ]
+					},
+					{ "time": 1.0667, "color": "ffffff2c" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "tex/sbuff_18_01" },
+					{ "time": 0.0667, "name": "tex/sbuff_18_02" },
+					{ "time": 0.1333, "name": "tex/sbuff_18_03" },
+					{ "time": 0.2, "name": "tex/sbuff_18_04" },
+					{ "time": 0.2667, "name": "tex/sbuff_18_05" },
+					{ "time": 0.3333, "name": "tex/sbuff_18_06" },
+					{ "time": 0.4, "name": "tex/sbuff_18_07" },
+					{ "time": 0.4667, "name": "tex/sbuff_18_08" },
+					{ "time": 0.5333, "name": "tex/sbuff_18_09" },
+					{ "time": 0.6, "name": "tex/sbuff_18_10" },
+					{ "time": 0.6667, "name": "tex/sbuff_18_11" },
+					{ "time": 0.7333, "name": "tex/sbuff_18_12" },
+					{ "time": 0.8, "name": "tex/sbuff_18_13" },
+					{ "time": 0.8667, "name": "tex/sbuff_18_14" },
+					{ "time": 0.9333, "name": "tex/sbuff_18_15" },
+					{ "time": 1, "name": "tex/sbuff_18_16" },
+					{ "time": 1.0667, "name": "tex/sbuff_18_01" }
+				]
+			}
+		}
+	}
+}
+}

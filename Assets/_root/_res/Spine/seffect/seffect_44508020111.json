@@ -1,0 +1,55 @@
+{
+"skeleton": { "hash": "nT1fidcb4kVyqS0IzzGHqn/7DpQ", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone86", "parent": "root", "x": 128.91, "y": -1.21, "scaleX": 0.6, "scaleY": 0.6 }
+],
+"slots": [
+	{ "name": "att/haixing_0000", "bone": "bone86" },
+	{ "name": "bone87", "bone": "bone86" }
+],
+"skins": {
+	"default": {
+		"att/haixing_0000": {
+			"att/haixing_0000": { "x": 16.74, "y": -0.35, "width": 145, "height": 120 }
+		},
+		"bone87": {
+			"att/haixing_trail_0000": { "x": -92.29, "y": 0.99, "scaleX": 1.2, "width": 278, "height": 120 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"att/haixing_0000": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "att/haixing_0000" },
+					{ "time": 0.3333, "name": "att/haixing_0000" }
+				]
+			},
+			"bone87": {
+				"attachment": [
+					{ "time": 0, "name": "att/haixing_trail_0000" },
+					{ "time": 0.3333, "name": "att/haixing_trail_0000" }
+				]
+			}
+		},
+		"bones": {
+			"bone86": {
+				"translate": [
+					{ "time": 0, "x": -139.95, "y": 3.85, "curve": "stepped" },
+					{ "time": 0.3333, "x": -139.95, "y": 3.85 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.667, "y": 1.667, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1.667, "y": 1.667 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,174 @@
+
+uieffect_39.png
+size: 285,285
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/bg_0000
+  rotate: true
+  xy: 105, 106
+  size: 72, 40
+  orig: 80, 80
+  offset: 2, 38
+  index: -1
+images/bg_0023
+  rotate: true
+  xy: 105, 106
+  size: 72, 40
+  orig: 80, 80
+  offset: 2, 38
+  index: -1
+images/bg_0001
+  rotate: true
+  xy: 2, 114
+  size: 64, 49
+  orig: 80, 80
+  offset: 2, 29
+  index: -1
+images/bg_0002
+  rotate: true
+  xy: 63, 180
+  size: 55, 58
+  orig: 80, 80
+  offset: 2, 20
+  index: -1
+images/bg_0003
+  rotate: true
+  xy: 72, 237
+  size: 46, 67
+  orig: 80, 80
+  offset: 2, 11
+  index: -1
+images/bg_0004
+  rotate: false
+  xy: 45, 37
+  size: 37, 75
+  orig: 80, 80
+  offset: 2, 2
+  index: -1
+images/bg_0005
+  rotate: true
+  xy: 199, 150
+  size: 35, 74
+  orig: 80, 80
+  offset: 2, 1
+  index: -1
+images/bg_0006
+  rotate: true
+  xy: 215, 239
+  size: 44, 68
+  orig: 80, 80
+  offset: 2, 1
+  index: -1
+images/bg_0007
+  rotate: false
+  xy: 84, 45
+  size: 53, 59
+  orig: 80, 80
+  offset: 2, 1
+  index: -1
+images/bg_0008
+  rotate: false
+  xy: 210, 187
+  size: 62, 50
+  orig: 80, 80
+  offset: 2, 1
+  index: -1
+images/bg_0009
+  rotate: false
+  xy: 84, 2
+  size: 71, 41
+  orig: 80, 80
+  offset: 2, 1
+  index: -1
+images/bg_0010
+  rotate: false
+  xy: 199, 116
+  size: 76, 32
+  orig: 80, 80
+  offset: 3, 1
+  index: -1
+images/bg_0011
+  rotate: false
+  xy: 157, 6
+  size: 75, 37
+  orig: 80, 80
+  offset: 5, 1
+  index: -1
+images/bg_0012
+  rotate: false
+  xy: 2, 237
+  size: 68, 46
+  orig: 80, 80
+  offset: 12, 1
+  index: -1
+images/bg_0013
+  rotate: false
+  xy: 2, 180
+  size: 59, 55
+  orig: 80, 80
+  offset: 21, 1
+  index: -1
+images/bg_0014
+  rotate: false
+  xy: 53, 115
+  size: 50, 63
+  orig: 80, 80
+  offset: 30, 2
+  index: -1
+images/bg_0015
+  rotate: false
+  xy: 2, 40
+  size: 41, 72
+  orig: 80, 80
+  offset: 39, 2
+  index: -1
+images/bg_0016
+  rotate: true
+  xy: 194, 46
+  size: 32, 75
+  orig: 80, 80
+  offset: 48, 3
+  index: -1
+images/bg_0017
+  rotate: true
+  xy: 141, 242
+  size: 41, 72
+  orig: 80, 80
+  offset: 39, 6
+  index: -1
+images/bg_0018
+  rotate: false
+  xy: 147, 133
+  size: 50, 62
+  orig: 80, 80
+  offset: 30, 16
+  index: -1
+images/bg_0019
+  rotate: true
+  xy: 139, 45
+  size: 59, 53
+  orig: 80, 80
+  offset: 21, 25
+  index: -1
+images/bg_0020
+  rotate: false
+  xy: 141, 197
+  size: 67, 43
+  orig: 80, 80
+  offset: 12, 35
+  index: -1
+images/bg_0021
+  rotate: false
+  xy: 194, 80
+  size: 76, 34
+  orig: 80, 80
+  offset: 3, 44
+  index: -1
+images/bg_0022
+  rotate: false
+  xy: 2, 2
+  size: 75, 33
+  orig: 80, 80
+  offset: 2, 45
+  index: -1

@@ -1,0 +1,99 @@
+{
+"skeleton": { "hash": "Qv5uSRtr5n2lsSvkrzAU0VaOcks", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root", "rotation": -0.85 },
+	{ "name": "bone", "parent": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "bone81", "parent": "bone" },
+	{ "name": "bone82", "parent": "bone" },
+	{ "name": "bone83", "parent": "bone" }
+],
+"slots": [
+	{ "name": "heitao", "bone": "bone83" },
+	{ "name": "fangpian", "bone": "bone82" },
+	{ "name": "meihua", "bone": "bone81" }
+],
+"skins": {
+	"default": {
+		"fangpian": {
+			"fangpian": { "x": -0.12, "y": 0.18, "width": 27, "height": 39 }
+		},
+		"heitao": {
+			"heitao": { "x": -0.28, "y": -0.46, "width": 27, "height": 39 }
+		},
+		"meihua": {
+			"meihua": { "x": -0.28, "y": 0.5, "width": 27, "height": 39 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"fangpian": {
+				"attachment": [
+					{ "time": 0, "name": "fangpian" }
+				]
+			},
+			"heitao": {
+				"attachment": [
+					{ "time": 0, "name": "heitao" }
+				]
+			},
+			"meihua": {
+				"attachment": [
+					{ "time": 0, "name": "meihua" }
+				]
+			}
+		},
+		"bones": {
+			"bone83": {
+				"rotate": [
+					{ "time": 0, "angle": -119.29 },
+					{ "time": 0.1667, "angle": -171.76 },
+					{ "time": 0.3333, "angle": 35.54 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 30.52,
+						"y": 260.31,
+						"curve": [ 0.242, 0.6, 0.534, 0.94 ]
+					},
+					{ "time": 0.3333, "x": 632.67, "y": -191.97 }
+				]
+			},
+			"bone82": {
+				"rotate": [
+					{ "time": 0, "angle": -147.78 },
+					{ "time": 0.1667, "angle": 135.15 },
+					{ "time": 0.3333, "angle": -39.39 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 65.93,
+						"y": 192.28,
+						"curve": [ 0.242, 0.6, 0.534, 0.94 ]
+					},
+					{ "time": 0.3333, "x": 651.12, "y": 323.45 }
+				]
+			},
+			"bone81": {
+				"rotate": [
+					{ "time": 0, "angle": 69.14 },
+					{ "time": 0.1667, "angle": 49.91 },
+					{ "time": 0.3333, "angle": -138.68 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": -42.04,
+						"y": 282.18,
+						"curve": [ 0.242, 0.6, 0.534, 0.94 ]
+					},
+					{ "time": 0.3333, "x": 668.94, "y": 22.39 }
+				]
+			}
+		}
+	}
+}
+}

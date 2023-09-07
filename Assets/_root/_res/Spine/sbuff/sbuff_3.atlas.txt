@@ -1,0 +1,20 @@
+
+sbuff_3.png
+size: 98,98
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Balance_star
+  rotate: false
+  xy: 2, 2
+  size: 40, 41
+  orig: 40, 41
+  offset: 0, 0
+  index: -1
+images/cir_star
+  rotate: false
+  xy: 2, 45
+  size: 93, 51
+  orig: 94, 93
+  offset: 1, 0
+  index: -1

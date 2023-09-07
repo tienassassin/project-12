@@ -1,0 +1,76 @@
+
+uieffect_164.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Transition - V02 Energy 043 Ray Radial CW_00001
+  rotate: false
+  xy: 2, 220
+  size: 384, 216
+  orig: 384, 216
+  offset: 0, 0
+  index: -1
+Transition - V02 Energy 043 Ray Radial CW_00002
+  rotate: false
+  xy: 2, 2
+  size: 384, 216
+  orig: 384, 216
+  offset: 0, 0
+  index: -1
+Transition - V02 Energy 043 Ray Radial CW_00003
+  rotate: false
+  xy: 388, 220
+  size: 384, 216
+  orig: 384, 216
+  offset: 0, 0
+  index: -1
+Transition - V02 Energy 043 Ray Radial CW_00004
+  rotate: false
+  xy: 388, 2
+  size: 384, 216
+  orig: 384, 216
+  offset: 0, 0
+  index: -1
+Transition - V02 Energy 043 Ray Radial CW_00005
+  rotate: false
+  xy: 774, 220
+  size: 384, 216
+  orig: 384, 216
+  offset: 0, 0
+  index: -1
+Transition - V02 Energy 043 Ray Radial CW_00006
+  rotate: false
+  xy: 774, 2
+  size: 380, 216
+  orig: 384, 216
+  offset: 0, 0
+  index: -1
+Transition - V02 Energy 043 Ray Radial CW_00007
+  rotate: false
+  xy: 1160, 220
+  size: 277, 216
+  orig: 384, 216
+  offset: 68, 0
+  index: -1
+Transition - V02 Energy 043 Ray Radial CW_00008
+  rotate: false
+  xy: 1156, 2
+  size: 206, 216
+  orig: 384, 216
+  offset: 79, 0
+  index: -1
+Transition - V02 Energy 043 Ray Radial CW_00009
+  rotate: false
+  xy: 1439, 220
+  size: 181, 216
+  orig: 384, 216
+  offset: 89, 0
+  index: -1
+Transition - V02 Energy 043 Ray Radial CW_00010
+  rotate: false
+  xy: 1364, 84
+  size: 156, 134
+  orig: 384, 216
+  offset: 112, 34
+  index: -1

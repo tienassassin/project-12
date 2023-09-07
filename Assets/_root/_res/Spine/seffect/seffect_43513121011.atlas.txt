@@ -1,0 +1,376 @@
+
+seffect_43513121011.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Skill/dilie_0057
+  rotate: true
+  xy: 1928, 36
+  size: 321, 97
+  orig: 330, 99
+  offset: 4, 1
+  index: -1
+Skill/大招_打击爆开/dian_c/dian_c_0051
+  rotate: true
+  xy: 1213, 43
+  size: 720, 713
+  orig: 720, 1280
+  offset: 0, 140
+  index: -1
+Skill/大招_打击爆开/dian_c/dian_c_0055
+  rotate: true
+  xy: 2, 43
+  size: 720, 1209
+  orig: 720, 1280
+  offset: 0, 0
+  index: -1
+Skill/大招_打击爆开/dian_c/dian_c_0057
+  rotate: false
+  xy: 2, 765
+  size: 720, 1280
+  orig: 720, 1280
+  offset: 0, 0
+  index: -1
+Skill/大招_打击爆开/dian_c/dian_c_0059
+  rotate: false
+  xy: 724, 765
+  size: 720, 1280
+  orig: 720, 1280
+  offset: 0, 0
+  index: -1
+Skill/大招_打击爆开/light_boom_up/light_boom_up_0061
+  rotate: false
+  xy: 1446, 1275
+  size: 416, 770
+  orig: 476, 770
+  offset: 31, 0
+  index: -1
+Skill/大招_打击路径/LF_0058
+  rotate: true
+  xy: 1928, 359
+  size: 429, 68
+  orig: 433, 71
+  offset: 4, 1
+  index: -1
+Skill/大招_打击路径/LF_light_0058
+  rotate: true
+  xy: 1864, 1591
+  size: 454, 150
+  orig: 478, 177
+  offset: 24, 1
+  index: -1
+att/smoke/smoke_0112
+  rotate: false
+  xy: 1840, 779
+  size: 46, 9
+  orig: 184, 63
+  offset: 69, 19
+  index: -1
+att/smoke/smoke_0114
+  rotate: true
+  xy: 1998, 470
+  size: 143, 45
+  orig: 184, 63
+  offset: 20, 10
+  index: -1
+att/smoke/smoke_0122
+  rotate: true
+  xy: 1998, 615
+  size: 173, 48
+  orig: 184, 63
+  offset: 0, 5
+  index: -1
+att/smoke/smoke_0124
+  rotate: false
+  xy: 2, 2
+  size: 172, 39
+  orig: 184, 63
+  offset: 3, 9
+  index: -1
+att/smoke/smoke_0125
+  rotate: true
+  xy: 1888, 779
+  size: 9, 38
+  orig: 184, 63
+  offset: 6, 10
+  index: -1
+sky_lightning/sky_lightning_0017
+  rotate: false
+  xy: 1840, 790
+  size: 195, 483
+  orig: 195, 509
+  offset: 0, 0
+  index: -1
+sky_lightning/sky_lightning_0019
+  rotate: false
+  xy: 1446, 775
+  size: 195, 498
+  orig: 195, 509
+  offset: 0, 0
+  index: -1
+sky_lightning/sky_lightning_0020
+  rotate: false
+  xy: 1643, 775
+  size: 195, 498
+  orig: 195, 509
+  offset: 0, 0
+  index: -1
+sky_lightning/sky_lightning_0021
+  rotate: false
+  xy: 1864, 1300
+  size: 171, 289
+  orig: 195, 509
+  offset: 7, 102
+  index: -1
+
+seffect_435131210112.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Skill/dilie_0057_0054
+  rotate: true
+  xy: 928, 42
+  size: 321, 109
+  orig: 323, 115
+  offset: 1, 1
+  index: -1
+Skill/kuoshan_guang_0053
+  rotate: true
+  xy: 1037, 388
+  size: 363, 173
+  orig: 379, 192
+  offset: 4, 0
+  index: -1
+Skill/大招_打击爆开/dian_b/dian_b_0057
+  rotate: true
+  xy: 1759, 550
+  size: 221, 219
+  orig: 267, 221
+  offset: 4, 2
+  index: -1
+Skill/大招_打击爆开/dian_b/dian_b_0058
+  rotate: false
+  xy: 1536, 330
+  size: 221, 219
+  orig: 267, 221
+  offset: 4, 2
+  index: -1
+Skill/大招_打击爆开/dian_b/dian_b_0060
+  rotate: false
+  xy: 1536, 551
+  size: 221, 220
+  orig: 267, 221
+  offset: 4, 1
+  index: -1
+Skill/大招_打击爆开/dian_b/dian_b_0061
+  rotate: false
+  xy: 1759, 406
+  size: 221, 142
+  orig: 267, 221
+  offset: 39, 29
+  index: -1
+Skill/大招_打击爆开/dian_b/dian_b_0062
+  rotate: false
+  xy: 1759, 262
+  size: 221, 142
+  orig: 267, 221
+  offset: 39, 29
+  index: -1
+Skill/大招_打击爆开/dian_b/dian_b_0063
+  rotate: false
+  xy: 1433, 186
+  size: 221, 142
+  orig: 267, 221
+  offset: 39, 29
+  index: -1
+Skill/大招_打击爆开/dian_c/dian_c_0053
+  rotate: false
+  xy: 2, 1136
+  size: 720, 898
+  orig: 720, 1280
+  offset: 0, 119
+  index: -1
+Skill/大招_打击爆开/dian_c/dian_c_0061
+  rotate: false
+  xy: 724, 1175
+  size: 64, 87
+  orig: 720, 1280
+  offset: 656, 621
+  index: -1
+Skill/大招_打击爆开/dian_fengwei/dian_e_0051
+  rotate: false
+  xy: 1212, 421
+  size: 173, 330
+  orig: 224, 330
+  offset: 0, 0
+  index: -1
+Skill/大招_打击爆开/dian_fengwei/dian_e_0052
+  rotate: false
+  xy: 1812, 932
+  size: 173, 330
+  orig: 224, 330
+  offset: 0, 0
+  index: -1
+Skill/大招_打击爆开/dian_fengwei/dian_e_0053
+  rotate: false
+  xy: 1586, 932
+  size: 224, 330
+  orig: 224, 330
+  offset: 0, 0
+  index: -1
+Skill/大招_打击爆开/dian_fengwei/dian_e_0054
+  rotate: false
+  xy: 811, 365
+  size: 224, 330
+  orig: 224, 330
+  offset: 0, 0
+  index: -1
+Skill/大招_打击爆开/dian_fengwei/dian_e_0056
+  rotate: true
+  xy: 1586, 773
+  size: 157, 330
+  orig: 224, 330
+  offset: 0, 0
+  index: -1
+Skill/大招_打击爆开/dian_fengwei/dian_e_0057
+  rotate: false
+  xy: 771, 32
+  size: 155, 330
+  orig: 224, 330
+  offset: 0, 0
+  index: -1
+Skill/大招_打击爆开/light_boom_up/light_boom_up_0053
+  rotate: false
+  xy: 811, 697
+  size: 192, 565
+  orig: 476, 770
+  offset: 150, 11
+  index: -1
+Skill/大招_打击爆开/light_boom_up/light_boom_up_0055
+  rotate: false
+  xy: 1552, 1264
+  size: 391, 770
+  orig: 476, 770
+  offset: 40, 0
+  index: -1
+Skill/大招_打击爆开/light_boom_up/light_boom_up_0057
+  rotate: false
+  xy: 724, 1264
+  size: 414, 770
+  orig: 476, 770
+  offset: 30, 0
+  index: -1
+Skill/大招_打击爆开/light_boom_up/light_boom_up_0059
+  rotate: false
+  xy: 2, 364
+  size: 415, 770
+  orig: 476, 770
+  offset: 31, 0
+  index: -1
+Skill/大招_打击爆开/light_boom_up/light_boom_up_0063
+  rotate: false
+  xy: 1140, 1264
+  size: 410, 770
+  orig: 476, 770
+  offset: 34, 0
+  index: -1
+Skill/大招_打击爆开/light_boom_up/light_boom_up_0065
+  rotate: false
+  xy: 419, 364
+  size: 390, 770
+  orig: 476, 770
+  offset: 43, 0
+  index: -1
+Skill/大招_打击爆开/light_boom_up/light_boom_up_0066
+  rotate: true
+  xy: 2, 2
+  size: 360, 767
+  orig: 476, 770
+  offset: 59, 3
+  index: -1
+Skill/大招_打击路径/light_zou/light_zou_0058
+  rotate: true
+  xy: 1945, 1424
+  size: 304, 73
+  orig: 311, 82
+  offset: 4, 3
+  index: -1
+Skill/大招_打击路径/light_zou/light_zou_0059
+  rotate: true
+  xy: 1945, 1730
+  size: 304, 75
+  orig: 311, 82
+  offset: 4, 1
+  index: -1
+Skill/大招_打击路径/light_zou/light_zou_0060
+  rotate: true
+  xy: 1387, 449
+  size: 302, 74
+  orig: 311, 82
+  offset: 5, 3
+  index: -1
+Skill/大招_打击路径/light_zou/light_zou_0061
+  rotate: true
+  xy: 1463, 484
+  size: 293, 71
+  orig: 311, 82
+  offset: 7, 3
+  index: -1
+att/smoke/smoke_0116
+  rotate: false
+  xy: 1236, 67
+  size: 169, 53
+  orig: 184, 63
+  offset: 8, 7
+  index: -1
+att/smoke/smoke_0118
+  rotate: false
+  xy: 1039, 33
+  size: 174, 54
+  orig: 184, 63
+  offset: 5, 6
+  index: -1
+att/smoke/smoke_0120
+  rotate: false
+  xy: 1433, 128
+  size: 178, 56
+  orig: 184, 63
+  offset: 2, 5
+  index: -1
+sky_lightning/sky_lightning_0013
+  rotate: false
+  xy: 1039, 89
+  size: 195, 297
+  orig: 195, 509
+  offset: 0, 212
+  index: -1
+sky_lightning/sky_lightning_0014
+  rotate: false
+  xy: 1236, 122
+  size: 195, 297
+  orig: 195, 509
+  offset: 0, 212
+  index: -1
+sky_lightning/sky_lightning_0015
+  rotate: false
+  xy: 1005, 753
+  size: 190, 509
+  orig: 195, 509
+  offset: 0, 0
+  index: -1
+sky_lightning/sky_lightning_0016
+  rotate: false
+  xy: 1197, 753
+  size: 190, 509
+  orig: 195, 509
+  offset: 0, 0
+  index: -1
+sky_lightning/sky_lightning_0018
+  rotate: false
+  xy: 1389, 779
+  size: 195, 483
+  orig: 195, 509
+  offset: 0, 0
+  index: -1

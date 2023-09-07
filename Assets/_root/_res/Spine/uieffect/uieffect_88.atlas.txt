@@ -1,0 +1,13 @@
+
+uieffect_88.png
+size: 32,32
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+PointImage
+  rotate: false
+  xy: 0, 0
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1

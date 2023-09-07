@@ -1,0 +1,105 @@
+{
+"skeleton": { "hash": "W62Qh8rO/SWK1FBhYr+lefHrU4A", "spine": "3.5.35", "width": 80, "height": 80, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone3", "parent": "root", "length": 200, "rotation": 90, "y": -2 },
+	{ "name": "bone", "parent": "bone3", "length": 100, "rotation": -90 }
+],
+"slots": [
+	{ "name": "Texture/common_63", "bone": "bone", "attachment": "Texture/common_63" }
+],
+"skins": {
+	"default": {
+		"Texture/common_63": {
+			"Texture/common_63": { "y": 4, "width": 80, "height": 80 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone3": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.155, 0.3, 0.617, 1 ]
+					},
+					{ "time": 0.1667, "x": 0, "y": 6 },
+					{
+						"time": 1.1,
+						"x": 0,
+						"y": 2,
+						"curve": [ 0.165, 0.3, 0.622, 1 ]
+					},
+					{ "time": 1.3333, "x": 0, "y": 0 }
+				]
+			},
+			"bone": {
+				"rotate": [
+					{
+						"time": 0,
+						"angle": 0,
+						"curve": [ 0.16, 0.3, 0.617, 1 ]
+					},
+					{
+						"time": 0.1667,
+						"angle": 350,
+						"curve": [ 0.231, 0.31, 0.622, 1 ]
+					},
+					{
+						"time": 0.2667,
+						"angle": 15,
+						"curve": [ 0.231, 0.31, 0.622, 1 ]
+					},
+					{
+						"time": 0.3667,
+						"angle": 345,
+						"curve": [ 0.231, 0.31, 0.622, 1 ]
+					},
+					{
+						"time": 0.4667,
+						"angle": 15,
+						"curve": [ 0.231, 0.31, 0.622, 1 ]
+					},
+					{
+						"time": 0.5667,
+						"angle": 345,
+						"curve": [ 0.231, 0.31, 0.622, 1 ]
+					},
+					{
+						"time": 0.6667,
+						"angle": 15,
+						"curve": [ 0.231, 0.31, 0.622, 1 ]
+					},
+					{
+						"time": 0.7667,
+						"angle": 345,
+						"curve": [ 0.231, 0.31, 0.622, 1 ]
+					},
+					{
+						"time": 0.8667,
+						"angle": 15,
+						"curve": [ 0.231, 0.31, 0.622, 1 ]
+					},
+					{
+						"time": 0.9667,
+						"angle": 345,
+						"curve": [ 0.231, 0.31, 0.622, 1 ]
+					},
+					{
+						"time": 1.1,
+						"angle": 15,
+						"curve": [ 0.383, 0, 0.617, 1 ]
+					},
+					{ "time": 1.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

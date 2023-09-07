@@ -1,0 +1,146 @@
+
+uieffect_100.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 961, 27
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 983, 70
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 737, 2
+  size: 36, 26
+  orig: 36, 26
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 833, 35
+  size: 33, 15
+  orig: 33, 15
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 638, 2
+  size: 34, 25
+  orig: 34, 25
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 983, 99
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 804, 2
+  size: 15, 26
+  orig: 15, 26
+  offset: 0, 0
+  index: -1
+light_sweep_0000
+  rotate: false
+  xy: 833, 52
+  size: 74, 74
+  orig: 116, 116
+  offset: 4, 39
+  index: -1
+light_sweep_0001
+  rotate: false
+  xy: 638, 29
+  size: 97, 97
+  orig: 116, 116
+  offset: 4, 16
+  index: -1
+light_sweep_0002
+  rotate: false
+  xy: 2, 21
+  size: 104, 105
+  orig: 116, 116
+  offset: 4, 8
+  index: -1
+light_sweep_0003
+  rotate: false
+  xy: 108, 21
+  size: 104, 105
+  orig: 116, 116
+  offset: 4, 8
+  index: -1
+light_sweep_0004
+  rotate: false
+  xy: 214, 21
+  size: 104, 105
+  orig: 116, 116
+  offset: 4, 8
+  index: -1
+light_sweep_0005
+  rotate: false
+  xy: 320, 21
+  size: 104, 105
+  orig: 116, 116
+  offset: 4, 8
+  index: -1
+light_sweep_0006
+  rotate: false
+  xy: 426, 21
+  size: 104, 105
+  orig: 116, 116
+  offset: 4, 8
+  index: -1
+light_sweep_0007
+  rotate: false
+  xy: 532, 21
+  size: 104, 105
+  orig: 116, 116
+  offset: 4, 8
+  index: -1
+light_sweep_0008
+  rotate: false
+  xy: 737, 30
+  size: 94, 96
+  orig: 116, 116
+  offset: 14, 8
+  index: -1
+light_sweep_0009
+  rotate: false
+  xy: 909, 53
+  size: 72, 73
+  orig: 116, 116
+  offset: 36, 8
+  index: -1
+light_sweep_0010
+  rotate: true
+  xy: 909, 2
+  size: 49, 50
+  orig: 116, 116
+  offset: 59, 8
+  index: -1
+light_sweep_0011
+  rotate: true
+  xy: 775, 2
+  size: 26, 27
+  orig: 116, 116
+  offset: 82, 8
+  index: -1
+light_sweep_0012
+  rotate: false
+  xy: 2, 15
+  size: 3, 4
+  orig: 116, 116
+  offset: 105, 8
+  index: -1

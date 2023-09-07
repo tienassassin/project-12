@@ -1,0 +1,67 @@
+{
+"skeleton": { "hash": "NFlKhpnoH4q/RC/LBZinjfx7B2U", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "bone101", "parent": "bone" }
+],
+"slots": [
+	{ "name": "skill/zi_boom/zi_boom_0000", "bone": "bone101" }
+],
+"skins": {
+	"default": {
+		"skill/zi_boom/zi_boom_0000": {
+			"skill/zi_boom/zi_boom_0000": { "width": 144, "height": 129 },
+			"skill/zi_boom/zi_boom_0001": { "width": 144, "height": 129 },
+			"skill/zi_boom/zi_boom_0002": { "width": 144, "height": 129 },
+			"skill/zi_boom/zi_boom_0003": { "width": 144, "height": 129 },
+			"skill/zi_boom/zi_boom_0004": { "width": 144, "height": 129 },
+			"skill/zi_boom/zi_boom_0005": { "width": 144, "height": 129 },
+			"skill/zi_boom/zi_boom_0006": { "width": 144, "height": 129 },
+			"skill/zi_boom/zi_boom_0007": { "width": 144, "height": 129 },
+			"skill/zi_boom/zi_boom_0008": { "width": 144, "height": 129 },
+			"skill/zi_boom/zi_boom_0009": { "width": 144, "height": 129 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"skill/zi_boom/zi_boom_0000": {
+				"attachment": [
+					{ "time": 0, "name": "skill/zi_boom/zi_boom_0000" },
+					{ "time": 0.0333, "name": "skill/zi_boom/zi_boom_0001" },
+					{ "time": 0.0667, "name": "skill/zi_boom/zi_boom_0002" },
+					{ "time": 0.1, "name": "skill/zi_boom/zi_boom_0003" },
+					{ "time": 0.1333, "name": "skill/zi_boom/zi_boom_0004" },
+					{ "time": 0.1667, "name": "skill/zi_boom/zi_boom_0005" },
+					{ "time": 0.2, "name": "skill/zi_boom/zi_boom_0006" },
+					{ "time": 0.2333, "name": "skill/zi_boom/zi_boom_0007" },
+					{ "time": 0.2667, "name": "skill/zi_boom/zi_boom_0008" },
+					{ "time": 0.3, "name": "skill/zi_boom/zi_boom_0009" },
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone101": {
+				"translate": [
+					{ "time": 0, "x": -4.44, "y": 14.32 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 }
+		],
+		"events": [
+			{ "time": 0.1333, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

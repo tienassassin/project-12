@@ -1,0 +1,20 @@
+
+uieffect_113.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Texture/ship
+  rotate: false
+  xy: 0, 0
+  size: 378, 309
+  orig: 383, 311
+  offset: 3, 0
+  index: -1
+Texture/ship0
+  rotate: false
+  xy: 0, 311
+  size: 698, 566
+  orig: 766, 622
+  offset: 36, 24
+  index: -1

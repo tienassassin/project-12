@@ -1,0 +1,57 @@
+{
+"skeleton": { "hash": "Z5vZ8QAgn5AiSWxrgkQxjFdpou8", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone2", "parent": "bone", "scaleX": 3, "scaleY": 3 }
+],
+"slots": [
+	{ "name": "tex/sbuff_19_01", "bone": "bone2" }
+],
+"skins": {
+	"default": {
+		"tex/sbuff_19_01": {
+			"tex/sbuff_19_01": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_02": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_03": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_04": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_05": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_06": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_07": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_08": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_09": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_10": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_11": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_12": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_13": { "x": -4, "width": 172, "height": 64 },
+			"tex/sbuff_19_14": { "x": -4, "width": 172, "height": 64 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"tex/sbuff_19_01": {
+				"attachment": [
+					{ "time": 0, "name": "tex/sbuff_19_10" },
+					{ "time": 0.0667, "name": "tex/sbuff_19_11" },
+					{ "time": 0.1333, "name": "tex/sbuff_19_13" },
+					{ "time": 0.2, "name": "tex/sbuff_19_14" },
+					{ "time": 0.2667, "name": "tex/sbuff_19_01" },
+					{ "time": 0.3333, "name": "tex/sbuff_19_02" },
+					{ "time": 0.4, "name": "tex/sbuff_19_12" },
+					{ "time": 0.4667, "name": "tex/sbuff_19_03" },
+					{ "time": 0.5333, "name": "tex/sbuff_19_04" },
+					{ "time": 0.6, "name": "tex/sbuff_19_05" },
+					{ "time": 0.6667, "name": "tex/sbuff_19_06" },
+					{ "time": 0.7333, "name": "tex/sbuff_19_07" },
+					{ "time": 0.8, "name": "tex/sbuff_19_08" },
+					{ "time": 0.8667, "name": "tex/sbuff_19_09" },
+					{ "time": 0.9333, "name": "tex/sbuff_19_10" },
+					{ "time": 1, "name": "tex/sbuff_19_10" }
+				]
+			}
+		}
+	}
+}
+}

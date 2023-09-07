@@ -1,0 +1,153 @@
+{
+"skeleton": { "hash": "AhG+mgm1W8j7P8dLL+tdco6BJVE", "spine": "3.5.35", "width": 4234.05, "height": 3094.22 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "uieffect_136", "parent": "root" },
+	{ "name": "bg", "parent": "uieffect_136", "x": -793.84, "y": -351.28 },
+	{ "name": "feichuan", "parent": "uieffect_136", "x": -793.84, "y": -351.28 },
+	{ "name": "fcZT", "parent": "feichuan" },
+	{ "name": "gz", "parent": "feichuan", "rotation": -3.06, "x": 812.89, "y": 351.28, "scaleX": 3, "scaleY": 3 }
+],
+"slots": [
+	{ "name": "bg", "bone": "bg" },
+	{ "name": "gz", "bone": "gz", "attachment": "images/guangzhu/guangzhu_00001" },
+	{ "name": "fc_3", "bone": "fcZT", "attachment": "images/newCity/fc_3" },
+	{ "name": "fc_2", "bone": "fcZT", "attachment": "images/newCity/fc_2" },
+	{ "name": "fc_1", "bone": "fcZT", "attachment": "images/newCity/fc_1" }
+],
+"skins": {
+	"default": {
+		"fc_1": {
+			"images/newCity/fc_1": { "width": 2725, "height": 1920 }
+		},
+		"fc_2": {
+			"images/newCity/fc_2": { "width": 2725, "height": 1920 }
+		},
+		"fc_3": {
+			"images/newCity/fc_3": { "width": 2725, "height": 1920 }
+		},
+		"gz": {
+			"images/guangzhu/guangzhu_00001": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00003": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00005": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00007": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00009": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00011": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00013": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00015": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00017": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00019": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00021": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00023": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00025": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00027": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00029": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00031": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00033": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00035": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00037": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00039": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00041": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00043": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00045": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00047": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00049": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00051": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00053": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00055": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00057": { "x": -402, "y": -175.95, "width": 1362, "height": 960 },
+			"images/guangzhu/guangzhu_00059": { "x": -402, "y": -175.95, "width": 1362, "height": 960 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"gz": {
+				"attachment": [
+					{ "time": 0.0333, "name": "images/guangzhu/guangzhu_00001" },
+					{ "time": 0.1, "name": "images/guangzhu/guangzhu_00003" },
+					{ "time": 0.1667, "name": "images/guangzhu/guangzhu_00005" },
+					{ "time": 0.2333, "name": "images/guangzhu/guangzhu_00007" },
+					{ "time": 0.3, "name": "images/guangzhu/guangzhu_00009" },
+					{ "time": 0.3667, "name": "images/guangzhu/guangzhu_00011" },
+					{ "time": 0.4333, "name": "images/guangzhu/guangzhu_00013" },
+					{ "time": 0.5, "name": "images/guangzhu/guangzhu_00015" },
+					{ "time": 0.5667, "name": "images/guangzhu/guangzhu_00017" },
+					{ "time": 0.6333, "name": "images/guangzhu/guangzhu_00019" },
+					{ "time": 0.7, "name": "images/guangzhu/guangzhu_00021" },
+					{ "time": 0.7667, "name": "images/guangzhu/guangzhu_00023" },
+					{ "time": 0.8333, "name": "images/guangzhu/guangzhu_00025" },
+					{ "time": 0.9, "name": "images/guangzhu/guangzhu_00027" },
+					{ "time": 0.9667, "name": "images/guangzhu/guangzhu_00029" },
+					{ "time": 1.0333, "name": "images/guangzhu/guangzhu_00031" },
+					{ "time": 1.1, "name": "images/guangzhu/guangzhu_00033" },
+					{ "time": 1.1667, "name": "images/guangzhu/guangzhu_00035" },
+					{ "time": 1.2333, "name": "images/guangzhu/guangzhu_00037" },
+					{ "time": 1.3, "name": "images/guangzhu/guangzhu_00039" },
+					{ "time": 1.3667, "name": "images/guangzhu/guangzhu_00041" },
+					{ "time": 1.4333, "name": "images/guangzhu/guangzhu_00043" },
+					{ "time": 1.5, "name": "images/guangzhu/guangzhu_00045" },
+					{ "time": 1.5667, "name": "images/guangzhu/guangzhu_00047" },
+					{ "time": 1.6333, "name": "images/guangzhu/guangzhu_00049" },
+					{ "time": 1.7, "name": "images/guangzhu/guangzhu_00051" },
+					{ "time": 1.7667, "name": "images/guangzhu/guangzhu_00053" },
+					{ "time": 1.8333, "name": "images/guangzhu/guangzhu_00055" },
+					{ "time": 1.9, "name": "images/guangzhu/guangzhu_00057" },
+					{ "time": 1.9667, "name": "images/guangzhu/guangzhu_00059" },
+					{ "time": 2.0333, "name": "images/guangzhu/guangzhu_00001" },
+					{ "time": 2.1, "name": "images/guangzhu/guangzhu_00003" },
+					{ "time": 2.1667, "name": "images/guangzhu/guangzhu_00005" },
+					{ "time": 2.2333, "name": "images/guangzhu/guangzhu_00007" },
+					{ "time": 2.3, "name": "images/guangzhu/guangzhu_00009" },
+					{ "time": 2.3667, "name": "images/guangzhu/guangzhu_00011" },
+					{ "time": 2.4333, "name": "images/guangzhu/guangzhu_00013" },
+					{ "time": 2.5, "name": "images/guangzhu/guangzhu_00015" },
+					{ "time": 2.5667, "name": "images/guangzhu/guangzhu_00017" },
+					{ "time": 2.6333, "name": "images/guangzhu/guangzhu_00019" },
+					{ "time": 2.7, "name": "images/guangzhu/guangzhu_00021" },
+					{ "time": 2.7667, "name": "images/guangzhu/guangzhu_00023" },
+					{ "time": 2.8333, "name": "images/guangzhu/guangzhu_00025" },
+					{ "time": 2.9, "name": "images/guangzhu/guangzhu_00027" },
+					{ "time": 2.9667, "name": "images/guangzhu/guangzhu_00029" },
+					{ "time": 3.0333, "name": "images/guangzhu/guangzhu_00031" },
+					{ "time": 3.1, "name": "images/guangzhu/guangzhu_00033" },
+					{ "time": 3.1667, "name": "images/guangzhu/guangzhu_00035" },
+					{ "time": 3.2333, "name": "images/guangzhu/guangzhu_00037" },
+					{ "time": 3.3, "name": "images/guangzhu/guangzhu_00039" },
+					{ "time": 3.3667, "name": "images/guangzhu/guangzhu_00041" },
+					{ "time": 3.4333, "name": "images/guangzhu/guangzhu_00043" },
+					{ "time": 3.5, "name": "images/guangzhu/guangzhu_00045" },
+					{ "time": 3.5667, "name": "images/guangzhu/guangzhu_00047" },
+					{ "time": 3.6333, "name": "images/guangzhu/guangzhu_00049" },
+					{ "time": 3.7, "name": "images/guangzhu/guangzhu_00051" },
+					{ "time": 3.7667, "name": "images/guangzhu/guangzhu_00053" },
+					{ "time": 3.8333, "name": "images/guangzhu/guangzhu_00055" },
+					{ "time": 3.9, "name": "images/guangzhu/guangzhu_00057" },
+					{ "time": 3.9667, "name": "images/guangzhu/guangzhu_00059" }
+				]
+			}
+		},
+		"bones": {
+			"feichuan": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 9.2,
+						"curve": [ 0.305, 0.5, 0.61, 1 ]
+					},
+					{ "time": 1, "x": 0, "y": 0 },
+					{
+						"time": 3,
+						"x": 0,
+						"y": 18.4,
+						"curve": [ 0.39, 0, 0.695, 0.5 ]
+					},
+					{ "time": 4, "x": 0, "y": 9.2 }
+				]
+			}
+		}
+	}
+}
+}

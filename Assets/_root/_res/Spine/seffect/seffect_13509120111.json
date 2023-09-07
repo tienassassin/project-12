@@ -1,0 +1,184 @@
+{
+"skeleton": { "hash": "0cgggwWSXE11Lmp1l6kZHks8RHM", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "Attack", "parent": "root", "color": "ff0000ff" },
+	{ "name": "SF", "parent": "Attack", "color": "ff0000ff" },
+	{ "name": "SJ", "parent": "Attack", "color": "ff0000ff" },
+	{ "name": "bak_0000", "parent": "SJ", "color": "ff0000ff" },
+	{ "name": "di02_0000", "parent": "SJ", "color": "ff0000ff" },
+	{ "name": "dun_0000", "parent": "SJ", "color": "ff0000ff" }
+],
+"slots": [
+	{ "name": "attack/baokai/bak_0000", "bone": "bak_0000" },
+	{ "name": "attack/di02_0000", "bone": "di02_0000" },
+	{ "name": "attack/dun_0000", "bone": "dun_0000" }
+],
+"skins": {
+	"default": {
+		"attack/baokai/bak_0000": {
+			"attack/baokai/bak_0000": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0002": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0004": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0006": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0008": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0010": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0012": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0014": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0016": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0018": { "width": 350, "height": 300 },
+			"attack/baokai/bak_0020": { "width": 350, "height": 300 }
+		},
+		"attack/di02_0000": {
+			"attack/di02_0000": { "width": 400, "height": 100 }
+		},
+		"attack/dun_0000": {
+			"attack/dun_0000": { "width": 115, "height": 165 }
+		}
+	}
+},
+"events": {
+	"hit_21_1_1": {},
+	"shakestart_12": {}
+},
+"animations": {
+	"animation_2": {
+		"slots": {
+			"attack/baokai/bak_0000": {
+				"attachment": [
+					{ "time": 0.1333, "name": "attack/baokai/bak_0000" },
+					{ "time": 0.2, "name": "attack/baokai/bak_0002" },
+					{ "time": 0.2667, "name": "attack/baokai/bak_0004" },
+					{ "time": 0.3333, "name": "attack/baokai/bak_0006" },
+					{ "time": 0.4, "name": "attack/baokai/bak_0008" },
+					{ "time": 0.4667, "name": "attack/baokai/bak_0010" },
+					{ "time": 0.5333, "name": "attack/baokai/bak_0012" },
+					{ "time": 0.6, "name": "attack/baokai/bak_0014" },
+					{ "time": 0.6667, "name": "attack/baokai/bak_0016" },
+					{ "time": 0.7333, "name": "attack/baokai/bak_0018" },
+					{ "time": 0.8, "name": "attack/baokai/bak_0020" },
+					{ "time": 0.8333, "name": null }
+				]
+			},
+			"attack/di02_0000": {
+				"color": [
+					{ "time": 0.8333, "color": "ffffffff" },
+					{ "time": 0.9667, "color": "ffffff42" }
+				],
+				"attachment": [
+					{ "time": 0.1333, "name": "attack/di02_0000" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"attack/dun_0000": {
+				"color": [
+					{ "time": 0.0333, "color": "ffffff67" },
+					{ "time": 0.1333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.6, "color": "ffffffff" },
+					{ "time": 0.7667, "color": "ffffff4e" }
+				],
+				"attachment": [
+					{ "time": 0.0333, "name": "attack/dun_0000" },
+					{ "time": 0.8, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bak_0000": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.1333, "x": 459.81, "y": 186.38 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1333, "x": 2.86, "y": 2.86 }
+				]
+			},
+			"Attack": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -415.11, "y": 1.43 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SJ": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SF": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"di02_0000": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.1333, "x": 417.95, "y": -0.79 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1333, "x": 2.86, "y": 2.86 }
+				]
+			},
+			"dun_0000": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.0333, "x": 429.17, "y": 660.54 },
+					{ "time": 0.1, "x": 429.17, "y": 545.2 },
+					{ "time": 0.1333, "x": 429.17, "y": 179.98 }
+				],
+				"scale": [
+					{ "time": 0, "x": -1, "y": 1 },
+					{ "time": 0.0333, "x": -1.43, "y": 1.43 },
+					{ "time": 0.1333, "x": -2.86, "y": 2.86 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 },
+			{
+				"time": 0.1333,
+				"offsets": [
+					{ "slot": "attack/baokai/bak_0000", "offset": 1 }
+				]
+			},
+			{
+				"time": 0.3667,
+				"offsets": [
+					{ "slot": "attack/baokai/bak_0000", "offset": 1 }
+				]
+			}
+		],
+		"events": [
+			{ "time": 0.1667, "name": "shakestart_12" },
+			{ "time": 0.3333, "name": "hit_21_1_1" }
+		]
+	}
+}
+}

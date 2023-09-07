@@ -1,0 +1,215 @@
+{
+"skeleton": { "hash": "brTTA0xWaUeKjQWZjfzIy9xPKig", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone2", "parent": "root" },
+	{ "name": "bone", "parent": "bone2" },
+	{ "name": "superskill", "parent": "bone2" },
+	{ "name": "superskill2", "parent": "bone2" },
+	{ "name": "superskill3", "parent": "bone2" }
+],
+"slots": [
+	{ "name": "utskill/trail_qiu_0009", "bone": "superskill" },
+	{ "name": "utskill/trail_qiu_9", "bone": "superskill2" },
+	{ "name": "utskill/trail_qiu_10", "bone": "superskill3" },
+	{ "name": "skill/2/026", "bone": "bone" }
+],
+"skins": {
+	"default": {
+		"skill/2/026": {
+			"skill/2/026": { "width": 300, "height": 200 },
+			"skill/2/028": { "width": 300, "height": 200 },
+			"skill/2/030": { "width": 300, "height": 200 },
+			"skill/2/032": { "width": 300, "height": 200 },
+			"skill/2/034": { "width": 300, "height": 200 },
+			"skill/2/036": { "width": 300, "height": 200 },
+			"skill/2/038": { "width": 300, "height": 200 },
+			"skill/2/040": { "width": 300, "height": 200 },
+			"skill/2/042": { "width": 300, "height": 200 },
+			"skill/2/044": { "width": 300, "height": 200 },
+			"skill/2/045": { "width": 300, "height": 200 }
+		},
+		"utskill/trail_qiu_0009": {
+			"utskill/trail_qiu_0009": { "x": 99.3, "y": -86.88, "width": 300, "height": 274 }
+		},
+		"utskill/trail_qiu_10": {
+			"utskill/trail_qiu_0009": { "x": 99.3, "y": -86.88, "width": 300, "height": 274 }
+		},
+		"utskill/trail_qiu_9": {
+			"utskill/trail_qiu_0009": { "x": 99.3, "y": -86.88, "width": 300, "height": 274 }
+		}
+	}
+},
+"events": {
+	"qishou_21_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"skill/2/026": {
+				"color": [
+					{
+						"time": 0.6,
+						"color": "ffffffff",
+						"curve": [ 0.235, 0.6, 0.5, 0.9 ]
+					},
+					{ "time": 0.8, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "skill/2/026" },
+					{ "time": 0.0667, "name": "skill/2/028" },
+					{ "time": 0.1333, "name": "skill/2/030" },
+					{ "time": 0.2, "name": "skill/2/032" },
+					{ "time": 0.2667, "name": "skill/2/034" },
+					{ "time": 0.3333, "name": "skill/2/036" },
+					{ "time": 0.4, "name": "skill/2/038" },
+					{ "time": 0.4667, "name": "skill/2/040" },
+					{ "time": 0.5333, "name": "skill/2/042" },
+					{ "time": 0.6, "name": "skill/2/044" },
+					{ "time": 0.6667, "name": "skill/2/045" },
+					{ "time": 0.8, "name": null }
+				]
+			},
+			"utskill/trail_qiu_0009": {
+				"color": [
+					{
+						"time": 0.0333,
+						"color": "ffffff00",
+						"curve": [ 0.452, 0.06, 0.56, 0.96 ]
+					},
+					{ "time": 0.2, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffffb2", "curve": "stepped" },
+					{ "time": 0.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.4667, "color": "ffffffb2" }
+				],
+				"attachment": [
+					{ "time": 0.0333, "name": "utskill/trail_qiu_0009" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"utskill/trail_qiu_9": {
+				"color": [
+					{ "time": 0.1, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffbe", "curve": "stepped" },
+					{ "time": 0.4333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.5333, "color": "ffffffbe", "curve": "stepped" },
+					{ "time": 0.6, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0.1, "name": "utskill/trail_qiu_0009" },
+					{ "time": 0.6333, "name": null }
+				]
+			},
+			"utskill/trail_qiu_10": {
+				"color": [
+					{ "time": 0.2, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.4333, "color": "ffffffb1", "curve": "stepped" },
+					{ "time": 0.5333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.6333, "color": "ffffffb1", "curve": "stepped" },
+					{ "time": 0.7, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0.2, "name": "utskill/trail_qiu_0009" },
+					{ "time": 0.7333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"superskill": {
+				"rotate": [
+					{ "time": 0.0333, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0.0333,
+						"x": -589.3,
+						"y": 1314.14,
+						"curve": [ 0.25, 0, 0.972, 0.59 ]
+					},
+					{ "time": 0.4667, "x": 294.88, "y": 402.74 }
+				],
+				"scale": [
+					{
+						"time": 0.0333,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.452, 0.06, 0.56, 0.96 ]
+					},
+					{ "time": 0.2, "x": 4.2, "y": 4.2, "curve": "stepped" },
+					{ "time": 0.3, "x": 3.5, "y": 3.5, "curve": "stepped" },
+					{ "time": 0.4, "x": 4.2, "y": 4.2, "curve": "stepped" },
+					{ "time": 0.4667, "x": 3.5, "y": 3.5 }
+				]
+			},
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": -603.6, "y": 1320.7 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1333, "x": 5, "y": 3 }
+				]
+			},
+			"superskill2": {
+				"rotate": [
+					{ "time": 0.1, "angle": 3.41 }
+				],
+				"translate": [
+					{
+						"time": 0.1,
+						"x": -584.36,
+						"y": 1336.95,
+						"curve": [ 0.25, 0, 1, 0.6 ]
+					},
+					{ "time": 0.6, "x": 328.36, "y": 790.86 }
+				],
+				"scale": [
+					{ "time": 0.1, "x": 0.2, "y": 0.2 },
+					{ "time": 0.2333, "x": 4, "y": 4, "curve": "stepped" },
+					{ "time": 0.3333, "x": 3.5, "y": 3.5, "curve": "stepped" },
+					{ "time": 0.4333, "x": 4, "y": 4, "curve": "stepped" },
+					{ "time": 0.5333, "x": 3.5, "y": 3.5, "curve": "stepped" },
+					{ "time": 0.6, "x": 4, "y": 4 }
+				]
+			},
+			"superskill3": {
+				"rotate": [
+					{ "time": 0.2, "angle": -3.7 }
+				],
+				"translate": [
+					{
+						"time": 0.2,
+						"x": -707.9,
+						"y": 1305.2,
+						"curve": [ 0.25, 0, 1, 0.6 ]
+					},
+					{ "time": 0.7, "x": 343.26, "y": -78.15 }
+				],
+				"scale": [
+					{ "time": 0.2, "x": 0.2, "y": 0.2 },
+					{ "time": 0.3333, "x": 4, "y": 4, "curve": "stepped" },
+					{ "time": 0.4333, "x": 3.4, "y": 3.4, "curve": "stepped" },
+					{ "time": 0.5333, "x": 4, "y": 4, "curve": "stepped" },
+					{ "time": 0.6333, "x": 3.4, "y": 3.4, "curve": "stepped" },
+					{ "time": 0.7, "x": 4, "y": 4 }
+				]
+			},
+			"bone2": {
+				"scale": [
+					{ "time": 0, "x": 0.75, "y": 0.75 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -17.86, "y": 226.21 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.5, "name": "qishou_21_1_1" }
+		]
+	}
+}
+}

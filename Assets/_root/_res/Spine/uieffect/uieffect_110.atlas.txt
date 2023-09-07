@@ -1,0 +1,27 @@
+
+uieffect_110.png
+size: 1230,1230
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Texture/activity_first_big_1
+  rotate: false
+  xy: 1, 649
+  size: 692, 580
+  orig: 692, 580
+  offset: 0, 0
+  index: -1
+Texture/activity_first_big_2
+  rotate: true
+  xy: 664, 1
+  size: 646, 560
+  orig: 692, 580
+  offset: 23, 0
+  index: -1
+Texture/activity_first_big_3
+  rotate: false
+  xy: 1, 67
+  size: 661, 580
+  orig: 692, 580
+  offset: 5, 0
+  index: -1

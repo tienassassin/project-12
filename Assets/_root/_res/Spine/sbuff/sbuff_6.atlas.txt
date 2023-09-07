@@ -1,0 +1,69 @@
+
+sbuff_6.png
+size: 291,291
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/sequence_11038_000
+  rotate: false
+  xy: 124, 15
+  size: 49, 16
+  orig: 64, 32
+  offset: 6, 0
+  index: -1
+images/sequence_11038_002
+  rotate: false
+  xy: 67, 11
+  size: 55, 20
+  orig: 64, 32
+  offset: 5, 0
+  index: -1
+images/sequence_11038_004
+  rotate: false
+  xy: 2, 8
+  size: 63, 23
+  orig: 64, 32
+  offset: 1, 0
+  index: -1
+images/sequence_11038_006
+  rotate: true
+  xy: 260, 227
+  size: 62, 24
+  orig: 64, 32
+  offset: 2, 0
+  index: -1
+images/sequence_11038_008
+  rotate: true
+  xy: 260, 171
+  size: 54, 26
+  orig: 64, 32
+  offset: 8, 0
+  index: -1
+images/sequence_11038_010
+  rotate: true
+  xy: 260, 122
+  size: 47, 24
+  orig: 64, 32
+  offset: 12, 0
+  index: -1
+images/sequence_11038_012
+  rotate: true
+  xy: 260, 76
+  size: 44, 29
+  orig: 64, 32
+  offset: 16, 0
+  index: -1
+images/sequence_11038_014
+  rotate: true
+  xy: 260, 34
+  size: 40, 29
+  orig: 64, 32
+  offset: 16, 0
+  index: -1
+images/texture_3018
+  rotate: false
+  xy: 2, 33
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1

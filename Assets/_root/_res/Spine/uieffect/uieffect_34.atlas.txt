@@ -1,0 +1,104 @@
+
+uieffect_34.png
+size: 577,577
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/qipao_0013
+  rotate: true
+  xy: 167, 261
+  size: 53, 368
+  orig: 1080, 1920
+  offset: 496, 699
+  index: -1
+images/qipao_0015
+  rotate: true
+  xy: 167, 206
+  size: 53, 342
+  orig: 1080, 1920
+  offset: 496, 756
+  index: -1
+images/qipao_0017
+  rotate: false
+  xy: 112, 149
+  size: 53, 426
+  orig: 1080, 1920
+  offset: 496, 703
+  index: -1
+images/qipao_0019
+  rotate: true
+  xy: 2, 35
+  size: 44, 433
+  orig: 1080, 1920
+  offset: 505, 699
+  index: -1
+images/qipao_0021
+  rotate: true
+  xy: 167, 371
+  size: 45, 388
+  orig: 1080, 1920
+  offset: 504, 699
+  index: -1
+images/qipao_0023
+  rotate: true
+  xy: 167, 525
+  size: 50, 408
+  orig: 1080, 1920
+  offset: 499, 706
+  index: -1
+images/qipao_0025
+  rotate: false
+  xy: 2, 136
+  size: 53, 439
+  orig: 1080, 1920
+  offset: 496, 699
+  index: -1
+images/qipao_0027
+  rotate: true
+  xy: 167, 470
+  size: 53, 405
+  orig: 1080, 1920
+  offset: 496, 710
+  index: -1
+images/qipao_0029
+  rotate: true
+  xy: 167, 418
+  size: 50, 395
+  orig: 1080, 1920
+  offset: 499, 709
+  index: -1
+images/qipao_0031
+  rotate: true
+  xy: 2, 81
+  size: 53, 418
+  orig: 1080, 1920
+  offset: 496, 699
+  index: -1
+images/qipao_0033
+  rotate: true
+  xy: 167, 152
+  size: 52, 321
+  orig: 1080, 1920
+  offset: 497, 712
+  index: -1
+images/qipao_0035
+  rotate: true
+  xy: 167, 316
+  size: 53, 378
+  orig: 1080, 1920
+  offset: 496, 699
+  index: -1
+images/shuiguan
+  rotate: false
+  xy: 57, 137
+  size: 53, 438
+  orig: 53, 438
+  offset: 0, 0
+  index: -1
+images/shuim
+  rotate: true
+  xy: 511, 206
+  size: 53, 13
+  orig: 53, 13
+  offset: 0, 0
+  index: -1

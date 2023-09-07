@@ -1,0 +1,21 @@
+{
+"skeleton": { "hash": "ONMkr4f8v5TbnInBJiEL6cqlFII", "spine": "3.5.35", "width": 374.4, "height": 328 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone2", "parent": "bone", "scaleX": 3.6, "scaleY": 4 }
+],
+"slots": [
+	{ "name": "tex/sbuff_27_1", "bone": "bone2", "attachment": "tex/sbuff_27_1" }
+],
+"skins": {
+	"default": {
+		"tex/sbuff_27_1": {
+			"tex/sbuff_27_1": { "width": 104, "height": 82 }
+		}
+	}
+},
+"animations": {
+	"animation": {}
+}
+}

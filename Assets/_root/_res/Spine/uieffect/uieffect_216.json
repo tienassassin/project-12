@@ -1,0 +1,67 @@
+{
+"skeleton": { "hash": "qmYkHSUfyso0FPCWu2HY6Bm9Xr0", "spine": "3.5.35", "width": 0, "height": 0, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Effect", "parent": "root", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "light", "bone": "Effect", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"light": {
+			"image/light/light_0000": { "width": 159, "height": 212 },
+			"image/light/light_0001": { "width": 159, "height": 212 },
+			"image/light/light_0002": { "width": 159, "height": 212 },
+			"image/light/light_0003": { "width": 159, "height": 212 },
+			"image/light/light_0004": { "width": 159, "height": 212 },
+			"image/light/light_0005": { "width": 159, "height": 212 },
+			"image/light/light_0006": { "width": 159, "height": 212 },
+			"image/light/light_0007": { "width": 159, "height": 212 },
+			"image/light/light_0008": { "width": 159, "height": 212 },
+			"image/light/light_0009": { "width": 159, "height": 212 },
+			"image/light/light_0010": { "width": 159, "height": 212 },
+			"image/light/light_0011": { "width": 159, "height": 212 },
+			"image/light/light_0012": { "width": 159, "height": 212 },
+			"image/light/light_0013": { "width": 159, "height": 212 },
+			"image/light/light_0014": { "width": 159, "height": 212 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"light": {
+				"color": [
+					{ "time": 0, "color": "ffffffe7" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "image/light/light_0000" },
+					{ "time": 0.0333, "name": "image/light/light_0001" },
+					{ "time": 0.0667, "name": "image/light/light_0002" },
+					{ "time": 0.1, "name": "image/light/light_0004" },
+					{ "time": 0.1333, "name": null },
+					{ "time": 0.1667, "name": "image/light/light_0005" },
+					{ "time": 0.2, "name": "image/light/light_0006" },
+					{ "time": 0.2333, "name": "image/light/light_0007" },
+					{ "time": 0.2667, "name": "image/light/light_0008" },
+					{ "time": 0.3, "name": "image/light/light_0009" },
+					{ "time": 0.3333, "name": "image/light/light_0010" },
+					{ "time": 0.3667, "name": "image/light/light_0011" },
+					{ "time": 0.4, "name": "image/light/light_0012" },
+					{ "time": 0.4333, "name": "image/light/light_0013" },
+					{ "time": 0.4667, "name": "image/light/light_0014" },
+					{ "time": 0.5, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Effect": {
+				"translate": [
+					{ "time": 0, "x": -9.25, "y": 31.21 }
+				]
+			}
+		}
+	}
+}
+}

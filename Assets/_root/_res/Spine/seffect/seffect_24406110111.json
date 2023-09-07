@@ -1,0 +1,134 @@
+{
+"skeleton": { "hash": "m1JxztVg/UbXMTpey5IRStwsHaI", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "SJ", "parent": "root", "color": "ff0004ff" },
+	{ "name": "kus_0", "parent": "SJ", "color": "ff0004ff" },
+	{ "name": "shb_0000", "parent": "SJ", "color": "ff0004ff" }
+],
+"slots": [
+	{ "name": "attack/shouji/shangbu01/shangbu 2/shb_0000", "bone": "shb_0000" },
+	{ "name": "attack/dibukuosan/kus_0", "bone": "kus_0" }
+],
+"skins": {
+	"default": {
+		"attack/dibukuosan/kus_0": {
+			"attack/dibukuosan/kus_0000": { "width": 450, "height": 170 },
+			"attack/dibukuosan/kus_0002": { "width": 450, "height": 170 },
+			"attack/dibukuosan/kus_0004": { "width": 450, "height": 170 },
+			"attack/dibukuosan/kus_0006": { "width": 450, "height": 170 },
+			"attack/dibukuosan/kus_0008": { "width": 450, "height": 170 },
+			"attack/dibukuosan/kus_0010": { "width": 450, "height": 170 },
+			"attack/dibukuosan/kus_0012": { "width": 450, "height": 170 },
+			"attack/dibukuosan/kus_0014": { "width": 450, "height": 170 },
+			"attack/dibukuosan/kus_0016": { "width": 450, "height": 170 }
+		},
+		"attack/shouji/shangbu01/shangbu 2/shb_0000": {
+			"attack/shouji/shangbu01/shangbu 2/shb_0000": { "width": 500, "height": 550 },
+			"attack/shouji/shangbu01/shangbu 2/shb_0002": { "width": 500, "height": 550 },
+			"attack/shouji/shangbu01/shangbu 2/shb_0004": { "width": 500, "height": 550 },
+			"attack/shouji/shangbu01/shangbu 2/shb_0006": { "width": 500, "height": 550 },
+			"attack/shouji/shangbu01/shangbu 2/shb_0008": { "width": 500, "height": 550 },
+			"attack/shouji/shangbu01/shangbu 2/shb_0010": { "width": 500, "height": 550 },
+			"attack/shouji/shangbu01/shangbu 2/shb_0012": { "width": 500, "height": 550 },
+			"attack/shouji/shangbu01/shangbu 2/shb_0014": { "width": 500, "height": 550 }
+		}
+	}
+},
+"events": {
+	"hit_11_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"attack/dibukuosan/kus_0": {
+				"attachment": [
+					{ "time": 0, "name": "attack/dibukuosan/kus_0000" },
+					{ "time": 0.0667, "name": "attack/dibukuosan/kus_0002" },
+					{ "time": 0.1333, "name": "attack/dibukuosan/kus_0004" },
+					{ "time": 0.2, "name": "attack/dibukuosan/kus_0006" },
+					{ "time": 0.2667, "name": "attack/dibukuosan/kus_0008" },
+					{ "time": 0.3333, "name": "attack/dibukuosan/kus_0010" },
+					{ "time": 0.4, "name": "attack/dibukuosan/kus_0012" },
+					{ "time": 0.4667, "name": "attack/dibukuosan/kus_0014" },
+					{ "time": 0.5333, "name": "attack/dibukuosan/kus_0016" },
+					{ "time": 0.5667, "name": null }
+				]
+			},
+			"attack/shouji/shangbu01/shangbu 2/shb_0000": {
+				"attachment": [
+					{ "time": 0, "name": "attack/shouji/shangbu01/shangbu 2/shb_0000" },
+					{ "time": 0.0667, "name": "attack/shouji/shangbu01/shangbu 2/shb_0002" },
+					{ "time": 0.1333, "name": "attack/shouji/shangbu01/shangbu 2/shb_0004" },
+					{ "time": 0.2, "name": "attack/shouji/shangbu01/shangbu 2/shb_0006" },
+					{ "time": 0.2667, "name": "attack/shouji/shangbu01/shangbu 2/shb_0008" },
+					{ "time": 0.3333, "name": "attack/shouji/shangbu01/shangbu 2/shb_0010" },
+					{ "time": 0.4, "name": "attack/shouji/shangbu01/shangbu 2/shb_0012" },
+					{ "time": 0.4667, "name": "attack/shouji/shangbu01/shangbu 2/shb_0014" },
+					{ "time": 0.5, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.7333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.7333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.7333, "x": 1, "y": 1 }
+				]
+			},
+			"SJ": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"shb_0000": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -39.58, "y": 484 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3 }
+				]
+			},
+			"kus_0": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 2.15, "y": -14.3 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 0,
+				"offsets": [
+					{ "slot": "attack/shouji/shangbu01/shangbu 2/shb_0000", "offset": 1 }
+				]
+			}
+		],
+		"events": [
+			{ "time": 0.1, "name": "hit_11_1_1" }
+		]
+	}
+}
+}

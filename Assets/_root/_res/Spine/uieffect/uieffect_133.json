@@ -1,0 +1,88 @@
+{
+"skeleton": { "hash": "c7bq3Y4MRBEjwA0notOvysrTlyo", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "suipianZX", "parent": "root", "scaleX": 4, "scaleY": 4 }
+],
+"slots": [
+	{ "name": "suipianZX", "bone": "suipianZX" }
+],
+"skins": {
+	"default": {
+		"suipianZX": {
+			"images/suipian/suipian_00000": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00001": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00002": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00003": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00004": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00005": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00006": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00007": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00008": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00009": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00010": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00011": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00012": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00013": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00014": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00015": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00016": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00017": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00018": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00019": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00020": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00021": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00022": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00023": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00024": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00025": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00026": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00027": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00028": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00029": { "width": 125, "height": 125 },
+			"images/suipian/suipian_00030": { "width": 125, "height": 125 }
+		}
+	}
+},
+"animations": {
+	"suipianAct": {
+		"slots": {
+			"suipianZX": {
+				"attachment": [
+					{ "time": 0, "name": "images/suipian/suipian_00000" },
+					{ "time": 0.0333, "name": "images/suipian/suipian_00001" },
+					{ "time": 0.0667, "name": "images/suipian/suipian_00002" },
+					{ "time": 0.1, "name": "images/suipian/suipian_00003" },
+					{ "time": 0.1333, "name": "images/suipian/suipian_00004" },
+					{ "time": 0.1667, "name": "images/suipian/suipian_00005" },
+					{ "time": 0.2, "name": "images/suipian/suipian_00006" },
+					{ "time": 0.2333, "name": "images/suipian/suipian_00007" },
+					{ "time": 0.2667, "name": "images/suipian/suipian_00008" },
+					{ "time": 0.3, "name": "images/suipian/suipian_00009" },
+					{ "time": 0.3333, "name": "images/suipian/suipian_00010" },
+					{ "time": 0.3667, "name": "images/suipian/suipian_00011" },
+					{ "time": 0.4, "name": "images/suipian/suipian_00012" },
+					{ "time": 0.4333, "name": "images/suipian/suipian_00013" },
+					{ "time": 0.4667, "name": "images/suipian/suipian_00014" },
+					{ "time": 0.5, "name": "images/suipian/suipian_00015" },
+					{ "time": 0.5333, "name": "images/suipian/suipian_00016" },
+					{ "time": 0.5667, "name": "images/suipian/suipian_00017" },
+					{ "time": 0.6, "name": "images/suipian/suipian_00018" },
+					{ "time": 0.6333, "name": "images/suipian/suipian_00019" },
+					{ "time": 0.6667, "name": "images/suipian/suipian_00020" },
+					{ "time": 0.7, "name": "images/suipian/suipian_00021" },
+					{ "time": 0.7333, "name": "images/suipian/suipian_00022" },
+					{ "time": 0.7667, "name": "images/suipian/suipian_00023" },
+					{ "time": 0.8, "name": "images/suipian/suipian_00024" },
+					{ "time": 0.8333, "name": "images/suipian/suipian_00025" },
+					{ "time": 0.8667, "name": "images/suipian/suipian_00026" },
+					{ "time": 0.9, "name": "images/suipian/suipian_00027" },
+					{ "time": 0.9333, "name": "images/suipian/suipian_00028" },
+					{ "time": 0.9667, "name": "images/suipian/suipian_00029" },
+					{ "time": 1, "name": "images/suipian/suipian_00030" }
+				]
+			}
+		}
+	}
+}
+}

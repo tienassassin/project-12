@@ -1,0 +1,48 @@
+
+seffect_32404120111.png
+size: 205,205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/SFX_qinbg
+  rotate: false
+  xy: 2, 88
+  size: 116, 115
+  orig: 116, 115
+  offset: 0, 0
+  index: -1
+images/glow_1
+  rotate: false
+  xy: 132, 12
+  size: 48, 47
+  orig: 50, 50
+  offset: 1, 2
+  index: -1
+images/huoqiu_00000
+  rotate: false
+  xy: 67, 15
+  size: 63, 71
+  orig: 75, 87
+  offset: 4, 0
+  index: -1
+images/huoqiu_00004
+  rotate: false
+  xy: 120, 127
+  size: 62, 76
+  orig: 75, 87
+  offset: 5, 0
+  index: -1
+images/huoqiu_00008
+  rotate: true
+  xy: 132, 61
+  size: 64, 71
+  orig: 75, 87
+  offset: 5, 0
+  index: -1
+images/huoqiu_00012
+  rotate: false
+  xy: 2, 10
+  size: 63, 76
+  orig: 75, 87
+  offset: 5, 0
+  index: -1

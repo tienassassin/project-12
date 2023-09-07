@@ -1,0 +1,97 @@
+
+seffect_12001.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tx/smoke/0_00000
+  rotate: false
+  xy: 816, 46
+  size: 101, 104
+  orig: 750, 750
+  offset: 326, 328
+  index: -1
+tx/smoke/0_00002
+  rotate: false
+  xy: 308, 336
+  size: 272, 326
+  orig: 750, 750
+  offset: 233, 251
+  index: -1
+tx/smoke/0_00004
+  rotate: false
+  xy: 2, 664
+  size: 341, 357
+  orig: 750, 750
+  offset: 206, 234
+  index: -1
+tx/smoke/0_00006
+  rotate: false
+  xy: 2, 322
+  size: 304, 340
+  orig: 750, 750
+  offset: 238, 252
+  index: -1
+tx/smoke/0_00008
+  rotate: false
+  xy: 650, 696
+  size: 303, 325
+  orig: 750, 750
+  offset: 244, 270
+  index: -1
+tx/smoke/0_00010
+  rotate: false
+  xy: 345, 683
+  size: 303, 338
+  orig: 750, 750
+  offset: 265, 280
+  index: -1
+tx/smoke/0_00012
+  rotate: true
+  xy: 2, 2
+  size: 318, 284
+  orig: 750, 750
+  offset: 265, 278
+  index: -1
+tx/smoke/0_00014
+  rotate: false
+  xy: 582, 410
+  size: 258, 271
+  orig: 750, 750
+  offset: 265, 278
+  index: -1
+tx/smoke/0_00017
+  rotate: true
+  xy: 582, 152
+  size: 256, 268
+  orig: 750, 750
+  offset: 265, 281
+  index: -1
+tx/smoke/0_00025
+  rotate: false
+  xy: 288, 65
+  size: 248, 255
+  orig: 750, 750
+  offset: 266, 286
+  index: -1
+tx/smoke/0_00033
+  rotate: false
+  xy: 842, 501
+  size: 147, 193
+  orig: 750, 750
+  offset: 328, 357
+  index: -1
+tx/smoke/0_00041
+  rotate: true
+  xy: 538, 34
+  size: 116, 139
+  orig: 750, 750
+  offset: 341, 367
+  index: -1
+tx/smoke/0_00047
+  rotate: true
+  xy: 679, 52
+  size: 98, 135
+  orig: 750, 750
+  offset: 343, 374
+  index: -1

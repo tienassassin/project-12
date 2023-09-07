@@ -1,0 +1,59 @@
+{
+"skeleton": { "hash": "NaDV6Xwxx379gGIkJfz/r8LNrMQ", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "glow01", "parent": "root", "scaleX": 3, "scaleY": 3 },
+	{ "name": "skill_blast", "parent": "root", "scaleX": 4, "scaleY": 4 }
+],
+"slots": [
+	{ "name": "images/0_00000", "bone": "skill_blast", "blend": "additive" },
+	{ "name": "images/glow01", "bone": "glow01", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"images/0_00000": {
+			"images/effect/skill_blast/0_00000": { "width": 150, "height": 150 },
+			"images/effect/skill_blast/0_00001": { "width": 150, "height": 150 },
+			"images/effect/skill_blast/0_00003": { "width": 150, "height": 150 },
+			"images/effect/skill_blast/0_00005": { "width": 150, "height": 150 },
+			"images/effect/skill_blast/0_00007": { "width": 150, "height": 150 },
+			"images/effect/skill_blast/0_00009": { "width": 150, "height": 150 }
+		},
+		"images/glow01": {
+			"images/effect/glow01": { "width": 256, "height": 256 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"images/0_00000": {
+				"attachment": [
+					{ "time": 0, "name": "images/effect/skill_blast/0_00000" },
+					{ "time": 0.0333, "name": "images/effect/skill_blast/0_00001" },
+					{ "time": 0.1, "name": "images/effect/skill_blast/0_00003" },
+					{ "time": 0.1667, "name": "images/effect/skill_blast/0_00005" },
+					{ "time": 0.2333, "name": "images/effect/skill_blast/0_00007" },
+					{ "time": 0.3, "name": "images/effect/skill_blast/0_00009" },
+					{ "time": 0.3667, "name": null }
+				]
+			},
+			"images/glow01": {
+				"color": [
+					{ "time": 0, "color": "ff2606ff" },
+					{ "time": 0.2, "color": "ff260600" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "images/effect/glow01" }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

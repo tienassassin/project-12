@@ -1,0 +1,20 @@
+
+uieffect_15.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/font_1
+  rotate: false
+  xy: 2, 139
+  size: 378, 94
+  orig: 447, 166
+  offset: 39, 36
+  index: -1
+images/glow_line
+  rotate: false
+  xy: 2, 2
+  size: 240, 135
+  orig: 240, 135
+  offset: 0, 0
+  index: -1

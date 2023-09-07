@@ -1,0 +1,76 @@
+
+sbuff_34.png
+size: 2048,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Spine_Effect/image/buff/buff_0000
+  rotate: false
+  xy: 2, 11
+  size: 268, 51
+  orig: 278, 57
+  offset: 7, 1
+  index: -1
+Spine_Effect/image/buff/buff_0002
+  rotate: false
+  xy: 542, 14
+  size: 268, 48
+  orig: 278, 57
+  offset: 7, 3
+  index: -1
+Spine_Effect/image/buff/buff_0004
+  rotate: false
+  xy: 1072, 11
+  size: 195, 51
+  orig: 278, 57
+  offset: 8, 1
+  index: -1
+Spine_Effect/image/buff/buff_0006
+  rotate: false
+  xy: 1355, 31
+  size: 44, 31
+  orig: 278, 57
+  offset: 7, 20
+  index: -1
+Spine_Effect/image/buff/buff_0008
+  rotate: false
+  xy: 542, 2
+  size: 16, 10
+  orig: 278, 57
+  offset: 37, 33
+  index: -1
+Spine_Effect/image/buff/buff_0010
+  rotate: false
+  xy: 1401, 61
+  size: 1, 1
+  orig: 278, 57
+  offset: 216, 36
+  index: -1
+Spine_Effect/image/buff/buff_0012
+  rotate: false
+  xy: 1355, 2
+  size: 44, 27
+  orig: 278, 57
+  offset: 227, 26
+  index: -1
+Spine_Effect/image/buff/buff_0014
+  rotate: false
+  xy: 1269, 13
+  size: 84, 49
+  orig: 278, 57
+  offset: 192, 4
+  index: -1
+Spine_Effect/image/buff/buff_0016
+  rotate: false
+  xy: 812, 11
+  size: 258, 51
+  orig: 278, 57
+  offset: 17, 2
+  index: -1
+Spine_Effect/image/buff/buff_0018
+  rotate: false
+  xy: 272, 13
+  size: 268, 49
+  orig: 278, 57
+  offset: 8, 3
+  index: -1

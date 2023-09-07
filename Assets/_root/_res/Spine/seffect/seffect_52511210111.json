@@ -1,0 +1,1215 @@
+{
+"skeleton": { "hash": "jtBrKvXmcTrxlEaLnkYQ+LKnSqc", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "effect", "parent": "root" },
+	{ "name": "att_cast", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "dilie", "parent": "effect", "scaleX": 7.2, "scaleY": 6 },
+	{ "name": "glow01", "parent": "effect", "scaleX": 4, "scaleY": 4 },
+	{ "name": "skill_cast", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "skill_hit_1", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "skill_hit_2", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "smoke_1", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "ultimateskill_cast", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "ultimateskill_dg1_0", "parent": "effect", "scaleX": 8, "scaleY": 4.8 },
+	{ "name": "ultimateskill_dg1_1", "parent": "effect", "scaleX": 10, "scaleY": 3.6 },
+	{ "name": "ultimateskill_dg1_2", "parent": "effect", "scaleX": 6.4, "scaleY": 4.4 },
+	{ "name": "ultimateskill_dg2_0", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "ultimateskill_dg2_1", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "ultimateskill_hit1_1", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "ultimateskill_hit1_2", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "ultimateskill_hit2_1", "parent": "effect", "scaleX": 8, "scaleY": 8 },
+	{ "name": "white01", "parent": "effect", "scaleX": 50, "scaleY": 50 }
+],
+"slots": [
+	{ "name": "effect/dilie", "bone": "dilie" },
+	{ "name": "effect/skill2_hit1_2/0_00000", "bone": "ultimateskill_hit1_2" },
+	{ "name": "effect/skill2_dg2/0_0", "bone": "ultimateskill_dg2_1", "color": "000000ff" },
+	{ "name": "effect/skill1_hit 2/0_00000", "bone": "skill_hit_2" },
+	{ "name": "effect/attack_cast/0_00006", "bone": "att_cast" },
+	{ "name": "effect/y/0_00000", "bone": "smoke_1" },
+	{ "name": "effect/skill1_cast/0_00008", "bone": "skill_cast" },
+	{ "name": "effect/skill1_hit/0_00000", "bone": "skill_hit_1" },
+	{ "name": "effect/skill2_cast/0_00003", "bone": "ultimateskill_cast" },
+	{ "name": "effect/skill2_dg2/0_00000", "bone": "ultimateskill_dg2_0", "blend": "additive" },
+	{ "name": "effect/skill2_dg/0_00000", "bone": "ultimateskill_dg1_0" },
+	{ "name": "effect/skill2_dg/0_0", "bone": "ultimateskill_dg1_1" },
+	{ "name": "effect/skill2_dg/0_1", "bone": "ultimateskill_dg1_2" },
+	{ "name": "effect/skill2_hit1_1/0_00000", "bone": "ultimateskill_hit1_1" },
+	{ "name": "effect/skill2_hit2_1/0_00000", "bone": "ultimateskill_hit2_1" },
+	{ "name": "effect/glow01", "bone": "glow01", "blend": "additive" },
+	{ "name": "effect/white01", "bone": "white01", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"effect/attack_cast/0_00006": {
+			"effect/attack_cast/0_00006": { "width": 300, "height": 200 },
+			"effect/attack_cast/0_00008": { "width": 300, "height": 200 },
+			"effect/attack_cast/0_00010": { "width": 300, "height": 200 },
+			"effect/attack_cast/0_00012": { "width": 300, "height": 200 },
+			"effect/attack_cast/0_00014": { "width": 300, "height": 200 },
+			"effect/attack_cast/0_00016": { "width": 300, "height": 200 },
+			"effect/attack_cast/0_00018": { "width": 300, "height": 200 },
+			"effect/attack_cast/0_00020": { "width": 300, "height": 200 },
+			"effect/attack_cast/0_00022": { "width": 300, "height": 200 }
+		},
+		"effect/dilie": {
+			"effect/dilie": { "width": 512, "height": 128 }
+		},
+		"effect/glow01": {
+			"effect/glow01": { "width": 256, "height": 256 }
+		},
+		"effect/skill1_cast/0_00008": {
+			"effect/skill1_cast/0_00008": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00010": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00012": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00014": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00016": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00017": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00019": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00020": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00022": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00024": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00026": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00028": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00030": { "width": 300, "height": 300 },
+			"effect/skill1_cast/0_00032": { "width": 300, "height": 300 }
+		},
+		"effect/skill1_hit 2/0_00000": {
+			"effect/skill1_hit 2/0_00000": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00001": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00002": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00003": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00005": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00007": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00009": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00011": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00013": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00015": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00017": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00019": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00021": { "width": 400, "height": 500 },
+			"effect/skill1_hit 2/0_00023": { "width": 400, "height": 500 }
+		},
+		"effect/skill1_hit/0_00000": {
+			"effect/skill1_hit/0_00000": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00001": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00002": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00004": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00006": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00008": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00010": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00012": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00014": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00016": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00018": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00020": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00022": { "width": 500, "height": 625 },
+			"effect/skill1_hit/0_00024": { "width": 500, "height": 625 }
+		},
+		"effect/skill2_cast/0_00003": {
+			"effect/skill2_cast/0_00003": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00005": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00007": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00009": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00011": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00013": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00015": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00017": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00019": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00021": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00023": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00025": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00027": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00037": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00039": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00041": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00043": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00045": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00047": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00049": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00051": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00053": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00089": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00091": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00093": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00095": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00097": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00099": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00101": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00103": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00105": { "width": 400, "height": 400 },
+			"effect/skill2_cast/0_00107": { "width": 400, "height": 400 }
+		},
+		"effect/skill2_dg/0_0": {
+			"effect/skill2_dg/0_00000": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00002": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00004": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00006": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00008": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00010": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00012": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00014": { "width": 600, "height": 600 }
+		},
+		"effect/skill2_dg/0_00000": {
+			"effect/skill2_dg/0_00000": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00002": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00004": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00006": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00008": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00010": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00012": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00014": { "width": 600, "height": 600 }
+		},
+		"effect/skill2_dg/0_1": {
+			"effect/skill2_dg/0_00000": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00002": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00004": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00006": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00008": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00010": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00012": { "width": 600, "height": 600 },
+			"effect/skill2_dg/0_00014": { "width": 600, "height": 600 }
+		},
+		"effect/skill2_dg2/0_0": {
+			"effect/skill2_dg2/0_00000": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00001": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00002": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00004": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00006": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00008": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00010": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00012": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00014": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00016": { "width": 1000, "height": 500 }
+		},
+		"effect/skill2_dg2/0_00000": {
+			"effect/skill2_dg2/0_00000": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00001": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00002": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00004": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00006": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00008": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00010": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00012": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00014": { "width": 1000, "height": 500 },
+			"effect/skill2_dg2/0_00016": { "width": 1000, "height": 500 }
+		},
+		"effect/skill2_hit1_1/0_00000": {
+			"effect/skill2_hit1_1/0_00000": { "width": 300, "height": 250 },
+			"effect/skill2_hit1_1/0_00001": { "width": 300, "height": 250 },
+			"effect/skill2_hit1_1/0_00003": { "width": 300, "height": 250 },
+			"effect/skill2_hit1_1/0_00005": { "width": 300, "height": 250 },
+			"effect/skill2_hit1_1/0_00007": { "width": 300, "height": 250 },
+			"effect/skill2_hit1_1/0_00009": { "width": 300, "height": 250 },
+			"effect/skill2_hit1_1/0_00011": { "width": 300, "height": 250 },
+			"effect/skill2_hit1_1/0_00013": { "width": 300, "height": 250 }
+		},
+		"effect/skill2_hit1_2/0_00000": {
+			"effect/skill2_hit1_2/0_00000": { "width": 500, "height": 500 },
+			"effect/skill2_hit1_2/0_00001": { "width": 500, "height": 500 },
+			"effect/skill2_hit1_2/0_00002": { "width": 500, "height": 500 },
+			"effect/skill2_hit1_2/0_00003": { "width": 500, "height": 500 },
+			"effect/skill2_hit1_2/0_00005": { "width": 500, "height": 500 },
+			"effect/skill2_hit1_2/0_00007": { "width": 500, "height": 500 },
+			"effect/skill2_hit1_2/0_00009": { "width": 500, "height": 500 },
+			"effect/skill2_hit1_2/0_00011": { "width": 500, "height": 500 },
+			"effect/skill2_hit1_2/0_00013": { "width": 500, "height": 500 }
+		},
+		"effect/skill2_hit2_1/0_00000": {
+			"effect/skill2_hit2_1/0_00000": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00002": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00004": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00006": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00008": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00010": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00012": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00014": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00016": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00018": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00020": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00022": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00024": { "width": 500, "height": 450 },
+			"effect/skill2_hit2_1/0_00026": { "width": 500, "height": 450 }
+		},
+		"effect/white01": {
+			"effect/white01": { "width": 128, "height": 128 }
+		},
+		"effect/y/0_00000": {
+			"effect/y/0_00000": { "width": 150, "height": 75 },
+			"effect/y/0_00002": { "width": 150, "height": 75 },
+			"effect/y/0_00004": { "width": 150, "height": 75 },
+			"effect/y/0_00006": { "width": 150, "height": 75 },
+			"effect/y/0_00008": { "width": 150, "height": 75 },
+			"effect/y/0_00010": { "width": 150, "height": 75 },
+			"effect/y/0_00012": { "width": 150, "height": 75 }
+		}
+	}
+},
+"events": {
+	"qishou_11_1_1": {},
+	"qishou_1_1_1": {},
+	"qishou_21_5_1": {},
+	"qishou_21_5_2": {},
+	"qishou_21_5_3": {},
+	"qishou_21_5_4": {},
+	"qishou_21_5_5": {},
+	"shakestart_5": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"effect/attack_cast/0_00006": {
+				"attachment": [
+					{ "time": 0.2, "name": "effect/attack_cast/0_00006" },
+					{ "time": 0.2667, "name": "effect/attack_cast/0_00008" },
+					{ "time": 0.3333, "name": "effect/attack_cast/0_00010" },
+					{ "time": 0.4, "name": "effect/attack_cast/0_00012" },
+					{ "time": 0.4667, "name": "effect/attack_cast/0_00014" },
+					{ "time": 0.5333, "name": "effect/attack_cast/0_00016" },
+					{ "time": 0.6, "name": "effect/attack_cast/0_00018" },
+					{ "time": 0.6667, "name": "effect/attack_cast/0_00020" },
+					{ "time": 0.7333, "name": "effect/attack_cast/0_00022" },
+					{ "time": 0.7667, "name": null }
+				]
+			},
+			"effect/glow01": {
+				"color": [
+					{ "time": 0.5, "color": "7c27ffff" },
+					{ "time": 0.6667, "color": "7c27ff00" }
+				],
+				"attachment": [
+					{ "time": 0.5, "name": "effect/glow01" }
+				]
+			}
+		},
+		"bones": {
+			"att_cast": {
+				"translate": [
+					{ "time": 0.2, "x": 0, "y": 226.6 }
+				]
+			},
+			"glow01": {
+				"translate": [
+					{ "time": 0.5, "x": 886, "y": 197.1 }
+				],
+				"scale": [
+					{ "time": 0.5, "x": 3, "y": 3 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0.1667 },
+			{ "time": 0.9667 }
+		],
+		"events": [
+			{ "time": 0.5333, "name": "qishou_1_1_1" }
+		]
+	},
+	"animation_1": {
+		"slots": {
+			"effect/glow01": {
+				"color": [
+					{ "time": 0.6667, "color": "c656ffff" },
+					{ "time": 1, "color": "6416ff54" },
+					{ "time": 1.1667, "color": "5b11ff00" }
+				],
+				"attachment": [
+					{ "time": 0.6667, "name": "effect/glow01" }
+				]
+			},
+			"effect/skill1_cast/0_00008": {
+				"attachment": [
+					{ "time": 0.2667, "name": "effect/skill1_cast/0_00008" },
+					{ "time": 0.3333, "name": "effect/skill1_cast/0_00010" },
+					{ "time": 0.4, "name": "effect/skill1_cast/0_00012" },
+					{ "time": 0.4667, "name": "effect/skill1_cast/0_00014" },
+					{ "time": 0.5333, "name": "effect/skill1_cast/0_00016" },
+					{ "time": 0.5667, "name": "effect/skill1_cast/0_00017" },
+					{ "time": 0.6, "name": null },
+					{ "time": 0.6333, "name": "effect/skill1_cast/0_00019" },
+					{ "time": 0.6667, "name": "effect/skill1_cast/0_00020" },
+					{ "time": 0.7333, "name": "effect/skill1_cast/0_00022" },
+					{ "time": 0.8, "name": "effect/skill1_cast/0_00024" },
+					{ "time": 0.8667, "name": "effect/skill1_cast/0_00026" },
+					{ "time": 0.9333, "name": "effect/skill1_cast/0_00028" },
+					{ "time": 1, "name": "effect/skill1_cast/0_00030" },
+					{ "time": 1.0667, "name": "effect/skill1_cast/0_00032" },
+					{ "time": 1.1333, "name": null }
+				]
+			},
+			"effect/skill1_hit 2/0_00000": {
+				"color": [
+					{ "time": 1.4333, "color": "ffffffff" },
+					{ "time": 1.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.6667, "name": "effect/skill1_hit 2/0_00000" },
+					{ "time": 0.7, "name": "effect/skill1_hit 2/0_00001" },
+					{ "time": 0.7333, "name": "effect/skill1_hit 2/0_00002" },
+					{ "time": 0.7667, "name": "effect/skill1_hit 2/0_00003" },
+					{ "time": 0.8333, "name": "effect/skill1_hit 2/0_00005" },
+					{ "time": 0.9, "name": "effect/skill1_hit 2/0_00007" },
+					{ "time": 0.9667, "name": "effect/skill1_hit 2/0_00009" },
+					{ "time": 1.0333, "name": "effect/skill1_hit 2/0_00011" },
+					{ "time": 1.1, "name": "effect/skill1_hit 2/0_00013" },
+					{ "time": 1.1667, "name": "effect/skill1_hit 2/0_00015" },
+					{ "time": 1.2333, "name": "effect/skill1_hit 2/0_00017" },
+					{ "time": 1.3, "name": "effect/skill1_hit 2/0_00019" },
+					{ "time": 1.3667, "name": "effect/skill1_hit 2/0_00021" },
+					{ "time": 1.4333, "name": "effect/skill1_hit 2/0_00023" }
+				]
+			},
+			"effect/skill1_hit/0_00000": {
+				"attachment": [
+					{ "time": 0.0333, "name": "effect/skill1_hit/0_00024" },
+					{ "time": 0.6667, "name": "effect/skill1_hit/0_00000" },
+					{ "time": 0.7, "name": "effect/skill1_hit/0_00001" },
+					{ "time": 0.7333, "name": "effect/skill1_hit/0_00002" },
+					{ "time": 0.8, "name": "effect/skill1_hit/0_00004" },
+					{ "time": 0.8667, "name": "effect/skill1_hit/0_00006" },
+					{ "time": 0.9333, "name": "effect/skill1_hit/0_00008" },
+					{ "time": 1, "name": "effect/skill1_hit/0_00010" },
+					{ "time": 1.0667, "name": "effect/skill1_hit/0_00012" },
+					{ "time": 1.1333, "name": "effect/skill1_hit/0_00014" },
+					{ "time": 1.2, "name": "effect/skill1_hit/0_00016" },
+					{ "time": 1.2667, "name": "effect/skill1_hit/0_00018" },
+					{ "time": 1.3333, "name": "effect/skill1_hit/0_00020" },
+					{ "time": 1.4, "name": "effect/skill1_hit/0_00022" },
+					{ "time": 1.4667, "name": "effect/skill1_hit/0_00024" },
+					{ "time": 1.5333, "name": null }
+				]
+			},
+			"effect/y/0_00000": {
+				"attachment": [
+					{ "time": 0.2667, "name": "effect/y/0_00000" },
+					{ "time": 0.3333, "name": "effect/y/0_00002" },
+					{ "time": 0.4, "name": "effect/y/0_00004" },
+					{ "time": 0.4667, "name": "effect/y/0_00006" },
+					{ "time": 0.5333, "name": "effect/y/0_00008" },
+					{ "time": 0.6, "name": "effect/y/0_00010" },
+					{ "time": 0.6667, "name": "effect/y/0_00012" },
+					{ "time": 0.7333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"smoke_1": {
+				"translate": [
+					{ "time": 0.2667, "x": 0, "y": 76.26 }
+				]
+			},
+			"skill_cast": {
+				"translate": [
+					{ "time": 0.2667, "x": 12.3, "y": 496.92 }
+				]
+			},
+			"skill_hit_1": {
+				"translate": [
+					{ "time": 0.6667, "x": 843.4, "y": 623.26 }
+				]
+			},
+			"skill_hit_2": {
+				"translate": [
+					{ "time": 0.6667, "x": 843.4, "y": 623.3 }
+				]
+			},
+			"glow01": {
+				"translate": [
+					{ "time": 0.6667, "x": 899.13, "y": 142.8 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 4, "y": 4 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0.3667 },
+			{ "time": 0.6667 }
+		],
+		"events": [
+			{ "time": 0.6667, "name": "qishou_11_1_1" },
+			{ "time": 0.6667, "name": "shakestart_5" }
+		]
+	},
+	"animation_4": {
+		"slots": {
+			"effect/dilie": {
+				"color": [
+					{ "time": 3.6667, "color": "ffffffff" },
+					{ "time": 4.2667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 3.3333, "name": "effect/dilie" }
+				]
+			},
+			"effect/glow01": {
+				"color": [
+					{ "time": 1.6, "color": "d041ffff" },
+					{ "time": 1.9333, "color": "5b11ff00", "curve": "stepped" },
+					{ "time": 2.9333, "color": "5b11ff00" },
+					{ "time": 2.9667, "color": "dd44ffff" },
+					{ "time": 3.3, "color": "5b11ff00" },
+					{ "time": 3.3333, "color": "dd44ffff" },
+					{ "time": 3.8333, "color": "5b11ff00" }
+				],
+				"attachment": [
+					{ "time": 1.6, "name": "effect/glow01" }
+				]
+			},
+			"effect/skill2_cast/0_00003": {
+				"color": [
+					{ "time": 3.5667, "color": "ffffffff" },
+					{ "time": 3.7, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.1, "name": "effect/skill2_cast/0_00003" },
+					{ "time": 0.1667, "name": "effect/skill2_cast/0_00005" },
+					{ "time": 0.2333, "name": "effect/skill2_cast/0_00007" },
+					{ "time": 0.3, "name": "effect/skill2_cast/0_00009" },
+					{ "time": 0.3667, "name": "effect/skill2_cast/0_00011" },
+					{ "time": 0.4333, "name": "effect/skill2_cast/0_00013" },
+					{ "time": 0.5, "name": "effect/skill2_cast/0_00015" },
+					{ "time": 0.5667, "name": "effect/skill2_cast/0_00017" },
+					{ "time": 0.6333, "name": "effect/skill2_cast/0_00019" },
+					{ "time": 0.7, "name": "effect/skill2_cast/0_00021" },
+					{ "time": 0.7667, "name": "effect/skill2_cast/0_00023" },
+					{ "time": 0.8333, "name": "effect/skill2_cast/0_00025" },
+					{ "time": 0.9, "name": "effect/skill2_cast/0_00027" },
+					{ "time": 0.9333, "name": null },
+					{ "time": 1.2333, "name": "effect/skill2_cast/0_00037" },
+					{ "time": 1.3, "name": "effect/skill2_cast/0_00039" },
+					{ "time": 1.3667, "name": "effect/skill2_cast/0_00041" },
+					{ "time": 1.4333, "name": "effect/skill2_cast/0_00043" },
+					{ "time": 1.5, "name": "effect/skill2_cast/0_00045" },
+					{ "time": 1.5667, "name": "effect/skill2_cast/0_00047" },
+					{ "time": 1.6333, "name": "effect/skill2_cast/0_00049" },
+					{ "time": 1.7, "name": "effect/skill2_cast/0_00051" },
+					{ "time": 1.7667, "name": "effect/skill2_cast/0_00053" },
+					{ "time": 1.8333, "name": "effect/skill2_cast/0_00003" },
+					{ "time": 1.9, "name": "effect/skill2_cast/0_00005" },
+					{ "time": 1.9667, "name": "effect/skill2_cast/0_00007" },
+					{ "time": 2.0333, "name": "effect/skill2_cast/0_00009" },
+					{ "time": 2.1, "name": "effect/skill2_cast/0_00011" },
+					{ "time": 2.1667, "name": "effect/skill2_cast/0_00013" },
+					{ "time": 2.2333, "name": "effect/skill2_cast/0_00015" },
+					{ "time": 2.3, "name": "effect/skill2_cast/0_00017" },
+					{ "time": 2.3667, "name": "effect/skill2_cast/0_00019" },
+					{ "time": 2.4333, "name": "effect/skill2_cast/0_00021" },
+					{ "time": 2.5, "name": "effect/skill2_cast/0_00023" },
+					{ "time": 2.5667, "name": "effect/skill2_cast/0_00025" },
+					{ "time": 2.6333, "name": "effect/skill2_cast/0_00027" },
+					{ "time": 2.6667, "name": null },
+					{ "time": 2.9667, "name": "effect/skill2_cast/0_00089" },
+					{ "time": 3.0333, "name": "effect/skill2_cast/0_00091" },
+					{ "time": 3.1, "name": "effect/skill2_cast/0_00093" },
+					{ "time": 3.1667, "name": "effect/skill2_cast/0_00095" },
+					{ "time": 3.2333, "name": "effect/skill2_cast/0_00097" },
+					{ "time": 3.3, "name": "effect/skill2_cast/0_00099" },
+					{ "time": 3.3667, "name": "effect/skill2_cast/0_00101" },
+					{ "time": 3.4333, "name": "effect/skill2_cast/0_00103" },
+					{ "time": 3.5, "name": "effect/skill2_cast/0_00105" },
+					{ "time": 3.5667, "name": "effect/skill2_cast/0_00107" }
+				]
+			},
+			"effect/skill2_dg/0_00000": {
+				"attachment": [
+					{ "time": 0.3667, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 0.4333, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 0.5, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 0.5667, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 0.6333, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 0.7, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 0.7667, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 0.8333, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 0.8667, "name": null },
+					{ "time": 2.1, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 2.1667, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 2.2333, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 2.3, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 2.3667, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 2.4333, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 2.5, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 2.5667, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 2.6, "name": null }
+				]
+			},
+			"effect/skill2_dg/0_0": {
+				"attachment": [
+					{ "time": 0.6667, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 0.7333, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 0.8, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 0.8667, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 0.9333, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 1, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 1.0667, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 1.1333, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 1.1667, "name": null },
+					{ "time": 2.4, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 2.4667, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 2.5333, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 2.6, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 2.6667, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 2.7333, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 2.8, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 2.8667, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 2.9, "name": null }
+				]
+			},
+			"effect/skill2_dg/0_1": {
+				"attachment": [
+					{ "time": 1.2333, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 1.3, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 1.3667, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 1.4333, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 1.5, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 1.5667, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 1.6333, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 1.7, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 1.7333, "name": null }
+				]
+			},
+			"effect/skill2_dg2/0_00000": {
+				"attachment": [
+					{ "time": 1.6, "name": "effect/skill2_dg2/0_00000" },
+					{ "time": 1.6333, "name": "effect/skill2_dg2/0_00001" },
+					{ "time": 1.6667, "name": "effect/skill2_dg2/0_00002" },
+					{ "time": 1.7333, "name": "effect/skill2_dg2/0_00004" },
+					{ "time": 1.8, "name": "effect/skill2_dg2/0_00006" },
+					{ "time": 1.8667, "name": "effect/skill2_dg2/0_00008" },
+					{ "time": 1.9333, "name": "effect/skill2_dg2/0_00010" },
+					{ "time": 2, "name": "effect/skill2_dg2/0_00012" },
+					{ "time": 2.0667, "name": "effect/skill2_dg2/0_00014" },
+					{ "time": 2.1333, "name": "effect/skill2_dg2/0_00016" },
+					{ "time": 2.2, "name": null },
+					{ "time": 3.3333, "name": "effect/skill2_dg2/0_00000" },
+					{ "time": 3.3667, "name": "effect/skill2_dg2/0_00001" },
+					{ "time": 3.4, "name": "effect/skill2_dg2/0_00002" },
+					{ "time": 3.4667, "name": "effect/skill2_dg2/0_00004" },
+					{ "time": 3.5333, "name": "effect/skill2_dg2/0_00006" },
+					{ "time": 3.6, "name": "effect/skill2_dg2/0_00008" },
+					{ "time": 3.6667, "name": "effect/skill2_dg2/0_00010" },
+					{ "time": 3.7333, "name": "effect/skill2_dg2/0_00012" },
+					{ "time": 3.8, "name": "effect/skill2_dg2/0_00014" },
+					{ "time": 3.8667, "name": "effect/skill2_dg2/0_00016" },
+					{ "time": 3.9333, "name": null }
+				]
+			},
+			"effect/skill2_dg2/0_0": {
+				"attachment": [
+					{ "time": 1.6, "name": "effect/skill2_dg2/0_00000" },
+					{ "time": 1.6333, "name": "effect/skill2_dg2/0_00001" },
+					{ "time": 1.6667, "name": "effect/skill2_dg2/0_00002" },
+					{ "time": 1.7333, "name": "effect/skill2_dg2/0_00004" },
+					{ "time": 1.8, "name": "effect/skill2_dg2/0_00006" },
+					{ "time": 1.8667, "name": "effect/skill2_dg2/0_00008" },
+					{ "time": 1.9333, "name": "effect/skill2_dg2/0_00010" },
+					{ "time": 2, "name": "effect/skill2_dg2/0_00012" },
+					{ "time": 2.0667, "name": "effect/skill2_dg2/0_00014" },
+					{ "time": 2.1333, "name": "effect/skill2_dg2/0_00016" },
+					{ "time": 2.2, "name": null },
+					{ "time": 3.3333, "name": "effect/skill2_dg2/0_00000" },
+					{ "time": 3.3667, "name": "effect/skill2_dg2/0_00001" },
+					{ "time": 3.4, "name": "effect/skill2_dg2/0_00002" },
+					{ "time": 3.4667, "name": "effect/skill2_dg2/0_00004" },
+					{ "time": 3.5333, "name": "effect/skill2_dg2/0_00006" },
+					{ "time": 3.6, "name": "effect/skill2_dg2/0_00008" },
+					{ "time": 3.6667, "name": "effect/skill2_dg2/0_00010" },
+					{ "time": 3.7333, "name": "effect/skill2_dg2/0_00012" },
+					{ "time": 3.8, "name": "effect/skill2_dg2/0_00014" },
+					{ "time": 3.8667, "name": "effect/skill2_dg2/0_00016" },
+					{ "time": 3.9333, "name": null }
+				]
+			},
+			"effect/skill2_hit1_1/0_00000": {
+				"attachment": [
+					{ "time": 1.6, "name": "effect/skill2_hit1_1/0_00000" },
+					{ "time": 1.6333, "name": "effect/skill2_hit1_1/0_00001" },
+					{ "time": 1.7, "name": "effect/skill2_hit1_1/0_00003" },
+					{ "time": 1.7667, "name": "effect/skill2_hit1_1/0_00005" },
+					{ "time": 1.8333, "name": "effect/skill2_hit1_1/0_00007" },
+					{ "time": 1.9, "name": "effect/skill2_hit1_1/0_00009" },
+					{ "time": 1.9667, "name": "effect/skill2_hit1_1/0_00011" },
+					{ "time": 2.0333, "name": "effect/skill2_hit1_1/0_00013" },
+					{ "time": 2.1, "name": null }
+				]
+			},
+			"effect/skill2_hit1_2/0_00000": {
+				"attachment": [
+					{ "time": 1.6, "name": "effect/skill2_hit1_2/0_00000" },
+					{ "time": 1.6333, "name": "effect/skill2_hit1_2/0_00001" },
+					{ "time": 1.6667, "name": "effect/skill2_hit1_2/0_00002" },
+					{ "time": 1.7, "name": "effect/skill2_hit1_2/0_00003" },
+					{ "time": 1.7667, "name": "effect/skill2_hit1_2/0_00005" },
+					{ "time": 1.8333, "name": "effect/skill2_hit1_2/0_00007" },
+					{ "time": 1.9, "name": "effect/skill2_hit1_2/0_00009" },
+					{ "time": 1.9667, "name": "effect/skill2_hit1_2/0_00011" },
+					{ "time": 2.0333, "name": "effect/skill2_hit1_2/0_00013" },
+					{ "time": 2.1, "name": null },
+					{ "time": 3.3333, "name": "effect/skill2_hit1_2/0_00000" },
+					{ "time": 3.3667, "name": "effect/skill2_hit1_2/0_00001" },
+					{ "time": 3.4, "name": "effect/skill2_hit1_2/0_00002" },
+					{ "time": 3.4333, "name": "effect/skill2_hit1_2/0_00003" },
+					{ "time": 3.5, "name": "effect/skill2_hit1_2/0_00005" },
+					{ "time": 3.5667, "name": "effect/skill2_hit1_2/0_00007" },
+					{ "time": 3.6333, "name": "effect/skill2_hit1_2/0_00009" },
+					{ "time": 3.7, "name": "effect/skill2_hit1_2/0_00011" },
+					{ "time": 3.7667, "name": "effect/skill2_hit1_2/0_00013" },
+					{ "time": 3.8333, "name": null }
+				]
+			},
+			"effect/skill2_hit2_1/0_00000": {
+				"attachment": [
+					{ "time": 3.3333, "name": "effect/skill2_hit2_1/0_00000" },
+					{ "time": 3.4, "name": "effect/skill2_hit2_1/0_00002" },
+					{ "time": 3.4667, "name": "effect/skill2_hit2_1/0_00004" },
+					{ "time": 3.5333, "name": "effect/skill2_hit2_1/0_00006" },
+					{ "time": 3.6, "name": "effect/skill2_hit2_1/0_00008" },
+					{ "time": 3.6667, "name": "effect/skill2_hit2_1/0_00010" },
+					{ "time": 3.7333, "name": "effect/skill2_hit2_1/0_00012" },
+					{ "time": 3.8, "name": "effect/skill2_hit2_1/0_00014" },
+					{ "time": 3.8667, "name": "effect/skill2_hit2_1/0_00016" },
+					{ "time": 3.9333, "name": "effect/skill2_hit2_1/0_00018" },
+					{ "time": 4, "name": "effect/skill2_hit2_1/0_00020" },
+					{ "time": 4.0667, "name": "effect/skill2_hit2_1/0_00022" },
+					{ "time": 4.1333, "name": "effect/skill2_hit2_1/0_00024" },
+					{ "time": 4.2, "name": "effect/skill2_hit2_1/0_00026" },
+					{ "time": 4.2667, "name": null }
+				]
+			},
+			"effect/white01": {
+				"attachment": [
+					{ "time": 3.3333, "name": "effect/white01" },
+					{ "time": 3.3667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"ultimateskill_cast": {
+				"translate": [
+					{ "time": 0.1, "x": 0, "y": 297.34 }
+				]
+			},
+			"ultimateskill_dg2_0": {
+				"translate": [
+					{ "time": 1.6, "x": 1928.93, "y": 857.3, "curve": "stepped" },
+					{ "time": 3.3, "x": 1928.93, "y": 857.3 },
+					{ "time": 3.3333, "x": 2156, "y": 1037 }
+				],
+				"scale": [
+					{ "time": 1.6, "x": 0.825, "y": 0.825, "curve": "stepped" },
+					{ "time": 3.3, "x": 0.825, "y": 0.825 },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"ultimateskill_dg2_1": {
+				"translate": [
+					{ "time": 1.6, "x": 1929, "y": 857.3, "curve": "stepped" },
+					{ "time": 3.3, "x": 1929, "y": 857.3 },
+					{ "time": 3.3333, "x": 2156.43, "y": 1037.13 }
+				],
+				"scale": [
+					{ "time": 1.6, "x": 0.825, "y": 0.825, "curve": "stepped" },
+					{ "time": 3.3, "x": 0.825, "y": 0.825 },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"ultimateskill_hit1_2": {
+				"translate": [
+					{ "time": 1.6, "x": 805, "y": 0 }
+				],
+				"scale": [
+					{ "time": 1.6, "x": 0.8, "y": 0.8, "curve": "stepped" },
+					{ "time": 3.3, "x": 0.8, "y": 0.8 },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"ultimateskill_dg1_0": {
+				"translate": [
+					{ "time": 0.3667, "x": 126.94, "y": 243.29 }
+				]
+			},
+			"ultimateskill_dg1_1": {
+				"translate": [
+					{ "time": 0.6667, "x": 438.99, "y": 275.03 }
+				]
+			},
+			"ultimateskill_dg1_2": {
+				"translate": [
+					{ "time": 1.2333, "x": 312.05, "y": 306.76 }
+				]
+			},
+			"ultimateskill_hit1_1": {
+				"translate": [
+					{ "time": 1.6, "x": 814.51, "y": 756.33 }
+				]
+			},
+			"ultimateskill_hit2_1": {
+				"translate": [
+					{ "time": 3.3333, "x": 1406.87, "y": 973.18 }
+				]
+			},
+			"dilie": {
+				"translate": [
+					{ "time": 3.3333, "x": 1761.24, "y": 0 }
+				]
+			},
+			"glow01": {
+				"translate": [
+					{ "time": 1.6, "x": 778.47, "y": 142.8 },
+					{ "time": 2.9667, "x": -54.08, "y": 619.41 },
+					{ "time": 3.3333, "x": 766.4, "y": 82.47 }
+				],
+				"scale": [
+					{ "time": 1.6, "x": 6, "y": 6, "curve": "stepped" },
+					{ "time": 2.9333, "x": 6, "y": 6 },
+					{ "time": 2.9667, "x": 3, "y": 3, "curve": "stepped" },
+					{ "time": 3.3, "x": 3, "y": 3 },
+					{ "time": 3.3333, "x": 8, "y": 8 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0.0667 },
+			{ "time": 0.1 },
+			{ "time": 0.1333 },
+			{ "time": 0.2667 },
+			{ "time": 0.3 },
+			{ "time": 0.3333 },
+			{ "time": 0.3667 },
+			{ "time": 0.5 },
+			{ "time": 0.5333 },
+			{ "time": 0.6 },
+			{ "time": 0.6667 },
+			{ "time": 0.7333 },
+			{ "time": 0.7667 },
+			{ "time": 0.9 },
+			{ "time": 1.1333 },
+			{ "time": 1.1667 },
+			{ "time": 1.2333 },
+			{ "time": 1.3 },
+			{ "time": 1.5 },
+			{ "time": 1.5333 },
+			{ "time": 1.5667 },
+			{ "time": 1.6 },
+			{ "time": 1.7667 },
+			{ "time": 1.8333 },
+			{ "time": 2 },
+			{ "time": 2.0333 },
+			{ "time": 2.0667 },
+			{ "time": 2.1 },
+			{ "time": 2.2333 },
+			{ "time": 2.2667 },
+			{ "time": 2.3333 },
+			{ "time": 2.4333 },
+			{ "time": 2.4667 },
+			{ "time": 2.5 },
+			{ "time": 2.6333 },
+			{ "time": 2.8333 },
+			{ "time": 2.8667 },
+			{ "time": 2.9667 },
+			{ "time": 3 },
+			{ "time": 3.2333 },
+			{ "time": 3.2667 },
+			{ "time": 3.3 },
+			{ "time": 3.3333 },
+			{ "time": 3.7667 },
+			{ "time": 4 }
+		]
+	},
+	"animation_2": {
+		"slots": {
+			"effect/dilie": {
+				"color": [
+					{ "time": 3.6667, "color": "ffffffff" },
+					{ "time": 4.2667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 3.3333, "name": "effect/dilie" }
+				]
+			},
+			"effect/glow01": {
+				"color": [
+					{ "time": 1.6, "color": "d041ffff" },
+					{ "time": 1.9333, "color": "5b11ff00", "curve": "stepped" },
+					{ "time": 2.9333, "color": "5b11ff00" },
+					{ "time": 2.9667, "color": "dd44ffff" },
+					{ "time": 3.3, "color": "5b11ff00" },
+					{ "time": 3.3333, "color": "dd44ffff" },
+					{ "time": 3.8333, "color": "5b11ff00" }
+				],
+				"attachment": [
+					{ "time": 1.6, "name": "effect/glow01" }
+				]
+			},
+			"effect/skill2_cast/0_00003": {
+				"color": [
+					{ "time": 3.5667, "color": "ffffffff" },
+					{ "time": 3.7, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.1, "name": "effect/skill2_cast/0_00003" },
+					{ "time": 0.1667, "name": "effect/skill2_cast/0_00005" },
+					{ "time": 0.2333, "name": "effect/skill2_cast/0_00007" },
+					{ "time": 0.3, "name": "effect/skill2_cast/0_00009" },
+					{ "time": 0.3667, "name": "effect/skill2_cast/0_00011" },
+					{ "time": 0.4333, "name": "effect/skill2_cast/0_00013" },
+					{ "time": 0.5, "name": "effect/skill2_cast/0_00015" },
+					{ "time": 0.5667, "name": "effect/skill2_cast/0_00017" },
+					{ "time": 0.6333, "name": "effect/skill2_cast/0_00019" },
+					{ "time": 0.7, "name": "effect/skill2_cast/0_00021" },
+					{ "time": 0.7667, "name": "effect/skill2_cast/0_00023" },
+					{ "time": 0.8333, "name": "effect/skill2_cast/0_00025" },
+					{ "time": 0.9, "name": "effect/skill2_cast/0_00027" },
+					{ "time": 0.9333, "name": null },
+					{ "time": 1.2333, "name": "effect/skill2_cast/0_00037" },
+					{ "time": 1.3, "name": "effect/skill2_cast/0_00039" },
+					{ "time": 1.3667, "name": "effect/skill2_cast/0_00041" },
+					{ "time": 1.4333, "name": "effect/skill2_cast/0_00043" },
+					{ "time": 1.5, "name": "effect/skill2_cast/0_00045" },
+					{ "time": 1.5667, "name": "effect/skill2_cast/0_00047" },
+					{ "time": 1.6333, "name": "effect/skill2_cast/0_00049" },
+					{ "time": 1.7, "name": "effect/skill2_cast/0_00051" },
+					{ "time": 1.7667, "name": "effect/skill2_cast/0_00053" },
+					{ "time": 1.8333, "name": "effect/skill2_cast/0_00003" },
+					{ "time": 1.9, "name": "effect/skill2_cast/0_00005" },
+					{ "time": 1.9667, "name": "effect/skill2_cast/0_00007" },
+					{ "time": 2.0333, "name": "effect/skill2_cast/0_00009" },
+					{ "time": 2.1, "name": "effect/skill2_cast/0_00011" },
+					{ "time": 2.1667, "name": "effect/skill2_cast/0_00013" },
+					{ "time": 2.2333, "name": "effect/skill2_cast/0_00015" },
+					{ "time": 2.3, "name": "effect/skill2_cast/0_00017" },
+					{ "time": 2.3667, "name": "effect/skill2_cast/0_00019" },
+					{ "time": 2.4333, "name": "effect/skill2_cast/0_00021" },
+					{ "time": 2.5, "name": "effect/skill2_cast/0_00023" },
+					{ "time": 2.5667, "name": "effect/skill2_cast/0_00025" },
+					{ "time": 2.6333, "name": "effect/skill2_cast/0_00027" },
+					{ "time": 2.6667, "name": null },
+					{ "time": 2.9667, "name": "effect/skill2_cast/0_00089" },
+					{ "time": 3.0333, "name": "effect/skill2_cast/0_00091" },
+					{ "time": 3.1, "name": "effect/skill2_cast/0_00093" },
+					{ "time": 3.1667, "name": "effect/skill2_cast/0_00095" },
+					{ "time": 3.2333, "name": "effect/skill2_cast/0_00097" },
+					{ "time": 3.3, "name": "effect/skill2_cast/0_00099" },
+					{ "time": 3.3667, "name": "effect/skill2_cast/0_00101" },
+					{ "time": 3.4333, "name": "effect/skill2_cast/0_00103" },
+					{ "time": 3.5, "name": "effect/skill2_cast/0_00105" },
+					{ "time": 3.5667, "name": "effect/skill2_cast/0_00107" }
+				]
+			},
+			"effect/skill2_dg/0_00000": {
+				"attachment": [
+					{ "time": 0.3667, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 0.4333, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 0.5, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 0.5667, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 0.6333, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 0.7, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 0.7667, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 0.8333, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 0.8667, "name": null },
+					{ "time": 2.1, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 2.1667, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 2.2333, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 2.3, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 2.3667, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 2.4333, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 2.5, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 2.5667, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 2.6, "name": null }
+				]
+			},
+			"effect/skill2_dg/0_0": {
+				"attachment": [
+					{ "time": 0.6667, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 0.7333, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 0.8, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 0.8667, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 0.9333, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 1, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 1.0667, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 1.1333, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 1.1667, "name": null },
+					{ "time": 2.4, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 2.4667, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 2.5333, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 2.6, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 2.6667, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 2.7333, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 2.8, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 2.8667, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 2.9, "name": null }
+				]
+			},
+			"effect/skill2_dg/0_1": {
+				"attachment": [
+					{ "time": 1.2333, "name": "effect/skill2_dg/0_00000" },
+					{ "time": 1.3, "name": "effect/skill2_dg/0_00002" },
+					{ "time": 1.3667, "name": "effect/skill2_dg/0_00004" },
+					{ "time": 1.4333, "name": "effect/skill2_dg/0_00006" },
+					{ "time": 1.5, "name": "effect/skill2_dg/0_00008" },
+					{ "time": 1.5667, "name": "effect/skill2_dg/0_00010" },
+					{ "time": 1.6333, "name": "effect/skill2_dg/0_00012" },
+					{ "time": 1.7, "name": "effect/skill2_dg/0_00014" },
+					{ "time": 1.7333, "name": null }
+				]
+			},
+			"effect/skill2_dg2/0_00000": {
+				"attachment": [
+					{ "time": 1.6, "name": "effect/skill2_dg2/0_00000" },
+					{ "time": 1.6333, "name": "effect/skill2_dg2/0_00001" },
+					{ "time": 1.6667, "name": "effect/skill2_dg2/0_00002" },
+					{ "time": 1.7333, "name": "effect/skill2_dg2/0_00004" },
+					{ "time": 1.8, "name": "effect/skill2_dg2/0_00006" },
+					{ "time": 1.8667, "name": "effect/skill2_dg2/0_00008" },
+					{ "time": 1.9333, "name": "effect/skill2_dg2/0_00010" },
+					{ "time": 2, "name": "effect/skill2_dg2/0_00012" },
+					{ "time": 2.0667, "name": "effect/skill2_dg2/0_00014" },
+					{ "time": 2.1333, "name": "effect/skill2_dg2/0_00016" },
+					{ "time": 2.2, "name": null },
+					{ "time": 3.3333, "name": "effect/skill2_dg2/0_00000" },
+					{ "time": 3.3667, "name": "effect/skill2_dg2/0_00001" },
+					{ "time": 3.4, "name": "effect/skill2_dg2/0_00002" },
+					{ "time": 3.4667, "name": "effect/skill2_dg2/0_00004" },
+					{ "time": 3.5333, "name": "effect/skill2_dg2/0_00006" },
+					{ "time": 3.6, "name": "effect/skill2_dg2/0_00008" },
+					{ "time": 3.6667, "name": "effect/skill2_dg2/0_00010" },
+					{ "time": 3.7333, "name": "effect/skill2_dg2/0_00012" },
+					{ "time": 3.8, "name": "effect/skill2_dg2/0_00014" },
+					{ "time": 3.8667, "name": "effect/skill2_dg2/0_00016" },
+					{ "time": 3.9333, "name": null }
+				]
+			},
+			"effect/skill2_dg2/0_0": {
+				"attachment": [
+					{ "time": 1.6, "name": "effect/skill2_dg2/0_00000" },
+					{ "time": 1.6333, "name": "effect/skill2_dg2/0_00001" },
+					{ "time": 1.6667, "name": "effect/skill2_dg2/0_00002" },
+					{ "time": 1.7333, "name": "effect/skill2_dg2/0_00004" },
+					{ "time": 1.8, "name": "effect/skill2_dg2/0_00006" },
+					{ "time": 1.8667, "name": "effect/skill2_dg2/0_00008" },
+					{ "time": 1.9333, "name": "effect/skill2_dg2/0_00010" },
+					{ "time": 2, "name": "effect/skill2_dg2/0_00012" },
+					{ "time": 2.0667, "name": "effect/skill2_dg2/0_00014" },
+					{ "time": 2.1333, "name": "effect/skill2_dg2/0_00016" },
+					{ "time": 2.2, "name": null },
+					{ "time": 3.3333, "name": "effect/skill2_dg2/0_00000" },
+					{ "time": 3.3667, "name": "effect/skill2_dg2/0_00001" },
+					{ "time": 3.4, "name": "effect/skill2_dg2/0_00002" },
+					{ "time": 3.4667, "name": "effect/skill2_dg2/0_00004" },
+					{ "time": 3.5333, "name": "effect/skill2_dg2/0_00006" },
+					{ "time": 3.6, "name": "effect/skill2_dg2/0_00008" },
+					{ "time": 3.6667, "name": "effect/skill2_dg2/0_00010" },
+					{ "time": 3.7333, "name": "effect/skill2_dg2/0_00012" },
+					{ "time": 3.8, "name": "effect/skill2_dg2/0_00014" },
+					{ "time": 3.8667, "name": "effect/skill2_dg2/0_00016" },
+					{ "time": 3.9333, "name": null }
+				]
+			},
+			"effect/skill2_hit1_1/0_00000": {
+				"attachment": [
+					{ "time": 1.6, "name": "effect/skill2_hit1_1/0_00000" },
+					{ "time": 1.6333, "name": "effect/skill2_hit1_1/0_00001" },
+					{ "time": 1.7, "name": "effect/skill2_hit1_1/0_00003" },
+					{ "time": 1.7667, "name": "effect/skill2_hit1_1/0_00005" },
+					{ "time": 1.8333, "name": "effect/skill2_hit1_1/0_00007" },
+					{ "time": 1.9, "name": "effect/skill2_hit1_1/0_00009" },
+					{ "time": 1.9667, "name": "effect/skill2_hit1_1/0_00011" },
+					{ "time": 2.0333, "name": "effect/skill2_hit1_1/0_00013" },
+					{ "time": 2.1, "name": null }
+				]
+			},
+			"effect/skill2_hit1_2/0_00000": {
+				"attachment": [
+					{ "time": 1.6, "name": "effect/skill2_hit1_2/0_00000" },
+					{ "time": 1.6333, "name": "effect/skill2_hit1_2/0_00001" },
+					{ "time": 1.6667, "name": "effect/skill2_hit1_2/0_00002" },
+					{ "time": 1.7, "name": "effect/skill2_hit1_2/0_00003" },
+					{ "time": 1.7667, "name": "effect/skill2_hit1_2/0_00005" },
+					{ "time": 1.8333, "name": "effect/skill2_hit1_2/0_00007" },
+					{ "time": 1.9, "name": "effect/skill2_hit1_2/0_00009" },
+					{ "time": 1.9667, "name": "effect/skill2_hit1_2/0_00011" },
+					{ "time": 2.0333, "name": "effect/skill2_hit1_2/0_00013" },
+					{ "time": 2.1, "name": null },
+					{ "time": 3.3333, "name": "effect/skill2_hit1_2/0_00000" },
+					{ "time": 3.3667, "name": "effect/skill2_hit1_2/0_00001" },
+					{ "time": 3.4, "name": "effect/skill2_hit1_2/0_00002" },
+					{ "time": 3.4333, "name": "effect/skill2_hit1_2/0_00003" },
+					{ "time": 3.5, "name": "effect/skill2_hit1_2/0_00005" },
+					{ "time": 3.5667, "name": "effect/skill2_hit1_2/0_00007" },
+					{ "time": 3.6333, "name": "effect/skill2_hit1_2/0_00009" },
+					{ "time": 3.7, "name": "effect/skill2_hit1_2/0_00011" },
+					{ "time": 3.7667, "name": "effect/skill2_hit1_2/0_00013" },
+					{ "time": 3.8333, "name": null }
+				]
+			},
+			"effect/skill2_hit2_1/0_00000": {
+				"attachment": [
+					{ "time": 3.3333, "name": "effect/skill2_hit2_1/0_00000" },
+					{ "time": 3.4, "name": "effect/skill2_hit2_1/0_00002" },
+					{ "time": 3.4667, "name": "effect/skill2_hit2_1/0_00004" },
+					{ "time": 3.5333, "name": "effect/skill2_hit2_1/0_00006" },
+					{ "time": 3.6, "name": "effect/skill2_hit2_1/0_00008" },
+					{ "time": 3.6667, "name": "effect/skill2_hit2_1/0_00010" },
+					{ "time": 3.7333, "name": "effect/skill2_hit2_1/0_00012" },
+					{ "time": 3.8, "name": "effect/skill2_hit2_1/0_00014" },
+					{ "time": 3.8667, "name": "effect/skill2_hit2_1/0_00016" },
+					{ "time": 3.9333, "name": "effect/skill2_hit2_1/0_00018" },
+					{ "time": 4, "name": "effect/skill2_hit2_1/0_00020" },
+					{ "time": 4.0667, "name": "effect/skill2_hit2_1/0_00022" },
+					{ "time": 4.1333, "name": "effect/skill2_hit2_1/0_00024" },
+					{ "time": 4.2, "name": "effect/skill2_hit2_1/0_00026" },
+					{ "time": 4.2667, "name": null }
+				]
+			},
+			"effect/white01": {
+				"attachment": [
+					{ "time": 3.3333, "name": "effect/white01" },
+					{ "time": 3.3667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"ultimateskill_cast": {
+				"translate": [
+					{ "time": 0.1, "x": 0, "y": 297.34 }
+				]
+			},
+			"ultimateskill_dg2_0": {
+				"translate": [
+					{ "time": 1.6, "x": 1928.93, "y": 857.3, "curve": "stepped" },
+					{ "time": 3.3, "x": 1928.93, "y": 857.3 },
+					{ "time": 3.3333, "x": 2156, "y": 1037 }
+				],
+				"scale": [
+					{ "time": 1.6, "x": 0.825, "y": 0.825, "curve": "stepped" },
+					{ "time": 3.3, "x": 0.825, "y": 0.825 },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"ultimateskill_dg2_1": {
+				"translate": [
+					{ "time": 1.6, "x": 1929, "y": 857.3, "curve": "stepped" },
+					{ "time": 3.3, "x": 1929, "y": 857.3 },
+					{ "time": 3.3333, "x": 2156.43, "y": 1037.13 }
+				],
+				"scale": [
+					{ "time": 1.6, "x": 0.825, "y": 0.825, "curve": "stepped" },
+					{ "time": 3.3, "x": 0.825, "y": 0.825 },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"ultimateskill_hit1_2": {
+				"translate": [
+					{ "time": 1.6, "x": 805, "y": 0 }
+				],
+				"scale": [
+					{ "time": 1.6, "x": 0.8, "y": 0.8, "curve": "stepped" },
+					{ "time": 3.3, "x": 0.8, "y": 0.8 },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"ultimateskill_dg1_0": {
+				"translate": [
+					{ "time": 0.3667, "x": 126.94, "y": 243.29 }
+				]
+			},
+			"ultimateskill_dg1_1": {
+				"translate": [
+					{ "time": 0.6667, "x": 438.99, "y": 275.03 }
+				]
+			},
+			"ultimateskill_dg1_2": {
+				"translate": [
+					{ "time": 1.2333, "x": 312.05, "y": 306.76 }
+				]
+			},
+			"ultimateskill_hit1_1": {
+				"translate": [
+					{ "time": 1.6, "x": 814.51, "y": 756.33 }
+				]
+			},
+			"ultimateskill_hit2_1": {
+				"translate": [
+					{ "time": 3.3333, "x": 1406.87, "y": 973.18 }
+				]
+			},
+			"dilie": {
+				"translate": [
+					{ "time": 3.3333, "x": 1761.24, "y": 0 }
+				]
+			},
+			"glow01": {
+				"translate": [
+					{ "time": 1.6, "x": 778.47, "y": 142.8 },
+					{ "time": 2.9667, "x": -54.08, "y": 619.41 },
+					{ "time": 3.3333, "x": 766.4, "y": 82.47 }
+				],
+				"scale": [
+					{ "time": 1.6, "x": 6, "y": 6, "curve": "stepped" },
+					{ "time": 2.9333, "x": 6, "y": 6 },
+					{ "time": 2.9667, "x": 3, "y": 3, "curve": "stepped" },
+					{ "time": 3.3, "x": 3, "y": 3 },
+					{ "time": 3.3333, "x": 8, "y": 8 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0.0667 },
+			{ "time": 0.1 },
+			{ "time": 0.1333 },
+			{ "time": 0.2667 },
+			{ "time": 0.3 },
+			{ "time": 0.3333 },
+			{ "time": 0.3667 },
+			{ "time": 0.5 },
+			{ "time": 0.5333 },
+			{ "time": 0.6 },
+			{ "time": 0.6667 },
+			{ "time": 0.7333 },
+			{ "time": 0.7667 },
+			{ "time": 0.9 },
+			{ "time": 1.1333 },
+			{ "time": 1.1667 },
+			{ "time": 1.2333 },
+			{ "time": 1.3 },
+			{ "time": 1.5 },
+			{ "time": 1.5333 },
+			{ "time": 1.5667 },
+			{ "time": 1.6 },
+			{ "time": 1.7667 },
+			{ "time": 1.8333 },
+			{ "time": 2 },
+			{ "time": 2.0333 },
+			{ "time": 2.0667 },
+			{ "time": 2.1 },
+			{ "time": 2.2333 },
+			{ "time": 2.2667 },
+			{ "time": 2.3333 },
+			{ "time": 2.4333 },
+			{ "time": 2.4667 },
+			{ "time": 2.5 },
+			{ "time": 2.6333 },
+			{ "time": 2.8333 },
+			{ "time": 2.8667 },
+			{ "time": 2.9667 },
+			{ "time": 3 },
+			{ "time": 3.2333 },
+			{ "time": 3.2667 },
+			{ "time": 3.3 },
+			{ "time": 3.3333 },
+			{ "time": 3.7667 },
+			{ "time": 4 }
+		],
+		"events": [
+			{ "time": 0.4333, "name": "qishou_21_5_5" },
+			{ "time": 1, "name": "qishou_21_5_4" },
+			{ "time": 1.6, "name": "qishou_21_5_3" },
+			{ "time": 1.6, "name": "shakestart_5" },
+			{ "time": 2.2667, "name": "qishou_21_5_2" },
+			{ "time": 3.3667, "name": "qishou_21_5_1" },
+			{ "time": 3.3667, "name": "shakestart_5" }
+		]
+	}
+}
+}

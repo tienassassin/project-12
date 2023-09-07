@@ -1,0 +1,132 @@
+
+seffect_700006.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fire_a/fire_a_0000
+  rotate: true
+  xy: 974, 957
+  size: 63, 39
+  orig: 127, 112
+  offset: 31, 65
+  index: -1
+fire_a/fire_a_0008
+  rotate: false
+  xy: 610, 159
+  size: 75, 77
+  orig: 127, 112
+  offset: 35, 35
+  index: -1
+fire_a/fire_a_0012
+  rotate: false
+  xy: 623, 554
+  size: 58, 92
+  orig: 127, 112
+  offset: 54, 19
+  index: -1
+fire_a/fire_a_0016
+  rotate: true
+  xy: 513, 158
+  size: 78, 95
+  orig: 127, 112
+  offset: 39, 10
+  index: -1
+fire_a/fire_a_0020
+  rotate: false
+  xy: 514, 58
+  size: 91, 98
+  orig: 127, 112
+  offset: 28, 6
+  index: -1
+rot_fire/rot_fire_0000
+  rotate: false
+  xy: 258, 158
+  size: 253, 166
+  orig: 254, 184
+  offset: 1, 0
+  index: -1
+rot_fire/rot_fire_0002
+  rotate: false
+  xy: 367, 494
+  size: 254, 152
+  orig: 254, 184
+  offset: 0, 1
+  index: -1
+rot_fire/rot_fire_0004
+  rotate: true
+  xy: 514, 238
+  size: 254, 158
+  orig: 254, 184
+  offset: 0, 0
+  index: -1
+rot_fire/rot_fire_0006
+  rotate: true
+  xy: 803, 766
+  size: 254, 169
+  orig: 254, 184
+  offset: 0, 0
+  index: -1
+rot_fire/rot_fire_0008
+  rotate: false
+  xy: 2, 2
+  size: 254, 159
+  orig: 254, 184
+  offset: 0, 0
+  index: -1
+rot_fire/rot_fire_0010
+  rotate: false
+  xy: 2, 331
+  size: 254, 174
+  orig: 254, 184
+  offset: 0, 0
+  index: -1
+rot_fire/rot_fire_0012
+  rotate: false
+  xy: 2, 163
+  size: 254, 166
+  orig: 254, 184
+  offset: 0, 0
+  index: -1
+rot_fire/rot_fire_0014
+  rotate: false
+  xy: 258, 326
+  size: 254, 166
+  orig: 254, 184
+  offset: 0, 0
+  index: -1
+rot_fire/rot_fire_0016
+  rotate: false
+  xy: 258, 4
+  size: 254, 152
+  orig: 254, 184
+  offset: 0, 0
+  index: -1
+rot_fire/rot_fire_0018
+  rotate: true
+  xy: 803, 510
+  size: 254, 158
+  orig: 254, 184
+  offset: 0, 0
+  index: -1
+sanzi
+  rotate: false
+  xy: 2, 648
+  size: 658, 372
+  orig: 658, 372
+  offset: 0, 0
+  index: -1
+shanzi1
+  rotate: false
+  xy: 2, 507
+  size: 363, 139
+  orig: 363, 139
+  offset: 0, 0
+  index: -1
+shazi2
+  rotate: true
+  xy: 662, 658
+  size: 362, 139
+  orig: 362, 139
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,55 @@
+
+uieffect_127.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+image/hit/uihit05
+  rotate: true
+  xy: 139, 46
+  size: 69, 84
+  orig: 168, 168
+  offset: 51, 38
+  index: -1
+image/hit/uihit08
+  rotate: false
+  xy: 392, 134
+  size: 107, 116
+  orig: 168, 168
+  offset: 32, 28
+  index: -1
+image/hit/uihit10
+  rotate: false
+  xy: 139, 117
+  size: 124, 133
+  orig: 168, 168
+  offset: 22, 21
+  index: -1
+image/hit/uihit12
+  rotate: false
+  xy: 0, 103
+  size: 137, 147
+  orig: 168, 168
+  offset: 14, 16
+  index: -1
+image/hit/uihit14
+  rotate: false
+  xy: 0, 0
+  size: 100, 101
+  orig: 168, 168
+  offset: 7, 39
+  index: -1
+image/light_1015
+  rotate: false
+  xy: 265, 127
+  size: 125, 123
+  orig: 126, 124
+  offset: 0, 0
+  index: -1
+image/uieff_blade
+  rotate: false
+  xy: 102, 10
+  size: 33, 91
+  orig: 33, 91
+  offset: 0, 0
+  index: -1

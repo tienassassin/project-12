@@ -1,0 +1,100 @@
+{
+"skeleton": { "hash": "GSFB8x/aSYiDL/VGuGF82E/R6iQ", "spine": "3.5.35", "width": 220, "height": 312, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "zhong", "parent": "root" },
+	{ "name": "baoshi", "parent": "zhong" },
+	{ "name": "glith", "parent": "zhong", "scaleX": 2, "scaleY": 2 },
+	{ "name": "quan", "parent": "zhong" },
+	{ "name": "white", "parent": "zhong" }
+],
+"slots": [
+	{ "name": "glith", "bone": "glith", "attachment": "image/gliths/gliths_0034", "blend": "screen" },
+	{ "name": "image/white", "bone": "white", "blend": "screen" }
+],
+"skins": {
+	"default": {
+		"glith": {
+			"image/gliths/gliths_0007": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0008": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0009": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0010": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0011": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0012": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0013": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0014": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0015": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0016": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0017": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0018": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0019": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0020": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0021": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0022": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0023": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0024": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0025": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0026": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0027": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0028": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0029": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0030": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0031": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0032": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0033": { "width": 110, "height": 156 },
+			"image/gliths/gliths_0034": { "width": 110, "height": 156 }
+		},
+		"image/white": {
+			"image/white": { "width": 230, "height": 330 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"glith": {
+				"attachment": [
+					{ "time": 0.2333, "name": "image/gliths/gliths_0007" },
+					{ "time": 0.2667, "name": "image/gliths/gliths_0008" },
+					{ "time": 0.3, "name": "image/gliths/gliths_0009" },
+					{ "time": 0.3333, "name": "image/gliths/gliths_0010" },
+					{ "time": 0.3667, "name": "image/gliths/gliths_0011" },
+					{ "time": 0.4, "name": "image/gliths/gliths_0012" },
+					{ "time": 0.4333, "name": "image/gliths/gliths_0013" },
+					{ "time": 0.4667, "name": "image/gliths/gliths_0014" },
+					{ "time": 0.5, "name": "image/gliths/gliths_0015" },
+					{ "time": 0.5333, "name": "image/gliths/gliths_0016" },
+					{ "time": 0.5667, "name": "image/gliths/gliths_0017" },
+					{ "time": 0.6, "name": "image/gliths/gliths_0018" },
+					{ "time": 0.6333, "name": "image/gliths/gliths_0019" },
+					{ "time": 0.6667, "name": "image/gliths/gliths_0020" },
+					{ "time": 0.7, "name": "image/gliths/gliths_0021" },
+					{ "time": 0.7333, "name": "image/gliths/gliths_0022" },
+					{ "time": 0.7667, "name": "image/gliths/gliths_0023" },
+					{ "time": 0.8, "name": "image/gliths/gliths_0024" },
+					{ "time": 0.8333, "name": "image/gliths/gliths_0025" },
+					{ "time": 0.8667, "name": "image/gliths/gliths_0026" },
+					{ "time": 0.9, "name": "image/gliths/gliths_0027" },
+					{ "time": 0.9333, "name": "image/gliths/gliths_0028" },
+					{ "time": 0.9667, "name": "image/gliths/gliths_0029" },
+					{ "time": 1, "name": "image/gliths/gliths_0030" },
+					{ "time": 1.0333, "name": "image/gliths/gliths_0031" },
+					{ "time": 1.0667, "name": "image/gliths/gliths_0032" },
+					{ "time": 1.1, "name": "image/gliths/gliths_0033" },
+					{ "time": 1.1333, "name": "image/gliths/gliths_0034" }
+				]
+			},
+			"image/white": {
+				"color": [
+					{ "time": 0.1, "color": "ffffffff" },
+					{ "time": 0.1333, "color": "fffffffe" },
+					{ "time": 0.4, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.1, "name": "image/white" }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,104 @@
+
+uieffect_57.png
+size: 720,720
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+uieffect_57_01
+  rotate: true
+  xy: 565, 154
+  size: 299, 153
+  orig: 450, 180
+  offset: 9, 12
+  index: -1
+uieffect_57_02
+  rotate: false
+  xy: 2, 543
+  size: 296, 175
+  orig: 450, 180
+  offset: 48, 2
+  index: -1
+uieffect_57_03
+  rotate: false
+  xy: 300, 542
+  size: 277, 176
+  orig: 450, 180
+  offset: 90, 2
+  index: -1
+uieffect_57_04
+  rotate: false
+  xy: 2, 192
+  size: 270, 174
+  orig: 450, 180
+  offset: 119, 2
+  index: -1
+uieffect_57_05
+  rotate: false
+  xy: 283, 368
+  size: 280, 172
+  orig: 450, 180
+  offset: 123, 2
+  index: -1
+uieffect_57_06
+  rotate: false
+  xy: 2, 368
+  size: 279, 173
+  orig: 450, 180
+  offset: 129, 5
+  index: -1
+uieffect_57_07
+  rotate: true
+  xy: 367, 89
+  size: 277, 171
+  orig: 450, 180
+  offset: 136, 7
+  index: -1
+uieffect_57_08
+  rotate: false
+  xy: 2, 7
+  size: 270, 145
+  orig: 450, 180
+  offset: 144, 24
+  index: -1
+uieffect_57_09
+  rotate: true
+  xy: 579, 455
+  size: 263, 123
+  orig: 450, 180
+  offset: 154, 43
+  index: -1
+uieffect_57_10
+  rotate: true
+  xy: 274, 3
+  size: 149, 91
+  orig: 450, 180
+  offset: 160, 75
+  index: -1
+uieffect_57_11
+  rotate: true
+  xy: 540, 8
+  size: 144, 81
+  orig: 450, 180
+  offset: 163, 77
+  index: -1
+uieffect_57_12
+  rotate: true
+  xy: 623, 8
+  size: 144, 76
+  orig: 450, 180
+  offset: 164, 80
+  index: -1
+uieffect_57_13
+  rotate: false
+  xy: 367, 18
+  size: 140, 69
+  orig: 450, 180
+  offset: 168, 84
+  index: -1
+uieffect_57_14
+  rotate: true
+  xy: 274, 248
+  size: 118, 60
+  orig: 450, 180
+  offset: 189, 88
+  index: -1

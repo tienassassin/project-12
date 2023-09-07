@@ -1,0 +1,82 @@
+{
+"skeleton": { "hash": "oT/qw5YRgPzmph1m334T72/mVzo", "spine": "3.5.35", "width": 540, "height": 960 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "buffZX", "parent": "root", "scaleX": 3, "scaleY": 3 }
+],
+"slots": [
+	{ "name": "buff", "bone": "buffZX", "attachment": "futou/futou_0003" }
+],
+"skins": {
+	"default": {
+		"buff": {
+			"futou/futou_0003": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0005": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0007": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0009": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0011": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0013": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0015": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0017": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0019": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0021": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0023": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0025": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0027": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0029": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0031": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0033": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0035": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 },
+			"futou/futou_0037": { "x": -29.32, "y": -72.6, "width": 180, "height": 320 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"buff": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0.0667, "name": "futou/futou_0003" },
+					{ "time": 0.1333, "name": "futou/futou_0005" },
+					{ "time": 0.2, "name": "futou/futou_0007" },
+					{ "time": 0.2667, "name": "futou/futou_0009" },
+					{ "time": 0.3333, "name": "futou/futou_0011" },
+					{ "time": 0.4, "name": "futou/futou_0013" },
+					{ "time": 0.4667, "name": "futou/futou_0015" },
+					{ "time": 0.5333, "name": "futou/futou_0017" },
+					{ "time": 0.6, "name": "futou/futou_0019" },
+					{ "time": 0.6667, "name": "futou/futou_0021" },
+					{ "time": 0.7333, "name": "futou/futou_0023" },
+					{ "time": 0.8, "name": "futou/futou_0025" },
+					{ "time": 0.8667, "name": "futou/futou_0027" },
+					{ "time": 0.9333, "name": "futou/futou_0029" },
+					{ "time": 1, "name": "futou/futou_0031" },
+					{ "time": 1.0667, "name": "futou/futou_0033" },
+					{ "time": 1.1333, "name": "futou/futou_0035" },
+					{ "time": 1.2, "name": "futou/futou_0037" },
+					{ "time": 1.2667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 100 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.4, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,76 @@
+
+uieffect_172.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+box_1
+  rotate: false
+  xy: 853, 132
+  size: 110, 107
+  orig: 110, 107
+  offset: 0, 0
+  index: -1
+box_1L
+  rotate: false
+  xy: 449, 97
+  size: 142, 142
+  orig: 150, 147
+  offset: 4, 3
+  index: -1
+box_2
+  rotate: false
+  xy: 853, 23
+  size: 110, 107
+  orig: 110, 107
+  offset: 0, 0
+  index: -1
+box_2L
+  rotate: false
+  xy: 303, 95
+  size: 144, 144
+  orig: 150, 147
+  offset: 3, 2
+  index: -1
+box_3
+  rotate: false
+  xy: 593, 2
+  size: 110, 107
+  orig: 110, 107
+  offset: 0, 0
+  index: -1
+box_3L
+  rotate: false
+  xy: 154, 92
+  size: 147, 147
+  orig: 150, 147
+  offset: 2, 0
+  index: -1
+box_4
+  rotate: false
+  xy: 705, 2
+  size: 110, 107
+  orig: 110, 107
+  offset: 0, 0
+  index: -1
+box_4L
+  rotate: false
+  xy: 2, 92
+  size: 150, 147
+  orig: 150, 147
+  offset: 0, 0
+  index: -1
+glow_027
+  rotate: false
+  xy: 593, 111
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+glow_030
+  rotate: false
+  xy: 723, 111
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

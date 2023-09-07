@@ -1,0 +1,109 @@
+{
+"skeleton": { "hash": "tJ7+1grZFVzh9sNAzFmw/c6hUQM", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "ZX", "parent": "root" },
+	{ "name": "bg", "parent": "root", "y": 112.86, "scaleX": 3.33, "scaleY": 3.33 },
+	{ "name": "tx", "parent": "ZX" },
+	{ "name": "buffz", "parent": "tx" },
+	{ "name": "fz", "parent": "buffz" }
+],
+"slots": [
+	{ "name": "bg", "bone": "bg", "color": "949494ff" },
+	{ "name": "tx/zhan_wei_0000", "bone": "fz", "color": "ffffffa1", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"tx/zhan_wei_0000": {
+			"tx/zhan_wei_0000": { "x": 11.18, "y": 79.38, "scaleX": 1.91, "scaleY": 1.91, "width": 340, "height": 214 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"tx/zhan_wei_0000": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff69f7a1",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.3333,
+						"color": "f59dffa1",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.6667, "color": "ff69f7a1" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "tx/zhan_wei_0000" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6667, "x": 0, "y": 0 }
+				]
+			},
+			"ZX": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6667, "x": 0, "y": 0 }
+				]
+			},
+			"bg": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6667, "x": 0, "y": 0 }
+				]
+			},
+			"buffz": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 39.31 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.614, "y": 0.614 }
+				]
+			},
+			"fz": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -61.55 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 1.531,
+						"y": 1.531,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 1.51,
+						"y": 1.51,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.6667, "x": 1.531, "y": 1.531 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0.5667 }
+		]
+	}
+}
+}

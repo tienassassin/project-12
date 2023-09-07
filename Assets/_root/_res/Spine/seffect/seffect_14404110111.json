@@ -1,0 +1,57 @@
+{
+"skeleton": { "hash": "Va127Yn+ccivRVPmrlBtLQXYaEk", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "skill_qiu", "parent": "root", "color": "ff0900ff" }
+],
+"slots": [
+	{ "name": "skill4", "bone": "skill_qiu" }
+],
+"skins": {
+	"default": {
+		"skill4": {
+			"effects/1_00019": { "width": 134, "height": 44 },
+			"effects/1_00020": { "width": 134, "height": 44 },
+			"effects/1_00021": { "width": 134, "height": 44 },
+			"effects/1_00022": { "width": 134, "height": 44 },
+			"effects/1_00023": { "width": 134, "height": 44 },
+			"effects/1_00024": { "width": 134, "height": 44 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"skill4": {
+				"attachment": [
+					{ "time": 0, "name": "effects/1_00019" },
+					{ "time": 0.0333, "name": "effects/1_00020" },
+					{ "time": 0.0667, "name": "effects/1_00021" },
+					{ "time": 0.1, "name": "effects/1_00022" },
+					{ "time": 0.1333, "name": "effects/1_00023" },
+					{ "time": 0.1667, "name": "effects/1_00024" },
+					{ "time": 0.2, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"skill_qiu": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -147.41, "y": 0.36 }
+				],
+				"scale": [
+					{ "time": 0, "x": 5, "y": 5 }
+				]
+			},
+			"root": {
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3 }
+				]
+			}
+		}
+	}
+}
+}

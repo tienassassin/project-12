@@ -1,0 +1,496 @@
+
+uieffect_162.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bai/bai_00001
+  rotate: true
+  xy: 1826, 284
+  size: 101, 117
+  orig: 104, 120
+  offset: 1, 1
+  index: -1
+bai/bai_00002
+  rotate: false
+  xy: 1945, 268
+  size: 101, 117
+  orig: 104, 120
+  offset: 1, 1
+  index: -1
+bai/bai_00003
+  rotate: true
+  xy: 1636, 173
+  size: 101, 119
+  orig: 104, 120
+  offset: 1, 0
+  index: -1
+bai/bai_00004
+  rotate: true
+  xy: 1705, 281
+  size: 101, 119
+  orig: 104, 120
+  offset: 1, 0
+  index: -1
+bai/bai_00005
+  rotate: true
+  xy: 1791, 387
+  size: 101, 119
+  orig: 104, 120
+  offset: 1, 0
+  index: -1
+bai/bai_00006
+  rotate: true
+  xy: 1912, 387
+  size: 101, 119
+  orig: 104, 120
+  offset: 1, 0
+  index: -1
+hong/shaking1
+  rotate: false
+  xy: 595, 375
+  size: 117, 113
+  orig: 138, 130
+  offset: 11, 8
+  index: -1
+hong/shaking11
+  rotate: true
+  xy: 705, 17
+  size: 117, 113
+  orig: 138, 130
+  offset: 11, 8
+  index: -1
+hong/shaking3
+  rotate: true
+  xy: 590, 16
+  size: 117, 113
+  orig: 138, 130
+  offset: 11, 8
+  index: -1
+hong/shaking5
+  rotate: true
+  xy: 594, 136
+  size: 117, 113
+  orig: 138, 130
+  offset: 11, 8
+  index: -1
+hong/shaking7
+  rotate: true
+  xy: 706, 256
+  size: 117, 113
+  orig: 138, 130
+  offset: 11, 8
+  index: -1
+hong/shaking9
+  rotate: false
+  xy: 714, 375
+  size: 117, 113
+  orig: 138, 130
+  offset: 11, 8
+  index: -1
+saizi_bai/saizi_bai_0000
+  rotate: true
+  xy: 1894, 165
+  size: 101, 113
+  orig: 300, 260
+  offset: 99, 75
+  index: -1
+saizi_bai/saizi_bai_0001
+  rotate: false
+  xy: 1791, 57
+  size: 101, 115
+  orig: 300, 260
+  offset: 99, 73
+  index: -1
+saizi_bai/saizi_bai_0002
+  rotate: false
+  xy: 1578, 44
+  size: 102, 118
+  orig: 300, 260
+  offset: 99, 71
+  index: -1
+saizi_bai/saizi_bai_0003
+  rotate: true
+  xy: 1554, 384
+  size: 104, 117
+  orig: 300, 260
+  offset: 98, 71
+  index: -1
+saizi_bai/saizi_bai_0004
+  rotate: false
+  xy: 938, 139
+  size: 109, 116
+  orig: 300, 260
+  offset: 98, 71
+  index: -1
+saizi_bai/saizi_bai_0005
+  rotate: true
+  xy: 824, 139
+  size: 115, 112
+  orig: 300, 260
+  offset: 91, 74
+  index: -1
+saizi_bai/saizi_bai_0006
+  rotate: false
+  xy: 1154, 20
+  size: 104, 120
+  orig: 300, 260
+  offset: 98, 70
+  index: -1
+saizi_bai/saizi_bai_0007
+  rotate: false
+  xy: 934, 17
+  size: 106, 120
+  orig: 300, 260
+  offset: 98, 70
+  index: -1
+saizi_bai/saizi_bai_0008
+  rotate: false
+  xy: 1155, 261
+  size: 105, 119
+  orig: 300, 260
+  offset: 99, 70
+  index: -1
+saizi_bai/saizi_bai_0009
+  rotate: true
+  xy: 1313, 384
+  size: 104, 119
+  orig: 300, 260
+  offset: 100, 71
+  index: -1
+saizi_bai/saizi_bai_0010
+  rotate: false
+  xy: 1049, 142
+  size: 108, 116
+  orig: 300, 260
+  offset: 96, 72
+  index: -1
+saizi_bai/saizi_bai_0011
+  rotate: false
+  xy: 1192, 383
+  size: 119, 105
+  orig: 300, 260
+  offset: 92, 79
+  index: -1
+saizi_bai/saizi_bai_0012
+  rotate: true
+  xy: 1369, 267
+  size: 115, 107
+  orig: 300, 260
+  offset: 94, 76
+  index: -1
+saizi_bai/saizi_bai_0013
+  rotate: true
+  xy: 951, 381
+  size: 107, 119
+  orig: 300, 260
+  offset: 97, 71
+  index: -1
+saizi_bai/saizi_bai_0014
+  rotate: true
+  xy: 1402, 157
+  size: 108, 113
+  orig: 300, 260
+  offset: 98, 75
+  index: -1
+saizi_bai/saizi_bai_0015
+  rotate: true
+  xy: 1159, 155
+  size: 104, 120
+  orig: 300, 260
+  offset: 98, 70
+  index: -1
+saizi_bai/saizi_bai_0016
+  rotate: false
+  xy: 1471, 39
+  size: 105, 116
+  orig: 300, 260
+  offset: 99, 72
+  index: -1
+saizi_bai/saizi_bai_0017
+  rotate: true
+  xy: 1894, 57
+  size: 106, 107
+  orig: 300, 260
+  offset: 96, 75
+  index: -1
+saizi_bai/saizi_bai_0018
+  rotate: true
+  xy: 1047, 260
+  size: 119, 106
+  orig: 300, 260
+  offset: 90, 78
+  index: -1
+saizi_bai/saizi_bai_0019
+  rotate: true
+  xy: 1260, 34
+  size: 119, 104
+  orig: 300, 260
+  offset: 90, 76
+  index: -1
+saizi_bai/saizi_bai_0020
+  rotate: true
+  xy: 1281, 157
+  size: 104, 119
+  orig: 300, 260
+  offset: 99, 70
+  index: -1
+saizi_bai/saizi_bai_0021
+  rotate: false
+  xy: 1366, 36
+  size: 103, 119
+  orig: 300, 260
+  offset: 100, 70
+  index: -1
+saizi_bai/saizi_bai_0022
+  rotate: true
+  xy: 1434, 384
+  size: 104, 118
+  orig: 300, 260
+  offset: 100, 71
+  index: -1
+saizi_bai/saizi_bai_0023
+  rotate: true
+  xy: 1673, 384
+  size: 104, 116
+  orig: 300, 260
+  offset: 100, 72
+  index: -1
+saizi_bai/saizi_bai_0024
+  rotate: true
+  xy: 1517, 164
+  size: 104, 117
+  orig: 300, 260
+  offset: 98, 71
+  index: -1
+saizi_bai/saizi_bai_0025
+  rotate: false
+  xy: 1682, 59
+  size: 107, 112
+  orig: 300, 260
+  offset: 97, 74
+  index: -1
+saizi_bai/saizi_bai_0026
+  rotate: true
+  xy: 1262, 263
+  size: 118, 105
+  orig: 300, 260
+  offset: 91, 78
+  index: -1
+saizi_bai/saizi_bai_0027
+  rotate: false
+  xy: 1757, 174
+  size: 114, 105
+  orig: 300, 260
+  offset: 93, 76
+  index: -1
+saizi_bai/saizi_bai_0028
+  rotate: true
+  xy: 1072, 382
+  size: 106, 118
+  orig: 300, 260
+  offset: 97, 71
+  index: -1
+saizi_hong/hong_saizi_0000
+  rotate: true
+  xy: 1478, 270
+  size: 112, 109
+  orig: 300, 260
+  offset: 93, 77
+  index: -1
+saizi_hong/hong_saizi_0001
+  rotate: true
+  xy: 1042, 23
+  size: 114, 110
+  orig: 300, 260
+  offset: 92, 76
+  index: -1
+saizi_hong/hong_saizi_0002
+  rotate: true
+  xy: 709, 137
+  size: 117, 113
+  orig: 300, 260
+  offset: 92, 73
+  index: -1
+saizi_hong/hong_saizi_0003
+  rotate: true
+  xy: 2, 242
+  size: 121, 117
+  orig: 300, 260
+  offset: 89, 72
+  index: -1
+saizi_hong/hong_saizi_0004
+  rotate: false
+  xy: 2, 122
+  size: 118, 118
+  orig: 300, 260
+  offset: 97, 71
+  index: -1
+saizi_hong/hong_saizi_0005
+  rotate: false
+  xy: 2, 365
+  size: 118, 123
+  orig: 300, 260
+  offset: 94, 70
+  index: -1
+saizi_hong/hong_saizi_0006
+  rotate: true
+  xy: 474, 251
+  size: 118, 114
+  orig: 300, 260
+  offset: 91, 73
+  index: -1
+saizi_hong/hong_saizi_0007
+  rotate: true
+  xy: 240, 131
+  size: 118, 115
+  orig: 300, 260
+  offset: 91, 72
+  index: -1
+saizi_hong/hong_saizi_0008
+  rotate: true
+  xy: 121, 245
+  size: 118, 116
+  orig: 300, 260
+  offset: 92, 71
+  index: -1
+saizi_hong/hong_saizi_0009
+  rotate: true
+  xy: 120, 3
+  size: 117, 116
+  orig: 300, 260
+  offset: 92, 72
+  index: -1
+saizi_hong/hong_saizi_0010
+  rotate: true
+  xy: 936, 257
+  size: 117, 109
+  orig: 300, 260
+  offset: 96, 75
+  index: -1
+saizi_hong/hong_saizi_0011
+  rotate: false
+  xy: 122, 370
+  size: 116, 118
+  orig: 300, 260
+  offset: 94, 70
+  index: -1
+saizi_hong/hong_saizi_0012
+  rotate: true
+  xy: 122, 126
+  size: 117, 116
+  orig: 300, 260
+  offset: 92, 71
+  index: -1
+saizi_hong/hong_saizi_0013
+  rotate: false
+  xy: 239, 251
+  size: 116, 117
+  orig: 300, 260
+  offset: 93, 71
+  index: -1
+saizi_hong/hong_saizi_0014
+  rotate: false
+  xy: 357, 252
+  size: 115, 117
+  orig: 300, 260
+  offset: 94, 71
+  index: -1
+saizi_hong/hong_saizi_0015
+  rotate: false
+  xy: 474, 135
+  size: 118, 114
+  orig: 300, 260
+  offset: 91, 73
+  index: -1
+saizi_hong/hong_saizi_0016
+  rotate: false
+  xy: 358, 371
+  size: 115, 117
+  orig: 300, 260
+  offset: 95, 71
+  index: -1
+saizi_hong/hong_saizi_0017
+  rotate: true
+  xy: 1589, 276
+  size: 106, 114
+  orig: 300, 260
+  offset: 101, 74
+  index: -1
+saizi_hong/hong_saizi_0018
+  rotate: true
+  xy: 833, 376
+  size: 112, 116
+  orig: 300, 260
+  offset: 95, 73
+  index: -1
+saizi_hong/hong_saizi_0019
+  rotate: false
+  xy: 2, 2
+  size: 116, 118
+  orig: 300, 260
+  offset: 91, 70
+  index: -1
+saizi_hong/hong_saizi_0020
+  rotate: true
+  xy: 240, 371
+  size: 117, 116
+  orig: 300, 260
+  offset: 92, 71
+  index: -1
+saizi_hong/hong_saizi_0021
+  rotate: false
+  xy: 238, 7
+  size: 116, 117
+  orig: 300, 260
+  offset: 93, 71
+  index: -1
+saizi_hong/hong_saizi_0022
+  rotate: false
+  xy: 357, 133
+  size: 115, 117
+  orig: 300, 260
+  offset: 94, 71
+  index: -1
+saizi_hong/hong_saizi_0023
+  rotate: false
+  xy: 590, 255
+  size: 114, 117
+  orig: 300, 260
+  offset: 95, 71
+  index: -1
+saizi_hong/hong_saizi_0024
+  rotate: true
+  xy: 356, 11
+  size: 118, 115
+  orig: 300, 260
+  offset: 91, 72
+  index: -1
+saizi_hong/hong_saizi_0025
+  rotate: false
+  xy: 820, 19
+  size: 112, 116
+  orig: 300, 260
+  offset: 96, 72
+  index: -1
+saizi_hong/hong_saizi_0026
+  rotate: true
+  xy: 475, 374
+  size: 114, 118
+  orig: 300, 260
+  offset: 93, 71
+  index: -1
+saizi_hong/hong_saizi_0027
+  rotate: true
+  xy: 473, 14
+  size: 117, 115
+  orig: 300, 260
+  offset: 91, 71
+  index: -1
+saizi_hong/hong_saizi_0028
+  rotate: true
+  xy: 821, 256
+  size: 117, 113
+  orig: 300, 260
+  offset: 92, 73
+  index: -1

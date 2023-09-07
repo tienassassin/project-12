@@ -1,0 +1,69 @@
+{
+"skeleton": { "hash": "A6Z9Gyp88bvEIQ16rZLKZTTwCTo", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "tx", "parent": "root" },
+	{ "name": "attack", "parent": "tx" },
+	{ "name": "attack_qiu", "parent": "attack", "rotation": -0.59 }
+],
+"slots": [
+	{ "name": "tx/attack/qiu/qiu_35", "bone": "attack_qiu", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"tx/attack/qiu/qiu_35": {
+			"tx/attack/qiu/qiu_35": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_37": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_39": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_41": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_43": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_45": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_47": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_49": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_51": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_53": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_55": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_57": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_59": { "width": 220, "height": 220 },
+			"tx/attack/qiu/qiu_61": { "width": 220, "height": 220 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"tx/attack/qiu/qiu_35": {
+				"color": [
+					{ "time": 0, "color": "7373d9a9" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "tx/attack/qiu/qiu_35" },
+					{ "time": 0.0667, "name": "tx/attack/qiu/qiu_37" },
+					{ "time": 0.1333, "name": "tx/attack/qiu/qiu_39" },
+					{ "time": 0.2, "name": "tx/attack/qiu/qiu_41" },
+					{ "time": 0.2667, "name": "tx/attack/qiu/qiu_43" },
+					{ "time": 0.3333, "name": "tx/attack/qiu/qiu_45" },
+					{ "time": 0.4, "name": "tx/attack/qiu/qiu_47" },
+					{ "time": 0.4667, "name": "tx/attack/qiu/qiu_49" },
+					{ "time": 0.5333, "name": "tx/attack/qiu/qiu_51" },
+					{ "time": 0.6, "name": "tx/attack/qiu/qiu_53" },
+					{ "time": 0.6667, "name": "tx/attack/qiu/qiu_55" },
+					{ "time": 0.7333, "name": "tx/attack/qiu/qiu_57" },
+					{ "time": 0.8, "name": "tx/attack/qiu/qiu_59" },
+					{ "time": 0.8667, "name": "tx/attack/qiu/qiu_61" }
+				]
+			}
+		},
+		"bones": {
+			"attack_qiu": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 22.97 }
+				],
+				"scale": [
+					{ "time": 0, "x": 5, "y": 5 }
+				]
+			}
+		}
+	}
+}
+}

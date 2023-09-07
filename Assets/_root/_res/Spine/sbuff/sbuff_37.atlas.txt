@@ -1,0 +1,76 @@
+
+sbuff_37.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tx/Buff/chiban_huo/chiban_huo_0000
+  rotate: false
+  xy: 1576, 246
+  size: 319, 213
+  orig: 322, 228
+  offset: 3, 10
+  index: -1
+tx/Buff/chiban_huo/chiban_huo_0002
+  rotate: false
+  xy: 1258, 242
+  size: 316, 217
+  orig: 322, 228
+  offset: 3, 7
+  index: -1
+tx/Buff/chiban_huo/chiban_huo_0004
+  rotate: false
+  xy: 2, 2
+  size: 316, 227
+  orig: 322, 228
+  offset: 6, 0
+  index: -1
+tx/Buff/chiban_huo/chiban_huo_0006
+  rotate: false
+  xy: 2, 231
+  size: 317, 228
+  orig: 322, 228
+  offset: 5, 0
+  index: -1
+tx/Buff/chiban_huo/chiban_huo_0008
+  rotate: false
+  xy: 637, 231
+  size: 310, 228
+  orig: 322, 228
+  offset: 12, 0
+  index: -1
+tx/Buff/chiban_huo/chiban_huo_0010
+  rotate: false
+  xy: 949, 231
+  size: 307, 228
+  orig: 322, 228
+  offset: 15, 0
+  index: -1
+tx/Buff/chiban_huo/chiban_huo_0012
+  rotate: false
+  xy: 321, 231
+  size: 314, 228
+  orig: 322, 228
+  offset: 8, 0
+  index: -1
+tx/Buff/chiban_huo/chiban_huo_0014
+  rotate: false
+  xy: 320, 7
+  size: 314, 222
+  orig: 322, 228
+  offset: 8, 6
+  index: -1
+tx/Buff/chiban_huo/chiban_huo_0016
+  rotate: false
+  xy: 636, 8
+  size: 314, 221
+  orig: 322, 228
+  offset: 8, 7
+  index: -1
+tx/Buff/chiban_huo/chiban_huo_0018
+  rotate: false
+  xy: 952, 10
+  size: 314, 219
+  orig: 322, 228
+  offset: 8, 9
+  index: -1

@@ -1,0 +1,79 @@
+{
+"skeleton": { "hash": "op4iyv95t8hAH2nGaNNCsGYUZ9I", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "dazhao", "parent": "root" },
+	{ "name": "sheji", "parent": "dazhao", "scaleX": 2.5, "scaleY": 2.5 }
+],
+"slots": [
+	{ "name": "sheji", "bone": "sheji" }
+],
+"skins": {
+	"default": {
+		"sheji": {
+			"texiao/sheji_00": { "width": 225, "height": 200 },
+			"texiao/sheji_02": { "width": 225, "height": 200 },
+			"texiao/sheji_04": { "width": 225, "height": 200 },
+			"texiao/sheji_06": { "width": 225, "height": 200 },
+			"texiao/sheji_08": { "width": 225, "height": 200 },
+			"texiao/sheji_10": { "width": 225, "height": 200 },
+			"texiao/sheji_12": { "width": 225, "height": 200 },
+			"texiao/sheji_14": { "width": 225, "height": 200 },
+			"texiao/sheji_16": { "width": 225, "height": 200 },
+			"texiao/sheji_18": { "width": 225, "height": 200 },
+			"texiao/sheji_20": { "width": 225, "height": 200 },
+			"texiao/sheji_22": { "width": 225, "height": 200 },
+			"texiao/sheji_24": { "width": 225, "height": 200 },
+			"texiao/sheji_26": { "width": 225, "height": 200 },
+			"texiao/sheji_28": { "width": 225, "height": 200 },
+			"texiao/sheji_30": { "width": 225, "height": 200 },
+			"texiao/sheji_32": { "width": 225, "height": 200 },
+			"texiao/sheji_34": { "width": 225, "height": 200 },
+			"texiao/sheji_36": { "width": 225, "height": 200 },
+			"texiao/sheji_38": { "width": 225, "height": 200 },
+			"texiao/sheji_40": { "width": 225, "height": 200 },
+			"texiao/sheji_42": { "width": 225, "height": 200 },
+			"texiao/sheji_44": { "width": 225, "height": 200 },
+			"texiao/sheji_46": { "width": 225, "height": 200 },
+			"texiao/sheji_48": { "width": 225, "height": 200 },
+			"texiao/sheji_50": { "width": 225, "height": 200 },
+			"texiao/sheji_52": { "width": 225, "height": 200 },
+			"texiao/sheji_54": { "width": 225, "height": 200 },
+			"texiao/sheji_56": { "width": 225, "height": 200 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"sheji": {
+				"attachment": [
+					{ "time": 0, "name": "texiao/sheji_26" },
+					{ "time": 0.0333, "name": "texiao/sheji_28" },
+					{ "time": 0.0667, "name": "texiao/sheji_30" },
+					{ "time": 0.1, "name": "texiao/sheji_32" },
+					{ "time": 0.1333, "name": "texiao/sheji_34" }
+				]
+			}
+		},
+		"bones": {
+			"sheji": {
+				"rotate": [
+					{ "time": 0, "angle": -37.22 }
+				],
+				"translate": [
+					{ "time": 0, "x": 116.36, "y": -30.92 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -11.6 }
+				]
+			}
+		}
+	}
+}
+}

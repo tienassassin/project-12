@@ -1,0 +1,27 @@
+
+uieffect_24.png
+size: 2048,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/line_glow
+  rotate: false
+  xy: 926, 10
+  size: 256, 47
+  orig: 256, 64
+  offset: 0, 10
+  index: -1
+images/uieffect_24 (1)
+  rotate: false
+  xy: 2, 2
+  size: 460, 55
+  orig: 460, 55
+  offset: 0, 0
+  index: -1
+images/uieffect_24 (2)
+  rotate: false
+  xy: 464, 2
+  size: 460, 55
+  orig: 460, 55
+  offset: 0, 0
+  index: -1

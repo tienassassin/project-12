@@ -1,0 +1,151 @@
+{
+"skeleton": { "hash": "FTNMyKIPrduYgwZWDiPFJydWulU", "spine": "3.5.35", "width": 180, "height": 313, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "y": 27.83 },
+	{ "name": "bone2", "parent": "root", "y": -22.42, "scaleX": 2.2, "scaleY": 2.2 },
+	{ "name": "bone3", "parent": "root" },
+	{ "name": "bone4", "parent": "root" }
+],
+"slots": [
+	{ "name": "images/guild_red_1", "bone": "bone4", "attachment": "images/guild_red_1" },
+	{ "name": "images/df86693f02", "bone": "bone", "blend": "additive" },
+	{ "name": "images/red_partc_00", "bone": "bone2", "blend": "additive" },
+	{ "name": "images/guild_red_2", "bone": "bone3", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"images/df86693f02": {
+			"images/df86693f02": { "width": 256, "height": 256 }
+		},
+		"images/guild_red_1": {
+			"images/guild_red_1": { "width": 180, "height": 313 }
+		},
+		"images/guild_red_2": {
+			"images/guild_red_2": { "width": 195, "height": 279 }
+		},
+		"images/red_partc_00": {
+			"images/red_partc_00": { "width": 360, "height": 640 },
+			"images/red_partc_01": { "width": 360, "height": 640 },
+			"images/red_partc_02": { "width": 360, "height": 640 },
+			"images/red_partc_03": { "width": 360, "height": 640 },
+			"images/red_partc_04": { "width": 360, "height": 640 },
+			"images/red_partc_05": { "width": 360, "height": 640 },
+			"images/red_partc_06": { "width": 360, "height": 640 },
+			"images/red_partc_07": { "width": 360, "height": 640 },
+			"images/red_partc_08": { "width": 360, "height": 640 },
+			"images/red_partc_09": { "width": 360, "height": 640 },
+			"images/red_partc_10": { "width": 360, "height": 640 },
+			"images/red_partc_11": { "width": 360, "height": 640 },
+			"images/red_partc_12": { "width": 360, "height": 640 },
+			"images/red_partc_13": { "width": 360, "height": 640 },
+			"images/red_partc_14": { "width": 360, "height": 640 },
+			"images/red_partc_15": { "width": 360, "height": 640 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"images/df86693f02": {
+				"color": [
+					{
+						"time": 0.2333,
+						"color": "ffffffff",
+						"curve": [ 0.481, 0.22, 0.454, 0.74 ]
+					},
+					{ "time": 0.4667, "color": "ffffff2d" }
+				],
+				"attachment": [
+					{ "time": 0.1333, "name": "images/df86693f02" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"images/guild_red_1": {
+				"color": [
+					{ "time": 0, "color": "ffffff4c" },
+					{ "time": 0.1, "color": "ffffffff" }
+				]
+			},
+			"images/guild_red_2": {
+				"color": [
+					{
+						"time": 0.1,
+						"color": "ffffffff",
+						"curve": [ 0.481, 0.22, 0.454, 0.74 ]
+					},
+					{ "time": 0.3, "color": "ffffff12" }
+				],
+				"attachment": [
+					{ "time": 0.1, "name": "images/guild_red_2" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"images/red_partc_00": {
+				"attachment": [
+					{ "time": 0.1667, "name": "images/red_partc_00" },
+					{ "time": 0.2, "name": "images/red_partc_01" },
+					{ "time": 0.2333, "name": "images/red_partc_02" },
+					{ "time": 0.2667, "name": "images/red_partc_03" },
+					{ "time": 0.3, "name": "images/red_partc_04" },
+					{ "time": 0.3667, "name": "images/red_partc_05" },
+					{ "time": 0.4, "name": "images/red_partc_07" },
+					{ "time": 0.4333, "name": "images/red_partc_08" },
+					{ "time": 0.4667, "name": "images/red_partc_09" },
+					{ "time": 0.5, "name": "images/red_partc_10" },
+					{ "time": 0.5333, "name": "images/red_partc_11" },
+					{ "time": 0.5667, "name": "images/red_partc_12" },
+					{ "time": 0.6, "name": "images/red_partc_13" },
+					{ "time": 0.6333, "name": "images/red_partc_14" },
+					{ "time": 0.6667, "name": "images/red_partc_15" },
+					{ "time": 0.7, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone4": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 0.4,
+						"y": 0.4,
+						"curve": [ 0.011, 0.39, 0.461, 0.91 ]
+					},
+					{
+						"time": 0.1,
+						"x": 1.1,
+						"y": 1.1,
+						"curve": [ 0.481, 0.22, 0.454, 0.74 ]
+					},
+					{ "time": 0.1667, "x": 1, "y": 1 }
+				]
+			},
+			"bone3": {
+				"scale": [
+					{
+						"time": 0.1,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.011, 0.39, 0.461, 0.91 ]
+					},
+					{ "time": 0.3, "x": 1.4, "y": 1.4 }
+				]
+			},
+			"bone": {
+				"scale": [
+					{
+						"time": 0.1333,
+						"x": 0.4,
+						"y": 0.4,
+						"curve": [ 0.011, 0.39, 0.461, 0.91 ]
+					},
+					{ "time": 0.4667, "x": 1.6, "y": 1.6 }
+				]
+			}
+		}
+	}
+}
+}

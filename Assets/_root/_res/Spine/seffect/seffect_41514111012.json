@@ -1,0 +1,375 @@
+{
+"skeleton": { "hash": "+6nrF5Y5TZxelStLJ+L0+WZmFEk", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root", "scaleX": 1.25, "scaleY": 1.25 },
+	{ "name": "ZX", "parent": "root" },
+	{ "name": "bg", "parent": "root", "y": 112.86, "scaleX": 3.33, "scaleY": 3.33 },
+	{ "name": "tx", "parent": "ZX" },
+	{ "name": "bone370", "parent": "tx", "x": 841.34, "y": 420.58 },
+	{ "name": "skill", "parent": "tx" },
+	{ "name": "down_light", "parent": "skill", "scaleX": 3, "scaleY": 3 },
+	{ "name": "kuo", "parent": "skill", "scaleX": 1.56, "scaleY": 1.56 },
+	{ "name": "rot——wind", "parent": "skill", "scaleX": 2, "scaleY": 2 },
+	{ "name": "wind", "parent": "skill", "scaleX": 2, "scaleY": 2 },
+	{ "name": "yizi", "parent": "skill", "scaleX": 1.25, "scaleY": 1.25 }
+],
+"slots": [
+	{ "name": "bg", "bone": "bg", "color": "949494ff" },
+	{ "name": "wangzuo2", "bone": "bone370" },
+	{ "name": "wangzuo_02", "bone": "bone370" },
+	{ "name": "bone370", "bone": "bone370" },
+	{ "name": "wind", "bone": "wind", "blend": "additive" },
+	{ "name": "down——light", "bone": "down_light", "blend": "additive" },
+	{ "name": "kuo", "bone": "kuo" },
+	{ "name": "rot_wind", "bone": "rot——wind", "blend": "additive" },
+	{ "name": "yizi", "bone": "yizi", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"bone370": {
+			"wangzuo_lie01": {
+				"type": "mesh",
+				"uvs": [ 0, 0.98932, 0.51432, 1, 0.84897, 0.94146, 1, 0.25875, 1, 0.1774, 0.68821, 0.08648, 0.69805, 0, 0.55697, 0, 0.3109, 0.68465, 0.03202, 0.83299, 0, 0.89999 ],
+				"triangles": [ 5, 7, 6, 5, 4, 3, 8, 7, 5, 3, 8, 5, 2, 8, 3, 0, 10, 9, 1, 8, 2, 9, 8, 1, 0, 9, 1 ],
+				"vertices": [ -109.04, -281.01, 44.74, -287.58, 144.81, -251.58, 189.96, 168.28, 189.96, 218.32, 96.74, 274.23, 99.68, 327.42, 57.5, 327.42, -16.08, -93.64, -99.46, -184.88, -109.04, -226.08 ],
+				"hull": 11
+			}
+		},
+		"down——light": {
+			"tx/出现/down_light/down_light_0000": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0002": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0004": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0006": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0008": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0010": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0012": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0014": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0016": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0018": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0020": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0022": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0024": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0026": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0028": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0030": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0032": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0034": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0036": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0038": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0040": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0042": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0044": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0046": { "width": 345, "height": 137 },
+			"tx/出现/down_light/down_light_0048": { "width": 345, "height": 137 }
+		},
+		"kuo": {
+			"tx/出现/kuo_shan/kuo_shan_0009": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0011": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0013": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0015": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0017": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0019": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0021": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0023": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0025": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0027": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0029": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0031": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0033": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0035": { "width": 444, "height": 201 },
+			"tx/出现/kuo_shan/kuo_shan_0037": { "width": 444, "height": 201 }
+		},
+		"rot_wind": {
+			"tx/出现/rot_wind/rot_wind_0012": { "width": 204, "height": 252 },
+			"tx/出现/rot_wind/rot_wind_0014": { "width": 204, "height": 252 },
+			"tx/出现/rot_wind/rot_wind_0016": { "width": 204, "height": 252 },
+			"tx/出现/rot_wind/rot_wind_0018": { "width": 204, "height": 252 },
+			"tx/出现/rot_wind/rot_wind_0020": { "width": 204, "height": 252 },
+			"tx/出现/rot_wind/rot_wind_0022": { "width": 204, "height": 252 },
+			"tx/出现/rot_wind/rot_wind_0024": { "width": 204, "height": 252 },
+			"tx/出现/rot_wind/rot_wind_0026": { "width": 204, "height": 252 }
+		},
+		"wangzuo2": {
+			"wangzuo": {
+				"type": "mesh",
+				"uvs": [ 0, 0.70232, 0, 1, 1, 1, 1, 0.17228, 0.70874, 0.07228, 0.66289, 0, 0.57119, 3.2E-4, 0.55744, 0.11322, 0.48178, 0.11322, 0.3534, 0.17154, 0.27008, 0.17, 0.28134, 0.67715 ],
+				"triangles": [ 11, 10, 9, 1, 0, 11, 7, 4, 3, 7, 6, 5, 5, 4, 7, 7, 3, 11, 9, 8, 7, 7, 11, 9, 3, 2, 11, 1, 11, 2 ],
+				"vertices": [ -203.34, -86.32, -203.34, -270.58, 131.66, -270.58, 131.66, 241.78, 34.09, 303.67, 18.73, 348.42, -11.99, 348.22, -16.6, 278.33, -41.94, 278.33, -84.95, 242.23, -112.86, 243.18, -109.09, -70.74 ],
+				"hull": 12
+			}
+		},
+		"wangzuo_02": {
+			"wangzuo_02": {
+				"type": "mesh",
+				"uvs": [ 0.64296, 0, 0.81598, 0, 0.9169, 0.19312, 1, 0.30401, 1, 0.50576, 0.97076, 0.69434, 0.80135, 0.93483, 0.55265, 1, 0.15976, 1, 0, 0.83997, 0, 0.72507, 0.39766, 0.69567, 0.24561, 0.19197, 0.6628, 0.09594 ],
+				"triangles": [ 13, 0, 1, 13, 1, 2, 2, 3, 4, 13, 2, 4, 11, 12, 13, 9, 10, 11, 4, 11, 13, 4, 6, 11, 5, 6, 4, 8, 9, 11, 7, 11, 6, 8, 11, 7 ],
+				"vertices": [ -102.37, 337.42, -63.44, 337.42, -40.73, 220.19, -22.04, 152.88, -22.04, 30.42, -28.62, -84.05, -66.73, -230.03, -122.69, -269.58, -211.09, -269.58, -247.04, -172.45, -247.04, -102.7, -157.56, -84.86, -191.77, 220.89, -97.91, 279.18 ],
+				"hull": 14
+			}
+		},
+		"wind": {
+			"tx/出现/Wind/Wind_0011": { "width": 345, "height": 215 },
+			"tx/出现/Wind/Wind_0012": { "width": 345, "height": 215 },
+			"tx/出现/Wind/Wind_0014": { "width": 345, "height": 215 },
+			"tx/出现/Wind/Wind_0015": { "width": 345, "height": 215 },
+			"tx/出现/Wind/Wind_0017": { "width": 345, "height": 215 },
+			"tx/出现/Wind/Wind_0018": { "width": 345, "height": 215 }
+		},
+		"yizi": {
+			"tx/出现/yizi/yizi_0004": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0005": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0007": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0009": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0011": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0015": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0017": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0019": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0021": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0023": { "width": 337, "height": 498 },
+			"tx/出现/yizi/yizi_0029": { "width": 337, "height": 498 }
+		}
+	}
+},
+"events": {
+	"qishou_11_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"bone370": {
+				"color": [
+					{ "time": 1.3333, "color": "ffffffff" },
+					{ "time": 1.6667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.5333, "name": "wangzuo_lie01" }
+				]
+			},
+			"down——light": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.5, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "tx/出现/down_light/down_light_0000" },
+					{ "time": 0.0667, "name": "tx/出现/down_light/down_light_0002" },
+					{ "time": 0.1333, "name": "tx/出现/down_light/down_light_0004" },
+					{ "time": 0.2, "name": "tx/出现/down_light/down_light_0006" },
+					{ "time": 0.2667, "name": "tx/出现/down_light/down_light_0008" },
+					{ "time": 0.3333, "name": "tx/出现/down_light/down_light_0010" },
+					{ "time": 0.4, "name": "tx/出现/down_light/down_light_0012" },
+					{ "time": 0.4667, "name": "tx/出现/down_light/down_light_0014" },
+					{ "time": 0.5333, "name": "tx/出现/down_light/down_light_0016" },
+					{ "time": 0.6, "name": "tx/出现/down_light/down_light_0018" },
+					{ "time": 0.6667, "name": "tx/出现/down_light/down_light_0020" },
+					{ "time": 0.7333, "name": "tx/出现/down_light/down_light_0022" },
+					{ "time": 0.8, "name": "tx/出现/down_light/down_light_0024" },
+					{ "time": 0.8667, "name": "tx/出现/down_light/down_light_0026" },
+					{ "time": 0.9333, "name": "tx/出现/down_light/down_light_0028" },
+					{ "time": 1, "name": "tx/出现/down_light/down_light_0030" },
+					{ "time": 1.0667, "name": "tx/出现/down_light/down_light_0032" },
+					{ "time": 1.1333, "name": "tx/出现/down_light/down_light_0034" },
+					{ "time": 1.2, "name": "tx/出现/down_light/down_light_0036" },
+					{ "time": 1.2667, "name": "tx/出现/down_light/down_light_0038" },
+					{ "time": 1.3333, "name": "tx/出现/down_light/down_light_0040" },
+					{ "time": 1.4, "name": "tx/出现/down_light/down_light_0042" },
+					{ "time": 1.4667, "name": "tx/出现/down_light/down_light_0044" },
+					{ "time": 1.5333, "name": "tx/出现/down_light/down_light_0046" },
+					{ "time": 1.6, "name": "tx/出现/down_light/down_light_0048" },
+					{ "time": 1.6667, "name": null }
+				]
+			},
+			"kuo": {
+				"attachment": [
+					{ "time": 0.5333, "name": "tx/出现/kuo_shan/kuo_shan_0009" },
+					{ "time": 0.6, "name": "tx/出现/kuo_shan/kuo_shan_0011" },
+					{ "time": 0.6667, "name": "tx/出现/kuo_shan/kuo_shan_0013" },
+					{ "time": 0.7333, "name": "tx/出现/kuo_shan/kuo_shan_0015" },
+					{ "time": 0.7667, "name": "tx/出现/kuo_shan/kuo_shan_0017" },
+					{ "time": 0.8333, "name": "tx/出现/kuo_shan/kuo_shan_0019" },
+					{ "time": 0.9, "name": "tx/出现/kuo_shan/kuo_shan_0021" },
+					{ "time": 0.9667, "name": "tx/出现/kuo_shan/kuo_shan_0023" },
+					{ "time": 1.0333, "name": "tx/出现/kuo_shan/kuo_shan_0025" },
+					{ "time": 1.1, "name": "tx/出现/kuo_shan/kuo_shan_0027" },
+					{ "time": 1.1667, "name": "tx/出现/kuo_shan/kuo_shan_0029" },
+					{ "time": 1.2333, "name": "tx/出现/kuo_shan/kuo_shan_0031" },
+					{ "time": 1.3, "name": "tx/出现/kuo_shan/kuo_shan_0033" },
+					{ "time": 1.3333, "name": "tx/出现/kuo_shan/kuo_shan_0035" },
+					{ "time": 1.4, "name": "tx/出现/kuo_shan/kuo_shan_0037" },
+					{ "time": 1.4333, "name": null },
+					{ "time": 1.6667, "name": null }
+				]
+			},
+			"rot_wind": {
+				"color": [
+					{ "time": 1.1333, "color": "ffffffff" },
+					{ "time": 1.4667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.5667, "name": "tx/出现/rot_wind/rot_wind_0012" },
+					{ "time": 0.6333, "name": "tx/出现/rot_wind/rot_wind_0014" },
+					{ "time": 0.7, "name": "tx/出现/rot_wind/rot_wind_0016" },
+					{ "time": 0.7667, "name": "tx/出现/rot_wind/rot_wind_0018" },
+					{ "time": 0.8333, "name": "tx/出现/rot_wind/rot_wind_0020" },
+					{ "time": 0.8667, "name": "tx/出现/rot_wind/rot_wind_0022" },
+					{ "time": 0.9333, "name": "tx/出现/rot_wind/rot_wind_0024" },
+					{ "time": 1, "name": "tx/出现/rot_wind/rot_wind_0026" },
+					{ "time": 1.0333, "name": "tx/出现/rot_wind/rot_wind_0012" },
+					{ "time": 1.1, "name": "tx/出现/rot_wind/rot_wind_0014" },
+					{ "time": 1.1667, "name": "tx/出现/rot_wind/rot_wind_0016" },
+					{ "time": 1.2333, "name": "tx/出现/rot_wind/rot_wind_0018" },
+					{ "time": 1.3, "name": "tx/出现/rot_wind/rot_wind_0020" },
+					{ "time": 1.3667, "name": "tx/出现/rot_wind/rot_wind_0022" },
+					{ "time": 1.4, "name": "tx/出现/rot_wind/rot_wind_0024" },
+					{ "time": 1.4667, "name": "tx/出现/rot_wind/rot_wind_0026" }
+				]
+			},
+			"wangzuo2": {
+				"attachment": [
+					{ "time": 0.4667, "name": "wangzuo" },
+					{ "time": 0.5333, "name": null }
+				]
+			},
+			"wangzuo_02": {
+				"color": [
+					{ "time": 1.3333, "color": "ffffffff" },
+					{ "time": 1.6667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5333, "name": "wangzuo_02" }
+				]
+			},
+			"wind": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.5333, "name": "tx/出现/Wind/Wind_0011" },
+					{ "time": 0.6, "name": "tx/出现/Wind/Wind_0012" },
+					{ "time": 0.6667, "name": "tx/出现/Wind/Wind_0014" },
+					{ "time": 0.7333, "name": "tx/出现/Wind/Wind_0015" },
+					{ "time": 0.8, "name": "tx/出现/Wind/Wind_0017" },
+					{ "time": 0.8667, "name": "tx/出现/Wind/Wind_0018" },
+					{ "time": 0.9, "name": null }
+				]
+			},
+			"yizi": {
+				"color": [
+					{ "time": 0.4667, "color": "ffffffff" },
+					{ "time": 0.5333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.1333, "name": "tx/出现/yizi/yizi_0004" },
+					{ "time": 0.1667, "name": "tx/出现/yizi/yizi_0005" },
+					{ "time": 0.2, "name": "tx/出现/yizi/yizi_0007" },
+					{ "time": 0.2333, "name": "tx/出现/yizi/yizi_0009" },
+					{ "time": 0.2667, "name": "tx/出现/yizi/yizi_0011" },
+					{ "time": 0.3, "name": "tx/出现/yizi/yizi_0015" },
+					{ "time": 0.3333, "name": "tx/出现/yizi/yizi_0017" },
+					{ "time": 0.3667, "name": "tx/出现/yizi/yizi_0019" },
+					{ "time": 0.4, "name": "tx/出现/yizi/yizi_0021" },
+					{ "time": 0.4333, "name": "tx/出现/yizi/yizi_0023" },
+					{ "time": 0.4667, "name": "tx/出现/yizi/yizi_0029" }
+				]
+			}
+		},
+		"bones": {
+			"bg": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.4667, "angle": 0, "curve": "stepped" },
+					{ "time": 1.2, "angle": 0, "curve": "stepped" },
+					{ "time": 1.5, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.4667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.2, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.5, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 1.2, "x": 1, "y": 1 }
+				],
+				"shear": [
+					{ "time": 1.2, "x": 0, "y": 0 }
+				]
+			},
+			"bone370": {
+				"translate": [
+					{ "time": 0.4667, "x": -167.19, "y": 694.01 },
+					{ "time": 0.5333, "x": -167.19, "y": -154.2 }
+				],
+				"scale": [
+					{ "time": 0.4667, "x": 1.366, "y": 1.366 }
+				]
+			},
+			"down_light": {
+				"translate": [
+					{ "time": 0, "x": 664.52, "y": 1386.42, "curve": "stepped" },
+					{ "time": 1.0667, "x": 664.52, "y": 1386.42 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.07, "y": 2.07 }
+				]
+			},
+			"wind": {
+				"translate": [
+					{ "time": 0.5333, "x": 394.27, "y": -181.41 }
+				],
+				"scale": [
+					{ "time": 0.5333, "x": 4.295, "y": 4.295 }
+				]
+			},
+			"yizi": {
+				"translate": [
+					{ "time": 0.1333, "x": 574.1, "y": 2118.21 },
+					{ "time": 0.4667, "x": 574.1, "y": 1252.28 },
+					{ "time": 0.5333, "x": 574.1, "y": 404.07 }
+				],
+				"scale": [
+					{ "time": 0.1333, "x": 2, "y": 2 }
+				]
+			},
+			"kuo": {
+				"translate": [
+					{ "time": 0.5333, "x": 642.38, "y": -5.4 }
+				],
+				"scale": [
+					{ "time": 0.5333, "x": 4.411, "y": 4.411 }
+				]
+			},
+			"rot——wind": {
+				"rotate": [
+					{ "time": 0.7667, "angle": -1.2 }
+				],
+				"translate": [
+					{ "time": 0.5667, "x": 643.06, "y": 193.01 }
+				],
+				"scale": [
+					{ "time": 0.5667, "x": 2.238, "y": 2.238 }
+				]
+			},
+			"ZX": {
+				"translate": [
+					{ "time": 0, "x": -629.39, "y": 0 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 },
+			{ "time": 0.1667 },
+			{
+				"time": 0.6667,
+				"offsets": [
+					{ "slot": "kuo", "offset": -5 }
+				]
+			}
+		],
+		"events": [
+			{ "time": 0.6667, "name": "qishou_11_1_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,48 @@
+
+uieffect_58.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/banz_bg
+  rotate: false
+  xy: 2, 123
+  size: 282, 126
+  orig: 282, 126
+  offset: 0, 0
+  index: -1
+images/banz_bg2
+  rotate: false
+  xy: 630, 120
+  size: 238, 129
+  orig: 238, 129
+  offset: 0, 0
+  index: -1
+images/glow_line
+  rotate: false
+  xy: 286, 57
+  size: 240, 135
+  orig: 240, 135
+  offset: 0, 0
+  index: -1
+images/glow_line_reblack
+  rotate: false
+  xy: 286, 194
+  size: 342, 55
+  orig: 342, 55
+  offset: 0, 0
+  index: -1
+images/zhanl_1
+  rotate: false
+  xy: 2, 47
+  size: 277, 74
+  orig: 277, 74
+  offset: 0, 0
+  index: -1
+images/zhanl_2
+  rotate: true
+  xy: 528, 2
+  size: 190, 68
+  orig: 190, 68
+  offset: 0, 0
+  index: -1

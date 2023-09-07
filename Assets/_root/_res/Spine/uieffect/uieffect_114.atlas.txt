@@ -1,0 +1,482 @@
+
+uieffect_114.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Texture/book
+  rotate: true
+  xy: 1402, 879
+  size: 330, 140
+  orig: 343, 146
+  offset: 7, 2
+  index: -1
+Texture/eyes_1
+  rotate: false
+  xy: 629, 25
+  size: 106, 64
+  orig: 120, 68
+  offset: 8, 4
+  index: -1
+Texture/eyes_2
+  rotate: false
+  xy: 1373, 637
+  size: 102, 61
+  orig: 120, 68
+  offset: 8, 4
+  index: -1
+Texture/eyes_3
+  rotate: false
+  xy: 1261, 639
+  size: 110, 59
+  orig: 120, 68
+  offset: 6, 4
+  index: -1
+Texture/light01/light_0101
+  rotate: true
+  xy: 1402, 822
+  size: 55, 61
+  orig: 268, 500
+  offset: 174, 81
+  index: -1
+Texture/light01/light_0102
+  rotate: true
+  xy: 601, 256
+  size: 83, 118
+  orig: 268, 500
+  offset: 146, 81
+  index: -1
+Texture/light01/light_0103
+  rotate: true
+  xy: 622, 412
+  size: 133, 174
+  orig: 268, 500
+  offset: 96, 81
+  index: -1
+Texture/light01/light_0104
+  rotate: false
+  xy: 609, 547
+  size: 173, 216
+  orig: 268, 500
+  offset: 56, 81
+  index: -1
+Texture/light01/light_0105
+  rotate: true
+  xy: 320, 513
+  size: 216, 287
+  orig: 268, 500
+  offset: 13, 81
+  index: -1
+Texture/light01/light_0106
+  rotate: false
+  xy: 1021, 803
+  size: 224, 381
+  orig: 268, 500
+  offset: 5, 81
+  index: -1
+Texture/light01/light_0107
+  rotate: false
+  xy: 795, 781
+  size: 224, 394
+  orig: 268, 500
+  offset: 5, 81
+  index: -1
+Texture/light01/light_0108
+  rotate: false
+  xy: 320, 731
+  size: 224, 401
+  orig: 268, 500
+  offset: 5, 81
+  index: -1
+Texture/light01/light_0109
+  rotate: false
+  xy: 546, 765
+  size: 247, 401
+  orig: 268, 500
+  offset: 5, 81
+  index: -1
+Texture/light01/light_0110
+  rotate: false
+  xy: 480, 1168
+  size: 260, 401
+  orig: 268, 500
+  offset: 5, 81
+  index: -1
+Texture/light01/light_0111
+  rotate: false
+  xy: 742, 1177
+  size: 260, 401
+  orig: 268, 500
+  offset: 5, 81
+  index: -1
+Texture/light01/light_0112
+  rotate: false
+  xy: 1004, 1186
+  size: 260, 401
+  orig: 268, 500
+  offset: 5, 81
+  index: -1
+Texture/light01/light_0113
+  rotate: false
+  xy: 1266, 1211
+  size: 260, 401
+  orig: 268, 500
+  offset: 5, 81
+  index: -1
+Texture/light01/light_0114
+  rotate: false
+  xy: 1528, 1219
+  size: 260, 401
+  orig: 268, 500
+  offset: 5, 81
+  index: -1
+Texture/light01/light_0115
+  rotate: true
+  xy: 1521, 1622
+  size: 260, 409
+  orig: 268, 500
+  offset: 5, 73
+  index: -1
+Texture/light01/light_0116
+  rotate: false
+  xy: 1259, 1614
+  size: 260, 428
+  orig: 268, 500
+  offset: 5, 54
+  index: -1
+Texture/light01/light_0117
+  rotate: false
+  xy: 997, 1589
+  size: 260, 453
+  orig: 268, 500
+  offset: 5, 29
+  index: -1
+Texture/light01/light_0118
+  rotate: false
+  xy: 735, 1580
+  size: 260, 462
+  orig: 268, 500
+  offset: 5, 20
+  index: -1
+Texture/light01/light_0119
+  rotate: false
+  xy: 473, 1571
+  size: 260, 471
+  orig: 268, 500
+  offset: 5, 11
+  index: -1
+Texture/light01/light_0120
+  rotate: false
+  xy: 211, 1547
+  size: 260, 495
+  orig: 268, 500
+  offset: 5, 3
+  index: -1
+Texture/light02/light_0201
+  rotate: false
+  xy: 629, 91
+  size: 73, 99
+  orig: 230, 637
+  offset: 70, 28
+  index: -1
+Texture/light02/light_0202
+  rotate: false
+  xy: 547, 20
+  size: 80, 125
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0203
+  rotate: false
+  xy: 798, 439
+  size: 84, 151
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0204
+  rotate: false
+  xy: 1949, 1285
+  size: 91, 178
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0205
+  rotate: true
+  xy: 795, 681
+  size: 98, 204
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0206
+  rotate: false
+  xy: 1932, 1652
+  size: 107, 230
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0207
+  rotate: false
+  xy: 1931, 979
+  size: 115, 253
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0208
+  rotate: true
+  xy: 271, 20
+  size: 125, 274
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0209
+  rotate: false
+  xy: 160, 250
+  size: 133, 296
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0210
+  rotate: false
+  xy: 1544, 900
+  size: 141, 317
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0211
+  rotate: false
+  xy: 0, 3
+  size: 148, 339
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0212
+  rotate: false
+  xy: 1247, 822
+  size: 153, 362
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0213
+  rotate: false
+  xy: 1790, 1234
+  size: 157, 386
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0214
+  rotate: false
+  xy: 320, 1134
+  size: 158, 411
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0215
+  rotate: false
+  xy: 160, 548
+  size: 158, 439
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0216
+  rotate: false
+  xy: 160, 989
+  size: 158, 471
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0217
+  rotate: true
+  xy: 1521, 1884
+  size: 158, 516
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0218
+  rotate: false
+  xy: 0, 344
+  size: 158, 544
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0219
+  rotate: false
+  xy: 0, 890
+  size: 158, 570
+  orig: 230, 637
+  offset: 64, 28
+  index: -1
+Texture/light02/light_0220
+  rotate: false
+  xy: 0, 1462
+  size: 209, 580
+  orig: 230, 637
+  offset: 13, 28
+  index: -1
+Texture/light03/light_0301
+  rotate: true
+  xy: 1949, 1237
+  size: 46, 65
+  orig: 128, 348
+  offset: 16, 0
+  index: -1
+Texture/light03/light_0302
+  rotate: false
+  xy: 211, 1462
+  size: 50, 83
+  orig: 128, 348
+  offset: 12, 0
+  index: -1
+Texture/light03/light_0303
+  rotate: false
+  xy: 704, 91
+  size: 54, 99
+  orig: 128, 348
+  offset: 8, 1
+  index: -1
+Texture/light03/light_0304
+  rotate: true
+  xy: 587, 192
+  size: 62, 117
+  orig: 128, 348
+  offset: 5, 1
+  index: -1
+Texture/light03/light_0305
+  rotate: true
+  xy: 622, 341
+  size: 69, 134
+  orig: 128, 348
+  offset: 5, 1
+  index: -1
+Texture/light03/light_0306
+  rotate: false
+  xy: 884, 438
+  size: 78, 152
+  orig: 128, 348
+  offset: 5, 1
+  index: -1
+Texture/light03/light_0307
+  rotate: true
+  xy: 784, 592
+  size: 87, 168
+  orig: 128, 348
+  offset: 5, 2
+  index: -1
+Texture/light03/light_0308
+  rotate: false
+  xy: 1949, 1465
+  size: 96, 185
+  orig: 128, 348
+  offset: 5, 2
+  index: -1
+Texture/light03/light_0309
+  rotate: false
+  xy: 1932, 552
+  size: 104, 203
+  orig: 128, 348
+  offset: 5, 2
+  index: -1
+Texture/light03/light_0310
+  rotate: false
+  xy: 1932, 757
+  size: 110, 220
+  orig: 128, 348
+  offset: 5, 2
+  index: -1
+Texture/light03/light_0311
+  rotate: true
+  xy: 1021, 684
+  size: 117, 238
+  orig: 128, 348
+  offset: 5, 2
+  index: -1
+Texture/light03/light_0312
+  rotate: false
+  xy: 150, 0
+  size: 119, 248
+  orig: 128, 348
+  offset: 5, 4
+  index: -1
+Texture/light03/light_0313
+  rotate: true
+  xy: 1261, 700
+  size: 120, 255
+  orig: 128, 348
+  offset: 5, 5
+  index: -1
+Texture/light03/light_0314
+  rotate: true
+  xy: 1544, 778
+  size: 120, 264
+  orig: 128, 348
+  offset: 5, 7
+  index: -1
+Texture/light03/light_0315
+  rotate: false
+  xy: 1810, 627
+  size: 120, 277
+  orig: 128, 348
+  offset: 5, 8
+  index: -1
+Texture/light03/light_0316
+  rotate: true
+  xy: 295, 147
+  size: 120, 290
+  orig: 128, 348
+  offset: 5, 9
+  index: -1
+Texture/light03/light_0317
+  rotate: true
+  xy: 295, 269
+  size: 120, 304
+  orig: 128, 348
+  offset: 5, 10
+  index: -1
+Texture/light03/light_0318
+  rotate: false
+  xy: 1687, 900
+  size: 120, 317
+  orig: 128, 348
+  offset: 5, 11
+  index: -1
+Texture/light03/light_0319
+  rotate: false
+  xy: 1809, 906
+  size: 120, 326
+  orig: 128, 348
+  offset: 5, 12
+  index: -1
+Texture/light03/light_0320
+  rotate: true
+  xy: 295, 391
+  size: 120, 325
+  orig: 128, 348
+  offset: 5, 13
+  index: -1
+Texture/lizi/lizi_0001
+  rotate: false
+  xy: 1932, 1634
+  size: 15, 16
+  orig: 16, 16
+  offset: 1, 0
+  index: -1
+Texture/lizi/lizi_0002
+  rotate: false
+  xy: 587, 256
+  size: 12, 11
+  orig: 16, 16
+  offset: 1, 2
+  index: -1
+Texture/lizi/lizi_0003
+  rotate: false
+  xy: 1932, 1622
+  size: 10, 10
+  orig: 16, 16
+  offset: 3, 3
+  index: -1
+Texture/pen
+  rotate: true
+  xy: 1518, 677
+  size: 99, 286
+  orig: 122, 304
+  offset: 10, 13
+  index: -1

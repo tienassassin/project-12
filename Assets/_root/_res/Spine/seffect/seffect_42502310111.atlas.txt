@@ -1,0 +1,769 @@
+
+seffect_42502310111.png
+size: 1024,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Spine_Effect/hit/0_00000
+  rotate: true
+  xy: 753, 1655
+  size: 191, 196
+  orig: 500, 500
+  offset: 157, 160
+  index: -1
+Spine_Effect/hit/0_00001
+  rotate: false
+  xy: 515, 1853
+  size: 254, 193
+  orig: 500, 500
+  offset: 104, 158
+  index: -1
+Spine_Effect/hit/0_00003
+  rotate: false
+  xy: 771, 1848
+  size: 239, 198
+  orig: 500, 500
+  offset: 119, 158
+  index: -1
+Spine_Effect/hit/0_00005
+  rotate: false
+  xy: 524, 1662
+  size: 227, 189
+  orig: 500, 500
+  offset: 131, 162
+  index: -1
+Spine_Effect/hit/0_00007
+  rotate: false
+  xy: 285, 1633
+  size: 237, 183
+  orig: 500, 500
+  offset: 124, 167
+  index: -1
+Spine_Effect/hit/0_00009
+  rotate: false
+  xy: 189, 986
+  size: 166, 142
+  orig: 500, 500
+  offset: 163, 170
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0004
+  rotate: false
+  xy: 495, 1558
+  size: 27, 73
+  orig: 155, 358
+  offset: 61, 264
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0006
+  rotate: false
+  xy: 156, 1388
+  size: 29, 298
+  orig: 155, 358
+  offset: 61, 41
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0008
+  rotate: false
+  xy: 239, 1413
+  size: 29, 298
+  orig: 155, 358
+  offset: 61, 41
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0010
+  rotate: false
+  xy: 96, 372
+  size: 29, 297
+  orig: 155, 358
+  offset: 61, 42
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0016
+  rotate: false
+  xy: 127, 416
+  size: 40, 253
+  orig: 155, 358
+  offset: 50, 42
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0018
+  rotate: false
+  xy: 187, 1431
+  size: 50, 280
+  orig: 155, 358
+  offset: 47, 41
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0020
+  rotate: false
+  xy: 92, 671
+  size: 86, 310
+  orig: 155, 358
+  offset: 33, 32
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0022
+  rotate: false
+  xy: 159, 1713
+  size: 124, 333
+  orig: 155, 358
+  offset: 18, 15
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0024
+  rotate: false
+  xy: 2, 1328
+  size: 152, 358
+  orig: 155, 358
+  offset: 3, 0
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0026
+  rotate: false
+  xy: 2, 1688
+  size: 155, 358
+  orig: 155, 358
+  offset: 0, 0
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0028
+  rotate: false
+  xy: 2, 637
+  size: 88, 344
+  orig: 155, 358
+  offset: 38, 8
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0030
+  rotate: false
+  xy: 2, 295
+  size: 92, 340
+  orig: 155, 358
+  offset: 37, 8
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0032
+  rotate: false
+  xy: 2, 983
+  size: 94, 343
+  orig: 155, 358
+  offset: 35, 0
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0034
+  rotate: false
+  xy: 98, 1003
+  size: 89, 323
+  orig: 155, 358
+  offset: 39, 5
+  index: -1
+Spine_Effect/image/suolian/lianzi/lianzi_0036
+  rotate: false
+  xy: 2, 27
+  size: 77, 266
+  orig: 155, 358
+  offset: 45, 17
+  index: -1
+Spine_Effect/image/suolian/liefeng_0020
+  rotate: false
+  xy: 285, 1818
+  size: 228, 228
+  orig: 234, 236
+  offset: 3, 4
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0000
+  rotate: false
+  xy: 448, 641
+  size: 159, 158
+  orig: 168, 166
+  offset: 3, 3
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0002
+  rotate: false
+  xy: 438, 970
+  size: 160, 161
+  orig: 168, 166
+  offset: 3, 2
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0004
+  rotate: true
+  xy: 609, 636
+  size: 164, 152
+  orig: 168, 166
+  offset: 0, 2
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0006
+  rotate: true
+  xy: 763, 673
+  size: 165, 153
+  orig: 168, 166
+  offset: 0, 1
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0008
+  rotate: true
+  xy: 759, 840
+  size: 166, 153
+  orig: 168, 166
+  offset: 0, 0
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0010
+  rotate: false
+  xy: 577, 336
+  size: 156, 147
+  orig: 168, 166
+  offset: 10, 5
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0012
+  rotate: false
+  xy: 735, 331
+  size: 157, 152
+  orig: 168, 166
+  offset: 10, 5
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0014
+  rotate: true
+  xy: 868, 136
+  size: 159, 154
+  orig: 168, 166
+  offset: 9, 6
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0016
+  rotate: false
+  xy: 186, 201
+  size: 160, 155
+  orig: 168, 166
+  offset: 8, 6
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0018
+  rotate: true
+  xy: 600, 970
+  size: 161, 157
+  orig: 168, 166
+  offset: 7, 5
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0020
+  rotate: false
+  xy: 709, 485
+  size: 161, 149
+  orig: 168, 166
+  offset: 7, 5
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0022
+  rotate: false
+  xy: 545, 485
+  size: 162, 149
+  orig: 168, 166
+  offset: 6, 5
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0024
+  rotate: true
+  xy: 872, 509
+  size: 162, 150
+  orig: 168, 166
+  offset: 6, 5
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0026
+  rotate: false
+  xy: 186, 47
+  size: 159, 152
+  orig: 168, 166
+  offset: 5, 5
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0028
+  rotate: false
+  xy: 542, 180
+  size: 161, 154
+  orig: 168, 166
+  offset: 4, 4
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0030
+  rotate: true
+  xy: 759, 1008
+  size: 162, 157
+  orig: 168, 166
+  offset: 3, 3
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0032
+  rotate: false
+  xy: 189, 1130
+  size: 165, 158
+  orig: 168, 166
+  offset: 2, 2
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0034
+  rotate: false
+  xy: 180, 828
+  size: 167, 156
+  orig: 168, 166
+  offset: 1, 1
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0036
+  rotate: false
+  xy: 378, 485
+  size: 165, 154
+  orig: 168, 166
+  offset: 0, 0
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0038
+  rotate: true
+  xy: 602, 802
+  size: 166, 155
+  orig: 168, 166
+  offset: 0, 0
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0040
+  rotate: false
+  xy: 751, 1172
+  size: 165, 155
+  orig: 168, 166
+  offset: 2, 0
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0042
+  rotate: false
+  xy: 180, 671
+  size: 167, 155
+  orig: 168, 166
+  offset: 1, 0
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0044
+  rotate: true
+  xy: 448, 801
+  size: 167, 152
+  orig: 168, 166
+  offset: 0, 0
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0046
+  rotate: false
+  xy: 705, 176
+  size: 161, 153
+  orig: 168, 166
+  offset: 6, 0
+  index: -1
+Spine_Effect/image/suolian/ripple/ripple_0048
+  rotate: false
+  xy: 378, 216
+  size: 162, 154
+  orig: 168, 166
+  offset: 6, 0
+  index: -1
+Spine_Effect/juqi/x_00000
+  rotate: false
+  xy: 670, 82
+  size: 101, 92
+  orig: 104, 99
+  offset: 3, 4
+  index: -1
+Spine_Effect/juqi/x_00002
+  rotate: false
+  xy: 281, 358
+  size: 95, 99
+  orig: 104, 99
+  offset: 3, 0
+  index: -1
+Spine_Effect/juqi/x_00004
+  rotate: true
+  xy: 844, 39
+  size: 95, 97
+  orig: 104, 99
+  offset: 5, 2
+  index: -1
+Spine_Effect/juqi/x_00006
+  rotate: false
+  xy: 169, 358
+  size: 94, 88
+  orig: 104, 99
+  offset: 6, 9
+  index: -1
+Spine_Effect/juqi/x_00008
+  rotate: false
+  xy: 189, 1310
+  size: 90, 91
+  orig: 104, 99
+  offset: 4, 5
+  index: -1
+Spine_Effect/wind/wind_0000
+  rotate: true
+  xy: 476, 1253
+  size: 11, 16
+  orig: 148, 124
+  offset: 0, 58
+  index: -1
+Spine_Effect/wind/wind_0001
+  rotate: false
+  xy: 709, 1224
+  size: 36, 42
+  orig: 148, 124
+  offset: 0, 41
+  index: -1
+Spine_Effect/wind/wind_0002
+  rotate: false
+  xy: 943, 79
+  size: 49, 55
+  orig: 148, 124
+  offset: 2, 33
+  index: -1
+Spine_Effect/wind/wind_0003
+  rotate: false
+  xy: 773, 104
+  size: 69, 70
+  orig: 148, 124
+  offset: 3, 23
+  index: -1
+Spine_Effect/wind/wind_0004
+  rotate: true
+  xy: 941, 1445
+  size: 91, 81
+  orig: 148, 124
+  offset: 1, 16
+  index: -1
+Spine_Effect/wind/wind_0005
+  rotate: false
+  xy: 408, 22
+  size: 113, 92
+  orig: 148, 124
+  offset: 1, 10
+  index: -1
+Spine_Effect/wind/wind_0006
+  rotate: true
+  xy: 914, 877
+  size: 127, 100
+  orig: 148, 124
+  offset: 3, 6
+  index: -1
+Spine_Effect/wind/wind_0007
+  rotate: true
+  xy: 918, 1006
+  size: 135, 100
+  orig: 148, 124
+  offset: 1, 10
+  index: -1
+Spine_Effect/wind/wind_0008
+  rotate: true
+  xy: 918, 1143
+  size: 134, 104
+  orig: 148, 124
+  offset: 5, 11
+  index: -1
+Spine_Effect/wind/wind_0009
+  rotate: false
+  xy: 894, 297
+  size: 125, 101
+  orig: 148, 124
+  offset: 17, 19
+  index: -1
+Spine_Effect/wind/wind_0010
+  rotate: true
+  xy: 918, 750
+  size: 125, 101
+  orig: 148, 124
+  offset: 17, 19
+  index: -1
+Spine_Effect/wind/wind_0011
+  rotate: false
+  xy: 894, 400
+  size: 123, 107
+  orig: 148, 124
+  offset: 19, 16
+  index: -1
+Spine_Effect/wind/wind_0012
+  rotate: false
+  xy: 408, 116
+  size: 121, 98
+  orig: 148, 124
+  offset: 21, 13
+  index: -1
+Spine_Effect/wind/wind_0013
+  rotate: true
+  xy: 664, 1133
+  size: 89, 85
+  orig: 148, 124
+  offset: 25, 12
+  index: -1
+Spine_Effect/wind/wind_0014
+  rotate: false
+  xy: 523, 2
+  size: 77, 87
+  orig: 148, 124
+  offset: 35, 8
+  index: -1
+Spine_Effect/wind/wind_0015
+  rotate: false
+  xy: 602, 7
+  size: 53, 82
+  orig: 148, 124
+  offset: 40, 17
+  index: -1
+Spine_Effect/wind/wind_0016
+  rotate: true
+  xy: 81, 27
+  size: 43, 84
+  orig: 148, 124
+  offset: 55, 20
+  index: -1
+Spine_Effect/wind_a/wind_a_0000
+  rotate: true
+  xy: 918, 1281
+  size: 46, 10
+  orig: 252, 135
+  offset: 36, 66
+  index: -1
+Spine_Effect/wind_a/wind_a_0001
+  rotate: true
+  xy: 453, 1240
+  size: 48, 21
+  orig: 252, 135
+  offset: 57, 63
+  index: -1
+Spine_Effect/wind_a/wind_a_0002
+  rotate: false
+  xy: 531, 91
+  size: 120, 40
+  orig: 252, 135
+  offset: 12, 49
+  index: -1
+Spine_Effect/wind_a/wind_a_0003
+  rotate: true
+  xy: 347, 46
+  size: 153, 59
+  orig: 252, 135
+  offset: 14, 38
+  index: -1
+Spine_Effect/wind_a/wind_a_0004
+  rotate: true
+  xy: 357, 956
+  size: 182, 79
+  orig: 252, 135
+  offset: 17, 25
+  index: -1
+Spine_Effect/wind_a/wind_a_0005
+  rotate: false
+  xy: 494, 1224
+  size: 213, 101
+  orig: 252, 135
+  offset: 11, 15
+  index: -1
+Spine_Effect/wind_a/wind_a_0006
+  rotate: false
+  xy: 270, 1517
+  size: 223, 114
+  orig: 252, 135
+  offset: 9, 14
+  index: -1
+Spine_Effect/wind_a/wind_a_0007
+  rotate: false
+  xy: 270, 1403
+  size: 222, 112
+  orig: 252, 135
+  offset: 10, 13
+  index: -1
+Spine_Effect/wind_a/wind_a_0008
+  rotate: false
+  xy: 524, 1547
+  size: 222, 113
+  orig: 252, 135
+  offset: 10, 13
+  index: -1
+Spine_Effect/wind_a/wind_a_0009
+  rotate: false
+  xy: 748, 1538
+  size: 222, 115
+  orig: 252, 135
+  offset: 11, 13
+  index: -1
+Spine_Effect/wind_a/wind_a_0010
+  rotate: true
+  xy: 81, 72
+  size: 221, 103
+  orig: 252, 135
+  offset: 11, 14
+  index: -1
+Spine_Effect/wind_a/wind_a_0011
+  rotate: true
+  xy: 169, 448
+  size: 221, 110
+  orig: 252, 135
+  offset: 9, 15
+  index: -1
+Spine_Effect/wind_a/wind_a_0012
+  rotate: false
+  xy: 281, 1290
+  size: 211, 111
+  orig: 252, 135
+  offset: 21, 14
+  index: -1
+Spine_Effect/wind_a/wind_a_0013
+  rotate: false
+  xy: 378, 372
+  size: 197, 111
+  orig: 252, 135
+  offset: 34, 12
+  index: -1
+Spine_Effect/wind_a/wind_a_0014
+  rotate: false
+  xy: 494, 1327
+  size: 220, 114
+  orig: 252, 135
+  offset: 11, 14
+  index: -1
+Spine_Effect/wind_a/wind_a_0015
+  rotate: false
+  xy: 495, 1443
+  size: 221, 102
+  orig: 252, 135
+  offset: 11, 13
+  index: -1
+Spine_Effect/wind_a/wind_a_0016
+  rotate: true
+  xy: 349, 746
+  size: 208, 97
+  orig: 252, 135
+  offset: 18, 13
+  index: -1
+Spine_Effect/wind_a/wind_a_0017
+  rotate: false
+  xy: 716, 1329
+  size: 212, 112
+  orig: 252, 135
+  offset: 13, 11
+  index: -1
+Spine_Effect/wind_a/wind_a_0018
+  rotate: true
+  xy: 281, 459
+  size: 210, 95
+  orig: 252, 135
+  offset: 21, 25
+  index: -1
+Spine_Effect/wind_a/wind_a_0019
+  rotate: false
+  xy: 453, 1133
+  size: 209, 89
+  orig: 252, 135
+  offset: 21, 17
+  index: -1
+Spine_Effect/wind_a/wind_a_0020
+  rotate: false
+  xy: 718, 1443
+  size: 221, 93
+  orig: 252, 135
+  offset: 9, 28
+  index: -1
+Spine_Effect/wind_a/wind_a_0021
+  rotate: true
+  xy: 930, 1279
+  size: 162, 92
+  orig: 252, 135
+  offset: 36, 19
+  index: -1
+Spine_Effect/wind_a/wind_a_0022
+  rotate: true
+  xy: 356, 1140
+  size: 148, 95
+  orig: 252, 135
+  offset: 70, 15
+  index: -1
+Spine_Effect/wind_a/wind_a_0023
+  rotate: false
+  xy: 349, 674
+  size: 94, 70
+  orig: 252, 135
+  offset: 137, 37
+  index: -1
+Spine_Effect/wind_a/wind_a_0024
+  rotate: true
+  xy: 515, 1831
+  size: 20, 7
+  orig: 252, 135
+  offset: 207, 112
+  index: -1
+Spine_Effect/wind_a/wind_a_0025
+  rotate: false
+  xy: 349, 671
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Spine_Effect/wind_a/wind_a_0026
+  rotate: false
+  xy: 270, 1687
+  size: 13, 24
+  orig: 252, 135
+  offset: 162, 28
+  index: -1
+Spine_Effect/wind_a/wind_a_0027
+  rotate: false
+  xy: 2, 2
+  size: 95, 23
+  orig: 252, 135
+  offset: 100, 76
+  index: -1
+Spine_Effect/wind_a/wind_a_0028
+  rotate: false
+  xy: 476, 1266
+  size: 16, 22
+  orig: 252, 135
+  offset: 125, 22
+  index: -1
+Spine_Effect/wind_a/wind_a_0029
+  rotate: false
+  xy: 159, 1699
+  size: 12, 12
+  orig: 252, 135
+  offset: 155, 20
+  index: -1
+Spine_Effect/write
+  rotate: false
+  xy: 174, 2
+  size: 50, 43
+  orig: 50, 43
+  offset: 0, 0
+  index: -1
+Spine_Effect/xiantiao/xl_00000
+  rotate: false
+  xy: 918, 673
+  size: 85, 20
+  orig: 231, 72
+  offset: 0, 12
+  index: -1
+Spine_Effect/xiantiao/xl_00001
+  rotate: true
+  xy: 987, 1662
+  size: 184, 18
+  orig: 231, 72
+  offset: 16, 10
+  index: -1
+Spine_Effect/xiantiao/xl_00002
+  rotate: true
+  xy: 951, 1667
+  size: 179, 34
+  orig: 231, 72
+  offset: 47, 4
+  index: -1
+Spine_Effect/xiantiao/xl_00003
+  rotate: false
+  xy: 531, 133
+  size: 137, 45
+  orig: 231, 72
+  offset: 92, 3
+  index: -1
+Spine_Effect/xiantiao/xl_00004
+  rotate: false
+  xy: 918, 695
+  size: 103, 53
+  orig: 231, 72
+  offset: 126, 5
+  index: -1
+Spine_Effect/xiantiao/xl_00005
+  rotate: false
+  xy: 127, 364
+  size: 40, 50
+  orig: 231, 72
+  offset: 189, 14
+  index: -1
+Spine_Effect/xiantiao/xl_00006
+  rotate: true
+  xy: 716, 1268
+  size: 59, 33
+  orig: 231, 72
+  offset: 170, 34
+  index: -1
+Spine_Effect/xiantiao/xl_00007
+  rotate: false
+  xy: 99, 2
+  size: 73, 23
+  orig: 231, 72
+  offset: 148, 47
+  index: -1
+Spine_Effect/xiantiao/xl_00008
+  rotate: true
+  xy: 349, 957
+  size: 27, 6
+  orig: 231, 72
+  offset: 133, 64
+  index: -1

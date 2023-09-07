@@ -1,0 +1,20 @@
+
+sbuff_24.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tex/sbuff_24_1
+  rotate: true
+  xy: 2, 2
+  size: 38, 85
+  orig: 42, 90
+  offset: 3, 1
+  index: -1
+tex/sbuff_24_2
+  rotate: true
+  xy: 89, 7
+  size: 33, 80
+  orig: 42, 90
+  offset: 6, 4
+  index: -1

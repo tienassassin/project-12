@@ -1,0 +1,62 @@
+
+uieffect_94.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+box_1
+  rotate: true
+  xy: 220, 17
+  size: 81, 70
+  orig: 100, 100
+  offset: 6, 10
+  index: -1
+box_1L
+  rotate: false
+  xy: 0, 0
+  size: 108, 98
+  orig: 120, 120
+  offset: 1, 5
+  index: -1
+box_2
+  rotate: false
+  xy: 370, 157
+  size: 81, 71
+  orig: 100, 100
+  offset: 6, 9
+  index: -1
+box_2L
+  rotate: false
+  xy: 260, 130
+  size: 108, 98
+  orig: 120, 120
+  offset: 1, 5
+  index: -1
+box_3
+  rotate: true
+  xy: 292, 47
+  size: 81, 71
+  orig: 100, 100
+  offset: 6, 9
+  index: -1
+box_3L
+  rotate: false
+  xy: 110, 0
+  size: 108, 98
+  orig: 120, 120
+  offset: 1, 5
+  index: -1
+glow_027
+  rotate: false
+  xy: 0, 100
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+glow_030
+  rotate: false
+  xy: 130, 100
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,203 @@
+{
+"skeleton": { "hash": "y0iyq6aU/UPTfhvWdg4nmYW3vSU", "spine": "3.5.35", "width": 1080, "height": 1920 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bg", "parent": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "chuangjueZX", "parent": "root", "rotation": 18.6, "scaleX": 4, "scaleY": 4 },
+	{ "name": "yuantu", "parent": "bg", "scaleX": 0.5, "scaleY": 0.5 }
+],
+"slots": [
+	{ "name": "bg", "bone": "bg", "attachment": "images/login_bg" },
+	{ "name": "frames", "bone": "chuangjueZX", "attachment": "images/heidong/heidong_00059" },
+	{ "name": "frames2", "bone": "chuangjueZX" },
+	{ "name": "yuantu", "bone": "yuantu" }
+],
+"skins": {
+	"default": {
+		"bg": {
+			"images/login_bg": { "width": 540, "height": 960 }
+		},
+		"frames": {
+			"images/heidong/heidong_00003": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00007": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00011": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00015": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00019": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00021": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00023": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00025": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00027": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00029": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00031": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00033": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00035": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00037": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00039": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00041": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00043": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00045": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00047": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00049": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00051": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00053": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00055": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00057": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00059": { "rotation": -18.6, "width": 270, "height": 350 }
+		},
+		"frames2": {
+			"images/heidong/heidong_00003": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00007": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00011": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00015": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00019": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00021": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00023": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00025": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00027": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00029": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00031": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00033": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00035": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00037": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00039": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00041": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00043": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00045": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00047": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00049": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00051": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00053": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00055": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00057": { "rotation": -18.6, "width": 270, "height": 350 },
+			"images/heidong/heidong_00059": { "rotation": -18.6, "width": 270, "height": 350 }
+		},
+		"yuantu": {
+			"images/heidong/heidong": { "width": 1080, "height": 1400 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"bg": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.5333, "color": "737373ff" }
+				]
+			},
+			"frames": {
+				"attachment": [
+					{ "time": 0, "name": "images/heidong/heidong_00003" },
+					{ "time": 0.0667, "name": "images/heidong/heidong_00007" },
+					{ "time": 0.1333, "name": "images/heidong/heidong_00011" },
+					{ "time": 0.2, "name": "images/heidong/heidong_00015" },
+					{ "time": 0.2667, "name": "images/heidong/heidong_00019" },
+					{ "time": 0.3333, "name": "images/heidong/heidong_00021" },
+					{ "time": 0.3667, "name": "images/heidong/heidong_00023" },
+					{ "time": 0.4, "name": "images/heidong/heidong_00025" },
+					{ "time": 0.4333, "name": "images/heidong/heidong_00027" },
+					{ "time": 0.4667, "name": "images/heidong/heidong_00029" },
+					{ "time": 0.5333, "name": "images/heidong/heidong_00031" },
+					{ "time": 0.6, "name": "images/heidong/heidong_00033" },
+					{ "time": 0.6667, "name": "images/heidong/heidong_00035" },
+					{ "time": 0.7333, "name": "images/heidong/heidong_00037" },
+					{ "time": 0.8, "name": "images/heidong/heidong_00039" },
+					{ "time": 0.8667, "name": "images/heidong/heidong_00041" },
+					{ "time": 0.9333, "name": "images/heidong/heidong_00043" },
+					{ "time": 1, "name": "images/heidong/heidong_00045" },
+					{ "time": 1.0667, "name": "images/heidong/heidong_00047" },
+					{ "time": 1.1333, "name": "images/heidong/heidong_00049" },
+					{ "time": 1.2, "name": "images/heidong/heidong_00051" },
+					{ "time": 1.2667, "name": "images/heidong/heidong_00053" },
+					{ "time": 1.3333, "name": "images/heidong/heidong_00055" },
+					{ "time": 1.4, "name": "images/heidong/heidong_00057" },
+					{ "time": 1.4667, "name": "images/heidong/heidong_00059" }
+				]
+			},
+			"yuantu": {
+				"color": [
+					{ "time": 0.5333, "color": "ffffff00" },
+					{ "time": 0.7, "color": "ffffff95" }
+				],
+				"attachment": [
+					{ "time": 0.5333, "name": "images/heidong/heidong" }
+				]
+			}
+		}
+	},
+	"animation2": {
+		"slots": {
+			"bg": {
+				"color": [
+					{ "time": 0, "color": "737373ff" }
+				]
+			},
+			"frames": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff" },
+					{ "time": 0.5333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.9333, "color": "ffffff00" },
+					{ "time": 1.1333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.4, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "images/heidong/heidong_00045" },
+					{ "time": 0.0667, "name": "images/heidong/heidong_00047" },
+					{ "time": 0.1333, "name": "images/heidong/heidong_00049" },
+					{ "time": 0.2, "name": "images/heidong/heidong_00051" },
+					{ "time": 0.2667, "name": "images/heidong/heidong_00053" },
+					{ "time": 0.3333, "name": "images/heidong/heidong_00055" },
+					{ "time": 0.4, "name": "images/heidong/heidong_00057" },
+					{ "time": 0.4667, "name": "images/heidong/heidong_00059" },
+					{ "time": 0.5333, "name": null },
+					{ "time": 0.9333, "name": "images/heidong/heidong_00031" },
+					{ "time": 1, "name": "images/heidong/heidong_00033" },
+					{ "time": 1.0667, "name": "images/heidong/heidong_00035" },
+					{ "time": 1.1333, "name": "images/heidong/heidong_00037" },
+					{ "time": 1.2, "name": "images/heidong/heidong_00039" },
+					{ "time": 1.2667, "name": "images/heidong/heidong_00041" },
+					{ "time": 1.3333, "name": "images/heidong/heidong_00043" },
+					{ "time": 1.4, "name": "images/heidong/heidong_00045" }
+				]
+			},
+			"frames2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffff00" },
+					{ "time": 0.4333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.0333, "color": "ffffffff" },
+					{ "time": 1.2333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.4, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.2333, "name": "images/heidong/heidong_00031" },
+					{ "time": 0.3, "name": "images/heidong/heidong_00033" },
+					{ "time": 0.3667, "name": "images/heidong/heidong_00035" },
+					{ "time": 0.4333, "name": "images/heidong/heidong_00037" },
+					{ "time": 0.5, "name": "images/heidong/heidong_00039" },
+					{ "time": 0.5667, "name": "images/heidong/heidong_00041" },
+					{ "time": 0.6333, "name": "images/heidong/heidong_00043" },
+					{ "time": 0.7, "name": "images/heidong/heidong_00045" },
+					{ "time": 0.7667, "name": "images/heidong/heidong_00047" },
+					{ "time": 0.8333, "name": "images/heidong/heidong_00049" },
+					{ "time": 0.9, "name": "images/heidong/heidong_00051" },
+					{ "time": 0.9667, "name": "images/heidong/heidong_00053" },
+					{ "time": 1.0333, "name": "images/heidong/heidong_00055" },
+					{ "time": 1.1, "name": "images/heidong/heidong_00057" },
+					{ "time": 1.1667, "name": "images/heidong/heidong_00059" },
+					{ "time": 1.2333, "name": null }
+				]
+			},
+			"yuantu": {
+				"color": [
+					{ "time": 0, "color": "ffffff95" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "images/heidong/heidong" }
+				]
+			}
+		}
+	}
+}
+}

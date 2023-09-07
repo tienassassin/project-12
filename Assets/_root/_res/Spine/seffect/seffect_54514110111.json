@@ -1,0 +1,286 @@
+{
+"skeleton": { "hash": "+D4R5Hi0duS2OmeXnlKrGZAM1Y0", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "buffEffect", "parent": "root" },
+	{ "name": "attack_hit", "parent": "buffEffect" },
+	{ "name": "buff1", "parent": "buffEffect", "rotation": -10 },
+	{ "name": "buff2", "parent": "buffEffect" },
+	{ "name": "skill01_hit", "parent": "buffEffect" },
+	{ "name": "skill02_hit", "parent": "buffEffect" }
+],
+"slots": [
+	{ "name": "images/0_00000", "bone": "buff1", "color": "6c11eda9" },
+	{ "name": "images/0_0", "bone": "buff2", "blend": "additive" },
+	{ "name": "images/attack_hit/0_00000", "bone": "attack_hit" },
+	{ "name": "images/skill01_hit/0_00000", "bone": "skill01_hit", "color": "1afffaff", "blend": "additive" },
+	{ "name": "images/skill02_hit/0_00000", "bone": "skill02_hit", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"images/0_0": {
+			"images/buff/0_00000": { "width": 150, "height": 150 },
+			"images/buff/0_00002": { "width": 150, "height": 150 },
+			"images/buff/0_00004": { "width": 150, "height": 150 },
+			"images/buff/0_00006": { "width": 150, "height": 150 },
+			"images/buff/0_00008": { "width": 150, "height": 150 },
+			"images/buff/0_00010": { "width": 150, "height": 150 },
+			"images/buff/0_00012": { "width": 150, "height": 150 },
+			"images/buff/0_00014": { "width": 150, "height": 150 },
+			"images/buff/0_00016": { "width": 150, "height": 150 },
+			"images/buff/0_00018": { "width": 150, "height": 150 },
+			"images/buff/0_00020": { "width": 150, "height": 150 },
+			"images/buff/0_00022": { "width": 150, "height": 150 },
+			"images/buff/0_00024": { "width": 150, "height": 150 },
+			"images/buff/0_00026": { "width": 150, "height": 150 },
+			"images/buff/0_00028": { "width": 150, "height": 150 }
+		},
+		"images/0_00000": {
+			"images/buff/0_00000": { "width": 150, "height": 150 },
+			"images/buff/0_00002": { "width": 150, "height": 150 },
+			"images/buff/0_00004": { "width": 150, "height": 150 },
+			"images/buff/0_00006": { "width": 150, "height": 150 },
+			"images/buff/0_00008": { "width": 150, "height": 150 },
+			"images/buff/0_00010": { "width": 150, "height": 150 },
+			"images/buff/0_00012": { "width": 150, "height": 150 },
+			"images/buff/0_00014": { "width": 150, "height": 150 },
+			"images/buff/0_00016": { "width": 150, "height": 150 },
+			"images/buff/0_00018": { "width": 150, "height": 150 },
+			"images/buff/0_00020": { "width": 150, "height": 150 },
+			"images/buff/0_00022": { "width": 150, "height": 150 },
+			"images/buff/0_00024": { "width": 150, "height": 150 },
+			"images/buff/0_00026": { "width": 150, "height": 150 },
+			"images/buff/0_00028": { "width": 150, "height": 150 }
+		},
+		"images/attack_hit/0_00000": {
+			"images/attack_hit/0_00000": { "width": 400, "height": 400 },
+			"images/attack_hit/0_00001": { "width": 400, "height": 400 },
+			"images/attack_hit/0_00002": { "width": 400, "height": 400 },
+			"images/attack_hit/0_00003": { "width": 400, "height": 400 },
+			"images/attack_hit/0_00004": { "width": 400, "height": 400 },
+			"images/attack_hit/0_00005": { "width": 400, "height": 400 }
+		},
+		"images/skill01_hit/0_00000": {
+			"images/skill01_hit/0_00000": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00002": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00004": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00006": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00008": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00010": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00012": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00014": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00016": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00018": { "width": 150, "height": 200 },
+			"images/skill01_hit/0_00020": { "width": 150, "height": 200 }
+		},
+		"images/skill02_hit/0_00000": {
+			"images/skill02_hit/0_00000": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00002": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00004": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00006": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00008": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00010": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00012": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00014": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00016": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00018": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00020": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00022": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00024": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00026": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00028": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00030": { "width": 150, "height": 150 },
+			"images/skill02_hit/0_00032": { "width": 150, "height": 150 }
+		}
+	}
+},
+"events": {
+	"hit_11_1_1": {},
+	"hit_21_1_1": {},
+	"hit_31_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"images/attack_hit/0_00000": {
+				"attachment": [
+					{ "time": 0, "name": "images/attack_hit/0_00000" },
+					{ "time": 0.0333, "name": "images/attack_hit/0_00001" },
+					{ "time": 0.0667, "name": "images/attack_hit/0_00002" },
+					{ "time": 0.1, "name": "images/attack_hit/0_00003" },
+					{ "time": 0.1333, "name": "images/attack_hit/0_00004" },
+					{ "time": 0.1667, "name": "images/attack_hit/0_00005" },
+					{ "time": 0.2, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"attack_hit": {
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0667, "name": "hit_11_1_1" }
+		]
+	},
+	"animation_1": {
+		"slots": {
+			"images/0_00000": {
+				"attachment": [
+					{ "time": 0, "name": "images/buff/0_00000" },
+					{ "time": 0.0667, "name": "images/buff/0_00002" },
+					{ "time": 0.1333, "name": "images/buff/0_00004" },
+					{ "time": 0.2, "name": "images/buff/0_00006" },
+					{ "time": 0.2667, "name": "images/buff/0_00008" },
+					{ "time": 0.3333, "name": "images/buff/0_00010" },
+					{ "time": 0.4, "name": "images/buff/0_00012" },
+					{ "time": 0.4667, "name": "images/buff/0_00014" },
+					{ "time": 0.5333, "name": "images/buff/0_00016" },
+					{ "time": 0.6, "name": "images/buff/0_00018" },
+					{ "time": 0.6667, "name": "images/buff/0_00020" },
+					{ "time": 0.7333, "name": "images/buff/0_00022" },
+					{ "time": 0.8, "name": "images/buff/0_00024" },
+					{ "time": 0.8667, "name": "images/buff/0_00026" },
+					{ "time": 0.9333, "name": "images/buff/0_00028" },
+					{ "time": 1, "name": "images/buff/0_00000" }
+				]
+			},
+			"images/0_0": {
+				"attachment": [
+					{ "time": 0, "name": "images/buff/0_00000" },
+					{ "time": 0.0667, "name": "images/buff/0_00002" },
+					{ "time": 0.1333, "name": "images/buff/0_00004" },
+					{ "time": 0.2, "name": "images/buff/0_00006" },
+					{ "time": 0.2667, "name": "images/buff/0_00008" },
+					{ "time": 0.3333, "name": "images/buff/0_00010" },
+					{ "time": 0.4, "name": "images/buff/0_00012" },
+					{ "time": 0.4667, "name": "images/buff/0_00014" },
+					{ "time": 0.5333, "name": "images/buff/0_00016" },
+					{ "time": 0.6, "name": "images/buff/0_00018" },
+					{ "time": 0.6667, "name": "images/buff/0_00020" },
+					{ "time": 0.7333, "name": "images/buff/0_00022" },
+					{ "time": 0.8, "name": "images/buff/0_00024" },
+					{ "time": 0.8667, "name": "images/buff/0_00026" },
+					{ "time": 0.9333, "name": "images/buff/0_00028" },
+					{ "time": 1, "name": "images/buff/0_00000" }
+				]
+			}
+		},
+		"bones": {
+			"buff1": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 84.8 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			},
+			"buff2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 84.8 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			}
+		}
+	},
+	"animation_2": {
+		"slots": {
+			"images/skill01_hit/0_00000": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.4667, "color": "ffffffff" },
+					{ "time": 1.7667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "images/skill01_hit/0_00000" },
+					{ "time": 0.0667, "name": "images/skill01_hit/0_00002" },
+					{ "time": 0.1333, "name": "images/skill01_hit/0_00004" },
+					{ "time": 0.2, "name": "images/skill01_hit/0_00006" },
+					{ "time": 0.2667, "name": "images/skill01_hit/0_00008" },
+					{ "time": 0.3333, "name": "images/skill01_hit/0_00010" },
+					{ "time": 0.4, "name": "images/skill01_hit/0_00012" },
+					{ "time": 0.4667, "name": "images/skill01_hit/0_00014" },
+					{ "time": 0.5333, "name": "images/skill01_hit/0_00016" },
+					{ "time": 0.6, "name": "images/skill01_hit/0_00018" },
+					{ "time": 0.6667, "name": "images/skill01_hit/0_00020" },
+					{ "time": 0.7, "name": "images/skill01_hit/0_00000" },
+					{ "time": 0.7667, "name": "images/skill01_hit/0_00002" },
+					{ "time": 0.8333, "name": "images/skill01_hit/0_00004" },
+					{ "time": 0.9, "name": "images/skill01_hit/0_00006" },
+					{ "time": 0.9667, "name": "images/skill01_hit/0_00008" },
+					{ "time": 1.0333, "name": "images/skill01_hit/0_00010" },
+					{ "time": 1.1, "name": "images/skill01_hit/0_00012" },
+					{ "time": 1.1667, "name": "images/skill01_hit/0_00014" },
+					{ "time": 1.2333, "name": "images/skill01_hit/0_00016" },
+					{ "time": 1.3, "name": "images/skill01_hit/0_00018" },
+					{ "time": 1.3667, "name": "images/skill01_hit/0_00020" },
+					{ "time": 1.4, "name": "images/skill01_hit/0_00000" },
+					{ "time": 1.4667, "name": "images/skill01_hit/0_00002" },
+					{ "time": 1.5333, "name": "images/skill01_hit/0_00004" },
+					{ "time": 1.6, "name": "images/skill01_hit/0_00006" },
+					{ "time": 1.6667, "name": "images/skill01_hit/0_00008" },
+					{ "time": 1.7333, "name": "images/skill01_hit/0_00010" },
+					{ "time": 1.7667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"skill01_hit": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 244.97 }
+				],
+				"scale": [
+					{ "time": 0, "x": 6, "y": 4 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 1, "name": "hit_21_1_1" }
+		]
+	},
+	"animation_3": {
+		"slots": {
+			"images/skill02_hit/0_00000": {
+				"attachment": [
+					{ "time": 0, "name": "images/skill02_hit/0_00000" },
+					{ "time": 0.0333, "name": "images/skill02_hit/0_00002" },
+					{ "time": 0.0667, "name": "images/skill02_hit/0_00004" },
+					{ "time": 0.1333, "name": "images/skill02_hit/0_00006" },
+					{ "time": 0.1667, "name": "images/skill02_hit/0_00008" },
+					{ "time": 0.2, "name": "images/skill02_hit/0_00010" },
+					{ "time": 0.2333, "name": "images/skill02_hit/0_00012" },
+					{ "time": 0.2667, "name": "images/skill02_hit/0_00014" },
+					{ "time": 0.3333, "name": "images/skill02_hit/0_00016" },
+					{ "time": 0.3667, "name": "images/skill02_hit/0_00018" },
+					{ "time": 0.4, "name": "images/skill02_hit/0_00020" },
+					{ "time": 0.4333, "name": "images/skill02_hit/0_00022" },
+					{ "time": 0.4667, "name": "images/skill02_hit/0_00024" },
+					{ "time": 0.5, "name": "images/skill02_hit/0_00026" },
+					{ "time": 0.5667, "name": "images/skill02_hit/0_00028" },
+					{ "time": 0.6, "name": "images/skill02_hit/0_00030" },
+					{ "time": 0.6333, "name": "images/skill02_hit/0_00032" },
+					{ "time": 0.6667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"skill02_hit": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 5, "y": 5 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.6, "name": "hit_31_1_1" }
+		]
+	}
+}
+}

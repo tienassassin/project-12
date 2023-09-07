@@ -1,0 +1,91 @@
+{
+"skeleton": { "hash": "/2gwqcJcoPkSG+SepdsjLSf1Wtk", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone124", "parent": "root", "y": -28.01, "color": "1eff00ff" }
+],
+"slots": [
+	{ "name": "_aigei_com/71", "bone": "bone124" }
+],
+"skins": {
+	"default": {
+		"_aigei_com/71": {
+			"_aigei_com/72": { "width": 260, "height": 268 },
+			"_aigei_com/73": { "width": 260, "height": 268 },
+			"_aigei_com/74": { "width": 260, "height": 268 },
+			"_aigei_com/75": { "width": 260, "height": 268 },
+			"_aigei_com/76": { "width": 260, "height": 268 },
+			"_aigei_com/77": { "width": 260, "height": 268 },
+			"_aigei_com/78": { "width": 260, "height": 268 },
+			"_aigei_com/79": { "width": 260, "height": 268 },
+			"_aigei_com/710": { "width": 260, "height": 268 },
+			"_aigei_com/711": { "width": 260, "height": 268 },
+			"_aigei_com/712": { "width": 260, "height": 268 },
+			"_aigei_com/713": { "width": 260, "height": 268 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"_aigei_com/71": {
+				"color": [
+					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.6333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "_aigei_com/72" },
+					{ "time": 0.0333, "name": "_aigei_com/73" },
+					{ "time": 0.0667, "name": "_aigei_com/74" },
+					{ "time": 0.1, "name": "_aigei_com/75" },
+					{ "time": 0.1333, "name": "_aigei_com/76" },
+					{ "time": 0.1667, "name": "_aigei_com/77" },
+					{ "time": 0.2333, "name": "_aigei_com/78" },
+					{ "time": 0.3, "name": "_aigei_com/79" },
+					{ "time": 0.3667, "name": "_aigei_com/710" },
+					{ "time": 0.4333, "name": "_aigei_com/711" },
+					{ "time": 0.5, "name": "_aigei_com/712" },
+					{ "time": 0.5667, "name": "_aigei_com/713" },
+					{ "time": 0.6667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone124": {
+				"translate": [
+					{
+						"time": 0,
+						"x": -97.48,
+						"y": 295.69,
+						"curve": [ 0.314, 0.4, 0.609, 1 ]
+					},
+					{ "time": 0.4, "x": -120.82, "y": 391.38 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 3,
+						"y": 3,
+						"curve": [ 0.314, 0.4, 0.609, 1 ]
+					},
+					{ "time": 0.4, "x": 4, "y": 4 }
+				]
+			},
+			"root": {
+				"scale": [
+					{ "time": 0, "x": 0.6, "y": 0.6 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 }
+		],
+		"events": [
+			{ "time": 0.3333, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,104 @@
+
+sbuff_19.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tex/sbuff_19_01
+  rotate: false
+  xy: 2, 398
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_02
+  rotate: false
+  xy: 2, 332
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_03
+  rotate: false
+  xy: 176, 398
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_04
+  rotate: false
+  xy: 2, 266
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_05
+  rotate: false
+  xy: 176, 332
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_06
+  rotate: false
+  xy: 2, 200
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_07
+  rotate: false
+  xy: 176, 266
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_08
+  rotate: true
+  xy: 350, 290
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_09
+  rotate: false
+  xy: 2, 134
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_10
+  rotate: false
+  xy: 176, 200
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_11
+  rotate: true
+  xy: 416, 290
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_12
+  rotate: false
+  xy: 2, 68
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_13
+  rotate: false
+  xy: 176, 134
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1
+tex/sbuff_19_14
+  rotate: false
+  xy: 2, 2
+  size: 172, 64
+  orig: 172, 64
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,62 @@
+
+seffect_700004.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+skill/skill_0000
+  rotate: false
+  xy: 864, 184
+  size: 54, 59
+  orig: 154, 147
+  offset: 54, 7
+  index: -1
+skill/skill_0002
+  rotate: true
+  xy: 2, 2
+  size: 102, 116
+  orig: 154, 147
+  offset: 28, 1
+  index: -1
+skill/skill_0004
+  rotate: true
+  xy: 727, 125
+  size: 118, 135
+  orig: 154, 147
+  offset: 21, 1
+  index: -1
+skill/skill_0006
+  rotate: true
+  xy: 585, 115
+  size: 128, 140
+  orig: 154, 147
+  offset: 16, 1
+  index: -1
+skill/skill_0008
+  rotate: false
+  xy: 148, 106
+  size: 143, 137
+  orig: 154, 147
+  offset: 7, 2
+  index: -1
+skill/skill_0010
+  rotate: false
+  xy: 2, 106
+  size: 144, 137
+  orig: 154, 147
+  offset: 6, 5
+  index: -1
+skill/skill_0012
+  rotate: false
+  xy: 439, 108
+  size: 144, 135
+  orig: 154, 147
+  offset: 6, 7
+  index: -1
+skill/skill_0014
+  rotate: false
+  xy: 293, 107
+  size: 144, 136
+  orig: 154, 147
+  offset: 8, 9
+  index: -1

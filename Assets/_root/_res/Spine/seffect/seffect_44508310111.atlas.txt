@@ -1,0 +1,34 @@
+
+seffect_44508310111.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/attack_cast/0_00017
+  rotate: false
+  xy: 129, 23
+  size: 133, 95
+  orig: 300, 334
+  offset: 104, 108
+  index: -1
+effect/attack_cast/0_00019
+  rotate: true
+  xy: 2, 2
+  size: 116, 125
+  orig: 300, 334
+  offset: 117, 90
+  index: -1
+effect/attack_cast/0_00021
+  rotate: true
+  xy: 264, 22
+  size: 96, 127
+  orig: 300, 334
+  offset: 135, 91
+  index: -1
+effect/attack_cast/0_00023
+  rotate: false
+  xy: 393, 22
+  size: 48, 96
+  orig: 300, 334
+  offset: 136, 116
+  index: -1

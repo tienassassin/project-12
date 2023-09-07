@@ -1,0 +1,866 @@
+{
+"skeleton": { "hash": "Kl/PSdk4J9HGnK/I5RXmelWaSmI", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "skill02", "parent": "root", "scaleX": 0.8, "scaleY": 0.8 },
+	{ "name": "daoguang01", "parent": "skill02", "scaleX": -1 },
+	{ "name": "daoguang07", "parent": "skill02" },
+	{ "name": "daoguang08", "parent": "skill02" },
+	{ "name": "daoguang09", "parent": "skill02" },
+	{ "name": "jn2_01", "parent": "skill02" },
+	{ "name": "mingzhong01", "parent": "skill02", "scaleX": 2, "scaleY": 2 },
+	{ "name": "mingzhong02", "parent": "skill02", "scaleX": 2, "scaleY": 2 },
+	{ "name": "mingzhong03", "parent": "skill02", "scaleX": 2, "scaleY": 2 },
+	{ "name": "mingzhong04", "parent": "skill02", "scaleX": 2, "scaleY": 2 },
+	{ "name": "mingzhong05", "parent": "skill02", "scaleX": 2, "scaleY": 2 },
+	{ "name": "shuihua01", "parent": "skill02" },
+	{ "name": "shuihua02", "parent": "skill02" },
+	{ "name": "shuihua03", "parent": "skill02" },
+	{ "name": "shuihua04", "parent": "skill02" },
+	{ "name": "shuihua05", "parent": "skill02" },
+	{ "name": "tanzhilang_skill02_01", "parent": "skill02" },
+	{ "name": "tanzhilang_skill02_1", "parent": "skill02", "scaleX": -1 },
+	{ "name": "tanzhilang_skill02_02", "parent": "skill02", "scaleX": -1 },
+	{ "name": "tanzhilang_skill02_03", "parent": "skill02" },
+	{ "name": "tanzhilang_skill02_04", "parent": "skill02" }
+],
+"slots": [
+	{ "name": "tanzhilang_skill02_dg01_27", "bone": "jn2_01" },
+	{ "name": "tanzhilang_skill02_dg02_34", "bone": "daoguang07" },
+	{ "name": "tanzhilang_skill02_dg03_40", "bone": "daoguang08" },
+	{ "name": "tanzhilang_skill02_dg03_41", "bone": "daoguang01" },
+	{ "name": "tanzhilang_skill02_dg03_42", "bone": "daoguang09" },
+	{ "name": "tanzhilang_skill02_rwsx01_23", "bone": "tanzhilang_skill02_01" },
+	{ "name": "tanzhilang_skill02_rwsx01_24", "bone": "tanzhilang_skill02_1" },
+	{ "name": "tanzhilang_skill02_rwsx01_25", "bone": "tanzhilang_skill02_02" },
+	{ "name": "tanzhilang_skill02_rwtw01_27", "bone": "tanzhilang_skill02_01" },
+	{ "name": "tanzhilang_skill02_rwtw01_31", "bone": "tanzhilang_skill02_1" },
+	{ "name": "tanzhilang_skill02_rwtw01_29", "bone": "tanzhilang_skill02_01" },
+	{ "name": "tanzhilang_skill02_rwtw01_32", "bone": "tanzhilang_skill02_1" },
+	{ "name": "tanzhilang_skill02_rwtw01_28", "bone": "tanzhilang_skill02_02" },
+	{ "name": "tanzhilang_skill02_rwtw01_30", "bone": "tanzhilang_skill02_02" },
+	{ "name": "tanzhilang_skill02_rwsx02_30", "bone": "tanzhilang_skill02_04" },
+	{ "name": "tanzhilang_skill02_rwrj02_34", "bone": "tanzhilang_skill02_04" },
+	{ "name": "tanzhilang_skill02_rwrj02_35", "bone": "tanzhilang_skill02_04" },
+	{ "name": "tanzhilang_skill02_rwsx04_44", "bone": "tanzhilang_skill02_03" },
+	{ "name": "tanzhilang_skill02_rwtw04_45", "bone": "tanzhilang_skill02_03" },
+	{ "name": "tanzhilang_skill02_rwtw04_46", "bone": "tanzhilang_skill02_03" },
+	{ "name": "tanzhilang_skill02_dgbd_40", "bone": "mingzhong01" },
+	{ "name": "tanzhilang_skill02_dgbd_41", "bone": "mingzhong02" },
+	{ "name": "tanzhilang_skill02_dgbd_42", "bone": "mingzhong03" },
+	{ "name": "tanzhilang_skill02_dgbd_43", "bone": "mingzhong04" },
+	{ "name": "tanzhilang_skill02_dgbd_44", "bone": "mingzhong05" },
+	{ "name": "tanzhilang_skill02_shbk_58", "bone": "shuihua01" },
+	{ "name": "tanzhilang_skill02_shbk_59", "bone": "shuihua02" },
+	{ "name": "tanzhilang_skill02_shbk_60", "bone": "shuihua03" },
+	{ "name": "tanzhilang_skill02_shbk_61", "bone": "shuihua04" },
+	{ "name": "tanzhilang_skill02_shbk_62", "bone": "shuihua05" },
+	{ "name": "baidi_01_01", "bone": "skill02" }
+],
+"skins": {
+	"default": {
+		"baidi_01_01": {
+			"baidi_01_01": { "scaleX": 30, "scaleY": 30, "width": 140, "height": 130 }
+		},
+		"tanzhilang_skill02_dg01_27": {
+			"tanzhilang_skill02_dg01_27": { "x": 465, "y": 154, "scaleX": 2, "scaleY": 2, "width": 692, "height": 349 },
+			"tanzhilang_skill02_dg01_28": { "x": 465, "y": 154, "scaleX": 2, "scaleY": 2, "width": 692, "height": 349 },
+			"tanzhilang_skill02_dg01_29": { "x": 465, "y": 154, "scaleX": 2, "scaleY": 2, "width": 692, "height": 349 },
+			"tanzhilang_skill02_dg01_30": { "x": 465, "y": 154, "scaleX": 2, "scaleY": 2, "width": 692, "height": 349 },
+			"tanzhilang_skill02_dg01_31": { "x": 465, "y": 154, "scaleX": 2, "scaleY": 2, "width": 692, "height": 349 }
+		},
+		"tanzhilang_skill02_dg02_34": {
+			"tanzhilang_skill02_dg02_34": { "x": 559.88, "y": 63.98, "scaleX": 2, "scaleY": 2, "width": 653, "height": 414 },
+			"tanzhilang_skill02_dg02_35": { "x": 559.88, "y": 63.98, "scaleX": 2, "scaleY": 2, "width": 653, "height": 414 },
+			"tanzhilang_skill02_dg02_36": { "x": 559.88, "y": 63.98, "scaleX": 2, "scaleY": 2, "width": 653, "height": 414 },
+			"tanzhilang_skill02_dg02_37": { "x": 559.88, "y": 63.98, "scaleX": 2, "scaleY": 2, "width": 653, "height": 414 },
+			"tanzhilang_skill02_dg02_39": { "x": 559.88, "y": 63.98, "scaleX": 2, "scaleY": 2, "width": 653, "height": 414 }
+		},
+		"tanzhilang_skill02_dg03_40": {
+			"tanzhilang_skill02_dg03_40": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_41": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_42": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_43": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_44": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 }
+		},
+		"tanzhilang_skill02_dg03_41": {
+			"tanzhilang_skill02_dg03_40": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_41": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_42": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_43": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_44": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 }
+		},
+		"tanzhilang_skill02_dg03_42": {
+			"tanzhilang_skill02_dg03_40": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_41": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_42": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_43": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 },
+			"tanzhilang_skill02_dg03_44": { "scaleX": 2, "scaleY": 2, "width": 706, "height": 401 }
+		},
+		"tanzhilang_skill02_dgbd_40": {
+			"tanzhilang_skill02_dgbd_40": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_42": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_44": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_46": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_48": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_49": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 }
+		},
+		"tanzhilang_skill02_dgbd_41": {
+			"tanzhilang_skill02_dgbd_40": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_42": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_44": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_46": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_48": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_49": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 }
+		},
+		"tanzhilang_skill02_dgbd_42": {
+			"tanzhilang_skill02_dgbd_40": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_42": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_44": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_46": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_48": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_49": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 }
+		},
+		"tanzhilang_skill02_dgbd_43": {
+			"tanzhilang_skill02_dgbd_40": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_42": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_44": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_46": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_48": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_49": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 }
+		},
+		"tanzhilang_skill02_dgbd_44": {
+			"tanzhilang_skill02_dgbd_40": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_42": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_44": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_46": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_48": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 },
+			"tanzhilang_skill02_dgbd_49": { "scaleX": 2, "scaleY": 2, "width": 366, "height": 479 }
+		},
+		"tanzhilang_skill02_rwrj02_34": {
+			"tanzhilang_skill02_rwrj02_39": { "scaleX": 2, "scaleY": 2, "width": 469, "height": 209 }
+		},
+		"tanzhilang_skill02_rwrj02_35": {
+			"tanzhilang_skill02_rwrj02_45": { "scaleX": 2, "scaleY": 2, "width": 469, "height": 209 }
+		},
+		"tanzhilang_skill02_rwsx01_23": {
+			"tanzhilang_skill02_rwsx01_25": { "x": -122, "y": -145, "scaleX": 2, "scaleY": 2, "width": 469, "height": 362 },
+			"tanzhilang_skill02_rwsx01_26": { "x": -122, "y": -145, "scaleX": 2, "scaleY": 2, "width": 469, "height": 362 },
+			"tanzhilang_skill02_rwsx01_27": { "x": -122, "y": -145, "scaleX": 2, "scaleY": 2, "width": 469, "height": 362 }
+		},
+		"tanzhilang_skill02_rwsx01_24": {
+			"tanzhilang_skill02_rwsx01_23": { "x": -122, "y": -145, "scaleX": 2, "scaleY": 2, "width": 469, "height": 362 },
+			"tanzhilang_skill02_rwsx01_25": { "x": -122, "y": -145, "scaleX": 2, "scaleY": 2, "width": 469, "height": 362 },
+			"tanzhilang_skill02_rwsx01_27": { "x": -122, "y": -145, "scaleX": 2, "scaleY": 2, "width": 469, "height": 362 }
+		},
+		"tanzhilang_skill02_rwsx01_25": {
+			"tanzhilang_skill02_rwsx01_23": { "x": -117.15, "y": -137.54, "scaleX": 2, "scaleY": 2, "width": 469, "height": 362 },
+			"tanzhilang_skill02_rwsx01_25": { "x": -117.15, "y": -137.54, "scaleX": 2, "scaleY": 2, "width": 469, "height": 362 },
+			"tanzhilang_skill02_rwsx01_27": { "x": -117.15, "y": -137.54, "scaleX": 2, "scaleY": 2, "width": 469, "height": 362 }
+		},
+		"tanzhilang_skill02_rwsx02_30": {
+			"tanzhilang_skill02_rwsx02_30": { "x": 36, "y": 299.46, "scaleX": 2, "scaleY": 2, "width": 446, "height": 559 },
+			"tanzhilang_skill02_rwsx02_32": { "x": 36, "y": 299.46, "scaleX": 2, "scaleY": 2, "width": 446, "height": 559 },
+			"tanzhilang_skill02_rwsx02_33": { "x": 36, "y": 299.46, "scaleX": 2, "scaleY": 2, "width": 446, "height": 559 }
+		},
+		"tanzhilang_skill02_rwsx04_44": {
+			"tanzhilang_skill02_rwsx04_44": { "x": -40, "y": -7.54, "scaleX": 2, "scaleY": 2, "width": 267, "height": 541 },
+			"tanzhilang_skill02_rwsx04_45": { "x": -40, "y": -7.54, "scaleX": 2, "scaleY": 2, "width": 267, "height": 541 },
+			"tanzhilang_skill02_rwsx04_46": { "x": -40, "y": -7.54, "scaleX": 2, "scaleY": 2, "width": 267, "height": 541 }
+		},
+		"tanzhilang_skill02_rwtw01_27": {
+			"tanzhilang_skill02_rwtw01_32": { "scaleX": 2, "scaleY": 2, "width": 378, "height": 214 }
+		},
+		"tanzhilang_skill02_rwtw01_28": {
+			"tanzhilang_skill02_rwtw01_32": { "scaleX": 2, "scaleY": 2, "width": 378, "height": 214 }
+		},
+		"tanzhilang_skill02_rwtw01_29": {
+			"tanzhilang_skill02_rwtw01_37": { "scaleX": 2, "scaleY": 2, "width": 378, "height": 214 }
+		},
+		"tanzhilang_skill02_rwtw01_30": {
+			"tanzhilang_skill02_rwtw01_37": { "scaleX": 2, "scaleY": 2, "width": 378, "height": 214 }
+		},
+		"tanzhilang_skill02_rwtw01_31": {
+			"tanzhilang_skill02_rwtw01_32": { "scaleX": 2, "scaleY": 2, "width": 378, "height": 214 }
+		},
+		"tanzhilang_skill02_rwtw01_32": {
+			"tanzhilang_skill02_rwtw01_37": { "scaleX": 2, "scaleY": 2, "width": 378, "height": 214 }
+		},
+		"tanzhilang_skill02_rwtw04_45": {
+			"tanzhilang_skill02_rwtw04_50": { "scaleX": 2, "scaleY": 2, "width": 255, "height": 405 }
+		},
+		"tanzhilang_skill02_rwtw04_46": {
+			"tanzhilang_skill02_rwtw04_54": { "scaleX": 2, "scaleY": 2, "width": 255, "height": 405 }
+		},
+		"tanzhilang_skill02_shbk_58": {
+			"tanzhilang_skill02_shbk_58": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_60": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_63": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_65": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_67": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_69": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 }
+		},
+		"tanzhilang_skill02_shbk_59": {
+			"tanzhilang_skill02_shbk_58": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_60": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_63": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_65": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_67": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_69": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 }
+		},
+		"tanzhilang_skill02_shbk_60": {
+			"tanzhilang_skill02_shbk_58": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_60": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_63": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_65": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_67": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_69": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 }
+		},
+		"tanzhilang_skill02_shbk_61": {
+			"tanzhilang_skill02_shbk_58": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_60": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_63": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_65": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_67": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_69": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 }
+		},
+		"tanzhilang_skill02_shbk_62": {
+			"tanzhilang_skill02_shbk_58": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_60": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_63": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_65": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_67": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 },
+			"tanzhilang_skill02_shbk_69": { "scaleX": 2, "scaleY": 2, "width": 360, "height": 409 }
+		}
+	}
+},
+"events": {
+	"qishou_21_5_1": {},
+	"qishou_21_5_2": {},
+	"qishou_21_5_3": {},
+	"qishou_21_5_4": {},
+	"qishou_21_5_5": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"baidi_01_01": {
+				"color": [
+					{ "time": 0.0667, "color": "ffffff00" },
+					{ "time": 0.1, "color": "ffffff75" },
+					{ "time": 0.1333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3667, "color": "ffffff00" },
+					{ "time": 0.4, "color": "ffffff76" },
+					{ "time": 0.4333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6, "color": "ffffff00" },
+					{ "time": 0.6333, "color": "ffffff6f" },
+					{ "time": 0.6667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.8, "color": "ffffff00" },
+					{ "time": 0.8333, "color": "ffffff70" },
+					{ "time": 0.8667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.9333, "color": "ffffff00" },
+					{ "time": 0.9667, "color": "ffffff71" },
+					{ "time": 1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.0667, "name": null },
+					{ "time": 0.1, "name": "baidi_01_01" },
+					{ "time": 0.1333, "name": null },
+					{ "time": 0.3667, "name": null },
+					{ "time": 0.4, "name": "baidi_01_01" },
+					{ "time": 0.4333, "name": null },
+					{ "time": 0.6, "name": null },
+					{ "time": 0.6333, "name": "baidi_01_01" },
+					{ "time": 0.6667, "name": null },
+					{ "time": 0.8, "name": null },
+					{ "time": 0.8333, "name": "baidi_01_01" },
+					{ "time": 0.8667, "name": null },
+					{ "time": 0.9333, "name": null },
+					{ "time": 0.9667, "name": "baidi_01_01" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"tanzhilang_skill02_dg01_27": {
+				"color": [
+					{ "time": 0.0667, "color": "ffffffbe" },
+					{ "time": 0.1333, "color": "ffffffff" },
+					{ "time": 0.2667, "color": "ffffff7e" },
+					{ "time": 0.4, "color": "ffffff8e" }
+				],
+				"attachment": [
+					{ "time": 0.0667, "name": "tanzhilang_skill02_dg01_27" },
+					{ "time": 0.1, "name": "tanzhilang_skill02_dg01_29" },
+					{ "time": 0.1333, "name": "tanzhilang_skill02_dg01_31" },
+					{ "time": 0.4333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_dg02_34": {
+				"color": [
+					{ "time": 0.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.5667, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ffffff26" }
+				],
+				"attachment": [
+					{ "time": 0.4, "name": "tanzhilang_skill02_dg02_34" },
+					{ "time": 0.4333, "name": "tanzhilang_skill02_dg02_35" },
+					{ "time": 0.4667, "name": "tanzhilang_skill02_dg02_36" },
+					{ "time": 0.5, "name": "tanzhilang_skill02_dg02_37" },
+					{ "time": 0.5667, "name": "tanzhilang_skill02_dg02_39" },
+					{ "time": 0.6667, "name": null }
+				]
+			},
+			"tanzhilang_skill02_dg03_40": {
+				"attachment": [
+					{ "time": 0.6, "name": "tanzhilang_skill02_dg03_40" },
+					{ "time": 0.6333, "name": "tanzhilang_skill02_dg03_41" },
+					{ "time": 0.6667, "name": "tanzhilang_skill02_dg03_42" },
+					{ "time": 0.7, "name": "tanzhilang_skill02_dg03_43" },
+					{ "time": 0.7333, "name": "tanzhilang_skill02_dg03_44" },
+					{ "time": 0.8667, "name": null }
+				]
+			},
+			"tanzhilang_skill02_dg03_41": {
+				"color": [
+					{ "time": 0.8333, "color": "ffffffb2" },
+					{ "time": 1, "color": "ffffffff" },
+					{ "time": 1.2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.8333, "name": "tanzhilang_skill02_dg03_40" },
+					{ "time": 0.9, "name": "tanzhilang_skill02_dg03_41" },
+					{ "time": 0.9667, "name": "tanzhilang_skill02_dg03_42" },
+					{ "time": 1.0333, "name": "tanzhilang_skill02_dg03_43" },
+					{ "time": 1.1, "name": "tanzhilang_skill02_dg03_44" },
+					{ "time": 1.2, "name": null }
+				]
+			},
+			"tanzhilang_skill02_dgbd_40": {
+				"color": [
+					{ "time": 0.0667, "color": "ffffff7d" },
+					{ "time": 0.1333, "color": "ffffffff" },
+					{ "time": 0.3, "color": "ffffffd7" },
+					{ "time": 0.4333, "color": "ffffff47" }
+				],
+				"attachment": [
+					{ "time": 0.0667, "name": "tanzhilang_skill02_dgbd_40" },
+					{ "time": 0.1333, "name": "tanzhilang_skill02_dgbd_42" },
+					{ "time": 0.1667, "name": "tanzhilang_skill02_dgbd_44" },
+					{ "time": 0.2333, "name": "tanzhilang_skill02_dgbd_46" },
+					{ "time": 0.3, "name": "tanzhilang_skill02_dgbd_48" },
+					{ "time": 0.3667, "name": "tanzhilang_skill02_dgbd_49" },
+					{ "time": 0.4333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_dgbd_41": {
+				"attachment": [
+					{ "time": 0.4, "name": "tanzhilang_skill02_dgbd_40" },
+					{ "time": 0.4667, "name": "tanzhilang_skill02_dgbd_42" },
+					{ "time": 0.5333, "name": "tanzhilang_skill02_dgbd_44" },
+					{ "time": 0.6, "name": "tanzhilang_skill02_dgbd_46" },
+					{ "time": 0.6667, "name": "tanzhilang_skill02_dgbd_48" },
+					{ "time": 0.7, "name": "tanzhilang_skill02_dgbd_49" },
+					{ "time": 0.7333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_dgbd_42": {
+				"attachment": [
+					{ "time": 0.6333, "name": "tanzhilang_skill02_dgbd_40" },
+					{ "time": 0.7, "name": "tanzhilang_skill02_dgbd_42" },
+					{ "time": 0.7667, "name": "tanzhilang_skill02_dgbd_44" },
+					{ "time": 0.8333, "name": "tanzhilang_skill02_dgbd_46" },
+					{ "time": 0.9, "name": "tanzhilang_skill02_dgbd_48" },
+					{ "time": 0.9333, "name": "tanzhilang_skill02_dgbd_49" },
+					{ "time": 0.9667, "name": null }
+				]
+			},
+			"tanzhilang_skill02_dgbd_43": {
+				"attachment": [
+					{ "time": 0.8333, "name": "tanzhilang_skill02_dgbd_40" },
+					{ "time": 0.9, "name": "tanzhilang_skill02_dgbd_42" },
+					{ "time": 0.9333, "name": "tanzhilang_skill02_dgbd_44" },
+					{ "time": 1, "name": "tanzhilang_skill02_dgbd_46" },
+					{ "time": 1.0667, "name": "tanzhilang_skill02_dgbd_48" },
+					{ "time": 1.1333, "name": "tanzhilang_skill02_dgbd_49" },
+					{ "time": 1.2, "name": null }
+				]
+			},
+			"tanzhilang_skill02_dgbd_44": {
+				"attachment": [
+					{ "time": 0.9667, "name": "tanzhilang_skill02_dgbd_40" },
+					{ "time": 1.0333, "name": "tanzhilang_skill02_dgbd_42" },
+					{ "time": 1.1, "name": "tanzhilang_skill02_dgbd_44" },
+					{ "time": 1.1667, "name": "tanzhilang_skill02_dgbd_46" },
+					{ "time": 1.2333, "name": "tanzhilang_skill02_dgbd_48" },
+					{ "time": 1.2667, "name": "tanzhilang_skill02_dgbd_49" },
+					{ "time": 1.3, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwrj02_34": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.3333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwrj02_35": {
+				"attachment": [
+					{ "time": 0.4, "name": "tanzhilang_skill02_rwrj02_45" },
+					{ "time": 1.3333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwsx01_23": {
+				"color": [
+					{ "time": 0.0667, "color": "ffffff7e" },
+					{ "time": 0.1333, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffffc6" },
+					{ "time": 0.5667, "color": "ffffffa2" },
+					{ "time": 1.2333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.2, "name": "tanzhilang_skill02_rwsx01_25" },
+					{ "time": 0.2667, "name": "tanzhilang_skill02_rwsx01_26" },
+					{ "time": 0.3333, "name": "tanzhilang_skill02_rwsx01_27" },
+					{ "time": 1.2333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwsx01_24": {
+				"color": [
+					{ "time": 0.9, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.2333, "color": "ffffffff" },
+					{ "time": 1.5333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.9, "name": "tanzhilang_skill02_rwsx01_23" },
+					{ "time": 1.0333, "name": "tanzhilang_skill02_rwsx01_25" },
+					{ "time": 1.5333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwsx01_25": {
+				"color": [
+					{ "time": 0.5667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1, "color": "ffffffff" },
+					{ "time": 1.4, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.5667, "name": "tanzhilang_skill02_rwsx01_23" },
+					{ "time": 0.7, "name": "tanzhilang_skill02_rwsx01_25" },
+					{ "time": 1.3333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwsx02_30": {
+				"color": [
+					{ "time": 0.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.7333, "color": "ffffffff" },
+					{ "time": 1.1667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.4, "name": "tanzhilang_skill02_rwsx02_30" },
+					{ "time": 0.5333, "name": "tanzhilang_skill02_rwsx02_32" },
+					{ "time": 0.6, "name": "tanzhilang_skill02_rwsx02_33" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwsx04_44": {
+				"color": [
+					{ "time": 0.8333, "color": "ffffffff" },
+					{ "time": 1.3, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.8333, "name": "tanzhilang_skill02_rwsx04_44" },
+					{ "time": 0.9, "name": "tanzhilang_skill02_rwsx04_45" },
+					{ "time": 1, "name": "tanzhilang_skill02_rwsx04_46" },
+					{ "time": 1.3, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwtw01_27": {
+				"color": [
+					{ "time": 0.0667, "color": "ffffffff" },
+					{ "time": 1.0667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0667, "name": "tanzhilang_skill02_rwtw01_32" },
+					{ "time": 1.0667, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwtw01_28": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5667, "name": "tanzhilang_skill02_rwtw01_32" },
+					{ "time": 1.4, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwtw01_29": {
+				"color": [
+					{ "time": 0.0667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0.0667, "name": "tanzhilang_skill02_rwtw01_37" },
+					{ "time": 1.2667, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwtw01_30": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwtw01_31": {
+				"color": [
+					{ "time": 1.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.2333, "color": "ffffffff" },
+					{ "time": 1.5333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.9, "name": "tanzhilang_skill02_rwtw01_32" },
+					{ "time": 1.5333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwtw01_32": {
+				"attachment": [
+					{ "time": 0.9, "name": "tanzhilang_skill02_rwtw01_37" },
+					{ "time": 1.5333, "name": null }
+				]
+			},
+			"tanzhilang_skill02_rwtw04_45": {
+				"attachment": [
+					{ "time": 0.8333, "name": "tanzhilang_skill02_rwtw04_50" },
+					{ "time": 1.3, "name": null }
+				]
+			},
+			"tanzhilang_skill02_shbk_58": {
+				"attachment": [
+					{ "time": 1.2, "name": "tanzhilang_skill02_shbk_58" },
+					{ "time": 1.2667, "name": "tanzhilang_skill02_shbk_60" },
+					{ "time": 1.3667, "name": "tanzhilang_skill02_shbk_63" },
+					{ "time": 1.4333, "name": "tanzhilang_skill02_shbk_65" },
+					{ "time": 1.5, "name": "tanzhilang_skill02_shbk_67" },
+					{ "time": 1.5667, "name": "tanzhilang_skill02_shbk_69" },
+					{ "time": 1.6, "name": null }
+				]
+			},
+			"tanzhilang_skill02_shbk_59": {
+				"attachment": [
+					{ "time": 1.2667, "name": "tanzhilang_skill02_shbk_58" },
+					{ "time": 1.3333, "name": "tanzhilang_skill02_shbk_60" },
+					{ "time": 1.4333, "name": "tanzhilang_skill02_shbk_63" },
+					{ "time": 1.5, "name": "tanzhilang_skill02_shbk_65" },
+					{ "time": 1.5667, "name": "tanzhilang_skill02_shbk_67" },
+					{ "time": 1.6333, "name": "tanzhilang_skill02_shbk_69" },
+					{ "time": 1.6667, "name": null }
+				]
+			},
+			"tanzhilang_skill02_shbk_60": {
+				"attachment": [
+					{ "time": 1.3, "name": "tanzhilang_skill02_shbk_58" },
+					{ "time": 1.3667, "name": "tanzhilang_skill02_shbk_60" },
+					{ "time": 1.4667, "name": "tanzhilang_skill02_shbk_63" },
+					{ "time": 1.5333, "name": "tanzhilang_skill02_shbk_65" },
+					{ "time": 1.6, "name": "tanzhilang_skill02_shbk_67" },
+					{ "time": 1.6667, "name": "tanzhilang_skill02_shbk_69" },
+					{ "time": 1.7, "name": null }
+				]
+			},
+			"tanzhilang_skill02_shbk_61": {
+				"attachment": [
+					{ "time": 1.3667, "name": "tanzhilang_skill02_shbk_58" },
+					{ "time": 1.4333, "name": "tanzhilang_skill02_shbk_60" },
+					{ "time": 1.5333, "name": "tanzhilang_skill02_shbk_63" },
+					{ "time": 1.6, "name": "tanzhilang_skill02_shbk_65" },
+					{ "time": 1.6667, "name": "tanzhilang_skill02_shbk_67" },
+					{ "time": 1.7333, "name": "tanzhilang_skill02_shbk_69" },
+					{ "time": 1.7667, "name": null }
+				]
+			},
+			"tanzhilang_skill02_shbk_62": {
+				"attachment": [
+					{ "time": 1.4667, "name": "tanzhilang_skill02_shbk_58" },
+					{ "time": 1.5333, "name": "tanzhilang_skill02_shbk_60" },
+					{ "time": 1.6333, "name": "tanzhilang_skill02_shbk_63" },
+					{ "time": 1.7, "name": "tanzhilang_skill02_shbk_65" },
+					{ "time": 1.7667, "name": "tanzhilang_skill02_shbk_67" },
+					{ "time": 1.8, "name": "tanzhilang_skill02_shbk_69" },
+					{ "time": 1.8333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"jn2_01": {
+				"translate": [
+					{ "time": 0.0667, "x": -250.38, "y": 19.32 }
+				],
+				"scale": [
+					{
+						"time": 0.0667,
+						"x": 0.8,
+						"y": 0.8,
+						"curve": [ 0.294, 0.34, 0.63, 0.68 ]
+					},
+					{
+						"time": 0.1333,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.308, 0.35, 0.644, 0.69 ]
+					},
+					{
+						"time": 0.2667,
+						"x": 1.2,
+						"y": 1.2,
+						"curve": [ 0.302, 0.59, 0.656, 1 ]
+					},
+					{ "time": 0.4, "x": 1.3, "y": 1.3 }
+				]
+			},
+			"daoguang07": {
+				"rotate": [
+					{ "time": 0.4, "angle": 53.46 }
+				],
+				"translate": [
+					{
+						"time": 0.4,
+						"x": 113.16,
+						"y": 50.4,
+						"curve": [ 0.216, 0.4, 0.614, 1 ]
+					},
+					{ "time": 0.6667, "x": 62.15, "y": -163.19 }
+				],
+				"scale": [
+					{
+						"time": 0.4,
+						"x": 0.4,
+						"y": 0.5,
+						"curve": [ 0.679, 0.05, 0.746, 0.64 ]
+					},
+					{
+						"time": 0.5,
+						"x": 0.723,
+						"y": 0.742,
+						"curve": [ 0.245, 0.48, 0.55, 0.85 ]
+					},
+					{ "time": 0.6667, "x": 0.8, "y": 0.8 }
+				]
+			},
+			"daoguang08": {
+				"translate": [
+					{
+						"time": 0.6,
+						"x": 221.29,
+						"y": 29.97,
+						"curve": [ 0.152, 0.4, 0.614, 1 ]
+					},
+					{ "time": 0.8333, "x": -222.14, "y": 56.92 }
+				],
+				"scale": [
+					{
+						"time": 0.6,
+						"x": 0.8,
+						"y": 0.6,
+						"curve": [ 0.152, 0.4, 0.614, 1 ]
+					},
+					{ "time": 0.8333, "x": 1.2, "y": 1.2 }
+				]
+			},
+			"daoguang09": {
+				"rotate": [
+					{ "time": 0.8333, "angle": -3.65 }
+				],
+				"translate": [
+					{ "time": 0.8333, "x": 474.62, "y": -320.31 }
+				],
+				"scale": [
+					{ "time": 0.8333, "x": 0.5, "y": 1 }
+				],
+				"shear": [
+					{ "time": 0.8333, "x": -24.09, "y": 0 }
+				]
+			},
+			"daoguang01": {
+				"rotate": [
+					{ "time": 0.8333, "angle": -73.75 }
+				],
+				"translate": [
+					{ "time": 0.8333, "x": 480.65, "y": -30.99 }
+				],
+				"scale": [
+					{ "time": 0.8333, "x": -0.8, "y": 0.6 }
+				],
+				"shear": [
+					{ "time": 0.8333, "x": 1.26, "y": -21.43 }
+				]
+			},
+			"tanzhilang_skill02_01": {
+				"translate": [
+					{
+						"time": 0.0667,
+						"x": -174.12,
+						"y": 137.96,
+						"curve": [ 0.289, 0.34, 0.627, 0.68 ]
+					},
+					{
+						"time": 0.1333,
+						"x": 298.38,
+						"y": 423.92,
+						"curve": [ 0.282, 0.55, 0.645, 1 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 413.44,
+						"y": 505.98,
+						"curve": [ 0.233, 0.49, 0.609, 1 ]
+					},
+					{ "time": 1.0667, "x": 474.36, "y": 569.74 }
+				]
+			},
+			"tanzhilang_skill02_04": {
+				"translate": [
+					{ "time": 0.3667, "x": 348.83, "y": 222.22 },
+					{ "time": 0.4, "x": 232.47, "y": 18.19 },
+					{
+						"time": 0.5,
+						"x": 162.65,
+						"y": -104.23,
+						"curve": [ 0.246, 0.5, 0.622, 1 ]
+					},
+					{ "time": 1.3333, "x": 116.11, "y": -185.84 }
+				],
+				"scale": [
+					{ "time": 0.4, "x": 1, "y": 1 }
+				]
+			},
+			"tanzhilang_skill02_03": {
+				"translate": [
+					{ "time": 0.8, "x": 787.95, "y": 316.65 },
+					{
+						"time": 0.8333,
+						"x": 679.77,
+						"y": 50.81,
+						"curve": [ 0.544, 0.06, 0.807, 0.5 ]
+					},
+					{ "time": 0.9333, "x": 679.77, "y": 21.62, "curve": "stepped" },
+					{ "time": 1.0667, "x": 679.77, "y": 21.62 }
+				]
+			},
+			"mingzhong01": {
+				"rotate": [
+					{ "time": 0, "angle": -94.4, "curve": "stepped" },
+					{ "time": 0.0667, "angle": -94.4 }
+				],
+				"translate": [
+					{ "time": 0, "x": -64.74, "y": 466.13 },
+					{ "time": 0.0667, "x": 133.72, "y": 343.83 }
+				]
+			},
+			"mingzhong02": {
+				"rotate": [
+					{ "time": 0.4, "angle": -63.47 }
+				],
+				"translate": [
+					{ "time": 0.4, "x": 381.94, "y": 308.17 }
+				]
+			},
+			"mingzhong03": {
+				"rotate": [
+					{ "time": 0.6333, "angle": 26.79 }
+				],
+				"translate": [
+					{ "time": 0.6333, "x": 146.91, "y": 342.13 }
+				]
+			},
+			"mingzhong04": {
+				"translate": [
+					{ "time": 0.8333, "x": 773.98, "y": -154 }
+				]
+			},
+			"mingzhong05": {
+				"rotate": [
+					{ "time": 0.9667, "angle": 28.43 }
+				],
+				"translate": [
+					{ "time": 0.9667, "x": 125.2, "y": -25.63 }
+				]
+			},
+			"shuihua01": {
+				"translate": [
+					{ "time": 1.2, "x": 651.29, "y": 361.22 }
+				]
+			},
+			"shuihua02": {
+				"translate": [
+					{ "time": 1.2, "x": 651.29, "y": -257.23 }
+				]
+			},
+			"shuihua03": {
+				"translate": [
+					{ "time": 1.3, "x": 35.82, "y": -257.09 }
+				]
+			},
+			"shuihua04": {
+				"translate": [
+					{ "time": 1.3667, "x": 25.11, "y": 414.86 }
+				]
+			},
+			"shuihua05": {
+				"translate": [
+					{ "time": 1.4667, "x": -353.14, "y": 51.98 }
+				]
+			},
+			"skill02": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -300, "y": 0 }
+				]
+			},
+			"tanzhilang_skill02_02": {
+				"translate": [
+					{
+						"time": 0.5667,
+						"x": 655.14,
+						"y": 89.59,
+						"curve": [ 0.26, 0.37, 0.611, 0.75 ]
+					},
+					{
+						"time": 0.6667,
+						"x": 248.69,
+						"y": 399.27,
+						"curve": [ 0.324, 0.42, 0.659, 0.76 ]
+					},
+					{
+						"time": 0.8333,
+						"x": 174.37,
+						"y": 455.89,
+						"curve": [ 0.33, 0.64, 0.666, 1 ]
+					},
+					{ "time": 1.3333, "x": 147.7, "y": 476.21 }
+				]
+			},
+			"tanzhilang_skill02_1": {
+				"rotate": [
+					{ "time": 0.9, "angle": 8.54 }
+				],
+				"translate": [
+					{ "time": 0, "x": -3.08, "y": -3.08 },
+					{ "time": 0.9, "x": 664.38, "y": 144.72 },
+					{ "time": 0.9667, "x": 90.03, "y": 95.48 },
+					{
+						"time": 1.1,
+						"x": -105.25,
+						"y": 144.72,
+						"curve": [ 0.233, 0.4, 0.622, 1 ]
+					},
+					{ "time": 1.4, "x": -184.22, "y": 169.33 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0.0333 }
+		],
+		"events": [
+			{ "time": 0.1, "name": "qishou_21_5_5" },
+			{ "time": 0.4, "name": "qishou_21_5_4" },
+			{ "time": 0.6333, "name": "qishou_21_5_3" },
+			{ "time": 0.8333, "name": "qishou_21_5_2" },
+			{ "time": 1, "name": "qishou_21_5_1" }
+		]
+	}
+}
+}

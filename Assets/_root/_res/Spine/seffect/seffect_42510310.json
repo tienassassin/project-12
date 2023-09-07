@@ -1,0 +1,365 @@
+{
+"skeleton": { "hash": "kEF6TrQarI1/KjwrNYV1fRd1GoE", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "xiaojineng", "parent": "root" },
+	{ "name": "baodian01", "parent": "xiaojineng", "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "bone", "parent": "root", "color": "ff0000ff" },
+	{ "name": "dazhao", "parent": "root" },
+	{ "name": "fazhen", "parent": "dazhao", "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "gongji", "parent": "xiaojineng", "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "huiju01", "parent": "xiaojineng", "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "jianxialuo", "parent": "dazhao", "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "luodi", "parent": "dazhao", "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "shine", "parent": "dazhao", "scaleX": 3, "scaleY": 3 }
+],
+"slots": [
+	{ "name": "luodi", "bone": "luodi" },
+	{ "name": "jianxialuo", "bone": "jianxialuo" },
+	{ "name": "shine", "bone": "shine", "blend": "additive" },
+	{ "name": "fazhen", "bone": "fazhen" },
+	{ "name": "gongji", "bone": "gongji" },
+	{ "name": "huiju01", "bone": "huiju01", "blend": "additive" },
+	{ "name": "baodian01", "bone": "baodian01" }
+],
+"skins": {
+	"default": {
+		"baodian01": {
+			"texiao/bd_00": { "width": 130, "height": 130 },
+			"texiao/bd_01": { "width": 130, "height": 130 },
+			"texiao/bd_02": { "width": 130, "height": 130 },
+			"texiao/bd_03": { "width": 130, "height": 130 },
+			"texiao/bd_04": { "width": 130, "height": 130 },
+			"texiao/bd_05": { "width": 130, "height": 130 },
+			"texiao/bd_06": { "width": 130, "height": 130 }
+		},
+		"fazhen": {
+			"texiao/fazhen_00": { "width": 275, "height": 95 },
+			"texiao/fazhen_01": { "width": 275, "height": 95 },
+			"texiao/fazhen_02": { "width": 275, "height": 95 },
+			"texiao/fazhen_03": { "width": 275, "height": 95 },
+			"texiao/fazhen_04": { "width": 275, "height": 95 },
+			"texiao/fazhen_05": { "width": 275, "height": 95 },
+			"texiao/fazhen_06": { "width": 275, "height": 95 },
+			"texiao/fazhen_07": { "width": 275, "height": 95 },
+			"texiao/fazhen_08": { "width": 275, "height": 95 },
+			"texiao/fazhen_09": { "width": 275, "height": 95 },
+			"texiao/fazhen_10": { "width": 275, "height": 95 },
+			"texiao/fazhen_11": { "width": 275, "height": 95 },
+			"texiao/fazhen_12": { "width": 275, "height": 95 },
+			"texiao/fazhen_13": { "width": 275, "height": 95 },
+			"texiao/fazhen_14": { "width": 275, "height": 95 },
+			"texiao/fazhen_15": { "width": 275, "height": 95 },
+			"texiao/fazhen_16": { "width": 275, "height": 95 },
+			"texiao/fazhen_17": { "width": 275, "height": 95 },
+			"texiao/fazhen_18": { "width": 275, "height": 95 },
+			"texiao/fazhen_19": { "width": 275, "height": 95 },
+			"texiao/fazhen_20": { "width": 275, "height": 95 },
+			"texiao/fazhen_21": { "width": 275, "height": 95 },
+			"texiao/fazhen_22": { "width": 275, "height": 95 },
+			"texiao/fazhen_23": { "width": 275, "height": 95 },
+			"texiao/fazhen_24": { "width": 275, "height": 95 },
+			"texiao/fazhen_25": { "width": 275, "height": 95 },
+			"texiao/fazhen_26": { "width": 275, "height": 95 },
+			"texiao/fazhen_27": { "width": 275, "height": 95 },
+			"texiao/fazhen_28": { "width": 275, "height": 95 }
+		},
+		"gongji": {
+			"texiao/jnyh_00": { "width": 425, "height": 145 },
+			"texiao/jnyh_01": { "width": 425, "height": 145 },
+			"texiao/jnyh_02": { "width": 425, "height": 145 },
+			"texiao/jnyh_03": { "width": 425, "height": 145 },
+			"texiao/jnyh_04": { "width": 425, "height": 145 },
+			"texiao/jnyh_05": { "width": 425, "height": 145 },
+			"texiao/jnyh_06": { "width": 425, "height": 145 },
+			"texiao/jnyh_07": { "width": 425, "height": 145 },
+			"texiao/jnyh_08": { "width": 425, "height": 145 },
+			"texiao/jnyh_09": { "width": 425, "height": 145 },
+			"texiao/jnyh_10": { "width": 425, "height": 145 },
+			"texiao/jnyh_11": { "width": 425, "height": 145 }
+		},
+		"huiju01": {
+			"texiao/jnyjq_00": { "width": 250, "height": 127 },
+			"texiao/jnyjq_02": { "width": 250, "height": 127 },
+			"texiao/jnyjq_04": { "width": 250, "height": 127 },
+			"texiao/jnyjq_06": { "width": 250, "height": 127 },
+			"texiao/jnyjq_08": { "width": 250, "height": 127 },
+			"texiao/jnyjq_10": { "width": 250, "height": 127 },
+			"texiao/jnyjq_12": { "width": 250, "height": 127 },
+			"texiao/jnyjq_14": { "width": 250, "height": 127 },
+			"texiao/jnyjq_16": { "width": 250, "height": 127 },
+			"texiao/jnyjq_18": { "width": 250, "height": 127 },
+			"texiao/jnyjq_20": { "width": 250, "height": 127 },
+			"texiao/jnyjq_22": { "width": 250, "height": 127 },
+			"texiao/jnyjq_24": { "width": 250, "height": 127 },
+			"texiao/jnyjq_26": { "width": 250, "height": 127 },
+			"texiao/jnyjq_28": { "width": 250, "height": 127 },
+			"texiao/jnyjq_30": { "width": 250, "height": 127 },
+			"texiao/jnyjq_32": { "width": 250, "height": 127 }
+		},
+		"jianxialuo": {
+			"texiao/xialuojian_00": { "width": 165, "height": 160 },
+			"texiao/xialuojian_01": { "width": 165, "height": 160 },
+			"texiao/xialuojian_02": { "width": 165, "height": 160 },
+			"texiao/xialuojian_03": { "width": 165, "height": 160 },
+			"texiao/xialuojian_04": { "width": 165, "height": 160 },
+			"texiao/xialuojian_05": { "width": 165, "height": 160 },
+			"texiao/xialuojian_06": { "width": 165, "height": 160 },
+			"texiao/xialuojian_07": { "width": 165, "height": 160 },
+			"texiao/xialuojian_08": { "width": 165, "height": 160 },
+			"texiao/xialuojian_09": { "width": 165, "height": 160 },
+			"texiao/xialuojian_10": { "width": 165, "height": 160 },
+			"texiao/xialuojian_11": { "width": 165, "height": 160 },
+			"texiao/xialuojian_12": { "width": 165, "height": 160 },
+			"texiao/xialuojian_13": { "width": 165, "height": 160 }
+		},
+		"luodi": {
+			"texiao/luodi_00": { "width": 165, "height": 275 },
+			"texiao/luodi_01": { "width": 165, "height": 275 },
+			"texiao/luodi_02": { "width": 165, "height": 275 },
+			"texiao/luodi_03": { "width": 165, "height": 275 },
+			"texiao/luodi_04": { "width": 165, "height": 275 },
+			"texiao/luodi_05": { "width": 165, "height": 275 },
+			"texiao/luodi_06": { "width": 165, "height": 275 },
+			"texiao/luodi_07": { "width": 165, "height": 275 },
+			"texiao/luodi_08": { "width": 165, "height": 275 },
+			"texiao/luodi_09": { "width": 165, "height": 275 },
+			"texiao/luodi_10": { "width": 165, "height": 275 },
+			"texiao/luodi_11": { "width": 165, "height": 275 },
+			"texiao/luodi_12": { "width": 165, "height": 275 },
+			"texiao/luodi_13": { "width": 165, "height": 275 },
+			"texiao/luodi_14": { "width": 165, "height": 275 },
+			"texiao/luodi_15": { "width": 165, "height": 275 },
+			"texiao/luodi_16": { "width": 165, "height": 275 },
+			"texiao/luodi_17": { "width": 165, "height": 275 },
+			"texiao/luodi_18": { "width": 165, "height": 275 },
+			"texiao/luodi_19": { "width": 165, "height": 275 },
+			"texiao/luodi_20": { "width": 165, "height": 275 },
+			"texiao/luodi_21": { "width": 165, "height": 275 },
+			"texiao/luodi_22": { "width": 165, "height": 275 },
+			"texiao/luodi_23": { "width": 165, "height": 275 },
+			"texiao/luodi_24": { "width": 165, "height": 275 },
+			"texiao/luodi_25": { "width": 165, "height": 275 },
+			"texiao/luodi_26": { "width": 165, "height": 275 },
+			"texiao/luodi_27": { "width": 165, "height": 275 },
+			"texiao/luodi_28": { "width": 165, "height": 275 },
+			"texiao/luodi_29": { "width": 165, "height": 275 },
+			"texiao/luodi_30": { "width": 165, "height": 275 },
+			"texiao/luodi_31": { "width": 165, "height": 275 },
+			"texiao/luodi_32": { "width": 165, "height": 275 },
+			"texiao/luodi_33": { "width": 165, "height": 275 },
+			"texiao/luodi_34": { "width": 165, "height": 275 },
+			"texiao/luodi_35": { "width": 165, "height": 275 },
+			"texiao/luodi_36": { "width": 165, "height": 275 },
+			"texiao/luodi_37": { "width": 165, "height": 275 },
+			"texiao/luodi_38": { "width": 165, "height": 275 },
+			"texiao/luodi_39": { "width": 165, "height": 275 },
+			"texiao/luodi_40": { "width": 165, "height": 275 },
+			"texiao/luodi_41": { "width": 165, "height": 275 },
+			"texiao/luodi_42": { "width": 165, "height": 275 },
+			"texiao/luodi_43": { "width": 165, "height": 275 }
+		},
+		"shine": {
+			"texiao/shine_00": { "width": 165, "height": 150 },
+			"texiao/shine_02": { "width": 165, "height": 150 },
+			"texiao/shine_04": { "width": 165, "height": 150 },
+			"texiao/shine_06": { "width": 165, "height": 150 },
+			"texiao/shine_08": { "width": 165, "height": 150 },
+			"texiao/shine_10": { "width": 165, "height": 150 },
+			"texiao/shine_12": { "width": 165, "height": 150 },
+			"texiao/shine_14": { "width": 165, "height": 150 },
+			"texiao/shine_16": { "width": 165, "height": 150 },
+			"texiao/shine_18": { "width": 165, "height": 150 },
+			"texiao/shine_20": { "width": 165, "height": 150 },
+			"texiao/shine_22": { "width": 165, "height": 150 },
+			"texiao/shine_24": { "width": 165, "height": 150 },
+			"texiao/shine_26": { "width": 165, "height": 150 },
+			"texiao/shine_27": { "width": 165, "height": 150 }
+		}
+	}
+},
+"events": {
+	"qishou_21_3_1": {},
+	"qishou_21_3_2": {},
+	"qishou_21_3_3": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"fazhen": {
+				"attachment": [
+					{ "time": 0, "name": "texiao/fazhen_00" },
+					{ "time": 0.0333, "name": "texiao/fazhen_01" },
+					{ "time": 0.0667, "name": "texiao/fazhen_02" },
+					{ "time": 0.1, "name": "texiao/fazhen_03" },
+					{ "time": 0.1333, "name": "texiao/fazhen_04" },
+					{ "time": 0.1667, "name": "texiao/fazhen_05" },
+					{ "time": 0.2, "name": "texiao/fazhen_06" },
+					{ "time": 0.2333, "name": "texiao/fazhen_07" },
+					{ "time": 0.2667, "name": "texiao/fazhen_08" },
+					{ "time": 0.3, "name": "texiao/fazhen_09" },
+					{ "time": 0.3333, "name": "texiao/fazhen_10" },
+					{ "time": 0.3667, "name": "texiao/fazhen_11" },
+					{ "time": 0.4, "name": "texiao/fazhen_12" },
+					{ "time": 0.4333, "name": "texiao/fazhen_13" },
+					{ "time": 0.4667, "name": "texiao/fazhen_14" },
+					{ "time": 0.5, "name": "texiao/fazhen_15" },
+					{ "time": 0.5333, "name": "texiao/fazhen_16" },
+					{ "time": 0.5667, "name": "texiao/fazhen_17" },
+					{ "time": 0.6, "name": "texiao/fazhen_18" },
+					{ "time": 0.6333, "name": "texiao/fazhen_19" },
+					{ "time": 0.6667, "name": "texiao/fazhen_20" },
+					{ "time": 0.7, "name": "texiao/fazhen_21" },
+					{ "time": 0.7333, "name": "texiao/fazhen_22" },
+					{ "time": 0.7667, "name": "texiao/fazhen_23" },
+					{ "time": 0.8, "name": "texiao/fazhen_24" },
+					{ "time": 0.8333, "name": "texiao/fazhen_25" },
+					{ "time": 0.8667, "name": "texiao/fazhen_26" },
+					{ "time": 0.9, "name": "texiao/fazhen_27" },
+					{ "time": 0.9333, "name": "texiao/fazhen_28" },
+					{ "time": 0.9667, "name": null }
+				]
+			},
+			"jianxialuo": {
+				"attachment": [
+					{ "time": 0.1667, "name": "texiao/xialuojian_00" },
+					{ "time": 0.2, "name": "texiao/xialuojian_01" },
+					{ "time": 0.2333, "name": "texiao/xialuojian_02" },
+					{ "time": 0.2667, "name": "texiao/xialuojian_03" },
+					{ "time": 0.3, "name": "texiao/xialuojian_04" },
+					{ "time": 0.3333, "name": "texiao/xialuojian_05" },
+					{ "time": 0.3667, "name": "texiao/xialuojian_06" },
+					{ "time": 0.4, "name": "texiao/xialuojian_07" },
+					{ "time": 0.4333, "name": "texiao/xialuojian_08" },
+					{ "time": 0.4667, "name": "texiao/xialuojian_09" },
+					{ "time": 0.5, "name": "texiao/xialuojian_10" },
+					{ "time": 0.5333, "name": "texiao/xialuojian_11" },
+					{ "time": 0.5667, "name": "texiao/xialuojian_12" },
+					{ "time": 0.6, "name": "texiao/xialuojian_13" },
+					{ "time": 0.6333, "name": null }
+				]
+			},
+			"luodi": {
+				"attachment": [
+					{ "time": 0.3333, "name": "texiao/luodi_00" },
+					{ "time": 0.3667, "name": "texiao/luodi_01" },
+					{ "time": 0.4, "name": "texiao/luodi_02" },
+					{ "time": 0.4333, "name": "texiao/luodi_03" },
+					{ "time": 0.4667, "name": "texiao/luodi_04" },
+					{ "time": 0.5, "name": "texiao/luodi_05" },
+					{ "time": 0.5333, "name": "texiao/luodi_06" },
+					{ "time": 0.5667, "name": "texiao/luodi_07" },
+					{ "time": 0.6, "name": "texiao/luodi_08" },
+					{ "time": 0.6333, "name": "texiao/luodi_09" },
+					{ "time": 0.6667, "name": "texiao/luodi_10" },
+					{ "time": 0.7, "name": "texiao/luodi_11" },
+					{ "time": 0.7333, "name": "texiao/luodi_12" },
+					{ "time": 0.7667, "name": "texiao/luodi_13" },
+					{ "time": 0.8, "name": "texiao/luodi_14" },
+					{ "time": 0.8333, "name": "texiao/luodi_15" },
+					{ "time": 0.8667, "name": "texiao/luodi_16" },
+					{ "time": 0.9, "name": "texiao/luodi_17" },
+					{ "time": 0.9333, "name": "texiao/luodi_18" },
+					{ "time": 0.9667, "name": "texiao/luodi_19" },
+					{ "time": 1, "name": "texiao/luodi_20" },
+					{ "time": 1.0333, "name": "texiao/luodi_21" },
+					{ "time": 1.0667, "name": "texiao/luodi_22" },
+					{ "time": 1.1, "name": "texiao/luodi_23" },
+					{ "time": 1.1333, "name": "texiao/luodi_24" },
+					{ "time": 1.1667, "name": "texiao/luodi_25" },
+					{ "time": 1.2, "name": "texiao/luodi_26" },
+					{ "time": 1.2333, "name": "texiao/luodi_27" },
+					{ "time": 1.2667, "name": "texiao/luodi_28" },
+					{ "time": 1.3, "name": "texiao/luodi_29" },
+					{ "time": 1.3333, "name": "texiao/luodi_30" },
+					{ "time": 1.3667, "name": "texiao/luodi_31" },
+					{ "time": 1.4, "name": "texiao/luodi_32" },
+					{ "time": 1.4333, "name": "texiao/luodi_33" },
+					{ "time": 1.4667, "name": "texiao/luodi_34" },
+					{ "time": 1.5, "name": "texiao/luodi_35" },
+					{ "time": 1.5333, "name": "texiao/luodi_36" },
+					{ "time": 1.5667, "name": "texiao/luodi_37" },
+					{ "time": 1.6, "name": "texiao/luodi_38" },
+					{ "time": 1.6333, "name": "texiao/luodi_39" },
+					{ "time": 1.6667, "name": "texiao/luodi_41" }
+				]
+			},
+			"shine": {
+				"attachment": [
+					{ "time": 0.0333, "name": "texiao/shine_00" },
+					{ "time": 0.1, "name": "texiao/shine_02" },
+					{ "time": 0.1667, "name": "texiao/shine_04" },
+					{ "time": 0.2333, "name": "texiao/shine_06" },
+					{ "time": 0.3, "name": "texiao/shine_08" },
+					{ "time": 0.3667, "name": "texiao/shine_10" },
+					{ "time": 0.4333, "name": "texiao/shine_12" },
+					{ "time": 0.5, "name": "texiao/shine_14" },
+					{ "time": 0.5667, "name": "texiao/shine_16" },
+					{ "time": 0.6333, "name": "texiao/shine_18" },
+					{ "time": 0.7, "name": "texiao/shine_20" },
+					{ "time": 0.7667, "name": "texiao/shine_22" },
+					{ "time": 0.8333, "name": "texiao/shine_24" },
+					{ "time": 0.9, "name": "texiao/shine_26" },
+					{ "time": 0.9333, "name": "texiao/shine_27" },
+					{ "time": 0.9667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"fazhen": {
+				"translate": [
+					{ "time": 0, "x": 702.97, "y": 1062.61 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.0667, "x": 4, "y": 4 }
+				]
+			},
+			"shine": {
+				"rotate": [
+					{ "time": 0.7667, "angle": 0.35 }
+				],
+				"translate": [
+					{ "time": 0.0333, "x": 682.38, "y": 681.65 }
+				],
+				"scale": [
+					{ "time": 0.0333, "x": 2.667, "y": 3.333 }
+				]
+			},
+			"jianxialuo": {
+				"translate": [
+					{ "time": 0.1667, "x": 708.12, "y": 455.77 }
+				],
+				"scale": [
+					{ "time": 0.1667, "x": 3.2, "y": 3.2 }
+				]
+			},
+			"luodi": {
+				"translate": [
+					{ "time": 0.3333, "x": 714.28, "y": 124.56 }
+				],
+				"scale": [
+					{ "time": 0.3333, "x": 2.4, "y": 2.4 }
+				]
+			},
+			"dazhao": {
+				"translate": [
+					{ "time": 0, "x": -687.93, "y": 0 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 },
+			{ "time": 0.6 },
+			{ "time": 0.7667 },
+			{ "time": 0.9333 },
+			{ "time": 1.6667 }
+		],
+		"events": [
+			{ "time": 0.3333, "name": "qishou_21_3_3" },
+			{ "time": 0.5, "name": "qishou_21_3_2" },
+			{ "time": 0.6667, "name": "qishou_21_3_1" }
+		]
+	}
+}
+}

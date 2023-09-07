@@ -1,0 +1,69 @@
+
+sbuff_10.png
+size: 455,455
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/buff_10_00
+  rotate: true
+  xy: 2, 225
+  size: 118, 159
+  orig: 120, 200
+  offset: 2, 18
+  index: -1
+images/buff_10_01
+  rotate: true
+  xy: 2, 345
+  size: 108, 161
+  orig: 120, 200
+  offset: 12, 17
+  index: -1
+images/buff_10_02
+  rotate: false
+  xy: 335, 304
+  size: 118, 149
+  orig: 120, 200
+  offset: 2, 17
+  index: -1
+images/buff_10_03
+  rotate: true
+  xy: 163, 222
+  size: 118, 149
+  orig: 120, 200
+  offset: 2, 18
+  index: -1
+images/buff_10_04
+  rotate: false
+  xy: 163, 54
+  size: 118, 166
+  orig: 120, 200
+  offset: 2, 18
+  index: -1
+images/buff_10_05
+  rotate: true
+  xy: 283, 27
+  size: 118, 166
+  orig: 120, 200
+  offset: 2, 18
+  index: -1
+images/buff_10_06
+  rotate: true
+  xy: 165, 342
+  size: 111, 168
+  orig: 120, 200
+  offset: 9, 18
+  index: -1
+images/buff_10_07
+  rotate: false
+  xy: 314, 147
+  size: 118, 155
+  orig: 120, 200
+  offset: 2, 18
+  index: -1
+images/buff_10_08
+  rotate: true
+  xy: 2, 105
+  size: 118, 159
+  orig: 120, 200
+  offset: 2, 18
+  index: -1

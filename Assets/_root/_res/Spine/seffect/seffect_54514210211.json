@@ -1,0 +1,71 @@
+{
+"skeleton": { "hash": "hYpghUYfHmqcu8Sgb9DSBARMph4", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "att_hit", "parent": "root", "scaleX": 6.66, "scaleY": 6.66 },
+	{ "name": "glow", "parent": "root", "scaleX": 9, "scaleY": 9 }
+],
+"slots": [
+	{ "name": "images/0_00000", "bone": "att_hit" },
+	{ "name": "images/glow01", "bone": "glow", "color": "cf275cff", "blend": "screen" }
+],
+"skins": {
+	"default": {
+		"images/0_00000": {
+			"images/0_00000": { "width": 250, "height": 250 },
+			"images/0_00001": { "width": 250, "height": 250 },
+			"images/0_00002": { "width": 250, "height": 250 },
+			"images/0_00003": { "width": 250, "height": 250 },
+			"images/0_00004": { "width": 250, "height": 250 },
+			"images/0_00006": { "width": 250, "height": 250 },
+			"images/0_00008": { "width": 250, "height": 250 },
+			"images/0_00010": { "width": 250, "height": 250 },
+			"images/0_00012": { "width": 250, "height": 250 },
+			"images/0_00014": { "width": 250, "height": 250 },
+			"images/0_00016": { "width": 250, "height": 250 },
+			"images/0_00018": { "width": 250, "height": 250 }
+		},
+		"images/glow01": {
+			"images/glow01": { "width": 256, "height": 256 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"images/0_00000": {
+				"attachment": [
+					{ "time": 0, "name": "images/0_00000" },
+					{ "time": 0.0333, "name": "images/0_00001" },
+					{ "time": 0.0667, "name": "images/0_00002" },
+					{ "time": 0.1, "name": "images/0_00003" },
+					{ "time": 0.1333, "name": "images/0_00004" },
+					{ "time": 0.2, "name": "images/0_00006" },
+					{ "time": 0.2667, "name": "images/0_00008" },
+					{ "time": 0.3333, "name": "images/0_00010" },
+					{ "time": 0.4, "name": "images/0_00012" },
+					{ "time": 0.4667, "name": "images/0_00014" },
+					{ "time": 0.5333, "name": "images/0_00016" },
+					{ "time": 0.6, "name": "images/0_00018" },
+					{ "time": 0.6667, "name": null }
+				]
+			},
+			"images/glow01": {
+				"color": [
+					{ "time": 0, "color": "cf275cff" },
+					{ "time": 0.3333, "color": "cf275c00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "images/glow01" }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,41 @@
+
+uieffect_66.png
+size: 506,506
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 2, 155
+  size: 183, 209
+  orig: 185, 211
+  offset: 1, 1
+  index: -1
+2
+  rotate: true
+  xy: 2, 360
+  size: 144, 160
+  orig: 146, 162
+  offset: 1, 1
+  index: -1
+3
+  rotate: false
+  xy: 164, 340
+  size: 171, 164
+  orig: 173, 166
+  offset: 1, 1
+  index: -1
+4
+  rotate: false
+  xy: 213, 4
+  size: 195, 313
+  orig: 197, 315
+  offset: 1, 1
+  index: -1
+5
+  rotate: false
+  xy: 337, 319
+  size: 167, 185
+  orig: 169, 187
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,104 @@
+
+uieffect_40.png
+size: 475,475
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/bg_partical_0000
+  rotate: false
+  xy: 2, 246
+  size: 117, 126
+  orig: 250, 250
+  offset: 62, 88
+  index: -1
+images/bg_partical_0012
+  rotate: false
+  xy: 2, 246
+  size: 117, 126
+  orig: 250, 250
+  offset: 62, 88
+  index: -1
+images/bg_partical_0001
+  rotate: true
+  xy: 361, 241
+  size: 118, 105
+  orig: 250, 250
+  offset: 61, 88
+  index: -1
+images/bg_partical_0002
+  rotate: false
+  xy: 156, 367
+  size: 119, 106
+  orig: 250, 250
+  offset: 61, 91
+  index: -1
+images/bg_partical_0003
+  rotate: false
+  xy: 241, 249
+  size: 118, 110
+  orig: 250, 250
+  offset: 61, 90
+  index: -1
+images/bg_partical_0004
+  rotate: false
+  xy: 121, 252
+  size: 118, 113
+  orig: 250, 250
+  offset: 62, 90
+  index: -1
+images/bg_partical_0005
+  rotate: true
+  xy: 359, 123
+  size: 116, 109
+  orig: 250, 250
+  offset: 63, 90
+  index: -1
+images/bg_partical_0006
+  rotate: true
+  xy: 277, 361
+  size: 112, 119
+  orig: 250, 250
+  offset: 66, 89
+  index: -1
+images/bg_partical_0007
+  rotate: false
+  xy: 124, 22
+  size: 111, 115
+  orig: 250, 250
+  offset: 65, 88
+  index: -1
+images/bg_partical_0008
+  rotate: true
+  xy: 121, 139
+  size: 111, 117
+  orig: 250, 250
+  offset: 65, 89
+  index: -1
+images/bg_partical_0009
+  rotate: true
+  xy: 240, 136
+  size: 111, 117
+  orig: 250, 250
+  offset: 65, 88
+  index: -1
+images/bg_partical_0010
+  rotate: true
+  xy: 2, 2
+  size: 116, 120
+  orig: 250, 250
+  offset: 62, 89
+  index: -1
+images/bg_partical_0011
+  rotate: false
+  xy: 2, 120
+  size: 116, 124
+  orig: 250, 250
+  offset: 62, 89
+  index: -1
+images/glow_bg
+  rotate: false
+  xy: 2, 374
+  size: 152, 99
+  orig: 152, 99
+  offset: 0, 0
+  index: -1

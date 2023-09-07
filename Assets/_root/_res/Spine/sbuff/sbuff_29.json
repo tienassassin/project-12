@@ -1,0 +1,68 @@
+{
+"skeleton": { "hash": "HNVgH7WyjAmgln7GkwP+WUs0nYQ", "spine": "3.5.35", "width": 1235, "height": 862 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone2", "parent": "bone", "y": 220, "scaleX": 3.2, "scaleY": 3.2 }
+],
+"slots": [
+	{ "name": "tex/sbuff_29_1", "bone": "bone2", "attachment": "tex/sbuff_29_1", "blend": "additive" },
+	{ "name": "tex/sbuff_29_2", "bone": "bone2", "attachment": "tex/sbuff_29_1", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"tex/sbuff_29_1": {
+			"tex/sbuff_29_1": { "width": 170, "height": 170 }
+		},
+		"tex/sbuff_29_2": {
+			"tex/sbuff_29_1": { "width": 170, "height": 170 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"tex/sbuff_29_1": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff45",
+						"curve": [ 0.392, 0, 0.623, 1 ]
+					},
+					{ "time": 0.6667, "color": "ffffff91", "curve": "stepped" },
+					{
+						"time": 0.8333,
+						"color": "ffffff91",
+						"curve": [ 0.392, 0, 0.623, 1 ]
+					},
+					{ "time": 1.5, "color": "ffffff45", "curve": "stepped" },
+					{ "time": 1.6667, "color": "ffffff45" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "tex/sbuff_29_1" }
+				]
+			},
+			"tex/sbuff_29_2": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff45",
+						"curve": [ 0.392, 0, 0.623, 1 ]
+					},
+					{ "time": 0.6667, "color": "ffffff91", "curve": "stepped" },
+					{
+						"time": 0.8333,
+						"color": "ffffff91",
+						"curve": [ 0.392, 0, 0.623, 1 ]
+					},
+					{ "time": 1.5, "color": "ffffff45", "curve": "stepped" },
+					{ "time": 1.6667, "color": "ffffff45" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "tex/sbuff_29_1" }
+				]
+			}
+		}
+	}
+}
+}

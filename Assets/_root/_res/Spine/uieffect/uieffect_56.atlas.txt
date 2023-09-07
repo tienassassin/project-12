@@ -1,0 +1,104 @@
+
+uieffect_56.png
+size: 693,693
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/anima_bg_01
+  rotate: false
+  xy: 2, 88
+  size: 348, 82
+  orig: 360, 640
+  offset: 6, 297
+  index: -1
+images/anima_bg_02
+  rotate: false
+  xy: 2, 608
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_03
+  rotate: true
+  xy: 353, 342
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_04
+  rotate: false
+  xy: 2, 5
+  size: 349, 81
+  orig: 360, 640
+  offset: 5, 298
+  index: -1
+images/anima_bg_05
+  rotate: true
+  xy: 2, 257
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_06
+  rotate: true
+  xy: 87, 257
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_07
+  rotate: true
+  xy: 172, 257
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_08
+  rotate: true
+  xy: 257, 257
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_09
+  rotate: false
+  xy: 342, 257
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_10
+  rotate: true
+  xy: 438, 342
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_11
+  rotate: true
+  xy: 523, 342
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_12
+  rotate: true
+  xy: 608, 342
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/anima_bg_13
+  rotate: false
+  xy: 2, 172
+  size: 349, 83
+  orig: 360, 640
+  offset: 5, 297
+  index: -1
+images/og_start
+  rotate: false
+  xy: 352, 127
+  size: 211, 43
+  orig: 216, 43
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,118 @@
+
+uieffect_45.png
+size: 416,416
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Ashe_Skin
+  rotate: false
+  xy: 2, 66
+  size: 120, 118
+  orig: 128, 128
+  offset: 5, 4
+  index: -1
+images/MQ_CFX2_T_FadedRay_ci
+  rotate: false
+  xy: 2, 186
+  size: 252, 228
+  orig: 256, 256
+  offset: 4, 24
+  index: -1
+images/star_light_00
+  rotate: false
+  xy: 124, 98
+  size: 84, 86
+  orig: 360, 668
+  offset: 162, 346
+  index: -1
+images/star_light_13
+  rotate: false
+  xy: 124, 98
+  size: 84, 86
+  orig: 360, 668
+  offset: 162, 346
+  index: -1
+images/star_light_01
+  rotate: true
+  xy: 210, 98
+  size: 86, 74
+  orig: 360, 668
+  offset: 145, 350
+  index: -1
+images/star_light_02
+  rotate: true
+  xy: 256, 236
+  size: 90, 75
+  orig: 360, 668
+  offset: 142, 349
+  index: -1
+images/star_light_03
+  rotate: true
+  xy: 216, 7
+  size: 89, 68
+  orig: 360, 668
+  offset: 143, 356
+  index: -1
+images/star_light_04
+  rotate: false
+  xy: 2, 5
+  size: 77, 59
+  orig: 360, 668
+  offset: 155, 366
+  index: -1
+images/star_light_05
+  rotate: true
+  xy: 333, 168
+  size: 72, 79
+  orig: 360, 668
+  offset: 160, 346
+  index: -1
+images/star_light_06
+  rotate: false
+  xy: 286, 91
+  size: 68, 75
+  orig: 360, 668
+  offset: 165, 352
+  index: -1
+images/star_light_07
+  rotate: true
+  xy: 344, 345
+  size: 69, 70
+  orig: 360, 668
+  offset: 164, 357
+  index: -1
+images/star_light_08
+  rotate: false
+  xy: 286, 23
+  size: 66, 66
+  orig: 360, 668
+  offset: 167, 362
+  index: -1
+images/star_light_09
+  rotate: false
+  xy: 356, 103
+  size: 57, 63
+  orig: 360, 668
+  offset: 175, 366
+  index: -1
+images/star_light_10
+  rotate: false
+  xy: 124, 25
+  size: 90, 71
+  orig: 360, 668
+  offset: 157, 361
+  index: -1
+images/star_light_11
+  rotate: false
+  xy: 256, 328
+  size: 86, 86
+  orig: 360, 668
+  offset: 161, 346
+  index: -1
+images/star_light_12
+  rotate: true
+  xy: 333, 242
+  size: 84, 81
+  orig: 360, 668
+  offset: 163, 351
+  index: -1

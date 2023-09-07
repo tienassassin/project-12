@@ -1,0 +1,216 @@
+{
+"skeleton": { "hash": "ATTvDhnGpPujsobc/A2p3FoIIF0", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root", "x": 2 },
+	{ "name": "bone", "parent": "root", "x": -28.12, "y": -1.28 },
+	{ "name": "bone71", "parent": "bone", "x": 128.08, "y": -0.27 },
+	{ "name": "bone72", "parent": "bone", "x": 148.18, "y": -1.38 },
+	{ "name": "bone73", "parent": "bone", "x": 82.68, "y": 1.58 },
+	{ "name": "bone74", "parent": "bone", "x": 57.96, "y": 2.56 }
+],
+"slots": [
+	{ "name": "texiao/daji/a/a.0002", "bone": "bone71", "blend": "screen" },
+	{ "name": "texiao/daji/b/b.0004", "bone": "bone72", "blend": "screen" },
+	{ "name": "texiao/daji/c/c.0007", "bone": "bone73", "blend": "screen" },
+	{ "name": "texiao/daji/d/d.0004", "bone": "bone74", "blend": "screen" }
+],
+"skins": {
+	"default": {
+		"texiao/daji/a/a.0002": {
+			"texiao/daji/a/a.0002": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0004": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0006": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0008": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0010": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0012": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0014": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0016": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0018": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0020": { "width": 168, "height": 446 },
+			"texiao/daji/a/a.0022": { "width": 168, "height": 446 }
+		},
+		"texiao/daji/b/b.0004": {
+			"texiao/daji/b/b.0004": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0006": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0008": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0010": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0012": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0014": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0016": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0018": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0020": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0022": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0024": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0026": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0028": { "width": 163, "height": 136 },
+			"texiao/daji/b/b.0030": { "width": 163, "height": 136 }
+		},
+		"texiao/daji/c/c.0007": {
+			"texiao/daji/c/c.0007": { "width": 194, "height": 89 },
+			"texiao/daji/c/c.0009": { "width": 194, "height": 89 },
+			"texiao/daji/c/c.0011": { "width": 194, "height": 89 },
+			"texiao/daji/c/c.0013": { "width": 194, "height": 89 },
+			"texiao/daji/c/c.0015": { "width": 194, "height": 89 },
+			"texiao/daji/c/c.0017": { "width": 194, "height": 89 },
+			"texiao/daji/c/c.0019": { "width": 194, "height": 89 },
+			"texiao/daji/c/c.0021": { "width": 194, "height": 89 },
+			"texiao/daji/c/c.0023": { "width": 194, "height": 89 }
+		},
+		"texiao/daji/d/d.0004": {
+			"texiao/daji/d/d.0004": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0006": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0008": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0010": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0012": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0014": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0016": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0018": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0020": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0022": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0024": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0026": { "width": 267, "height": 202 },
+			"texiao/daji/d/d.0028": { "width": 267, "height": 202 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {},
+	"shakestart_12": {}
+},
+"animations": {
+	"animation_2": {
+		"slots": {
+			"texiao/daji/a/a.0002": {
+				"attachment": [
+					{ "time": 0, "name": "texiao/daji/a/a.0002" },
+					{ "time": 0.0667, "name": "texiao/daji/a/a.0004" },
+					{ "time": 0.1333, "name": "texiao/daji/a/a.0006" },
+					{ "time": 0.2, "name": "texiao/daji/a/a.0008" },
+					{ "time": 0.2667, "name": "texiao/daji/a/a.0010" },
+					{ "time": 0.3333, "name": "texiao/daji/a/a.0012" },
+					{ "time": 0.4, "name": "texiao/daji/a/a.0014" },
+					{ "time": 0.4667, "name": "texiao/daji/a/a.0016" },
+					{ "time": 0.5333, "name": "texiao/daji/a/a.0018" },
+					{ "time": 0.6, "name": "texiao/daji/a/a.0020" },
+					{ "time": 0.6667, "name": "texiao/daji/a/a.0022" },
+					{ "time": 0.7333, "name": null }
+				]
+			},
+			"texiao/daji/b/b.0004": {
+				"attachment": [
+					{ "time": 0.0667, "name": "texiao/daji/b/b.0004" },
+					{ "time": 0.1333, "name": "texiao/daji/b/b.0006" },
+					{ "time": 0.2, "name": "texiao/daji/b/b.0008" },
+					{ "time": 0.2667, "name": "texiao/daji/b/b.0010" },
+					{ "time": 0.3333, "name": "texiao/daji/b/b.0012" },
+					{ "time": 0.4, "name": "texiao/daji/b/b.0014" },
+					{ "time": 0.4667, "name": "texiao/daji/b/b.0016" },
+					{ "time": 0.5333, "name": "texiao/daji/b/b.0018" },
+					{ "time": 0.6, "name": "texiao/daji/b/b.0020" },
+					{ "time": 0.6667, "name": "texiao/daji/b/b.0022" },
+					{ "time": 0.7333, "name": "texiao/daji/b/b.0024" },
+					{ "time": 0.8, "name": "texiao/daji/b/b.0026" },
+					{ "time": 0.8667, "name": "texiao/daji/b/b.0028" },
+					{ "time": 0.9333, "name": "texiao/daji/b/b.0030" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"texiao/daji/c/c.0007": {
+				"attachment": [
+					{ "time": 0.1667, "name": "texiao/daji/c/c.0007" },
+					{ "time": 0.2333, "name": "texiao/daji/c/c.0009" },
+					{ "time": 0.3, "name": "texiao/daji/c/c.0011" },
+					{ "time": 0.3667, "name": "texiao/daji/c/c.0013" },
+					{ "time": 0.4333, "name": "texiao/daji/c/c.0015" },
+					{ "time": 0.5, "name": "texiao/daji/c/c.0017" },
+					{ "time": 0.5667, "name": "texiao/daji/c/c.0019" },
+					{ "time": 0.6333, "name": "texiao/daji/c/c.0021" },
+					{ "time": 0.7, "name": "texiao/daji/c/c.0023" },
+					{ "time": 0.7333, "name": null }
+				]
+			},
+			"texiao/daji/d/d.0004": {
+				"attachment": [
+					{ "time": 0.1, "name": "texiao/daji/d/d.0004" },
+					{ "time": 0.1667, "name": "texiao/daji/d/d.0006" },
+					{ "time": 0.2333, "name": "texiao/daji/d/d.0008" },
+					{ "time": 0.3, "name": "texiao/daji/d/d.0010" },
+					{ "time": 0.3667, "name": "texiao/daji/d/d.0012" },
+					{ "time": 0.4333, "name": "texiao/daji/d/d.0014" },
+					{ "time": 0.5, "name": "texiao/daji/d/d.0016" },
+					{ "time": 0.5667, "name": "texiao/daji/d/d.0018" },
+					{ "time": 0.6333, "name": "texiao/daji/d/d.0020" },
+					{ "time": 0.7, "name": "texiao/daji/d/d.0022" },
+					{ "time": 0.7667, "name": "texiao/daji/d/d.0024" },
+					{ "time": 0.8333, "name": "texiao/daji/d/d.0026" },
+					{ "time": 0.9, "name": "texiao/daji/d/d.0028" },
+					{ "time": 0.9667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone71": {
+				"translate": [
+					{ "time": 0, "x": 260.54, "y": 691.77 }
+				],
+				"scale": [
+					{ "time": 0, "x": 4, "y": 4 }
+				]
+			},
+			"bone72": {
+				"translate": [
+					{ "time": 0.0667, "x": 267.44, "y": 182.99 }
+				],
+				"scale": [
+					{ "time": 0.0667, "x": 4, "y": 4 }
+				]
+			},
+			"bone73": {
+				"translate": [
+					{
+						"time": 0.1667,
+						"x": 311.89,
+						"y": 0,
+						"curve": [ 0.197, 0.46, 0.636, 1 ]
+					},
+					{ "time": 0.3333, "x": 325.78, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0.1667,
+						"x": 4,
+						"y": 2,
+						"curve": [ 0.197, 0.46, 0.636, 1 ]
+					},
+					{ "time": 0.3333, "x": 6, "y": 3 }
+				]
+			},
+			"bone74": {
+				"translate": [
+					{ "time": 0.1, "x": 349.24, "y": 134.57 }
+				],
+				"scale": [
+					{ "time": 0.1, "x": 4, "y": 4 }
+				]
+			},
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": -376.46, "y": 0 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 0,
+				"offsets": [
+					{ "slot": "texiao/daji/c/c.0007", "offset": -2 }
+				]
+			}
+		],
+		"events": [
+			{ "time": 0.2, "name": "hit_1_1_1", "string": "qishou" },
+			{ "time": 0.2333, "name": "shakestart_12", "string": "move" }
+		]
+	}
+}
+}

@@ -1,0 +1,168 @@
+{
+"skeleton": { "hash": "cx6xWVaR7dyKN4seWiTnWgcQE2s", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root", "scaleX": 2.5, "scaleY": 2.5 },
+	{ "name": "lizi", "parent": "root" }
+],
+"slots": [
+	{ "name": "2b_buff", "bone": "root" },
+	{ "name": "lizi", "bone": "lizi", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"2b_buff": {
+			"buff_00": { "width": 175, "height": 120 },
+			"buff_01": { "width": 175, "height": 120 },
+			"buff_02": { "width": 175, "height": 120 },
+			"buff_03": { "width": 175, "height": 120 },
+			"buff_04": { "width": 175, "height": 120 },
+			"buff_05": { "width": 175, "height": 120 },
+			"buff_06": { "width": 175, "height": 120 },
+			"buff_07": { "width": 175, "height": 120 },
+			"buff_08": { "width": 175, "height": 120 },
+			"buff_09": { "width": 175, "height": 120 },
+			"buff_10": { "width": 175, "height": 120 },
+			"buff_11": { "width": 175, "height": 120 },
+			"buff_12": { "width": 175, "height": 120 },
+			"buff_13": { "width": 175, "height": 120 },
+			"buff_14": { "width": 175, "height": 120 },
+			"buff_15": { "width": 175, "height": 120 },
+			"buff_16": { "width": 175, "height": 120 },
+			"buff_17": { "width": 175, "height": 120 },
+			"buff_18": { "width": 175, "height": 120 },
+			"buff_19": { "width": 175, "height": 120 },
+			"buff_20": { "width": 175, "height": 120 },
+			"buff_21": { "width": 175, "height": 120 },
+			"buff_22": { "width": 175, "height": 120 },
+			"buff_23": { "width": 175, "height": 120 },
+			"buff_24": { "width": 175, "height": 120 },
+			"buff_25": { "width": 175, "height": 120 },
+			"buff_26": { "width": 175, "height": 120 },
+			"buff_27": { "width": 175, "height": 120 },
+			"buff_28": { "width": 175, "height": 120 },
+			"buff_29": { "width": 175, "height": 120 }
+		},
+		"lizi": {
+			"bufflizi_00": { "width": 140, "height": 150 },
+			"bufflizi_01": { "width": 140, "height": 150 },
+			"bufflizi_02": { "width": 140, "height": 150 },
+			"bufflizi_03": { "width": 140, "height": 150 },
+			"bufflizi_04": { "width": 140, "height": 150 },
+			"bufflizi_05": { "width": 140, "height": 150 },
+			"bufflizi_06": { "width": 140, "height": 150 },
+			"bufflizi_07": { "width": 140, "height": 150 },
+			"bufflizi_08": { "width": 140, "height": 150 },
+			"bufflizi_09": { "width": 140, "height": 150 },
+			"bufflizi_10": { "width": 140, "height": 150 },
+			"bufflizi_11": { "width": 140, "height": 150 },
+			"bufflizi_12": { "width": 140, "height": 150 },
+			"bufflizi_13": { "width": 140, "height": 150 },
+			"bufflizi_14": { "width": 140, "height": 150 },
+			"bufflizi_15": { "width": 140, "height": 150 },
+			"bufflizi_16": { "width": 140, "height": 150 },
+			"bufflizi_17": { "width": 140, "height": 150 },
+			"bufflizi_18": { "width": 140, "height": 150 },
+			"bufflizi_19": { "width": 140, "height": 150 },
+			"bufflizi_20": { "width": 140, "height": 150 },
+			"bufflizi_21": { "width": 140, "height": 150 },
+			"bufflizi_22": { "width": 140, "height": 150 },
+			"bufflizi_23": { "width": 140, "height": 150 },
+			"bufflizi_24": { "width": 140, "height": 150 },
+			"bufflizi_25": { "width": 140, "height": 150 },
+			"bufflizi_26": { "width": 140, "height": 150 },
+			"bufflizi_27": { "width": 140, "height": 150 },
+			"bufflizi_28": { "width": 140, "height": 150 },
+			"bufflizi_29": { "width": 140, "height": 150 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"2b_buff": {
+				"attachment": [
+					{ "time": 0, "name": "buff_00" },
+					{ "time": 0.0333, "name": "buff_01" },
+					{ "time": 0.0667, "name": "buff_02" },
+					{ "time": 0.1, "name": "buff_03" },
+					{ "time": 0.1333, "name": "buff_04" },
+					{ "time": 0.1667, "name": "buff_05" },
+					{ "time": 0.2, "name": "buff_06" },
+					{ "time": 0.2333, "name": "buff_07" },
+					{ "time": 0.2667, "name": "buff_08" },
+					{ "time": 0.3, "name": "buff_09" },
+					{ "time": 0.3333, "name": "buff_10" },
+					{ "time": 0.3667, "name": "buff_11" },
+					{ "time": 0.4, "name": "buff_12" },
+					{ "time": 0.4333, "name": "buff_13" },
+					{ "time": 0.4667, "name": "buff_14" },
+					{ "time": 0.5, "name": "buff_15" },
+					{ "time": 0.5333, "name": "buff_16" },
+					{ "time": 0.5667, "name": "buff_17" },
+					{ "time": 0.6, "name": "buff_18" },
+					{ "time": 0.6333, "name": "buff_19" },
+					{ "time": 0.6667, "name": "buff_20" },
+					{ "time": 0.7, "name": "buff_21" },
+					{ "time": 0.7333, "name": "buff_22" },
+					{ "time": 0.7667, "name": "buff_23" },
+					{ "time": 0.8, "name": "buff_24" },
+					{ "time": 0.8333, "name": "buff_25" },
+					{ "time": 0.8667, "name": "buff_26" },
+					{ "time": 0.9, "name": "buff_27" },
+					{ "time": 0.9333, "name": "buff_28" },
+					{ "time": 0.9667, "name": "buff_29" }
+				]
+			},
+			"lizi": {
+				"attachment": [
+					{ "time": 0, "name": "bufflizi_00" },
+					{ "time": 0.0333, "name": "bufflizi_01" },
+					{ "time": 0.0667, "name": "bufflizi_02" },
+					{ "time": 0.1, "name": "bufflizi_03" },
+					{ "time": 0.1333, "name": "bufflizi_04" },
+					{ "time": 0.1667, "name": "bufflizi_05" },
+					{ "time": 0.2, "name": "bufflizi_06" },
+					{ "time": 0.2333, "name": "bufflizi_07" },
+					{ "time": 0.2667, "name": "bufflizi_08" },
+					{ "time": 0.3, "name": "bufflizi_09" },
+					{ "time": 0.3333, "name": "bufflizi_10" },
+					{ "time": 0.3667, "name": "bufflizi_11" },
+					{ "time": 0.4, "name": "bufflizi_12" },
+					{ "time": 0.4333, "name": "bufflizi_13" },
+					{ "time": 0.4667, "name": "bufflizi_14" },
+					{ "time": 0.5, "name": "bufflizi_15" },
+					{ "time": 0.5333, "name": "bufflizi_16" },
+					{ "time": 0.5667, "name": "bufflizi_17" },
+					{ "time": 0.6, "name": "bufflizi_18" },
+					{ "time": 0.6333, "name": "bufflizi_19" },
+					{ "time": 0.6667, "name": "bufflizi_20" },
+					{ "time": 0.7, "name": "bufflizi_21" },
+					{ "time": 0.7333, "name": "bufflizi_22" },
+					{ "time": 0.7667, "name": "bufflizi_23" },
+					{ "time": 0.8, "name": "bufflizi_24" },
+					{ "time": 0.8333, "name": "bufflizi_25" },
+					{ "time": 0.8667, "name": "bufflizi_26" },
+					{ "time": 0.9, "name": "bufflizi_27" },
+					{ "time": 0.9333, "name": "bufflizi_28" },
+					{ "time": 0.9667, "name": "bufflizi_29" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 185.98 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			},
+			"lizi": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 23.57 }
+				]
+			}
+		}
+	}
+}
+}

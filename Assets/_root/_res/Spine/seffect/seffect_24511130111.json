@@ -1,0 +1,74 @@
+{
+"skeleton": { "hash": "Q+F2c61zyR7ooWCMxhPtO+uI0ZE", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "leimuZX", "parent": "root" },
+	{ "name": "effect", "parent": "leimuZX" },
+	{ "name": "att_beiji", "parent": "effect" }
+],
+"slots": [
+	{ "name": "att_beiji", "bone": "att_beiji" }
+],
+"skins": {
+	"default": {
+		"att_beiji": {
+			"shuihua/shuihua_0000": { "width": 264, "height": 237 },
+			"shuihua/shuihua_0002": { "width": 264, "height": 237 },
+			"shuihua/shuihua_0004": { "width": 264, "height": 237 },
+			"shuihua/shuihua_0006": { "width": 264, "height": 237 },
+			"shuihua/shuihua_0008": { "width": 264, "height": 237 },
+			"shuihua/shuihua_0010": { "width": 264, "height": 237 },
+			"shuihua/shuihua_0012": { "width": 264, "height": 237 },
+			"shuihua/shuihua_0014": { "width": 264, "height": 237 },
+			"shuihua/shuihua_0016": { "width": 264, "height": 237 },
+			"shuihua/shuihua_0018": { "width": 264, "height": 237 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"att_beiji": {
+				"attachment": [
+					{ "time": 0, "name": "shuihua/shuihua_0000" },
+					{ "time": 0.0333, "name": "shuihua/shuihua_0002" },
+					{ "time": 0.0667, "name": "shuihua/shuihua_0004" },
+					{ "time": 0.1, "name": "shuihua/shuihua_0006" },
+					{ "time": 0.1333, "name": "shuihua/shuihua_0008" },
+					{ "time": 0.1667, "name": "shuihua/shuihua_0010" },
+					{ "time": 0.2, "name": "shuihua/shuihua_0012" },
+					{ "time": 0.2333, "name": "shuihua/shuihua_0014" },
+					{ "time": 0.2667, "name": "shuihua/shuihua_0016" },
+					{ "time": 0.3, "name": "shuihua/shuihua_0018" },
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"att_beiji": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0.1, "angle": 59.49 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 },
+			{ "time": 0.2667 }
+		],
+		"events": [
+			{ "time": 0.0667, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

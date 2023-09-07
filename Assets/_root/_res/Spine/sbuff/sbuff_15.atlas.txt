@@ -1,0 +1,20 @@
+
+sbuff_15.png
+size: 875,875
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+heart1
+  rotate: false
+  xy: 2, 423
+  size: 500, 450
+  orig: 500, 451
+  offset: 0, 1
+  index: -1
+heart2
+  rotate: false
+  xy: 2, 2
+  size: 500, 419
+  orig: 500, 419
+  offset: 0, 0
+  index: -1

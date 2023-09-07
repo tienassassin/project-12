@@ -1,0 +1,20 @@
+
+uieffect_227.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+image/jiuxing
+  rotate: false
+  xy: 2, 2
+  size: 100, 106
+  orig: 100, 106
+  offset: 0, 0
+  index: -1
+image/star_0000
+  rotate: false
+  xy: 104, 78
+  size: 32, 30
+  orig: 32, 30
+  offset: 0, 0
+  index: -1

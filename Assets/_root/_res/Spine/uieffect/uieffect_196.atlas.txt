@@ -1,0 +1,314 @@
+
+uieffect_196.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/dizuo_1
+  rotate: false
+  xy: 563, 1763
+  size: 456, 253
+  orig: 594, 348
+  offset: 69, 48
+  index: -1
+images/dizuo_2
+  rotate: true
+  xy: 0, 625
+  size: 456, 253
+  orig: 594, 348
+  offset: 69, 48
+  index: -1
+images/ka_beimian_1
+  rotate: false
+  xy: 766, 507
+  size: 160, 230
+  orig: 160, 230
+  offset: 0, 0
+  index: -1
+images/ka_beimian_2
+  rotate: false
+  xy: 424, 207
+  size: 160, 230
+  orig: 160, 230
+  offset: 0, 0
+  index: -1
+images/ka_beimian_3
+  rotate: false
+  xy: 586, 197
+  size: 160, 230
+  orig: 160, 230
+  offset: 0, 0
+  index: -1
+images/ka_cemian_1
+  rotate: true
+  xy: 1021, 1769
+  size: 9, 489
+  orig: 9, 489
+  offset: 0, 0
+  index: -1
+images/ka_cemian_2
+  rotate: true
+  xy: 1021, 1758
+  size: 9, 489
+  orig: 9, 489
+  offset: 0, 0
+  index: -1
+images/ka_cemian_3
+  rotate: true
+  xy: 0, 0
+  size: 9, 489
+  orig: 9, 489
+  offset: 0, 0
+  index: -1
+images/ka_zhengmian
+  rotate: true
+  xy: 1698, 1520
+  size: 160, 233
+  orig: 160, 233
+  offset: 0, 0
+  index: -1
+images/kaiqi
+  rotate: true
+  xy: 255, 700
+  size: 381, 126
+  orig: 485, 159
+  offset: 44, 14
+  index: -1
+images/kaiqi2
+  rotate: false
+  xy: 1018, 1379
+  size: 381, 126
+  orig: 485, 159
+  offset: 44, 14
+  index: -1
+images/lv_shexian_inside
+  rotate: false
+  xy: 766, 398
+  size: 170, 107
+  orig: 720, 1280
+  offset: 274, 473
+  index: -1
+images/lv_shexian_outside
+  rotate: false
+  xy: 0, 1648
+  size: 561, 368
+  orig: 678, 478
+  offset: 60, 62
+  index: -1
+images/rot_trail_0000
+  rotate: true
+  xy: 338, 52
+  size: 153, 195
+  orig: 269, 233
+  offset: 39, 24
+  index: -1
+images/rot_trail_0001
+  rotate: true
+  xy: 535, 42
+  size: 153, 195
+  orig: 234, 231
+  offset: 29, 18
+  index: -1
+images/rot_trail_0002
+  rotate: false
+  xy: 748, 201
+  size: 153, 195
+  orig: 222, 221
+  offset: 22, 14
+  index: -1
+images/shexian_blue/shexian_blue_0000
+  rotate: false
+  xy: 875, 948
+  size: 135, 158
+  orig: 261, 386
+  offset: 65, 10
+  index: -1
+images/shexian_blue/shexian_blue_0002
+  rotate: false
+  xy: 708, 1108
+  size: 140, 190
+  orig: 261, 386
+  offset: 62, 10
+  index: -1
+images/shexian_blue/shexian_blue_0004
+  rotate: false
+  xy: 637, 739
+  size: 236, 345
+  orig: 261, 386
+  offset: 7, 7
+  index: -1
+images/shexian_blue/shexian_blue_0006
+  rotate: true
+  xy: 1401, 1290
+  size: 228, 321
+  orig: 261, 386
+  offset: 13, 7
+  index: -1
+images/shexian_blue/shexian_blue_0008
+  rotate: false
+  xy: 1729, 1682
+  size: 254, 334
+  orig: 261, 386
+  offset: 5, 7
+  index: -1
+images/shexian_blue/shexian_blue_0010
+  rotate: false
+  xy: 383, 748
+  size: 252, 336
+  orig: 261, 386
+  offset: 6, 6
+  index: -1
+images/shexian_blue/shexian_blue_0012
+  rotate: true
+  xy: 1361, 1520
+  size: 236, 335
+  orig: 261, 386
+  offset: 21, 6
+  index: -1
+images/shexian_blue/shexian_blue_0014
+  rotate: true
+  xy: 1021, 1780
+  size: 236, 356
+  orig: 261, 386
+  offset: 12, 15
+  index: -1
+images/shexian_blue/shexian_blue_0016
+  rotate: true
+  xy: 361, 1086
+  size: 212, 345
+  orig: 261, 386
+  offset: 20, 28
+  index: -1
+images/shexian_blue/shexian_blue_0018
+  rotate: false
+  xy: 831, 1428
+  size: 185, 333
+  orig: 261, 386
+  offset: 48, 44
+  index: -1
+images/shexian_blue/shexian_blue_0020
+  rotate: false
+  xy: 600, 429
+  size: 164, 308
+  orig: 261, 386
+  offset: 45, 61
+  index: -1
+images/shexian_blue/shexian_blue_0022
+  rotate: true
+  xy: 751, 1300
+  size: 123, 172
+  orig: 261, 386
+  offset: 85, 67
+  index: -1
+images/shexian_blue/shexian_blue_0023
+  rotate: false
+  xy: 1985, 1948
+  size: 40, 68
+  orig: 261, 386
+  offset: 95, 71
+  index: -1
+images/shexian_yellow/shexian_yellow_0000
+  rotate: false
+  xy: 875, 788
+  size: 135, 158
+  orig: 261, 386
+  offset: 65, 10
+  index: -1
+images/shexian_yellow/shexian_yellow_0002
+  rotate: false
+  xy: 850, 1108
+  size: 140, 190
+  orig: 261, 386
+  offset: 62, 10
+  index: -1
+images/shexian_yellow/shexian_yellow_0004
+  rotate: true
+  xy: 1379, 1780
+  size: 236, 348
+  orig: 261, 386
+  offset: 7, 6
+  index: -1
+images/shexian_yellow/shexian_yellow_0006
+  rotate: false
+  xy: 1724, 1199
+  size: 228, 319
+  orig: 261, 386
+  offset: 13, 8
+  index: -1
+images/shexian_yellow/shexian_yellow_0008
+  rotate: false
+  xy: 575, 1425
+  size: 254, 336
+  orig: 261, 386
+  offset: 5, 6
+  index: -1
+images/shexian_yellow/shexian_yellow_0010
+  rotate: true
+  xy: 0, 11
+  size: 255, 336
+  orig: 261, 386
+  offset: 3, 6
+  index: -1
+images/shexian_yellow/shexian_yellow_0012
+  rotate: true
+  xy: 1018, 1507
+  size: 249, 341
+  orig: 261, 386
+  offset: 8, 0
+  index: -1
+images/shexian_yellow/shexian_yellow_0014
+  rotate: false
+  xy: 0, 268
+  size: 236, 355
+  orig: 261, 386
+  offset: 12, 16
+  index: -1
+images/shexian_yellow/shexian_yellow_0016
+  rotate: false
+  xy: 361, 1300
+  size: 212, 346
+  orig: 261, 386
+  offset: 20, 28
+  index: -1
+images/shexian_yellow/shexian_yellow_0018
+  rotate: false
+  xy: 238, 289
+  size: 184, 334
+  orig: 261, 386
+  offset: 49, 44
+  index: -1
+images/shexian_yellow/shexian_yellow_0020
+  rotate: false
+  xy: 424, 439
+  size: 174, 307
+  orig: 261, 386
+  offset: 45, 61
+  index: -1
+images/shexian_yellow/shexian_yellow_0022
+  rotate: true
+  xy: 575, 1300
+  size: 123, 174
+  orig: 261, 386
+  offset: 85, 67
+  index: -1
+images/shexian_yellow/shexian_yellow_0023
+  rotate: false
+  xy: 1933, 1612
+  size: 40, 68
+  orig: 261, 386
+  offset: 95, 71
+  index: -1
+images/yellow_shexian_inside
+  rotate: true
+  xy: 903, 229
+  size: 167, 106
+  orig: 720, 1280
+  offset: 261, 243
+  index: -1
+images/yellow_shexian_outside
+  rotate: true
+  xy: 0, 1083
+  size: 563, 359
+  orig: 643, 458
+  offset: 32, 64
+  index: -1

@@ -1,0 +1,41 @@
+
+uieffect_2.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/kabei_1
+  rotate: false
+  xy: 540, 251
+  size: 152, 227
+  orig: 152, 238
+  offset: 0, 11
+  index: -1
+images/public_yinshen_mutl_D_00
+  rotate: false
+  xy: 282, 222
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+images/ring_1
+  rotate: false
+  xy: 0, 0
+  size: 196, 196
+  orig: 256, 256
+  offset: 30, 30
+  index: -1
+images/ringsav_10
+  rotate: false
+  xy: 0, 198
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+images/uieffect_1158
+  rotate: false
+  xy: 198, 149
+  size: 48, 47
+  orig: 50, 50
+  offset: 1, 2
+  index: -1

@@ -1,0 +1,64 @@
+{
+"skeleton": { "hash": "TaciGeqdwO8KZ+5Wge1ULyNNOoU", "spine": "3.5.35", "width": 0, "height": 0, "images": "./image/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone4", "parent": "root" }
+],
+"slots": [
+	{ "name": "Transition - V02 Energy 043 Ray Radial CW_00001", "bone": "bone4" }
+],
+"skins": {
+	"default": {
+		"Transition - V02 Energy 043 Ray Radial CW_00001": {
+			"Transition - V02 Energy 043 Ray Radial CW_00001": { "width": 384, "height": 216 },
+			"Transition - V02 Energy 043 Ray Radial CW_00002": { "width": 384, "height": 216 },
+			"Transition - V02 Energy 043 Ray Radial CW_00003": { "width": 384, "height": 216 },
+			"Transition - V02 Energy 043 Ray Radial CW_00004": { "width": 384, "height": 216 },
+			"Transition - V02 Energy 043 Ray Radial CW_00005": { "width": 384, "height": 216 },
+			"Transition - V02 Energy 043 Ray Radial CW_00006": { "width": 384, "height": 216 },
+			"Transition - V02 Energy 043 Ray Radial CW_00007": { "width": 384, "height": 216 },
+			"Transition - V02 Energy 043 Ray Radial CW_00008": { "width": 384, "height": 216 },
+			"Transition - V02 Energy 043 Ray Radial CW_00009": { "width": 384, "height": 216 },
+			"Transition - V02 Energy 043 Ray Radial CW_00010": { "width": 384, "height": 216 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"Transition - V02 Energy 043 Ray Radial CW_00001": {
+				"color": [
+					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.5667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Transition - V02 Energy 043 Ray Radial CW_00001" },
+					{ "time": 0.0667, "name": "Transition - V02 Energy 043 Ray Radial CW_00002" },
+					{ "time": 0.1333, "name": "Transition - V02 Energy 043 Ray Radial CW_00003" },
+					{ "time": 0.2, "name": "Transition - V02 Energy 043 Ray Radial CW_00004" },
+					{ "time": 0.2667, "name": "Transition - V02 Energy 043 Ray Radial CW_00005" },
+					{ "time": 0.3, "name": "Transition - V02 Energy 043 Ray Radial CW_00006" },
+					{ "time": 0.3333, "name": "Transition - V02 Energy 043 Ray Radial CW_00007" },
+					{ "time": 0.3667, "name": "Transition - V02 Energy 043 Ray Radial CW_00008" },
+					{ "time": 0.4333, "name": "Transition - V02 Energy 043 Ray Radial CW_00009" },
+					{ "time": 0.5, "name": "Transition - V02 Energy 043 Ray Radial CW_00010" },
+					{ "time": 0.5667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone4": {
+				"rotate": [
+					{ "time": 0, "angle": 90 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 5, "y": 5 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,65 @@
+{
+"skeleton": { "hash": "vdUYToTnsNuUQhUacC8LbrVpD9k", "spine": "3.5.35", "width": 162, "height": 158 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Effect", "parent": "root" }
+],
+"slots": [
+	{ "name": "light", "bone": "Effect", "attachment": "light/light_0017" }
+],
+"skins": {
+	"default": {
+		"light": {
+			"light/light_0000": { "width": 162, "height": 158 },
+			"light/light_0001": { "width": 162, "height": 158 },
+			"light/light_0002": { "width": 162, "height": 158 },
+			"light/light_0003": { "width": 162, "height": 158 },
+			"light/light_0004": { "width": 162, "height": 158 },
+			"light/light_0005": { "width": 162, "height": 158 },
+			"light/light_0006": { "width": 162, "height": 158 },
+			"light/light_0007": { "width": 162, "height": 158 },
+			"light/light_0008": { "width": 162, "height": 158 },
+			"light/light_0009": { "width": 162, "height": 158 },
+			"light/light_0010": { "width": 162, "height": 158 },
+			"light/light_0011": { "width": 162, "height": 158 },
+			"light/light_0012": { "width": 162, "height": 158 },
+			"light/light_0013": { "width": 162, "height": 158 },
+			"light/light_0014": { "width": 162, "height": 158 },
+			"light/light_0015": { "width": 162, "height": 158 },
+			"light/light_0016": { "width": 162, "height": 158 },
+			"light/light_0017": { "width": 162, "height": 158 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"light": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.0333, "name": null },
+					{ "time": 0.0667, "name": "light/light_0000" },
+					{ "time": 0.1, "name": "light/light_0001" },
+					{ "time": 0.1333, "name": "light/light_0002" },
+					{ "time": 0.1667, "name": "light/light_0003" },
+					{ "time": 0.2, "name": "light/light_0004" },
+					{ "time": 0.2333, "name": "light/light_0005" },
+					{ "time": 0.2667, "name": "light/light_0006" },
+					{ "time": 0.3, "name": "light/light_0007" },
+					{ "time": 0.3333, "name": "light/light_0008" },
+					{ "time": 0.3667, "name": "light/light_0009" },
+					{ "time": 0.4, "name": "light/light_0010" },
+					{ "time": 0.4333, "name": "light/light_0011" },
+					{ "time": 0.4667, "name": "light/light_0012" },
+					{ "time": 0.5, "name": "light/light_0013" },
+					{ "time": 0.5333, "name": "light/light_0014" },
+					{ "time": 0.5667, "name": "light/light_0015" },
+					{ "time": 0.6, "name": "light/light_0016" },
+					{ "time": 0.6333, "name": "light/light_0017" },
+					{ "time": 0.7333, "name": "light/light_0017" }
+				]
+			}
+		}
+	}
+}
+}

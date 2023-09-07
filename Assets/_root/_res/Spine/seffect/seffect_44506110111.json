@@ -1,0 +1,111 @@
+{
+"skeleton": { "hash": "s1/42IBhpnfzIueOERuYcptbBzs", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "eff_ultimate", "parent": "root", "y": -100 },
+	{ "name": "bone", "parent": "eff_ultimate", "x": 95.97, "y": 104.35 },
+	{ "name": "bone94", "parent": "bone", "x": 0.16, "y": -0.21 },
+	{ "name": "bone97", "parent": "eff_ultimate", "x": 55.25, "y": 103.99 },
+	{ "name": "bone101", "parent": "bone97", "x": 0.04, "y": 0.58 }
+],
+"slots": [
+	{ "name": "yinchang/quan/quan_0025", "bone": "bone101" },
+	{ "name": "sanjiao_0000", "bone": "bone94" }
+],
+"skins": {
+	"default": {
+		"sanjiao_0000": {
+			"sanjiao_0000": { "x": -6.15, "y": 25.6, "width": 1280, "height": 720 }
+		},
+		"yinchang/quan/quan_0025": {
+			"yinchang/quan/quan_0026": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0028": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0030": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0032": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0034": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0036": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0038": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0040": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0042": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0044": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0046": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0048": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0050": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0052": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0054": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0056": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 },
+			"yinchang/quan/quan_0058": { "x": -3.86, "y": 4.4, "width": 264, "height": 243 }
+		}
+	}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"yinchang/quan/quan_0025": {
+				"attachment": [
+					{ "time": 0.1667, "name": "yinchang/quan/quan_0026" },
+					{ "time": 0.2, "name": "yinchang/quan/quan_0028" },
+					{ "time": 0.2333, "name": "yinchang/quan/quan_0030" },
+					{ "time": 0.2667, "name": "yinchang/quan/quan_0032" },
+					{ "time": 0.3, "name": "yinchang/quan/quan_0034" },
+					{ "time": 0.3333, "name": "yinchang/quan/quan_0036" },
+					{ "time": 0.3667, "name": "yinchang/quan/quan_0038" },
+					{ "time": 0.4, "name": "yinchang/quan/quan_0040" },
+					{ "time": 0.4333, "name": "yinchang/quan/quan_0042" },
+					{ "time": 0.4667, "name": "yinchang/quan/quan_0044" },
+					{ "time": 0.5, "name": "yinchang/quan/quan_0046" },
+					{ "time": 0.5333, "name": "yinchang/quan/quan_0048" },
+					{ "time": 0.5667, "name": "yinchang/quan/quan_0050" },
+					{ "time": 0.6, "name": "yinchang/quan/quan_0052" },
+					{ "time": 0.6333, "name": "yinchang/quan/quan_0054" },
+					{ "time": 0.6667, "name": "yinchang/quan/quan_0056" },
+					{ "time": 0.7, "name": "yinchang/quan/quan_0058" },
+					{ "time": 0.7333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone101": {
+				"rotate": [
+					{ "time": 0.1667, "angle": 3.6 }
+				],
+				"translate": [
+					{ "time": 0.1667, "x": -52.76, "y": 326.81 }
+				],
+				"scale": [
+					{ "time": 0.1667, "x": 3, "y": 3 }
+				]
+			}
+		}
+	},
+	"animation_1": {
+		"slots": {
+			"sanjiao_0000": {
+				"attachment": [
+					{ "time": 0, "name": "sanjiao_0000" }
+				]
+			}
+		},
+		"bones": {
+			"bone94": {
+				"rotate": [
+					{ "time": 0, "angle": -117.56 },
+					{ "time": 0.7333, "angle": 120.24 }
+				],
+				"translate": [
+					{ "time": 0, "x": -61.04, "y": -4.55 },
+					{ "time": 0.7333, "x": -115.67, "y": -4.55 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": 0.8 }
+				]
+			},
+			"bone": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 0.3 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,27 @@
+
+uieffect_13.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/FX_Glow_07202_1
+  rotate: false
+  xy: 2, 232
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+images/MQ_CFX2_T_FadedRay_ci
+  rotate: false
+  xy: 2, 2
+  size: 252, 228
+  orig: 256, 256
+  offset: 4, 24
+  index: -1
+images/kuang
+  rotate: false
+  xy: 260, 340
+  size: 148, 148
+  orig: 153, 153
+  offset: 2, 3
+  index: -1

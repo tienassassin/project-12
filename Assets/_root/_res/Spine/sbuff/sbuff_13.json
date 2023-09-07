@@ -1,0 +1,51 @@
+{
+"skeleton": { "hash": "VLmdhSyKNdqQ3ISfAnQxqxt9jYA", "spine": "3.5.35", "width": 1900, "height": 1900, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "1b", "parent": "root" },
+	{ "name": "2b3", "parent": "1b", "scaleX": 2.5, "scaleY": 2.5 }
+],
+"slots": [
+	{ "name": "1b/fxxcx_09", "bone": "2b3", "attachment": "1b/fxxcx_09" }
+],
+"skins": {
+	"default": {
+		"1b/fxxcx_09": {
+			"1b/fxxcx_09": { "x": -20.15, "y": 10.73, "scaleX": 4, "scaleY": 4, "width": 190, "height": 190 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"1b/fxxcx_09": {
+				"color": [
+					{ "time": 0, "color": "ffffffa7" }
+				]
+			}
+		},
+		"bones": {
+			"2b3": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.1667, "angle": 72 }
+				],
+				"translate": [
+					{ "time": 0, "x": 213.05, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"1b": {
+				"translate": [
+					{ "time": 0, "x": 63.91, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.3, "y": 0.8 }
+				]
+			}
+		}
+	}
+}
+}

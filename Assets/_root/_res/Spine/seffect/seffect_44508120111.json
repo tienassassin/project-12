@@ -1,0 +1,253 @@
+{
+"skeleton": { "hash": "nECp0z1fr/gEbcS9vdTRdVMsjWQ", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "Attack", "parent": "root", "x": 203.26, "y": -30.15, "scaleX": 2, "scaleY": 2 },
+	{ "name": "Skill", "parent": "root" },
+	{ "name": "JiaXue", "parent": "Skill" },
+	{ "name": "Shouji", "parent": "Attack", "x": 84.33, "y": -1.18 },
+	{ "name": "faz01_0000", "parent": "Skill" },
+	{ "name": "gus_0003", "parent": "Shouji", "y": 147.1 },
+	{ "name": "shs01_0001", "parent": "JiaXue" },
+	{ "name": "shs_0003", "parent": "Shouji", "y": 115.27 },
+	{ "name": "tis01_0001", "parent": "JiaXue" }
+],
+"slots": [
+	{ "name": "attack/jiaxue/guangshu/gus_0003", "bone": "gus_0003" },
+	{ "name": "attack/jiaxue/shangshenglizi/shs_0003", "bone": "shs_0003" },
+	{ "name": "skill/jiaxue01/shangsheng01/shs01_0001", "bone": "shs01_0001" },
+	{ "name": "skill/jiaxue01/tianshi01/tis01_0001", "bone": "tis01_0001" },
+	{ "name": "skill/jiaxue01/tianshi01/tis01_1", "bone": "tis01_0001", "blend": "additive" },
+	{ "name": "skill/faz01_0000", "bone": "faz01_0000" }
+],
+"skins": {
+	"default": {
+		"attack/jiaxue/guangshu/gus_0003": {
+			"attack/jiaxue/guangshu/gus_0003": { "width": 75, "height": 215 },
+			"attack/jiaxue/guangshu/gus_0005": { "width": 75, "height": 215 },
+			"attack/jiaxue/guangshu/gus_0007": { "width": 75, "height": 215 },
+			"attack/jiaxue/guangshu/gus_0009": { "width": 75, "height": 215 },
+			"attack/jiaxue/guangshu/gus_0011": { "width": 75, "height": 215 },
+			"attack/jiaxue/guangshu/gus_0013": { "width": 75, "height": 215 }
+		},
+		"attack/jiaxue/shangshenglizi/shs_0003": {
+			"attack/jiaxue/shangshenglizi/shs_0003": { "width": 125, "height": 175 },
+			"attack/jiaxue/shangshenglizi/shs_0005": { "width": 125, "height": 175 },
+			"attack/jiaxue/shangshenglizi/shs_0007": { "width": 125, "height": 175 },
+			"attack/jiaxue/shangshenglizi/shs_0009": { "width": 125, "height": 175 },
+			"attack/jiaxue/shangshenglizi/shs_0011": { "width": 125, "height": 175 },
+			"attack/jiaxue/shangshenglizi/shs_0013": { "width": 125, "height": 175 },
+			"attack/jiaxue/shangshenglizi/shs_0015": { "width": 125, "height": 175 },
+			"attack/jiaxue/shangshenglizi/shs_0017": { "width": 125, "height": 175 }
+		},
+		"skill/faz01_0000": {
+			"skill/faz01_0000": { "width": 350, "height": 150 }
+		},
+		"skill/jiaxue01/shangsheng01/shs01_0001": {
+			"skill/jiaxue01/shangsheng01/shs01_0001": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0003": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0005": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0007": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0009": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0011": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0013": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0015": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0017": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0019": { "width": 150, "height": 200 },
+			"skill/jiaxue01/shangsheng01/shs01_0021": { "width": 150, "height": 200 }
+		},
+		"skill/jiaxue01/tianshi01/tis01_0001": {
+			"skill/jiaxue01/tianshi01/tis01_0001": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0003": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0005": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0013": { "x": -3, "y": -5, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0017": { "x": -3, "y": -5, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0019": { "x": -2, "y": -3, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0021": { "x": -2, "y": -4, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0023": { "x": -2, "y": -3, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0025": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0027": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0029": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0031": { "width": 500, "height": 300 }
+		},
+		"skill/jiaxue01/tianshi01/tis01_1": {
+			"skill/jiaxue01/tianshi01/tis01_0001": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0003": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0005": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0013": { "x": -3, "y": -5, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0017": { "x": -3, "y": -5, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0019": { "x": -2, "y": -3, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0021": { "x": -2, "y": -4, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0023": { "x": -2, "y": -3, "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0025": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0027": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0029": { "width": 500, "height": 300 },
+			"skill/jiaxue01/tianshi01/tis01_0031": { "width": 500, "height": 300 }
+		}
+	}
+},
+"events": {
+	"hit_11_1_1": {},
+	"hit_21_1_1": {}
+},
+"animations": {
+	"animation_2": {
+		"slots": {
+			"skill/faz01_0000": {
+				"attachment": [
+					{ "time": 0, "name": "skill/faz01_0000" }
+				]
+			},
+			"skill/jiaxue01/shangsheng01/shs01_0001": {
+				"attachment": [
+					{ "time": 0, "name": "skill/jiaxue01/shangsheng01/shs01_0001" },
+					{ "time": 0.0667, "name": "skill/jiaxue01/shangsheng01/shs01_0003" },
+					{ "time": 0.1333, "name": "skill/jiaxue01/shangsheng01/shs01_0005" },
+					{ "time": 0.2, "name": "skill/jiaxue01/shangsheng01/shs01_0007" },
+					{ "time": 0.2667, "name": "skill/jiaxue01/shangsheng01/shs01_0009" },
+					{ "time": 0.3333, "name": "skill/jiaxue01/shangsheng01/shs01_0011" },
+					{ "time": 0.4, "name": "skill/jiaxue01/shangsheng01/shs01_0013" },
+					{ "time": 0.4667, "name": "skill/jiaxue01/shangsheng01/shs01_0015" },
+					{ "time": 0.5333, "name": "skill/jiaxue01/shangsheng01/shs01_0017" },
+					{ "time": 0.6, "name": "skill/jiaxue01/shangsheng01/shs01_0019" },
+					{ "time": 0.6667, "name": "skill/jiaxue01/shangsheng01/shs01_0021" },
+					{ "time": 0.7333, "name": null }
+				]
+			},
+			"skill/jiaxue01/tianshi01/tis01_1": {
+				"color": [
+					{ "time": 0.5, "color": "ffffff00" },
+					{ "time": 0.6, "color": "ffffff90" },
+					{ "time": 0.6667, "color": "ffffffff" },
+					{ "time": 1.1333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.6, "name": "skill/jiaxue01/tianshi01/tis01_0021" },
+					{ "time": 1.1333, "name": null }
+				]
+			},
+			"skill/jiaxue01/tianshi01/tis01_0001": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.1667, "name": "skill/jiaxue01/tianshi01/tis01_0001" },
+					{ "time": 0.2333, "name": "skill/jiaxue01/tianshi01/tis01_0003" },
+					{ "time": 0.3, "name": "skill/jiaxue01/tianshi01/tis01_0005" },
+					{ "time": 0.3667, "name": "skill/jiaxue01/tianshi01/tis01_0013" },
+					{ "time": 0.5, "name": "skill/jiaxue01/tianshi01/tis01_0017" },
+					{ "time": 0.5667, "name": "skill/jiaxue01/tianshi01/tis01_0019" },
+					{ "time": 0.6667, "name": "skill/jiaxue01/tianshi01/tis01_0023" },
+					{ "time": 0.8, "name": "skill/jiaxue01/tianshi01/tis01_0025" },
+					{ "time": 0.9333, "name": "skill/jiaxue01/tianshi01/tis01_0027" },
+					{ "time": 1, "name": "skill/jiaxue01/tianshi01/tis01_0029" },
+					{ "time": 1.0667, "name": "skill/jiaxue01/tianshi01/tis01_0031" },
+					{ "time": 1.1333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"faz01_0000": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": -1 }
+				]
+			},
+			"tis01_0001": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 218.92,
+						"curve": [ 0.322, 0.3, 0.622, 1 ]
+					},
+					{ "time": 0.3, "x": 0, "y": 330.42 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			},
+			"shs01_0001": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 144.42 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.5, "y": 2 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.7667, "name": "hit_21_1_1" }
+		]
+	},
+	"animation_1": {
+		"slots": {
+			"attack/jiaxue/guangshu/gus_0003": {
+				"attachment": [
+					{ "time": 0, "name": "attack/jiaxue/guangshu/gus_0003" },
+					{ "time": 0.0667, "name": "attack/jiaxue/guangshu/gus_0005" },
+					{ "time": 0.1333, "name": "attack/jiaxue/guangshu/gus_0007" },
+					{ "time": 0.2, "name": "attack/jiaxue/guangshu/gus_0009" },
+					{ "time": 0.2667, "name": "attack/jiaxue/guangshu/gus_0011" },
+					{ "time": 0.3333, "name": "attack/jiaxue/guangshu/gus_0013" },
+					{ "time": 0.4, "name": null }
+				]
+			},
+			"attack/jiaxue/shangshenglizi/shs_0003": {
+				"attachment": [
+					{ "time": 0, "name": "attack/jiaxue/shangshenglizi/shs_0003" },
+					{ "time": 0.0667, "name": "attack/jiaxue/shangshenglizi/shs_0005" },
+					{ "time": 0.1333, "name": "attack/jiaxue/shangshenglizi/shs_0007" },
+					{ "time": 0.2, "name": "attack/jiaxue/shangshenglizi/shs_0009" },
+					{ "time": 0.2667, "name": "attack/jiaxue/shangshenglizi/shs_0011" },
+					{ "time": 0.3333, "name": "attack/jiaxue/shangshenglizi/shs_0013" },
+					{ "time": 0.4, "name": "attack/jiaxue/shangshenglizi/shs_0015" },
+					{ "time": 0.4667, "name": "attack/jiaxue/shangshenglizi/shs_0017" },
+					{ "time": 0.5333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"gus_0003": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.2, "y": 1.2 }
+				]
+			},
+			"shs_0003": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.5, "y": 1.5 }
+				]
+			},
+			"Attack": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -202.55, "y": 2.05 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Shouji": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -84.89, "y": -13.51 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.1667, "name": "hit_11_1_1" }
+		]
+	}
+}
+}

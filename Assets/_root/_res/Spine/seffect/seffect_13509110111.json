@@ -1,0 +1,193 @@
+{
+"skeleton": { "hash": "Ml6kSci117PA9S6Ygu34gcufExc", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "Skill", "parent": "root", "color": "ffff00ff" },
+	{ "name": "SF01", "parent": "Skill", "color": "ffff00ff" },
+	{ "name": "SJ01", "parent": "Skill", "color": "ffff00ff" },
+	{ "name": "bone60", "parent": "root", "x": 1.72, "y": 1.39 },
+	{ "name": "shj01_0001", "parent": "SJ01", "color": "ffff00ff" },
+	{ "name": "shj01_1", "parent": "SJ01", "color": "ffff00ff" },
+	{ "name": "shj01_2", "parent": "SJ01", "color": "ffff00ff" }
+],
+"slots": [
+	{ "name": "skill/shouji01/shj01_0001", "bone": "shj01_0001" },
+	{ "name": "skill/shouji01/shj01_1", "bone": "shj01_1" },
+	{ "name": "skill/shouji01/shj01_2", "bone": "shj01_2" }
+],
+"skins": {
+	"default": {
+		"skill/shouji01/shj01_0001": {
+			"skill/shouji01/shj01_0001": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0003": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0005": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0007": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0009": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0011": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0013": { "width": 200, "height": 200 }
+		},
+		"skill/shouji01/shj01_1": {
+			"skill/shouji01/shj01_0001": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0003": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0005": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0007": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0009": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0011": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0013": { "width": 200, "height": 200 }
+		},
+		"skill/shouji01/shj01_2": {
+			"skill/shouji01/shj01_0001": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0003": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0005": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0007": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0009": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0011": { "width": 200, "height": 200 },
+			"skill/shouji01/shj01_0013": { "width": 200, "height": 200 }
+		}
+	}
+},
+"events": {
+	"hit_21_3_1": {},
+	"hit_21_3_2": {},
+	"hit_21_3_3": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"skill/shouji01/shj01_0001": {
+				"attachment": [
+					{ "time": 0.0333, "name": "skill/shouji01/shj01_0001" },
+					{ "time": 0.1, "name": "skill/shouji01/shj01_0003" },
+					{ "time": 0.1667, "name": "skill/shouji01/shj01_0005" },
+					{ "time": 0.2333, "name": "skill/shouji01/shj01_0007" },
+					{ "time": 0.3, "name": "skill/shouji01/shj01_0009" },
+					{ "time": 0.3667, "name": "skill/shouji01/shj01_0011" },
+					{ "time": 0.4333, "name": "skill/shouji01/shj01_0013" },
+					{ "time": 0.4667, "name": null },
+					{ "time": 0.5667, "name": "skill/shouji01/shj01_0001" },
+					{ "time": 0.6333, "name": "skill/shouji01/shj01_0003" },
+					{ "time": 0.7, "name": "skill/shouji01/shj01_0005" },
+					{ "time": 0.7667, "name": "skill/shouji01/shj01_0007" },
+					{ "time": 0.8333, "name": "skill/shouji01/shj01_0009" },
+					{ "time": 0.9, "name": "skill/shouji01/shj01_0011" },
+					{ "time": 0.9667, "name": "skill/shouji01/shj01_0013" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"skill/shouji01/shj01_1": {
+				"attachment": [
+					{ "time": 0.2333, "name": "skill/shouji01/shj01_0001" },
+					{ "time": 0.3, "name": "skill/shouji01/shj01_0003" },
+					{ "time": 0.3667, "name": "skill/shouji01/shj01_0005" },
+					{ "time": 0.4333, "name": "skill/shouji01/shj01_0007" },
+					{ "time": 0.5, "name": "skill/shouji01/shj01_0009" },
+					{ "time": 0.5667, "name": "skill/shouji01/shj01_0011" },
+					{ "time": 0.6333, "name": "skill/shouji01/shj01_0013" },
+					{ "time": 0.6667, "name": null }
+				]
+			},
+			"skill/shouji01/shj01_2": {
+				"attachment": [
+					{ "time": 0.3333, "name": "skill/shouji01/shj01_0001" },
+					{ "time": 0.4, "name": "skill/shouji01/shj01_0003" },
+					{ "time": 0.4667, "name": "skill/shouji01/shj01_0005" },
+					{ "time": 0.5333, "name": "skill/shouji01/shj01_0007" },
+					{ "time": 0.6, "name": "skill/shouji01/shj01_0009" },
+					{ "time": 0.6667, "name": "skill/shouji01/shj01_0011" },
+					{ "time": 0.7333, "name": "skill/shouji01/shj01_0013" },
+					{ "time": 0.7667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Skill": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -539.52, "y": -48.84 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SF01": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"shj01_0001": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.0333, "x": 541.9, "y": 67.66, "curve": "stepped" },
+					{ "time": 0.4667, "x": 541.9, "y": 67.66 },
+					{ "time": 0.5667, "x": 472.52, "y": 69.73 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.0333, "x": 2.86, "y": 2.86 }
+				]
+			},
+			"SJ01": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"shj01_1": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.2333, "x": 608.87, "y": 139.79 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.2333, "x": 2.4, "y": 2.4 }
+				]
+			},
+			"shj01_2": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.3333, "x": 480.47, "y": 164.64 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.3333, "x": 2.4, "y": 2.4 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -100 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 }
+		],
+		"events": [
+			{ "time": 0.2333, "name": "hit_21_3_3" },
+			{ "time": 0.3667, "name": "hit_21_3_2" },
+			{ "time": 0.6, "name": "hit_21_3_1" }
+		]
+	}
+}
+}

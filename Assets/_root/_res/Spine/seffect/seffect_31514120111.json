@@ -1,0 +1,45 @@
+{
+"skeleton": { "hash": "qX3yIkC93SGJrK2n8NiHLd9h/d0", "spine": "3.5.35", "width": 2397.6, "height": 4262.4, "images": "./images/" },
+"bones": [
+	{ "name": "root", "rotation": -155.31 },
+	{ "name": "shouji", "parent": "root", "rotation": -26.76 }
+],
+"slots": [
+	{ "name": "skill1/1", "bone": "shouji" }
+],
+"skins": {
+	"default": {
+		"skill1/1": {
+			"skill1/1": { "rotation": 26.76, "width": 326, "height": 186 },
+			"skill1/2": { "rotation": 26.76, "width": 338, "height": 189 },
+			"skill1/3": { "rotation": 26.76, "width": 346, "height": 177 },
+			"skill1/4": { "rotation": 26.76, "width": 146, "height": 156 }
+		}
+	}
+},
+"events": {
+	"hit_21_1_1": {}
+},
+"animations": {
+	"animation_2": {
+		"slots": {
+			"skill1/1": {
+				"attachment": [
+					{ "time": 0, "name": "skill1/1" },
+					{ "time": 0.0667, "name": "skill1/2" },
+					{ "time": 0.1333, "name": "skill1/3" },
+					{ "time": 0.2, "name": "skill1/4" },
+					{ "time": 0.2667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"shouji": {
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			}
+		}
+	}
+}
+}

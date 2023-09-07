@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
+  state: 0
   fireSpirit: 0
   maxFireSpirit: 5
   currentEntity: {fileID: 0}

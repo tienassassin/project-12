@@ -1,0 +1,82 @@
+{
+"skeleton": { "hash": "R5Jy8gujI/Z8TXWNyDePEb0ffjY", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone105", "parent": "root" }
+],
+"slots": [
+	{ "name": "utskill/hua/boomhua_0046", "bone": "bone105" }
+],
+"skins": {
+	"default": {
+		"utskill/hua/boomhua_0046": {
+			"utskill/hua/boomhua_0046": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0048": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0050": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0052": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0054": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0056": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0058": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0060": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0062": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0064": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0066": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0068": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0070": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0072": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0074": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0076": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0078": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0080": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0082": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0084": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0086": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0088": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0090": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0092": { "width": 166, "height": 253 },
+			"utskill/hua/boomhua_0094": { "width": 166, "height": 253 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"utskill/hua/boomhua_0046": {
+				"color": [
+					{ "time": 0.2, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "utskill/hua/boomhua_0050" },
+					{ "time": 0.0333, "name": "utskill/hua/boomhua_0052" },
+					{ "time": 0.0667, "name": "utskill/hua/boomhua_0054" },
+					{ "time": 0.1, "name": "utskill/hua/boomhua_0056" },
+					{ "time": 0.1333, "name": "utskill/hua/boomhua_0058" },
+					{ "time": 0.1667, "name": "utskill/hua/boomhua_0060" },
+					{ "time": 0.2, "name": "utskill/hua/boomhua_0062" },
+					{ "time": 0.2333, "name": "utskill/hua/boomhua_0064" },
+					{ "time": 0.2667, "name": "utskill/hua/boomhua_0066" },
+					{ "time": 0.3, "name": "utskill/hua/boomhua_0068" },
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone105": {
+				"translate": [
+					{ "time": 0, "x": -1.31, "y": -240.63 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0667, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

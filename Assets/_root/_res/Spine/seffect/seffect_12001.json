@@ -1,0 +1,98 @@
+{
+"skeleton": { "hash": "hsFZ3YWErA6PgitlTfXjEwn4dFM", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "BG", "parent": "root", "x": 851.41, "scaleX": 3.33, "scaleY": 3.33 },
+	{ "name": "boss2ZX", "parent": "root", "x": -408.48, "y": -419.57 },
+	{ "name": "tx", "parent": "boss2ZX" },
+	{ "name": "ditu2", "parent": "tx" }
+],
+"slots": [
+	{ "name": "bg", "bone": "BG" },
+	{ "name": "chibang02", "bone": "boss2ZX" },
+	{ "name": "shoubi01", "bone": "boss2ZX" },
+	{ "name": "qianzhua01", "bone": "boss2ZX" },
+	{ "name": "shi02", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "shenti", "bone": "boss2ZX" },
+	{ "name": "bozi", "bone": "boss2ZX" },
+	{ "name": "tou01", "bone": "boss2ZX" },
+	{ "name": "tou", "bone": "boss2ZX" },
+	{ "name": "ya", "bone": "boss2ZX" },
+	{ "name": "jiao01", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "jiao02", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "chibang01", "bone": "boss2ZX" },
+	{ "name": "shoubi02", "bone": "boss2ZX" },
+	{ "name": "qianzhua02", "bone": "boss2ZX" },
+	{ "name": "guang01", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "guang02", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "guang03", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "guang04", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "guang05", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "shi01", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "shi03", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "shi04", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "jiao03", "bone": "boss2ZX", "blend": "additive" },
+	{ "name": "ditu2", "bone": "ditu2" }
+],
+"skins": {
+	"default": {
+		"ditu2": {
+			"tx/smoke/0_00000": { "width": 750, "height": 750 },
+			"tx/smoke/0_00002": { "width": 750, "height": 750 },
+			"tx/smoke/0_00004": { "width": 750, "height": 750 },
+			"tx/smoke/0_00006": { "width": 750, "height": 750 },
+			"tx/smoke/0_00008": { "width": 750, "height": 750 },
+			"tx/smoke/0_00010": { "width": 750, "height": 750 },
+			"tx/smoke/0_00012": { "width": 750, "height": 750 },
+			"tx/smoke/0_00014": { "width": 750, "height": 750 },
+			"tx/smoke/0_00017": { "width": 750, "height": 750 },
+			"tx/smoke/0_00025": { "width": 750, "height": 750 },
+			"tx/smoke/0_00033": { "width": 750, "height": 750 },
+			"tx/smoke/0_00041": { "width": 750, "height": 750 },
+			"tx/smoke/0_00047": { "width": 750, "height": 750 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"ditu2": {
+				"color": [
+					{ "time": 0, "color": "ff0700ff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "tx/smoke/0_00000" },
+					{ "time": 0.0667, "name": "tx/smoke/0_00002" },
+					{ "time": 0.1333, "name": "tx/smoke/0_00004" },
+					{ "time": 0.2, "name": "tx/smoke/0_00006" },
+					{ "time": 0.2667, "name": "tx/smoke/0_00008" },
+					{ "time": 0.3333, "name": "tx/smoke/0_00010" },
+					{ "time": 0.4, "name": "tx/smoke/0_00012" },
+					{ "time": 0.4667, "name": "tx/smoke/0_00014" },
+					{ "time": 0.5333, "name": "tx/smoke/0_00017" },
+					{ "time": 0.6, "name": "tx/smoke/0_00025" },
+					{ "time": 0.6667, "name": "tx/smoke/0_00033" },
+					{ "time": 0.7333, "name": "tx/smoke/0_00041" },
+					{ "time": 0.8, "name": "tx/smoke/0_00047" }
+				]
+			}
+		},
+		"bones": {
+			"ditu2": {
+				"translate": [
+					{ "time": 0, "x": 380, "y": 400.07 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.86, "y": 2.698 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.1667, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

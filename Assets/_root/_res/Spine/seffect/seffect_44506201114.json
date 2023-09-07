@@ -1,0 +1,142 @@
+{
+"skeleton": { "hash": "6jPQyEd0KCp+qgFHNgONMloOprk", "spine": "3.5.35", "width": 136.9, "height": 163.61 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "BG", "parent": "root", "y": 116.32, "scaleX": 3.33, "scaleY": 3.33 },
+	{ "name": "beiludandipifuZX", "parent": "root", "x": -272.83, "y": -196.82 },
+	{ "name": "dongzuo", "parent": "beiludandipifuZX", "x": 272.83, "y": 215.3 },
+	{
+		"name": "bone68",
+		"parent": "dongzuo",
+		"length": 114.44,
+		"rotation": 51.3,
+		"x": 246.67,
+		"y": 133.24,
+		"scaleX": 1.113,
+		"scaleY": 1.113
+	},
+	{ "name": "TRAIL", "parent": "bone68", "rotation": -51.3, "x": -232.01, "y": 98.11 },
+	{ "name": "bone70", "parent": "bone68", "length": 95.05, "rotation": -2.23, "x": 46.79, "y": -41.16 }
+],
+"slots": [
+	{ "name": "bg", "bone": "BG" },
+	{ "name": "daodan", "bone": "dongzuo", "attachment": "daodan" },
+	{ "name": "TRAIL", "bone": "TRAIL", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"TRAIL": {
+			"Trail/trail_0004": { "width": 318, "height": 56 }
+		},
+		"daodan": {
+			"daodan": {
+				"type": "mesh",
+				"uvs": [ 0, 0.61978, 0, 0.81505, 0.17557, 0.80003, 0.17557, 1, 0.26308, 1, 0.35957, 0.85072, 0.48298, 0.87325, 0.50542, 0.67799, 0.89362, 0.34566, 1, 0.1504, 1, 0, 0.91606, 0, 0.68045, 0.10721, 0.36854, 0.39823, 0.32367, 0.47146 ],
+				"triangles": [ 11, 10, 9, 9, 8, 12, 9, 12, 11, 13, 12, 8, 7, 13, 8, 14, 13, 7, 2, 0, 14, 5, 2, 14, 1, 0, 2, 7, 5, 14, 6, 5, 7, 4, 3, 2, 5, 4, 2 ],
+				"vertices": [ 1, 6, -11.09, 36.56, 1, 1, 6, -32.77, 17.75, 1, 1, 6, -16.96, 2.88, 1, 1, 6, -39.17, -16.38, 1, 1, 6, -32.11, -24.51, 1, 1, 6, -7.76, -19.1, 1, 1, 6, -0.32, -32.74, 1, 1, 6, 23.18, -16.02, 1, 1, 6, 91.37, -20.08, 1, 1, 6, 121.63, -11.16, 1, 1, 6, 138.33, 3.32, 1, 1, 6, 131.56, 11.12, 1, 1, 6, 100.67, 22.69, 1, 1, 6, 43.22, 23.65, 1, 1, 6, 31.47, 20.76, 1 ],
+				"hull": 15
+			}
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"TRAIL": {
+				"color": [
+					{ "time": 0, "color": "ffcf3eff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Trail/trail_0004" }
+				]
+			}
+		},
+		"bones": {
+			"bone68": {
+				"rotate": [
+					{ "time": 0, "angle": -49.25, "curve": "stepped" },
+					{ "time": 0.3333, "angle": -49.25 }
+				],
+				"translate": [
+					{ "time": 0, "x": -727.77, "y": -85.51, "curve": "stepped" },
+					{ "time": 0.3333, "x": -727.77, "y": -85.51 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"bone70": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 276.92, "y": -25.17 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.776, "y": 1.776 }
+				]
+			},
+			"dongzuo": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TRAIL": {
+				"rotate": [
+					{ "time": 0, "angle": 50.29 }
+				],
+				"translate": [
+					{ "time": 0, "x": 424.55, "y": -132.76 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.048, "y": 4.219 }
+				]
+			},
+			"BG": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"beiludandipifuZX": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 },
+			{ "time": 0.3333 }
+		]
+	}
+}
+}

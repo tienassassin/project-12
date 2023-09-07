@@ -1,0 +1,66 @@
+{
+"skeleton": { "hash": "JnxLmfwXWeEdjis4drUlpJTGK90", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone18", "parent": "root", "x": 64.52, "y": 1.07 }
+],
+"slots": [
+	{ "name": "huiju_00", "bone": "bone18" }
+],
+"skins": {
+	"default": {
+		"huiju_00": {
+			"huiju_00": { "width": 450, "height": 230 },
+			"huiju_01": { "width": 450, "height": 230 },
+			"huiju_02": { "width": 450, "height": 230 },
+			"huiju_03": { "width": 450, "height": 230 },
+			"huiju_04": { "width": 450, "height": 230 },
+			"huiju_05": { "width": 450, "height": 230 },
+			"huiju_06": { "width": 450, "height": 230 },
+			"huiju_07": { "width": 450, "height": 230 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"huiju_00": {
+				"attachment": [
+					{ "time": 0, "name": "huiju_00" },
+					{ "time": 0.0667, "name": "huiju_01" },
+					{ "time": 0.1333, "name": "huiju_02" },
+					{ "time": 0.2, "name": "huiju_03" },
+					{ "time": 0.2667, "name": "huiju_04" },
+					{ "time": 0.3333, "name": "huiju_05" },
+					{ "time": 0.4, "name": "huiju_06" },
+					{ "time": 0.4667, "name": "huiju_07" },
+					{ "time": 0.5333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone18": {
+				"rotate": [
+					{ "time": 0, "angle": 29.66 }
+				],
+				"translate": [
+					{ "time": 0, "x": -65.2, "y": -1.19 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.0667, "x": 3, "y": 3 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 }
+		],
+		"events": [
+			{ "time": 0.2333, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,91 @@
+{
+"skeleton": { "hash": "oKRP4i/EDEnbAlzOCEnsyEfMpqQ", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone2", "parent": "bone", "y": 220, "scaleX": 4, "scaleY": 4 }
+],
+"slots": [
+	{ "name": "tex/sbuff_25_01", "bone": "bone2", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"tex/sbuff_25_01": {
+			"tex/sbuff_25_01": { "width": 150, "height": 150 },
+			"tex/sbuff_25_02": { "width": 150, "height": 150 },
+			"tex/sbuff_25_03": { "width": 150, "height": 150 },
+			"tex/sbuff_25_04": { "width": 150, "height": 150 },
+			"tex/sbuff_25_05": { "width": 150, "height": 150 },
+			"tex/sbuff_25_06": { "width": 150, "height": 150 },
+			"tex/sbuff_25_07": { "width": 150, "height": 150 },
+			"tex/sbuff_25_08": { "width": 150, "height": 150 },
+			"tex/sbuff_25_09": { "width": 150, "height": 150 },
+			"tex/sbuff_25_10": { "width": 150, "height": 150 },
+			"tex/sbuff_25_11": { "width": 150, "height": 150 },
+			"tex/sbuff_25_12": { "width": 150, "height": 150 },
+			"tex/sbuff_25_13": { "width": 150, "height": 150 },
+			"tex/sbuff_25_14": { "width": 150, "height": 150 },
+			"tex/sbuff_25_15": { "width": 150, "height": 150 },
+			"tex/sbuff_25_16": { "width": 150, "height": 150 },
+			"tex/sbuff_25_17": { "width": 150, "height": 150 },
+			"tex/sbuff_25_18": { "width": 150, "height": 150 },
+			"tex/sbuff_25_19": { "width": 150, "height": 150 },
+			"tex/sbuff_25_20": { "width": 150, "height": 150 },
+			"tex/sbuff_25_21": { "width": 150, "height": 150 },
+			"tex/sbuff_25_22": { "width": 150, "height": 150 },
+			"tex/sbuff_25_23": { "width": 150, "height": 150 },
+			"tex/sbuff_25_24": { "width": 150, "height": 150 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"tex/sbuff_25_01": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff47",
+						"curve": [ 0.392, 0, 0.627, 1 ]
+					},
+					{ "time": 0.5667, "color": "ffffffc2", "curve": "stepped" },
+					{
+						"time": 0.9,
+						"color": "ffffffc2",
+						"curve": [ 0.392, 0, 0.627, 1 ]
+					},
+					{ "time": 1.6, "color": "ffffff47", "curve": "stepped" },
+					{ "time": 1.9, "color": "ffffff47" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "tex/sbuff_25_01" },
+					{ "time": 0.1, "name": "tex/sbuff_25_02" },
+					{ "time": 0.2, "name": "tex/sbuff_25_03" },
+					{ "time": 0.3, "name": "tex/sbuff_25_04" },
+					{ "time": 0.4, "name": "tex/sbuff_25_05" },
+					{ "time": 0.5, "name": "tex/sbuff_25_06" },
+					{ "time": 0.5667, "name": "tex/sbuff_25_07" },
+					{ "time": 0.6333, "name": "tex/sbuff_25_08" },
+					{ "time": 0.7, "name": "tex/sbuff_25_09" },
+					{ "time": 0.7667, "name": "tex/sbuff_25_10" },
+					{ "time": 0.8333, "name": "tex/sbuff_25_11" },
+					{ "time": 0.9, "name": "tex/sbuff_25_12" },
+					{ "time": 0.9667, "name": "tex/sbuff_25_13" },
+					{ "time": 1.0333, "name": "tex/sbuff_25_14" },
+					{ "time": 1.1, "name": "tex/sbuff_25_15" },
+					{ "time": 1.1667, "name": "tex/sbuff_25_16" },
+					{ "time": 1.2333, "name": "tex/sbuff_25_17" },
+					{ "time": 1.3, "name": "tex/sbuff_25_18" },
+					{ "time": 1.3667, "name": "tex/sbuff_25_19" },
+					{ "time": 1.4333, "name": "tex/sbuff_25_20" },
+					{ "time": 1.5, "name": "tex/sbuff_25_21" },
+					{ "time": 1.6, "name": "tex/sbuff_25_22" },
+					{ "time": 1.7, "name": "tex/sbuff_25_23" },
+					{ "time": 1.8, "name": "tex/sbuff_25_24" },
+					{ "time": 1.9, "name": "tex/sbuff_25_01" }
+				]
+			}
+		}
+	}
+}
+}

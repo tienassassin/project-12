@@ -1,0 +1,133 @@
+{
+"skeleton": { "hash": "nshUdeDu64gb6zV7HpyXKfKRxCU", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone20", "parent": "root", "x": -228.85, "y": 56.63, "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "tian/tian_00000", "bone": "bone20", "blend": "screen" }
+],
+"skins": {
+	"default": {
+		"tian/tian_00000": {
+			"tian/tian_00000": { "width": 200, "height": 200 },
+			"tian/tian_00001": { "width": 200, "height": 200 },
+			"tian/tian_00002": { "width": 200, "height": 200 },
+			"tian/tian_00003": { "width": 200, "height": 200 },
+			"tian/tian_00004": { "width": 200, "height": 200 },
+			"tian/tian_00005": { "width": 200, "height": 200 },
+			"tian/tian_00006": { "width": 200, "height": 200 },
+			"tian/tian_00007": { "width": 200, "height": 200 },
+			"tian/tian_00008": { "width": 200, "height": 200 },
+			"tian/tian_00009": { "width": 200, "height": 200 },
+			"tian/tian_00010": { "width": 200, "height": 200 },
+			"tian/tian_00011": { "width": 200, "height": 200 },
+			"tian/tian_00012": { "width": 200, "height": 200 },
+			"tian/tian_00013": { "width": 200, "height": 200 },
+			"tian/tian_00014": { "width": 200, "height": 200 },
+			"tian/tian_00015": { "width": 200, "height": 200 },
+			"tian/tian_00016": { "width": 200, "height": 200 },
+			"tian/tian_00017": { "width": 200, "height": 200 },
+			"tian/tian_00018": { "width": 200, "height": 200 },
+			"tian/tian_00019": { "width": 200, "height": 200 },
+			"tian/tian_00020": { "width": 200, "height": 200 },
+			"tian/tian_00021": { "width": 200, "height": 200 },
+			"tian/tian_00022": { "width": 200, "height": 200 },
+			"tian/tian_00023": { "width": 200, "height": 200 },
+			"tian/tian_00024": { "width": 200, "height": 200 },
+			"tian/tian_00025": { "width": 200, "height": 200 },
+			"tian/tian_00026": { "width": 200, "height": 200 },
+			"tian/tian_00027": { "width": 200, "height": 200 },
+			"tian/tian_00028": { "width": 200, "height": 200 },
+			"tian/tian_00029": { "width": 200, "height": 200 },
+			"tian/tian_00030": { "width": 200, "height": 200 },
+			"tian/tian_00031": { "width": 200, "height": 200 },
+			"tian/tian_00032": { "width": 200, "height": 200 },
+			"tian/tian_00033": { "width": 200, "height": 200 }
+		}
+	}
+},
+"events": {
+	"back": {},
+	"qishou_11_5_1": {},
+	"qishou_11_5_2": {},
+	"qishou_11_5_3": {},
+	"qishou_11_5_4": {},
+	"qishou_11_5_5": {},
+	"shakestart_2": {},
+	"shakestart_3": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"tian/tian_00000": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.1, "color": "ffffffff" },
+					{ "time": 1.2333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "tian/tian_00000" },
+					{ "time": 0.0667, "name": "tian/tian_00001" },
+					{ "time": 0.1333, "name": "tian/tian_00002" },
+					{ "time": 0.2, "name": "tian/tian_00003" },
+					{ "time": 0.2667, "name": "tian/tian_00004" },
+					{ "time": 0.3333, "name": "tian/tian_00006" },
+					{ "time": 0.3667, "name": "tian/tian_00007" },
+					{ "time": 0.4, "name": "tian/tian_00008" },
+					{ "time": 0.4333, "name": "tian/tian_00009" },
+					{ "time": 0.4667, "name": "tian/tian_00011" },
+					{ "time": 0.5, "name": "tian/tian_00011" },
+					{ "time": 0.5333, "name": "tian/tian_00012" },
+					{ "time": 0.5667, "name": "tian/tian_00013" },
+					{ "time": 0.6, "name": "tian/tian_00014" },
+					{ "time": 0.6333, "name": "tian/tian_00015" },
+					{ "time": 0.6667, "name": "tian/tian_00016" },
+					{ "time": 0.7, "name": "tian/tian_00017" },
+					{ "time": 0.7333, "name": "tian/tian_00018" },
+					{ "time": 0.7667, "name": "tian/tian_00019" },
+					{ "time": 0.8, "name": "tian/tian_00020" },
+					{ "time": 0.8333, "name": "tian/tian_00021" },
+					{ "time": 0.8667, "name": "tian/tian_00023" },
+					{ "time": 0.9, "name": "tian/tian_00024" },
+					{ "time": 0.9333, "name": "tian/tian_00025" },
+					{ "time": 0.9667, "name": "tian/tian_00026" },
+					{ "time": 1, "name": "tian/tian_00027" },
+					{ "time": 1.0333, "name": "tian/tian_00028" },
+					{ "time": 1.0667, "name": "tian/tian_00029" },
+					{ "time": 1.1, "name": "tian/tian_00030" },
+					{ "time": 1.1333, "name": "tian/tian_00031" },
+					{ "time": 1.1667, "name": "tian/tian_00032" },
+					{ "time": 1.2, "name": "tian/tian_00033" },
+					{ "time": 1.2333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone20": {
+				"translate": [
+					{ "time": 0, "x": 301.48, "y": 1071.95, "curve": "stepped" },
+					{ "time": 1.1333, "x": 301.48, "y": 1071.95 },
+					{ "time": 1.2333, "x": 301.48, "y": 1176.86 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3, "y": 3, "curve": "stepped" },
+					{ "time": 1.1333, "x": 3, "y": 3 },
+					{ "time": 1.2333, "x": 3.25, "y": 3.5 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.3333, "name": "qishou_11_5_5" },
+			{ "time": 0.3333, "name": "shakestart_2" },
+			{ "time": 0.5, "name": "qishou_11_5_4" },
+			{ "time": 0.6667, "name": "qishou_11_5_3" },
+			{ "time": 0.6667, "name": "shakestart_2" },
+			{ "time": 0.8333, "name": "qishou_11_5_2" },
+			{ "time": 1, "name": "qishou_11_5_1" },
+			{ "time": 1, "name": "shakestart_3" }
+		]
+	}
+}
+}

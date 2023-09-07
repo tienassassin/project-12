@@ -1,0 +1,132 @@
+{
+"skeleton": { "hash": "nllncuCmcER0NGvNoxPoFy004po", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "ZX", "parent": "root", "scaleX": 0.45, "scaleY": 0.45 },
+	{ "name": "tx", "parent": "ZX" },
+	{ "name": "bao", "parent": "tx" },
+	{ "name": "bone9", "parent": "ZX", "x": 15.63, "y": 39.14 },
+	{
+		"name": "bone",
+		"parent": "bone9",
+		"length": 186.55,
+		"rotation": 105.12,
+		"x": -105.93,
+		"y": -183.42,
+		"scaleX": 0.69,
+		"scaleY": -0.69
+	},
+	{ "name": "bone2", "parent": "bone", "rotation": 176.71, "x": 227.27, "y": 372.32 },
+	{ "name": "bone3", "parent": "bone", "length": 178.23, "rotation": 70.27, "x": 229.96, "y": 159.69 },
+	{ "name": "bone4", "parent": "bone", "rotation": 1.48, "x": 289.52, "y": 172.03 },
+	{ "name": "bone5", "parent": "bone", "rotation": 1.48, "x": 257.9, "y": 158.49 },
+	{ "name": "bone6", "parent": "bone2", "x": -3.74, "y": 9.04 },
+	{ "name": "bone7", "parent": "bone2", "x": -1.3, "y": 51.45 },
+	{ "name": "bone8", "parent": "bone2", "x": -0.27, "y": 90.75 },
+	{ "name": "mingzhong", "parent": "tx" }
+],
+"slots": [
+	{ "name": "mingzhong", "bone": "mingzhong", "blend": "additive" },
+	{ "name": "bao", "bone": "bao", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"bao": {
+			"images/m_lightning/m_lightning_0000": { "width": 185, "height": 197 },
+			"images/m_lightning/m_lightning_0002": { "width": 185, "height": 197 },
+			"images/m_lightning/m_lightning_0004": { "width": 185, "height": 197 },
+			"images/m_lightning/m_lightning_0006": { "width": 185, "height": 197 },
+			"images/m_lightning/m_lightning_0008": { "width": 185, "height": 197 },
+			"images/m_lightning/m_lightning_0010": { "width": 185, "height": 197 },
+			"images/m_lightning/m_lightning_0012": { "width": 185, "height": 197 },
+			"images/m_lightning/m_lightning_0014": { "width": 185, "height": 197 }
+		},
+		"mingzhong": {
+			"images/mingzhong/mingzhong_0002": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0004": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0006": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0008": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0010": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0012": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0014": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0016": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0018": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0020": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0022": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0024": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0026": { "width": 293, "height": 251 },
+			"images/mingzhong/mingzhong_0028": { "width": 293, "height": 251 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"bao": {
+				"attachment": [
+					{ "time": 2, "name": "images/m_lightning/m_lightning_0000" },
+					{ "time": 2.0667, "name": "images/m_lightning/m_lightning_0002" },
+					{ "time": 2.1333, "name": "images/m_lightning/m_lightning_0004" },
+					{ "time": 2.2, "name": "images/m_lightning/m_lightning_0006" },
+					{ "time": 2.2667, "name": "images/m_lightning/m_lightning_0008" },
+					{ "time": 2.3333, "name": "images/m_lightning/m_lightning_0010" },
+					{ "time": 2.4, "name": "images/m_lightning/m_lightning_0012" },
+					{ "time": 2.4667, "name": "images/m_lightning/m_lightning_0014" },
+					{ "time": 2.5333, "name": null }
+				]
+			},
+			"mingzhong": {
+				"color": [
+					{ "time": 1.2333, "color": "ffffffff" },
+					{ "time": 1.4, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0667, "name": "images/mingzhong/mingzhong_0002" },
+					{ "time": 0.1333, "name": "images/mingzhong/mingzhong_0004" },
+					{ "time": 0.2, "name": "images/mingzhong/mingzhong_0006" },
+					{ "time": 0.2667, "name": "images/mingzhong/mingzhong_0008" },
+					{ "time": 0.3333, "name": "images/mingzhong/mingzhong_0010" },
+					{ "time": 0.4, "name": "images/mingzhong/mingzhong_0012" },
+					{ "time": 0.4667, "name": "images/mingzhong/mingzhong_0014" },
+					{ "time": 0.5333, "name": "images/mingzhong/mingzhong_0016" },
+					{ "time": 0.6, "name": "images/mingzhong/mingzhong_0018" },
+					{ "time": 0.6667, "name": "images/mingzhong/mingzhong_0020" },
+					{ "time": 0.7333, "name": "images/mingzhong/mingzhong_0022" },
+					{ "time": 0.8, "name": "images/mingzhong/mingzhong_0024" },
+					{ "time": 0.8667, "name": "images/mingzhong/mingzhong_0026" },
+					{ "time": 0.9333, "name": "images/mingzhong/mingzhong_0028" }
+				]
+			}
+		},
+		"bones": {
+			"mingzhong": {
+				"translate": [
+					{ "time": 0, "x": 1508.83, "y": -753.86 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			},
+			"bao": {
+				"translate": [
+					{ "time": 2, "x": 1379.69, "y": -819.8 }
+				],
+				"scale": [
+					{ "time": 2, "x": 3.714, "y": 3.714 }
+				]
+			},
+			"tx": {
+				"translate": [
+					{ "time": 0, "x": -1389.9, "y": 870.88 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 2, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

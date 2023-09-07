@@ -1,0 +1,187 @@
+{
+"skeleton": { "hash": "raNxOZS+H8RwK59OJhvc6+njx5Q", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "tx", "parent": "root" },
+	{ "name": "att", "parent": "tx" },
+	{ "name": "hita", "parent": "att" },
+	{ "name": "hita2", "parent": "att" },
+	{ "name": "superskill", "parent": "tx" },
+	{ "name": "hua2", "parent": "superskill", "x": 279.1, "y": 70.52, "scaleX": 1.3, "scaleY": 1.3 },
+	{ "name": "lianhua3", "parent": "hua2", "x": -0.12, "y": -1.15 },
+	{ "name": "line3", "parent": "hua2", "x": -0.12, "y": -1.15 },
+	{ "name": "quan3", "parent": "hua2", "x": -0.12, "y": -1.15 },
+	{ "name": "rot3", "parent": "hua2", "x": -0.12, "y": -1.15 }
+],
+"slots": [
+	{ "name": "lianhua3", "bone": "lianhua3", "blend": "additive" },
+	{ "name": "line3", "bone": "line3" },
+	{ "name": "quan3", "bone": "quan3" },
+	{ "name": "rot3", "bone": "rot3" },
+	{ "name": "hita", "bone": "hita" },
+	{ "name": "hita2", "bone": "hita2" }
+],
+"skins": {
+	"default": {
+		"hita": {
+			"superskill/1/020": { "width": 250, "height": 250 },
+			"superskill/1/022": { "width": 250, "height": 250 },
+			"superskill/1/024": { "width": 250, "height": 250 },
+			"superskill/1/026": { "width": 250, "height": 250 },
+			"superskill/1/028": { "width": 250, "height": 250 }
+		},
+		"hita2": {
+			"superskill/1/020": { "width": 250, "height": 250 },
+			"superskill/1/022": { "width": 250, "height": 250 },
+			"superskill/1/024": { "width": 250, "height": 250 },
+			"superskill/1/026": { "width": 250, "height": 250 },
+			"superskill/1/028": { "width": 250, "height": 250 }
+		},
+		"lianhua3": {
+			"lianhua/lianhua_0010": { "width": 243, "height": 246 }
+		},
+		"line3": {
+			"lianhua/line_light_0005": { "width": 360, "height": 81 }
+		},
+		"quan3": {
+			"lianhua/quan_light_0014": { "width": 222, "height": 223 }
+		},
+		"rot3": {
+			"lianhua/rot_light_0000": { "width": 235, "height": 223 }
+		}
+	}
+},
+"events": {
+	"hit_1_2_2": {},
+	"hit_1_2_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"hita": {
+				"attachment": [
+					{ "time": 0.3, "name": "superskill/1/020" },
+					{ "time": 0.3667, "name": "superskill/1/022" },
+					{ "time": 0.4333, "name": "superskill/1/024" },
+					{ "time": 0.5, "name": "superskill/1/026" },
+					{ "time": 0.5667, "name": "superskill/1/028" },
+					{ "time": 0.6, "name": null }
+				]
+			},
+			"hita2": {
+				"attachment": [
+					{ "time": 0.2667, "name": "superskill/1/020" },
+					{ "time": 0.3333, "name": "superskill/1/022" },
+					{ "time": 0.4, "name": "superskill/1/024" },
+					{ "time": 0.4667, "name": "superskill/1/026" },
+					{ "time": 0.5333, "name": "superskill/1/028" },
+					{ "time": 0.5667, "name": null }
+				]
+			},
+			"lianhua3": {
+				"color": [
+					{ "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.5, "color": "ffffffff" },
+					{ "time": 0.7333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.1667, "name": "lianhua/lianhua_0010" }
+				]
+			},
+			"line3": {
+				"attachment": [
+					{ "time": 0, "name": "lianhua/line_light_0005" },
+					{ "time": 0.1667, "name": null }
+				]
+			},
+			"quan3": {
+				"color": [
+					{ "time": 0.5, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.5667, "color": "ffffffff" },
+					{ "time": 0.6333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.5, "name": "lianhua/quan_light_0014" },
+					{ "time": 0.6333, "name": null }
+				]
+			},
+			"rot3": {
+				"attachment": [
+					{ "time": 0, "name": "lianhua/rot_light_0000" },
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"rot3": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.3333, "angle": 180 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"lianhua3": {
+				"rotate": [
+					{ "time": 0.1667, "angle": 0 },
+					{ "time": 0.5, "angle": 240 },
+					{ "time": 0.7333, "angle": 120 }
+				],
+				"scale": [
+					{ "time": 0.1667, "x": 1.191, "y": 1.191, "curve": "stepped" },
+					{ "time": 0.5, "x": 1.191, "y": 1.191 },
+					{ "time": 0.7333, "x": 1.059, "y": 1.059 }
+				]
+			},
+			"line3": {
+				"scale": [
+					{ "time": 0, "x": 0.724, "y": 0.462 },
+					{ "time": 0.1, "x": 1.184, "y": 1.035 },
+					{ "time": 0.1667, "x": 0, "y": 0 }
+				]
+			},
+			"quan3": {
+				"scale": [
+					{ "time": 0.5, "x": 0.779, "y": 0.779 },
+					{ "time": 0.6333, "x": 0.617, "y": 0.617 }
+				]
+			},
+			"hua2": {
+				"translate": [
+					{ "time": 0, "x": -279.1, "y": -70.52 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.869, "y": 2.869 }
+				]
+			},
+			"hita": {
+				"rotate": [
+					{ "time": 0.3, "angle": -9.03 }
+				],
+				"translate": [
+					{ "time": 0.3, "x": -78.7, "y": -53.38 }
+				],
+				"scale": [
+					{ "time": 0.3, "x": 3.986, "y": 3.986 }
+				]
+			},
+			"hita2": {
+				"rotate": [
+					{ "time": 0.2667, "angle": 72.35 }
+				],
+				"translate": [
+					{ "time": 0.2667, "x": 124.3, "y": 129.34 }
+				],
+				"scale": [
+					{ "time": 0.2667, "x": 2.905, "y": 2.905 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.3, "name": "hit_1_2_2" },
+			{ "time": 0.5333, "name": "hit_1_2_1" }
+		]
+	}
+}
+}

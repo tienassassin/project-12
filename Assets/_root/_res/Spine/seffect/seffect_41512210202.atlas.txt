@@ -1,0 +1,55 @@
+
+seffect_41512210202.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/effect/glow01
+  rotate: false
+  xy: 2, 2
+  size: 230, 230
+  orig: 256, 256
+  offset: 13, 13
+  index: -1
+images/effect/skill_blast/0_00000
+  rotate: false
+  xy: 325, 51
+  size: 86, 88
+  orig: 150, 150
+  offset: 42, 32
+  index: -1
+images/effect/skill_blast/0_00001
+  rotate: false
+  xy: 234, 42
+  size: 89, 97
+  orig: 150, 150
+  offset: 46, 29
+  index: -1
+images/effect/skill_blast/0_00003
+  rotate: false
+  xy: 333, 141
+  size: 92, 91
+  orig: 150, 150
+  offset: 46, 34
+  index: -1
+images/effect/skill_blast/0_00005
+  rotate: false
+  xy: 234, 141
+  size: 97, 91
+  orig: 150, 150
+  offset: 42, 34
+  index: -1
+images/effect/skill_blast/0_00007
+  rotate: false
+  xy: 234, 6
+  size: 37, 34
+  orig: 150, 150
+  offset: 96, 84
+  index: -1
+images/effect/skill_blast/0_00009
+  rotate: false
+  xy: 427, 204
+  size: 31, 28
+  orig: 150, 150
+  offset: 101, 88
+  index: -1

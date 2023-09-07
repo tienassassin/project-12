@@ -1,0 +1,173 @@
+{
+"skeleton": { "hash": "q1rgvaSjNVJNSSmgB6z7hJeXnn4", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "anZX", "parent": "root" },
+	{ "name": "quan", "parent": "anZX" },
+	{ "name": "tree", "parent": "anZX" },
+	{ "name": "tree2", "parent": "anZX" }
+],
+"slots": [
+	{ "name": "quan", "bone": "quan" },
+	{ "name": "tree", "bone": "tree" },
+	{ "name": "tree2", "bone": "tree2" }
+],
+"skins": {
+	"default": {
+		"quan": {
+			"image/quan/quan_0000": { "width": 127, "height": 129 },
+			"image/quan/quan_0001": { "width": 127, "height": 129 },
+			"image/quan/quan_0002": { "width": 127, "height": 129 },
+			"image/quan/quan_0003": { "width": 127, "height": 129 },
+			"image/quan/quan_0004": { "width": 127, "height": 129 },
+			"image/quan/quan_0005": { "width": 127, "height": 129 },
+			"image/quan/quan_0006": { "width": 127, "height": 129 },
+			"image/quan/quan_0007": { "width": 127, "height": 129 },
+			"image/quan/quan_0008": { "width": 127, "height": 129 },
+			"image/quan/quan_0009": { "width": 127, "height": 129 },
+			"image/quan/quan_0010": { "width": 127, "height": 129 },
+			"image/quan/quan_0011": { "width": 127, "height": 129 },
+			"image/quan/quan_0012": { "width": 127, "height": 129 },
+			"image/quan/quan_0013": { "width": 127, "height": 129 },
+			"image/quan/quan_0014": { "width": 127, "height": 129 },
+			"image/quan/quan_0015": { "width": 127, "height": 129 },
+			"image/quan/quan_0016": { "width": 127, "height": 129 },
+			"image/quan/quan_0017": { "width": 127, "height": 129 }
+		},
+		"tree": {
+			"image/tree/tree_0001": { "width": 113, "height": 453 },
+			"image/tree/tree_0003": { "width": 113, "height": 453 },
+			"image/tree/tree_0005": { "width": 113, "height": 453 },
+			"image/tree/tree_0007": { "width": 113, "height": 453 },
+			"image/tree/tree_0009": { "width": 113, "height": 453 },
+			"image/tree/tree_0011": { "width": 113, "height": 453 },
+			"image/tree/tree_0013": { "width": 113, "height": 453 },
+			"image/tree/tree_0015": { "width": 113, "height": 453 },
+			"image/tree/tree_0017": { "width": 113, "height": 453 },
+			"image/tree/tree_0019": { "width": 113, "height": 453 },
+			"image/tree/tree_0021": { "width": 113, "height": 453 },
+			"image/tree/tree_0023": { "width": 113, "height": 453 },
+			"image/tree/tree_0025": { "width": 113, "height": 453 },
+			"image/tree/tree_0027": { "width": 113, "height": 453 },
+			"image/tree/tree_0029": { "width": 113, "height": 453 }
+		},
+		"tree2": {
+			"image/tree/tree_0001": { "width": 113, "height": 453 },
+			"image/tree/tree_0003": { "width": 113, "height": 453 },
+			"image/tree/tree_0005": { "width": 113, "height": 453 },
+			"image/tree/tree_0007": { "width": 113, "height": 453 },
+			"image/tree/tree_0009": { "width": 113, "height": 453 },
+			"image/tree/tree_0011": { "width": 113, "height": 453 },
+			"image/tree/tree_0013": { "width": 113, "height": 453 },
+			"image/tree/tree_0015": { "width": 113, "height": 453 },
+			"image/tree/tree_0017": { "width": 113, "height": 453 },
+			"image/tree/tree_0019": { "width": 113, "height": 453 },
+			"image/tree/tree_0021": { "width": 113, "height": 453 },
+			"image/tree/tree_0023": { "width": 113, "height": 453 },
+			"image/tree/tree_0025": { "width": 113, "height": 453 },
+			"image/tree/tree_0027": { "width": 113, "height": 453 },
+			"image/tree/tree_0029": { "width": 113, "height": 453 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"quan": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.4333, "color": "ffffffff" },
+					{ "time": 0.6, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "image/quan/quan_0000" },
+					{ "time": 0.0333, "name": "image/quan/quan_0001" },
+					{ "time": 0.0667, "name": "image/quan/quan_0002" },
+					{ "time": 0.1, "name": "image/quan/quan_0003" },
+					{ "time": 0.1333, "name": "image/quan/quan_0004" },
+					{ "time": 0.1667, "name": "image/quan/quan_0005" },
+					{ "time": 0.2, "name": "image/quan/quan_0006" },
+					{ "time": 0.2333, "name": "image/quan/quan_0007" },
+					{ "time": 0.2667, "name": "image/quan/quan_0008" },
+					{ "time": 0.3, "name": "image/quan/quan_0009" },
+					{ "time": 0.3333, "name": "image/quan/quan_0010" },
+					{ "time": 0.3667, "name": "image/quan/quan_0011" },
+					{ "time": 0.4, "name": "image/quan/quan_0012" },
+					{ "time": 0.4333, "name": "image/quan/quan_0013" },
+					{ "time": 0.4667, "name": "image/quan/quan_0014" },
+					{ "time": 0.5, "name": "image/quan/quan_0015" },
+					{ "time": 0.5333, "name": "image/quan/quan_0016" },
+					{ "time": 0.5667, "name": "image/quan/quan_0017" },
+					{ "time": 0.6, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"quan": {
+				"scale": [
+					{ "time": 0, "x": 0.6, "y": 0.6 },
+					{ "time": 0.6, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"animation2": {
+		"slots": {
+			"tree": {
+				"attachment": [
+					{ "time": 0, "name": "image/tree/tree_0001" },
+					{ "time": 0.0667, "name": "image/tree/tree_0003" },
+					{ "time": 0.1333, "name": "image/tree/tree_0005" },
+					{ "time": 0.2, "name": "image/tree/tree_0007" },
+					{ "time": 0.2667, "name": "image/tree/tree_0009" },
+					{ "time": 0.3333, "name": "image/tree/tree_0011" },
+					{ "time": 0.4, "name": "image/tree/tree_0013" },
+					{ "time": 0.4667, "name": "image/tree/tree_0015" },
+					{ "time": 0.5333, "name": "image/tree/tree_0017" },
+					{ "time": 0.6, "name": "image/tree/tree_0019" },
+					{ "time": 0.6667, "name": "image/tree/tree_0021" },
+					{ "time": 0.7333, "name": "image/tree/tree_0023" },
+					{ "time": 0.8, "name": "image/tree/tree_0025" },
+					{ "time": 0.8667, "name": "image/tree/tree_0027" },
+					{ "time": 0.9333, "name": "image/tree/tree_0029" }
+				]
+			},
+			"tree2": {
+				"attachment": [
+					{ "time": 0, "name": "image/tree/tree_0001" },
+					{ "time": 0.0667, "name": "image/tree/tree_0003" },
+					{ "time": 0.1333, "name": "image/tree/tree_0005" },
+					{ "time": 0.2, "name": "image/tree/tree_0007" },
+					{ "time": 0.2667, "name": "image/tree/tree_0009" },
+					{ "time": 0.3333, "name": "image/tree/tree_0011" },
+					{ "time": 0.4, "name": "image/tree/tree_0013" },
+					{ "time": 0.4667, "name": "image/tree/tree_0015" },
+					{ "time": 0.5333, "name": "image/tree/tree_0017" },
+					{ "time": 0.6, "name": "image/tree/tree_0019" },
+					{ "time": 0.6667, "name": "image/tree/tree_0021" },
+					{ "time": 0.7333, "name": "image/tree/tree_0023" },
+					{ "time": 0.8, "name": "image/tree/tree_0025" },
+					{ "time": 0.8667, "name": "image/tree/tree_0027" },
+					{ "time": 0.9333, "name": "image/tree/tree_0029" }
+				]
+			}
+		},
+		"bones": {
+			"tree": {
+				"translate": [
+					{ "time": 0, "x": 20, "y": 0 }
+				]
+			},
+			"tree2": {
+				"translate": [
+					{ "time": 0, "x": -20, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": -1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

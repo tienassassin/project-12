@@ -1,0 +1,55 @@
+
+seffect_11512211012.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect/atk_hit/0_00000
+  rotate: false
+  xy: 1500, 274
+  size: 231, 231
+  orig: 400, 400
+  offset: 83, 83
+  index: -1
+effect/atk_hit/0_00001
+  rotate: false
+  xy: 2, 185
+  size: 320, 320
+  orig: 400, 400
+  offset: 40, 40
+  index: -1
+effect/atk_hit/0_00002
+  rotate: false
+  xy: 324, 189
+  size: 316, 316
+  orig: 400, 400
+  offset: 42, 42
+  index: -1
+effect/atk_hit/0_00003
+  rotate: false
+  xy: 642, 201
+  size: 304, 304
+  orig: 400, 400
+  offset: 48, 48
+  index: -1
+effect/atk_hit/0_00004
+  rotate: false
+  xy: 948, 223
+  size: 282, 282
+  orig: 400, 400
+  offset: 59, 59
+  index: -1
+effect/atk_hit/0_00005
+  rotate: false
+  xy: 1232, 239
+  size: 266, 266
+  orig: 400, 400
+  offset: 67, 67
+  index: -1
+effect/atk_hit/0_00006
+  rotate: false
+  xy: 2, 2
+  size: 172, 181
+  orig: 400, 400
+  offset: 128, 90
+  index: -1

@@ -1,0 +1,48 @@
+
+sbuff_11.png
+size: 302,302
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/cir_yuan
+  rotate: false
+  xy: 2, 44
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+images/part_u (1)
+  rotate: true
+  xy: 57, 5
+  size: 37, 44
+  orig: 37, 44
+  offset: 0, 0
+  index: -1
+images/part_u (2)
+  rotate: true
+  xy: 2, 2
+  size: 40, 53
+  orig: 40, 53
+  offset: 0, 0
+  index: -1
+images/part_u (3)
+  rotate: false
+  xy: 260, 251
+  size: 40, 49
+  orig: 40, 49
+  offset: 0, 0
+  index: -1
+images/part_u (4)
+  rotate: false
+  xy: 260, 214
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+images/part_u (5)
+  rotate: false
+  xy: 103, 5
+  size: 35, 37
+  orig: 35, 37
+  offset: 0, 0
+  index: -1

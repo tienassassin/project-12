@@ -1,0 +1,20 @@
+
+seffect_44508020111.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+att/haixing_0000
+  rotate: true
+  xy: 207, 4
+  size: 87, 97
+  orig: 145, 120
+  offset: 28, 12
+  index: -1
+att/haixing_trail_0000
+  rotate: false
+  xy: 2, 2
+  size: 203, 89
+  orig: 278, 120
+  offset: 60, 17
+  index: -1

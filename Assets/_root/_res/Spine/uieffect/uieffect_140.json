@@ -1,0 +1,115 @@
+{
+"skeleton": { "hash": "paTH7ufZFx96XZKI5bBeYuXW2Pg", "spine": "3.5.35", "width": 0, "height": 0, "images": "./images/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone53", "parent": "root", "x": 7.11, "y": 0.78 }
+],
+"slots": [
+	{ "name": "juesetexiao/mo/FZ/FZ_0000", "bone": "bone53" }
+],
+"skins": {
+	"default": {
+		"juesetexiao/mo/FZ/FZ_0000": {
+			"FZ/FZ_0000": { "width": 255, "height": 108 },
+			"FZ/FZ_0001": { "width": 255, "height": 108 },
+			"FZ/FZ_0002": { "width": 255, "height": 108 },
+			"FZ/FZ_0003": { "width": 255, "height": 108 },
+			"FZ/FZ_0004": { "width": 255, "height": 108 },
+			"FZ/FZ_0005": { "width": 255, "height": 108 },
+			"FZ/FZ_0006": { "width": 255, "height": 108 },
+			"FZ/FZ_0007": { "width": 255, "height": 108 },
+			"FZ/FZ_0008": { "width": 255, "height": 108 },
+			"FZ/FZ_0009": { "width": 255, "height": 108 },
+			"FZ/FZ_0010": { "width": 255, "height": 108 },
+			"FZ/FZ_0012": { "width": 255, "height": 108 },
+			"FZ/FZ_0013": { "width": 255, "height": 108 },
+			"FZ/FZ_0014": { "width": 255, "height": 108 },
+			"FZ/FZ_0015": { "width": 255, "height": 108 },
+			"FZ/FZ_0016": { "width": 255, "height": 108 },
+			"FZ/FZ_0017": { "width": 255, "height": 108 },
+			"FZ/FZ_0018": { "width": 255, "height": 108 },
+			"FZ/FZ_0019": { "width": 255, "height": 108 },
+			"FZ/FZ_0020": { "width": 255, "height": 108 },
+			"FZ/FZ_0021": { "width": 255, "height": 108 },
+			"FZ/FZ_0022": { "width": 255, "height": 108 },
+			"FZ/FZ_0023": { "width": 255, "height": 108 },
+			"FZ/FZ_0024": { "width": 255, "height": 108 },
+			"FZ/FZ_0025": { "width": 255, "height": 108 },
+			"FZ/FZ_0027": { "width": 255, "height": 108 },
+			"FZ/FZ_0028": { "width": 255, "height": 108 },
+			"FZ/FZ_0029": { "width": 255, "height": 108 },
+			"FZ/FZ_0030": { "width": 255, "height": 108 },
+			"FZ/FZ_0031": { "width": 255, "height": 108 },
+			"FZ/FZ_0032": { "width": 255, "height": 108 },
+			"FZ/FZ_0033": { "width": 255, "height": 108 },
+			"FZ/FZ_0034": { "width": 255, "height": 108 },
+			"FZ/FZ_0035": { "width": 255, "height": 108 },
+			"FZ/FZ_0036": { "width": 255, "height": 108 },
+			"FZ/FZ_0037": { "width": 255, "height": 108 },
+			"FZ/FZ_0038": { "width": 255, "height": 108 },
+			"FZ/FZ_0039": { "width": 255, "height": 108 },
+			"FZ/FZ_0040": { "width": 255, "height": 108 },
+			"FZ/FZ_0041": { "width": 255, "height": 108 },
+			"FZ/FZ_0042": { "width": 255, "height": 108 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"juesetexiao/mo/FZ/FZ_0000": {
+				"attachment": [
+					{ "time": 0, "name": "FZ/FZ_0000" },
+					{ "time": 0.0667, "name": "FZ/FZ_0001" },
+					{ "time": 0.1333, "name": "FZ/FZ_0002" },
+					{ "time": 0.2, "name": "FZ/FZ_0003" },
+					{ "time": 0.2667, "name": "FZ/FZ_0004" },
+					{ "time": 0.3333, "name": "FZ/FZ_0005" },
+					{ "time": 0.4, "name": "FZ/FZ_0006" },
+					{ "time": 0.4667, "name": "FZ/FZ_0007" },
+					{ "time": 0.5333, "name": "FZ/FZ_0008" },
+					{ "time": 0.6, "name": "FZ/FZ_0009" },
+					{ "time": 0.6667, "name": "FZ/FZ_0010" },
+					{ "time": 0.7333, "name": "FZ/FZ_0012" },
+					{ "time": 0.8, "name": "FZ/FZ_0013" },
+					{ "time": 0.8667, "name": "FZ/FZ_0014" },
+					{ "time": 0.9333, "name": "FZ/FZ_0015" },
+					{ "time": 1, "name": "FZ/FZ_0016" },
+					{ "time": 1.0667, "name": "FZ/FZ_0017" },
+					{ "time": 1.1333, "name": "FZ/FZ_0018" },
+					{ "time": 1.2, "name": "FZ/FZ_0019" },
+					{ "time": 1.2667, "name": "FZ/FZ_0020" },
+					{ "time": 1.3333, "name": "FZ/FZ_0021" },
+					{ "time": 1.4, "name": "FZ/FZ_0022" },
+					{ "time": 1.4667, "name": "FZ/FZ_0023" },
+					{ "time": 1.5333, "name": "FZ/FZ_0024" },
+					{ "time": 1.6, "name": "FZ/FZ_0025" },
+					{ "time": 1.6667, "name": "FZ/FZ_0027" },
+					{ "time": 1.7333, "name": "FZ/FZ_0028" },
+					{ "time": 1.8, "name": "FZ/FZ_0029" },
+					{ "time": 1.8667, "name": "FZ/FZ_0030" },
+					{ "time": 1.9333, "name": "FZ/FZ_0031" },
+					{ "time": 2, "name": "FZ/FZ_0032" },
+					{ "time": 2.0667, "name": "FZ/FZ_0033" },
+					{ "time": 2.1333, "name": "FZ/FZ_0034" },
+					{ "time": 2.2, "name": "FZ/FZ_0035" },
+					{ "time": 2.2667, "name": "FZ/FZ_0036" },
+					{ "time": 2.3333, "name": "FZ/FZ_0037" },
+					{ "time": 2.4, "name": "FZ/FZ_0038" },
+					{ "time": 2.4667, "name": "FZ/FZ_0039" },
+					{ "time": 2.5333, "name": "FZ/FZ_0040" },
+					{ "time": 2.6, "name": "FZ/FZ_0041" },
+					{ "time": 2.6667, "name": "FZ/FZ_0042" }
+				]
+			}
+		},
+		"bones": {
+			"bone53": {
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			}
+		}
+	}
+}
+}

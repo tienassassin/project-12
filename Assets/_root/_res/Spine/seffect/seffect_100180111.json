@@ -1,0 +1,183 @@
+{
+"skeleton": { "hash": "Tin1j5m4Z/i8FmGyA4tqiYwSZ4E", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "chuchang", "parent": "root" },
+	{ "name": "fuhuoZX", "parent": "root" }
+],
+"slots": [
+	{ "name": "yumao", "bone": "fuhuoZX" },
+	{ "name": "chuchang", "bone": "chuchang" }
+],
+"skins": {
+	"default": {
+		"chuchang": {
+			"to_spine/line_B/line_B_0016": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0017": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0018": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0019": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0020": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0021": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0022": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0023": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0024": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0025": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0026": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0027": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0028": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0029": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0030": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0031": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0032": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0033": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0034": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0035": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0036": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0037": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0038": { "width": 183, "height": 354 },
+			"to_spine/line_B/line_B_0039": { "width": 183, "height": 354 }
+		},
+		"yumao": {
+			"light_v/light_v_0002": { "width": 324, "height": 525 },
+			"light_v/light_v_0004": { "width": 324, "height": 525 },
+			"light_v/light_v_0006": { "width": 324, "height": 525 },
+			"light_v/light_v_0008": { "width": 324, "height": 525 },
+			"light_v/light_v_0010": { "width": 324, "height": 525 },
+			"light_v/light_v_0012": { "width": 324, "height": 525 },
+			"light_v/light_v_0014": { "width": 324, "height": 525 },
+			"light_v/light_v_0016": { "width": 324, "height": 525 },
+			"light_v/light_v_0018": { "width": 324, "height": 525 },
+			"light_v/light_v_0020": { "width": 324, "height": 525 },
+			"light_v/light_v_0022": { "width": 324, "height": 525 },
+			"light_v/light_v_0024": { "width": 324, "height": 525 },
+			"light_v/light_v_0026": { "width": 324, "height": 525 },
+			"light_v/light_v_0028": { "width": 324, "height": 525 },
+			"light_v/light_v_0030": { "width": 324, "height": 525 },
+			"light_v/light_v_0032": { "width": 324, "height": 525 },
+			"light_v/light_v_0034": { "width": 324, "height": 525 },
+			"light_v/light_v_0036": { "width": 324, "height": 525 },
+			"light_v/light_v_0038": { "width": 324, "height": 525 },
+			"light_v/light_v_0040": { "width": 324, "height": 525 },
+			"light_v/light_v_0042": { "width": 324, "height": 525 },
+			"light_v/light_v_0044": { "width": 324, "height": 525 },
+			"light_v/light_v_0046": { "width": 324, "height": 525 },
+			"light_v/light_v_0048": { "width": 324, "height": 525 },
+			"light_v/light_v_0050": { "width": 324, "height": 525 },
+			"light_v/light_v_0052": { "width": 324, "height": 525 },
+			"light_v/light_v_0054": { "width": 324, "height": 525 },
+			"light_v/light_v_0056": { "width": 324, "height": 525 },
+			"light_v/light_v_0058": { "width": 324, "height": 525 },
+			"light_v/light_v_0060": { "width": 324, "height": 525 },
+			"light_v/light_v_0062": { "width": 324, "height": 525 },
+			"light_v/light_v_0064": { "width": 324, "height": 525 },
+			"light_v/light_v_0066": { "width": 324, "height": 525 },
+			"light_v/light_v_0068": { "width": 324, "height": 525 },
+			"light_v/light_v_0070": { "width": 324, "height": 525 },
+			"light_v/light_v_0072": { "width": 324, "height": 525 },
+			"light_v/light_v_0074": { "width": 324, "height": 525 },
+			"light_v/light_v_0076": { "width": 324, "height": 525 }
+		}
+	}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"yumao": {
+				"attachment": [
+					{ "time": 0, "name": "light_v/light_v_0002" },
+					{ "time": 0.0667, "name": "light_v/light_v_0004" },
+					{ "time": 0.1, "name": "light_v/light_v_0006" },
+					{ "time": 0.1667, "name": "light_v/light_v_0008" },
+					{ "time": 0.2, "name": "light_v/light_v_0010" },
+					{ "time": 0.2667, "name": "light_v/light_v_0012" },
+					{ "time": 0.3, "name": "light_v/light_v_0014" },
+					{ "time": 0.3667, "name": "light_v/light_v_0016" },
+					{ "time": 0.4, "name": "light_v/light_v_0018" },
+					{ "time": 0.4667, "name": "light_v/light_v_0020" },
+					{ "time": 0.5, "name": "light_v/light_v_0022" },
+					{ "time": 0.5667, "name": "light_v/light_v_0024" },
+					{ "time": 0.6, "name": "light_v/light_v_0026" },
+					{ "time": 0.6667, "name": "light_v/light_v_0028" },
+					{ "time": 0.7333, "name": "light_v/light_v_0030" },
+					{ "time": 0.7667, "name": "light_v/light_v_0032" },
+					{ "time": 0.8333, "name": "light_v/light_v_0034" },
+					{ "time": 0.8667, "name": "light_v/light_v_0036" },
+					{ "time": 0.9333, "name": "light_v/light_v_0038" },
+					{ "time": 0.9667, "name": "light_v/light_v_0040" },
+					{ "time": 1.0333, "name": "light_v/light_v_0042" },
+					{ "time": 1.0667, "name": "light_v/light_v_0044" },
+					{ "time": 1.1333, "name": "light_v/light_v_0046" },
+					{ "time": 1.1667, "name": "light_v/light_v_0048" },
+					{ "time": 1.2333, "name": "light_v/light_v_0050" },
+					{ "time": 1.2667, "name": "light_v/light_v_0052" },
+					{ "time": 1.3333, "name": "light_v/light_v_0054" },
+					{ "time": 1.3667, "name": "light_v/light_v_0056" },
+					{ "time": 1.4, "name": "light_v/light_v_0058" },
+					{ "time": 1.4667, "name": "light_v/light_v_0060" },
+					{ "time": 1.5, "name": "light_v/light_v_0062" },
+					{ "time": 1.5667, "name": "light_v/light_v_0064" },
+					{ "time": 1.6, "name": "light_v/light_v_0066" },
+					{ "time": 1.6333, "name": "light_v/light_v_0068" },
+					{ "time": 1.7, "name": "light_v/light_v_0070" },
+					{ "time": 1.7333, "name": "light_v/light_v_0072" },
+					{ "time": 1.7667, "name": "light_v/light_v_0074" },
+					{ "time": 1.8333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"fuhuoZX": {
+				"translate": [
+					{ "time": 0, "x": -53.54, "y": 226.7 }
+				],
+				"scale": [
+					{ "time": 0, "x": 4, "y": 4 }
+				]
+			}
+		}
+	},
+	"animation_1": {
+		"slots": {
+			"chuchang": {
+				"attachment": [
+					{ "time": 0, "name": "to_spine/line_B/line_B_0016" },
+					{ "time": 0.0333, "name": "to_spine/line_B/line_B_0017" },
+					{ "time": 0.0667, "name": "to_spine/line_B/line_B_0018" },
+					{ "time": 0.1, "name": "to_spine/line_B/line_B_0019" },
+					{ "time": 0.1333, "name": "to_spine/line_B/line_B_0020" },
+					{ "time": 0.1667, "name": "to_spine/line_B/line_B_0021" },
+					{ "time": 0.2, "name": "to_spine/line_B/line_B_0022" },
+					{ "time": 0.2333, "name": "to_spine/line_B/line_B_0023" },
+					{ "time": 0.2667, "name": "to_spine/line_B/line_B_0024" },
+					{ "time": 0.3, "name": "to_spine/line_B/line_B_0025" },
+					{ "time": 0.3333, "name": "to_spine/line_B/line_B_0026" },
+					{ "time": 0.3667, "name": "to_spine/line_B/line_B_0027" },
+					{ "time": 0.4, "name": "to_spine/line_B/line_B_0028" },
+					{ "time": 0.4333, "name": "to_spine/line_B/line_B_0029" },
+					{ "time": 0.4667, "name": "to_spine/line_B/line_B_0030" },
+					{ "time": 0.5, "name": "to_spine/line_B/line_B_0031" },
+					{ "time": 0.5333, "name": "to_spine/line_B/line_B_0032" },
+					{ "time": 0.5667, "name": "to_spine/line_B/line_B_0033" },
+					{ "time": 0.6, "name": "to_spine/line_B/line_B_0034" },
+					{ "time": 0.6333, "name": "to_spine/line_B/line_B_0035" },
+					{ "time": 0.6667, "name": "to_spine/line_B/line_B_0036" },
+					{ "time": 0.7, "name": "to_spine/line_B/line_B_0037" },
+					{ "time": 0.7333, "name": "to_spine/line_B/line_B_0038" },
+					{ "time": 0.7667, "name": "to_spine/line_B/line_B_0039" },
+					{ "time": 0.8, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"chuchang": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 522.45 }
+				],
+				"scale": [
+					{ "time": 0, "x": 4, "y": 4 }
+				]
+			}
+		}
+	}
+}
+}

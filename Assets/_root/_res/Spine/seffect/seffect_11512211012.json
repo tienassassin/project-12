@@ -1,0 +1,73 @@
+{
+"skeleton": { "hash": "q2cNxmTPraX/IyPdDtLoVsuYCxE", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root", "x": -7.93 },
+	{ "name": "ZH", "parent": "root", "x": 15.86 },
+	{ "name": "TX", "parent": "ZH" },
+	{ "name": "ATK_HIT", "parent": "TX", "x": -15.86, "scaleX": 3, "scaleY": 3 }
+],
+"slots": [
+	{ "name": "effect/atk_hit/0_00000", "bone": "ATK_HIT" }
+],
+"skins": {
+	"default": {
+		"effect/atk_hit/0_00000": {
+			"effect/atk_hit/0_00000": { "width": 400, "height": 400 },
+			"effect/atk_hit/0_00001": { "width": 400, "height": 400 },
+			"effect/atk_hit/0_00002": { "width": 400, "height": 400 },
+			"effect/atk_hit/0_00003": { "width": 400, "height": 400 },
+			"effect/atk_hit/0_00004": { "width": 400, "height": 400 },
+			"effect/atk_hit/0_00005": { "width": 400, "height": 400 },
+			"effect/atk_hit/0_00006": { "width": 400, "height": 400 }
+		}
+	}
+},
+"events": {
+	"hit_1_2_1": {},
+	"hit_1_2_2": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"effect/atk_hit/0_00000": {
+				"attachment": [
+					{ "time": 0, "name": "effect/atk_hit/0_00000" },
+					{ "time": 0.0333, "name": "effect/atk_hit/0_00001" },
+					{ "time": 0.0667, "name": "effect/atk_hit/0_00002" },
+					{ "time": 0.1, "name": "effect/atk_hit/0_00003" },
+					{ "time": 0.1333, "name": "effect/atk_hit/0_00004" },
+					{ "time": 0.1667, "name": "effect/atk_hit/0_00005" },
+					{ "time": 0.2, "name": "effect/atk_hit/0_00000" },
+					{ "time": 0.2333, "name": "effect/atk_hit/0_00001" },
+					{ "time": 0.2667, "name": "effect/atk_hit/0_00002" },
+					{ "time": 0.3, "name": "effect/atk_hit/0_00003" },
+					{ "time": 0.3333, "name": "effect/atk_hit/0_00004" },
+					{ "time": 0.3667, "name": "effect/atk_hit/0_00005" },
+					{ "time": 0.4, "name": "effect/atk_hit/0_00006" },
+					{ "time": 0.4333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"ATK_HIT": {
+				"rotate": [
+					{ "time": 0.1667, "angle": 0 },
+					{ "time": 0.2, "angle": 96 }
+				],
+				"translate": [
+					{ "time": 0, "x": 13.17, "y": 0.72 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": 0.8, "curve": "stepped" },
+					{ "time": 0.1667, "x": 0.8, "y": 0.8 },
+					{ "time": 0.2, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0667, "name": "hit_1_2_2" },
+			{ "time": 0.2667, "name": "hit_1_2_1" }
+		]
+	}
+}
+}

@@ -1,0 +1,90 @@
+{
+"skeleton": { "hash": "gtzrFN8RWs8XmTgqESL3Oiak1ok", "spine": "3.5.35", "width": 2725, "height": 1920, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "futaZX", "parent": "root" },
+	{ "name": "bg", "parent": "futaZX", "x": -11.95, "y": -454.99 },
+	{ "name": "futaZT", "parent": "futaZX", "x": -98.64, "y": -454.99 },
+	{ "name": "huan", "parent": "futaZT", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "bg", "bone": "bg" },
+	{ "name": "futaZT", "bone": "futaZT", "attachment": "images/newCity/futa" },
+	{ "name": "huan", "bone": "huan", "attachment": "images/futa/futa_00001" }
+],
+"skins": {
+	"default": {
+		"futaZT": {
+			"images/newCity/futa": { "width": 2725, "height": 1920 }
+		},
+		"huan": {
+			"images/futa/futa_00001": { "width": 1362, "height": 960 },
+			"images/futa/futa_00003": { "width": 1362, "height": 960 },
+			"images/futa/futa_00005": { "width": 1362, "height": 960 },
+			"images/futa/futa_00007": { "width": 1362, "height": 960 },
+			"images/futa/futa_00009": { "width": 1362, "height": 960 },
+			"images/futa/futa_00011": { "width": 1362, "height": 960 },
+			"images/futa/futa_00013": { "width": 1362, "height": 960 },
+			"images/futa/futa_00015": { "width": 1362, "height": 960 },
+			"images/futa/futa_00017": { "width": 1362, "height": 960 },
+			"images/futa/futa_00019": { "width": 1362, "height": 960 },
+			"images/futa/futa_00021": { "width": 1362, "height": 960 },
+			"images/futa/futa_00023": { "width": 1362, "height": 960 },
+			"images/futa/futa_00025": { "width": 1362, "height": 960 },
+			"images/futa/futa_00027": { "width": 1362, "height": 960 },
+			"images/futa/futa_00029": { "width": 1362, "height": 960 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"huan": {
+				"attachment": [
+					{ "time": 0, "name": "images/futa/futa_00001" },
+					{ "time": 0.0667, "name": "images/futa/futa_00003" },
+					{ "time": 0.1333, "name": "images/futa/futa_00005" },
+					{ "time": 0.2, "name": "images/futa/futa_00007" },
+					{ "time": 0.2667, "name": "images/futa/futa_00009" },
+					{ "time": 0.3333, "name": "images/futa/futa_00011" },
+					{ "time": 0.4, "name": "images/futa/futa_00013" },
+					{ "time": 0.4667, "name": "images/futa/futa_00015" },
+					{ "time": 0.5333, "name": "images/futa/futa_00017" },
+					{ "time": 0.6, "name": "images/futa/futa_00019" },
+					{ "time": 0.6667, "name": "images/futa/futa_00021" },
+					{ "time": 0.7333, "name": "images/futa/futa_00023" },
+					{ "time": 0.8, "name": "images/futa/futa_00025" },
+					{ "time": 0.8667, "name": "images/futa/futa_00027" },
+					{ "time": 0.9333, "name": "images/futa/futa_00029" },
+					{ "time": 0.9667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"futaZT": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": -17.62,
+						"curve": [ 0.321, 0.4, 0.605, 1 ]
+					},
+					{
+						"time": 1,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 2.5,
+						"x": 0,
+						"y": -23.32,
+						"curve": [ 0.374, 0, 0.696, 0.43 ]
+					},
+					{ "time": 3, "x": 0, "y": -17.62 }
+				]
+			}
+		}
+	}
+}
+}

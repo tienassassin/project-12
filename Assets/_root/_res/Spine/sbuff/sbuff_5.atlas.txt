@@ -1,0 +1,20 @@
+
+sbuff_5.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/public_line_01_G
+  rotate: false
+  xy: 2, 108
+  size: 124, 18
+  orig: 128, 32
+  offset: 1, 7
+  index: -1
+images/yid
+  rotate: false
+  xy: 2, 74
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

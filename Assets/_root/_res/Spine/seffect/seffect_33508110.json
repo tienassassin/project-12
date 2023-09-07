@@ -1,0 +1,74 @@
+{
+"skeleton": { "hash": "7oI08RuoT18kgOZzIvZ9RJ2EnP8", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "a30", "parent": "root" }
+],
+"slots": [
+	{ "name": "baozha_00004", "bone": "a30" }
+],
+"skins": {
+	"default": {
+		"baozha_00004": {
+			"baozha_00004": { "width": 200, "height": 200 },
+			"baozha_00005": { "width": 200, "height": 200 },
+			"baozha_00006": { "width": 200, "height": 200 },
+			"baozha_00007": { "width": 200, "height": 200 },
+			"baozha_00008": { "width": 200, "height": 200 },
+			"baozha_00009": { "width": 200, "height": 200 },
+			"baozha_00010": { "width": 200, "height": 200 },
+			"baozha_00011": { "width": 200, "height": 200 },
+			"baozha_00012": { "width": 200, "height": 200 },
+			"baozha_00013": { "width": 200, "height": 200 },
+			"baozha_00014": { "width": 200, "height": 200 },
+			"baozha_00015": { "width": 200, "height": 200 },
+			"baozha_00016": { "width": 200, "height": 200 },
+			"baozha_00017": { "width": 200, "height": 200 },
+			"baozha_00018": { "width": 200, "height": 200 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_1": {
+		"slots": {
+			"baozha_00004": {
+				"attachment": [
+					{ "time": 0, "name": "baozha_00004" },
+					{ "time": 0.0333, "name": "baozha_00005" },
+					{ "time": 0.0667, "name": "baozha_00006" },
+					{ "time": 0.1, "name": "baozha_00007" },
+					{ "time": 0.1333, "name": "baozha_00008" },
+					{ "time": 0.1667, "name": "baozha_00009" },
+					{ "time": 0.2, "name": "baozha_00010" },
+					{ "time": 0.2333, "name": "baozha_00011" },
+					{ "time": 0.2667, "name": "baozha_00012" },
+					{ "time": 0.3, "name": "baozha_00013" },
+					{ "time": 0.3333, "name": "baozha_00014" },
+					{ "time": 0.3667, "name": "baozha_00015" },
+					{ "time": 0.4, "name": "baozha_00016" },
+					{ "time": 0.4333, "name": "baozha_00017" },
+					{ "time": 0.4667, "name": "baozha_00018" },
+					{ "time": 0.5, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"a30": {
+				"translate": [
+					{ "time": 0, "x": 0.64, "y": 2.63 }
+				],
+				"scale": [
+					{ "time": 0, "x": 3.578, "y": 3.578 },
+					{ "time": 0.1, "x": 6, "y": 6 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.0667, "name": "hit_1_1_1" }
+		]
+	}
+}
+}

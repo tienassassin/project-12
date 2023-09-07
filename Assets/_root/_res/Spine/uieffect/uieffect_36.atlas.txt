@@ -1,0 +1,27 @@
+
+uieffect_36.png
+size: 678,678
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/cloud_1
+  rotate: false
+  xy: 2, 494
+  size: 674, 182
+  orig: 674, 190
+  offset: 0, 0
+  index: -1
+images/cloud_2
+  rotate: false
+  xy: 2, 368
+  size: 418, 124
+  orig: 418, 124
+  offset: 0, 0
+  index: -1
+images/cloud_3
+  rotate: false
+  xy: 2, 286
+  size: 264, 80
+  orig: 264, 80
+  offset: 0, 0
+  index: -1

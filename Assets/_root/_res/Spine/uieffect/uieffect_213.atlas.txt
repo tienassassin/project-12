@@ -1,0 +1,132 @@
+
+uieffect_213.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+light/light_0000
+  rotate: false
+  xy: 1245, 134
+  size: 142, 120
+  orig: 162, 158
+  offset: 11, 18
+  index: -1
+light/light_0001
+  rotate: false
+  xy: 1389, 134
+  size: 142, 120
+  orig: 162, 158
+  offset: 11, 18
+  index: -1
+light/light_0002
+  rotate: false
+  xy: 1101, 133
+  size: 142, 121
+  orig: 162, 158
+  offset: 11, 17
+  index: -1
+light/light_0003
+  rotate: false
+  xy: 957, 126
+  size: 142, 128
+  orig: 162, 158
+  offset: 11, 15
+  index: -1
+light/light_0004
+  rotate: false
+  xy: 655, 115
+  size: 152, 139
+  orig: 162, 158
+  offset: 6, 9
+  index: -1
+light/light_0005
+  rotate: false
+  xy: 492, 110
+  size: 161, 144
+  orig: 162, 158
+  offset: 1, 5
+  index: -1
+light/light_0006
+  rotate: false
+  xy: 164, 105
+  size: 162, 149
+  orig: 162, 158
+  offset: 0, 3
+  index: -1
+light/light_0007
+  rotate: false
+  xy: 0, 98
+  size: 162, 156
+  orig: 162, 158
+  offset: 0, 0
+  index: -1
+light/light_0008
+  rotate: false
+  xy: 328, 107
+  size: 162, 147
+  orig: 162, 158
+  offset: 0, 2
+  index: -1
+light/light_0009
+  rotate: true
+  xy: 809, 118
+  size: 136, 146
+  orig: 162, 158
+  offset: 10, 4
+  index: -1
+light/light_0010
+  rotate: false
+  xy: 957, 0
+  size: 128, 124
+  orig: 162, 158
+  offset: 12, 6
+  index: -1
+light/light_0011
+  rotate: true
+  xy: 0, 19
+  size: 77, 102
+  orig: 162, 158
+  offset: 45, 6
+  index: -1
+light/light_0012
+  rotate: false
+  xy: 1849, 186
+  size: 77, 68
+  orig: 162, 158
+  offset: 45, 40
+  index: -1
+light/light_0013
+  rotate: false
+  xy: 1691, 185
+  size: 77, 69
+  orig: 162, 158
+  offset: 45, 40
+  index: -1
+light/light_0014
+  rotate: false
+  xy: 1770, 185
+  size: 77, 69
+  orig: 162, 158
+  offset: 45, 40
+  index: -1
+light/light_0015
+  rotate: false
+  xy: 1612, 184
+  size: 77, 70
+  orig: 162, 158
+  offset: 45, 40
+  index: -1
+light/light_0016
+  rotate: false
+  xy: 1533, 182
+  size: 77, 72
+  orig: 162, 158
+  offset: 45, 40
+  index: -1
+light/light_0017
+  rotate: false
+  xy: 1928, 186
+  size: 77, 68
+  orig: 162, 158
+  offset: 45, 40
+  index: -1

@@ -1,0 +1,153 @@
+{
+"skeleton": { "hash": "Urvid75irJV9jOrA3C66W6L9q6o", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "chitongZX", "parent": "root" },
+	{ "name": "effect", "parent": "chitongZX" },
+	{ "name": "utskill", "parent": "effect" },
+	{ "name": "boom_1", "parent": "utskill" },
+	{ "name": "boom_2", "parent": "utskill" },
+	{ "name": "boom_3", "parent": "utskill" },
+	{ "name": "boom_4", "parent": "utskill" }
+],
+"slots": [
+	{ "name": "boom_1", "bone": "boom_1" },
+	{ "name": "boom_2", "bone": "boom_2" },
+	{ "name": "boom_3", "bone": "boom_3" },
+	{ "name": "boom_4", "bone": "boom_4" }
+],
+"skins": {
+	"default": {
+		"boom_1": {
+			"effect/boom/boom_a/boom_a_0001": { "width": 245, "height": 270 },
+			"effect/boom/boom_a/boom_a_0002": { "width": 245, "height": 270 },
+			"effect/boom/boom_a/boom_a_0003": { "width": 245, "height": 270 },
+			"effect/boom/boom_a/boom_a_0004": { "width": 245, "height": 270 }
+		},
+		"boom_2": {
+			"effect/boom/boom_b/boom_b_0001": { "width": 276, "height": 224 },
+			"effect/boom/boom_b/boom_b_0002": { "width": 276, "height": 224 },
+			"effect/boom/boom_b/boom_b_0003": { "width": 276, "height": 224 },
+			"effect/boom/boom_b/boom_b_0004": { "width": 276, "height": 224 },
+			"effect/boom/boom_b/boom_b_0005": { "width": 276, "height": 224 }
+		},
+		"boom_3": {
+			"effect/boom/boom_c/boom_c_0001": { "width": 182, "height": 244 },
+			"effect/boom/boom_c/boom_c_0002": { "width": 182, "height": 244 },
+			"effect/boom/boom_c/boom_c_0003": { "width": 182, "height": 244 },
+			"effect/boom/boom_c/boom_c_0004": { "width": 182, "height": 244 }
+		},
+		"boom_4": {
+			"effect/boom/boom_d/boom_d_0001": { "width": 244, "height": 157 },
+			"effect/boom/boom_d/boom_d_0002": { "width": 244, "height": 157 },
+			"effect/boom/boom_d/boom_d_0003": { "width": 244, "height": 157 },
+			"effect/boom/boom_d/boom_d_0004": { "width": 244, "height": 157 },
+			"effect/boom/boom_d/boom_d_0005": { "width": 244, "height": 157 },
+			"effect/boom/boom_d/boom_d_0006": { "width": 244, "height": 157 }
+		}
+	}
+},
+"events": {
+	"hit_21_5_1": {},
+	"hit_21_5_2": {},
+	"hit_21_5_3": {},
+	"hit_21_5_4": {},
+	"hit_21_5_5": {}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"boom_1": {
+				"attachment": [
+					{ "time": 1.2333, "name": "effect/boom/boom_a/boom_a_0001" },
+					{ "time": 1.2667, "name": "effect/boom/boom_a/boom_a_0002" },
+					{ "time": 1.3, "name": "effect/boom/boom_a/boom_a_0003" },
+					{ "time": 1.3333, "name": "effect/boom/boom_a/boom_a_0004" },
+					{ "time": 1.3667, "name": null }
+				]
+			},
+			"boom_2": {
+				"attachment": [
+					{ "time": 1.7667, "name": "effect/boom/boom_b/boom_b_0001" },
+					{ "time": 1.8, "name": "effect/boom/boom_b/boom_b_0002" },
+					{ "time": 1.8333, "name": "effect/boom/boom_b/boom_b_0003" },
+					{ "time": 1.8667, "name": "effect/boom/boom_b/boom_b_0004" },
+					{ "time": 1.9, "name": "effect/boom/boom_b/boom_b_0005" },
+					{ "time": 1.9333, "name": null }
+				]
+			},
+			"boom_3": {
+				"attachment": [
+					{ "time": 0.9667, "name": "effect/boom/boom_c/boom_c_0001" },
+					{ "time": 1, "name": "effect/boom/boom_c/boom_c_0002" },
+					{ "time": 1.0333, "name": "effect/boom/boom_c/boom_c_0003" },
+					{ "time": 1.0667, "name": "effect/boom/boom_c/boom_c_0004" },
+					{ "time": 1.1, "name": null },
+					{ "time": 1.5, "name": "effect/boom/boom_c/boom_c_0001" },
+					{ "time": 1.5333, "name": "effect/boom/boom_c/boom_c_0002" },
+					{ "time": 1.5667, "name": "effect/boom/boom_c/boom_c_0003" },
+					{ "time": 1.6, "name": "effect/boom/boom_c/boom_c_0004" },
+					{ "time": 1.6333, "name": null }
+				]
+			},
+			"boom_4": {
+				"attachment": [
+					{ "time": 2.3333, "name": "effect/boom/boom_d/boom_d_0001" },
+					{ "time": 2.3667, "name": "effect/boom/boom_d/boom_d_0002" },
+					{ "time": 2.4, "name": "effect/boom/boom_d/boom_d_0003" },
+					{ "time": 2.4333, "name": "effect/boom/boom_d/boom_d_0004" },
+					{ "time": 2.4667, "name": "effect/boom/boom_d/boom_d_0005" },
+					{ "time": 2.5, "name": "effect/boom/boom_d/boom_d_0006" },
+					{ "time": 2.5333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"boom_3": {
+				"rotate": [
+					{ "time": 0.9667, "angle": -90 }
+				],
+				"translate": [
+					{ "time": 0.9667, "x": 130.28, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0.9667, "x": -3, "y": 3, "curve": "stepped" },
+					{ "time": 1.1, "x": -3, "y": 3 },
+					{ "time": 1.5, "x": 3, "y": 3 }
+				]
+			},
+			"boom_1": {
+				"translate": [
+					{ "time": 1.2333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 1.2333, "x": 3, "y": 3 }
+				]
+			},
+			"boom_2": {
+				"translate": [
+					{ "time": 1.7667, "x": 36.46, "y": 57.06 }
+				],
+				"scale": [
+					{ "time": 1.7667, "x": 3, "y": 3 }
+				]
+			},
+			"boom_4": {
+				"translate": [
+					{ "time": 2.3333, "x": 213.52, "y": 0 }
+				],
+				"scale": [
+					{ "time": 2.3333, "x": 3, "y": 3 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.9667, "name": "hit_21_5_5" },
+			{ "time": 1.2667, "name": "hit_21_5_4" },
+			{ "time": 1.5, "name": "hit_21_5_3" },
+			{ "time": 1.8333, "name": "hit_21_5_2" },
+			{ "time": 2.3333, "name": "hit_21_5_1" }
+		]
+	}
+}
+}

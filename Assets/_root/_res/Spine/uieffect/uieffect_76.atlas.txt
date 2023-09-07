@@ -1,0 +1,111 @@
+
+uieffect_76.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+PointImage
+  rotate: false
+  xy: 0, 0
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+crossplane_
+  rotate: false
+  xy: 0, 29
+  size: 208, 208
+  orig: 208, 208
+  offset: 0, 0
+  index: -1
+feng_1
+  rotate: false
+  xy: 1730, 101
+  size: 132, 136
+  orig: 169, 186
+  offset: 15, 25
+  index: -1
+feng_11
+  rotate: false
+  xy: 703, 90
+  size: 159, 147
+  orig: 169, 186
+  offset: 6, 13
+  index: -1
+feng_12
+  rotate: false
+  xy: 864, 84
+  size: 154, 153
+  orig: 169, 186
+  offset: 10, 13
+  index: -1
+feng_13
+  rotate: true
+  xy: 1171, 95
+  size: 142, 144
+  orig: 169, 186
+  offset: 21, 12
+  index: -1
+feng_14
+  rotate: false
+  xy: 1596, 98
+  size: 132, 139
+  orig: 169, 186
+  offset: 29, 13
+  index: -1
+feng_15
+  rotate: false
+  xy: 1462, 95
+  size: 132, 142
+  orig: 169, 186
+  offset: 27, 12
+  index: -1
+feng_2
+  rotate: false
+  xy: 1317, 95
+  size: 143, 142
+  orig: 169, 186
+  offset: 9, 20
+  index: -1
+feng_3
+  rotate: false
+  xy: 1020, 94
+  size: 149, 143
+  orig: 169, 186
+  offset: 6, 20
+  index: -1
+feng_5
+  rotate: false
+  xy: 542, 87
+  size: 159, 150
+  orig: 169, 186
+  offset: 3, 16
+  index: -1
+feng_7
+  rotate: false
+  xy: 210, 82
+  size: 164, 155
+  orig: 169, 186
+  offset: 2, 14
+  index: -1
+feng_9
+  rotate: false
+  xy: 376, 88
+  size: 164, 149
+  orig: 169, 186
+  offset: 2, 14
+  index: -1
+lizi1
+  rotate: false
+  xy: 1864, 141
+  size: 91, 96
+  orig: 128, 128
+  offset: 19, 11
+  index: -1
+lizi3
+  rotate: false
+  xy: 1957, 141
+  size: 87, 96
+  orig: 128, 128
+  offset: 9, 13
+  index: -1

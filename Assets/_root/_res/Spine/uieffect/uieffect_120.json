@@ -1,0 +1,67 @@
+{
+"skeleton": { "hash": "CJ4colbvxeqEqj5yM3G+Gz8Uhuw", "spine": "3.5.35", "width": 128.7, "height": 128.7 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone2", "parent": "bone", "length": 100, "scaleX": 1.1, "scaleY": 1.1 },
+	{ "name": "bone3", "parent": "bone", "length": 100, "scaleX": 1.5, "scaleY": 1.5 }
+],
+"slots": [
+	{ "name": "texture/uieffect_1184 (2)", "bone": "bone2", "attachment": "texture/uieffect_1184 (2)", "blend": "additive" },
+	{ "name": "texture/uieffect_1184 (3)", "bone": "bone3", "attachment": "texture/uieffect_1184 (3)", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"texture/uieffect_1184 (2)": {
+			"texture/uieffect_1184 (2)": { "width": 117, "height": 117 }
+		},
+		"texture/uieffect_1184 (3)": {
+			"texture/uieffect_1184 (3)": { "width": 83, "height": 82 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"texture/uieffect_1184 (2)": {
+				"color": [
+					{ "time": 0, "color": "ffffff87" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "texture/uieffect_1184 (2)" }
+				]
+			},
+			"texture/uieffect_1184 (3)": {
+				"color": [
+					{ "time": 0, "color": "ffffffb6" }
+				]
+			}
+		},
+		"bones": {
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				]
+			},
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 2, "angle": 180 },
+					{ "time": 4, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

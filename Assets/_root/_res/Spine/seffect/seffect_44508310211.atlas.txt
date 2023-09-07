@@ -1,0 +1,104 @@
+
+seffect_44508310211.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/effect/attack_hit/0_00000
+  rotate: false
+  xy: 831, 148
+  size: 104, 99
+  orig: 250, 250
+  offset: 76, 76
+  index: -1
+images/effect/attack_hit/0_00001
+  rotate: false
+  xy: 724, 128
+  size: 105, 119
+  orig: 250, 250
+  offset: 60, 88
+  index: -1
+images/effect/attack_hit/0_00002
+  rotate: false
+  xy: 613, 119
+  size: 109, 128
+  orig: 250, 250
+  offset: 50, 83
+  index: -1
+images/effect/attack_hit/0_00004
+  rotate: false
+  xy: 355, 98
+  size: 131, 149
+  orig: 250, 250
+  offset: 38, 66
+  index: -1
+images/effect/attack_hit/0_00006
+  rotate: false
+  xy: 234, 85
+  size: 119, 162
+  orig: 250, 250
+  offset: 36, 53
+  index: -1
+images/effect/attack_hit/0_00008
+  rotate: false
+  xy: 488, 119
+  size: 123, 128
+  orig: 250, 250
+  offset: 35, 85
+  index: -1
+images/effect/attack_hit/0_00010
+  rotate: true
+  xy: 937, 138
+  size: 109, 83
+  orig: 250, 250
+  offset: 50, 85
+  index: -1
+images/effect/attack_hit/0_00012
+  rotate: false
+  xy: 234, 2
+  size: 110, 81
+  orig: 250, 250
+  offset: 49, 84
+  index: -1
+images/effect/attack_hit/0_00014
+  rotate: false
+  xy: 598, 40
+  size: 107, 77
+  orig: 250, 250
+  offset: 52, 86
+  index: -1
+images/effect/attack_hit/0_00016
+  rotate: false
+  xy: 488, 41
+  size: 108, 76
+  orig: 250, 250
+  offset: 52, 85
+  index: -1
+images/effect/attack_hit/0_00018
+  rotate: false
+  xy: 355, 29
+  size: 108, 67
+  orig: 250, 250
+  offset: 52, 90
+  index: -1
+images/effect/attack_hit/0_00020
+  rotate: false
+  xy: 831, 81
+  size: 69, 65
+  orig: 250, 250
+  offset: 61, 91
+  index: -1
+images/effect/attack_hit/0_00022
+  rotate: false
+  xy: 465, 57
+  size: 21, 39
+  orig: 250, 250
+  offset: 107, 116
+  index: -1
+images/effect/glow01
+  rotate: false
+  xy: 2, 17
+  size: 230, 230
+  orig: 256, 256
+  offset: 13, 13
+  index: -1

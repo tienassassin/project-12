@@ -1,0 +1,363 @@
+
+seffect_43513121012.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+att/smoke/smoke_0112
+  rotate: false
+  xy: 329, 768
+  size: 46, 9
+  orig: 184, 63
+  offset: 69, 19
+  index: -1
+att/smoke/smoke_0114
+  rotate: false
+  xy: 358, 29
+  size: 143, 45
+  orig: 184, 63
+  offset: 20, 10
+  index: -1
+att/smoke/smoke_0116
+  rotate: false
+  xy: 1559, 615
+  size: 169, 53
+  orig: 184, 63
+  offset: 8, 7
+  index: -1
+att/smoke/smoke_0118
+  rotate: false
+  xy: 182, 31
+  size: 174, 54
+  orig: 184, 63
+  offset: 5, 6
+  index: -1
+att/smoke/smoke_0120
+  rotate: true
+  xy: 124, 4
+  size: 178, 56
+  orig: 184, 63
+  offset: 2, 5
+  index: -1
+att/smoke/smoke_0122
+  rotate: false
+  xy: 819, 534
+  size: 173, 48
+  orig: 184, 63
+  offset: 0, 5
+  index: -1
+att/smoke/smoke_0124
+  rotate: true
+  xy: 1518, 619
+  size: 172, 39
+  orig: 184, 63
+  offset: 3, 9
+  index: -1
+att/smoke/smoke_0125
+  rotate: false
+  xy: 390, 249
+  size: 9, 38
+  orig: 184, 63
+  offset: 6, 10
+  index: -1
+ultimateskill/cui_ji_lightning/cui_ji_lightning_0112
+  rotate: false
+  xy: 994, 548
+  size: 29, 34
+  orig: 164, 137
+  offset: 45, 0
+  index: -1
+ultimateskill/cui_ji_lightning/cui_ji_lightning_0114
+  rotate: false
+  xy: 1730, 619
+  size: 51, 52
+  orig: 164, 137
+  offset: 35, 0
+  index: -1
+ultimateskill/cui_ji_lightning/cui_ji_lightning_0117
+  rotate: true
+  xy: 1722, 673
+  size: 123, 86
+  orig: 164, 137
+  offset: 11, 2
+  index: -1
+ultimateskill/cui_ji_lightning/cui_ji_lightning_0120
+  rotate: false
+  xy: 617, 272
+  size: 143, 116
+  orig: 164, 137
+  offset: 10, 2
+  index: -1
+ultimateskill/cui_ji_lightning/cui_ji_lightning_0124
+  rotate: false
+  xy: 1559, 670
+  size: 161, 126
+  orig: 164, 137
+  offset: 3, 9
+  index: -1
+ultimateskill/cui_ji_lightning/cui_ji_lightning_0127
+  rotate: false
+  xy: 1810, 566
+  size: 161, 108
+  orig: 164, 137
+  offset: 2, 29
+  index: -1
+ultimateskill/cui_ji_lightning/cui_ji_lightning_0128
+  rotate: false
+  xy: 606, 162
+  size: 161, 108
+  orig: 164, 137
+  offset: 2, 29
+  index: -1
+ultimateskill/cui_ji_lightning/cui_ji_lightning_0130
+  rotate: false
+  xy: 866, 362
+  size: 91, 47
+  orig: 164, 137
+  offset: 72, 60
+  index: -1
+ultimateskill/dao_guang_light/dao_guang_light_0115
+  rotate: false
+  xy: 401, 201
+  size: 203, 122
+  orig: 211, 128
+  offset: 4, 0
+  index: -1
+ultimateskill/dao_guang_light/dao_guang_light_0116
+  rotate: false
+  xy: 390, 76
+  size: 200, 123
+  orig: 211, 128
+  offset: 6, 1
+  index: -1
+ultimateskill/hui_xue_lightning/hui_xue_lightning_0112
+  rotate: false
+  xy: 503, 39
+  size: 41, 35
+  orig: 111, 167
+  offset: 33, 0
+  index: -1
+ultimateskill/hui_xue_lightning/hui_xue_lightning_0114
+  rotate: false
+  xy: 866, 316
+  size: 94, 44
+  orig: 111, 167
+  offset: 6, 4
+  index: -1
+ultimateskill/hui_xue_lightning/hui_xue_lightning_0116
+  rotate: true
+  xy: 1978, 692
+  size: 105, 57
+  orig: 111, 167
+  offset: 3, 15
+  index: -1
+ultimateskill/hui_xue_lightning/hui_xue_lightning_0121
+  rotate: true
+  xy: 700, 55
+  size: 105, 98
+  orig: 111, 167
+  offset: 2, 24
+  index: -1
+ultimateskill/hui_xue_lightning/hui_xue_lightning_0125
+  rotate: false
+  xy: 710, 428
+  size: 107, 127
+  orig: 111, 167
+  offset: 4, 30
+  index: -1
+ultimateskill/hui_xue_lightning/hui_xue_lightning_0128
+  rotate: false
+  xy: 592, 56
+  size: 106, 104
+  orig: 111, 167
+  offset: 5, 61
+  index: -1
+ultimateskill/hui_xue_lightning/hui_xue_lightning_0130
+  rotate: false
+  xy: 762, 304
+  size: 102, 105
+  orig: 111, 167
+  offset: 5, 62
+  index: -1
+ultimateskill/light/light_0093
+  rotate: false
+  xy: 2, 446
+  size: 180, 320
+  orig: 180, 320
+  offset: 0, 0
+  index: -1
+ultimateskill/light/light_0101
+  rotate: false
+  xy: 2, 184
+  size: 180, 260
+  orig: 180, 320
+  offset: 0, 60
+  index: -1
+ultimateskill/lizi/lizi_0001
+  rotate: false
+  xy: 617, 390
+  size: 91, 163
+  orig: 133, 210
+  offset: 7, 15
+  index: -1
+ultimateskill/lizi/lizi_0005
+  rotate: true
+  xy: 819, 411
+  size: 121, 163
+  orig: 133, 210
+  offset: 5, 22
+  index: -1
+ultimateskill/lizi/lizi_0009
+  rotate: false
+  xy: 1268, 609
+  size: 123, 179
+  orig: 133, 210
+  offset: 3, 12
+  index: -1
+ultimateskill/lizi/lizi_0013
+  rotate: false
+  xy: 1145, 606
+  size: 121, 182
+  orig: 133, 210
+  offset: 5, 16
+  index: -1
+ultimateskill/lizi/lizi_0017
+  rotate: false
+  xy: 2, 2
+  size: 120, 180
+  orig: 133, 210
+  offset: 6, 23
+  index: -1
+ultimateskill/lizi/lizi_0021
+  rotate: false
+  xy: 1393, 613
+  size: 123, 178
+  orig: 133, 210
+  offset: 4, 31
+  index: -1
+ultimateskill/lizi/lizi_0025
+  rotate: true
+  xy: 1810, 676
+  size: 121, 166
+  orig: 133, 210
+  offset: 6, 34
+  index: -1
+ultimateskill/lizi/lizi_0029
+  rotate: false
+  xy: 1025, 588
+  size: 118, 196
+  orig: 133, 210
+  offset: 8, 11
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0048
+  rotate: true
+  xy: 184, 289
+  size: 236, 215
+  orig: 248, 247
+  offset: 5, 25
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0052
+  rotate: true
+  xy: 401, 325
+  size: 228, 214
+  orig: 248, 247
+  offset: 13, 26
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0056
+  rotate: false
+  xy: 1297, 793
+  size: 235, 229
+  orig: 248, 247
+  offset: 6, 11
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0060
+  rotate: false
+  xy: 329, 779
+  size: 240, 243
+  orig: 248, 247
+  offset: 1, 4
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0064
+  rotate: true
+  xy: 1534, 798
+  size: 224, 238
+  orig: 248, 247
+  offset: 17, 2
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0068
+  rotate: false
+  xy: 1055, 790
+  size: 240, 232
+  orig: 248, 247
+  offset: 1, 15
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0072
+  rotate: false
+  xy: 571, 779
+  size: 239, 243
+  orig: 248, 247
+  offset: 2, 4
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0076
+  rotate: true
+  xy: 623, 557
+  size: 220, 194
+  orig: 248, 247
+  offset: 21, 46
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0080
+  rotate: false
+  xy: 397, 555
+  size: 224, 222
+  orig: 248, 247
+  offset: 17, 18
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0084
+  rotate: false
+  xy: 1774, 799
+  size: 233, 223
+  orig: 248, 247
+  offset: 8, 17
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0088
+  rotate: false
+  xy: 812, 786
+  size: 241, 236
+  orig: 248, 247
+  offset: 0, 4
+  index: -1
+ultimateskill/quan_lightning/quan_lightning_0092
+  rotate: true
+  xy: 184, 527
+  size: 239, 211
+  orig: 248, 247
+  offset: 2, 29
+  index: -1
+ultimateskill/shexian_up/shexian_up_0112
+  rotate: false
+  xy: 2, 768
+  size: 325, 254
+  orig: 377, 302
+  offset: 32, 15
+  index: -1
+ultimateskill/yellow_quan/yellow_quan_0055
+  rotate: false
+  xy: 819, 584
+  size: 204, 200
+  orig: 204, 200
+  offset: 0, 0
+  index: -1
+ultimateskill/yellow_quan/yellow_quan_0057
+  rotate: false
+  xy: 184, 87
+  size: 204, 200
+  orig: 204, 200
+  offset: 0, 0
+  index: -1
+ultimateskill/yuanquan_0095
+  rotate: false
+  xy: 1973, 604
+  size: 73, 70
+  orig: 74, 70
+  offset: 0, 0
+  index: -1

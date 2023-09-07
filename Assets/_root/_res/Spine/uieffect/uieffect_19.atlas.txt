@@ -1,0 +1,55 @@
+
+uieffect_19.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Noise_Ober_00
+  rotate: true
+  xy: 2, 2
+  size: 122, 120
+  orig: 128, 128
+  offset: 4, 0
+  index: -1
+images/Noise_Ober_01
+  rotate: true
+  xy: 2, 253
+  size: 128, 123
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+images/Noise_Ober_02
+  rotate: true
+  xy: 131, 390
+  size: 118, 128
+  orig: 128, 128
+  offset: 5, 0
+  index: -1
+images/Noise_Ober_03
+  rotate: false
+  xy: 2, 383
+  size: 127, 125
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+images/Noise_Ober_04
+  rotate: false
+  xy: 2, 126
+  size: 121, 125
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+images/PointImage
+  rotate: false
+  xy: 261, 423
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+images/uiglow
+  rotate: false
+  xy: 261, 452
+  size: 60, 56
+  orig: 64, 64
+  offset: 3, 5
+  index: -1

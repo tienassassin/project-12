@@ -1,0 +1,20 @@
+
+uieffect_22.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/common_81
+  rotate: false
+  xy: 2, 2
+  size: 29, 30
+  orig: 29, 30
+  offset: 0, 0
+  index: -1
+images/uieffect_icon
+  rotate: false
+  xy: 2, 34
+  size: 60, 56
+  orig: 64, 64
+  offset: 3, 5
+  index: -1

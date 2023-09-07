@@ -1,0 +1,482 @@
+
+seffect_41514111012.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tx/出现/Wind/Wind_0011
+  rotate: true
+  xy: 708, 1490
+  size: 106, 58
+  orig: 345, 215
+  offset: 134, 96
+  index: -1
+tx/出现/Wind/Wind_0012
+  rotate: false
+  xy: 1636, 250
+  size: 162, 94
+  orig: 345, 215
+  offset: 108, 74
+  index: -1
+tx/出现/Wind/Wind_0014
+  rotate: false
+  xy: 747, 907
+  size: 316, 143
+  orig: 345, 215
+  offset: 14, 50
+  index: -1
+tx/出现/Wind/Wind_0015
+  rotate: false
+  xy: 1717, 1868
+  size: 320, 178
+  orig: 345, 215
+  offset: 21, 30
+  index: -1
+tx/出现/Wind/Wind_0017
+  rotate: false
+  xy: 1011, 8
+  size: 218, 170
+  orig: 345, 215
+  offset: 43, 2
+  index: -1
+tx/出现/Wind/Wind_0018
+  rotate: false
+  xy: 1012, 413
+  size: 91, 105
+  orig: 345, 215
+  offset: 36, 8
+  index: -1
+tx/出现/down_light/down_light_0000
+  rotate: false
+  xy: 1720, 1553
+  size: 299, 128
+  orig: 345, 137
+  offset: 25, 5
+  index: -1
+tx/出现/down_light/down_light_0002
+  rotate: true
+  xy: 616, 807
+  size: 298, 129
+  orig: 345, 137
+  offset: 24, 5
+  index: -1
+tx/出现/down_light/down_light_0004
+  rotate: false
+  xy: 1720, 1289
+  size: 296, 129
+  orig: 345, 137
+  offset: 25, 5
+  index: -1
+tx/出现/down_light/down_light_0006
+  rotate: false
+  xy: 715, 49
+  size: 294, 129
+  orig: 345, 137
+  offset: 27, 5
+  index: -1
+tx/出现/down_light/down_light_0008
+  rotate: true
+  xy: 1124, 1114
+  size: 294, 129
+  orig: 345, 137
+  offset: 27, 5
+  index: -1
+tx/出现/down_light/down_light_0010
+  rotate: true
+  xy: 1851, 789
+  size: 293, 130
+  orig: 345, 137
+  offset: 27, 4
+  index: -1
+tx/出现/down_light/down_light_0012
+  rotate: true
+  xy: 1585, 794
+  size: 292, 131
+  orig: 345, 137
+  offset: 27, 3
+  index: -1
+tx/出现/down_light/down_light_0014
+  rotate: true
+  xy: 1117, 495
+  size: 292, 130
+  orig: 345, 137
+  offset: 27, 4
+  index: -1
+tx/出现/down_light/down_light_0016
+  rotate: true
+  xy: 1589, 1088
+  size: 295, 129
+  orig: 345, 137
+  offset: 26, 4
+  index: -1
+tx/出现/down_light/down_light_0018
+  rotate: true
+  xy: 1590, 1385
+  size: 295, 128
+  orig: 345, 137
+  offset: 26, 5
+  index: -1
+tx/出现/down_light/down_light_0020
+  rotate: true
+  xy: 1249, 531
+  size: 298, 128
+  orig: 345, 137
+  offset: 24, 5
+  index: -1
+tx/出现/down_light/down_light_0022
+  rotate: false
+  xy: 1291, 1419
+  size: 297, 129
+  orig: 345, 137
+  offset: 24, 4
+  index: -1
+tx/出现/down_light/down_light_0024
+  rotate: false
+  xy: 1643, 658
+  size: 295, 129
+  orig: 345, 137
+  offset: 26, 3
+  index: -1
+tx/出现/down_light/down_light_0026
+  rotate: true
+  xy: 1379, 533
+  size: 296, 130
+  orig: 345, 137
+  offset: 25, 2
+  index: -1
+tx/出现/down_light/down_light_0028
+  rotate: false
+  xy: 1291, 1550
+  size: 297, 130
+  orig: 345, 137
+  offset: 24, 2
+  index: -1
+tx/出现/down_light/down_light_0030
+  rotate: true
+  xy: 1511, 496
+  size: 296, 130
+  orig: 345, 137
+  offset: 25, 2
+  index: -1
+tx/出现/down_light/down_light_0032
+  rotate: false
+  xy: 1720, 1420
+  size: 296, 131
+  orig: 345, 137
+  offset: 25, 2
+  index: -1
+tx/出现/down_light/down_light_0034
+  rotate: true
+  xy: 1718, 789
+  size: 293, 131
+  orig: 345, 137
+  offset: 27, 2
+  index: -1
+tx/出现/down_light/down_light_0036
+  rotate: false
+  xy: 1643, 526
+  size: 293, 130
+  orig: 345, 137
+  offset: 27, 3
+  index: -1
+tx/出现/down_light/down_light_0038
+  rotate: true
+  xy: 615, 1107
+  size: 291, 130
+  orig: 345, 137
+  offset: 28, 3
+  index: -1
+tx/出现/down_light/down_light_0040
+  rotate: false
+  xy: 1643, 395
+  size: 289, 129
+  orig: 345, 137
+  offset: 30, 4
+  index: -1
+tx/出现/down_light/down_light_0042
+  rotate: true
+  xy: 1461, 1131
+  size: 286, 126
+  orig: 345, 137
+  offset: 31, 5
+  index: -1
+tx/出现/down_light/down_light_0044
+  rotate: true
+  xy: 1460, 848
+  size: 281, 123
+  orig: 345, 137
+  offset: 34, 7
+  index: -1
+tx/出现/down_light/down_light_0046
+  rotate: true
+  xy: 1319, 258
+  size: 271, 118
+  orig: 345, 137
+  offset: 40, 10
+  index: -1
+tx/出现/down_light/down_light_0048
+  rotate: true
+  xy: 207, 2
+  size: 245, 108
+  orig: 345, 137
+  offset: 54, 18
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0009
+  rotate: false
+  xy: 1249, 831
+  size: 209, 106
+  orig: 444, 201
+  offset: 112, 54
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0011
+  rotate: false
+  xy: 317, 21
+  size: 353, 144
+  orig: 444, 201
+  offset: 44, 27
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0013
+  rotate: false
+  xy: 1292, 1682
+  size: 426, 175
+  orig: 444, 201
+  offset: 10, 13
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0015
+  rotate: false
+  xy: 1292, 1859
+  size: 423, 187
+  orig: 444, 201
+  offset: 11, 5
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0017
+  rotate: false
+  xy: 309, 1400
+  size: 397, 196
+  orig: 444, 201
+  offset: 12, 0
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0019
+  rotate: true
+  xy: 309, 366
+  size: 396, 197
+  orig: 444, 201
+  offset: 12, 0
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0021
+  rotate: true
+  xy: 508, 366
+  size: 396, 197
+  orig: 444, 201
+  offset: 12, 0
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0023
+  rotate: false
+  xy: 317, 167
+  size: 396, 197
+  orig: 444, 201
+  offset: 12, 0
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0025
+  rotate: false
+  xy: 805, 1609
+  size: 396, 197
+  orig: 444, 201
+  offset: 12, 0
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0027
+  rotate: false
+  xy: 793, 1410
+  size: 394, 197
+  orig: 444, 201
+  offset: 14, 0
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0029
+  rotate: false
+  xy: 747, 1223
+  size: 375, 185
+  orig: 444, 201
+  offset: 29, 10
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0031
+  rotate: false
+  xy: 747, 1052
+  size: 354, 169
+  orig: 444, 201
+  offset: 38, 16
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0033
+  rotate: false
+  xy: 707, 385
+  size: 303, 133
+  orig: 444, 201
+  offset: 60, 30
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0035
+  rotate: true
+  xy: 1439, 241
+  size: 253, 119
+  orig: 444, 201
+  offset: 84, 43
+  index: -1
+tx/出现/kuo_shan/kuo_shan_0037
+  rotate: false
+  xy: 1636, 346
+  size: 224, 47
+  orig: 444, 201
+  offset: 110, 46
+  index: -1
+tx/出现/rot_wind/rot_wind_0012
+  rotate: true
+  xy: 715, 180
+  size: 203, 243
+  orig: 204, 252
+  offset: 0, 2
+  index: -1
+tx/出现/rot_wind/rot_wind_0014
+  rotate: false
+  xy: 707, 520
+  size: 203, 244
+  orig: 204, 252
+  offset: 0, 2
+  index: -1
+tx/出现/rot_wind/rot_wind_0016
+  rotate: false
+  xy: 912, 520
+  size: 203, 244
+  orig: 204, 252
+  offset: 0, 2
+  index: -1
+tx/出现/rot_wind/rot_wind_0018
+  rotate: false
+  xy: 2, 2
+  size: 203, 245
+  orig: 204, 252
+  offset: 0, 1
+  index: -1
+tx/出现/rot_wind/rot_wind_0020
+  rotate: true
+  xy: 960, 180
+  size: 203, 242
+  orig: 204, 252
+  offset: 0, 3
+  index: -1
+tx/出现/rot_wind/rot_wind_0022
+  rotate: true
+  xy: 1720, 1084
+  size: 203, 237
+  orig: 204, 252
+  offset: 0, 8
+  index: -1
+tx/出现/rot_wind/rot_wind_0024
+  rotate: false
+  xy: 1255, 939
+  size: 203, 234
+  orig: 204, 252
+  offset: 0, 10
+  index: -1
+tx/出现/rot_wind/rot_wind_0026
+  rotate: false
+  xy: 1255, 1175
+  size: 204, 242
+  orig: 204, 252
+  offset: 0, 3
+  index: -1
+tx/出现/yizi/yizi_0004
+  rotate: true
+  xy: 1560, 273
+  size: 221, 74
+  orig: 337, 498
+  offset: 59, 6
+  index: -1
+tx/出现/yizi/yizi_0005
+  rotate: true
+  xy: 1203, 1542
+  size: 264, 86
+  orig: 337, 498
+  offset: 49, 6
+  index: -1
+tx/出现/yizi/yizi_0007
+  rotate: true
+  xy: 1204, 208
+  size: 285, 113
+  orig: 337, 498
+  offset: 34, 6
+  index: -1
+tx/出现/yizi/yizi_0009
+  rotate: false
+  xy: 747, 766
+  size: 310, 139
+  orig: 337, 498
+  offset: 15, 6
+  index: -1
+tx/出现/yizi/yizi_0011
+  rotate: false
+  xy: 1720, 1683
+  size: 308, 183
+  orig: 337, 498
+  offset: 16, 6
+  index: -1
+tx/出现/yizi/yizi_0015
+  rotate: false
+  xy: 308, 1107
+  size: 305, 291
+  orig: 337, 498
+  offset: 17, 6
+  index: -1
+tx/出现/yizi/yizi_0017
+  rotate: false
+  xy: 309, 764
+  size: 305, 341
+  orig: 337, 498
+  offset: 17, 6
+  index: -1
+tx/出现/yizi/yizi_0019
+  rotate: false
+  xy: 2, 249
+  size: 305, 395
+  orig: 337, 498
+  offset: 17, 6
+  index: -1
+tx/出现/yizi/yizi_0021
+  rotate: false
+  xy: 2, 646
+  size: 305, 446
+  orig: 337, 498
+  offset: 17, 6
+  index: -1
+tx/出现/yizi/yizi_0023
+  rotate: false
+  xy: 2, 1094
+  size: 304, 469
+  orig: 337, 498
+  offset: 18, 6
+  index: -1
+tx/出现/yizi/yizi_0029
+  rotate: false
+  xy: 2, 1565
+  size: 305, 481
+  orig: 337, 498
+  offset: 17, 6
+  index: -1
+wangzuo
+  rotate: true
+  xy: 309, 1778
+  size: 268, 494
+  orig: 268, 495
+  offset: 0, 0
+  index: -1
+wangzuo_02
+  rotate: true
+  xy: 309, 1598
+  size: 178, 482
+  orig: 180, 485
+  offset: 1, 2
+  index: -1
+wangzuo_lie01
+  rotate: true
+  xy: 805, 1808
+  size: 238, 485
+  orig: 239, 492
+  offset: 0, 4
+  index: -1

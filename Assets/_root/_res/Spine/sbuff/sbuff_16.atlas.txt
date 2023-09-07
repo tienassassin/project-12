@@ -1,0 +1,69 @@
+
+sbuff_16.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+image/lig_0001
+  rotate: false
+  xy: 2, 304
+  size: 142, 200
+  orig: 164, 200
+  offset: 9, 0
+  index: -1
+image/lig_0002
+  rotate: false
+  xy: 146, 312
+  size: 150, 192
+  orig: 164, 200
+  offset: 4, 4
+  index: -1
+image/lig_0003
+  rotate: false
+  xy: 2, 124
+  size: 152, 178
+  orig: 164, 200
+  offset: 4, 12
+  index: -1
+image/lig_0004
+  rotate: false
+  xy: 303, 192
+  size: 151, 165
+  orig: 164, 200
+  offset: 5, 18
+  index: -1
+image/lig_0005
+  rotate: false
+  xy: 329, 40
+  size: 143, 150
+  orig: 164, 200
+  offset: 8, 26
+  index: -1
+image/lig_0006
+  rotate: false
+  xy: 156, 137
+  size: 145, 173
+  orig: 164, 200
+  offset: 7, 15
+  index: -1
+image/lig_0007
+  rotate: true
+  xy: 2, 2
+  size: 120, 152
+  orig: 164, 200
+  offset: 19, 28
+  index: -1
+image/lig_0008
+  rotate: true
+  xy: 156, 38
+  size: 97, 171
+  orig: 164, 200
+  offset: 13, 19
+  index: -1
+image/lig_0009
+  rotate: true
+  xy: 298, 359
+  size: 145, 194
+  orig: 164, 200
+  offset: 8, 4
+  index: -1

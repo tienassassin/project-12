@@ -1,0 +1,20 @@
+
+uieffect_120.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+texture/uieffect_1184 (2)
+  rotate: false
+  xy: 0, 0
+  size: 116, 116
+  orig: 117, 117
+  offset: 1, 0
+  index: -1
+texture/uieffect_1184 (3)
+  rotate: false
+  xy: 118, 35
+  size: 83, 81
+  orig: 83, 82
+  offset: 0, 0
+  index: -1

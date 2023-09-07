@@ -1,0 +1,61 @@
+{
+"skeleton": { "hash": "/Cjj/ZP1N8GVonWNJRbwBLObUrs", "spine": "3.5.35", "width": 0, "height": 0 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "tx", "parent": "root" },
+	{ "name": "skill", "parent": "tx" },
+	{ "name": "hit_a2", "parent": "skill", "scaleX": 2, "scaleY": 2 }
+],
+"slots": [
+	{ "name": "hit_a2", "bone": "hit_a2" }
+],
+"skins": {
+	"default": {
+		"hit_a2": {
+			"biaoskill/hit_c/hit_c_0011": { "width": 273, "height": 373 },
+			"biaoskill/hit_c/hit_c_0013": { "width": 273, "height": 373 },
+			"biaoskill/hit_c/hit_c_0015": { "width": 273, "height": 373 },
+			"biaoskill/hit_c/hit_c_0017": { "width": 273, "height": 373 },
+			"biaoskill/hit_c/hit_c_0019": { "width": 273, "height": 373 },
+			"biaoskill/hit_c/hit_c_0021": { "width": 273, "height": 373 },
+			"biaoskill/hit_c/hit_c_0023": { "width": 273, "height": 373 },
+			"biaoskill/hit_c/hit_c_0025": { "width": 273, "height": 373 }
+		}
+	}
+},
+"events": {
+	"hit_1_1_1": {}
+},
+"animations": {
+	"animation_0": {
+		"slots": {
+			"hit_a2": {
+				"attachment": [
+					{ "time": 0, "name": "biaoskill/hit_c/hit_c_0011" },
+					{ "time": 0.0667, "name": "biaoskill/hit_c/hit_c_0013" },
+					{ "time": 0.1333, "name": "biaoskill/hit_c/hit_c_0015" },
+					{ "time": 0.2, "name": "biaoskill/hit_c/hit_c_0017" },
+					{ "time": 0.2667, "name": "biaoskill/hit_c/hit_c_0019" },
+					{ "time": 0.3333, "name": "biaoskill/hit_c/hit_c_0021" },
+					{ "time": 0.4, "name": "biaoskill/hit_c/hit_c_0023" },
+					{ "time": 0.4667, "name": "biaoskill/hit_c/hit_c_0025" },
+					{ "time": 0.5, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"hit_a2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2, "y": 2 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.1333, "name": "hit_1_1_1" }
+		]
+	}
+}
+}
