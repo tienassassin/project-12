@@ -69,7 +69,7 @@ public class LineUpUI : BaseUI
 
     private void GetRaceAura(List<EntitySaveData> heroList)
     {
-        var raceList = heroList.Where(x => x != null).Select(x => x.GetEntity().race).ToList();
+        var raceList = heroList.Where(x => x != null).Select(x => x.GetEntity().info.race).ToList();
 
         _raceCountDict = raceList.GroupBy(x => x)
             .ToDictionary(x => x.Key, x => x.Count());
@@ -91,7 +91,7 @@ public class LineUpUI : BaseUI
 
     private void GetElementAura(List<EntitySaveData> heroList)
     {
-        var elementList = heroList.Where(x => x != null).Select(x => x.GetEntity().element).ToList();
+        var elementList = heroList.Where(x => x != null).Select(x => x.GetEntity().info.element).ToList();
 
         _elementCountDict = elementList.GroupBy(x => x)
             .ToDictionary(x => x.Key, x => x.Count());

@@ -91,7 +91,7 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         await UniTask.WaitUntil(() => DataManager.Ready);
         entityCollection = new EntityCollection();
-        var allHeroIds = DataManager.Instance.GetAllEntities().Select(x => x.id).ToList();
+        var allHeroIds = DataManager.Instance.GetAllEntities().Select(x => x.info.id).ToList();
         for (int i = 0; i < unlockedHeroNum; i++)
         {
             string id = allHeroIds[Random.Range(0, allHeroIds.Count)];

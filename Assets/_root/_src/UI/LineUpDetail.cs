@@ -20,7 +20,7 @@ public class LineUpDetail : DuztineBehaviour
     [SerializeField] private FilterOption[] raceFilterOptions;
 
     private readonly List<Race> _raceOpts = new();
-    private Entity _info;
+    private EntityData _entityData;
 
     private int _curSlotId;
     private List<EquipmentCard> _equipmentCards = new();
@@ -56,7 +56,7 @@ public class LineUpDetail : DuztineBehaviour
     {
         _curSlotId = slotId;
         _saveData = data;
-        _info = _saveData?.GetEntity();
+        _entityData = _saveData?.GetEntity();
         info.SetActive(_saveData != null);
         equipmentGroup.SetActive(_saveData != null);
 
@@ -67,7 +67,7 @@ public class LineUpDetail : DuztineBehaviour
     {
         if (_saveData == null) return;
 
-        txtName.text = _info.name;
+        txtName.text = _entityData.name;
     }
 
     private void AddHeroToLineUp(string heroId)

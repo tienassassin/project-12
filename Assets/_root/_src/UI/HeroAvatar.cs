@@ -10,7 +10,7 @@ public class HeroAvatar : HeroCard
     public override void Init(EntitySaveData data)
     {
         base.Init(data);
-        name = (Info != null ? Info.name : Constants.EMPTY_MARK);
+        name = (EntityData != null ? EntityData.name : Constants.EMPTY_MARK);
 
         Refresh();
     }
@@ -24,7 +24,7 @@ public class HeroAvatar : HeroCard
             return;
         }
 
-        imgHp.fillAmount = (SaveData.currentHp / Info.stats.health) / 2;
+        imgHp.fillAmount = (SaveData.currentHp / EntityData.info.stats.health) / 2;
         imgEnergy.fillAmount = (SaveData.energy / 100) / 2;
     }
 

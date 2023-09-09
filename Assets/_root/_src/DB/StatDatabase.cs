@@ -1,75 +1,39 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class StatDatabase : Database
+[CreateAssetMenu(fileName = "StatDatabase", menuName = "DB/StatDatabase")]
+public class StatDatabase : ScriptableDatabase
 {
     [TableList]
-    public List<StatDesc> stats = new();
+    public List<StatInfo> stats = new();
 
-    private readonly Dictionary<string, StatDesc> _cachedDict = new();
-
-    protected override async void Import()
+    public override void Import()
     {
-        var data = this.FetchFromLocal(0);
-
-        stats = new List<StatDesc>();
-
-        var watch = new Stopwatch();
-        watch.Start();
-        await Task.Run(() =>
-        {
-            var jArray = JArray.Parse(data);
-            foreach (var jToken in jArray)
-            {
-                ConvertDataFromJObject((JObject)jToken, out var s);
-                stats.Add(s);
-            }
-        });
-
-        watch.Stop();
-        DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
     }
 
-    [Button]
-    protected override void DeleteAll()
+    public override void Delete()
     {
         stats.Clear();
     }
 
-    private void ConvertDataFromJObject(JObject jObject, out StatDesc s)
+    public StatInfo GetStatInfo(string id)
     {
-        s = new StatDesc
-        {
-            stat = (string)jObject["stat"],
-            name = (string)jObject["name"],
-            limit = Common.Parse<float>((string)jObject["limit"]),
-            description = (string)jObject["description"]
-        };
-    }
-
-    public StatDesc GetStatDescription(string stat)
-    {
-        _cachedDict.TryAdd(stat, stats.Find(s => s.stat == stat));
-        if (_cachedDict[stat] == null) EditorLog.Error($"Stat {stat} is not defined");
-        return _cachedDict[stat];
+        return stats.Find(x => x.id.Equals(id));
     }
 }
 
 [Serializable]
-public class StatDesc
+public struct StatInfo
 {
     [TableColumnWidth(100, Resizable = false)]
-    public string stat;
+    public string id;
 
     [TableColumnWidth(100, Resizable = false)]
     public string name;
 
-    [TableColumnWidth(70, Resizable = false)] [ShowIf("@this.limit > 0")]
+    [TableColumnWidth(70, Resizable = false)]
     public float limit;
 
     [TextArea(3, 10)]

@@ -132,6 +132,11 @@ public enum BattleState
 
 public static class TypeExtensions
 {
+    public static Side GetOpposite(this Side s)
+    {
+        return s == Side.Ally ? Side.Enemy : Side.Ally;
+    }
+
     public static bool IsNull(this HealthImpactType type)
     {
         return type is HealthImpactType.None;

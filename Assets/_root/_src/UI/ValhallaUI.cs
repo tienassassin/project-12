@@ -12,7 +12,7 @@ public class ValhallaUI : BaseUI
 
     [SerializeField] private ValhallaHeroDetail heroDetail;
 
-    private List<Entity> _heroes = new();
+    private List<EntityData> _entities = new();
 
     private List<ValhallaHeroCard> _cards = new();
     private List<ValhallaHeroCard> _activeCards = new();
@@ -62,7 +62,7 @@ public class ValhallaUI : BaseUI
         _lvSort = SortType.Descending;
         _tierSort = SortType.None;
 
-        _heroes = DataManager.Instance.GetAllEntities();
+        _entities = DataManager.Instance.GetAllEntities();
 
         LoadHeroCards();
         Refresh();
@@ -80,7 +80,7 @@ public class ValhallaUI : BaseUI
 
     private void LoadHeroCards()
     {
-        while (heroCardContainer.childCount < _heroes.Count)
+        while (heroCardContainer.childCount < _entities.Count)
         {
             var o = Instantiate(heroCardPref, heroCardContainer);
             _cards.Add(o);
@@ -89,7 +89,7 @@ public class ValhallaUI : BaseUI
         for (int i = 0; i < _cards.Count; i++)
         {
             var card = _cards[i];
-            if (i >= _heroes.Count)
+            if (i >= _entities.Count)
             {
                 card.gameObject.SetActive(false);
                 card.name = Constants.EMPTY_MARK;
@@ -97,7 +97,7 @@ public class ValhallaUI : BaseUI
             }
 
             card.gameObject.SetActive(true);
-            if (PlayerManager.Instance.IsHeroUnlocked(_heroes[i].id, out var hsd))
+            if (PlayerManager.Instance.IsHeroUnlocked(_entities[i].info.id, out var hsd))
             {
                 // unlocked hero
                 card.Init(hsd, saveData =>
@@ -109,7 +109,7 @@ public class ValhallaUI : BaseUI
             else
             {
                 // locked hero
-                card.Init(_heroes[i]);
+                card.Init(_entities[i]);
             }
         }
     }

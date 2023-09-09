@@ -14,7 +14,7 @@ public class LineUpSlot : DuztineBehaviour
     [SerializeField] private Slider sldEnergy;
 
     [SerializeField] private GameObject highlight;
-    private Entity _info;
+    private EntityData _entityData;
     private EntitySaveData _saveData;
 
     private Action<int, EntitySaveData> _slotHighlighted;
@@ -32,10 +32,10 @@ public class LineUpSlot : DuztineBehaviour
     public void Init(EntitySaveData data, Action<int, EntitySaveData> slotHighlighted)
     {
         _saveData = data;
-        _info = _saveData?.GetEntity();
+        _entityData = _saveData?.GetEntity();
         hero.SetActive(_saveData != null);
         heroInfo.SetActive(_saveData != null);
-        name = (_info != null ? _info.name : Constants.EMPTY_MARK);
+        name = (_entityData != null ? _entityData.name : Constants.EMPTY_MARK);
 
         _slotHighlighted = slotHighlighted;
         Refresh();
@@ -46,7 +46,7 @@ public class LineUpSlot : DuztineBehaviour
         if (_saveData == null) return;
 
         txtLevel.text = _saveData.GetLevel().ToString();
-        sldHp.value = _saveData.currentHp / _info.stats.health;
+        sldHp.value = _saveData.currentHp / _entityData.info.stats.health;
         sldEnergy.value = _saveData.energy / 100;
     }
 
@@ -54,15 +54,15 @@ public class LineUpSlot : DuztineBehaviour
     {
         bool active = false;
 
-        if (_info != null)
+        if (_entityData != null)
         {
             switch (condition)
             {
                 case Race r:
-                    active = (_info.race == r);
+                    active = (_entityData.info.race == r);
                     break;
                 case Element e:
-                    active = (_info.element == e);
+                    active = (_entityData.info.element == e);
                     break;
             }
         }

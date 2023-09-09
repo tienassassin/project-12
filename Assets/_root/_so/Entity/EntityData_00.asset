@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32948669ccb77ed46ae784dd9140c2fc, type: 3}
+  m_Name: EntityData_00
+  m_EditorClassIdentifier: 
+  info:
+    id: 
+    name: 
+    tier: 0
+    element: 0
+    race: 0
+    damageType: 0
+    attackRange: 0
+    stats:
+      minimized: 0
+      health: 0
+      damage: 0
+      armor: 0
+      resistance: 0
+      intelligence: 0
+      speed: 0
+      luck: 0
+      critDamage: 0
+      lifeSteal: 0
+      accuracy: 0
+  asset:
+    avatar: {fileID: 0}
+    splashArt: {fileID: 0}
+    banner: {fileID: 0}
+    lobbySkeleton: {fileID: 0}
+    battleSkeleton: {fileID: 0}

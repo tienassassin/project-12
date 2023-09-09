@@ -23,10 +23,10 @@ public class ValhallaHeroCard : HeroCard
         Refresh();
     }
 
-    public void Init(Entity info)
+    public void Init(EntityData data)
     {
-        Info = info;
-        name = Info.name + " (locked)";
+        EntityData = data;
+        name = EntityData.name + " (locked)";
         IsLocked = true;
         _cardSelected = null;
         Refresh();
@@ -35,9 +35,9 @@ public class ValhallaHeroCard : HeroCard
     private void Refresh()
     {
         lockedMark.SetActive(IsLocked);
-        imgElement.color = ColorPalette.Instance.GetElementColor(Info.element);
+        imgElement.color = ColorPalette.Instance.GetElementColor(EntityData.info.element);
         txtLevel.text = IsLocked ? "1" : Level.ToString();
-        sldHp.value = IsLocked ? 1 : (Hp / Info.stats.health);
+        sldHp.value = IsLocked ? 1 : (Hp / EntityData.info.stats.health);
         sldEnergy.value = IsLocked ? 1 : (Energy / 100);
     }
 

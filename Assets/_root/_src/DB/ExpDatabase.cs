@@ -1,49 +1,43 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
-public class ExpDatabase : Database
+[CreateAssetMenu(fileName = "ExpDatabase", menuName = "DB/ExpDatabase")]
+public class ExpDatabase : ScriptableDatabase
 {
     public int levelMax;
 
     [TableList]
     public List<ExpData> expList = new();
 
-    protected override async void Import()
+    public override void Import()
     {
-        var data = this.FetchFromLocal(0);
+    }
 
-        int totalExp = 0;
-        int lastLevelExp = 0;
-        expList = new List<ExpData>();
-
-        var watch = new Stopwatch();
-        watch.Start();
-        await Task.Run(() =>
-        {
-            var jArray = JArray.Parse(data);
-            levelMax = jArray.Count;
-            for (int i = 0; i < levelMax; i++)
-            {
-                var jObject = (JObject)jArray[i];
-                int exp = Common.Parse<int>((string)jObject["exp"]);
-                if (i > 0) totalExp += lastLevelExp;
-                lastLevelExp = exp;
-                expList.Add(new ExpData(i + 1, exp, totalExp));
-            }
-        });
-
-        watch.Stop();
-        DataManager.Instance.NotifyDBLoaded(databaseName, (int)watch.ElapsedMilliseconds);
+    public override void Delete()
+    {
+        expList.Clear();
     }
 
     [Button]
-    protected override void DeleteAll()
+    public void AutoGen(int num)
     {
-        expList.Clear();
+        // =100+10*(A3-1)+pow(A3-1;2)+100*((INT(A3/10)))
+        int sum = 0;
+        int lastLevelExp = 0;
+        for (int i = 0; i < num; i++)
+        {
+            int exp = 100 + 10 * i + (int)Mathf.Pow(i, 2) + 100 * ((i + 1) / 10);
+            sum += lastLevelExp;
+            lastLevelExp = exp;
+            expList.Add(new ExpData
+            {
+                level = i + 1,
+                exp = exp,
+                totalExp = sum
+            });
+        }
     }
 
     public int GetLevel(int totalExp)
@@ -79,11 +73,4 @@ public struct ExpData
     public int level;
     public int exp;
     public int totalExp;
-
-    public ExpData(int level, int exp, int totalExp)
-    {
-        this.level = level;
-        this.exp = exp;
-        this.totalExp = totalExp;
-    }
 }

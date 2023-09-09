@@ -13,11 +13,10 @@ public class DataManager : Singleton<DataManager>
     private string databaseId = "18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY";
 
     [SerializeField] [FoldoutGroup("DB")] private EntityDatabase entityDB;
-    [SerializeField] [FoldoutGroup("DB")] private EquipmentDatabase eqmDB;
+    // [SerializeField] [FoldoutGroup("DB")] private EquipmentDatabase eqmDB;
     [SerializeField] [FoldoutGroup("DB")] private StatDatabase statDB;
     [SerializeField] [FoldoutGroup("DB")] private GrowthDatabase growthDB;
     [SerializeField] [FoldoutGroup("DB")] private ExpDatabase expDB;
-    [SerializeField] [FoldoutGroup("DB")] private BackstoryDatabase storyDB;
     [SerializeField] [FoldoutGroup("DB")] private AuraDatabase auraDB;
 
     private int _loadedDBCount;
@@ -52,7 +51,7 @@ public class DataManager : Singleton<DataManager>
         }
     }
 
-    #region Aura
+    #region Aura ================================================================
 
     public List<Aura> GetAuras(object obj)
     {
@@ -61,9 +60,9 @@ public class DataManager : Singleton<DataManager>
 
     #endregion
 
-    #region Characters & Equipments
+    #region Characters & Equipments ==============================================
 
-    public List<Entity> GetAllEntities()
+    public List<EntityData> GetAllEntities()
     {
         return entityDB.GetAllEntities();
     }
@@ -73,19 +72,19 @@ public class DataManager : Singleton<DataManager>
         return growthDB.GetGrowth(obj);
     }
 
-    public Entity GetEntityWithID(string id)
+    public EntityData GetEntityWithID(string id)
     {
         return entityDB.GetEntityWithID(id);
     }
 
-    public Equipment GetEquipmentWithID(string id)
-    {
-        return eqmDB.GetEquipmentWithID(id);
-    }
+    // public Equipment GetEquipmentWithID(string id)
+    // {
+    //     return eqmDB.GetEquipmentWithID(id);
+    // }
 
     #endregion
 
-    #region EXP
+    #region EXP ==================================================================
 
     [Button]
     public int GetLevel(int totalExp)
@@ -106,35 +105,11 @@ public class DataManager : Singleton<DataManager>
 
     #endregion
 
-    #region Stats
+    #region Stats ================================================================
 
-    public string GetStatDescription(string key)
+    public StatInfo GetStatInfo(string id)
     {
-        return statDB.GetStatDescription(key).description;
-    }
-
-    public string GetStatName(string key)
-    {
-        return statDB.GetStatDescription(key).name;
-    }
-
-    public float GetStatLimit(string key)
-    {
-        return statDB.GetStatDescription(key).limit;
-    }
-
-    #endregion
-
-    #region Backstory
-
-    public string GetHeroAlias(string heroId)
-    {
-        return storyDB.GetBackstory(heroId).alias;
-    }
-
-    public string GetHeroStory(string heroId)
-    {
-        return storyDB.GetBackstory(heroId).story;
+        return statDB.GetStatInfo(id);
     }
 
     #endregion
@@ -142,28 +117,23 @@ public class DataManager : Singleton<DataManager>
 
 public static partial class DataExtensions
 {
-    public static Entity GetEntity(this EntitySaveData h)
+    public static EntityData GetEntity(this EntitySaveData @this)
     {
-        return DataManager.Instance.GetEntityWithID(h.entityId);
+        return DataManager.Instance.GetEntityWithID(@this.entityId);
     }
 
-    public static Entity GetEntity(this EnemyData d)
+    public static EntityData GetEntity(this EnemyData @this)
     {
-        return DataManager.Instance.GetEntityWithID(d.entityId);
+        return DataManager.Instance.GetEntityWithID(@this.entityId);
     }
 
-    public static int GetLevel(this EntitySaveData hsd)
+    public static int GetLevel(this EntitySaveData @this)
     {
-        return DataManager.Instance.GetLevel(hsd.totalExp);
+        return DataManager.Instance.GetLevel(@this.totalExp);
     }
 
-    public static Tuple<int, int> GetExp(this EntitySaveData hsd)
+    public static Tuple<int, int> GetExp(this EntitySaveData @this)
     {
-        return DataManager.Instance.GetExp(hsd.totalExp);
-    }
-
-    public static Side GetOpposite(this Side s)
-    {
-        return s == Side.Ally ? Side.Enemy : Side.Ally;
+        return DataManager.Instance.GetExp(@this.totalExp);
     }
 }

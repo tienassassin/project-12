@@ -19,7 +19,7 @@ public class ValhallaHeroDetail : DuztineBehaviour
 
     [SerializeField] private ValhallaStatDetail[] statDetails;
 
-    private Entity _info;
+    private EntityData _entityData;
 
     private Stats _baseStats;
     private int _curExp;
@@ -35,8 +35,8 @@ public class ValhallaHeroDetail : DuztineBehaviour
 
     public void Init(EntitySaveData saveData)
     {
-        _info = saveData.GetEntity();
-        txtName.text = _info.name;
+        _entityData = saveData.GetEntity();
+        txtName.text = _entityData.name;
         _level = saveData.GetLevel();
         (_curExp, _nextExp) = saveData.GetExp();
 
@@ -51,20 +51,21 @@ public class ValhallaHeroDetail : DuztineBehaviour
 
     private void LoadStatsTab()
     {
-        _baseStats = _info.stats;
-        _nonEqmStats = _baseStats.GetStatsByLevel(_level, _info.GetEntityGrowth());
+        _baseStats = _entityData.info.stats;
+        _nonEqmStats = _baseStats.GetStatsByLevel(_level, _entityData.info.GetEntityGrowth());
         _overallStats = _nonEqmStats;
 
         foreach (var statDetail in statDetails)
         {
-            statDetail.Init(_baseStats, _nonEqmStats, _overallStats, _info.damageType);
+            statDetail.Init(_baseStats, _nonEqmStats, _overallStats, _entityData.info.damageType);
         }
     }
 
     private void LoadStoryTab()
     {
-        txtAlias.text = $"[ {_info.name} - {_info.GetEntityAlias()} ]";
-        txtStory.text = _info.GetEntityStory();
+        // todo: review later
+        txtAlias.text = "alias";
+        txtStory.text = "story";
     }
 
     public void SwitchTab(int index)
