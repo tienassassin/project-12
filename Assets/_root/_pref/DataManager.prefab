@@ -47,8 +47,8 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   apiUrl: https://opensheet.elk.sh/
   databaseId: 18y2sbmIKSfbg055IocVDvkR7oZsrPbBnE1kZcmChXIY
-  entityDB: {fileID: 0}
-  statDB: {fileID: 0}
-  growthDB: {fileID: 0}
-  expDB: {fileID: 0}
-  auraDB: {fileID: 0}
+  entityDB: {fileID: 11400000, guid: 07e347f1c2ab3f74dab047243f84252e, type: 2}
+  statDB: {fileID: 11400000, guid: f7f11b7775340a64d86b6367331ec642, type: 2}
+  growthDB: {fileID: 11400000, guid: 84c7b548930bfae4491cc0023adfd0f9, type: 2}
+  expDB: {fileID: 11400000, guid: 1df9a58341d68d84280df38a97294f83, type: 2}
+  auraDB: {fileID: 11400000, guid: 15c17f937ecaf334aa570e7a2c8611d7, type: 2}

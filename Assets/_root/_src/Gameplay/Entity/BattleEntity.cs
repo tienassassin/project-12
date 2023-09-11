@@ -36,6 +36,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     private EntityUI _entityUI;
     private EntityReferenceHolder _ref;
     private EntityConfig _config;
+    private EntityAnimator _animator;
 
 
     #region Public properties
@@ -124,6 +125,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         _entityUI = GetComponent<EntityUI>();
         _ref = GetComponent<EntityReferenceHolder>();
         _config = GetComponent<EntityConfig>();
+        _animator = GetComponent<EntityAnimator>();
     }
 
     public void Init(EntitySaveData entitySaveData)
@@ -146,6 +148,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         entityData = enemyData.GetEntity();
         level = enemyData.level;
         SetupInfo();
+
+        _animator.Flip();
 
         Hp = Stats.health;
         Energy = 0;

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -20,12 +21,18 @@ public class DataManager : Singleton<DataManager>
     [SerializeField] [FoldoutGroup("DB")] private AuraDatabase auraDB;
 
     private int _loadedDBCount;
-    private const int TOTAL_DB_COUNT = 7;
+    private const int TOTAL_DB_COUNT = 5;
 
     protected override void Awake()
     {
         base.Awake();
         Ready = false;
+    }
+
+    private async void Start()
+    {
+        await UniTask.Yield();
+        Ready = true;
     }
 
     [HorizontalGroup("ApiGithub", Width = 0.1f)] [Button("Open")]

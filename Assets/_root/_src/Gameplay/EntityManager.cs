@@ -9,8 +9,8 @@ public class EntityManager : Singleton<EntityManager>
     [SerializeField] private EntityPrefabList entityPrefList;
 
     [SerializeField] private Transform entityContainer;
-    [SerializeField] private Transform[] heroPositions;
-    [SerializeField] private Transform[] devilPositions;
+    [SerializeField] private Transform[] allyPositions;
+    [SerializeField] private Transform[] enemyPositions;
 
     // fake data
     public List<EntitySaveData> allies = new();
@@ -34,7 +34,7 @@ public class EntityManager : Singleton<EntityManager>
         for (int i = 0; i < allies.Count; i++)
         {
             var pref = entityPrefList.GetEntityPrefab(allies[i].entityId);
-            var newEntity = Instantiate(pref, heroPositions[firstIndex + i].position, Quaternion.identity,
+            var newEntity = Instantiate(pref, allyPositions[firstIndex + i].position, Quaternion.identity,
                 entityContainer);
             newEntity.Entity.Init(allies[i]);
             newEntity.name = "(A)" + newEntity.name;
@@ -52,7 +52,7 @@ public class EntityManager : Singleton<EntityManager>
         for (int i = 0; i < enemies.Count; i++)
         {
             var pref = entityPrefList.GetEntityPrefab(enemies[i].entityId);
-            var newEntity = Instantiate(pref, devilPositions[firstIndex + i].position, Quaternion.identity,
+            var newEntity = Instantiate(pref, enemyPositions[firstIndex + i].position, Quaternion.identity,
                 entityContainer);
             newEntity.Entity.Init(enemies[i]);
             newEntity.name = "(E)" + newEntity.name;

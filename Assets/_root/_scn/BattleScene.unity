@@ -470,7 +470,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 1553070380}
   - component: {fileID: 1553070381}
   m_Layer: 0
-  m_Name: EntitySpawner
+  m_Name: EntityManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,12 +684,12 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   entityPrefList: {fileID: 11400000, guid: 3e88f597925bc6a42b4d654b0d14a9a0, type: 2}
   entityContainer: {fileID: 157823553}
-  heroPositions:
+  allyPositions:
   - {fileID: 1706383538}
   - {fileID: 1353779809}
   - {fileID: 1754561429}
   - {fileID: 25903831}
-  devilPositions:
+  enemyPositions:
   - {fileID: 1442585007}
   - {fileID: 315967768}
   - {fileID: 277823277}
@@ -698,16 +698,16 @@ MonoBehaviour:
   - entityId: 00
     totalExp: 1
     currentHp: 100
-    energy: 0
+    energy: 20
   - entityId: 01
     totalExp: 1
     currentHp: 100
     energy: 0
   enemies:
-  - entityId: 02
+  - entityId: 00
     isBoss: 0
     level: 1
-  - entityId: 03
+  - entityId: 01
     isBoss: 0
     level: 1
 --- !u!1 &1706383537

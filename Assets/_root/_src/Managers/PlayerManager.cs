@@ -144,9 +144,11 @@ public class EntitySaveData
     public int totalExp;
 
     [VerticalGroup("Information")]
+    [ProgressBar(0, 100)]
     public float currentHp;
 
     [VerticalGroup("Information")]
+    [ProgressBar(0, 100)]
     public float energy;
 
     // todo: review later

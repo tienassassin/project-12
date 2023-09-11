@@ -12,29 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32948669ccb77ed46ae784dd9140c2fc, type: 3}
   m_Name: EntityData_00
   m_EditorClassIdentifier: 
+  canUnlock: 1
   info:
-    id: 
-    name: 
+    id: 00
+    name: Arslan
+    alias: Quyen vuong
+    story: 
     tier: 0
     element: 0
     race: 0
     damageType: 0
-    attackRange: 0
+    attackRange: 1
     stats:
-      minimized: 0
-      health: 0
-      damage: 0
-      armor: 0
-      resistance: 0
-      intelligence: 0
-      speed: 0
-      luck: 0
-      critDamage: 0
+      health: 100
+      damage: 15
+      armor: 7
+      resistance: 8
+      intelligence: 15
+      speed: 20
+      luck: 5
+      critDamage: 130
       lifeSteal: 0
       accuracy: 0
   asset:
-    avatar: {fileID: 0}
-    splashArt: {fileID: 0}
-    banner: {fileID: 0}
-    lobbySkeleton: {fileID: 0}
-    battleSkeleton: {fileID: 0}
+    avatar: {fileID: 21300000, guid: 81b3f0b29cc904647837905736d875f0, type: 3}
+    splashArt: {fileID: 21300000, guid: 42eef952f2f739f4f93c9be7eb6c1ebd, type: 3}
+    banner: {fileID: 21300000, guid: aafccb907562e7a4f87f1e3f4e7a533c, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 4398eebb17795b046ab3feb6949e3983, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 1e457c40ad4d4e8409199673d6e30ec5, type: 2}
