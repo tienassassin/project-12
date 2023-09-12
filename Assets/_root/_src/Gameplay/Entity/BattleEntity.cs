@@ -181,9 +181,14 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         UpdateEnergy();
     }
 
+    public Vector3 GetRootPosition()
+    {
+        return _ref.rootPos.position + new Vector3(Side == Side.Ally ? 4 : -4, 0, 0);
+    }
+
     public Vector3 GetHitPosition()
     {
-        return (Side == Side.Ally ? _ref.rightHitPos : _ref.leftHitPos).position;
+        return _ref.hitPos.position;
     }
 
     #region UI
@@ -273,7 +278,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
         if (entityData.info.attackRange == AttackRange.Melee)
         {
-            PlayMeleeAnimation(target.GetHitPosition(), Hit, Regen, Finish);
+            PlayMeleeAnimation(target.GetRootPosition(), Hit, Regen, Finish);
         }
         else
         {
@@ -302,6 +307,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         var origin = transform.position;
         var seq = DOTween.Sequence();
         seq.Append(transform.DOMove(hitPos, _config.meleeMoveTime))
+            .AppendCallback(() => _animator.PlayAnimation(AnimationState.Attack))
             .AppendInterval(_config.meleeHitTime)
             .AppendCallback(() => { hitPhase?.Invoke(); })
             .Append(transform.DOMove(origin, _config.meleeReturnTime))
@@ -313,9 +319,10 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     protected virtual void PlayRangedAnimation(Vector3 hitPos, Action hitPhase, Action regenPhase, Action finishPhase)
     {
         var seq = DOTween.Sequence();
-        seq.AppendCallback(() =>
+        seq.AppendCallback(() => _animator.PlayAnimation(AnimationState.Attack))
+            .AppendCallback(() =>
             {
-                var o = ObjectPool.Instance.SpawnObject<Projectile>(_ref.projectile, transform.position);
+                var o = ObjectPool.Instance.SpawnObject<Projectile>(_ref.projectile, GetHitPosition());
                 o.Move(hitPos, _config.rangedMoveTime, () =>
                 {
                     hitPhase?.Invoke();
@@ -375,6 +382,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             SpawnHpText(HealthImpactType.None, 0, 1, 0);
             return 0;
         }
+
+        _animator.PlayAnimation(AnimationState.Hit);
 
         float dmgReduction = 0;
         switch (dmg.Type)
@@ -440,7 +449,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     public virtual void Die()
     {
         EditorLog.Message($"<color=red>{name} dead</color>");
-        gameObject.SetActive(false);
+        _animator.PlayAnimation(AnimationState.Die);
+        // gameObject.SetActive(false);
         ActionQueue.Instance.RemoveEntity(UniqueID);
         EntityManager.Instance.OnEntityDead(Side);
     }

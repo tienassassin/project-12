@@ -7,6 +7,7 @@ public interface IDamageDealer
 
 public interface IDamageTaker
 {
+    Vector3 GetRootPosition();
     Vector3 GetHitPosition();
     float TakeDamage(IDamageDealer origin, Damage dmg);
     float TakeFatalDamage(IDamageDealer origin);

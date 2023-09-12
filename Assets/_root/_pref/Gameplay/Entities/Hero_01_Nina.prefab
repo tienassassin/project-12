@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 2398114111423282179, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
       propertyPath: skeletonDataAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 0d38a06f53361b94f803260a5c6b5668, type: 2}
+      objectReference: {fileID: 11400000, guid: b702904831d773844bd37c18af184e6d, type: 2}
     - target: {fileID: 3455258629439748537, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
       propertyPath: targetSelectRates.Array.data[0].rate
       value: 90
@@ -177,12 +177,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4514951682626881079, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 11
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4514951682626881079, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8a1c56f2e9e148c4fa598b7e9f7de171, type: 2}
+      objectReference: {fileID: 2100000, guid: df0c621efecef2441aeb5203a5059fbe, type: 2}
     - target: {fileID: 4514951682626881079, guid: aa802ba7523c6a846a5cdce71c2603d3, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 

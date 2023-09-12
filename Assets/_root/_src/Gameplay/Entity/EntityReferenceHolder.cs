@@ -8,8 +8,8 @@ public class EntityReferenceHolder : DuztineBehaviour
     public HpText hpTextPrefab;
 
     [TitleGroup("Hit positions:")]
-    public Transform leftHitPos;
-    public Transform rightHitPos;
+    public Transform hitPos;
+    public Transform rootPos;
 
     [TitleGroup("Basic attack vfx:")]
     public Projectile projectile;

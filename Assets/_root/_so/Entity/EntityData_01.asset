@@ -12,31 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32948669ccb77ed46ae784dd9140c2fc, type: 3}
   m_Name: EntityData_01
   m_EditorClassIdentifier: 
-  canUnlock: 0
+  canUnlock: 1
   info:
     id: 01
     name: Nina
-    alias: 
+    alias: Thien than tinh ai
     story: 
-    tier: 0
-    element: 0
+    tier: 2
+    element: 2
     race: 0
     damageType: 1
     attackRange: 0
     stats:
       health: 80
-      damage: 18
-      armor: 5
-      resistance: 7
-      intelligence: 20
+      damage: 16
+      armor: 6
+      resistance: 6
+      intelligence: 22
       speed: 18
       luck: 5
       critDamage: 125
       lifeSteal: 0
       accuracy: 0
   asset:
-    avatar: {fileID: 21300000, guid: 16464290c1a94f74cb0ecb3cf2da6228, type: 3}
-    splashArt: {fileID: 21300000, guid: 30181803ebdf40d4a855de5c43c1e297, type: 3}
-    banner: {fileID: 21300000, guid: dede9a3702b851f4d8207407a7f34604, type: 3}
-    lobbySkeleton: {fileID: 11400000, guid: a75be7b08c2213c4abb241333fc26be8, type: 2}
-    battleSkeleton: {fileID: 11400000, guid: 0d38a06f53361b94f803260a5c6b5668, type: 2}
+    avatar: {fileID: 21300000, guid: 4cf08b303806a86489d1df5976d0bf05, type: 3}
+    splashArt: {fileID: 21300000, guid: 8e3c9c0d8004d6e4daf0cf8cbcc7892b, type: 3}
+    banner: {fileID: 21300000, guid: a3f11ca11b291a64c81fb173f1e15bea, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: b702904831d773844bd37c18af184e6d, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: daf3a6c552d34fd44808b2e4b1bd3eaa, type: 2}
