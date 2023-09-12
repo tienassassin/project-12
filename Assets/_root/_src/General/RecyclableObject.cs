@@ -1,4 +1,5 @@
 using System.Collections;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class RecyclableObject : MonoBehaviour
@@ -8,6 +9,7 @@ public class RecyclableObject : MonoBehaviour
 
     [SerializeField] private string category;
     [SerializeField] private bool isAutoRecycle;
+    [ShowIf("isAutoRecycle")]
     [SerializeField] private float lifeTime;
     private bool _isAvailable;
 

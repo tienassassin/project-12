@@ -9,6 +9,8 @@ using Random = UnityEngine.Random;
 public class HpText : RecyclableObject
 {
     [SerializeField] private TMP_Text txtAmount;
+    [SerializeField] private int fontSize0;
+    [SerializeField] private int fontSize1;
     [SerializeField] [TableList] private List<HealthImpactColor> colors;
 
     public void Init(HealthImpactType type, string content)
@@ -16,7 +18,7 @@ public class HpText : RecyclableObject
         txtAmount.text = content;
         txtAmount.color = colors.Find(x => x.type == type).color;
         txtAmount.fontStyle = type.IsCriticalHit() ? FontStyles.Bold : FontStyles.Normal;
-        txtAmount.fontSize = type.IsCriticalHit() ? 7 : 5;
+        txtAmount.fontSize = type.IsCriticalHit() ? fontSize1 : fontSize0;
         PlayAnimation();
     }
 

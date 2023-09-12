@@ -33,10 +33,10 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     [SerializeField] private SkillTargetType skillTargetType;
     [SerializeField] private SkillTargetType ultimateTargetType;
 
-    private EntityUI _entityUI;
-    private EntityReferenceHolder _ref;
-    private EntityConfig _config;
-    private EntityAnimator _animator;
+    protected EntityUI EntityUI;
+    protected EntityReferenceHolder Ref;
+    protected EntityConfig Config;
+    protected EntityAnimator Animator;
 
 
     #region Public properties
@@ -61,7 +61,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     public DamageType DamageType => entityData.info.damageType;
     public Element Element => entityData.info.element;
     public Race Race => entityData.info.race;
-    public bool IsAlive => hp > 0;
+    public bool IsAlive { get; protected set; }
     public float HpPercentage => hp / Stats.health;
     public float Hp
     {
@@ -122,10 +122,10 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     private void Awake()
     {
-        _entityUI = GetComponent<EntityUI>();
-        _ref = GetComponent<EntityReferenceHolder>();
-        _config = GetComponent<EntityConfig>();
-        _animator = GetComponent<EntityAnimator>();
+        EntityUI = GetComponent<EntityUI>();
+        Ref = GetComponent<EntityReferenceHolder>();
+        Config = GetComponent<EntityConfig>();
+        Animator = GetComponent<EntityAnimator>();
     }
 
     public void Init(EntitySaveData entitySaveData)
@@ -149,7 +149,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         level = enemyData.level;
         SetupInfo();
 
-        _animator.Flip();
+        Animator.Flip();
 
         Hp = Stats.health;
         Energy = 0;
@@ -168,6 +168,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     private void SetupStats()
     {
+        IsAlive = true;
+
         VirtualHp = 0;
         Agility = 0;
         Rage = 0;
@@ -183,24 +185,24 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public Vector3 GetRootPosition()
     {
-        return _ref.rootPos.position + new Vector3(Side == Side.Ally ? 4 : -4, 0, 0);
+        return Ref.rootPos.position + new Vector3(Side == Side.Ally ? 4 : -4, 0, 0);
     }
 
     public Vector3 GetHitPosition()
     {
-        return _ref.hitPos.position;
+        return Ref.hitPos.position;
     }
 
     #region UI
 
     protected virtual void SetupHpSegment()
     {
-        _entityUI.SetupHpSegment(stats.health);
+        EntityUI.SetupHpSegment(stats.health);
     }
 
     protected virtual void UpdateHp(float duration = 1f)
     {
-        _entityUI.UpdateHp(Hp, VirtualHp, Stats.health, duration);
+        EntityUI.UpdateHp(Hp, VirtualHp, Stats.health, duration);
     }
 
     protected virtual void UpdateEnergy(float duration = 1f)
@@ -208,7 +210,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         IsUltimateReady = Energy >= 100;
         this.PostEvent(EventID.ON_ENERGY_UPDATED, Tuple.Create(UniqueID, IsUltimateReady));
 
-        _entityUI.UpdateEnergy(Energy, 100, duration);
+        EntityUI.UpdateEnergy(Energy, 100, duration);
     }
 
     protected void SpawnHpText(HealthImpactType impactType, float amount, int division, float duration)
@@ -216,7 +218,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         if (amount < 1)
         {
             string dmgTxt = (impactType.IsNull() ? "immortal" : "+0");
-            var o = ObjectPool.Instance.SpawnObject<HpText>(_ref.hpTextPrefab, _ref.hpTextPos.position);
+            var o = ObjectPool.Instance.SpawnObject<HpText>(Ref.hpTextPrefab, Ref.hpTextPos.position);
             o.Init(impactType, dmgTxt);
             EditorLog.Message(name + dmgTxt);
         }
@@ -229,7 +231,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             for (int i = 0; i < division; i++)
             {
                 string dmgTxt = (impactType.IsHealing() ? "+" : "-") + amountPerHit;
-                var o = ObjectPool.Instance.SpawnObject<HpText>(_ref.hpTextPrefab, _ref.hpTextPos.position);
+                var o = ObjectPool.Instance.SpawnObject<HpText>(Ref.hpTextPrefab, Ref.hpTextPos.position);
                 o.Init(impactType, dmgTxt);
                 EditorLog.Message(name + dmgTxt);
             }
@@ -306,30 +308,30 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     {
         var origin = transform.position;
         var seq = DOTween.Sequence();
-        seq.Append(transform.DOMove(hitPos, _config.meleeMoveTime))
-            .AppendCallback(() => _animator.PlayAnimation(AnimationState.Attack))
-            .AppendInterval(_config.meleeHitTime)
+        seq.Append(transform.DOMove(hitPos, Config.meleeMoveTime))
+            .AppendCallback(() => Animator.PlayAnimation(AnimationState.Attack))
+            .AppendInterval(Config.meleeHitTime)
             .AppendCallback(() => { hitPhase?.Invoke(); })
-            .Append(transform.DOMove(origin, _config.meleeReturnTime))
+            .Append(transform.DOMove(origin, Config.meleeReturnTime))
             .AppendCallback(() => { regenPhase?.Invoke(); })
-            .AppendInterval(_config.restTime)
+            .AppendInterval(Config.restTime)
             .AppendCallback(() => { finishPhase?.Invoke(); });
     }
 
     protected virtual void PlayRangedAnimation(Vector3 hitPos, Action hitPhase, Action regenPhase, Action finishPhase)
     {
         var seq = DOTween.Sequence();
-        seq.AppendCallback(() => _animator.PlayAnimation(AnimationState.Attack))
+        seq.AppendCallback(() => Animator.PlayAnimation(AnimationState.Attack))
             .AppendCallback(() =>
             {
-                var o = ObjectPool.Instance.SpawnObject<Projectile>(_ref.projectile, GetHitPosition());
-                o.Move(hitPos, _config.rangedMoveTime, () =>
+                var o = ObjectPool.Instance.SpawnObject<Projectile>(Ref.projectile, GetHitPosition());
+                o.Move(hitPos, Config.rangedMoveTime, () =>
                 {
                     hitPhase?.Invoke();
                     regenPhase?.Invoke();
                 });
             })
-            .AppendInterval(_config.rangedMoveTime + _config.restTime)
+            .AppendInterval(Config.rangedMoveTime + Config.restTime)
             .AppendCallback(() => { finishPhase?.Invoke(); });
     }
 
@@ -383,7 +385,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             return 0;
         }
 
-        _animator.PlayAnimation(AnimationState.Hit);
+        Animator.PlayAnimation(AnimationState.Hit);
 
         float dmgReduction = 0;
         switch (dmg.Type)
@@ -449,7 +451,9 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     public virtual void Die()
     {
         EditorLog.Message($"<color=red>{name} dead</color>");
-        _animator.PlayAnimation(AnimationState.Die);
+
+        IsAlive = false;
+        Animator.PlayAnimation(AnimationState.Die);
         // gameObject.SetActive(false);
         ActionQueue.Instance.RemoveEntity(UniqueID);
         EntityManager.Instance.OnEntityDead(Side);

@@ -19,47 +19,47 @@ public class EntityAnimator : DuztineBehaviour
 
     [Button]
     private void PlayAnimation(string animName, bool loop,
-        Spine.AnimationState.TrackEntryDelegate finish = null,
-        Spine.AnimationState.TrackEntryEventDelegate @event = null)
+        Spine.AnimationState.TrackEntryEventDelegate @event = null,
+        Spine.AnimationState.TrackEntryDelegate finish = null)
     {
         var te = skeleton.AnimationState.SetAnimation(0, animName, loop);
-        te.Complete += finish;
         te.Event += @event;
+        te.Complete += finish;
     }
 
     public void PlayAnimation(AnimationState state,
-        Spine.AnimationState.TrackEntryDelegate finish = null,
-        Spine.AnimationState.TrackEntryEventDelegate @event = null)
+        Spine.AnimationState.TrackEntryEventDelegate @event = null,
+        Spine.AnimationState.TrackEntryDelegate finish = null)
     {
         switch (state)
         {
             case AnimationState.Idle:
-                PlayAnimation(animIdle, true, finish, @event);
+                PlayAnimation(animIdle, true, @event, finish);
                 break;
 
             case AnimationState.Attack:
                 finish += _ => PlayAnimation(AnimationState.Idle);
-                PlayAnimation(animAttack, false, finish, @event);
+                PlayAnimation(animAttack, false, @event, finish);
                 break;
 
             case AnimationState.Hit:
                 finish += _ => PlayAnimation(AnimationState.Idle);
-                PlayAnimation(animHit, false, finish, @event);
+                PlayAnimation(animHit, false, @event, finish);
                 break;
 
             case AnimationState.Skill:
                 finish += _ => PlayAnimation(AnimationState.Idle);
-                PlayAnimation(animSkill, false, finish, @event);
+                PlayAnimation(animSkill, false, @event, finish);
                 break;
 
             case AnimationState.Ultimate:
                 finish += _ => PlayAnimation(AnimationState.Idle);
-                PlayAnimation(animUltimate, false, finish, @event);
+                PlayAnimation(animUltimate, false, @event, finish);
                 break;
 
             case AnimationState.Die:
                 finish += _ => gameObject.SetActive(false);
-                PlayAnimation(animDie, false, finish, @event);
+                PlayAnimation(animDie, false, @event, finish);
                 break;
         }
     }
