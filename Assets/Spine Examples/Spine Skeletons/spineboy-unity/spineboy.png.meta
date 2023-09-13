@@ -101,11 +101,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -144,6 +145,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
   cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
@@ -156,6 +158,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -168,6 +171,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -180,6 +184,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -192,6 +197,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -204,6 +210,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
@@ -787,36 +794,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rear_shin: 21300046
-      rear_foot_bend1: 21300042
-      goggles: 21300022
-      rear_thigh: 21300048
-      front_shin: 21300016
-      mouth_grind: 21300028
-      front_bracer: 21300004
-      rear_foot: 21300040
-      rear_foot_bend2: 21300044
-      front_foot_bend2: 21300014
-      front_foot_bend1: 21300012
-      front_fist_closed: 21300006
       eye_indifferent: 21300000
-      muzzle: 21300034
-      front_thigh: 21300018
-      head: 21300026
-      front_upper_arm: 21300020
-      rear_bracer: 21300038
+      eye_surprised: 21300002
+      front_bracer: 21300004
+      front_fist_closed: 21300006
       front_fist_open: 21300008
       front_foot: 21300010
-      rear_upper_arm: 21300050
+      front_foot_bend1: 21300012
+      front_foot_bend2: 21300014
+      front_shin: 21300016
+      front_thigh: 21300018
+      front_upper_arm: 21300020
+      goggles: 21300022
       gun: 21300024
+      head: 21300026
+      mouth_grind: 21300028
       mouth_oooo: 21300030
       mouth_smile: 21300032
-      torso: 21300052
+      muzzle: 21300034
       neck: 21300036
-      eye_surprised: 21300002
-  spritePackingTag: 
+      rear_bracer: 21300038
+      rear_foot: 21300040
+      rear_foot_bend1: 21300042
+      rear_foot_bend2: 21300044
+      rear_shin: 21300046
+      rear_thigh: 21300048
+      rear_upper_arm: 21300050
+      torso: 21300052
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
