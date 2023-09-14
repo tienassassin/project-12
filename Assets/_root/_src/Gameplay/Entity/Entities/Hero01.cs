@@ -6,17 +6,17 @@ public class Hero01 : Human
 {
     protected override void PlayRangedAnimation(Vector3 hitPos, Action hitPhase, Action regenPhase, Action finishPhase)
     {
-        Animator.PlayAnimation(AnimationState.Attack, (t, e) =>
+        entityAnim.PlayAnimation(AnimationState.Attack, (t, e) =>
         {
             if (e.Data.Name.Equals("faqi_1"))
             {
-                var o = ObjectPool.Instance.SpawnObject<Projectile>(Ref.projectile, GetHitPosition());
-                o.Move(hitPos, Config.rangedMoveTime, () =>
+                var o = ObjectPool.Instance.SpawnObject<Projectile>(entityRef.projectile, GetHitPosition());
+                o.Move(hitPos, entityConfig.rangedMoveTime, () =>
                 {
                     hitPhase?.Invoke();
                     regenPhase?.Invoke();
                 });
             }
-        }, t => { DOVirtual.DelayedCall(Config.restTime, () => { finishPhase?.Invoke(); }); });
+        }, t => { DOVirtual.DelayedCall(entityConfig.restTime, () => { finishPhase?.Invoke(); }); });
     }
 }

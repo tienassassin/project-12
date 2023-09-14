@@ -1899,7 +1899,7 @@ MonoBehaviour:
   imgSubHp: {fileID: 9159516552950026834}
   imgMainVHp: {fileID: 1894201936026500766}
   imgSubVHp: {fileID: 7911039817608981062}
-  hpAmountPerSegment: 100
+  hpAmountPerSegment: 500
   segmentLinePref: {fileID: 5980799119366223792}
   segmentLineContainer: {fileID: 3850220297599730336}
   leftLimit: {fileID: 5321781594050891781}

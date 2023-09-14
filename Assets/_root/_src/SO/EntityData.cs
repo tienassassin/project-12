@@ -42,27 +42,27 @@ public struct EntityAsset
 [Serializable]
 public struct Stats
 {
-    public float health;
-    public float damage;
-    public float armor;
-    public float resistance;
+    public int health;
+    public int damage;
+    public int armor;
+    public int resistance;
 
-    public float intelligence;
-    public float speed;
-    public float luck;
-    public float critDamage;
+    public int intelligence;
+    public int speed;
+    public int luck;
+    public int critDamage;
 
-    public float lifeSteal;
-    public float accuracy;
+    public int lifeSteal;
+    public int accuracy;
 
     public Stats GetStatsByLevel(int level, float growth)
     {
         return new Stats
         {
-            health = health * Mathf.Pow(1 + growth, level - 1),
-            damage = damage * Mathf.Pow(1 + growth, level - 1),
-            armor = armor * Mathf.Pow(1 + growth, level - 1),
-            resistance = resistance * Mathf.Pow(1 + growth, level - 1),
+            health = (int)(health * Mathf.Pow(1 + growth, level - 1)),
+            damage = (int)(damage * Mathf.Pow(1 + growth, level - 1)),
+            armor = (int)(armor * Mathf.Pow(1 + growth, level - 1)),
+            resistance = (int)(resistance * Mathf.Pow(1 + growth, level - 1)),
 
             intelligence = intelligence,
             speed = speed,
@@ -116,22 +116,22 @@ public struct Stats
     {
         return new Stats
         {
-            health = st1.health * rate,
-            damage = st1.damage * rate,
-            armor = st1.armor * rate,
-            resistance = st1.resistance * rate,
+            health = (int)(st1.health * rate),
+            damage = (int)(st1.damage * rate),
+            armor = (int)(st1.armor * rate),
+            resistance = (int)(st1.resistance * rate),
 
-            intelligence = Clamp(st1.intelligence * rate, 100),
-            speed = Clamp(st1.speed * rate, 100),
-            luck = Clamp(st1.luck * rate, 100),
-            critDamage = st1.critDamage * rate,
+            intelligence = Clamp((int)(st1.intelligence * rate), 100),
+            speed = Clamp((int)(st1.speed * rate), 100),
+            luck = Clamp((int)(st1.luck * rate), 100),
+            critDamage = (int)(st1.critDamage * rate),
 
-            lifeSteal = st1.lifeSteal * rate,
-            accuracy = Clamp(st1.accuracy * rate, 80)
+            lifeSteal = (int)(st1.lifeSteal * rate),
+            accuracy = Clamp((int)(st1.accuracy * rate), 80)
         };
     }
 
-    private static float Clamp(float value, float limit)
+    private static int Clamp(int value, int limit)
     {
         return Mathf.Min(value, limit);
     }

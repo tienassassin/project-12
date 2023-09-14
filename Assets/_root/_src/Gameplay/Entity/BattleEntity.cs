@@ -16,27 +16,28 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     [TitleGroup("IN-GAME STATS:")]
     [SerializeField] private Stats stats;
-    [SerializeField] private float hp;
-    [SerializeField] private float virtualHp;
-    [SerializeField] private float energy;
-    [SerializeField] private float agility;
-    [SerializeField] private float rage;
 
-    [TitleGroup("STATUS:")]
-    [SerializeField] private bool isStun;
-    [SerializeField] private bool isSilent;
-    [SerializeField] private bool isBleeding;
-    [SerializeField] private bool isImmortal;
-    [SerializeField] private bool isUltimateReady;
+    [SerializeField] private int hp;
+    [SerializeField] private int virtualHp;
+    [SerializeField] private int energy;
+    [SerializeField] private int agility;
+    [SerializeField] private int rage;
+
+    [TitleGroup("STATUS:")] [SerializeField]
+    private int stun;
+
+    [SerializeField] private int silent;
+    [SerializeField] private int bleeding;
+    [SerializeField] private int immortal;
 
     [TitleGroup("OTHERS:")]
     [SerializeField] private SkillTargetType skillTargetType;
     [SerializeField] private SkillTargetType ultimateTargetType;
 
-    protected EntityUI EntityUI;
-    protected EntityReferenceHolder Ref;
-    protected EntityConfig Config;
-    protected EntityAnimator Animator;
+    protected EntityUI entityUI;
+    protected EntityReferenceHolder entityRef;
+    protected EntityConfig entityConfig;
+    protected EntityAnimator entityAnim;
 
 
     #region Public properties
@@ -61,59 +62,45 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     public DamageType DamageType => entityData.info.damageType;
     public Element Element => entityData.info.element;
     public Race Race => entityData.info.race;
-    public bool IsAlive { get; protected set; }
-    public float HpPercentage => hp / Stats.health;
-    public float Hp
+    public bool IsAlive => hp > 0;
+    public float HpPercentage => (float)hp / Stats.health;
+
+    public int Hp
     {
         get => hp;
         protected set => hp = value;
     }
-    public float VirtualHp
+
+    public int VirtualHp
     {
         get => virtualHp;
         protected set => virtualHp = value;
     }
-    public float Energy
+
+    public int Energy
     {
         get => energy;
         protected set => energy = value;
     }
-    public float Agility
+
+    public int Agility
     {
         get => agility;
         protected set => agility = value;
     }
-    public float Rage
+
+    public int Rage
     {
         get => rage;
         protected set => rage = value;
     }
-    public bool IsStun
-    {
-        get => isStun;
-        protected set => isStun = value;
-    }
-    public bool IsSilent
-    {
-        get => isSilent;
-        protected set => isSilent = value;
-    }
-    public bool IsBleeding
-    {
-        get => isBleeding;
-        protected set => isBleeding = value;
-    }
-    public bool IsImmortal
-    {
-        get => isImmortal;
-        protected set => isImmortal = value;
-    }
-    public bool IsUltimateReady
-    {
-        get => isUltimateReady;
-        protected set => isUltimateReady = value;
-    }
-    public bool CanTakeTurn => !isStun;
+
+    public bool IsStun => stun > 0;
+    public bool IsSilent => silent > 0;
+    public bool IsBleeding => bleeding > 0;
+    public bool IsImmortal => immortal > 0;
+    public bool IsUltimateReady => Energy >= 100;
+    public bool CanTakeTurn => !IsStun;
 
     public SkillTargetType SkillTargetType => skillTargetType;
     public SkillTargetType UltimateTargetType => ultimateTargetType;
@@ -122,10 +109,10 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     private void Awake()
     {
-        EntityUI = GetComponent<EntityUI>();
-        Ref = GetComponent<EntityReferenceHolder>();
-        Config = GetComponent<EntityConfig>();
-        Animator = GetComponent<EntityAnimator>();
+        entityUI = GetComponent<EntityUI>();
+        entityRef = GetComponent<EntityReferenceHolder>();
+        entityConfig = GetComponent<EntityConfig>();
+        entityAnim = GetComponent<EntityAnimator>();
     }
 
     public void Init(EntitySaveData entitySaveData)
@@ -137,7 +124,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
         this.PostEvent(EventID.ON_HEROES_SPAWNED, this);
 
-        Hp = (entitySaveData.currentHp / 100) * Stats.health;
+        Hp = (int)(entitySaveData.currentHp.Percent() * Stats.health);
         Energy = entitySaveData.energy;
         SetupStats();
     }
@@ -149,7 +136,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         level = enemyData.level;
         SetupInfo();
 
-        Animator.Flip();
+        entityAnim.Flip();
 
         Hp = Stats.health;
         Energy = 0;
@@ -168,15 +155,14 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     private void SetupStats()
     {
-        IsAlive = true;
-
         VirtualHp = 0;
         Agility = 0;
         Rage = 0;
 
-        IsStun = false;
-        IsSilent = false;
-        IsBleeding = false;
+        stun = 0;
+        silent = 0;
+        bleeding = 0;
+        immortal = 0;
 
         SetupHpSegment();
         UpdateHp();
@@ -185,40 +171,39 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public Vector3 GetRootPosition()
     {
-        return Ref.rootPos.position + new Vector3(Side == Side.Ally ? 4 : -4, 0, 0);
+        return entityRef.rootPos.position + new Vector3(Side == Side.Ally ? 4 : -4, 0, 0);
     }
 
     public Vector3 GetHitPosition()
     {
-        return Ref.hitPos.position;
+        return entityRef.hitPos.position;
     }
 
     #region UI
 
     protected virtual void SetupHpSegment()
     {
-        EntityUI.SetupHpSegment(stats.health);
+        entityUI.SetupHpSegment(stats.health);
     }
 
     protected virtual void UpdateHp(float duration = 1f)
     {
-        EntityUI.UpdateHp(Hp, VirtualHp, Stats.health, duration);
+        entityUI.UpdateHp(Hp, VirtualHp, Stats.health, duration);
     }
 
     protected virtual void UpdateEnergy(float duration = 1f)
     {
-        IsUltimateReady = Energy >= 100;
         this.PostEvent(EventID.ON_ENERGY_UPDATED, Tuple.Create(UniqueID, IsUltimateReady));
 
-        EntityUI.UpdateEnergy(Energy, 100, duration);
+        entityUI.UpdateEnergy(Energy, 100, duration);
     }
 
-    protected void SpawnHpText(HealthImpactType impactType, float amount, int division, float duration)
+    protected void SpawnHpText(HealthImpactType impactType, int amount, int division, float duration)
     {
         if (amount < 1)
         {
             string dmgTxt = (impactType.IsNull() ? "immortal" : "+0");
-            var o = ObjectPool.Instance.SpawnObject<HpText>(Ref.hpTextPrefab, Ref.hpTextPos.position);
+            var o = ObjectPool.Instance.SpawnObject<HpText>(entityRef.hpTextPrefab, entityRef.hpTextPos.position);
             o.Init(impactType, dmgTxt);
             EditorLog.Message(name + dmgTxt);
         }
@@ -231,7 +216,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             for (int i = 0; i < division; i++)
             {
                 string dmgTxt = (impactType.IsHealing() ? "+" : "-") + amountPerHit;
-                var o = ObjectPool.Instance.SpawnObject<HpText>(Ref.hpTextPrefab, Ref.hpTextPos.position);
+                var o = ObjectPool.Instance.SpawnObject<HpText>(entityRef.hpTextPrefab, entityRef.hpTextPos.position);
                 o.Init(impactType, dmgTxt);
                 EditorLog.Message(name + dmgTxt);
             }
@@ -274,9 +259,9 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         //
         // RegenHp(dmgDealt * (Stats.lifeSteal / 100));
 
-        float dmgDealt = 0;
-        float pureDmg = Stats.damage * (crit ? Stats.critDamage / 100f : 1f);
-        var dmg = new Damage(pureDmg, DamageType, Stats.accuracy / 100, crit);
+        var dmgDealt = 0;
+        var pureDmg = Stats.damage.GetValue(crit ? Stats.critDamage : 100);
+        var dmg = new Damage(pureDmg, DamageType, Stats.accuracy.Percent(), crit);
 
         if (entityData.info.attackRange == AttackRange.Melee)
         {
@@ -295,7 +280,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         void Regen()
         {
             RegenEnergy(Stats.intelligence);
-            RegenHp(dmgDealt * (Stats.lifeSteal / 100));
+            RegenHp((int)(dmgDealt * Stats.lifeSteal.Percent()));
         }
 
         void Finish()
@@ -308,30 +293,30 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     {
         var origin = transform.position;
         var seq = DOTween.Sequence();
-        seq.Append(transform.DOMove(hitPos, Config.meleeMoveTime))
-            .AppendCallback(() => Animator.PlayAnimation(AnimationState.Attack))
-            .AppendInterval(Config.meleeHitTime)
+        seq.Append(transform.DOMove(hitPos, entityConfig.meleeMoveTime))
+            .AppendCallback(() => entityAnim.PlayAnimation(AnimationState.Attack))
+            .AppendInterval(entityConfig.meleeHitTime)
             .AppendCallback(() => { hitPhase?.Invoke(); })
-            .Append(transform.DOMove(origin, Config.meleeReturnTime))
+            .Append(transform.DOMove(origin, entityConfig.meleeReturnTime))
             .AppendCallback(() => { regenPhase?.Invoke(); })
-            .AppendInterval(Config.restTime)
+            .AppendInterval(entityConfig.restTime)
             .AppendCallback(() => { finishPhase?.Invoke(); });
     }
 
     protected virtual void PlayRangedAnimation(Vector3 hitPos, Action hitPhase, Action regenPhase, Action finishPhase)
     {
         var seq = DOTween.Sequence();
-        seq.AppendCallback(() => Animator.PlayAnimation(AnimationState.Attack))
+        seq.AppendCallback(() => entityAnim.PlayAnimation(AnimationState.Attack))
             .AppendCallback(() =>
             {
-                var o = ObjectPool.Instance.SpawnObject<Projectile>(Ref.projectile, GetHitPosition());
-                o.Move(hitPos, Config.rangedMoveTime, () =>
+                var o = ObjectPool.Instance.SpawnObject<Projectile>(entityRef.projectile, GetHitPosition());
+                o.Move(hitPos, entityConfig.rangedMoveTime, () =>
                 {
                     hitPhase?.Invoke();
                     regenPhase?.Invoke();
                 });
             })
-            .AppendInterval(Config.rangedMoveTime + Config.restTime)
+            .AppendInterval(entityConfig.rangedMoveTime + entityConfig.restTime)
             .AppendCallback(() => { finishPhase?.Invoke(); });
     }
 
@@ -344,12 +329,12 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         LoseEnergy(100);
     }
 
-    public virtual void RegenHp(float hpAmount, bool allowOverflow = false)
+    public virtual void RegenHp(int hpAmount, bool allowOverflow = false)
     {
-        float expectedHp = Hp + hpAmount;
+        var expectedHp = Hp + hpAmount;
         if (expectedHp > Stats.health && allowOverflow)
         {
-            float overflowAmount = expectedHp - Stats.health;
+            var overflowAmount = expectedHp - Stats.health;
             VirtualHp += overflowAmount;
         }
 
@@ -358,7 +343,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     }
 
     [Button]
-    public virtual void RegenEnergy(float amount)
+    public virtual void RegenEnergy(int amount)
     {
         if (Energy >= 100) return;
 
@@ -366,18 +351,18 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         UpdateEnergy();
     }
 
-    public virtual void LoseEnergy(float amount)
+    public virtual void LoseEnergy(int amount)
     {
         Energy = Mathf.Max(Energy - amount, 0);
         UpdateEnergy();
     }
 
-    public virtual float DealDamage(IDamageTaker target, Damage dmg)
+    public virtual int DealDamage(IDamageTaker target, Damage dmg)
     {
         return target.TakeDamage(this, dmg);
     }
 
-    public virtual float TakeDamage(IDamageDealer origin, Damage dmg)
+    public virtual int TakeDamage(IDamageDealer origin, Damage dmg)
     {
         if (IsImmortal)
         {
@@ -385,37 +370,37 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             return 0;
         }
 
-        Animator.PlayAnimation(AnimationState.Hit);
+        entityAnim.PlayAnimation(AnimationState.Hit);
 
-        float dmgReduction = 0;
-        switch (dmg.Type)
+        var dmgReduction = 0;
+        switch (dmg.type)
         {
             case DamageType.Physical:
-                dmgReduction = Stats.armor * (1 - dmg.Penetration);
+                dmgReduction = Stats.armor.GetValue(1 - dmg.penetration);
                 break;
             case DamageType.Magical:
-                dmgReduction = Stats.resistance * (1 - dmg.Penetration);
+                dmgReduction = Stats.resistance.GetValue(1 - dmg.penetration);
                 break;
             case DamageType.Pure:
                 dmgReduction = 0;
                 break;
         }
 
-        float dmgTaken = Mathf.Max(1, dmg.Amount - dmgReduction);
+        var dmgTaken = Mathf.Max(1, dmg.amount - dmgReduction);
 
         // the displayed damage has no limit,
         // but the actual damage taken cant exceed the current hp
-        float actualDmgTaken = Mathf.Min(dmgTaken, Hp + VirtualHp);
-        float vhpAffected = Mathf.Min(actualDmgTaken, VirtualHp);
-        float hpAffected = actualDmgTaken - vhpAffected;
+        var actualDmgTaken = Mathf.Min(dmgTaken, Hp + VirtualHp);
+        var vhpAffected = Mathf.Min(actualDmgTaken, VirtualHp);
+        var hpAffected = actualDmgTaken - vhpAffected;
 
         VirtualHp -= vhpAffected;
         Hp -= hpAffected;
 
-        SpawnHpText(dmg.GetHealthImpactType(), dmgTaken, dmg.Division, dmg.Duration);
-        UpdateHp(dmg.Duration);
+        SpawnHpText(dmg.GetHealthImpactType(), dmgTaken, dmg.division, dmg.duration);
+        UpdateHp(dmg.duration);
 
-        if (Hp < 1)
+        if (!IsAlive)
         {
             Die();
         }
@@ -423,7 +408,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         return actualDmgTaken;
     }
 
-    public virtual float TakeFatalDamage(IDamageDealer origin)
+    public virtual int TakeFatalDamage(IDamageDealer origin)
     {
         if (IsImmortal)
         {
@@ -431,8 +416,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             return 0;
         }
 
-        float fatalDamage = 999;
-        float actualDmgTaken = Hp + VirtualHp;
+        var fatalDamage = 999;
+        var actualDmgTaken = Hp + VirtualHp;
         while (fatalDamage < actualDmgTaken)
         {
             fatalDamage = fatalDamage * 10 + 9;
@@ -452,9 +437,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     {
         EditorLog.Message($"<color=red>{name} dead</color>");
 
-        IsAlive = false;
-        Animator.PlayAnimation(AnimationState.Die);
-        // gameObject.SetActive(false);
+        entityAnim.PlayAnimation(AnimationState.Die);
         ActionQueue.Instance.RemoveEntity(UniqueID);
         EntityManager.Instance.OnEntityDead(Side);
     }
@@ -464,33 +447,33 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
 public struct Damage
 {
-    public float Amount;
-    public DamageType Type;
-    public float Penetration;
-    public bool IsCritical;
-    public int Division;
-    public float Duration;
+    public int amount;
+    public DamageType type;
+    public float penetration;
+    public bool isCritical;
+    public int division;
+    public float duration;
 
-    public Damage(float amount, DamageType type, float penetration,
+    public Damage(int amount, DamageType type, float penetration,
         bool isCritical = false, int division = 1, float duration = 0.5f)
     {
-        Amount = amount;
-        Type = type;
-        Penetration = penetration;
-        IsCritical = isCritical;
-        Division = division;
-        Duration = duration;
+        this.amount = amount;
+        this.type = type;
+        this.penetration = penetration;
+        this.isCritical = isCritical;
+        this.division = division;
+        this.duration = duration;
     }
 
     public HealthImpactType GetHealthImpactType()
     {
-        return Type switch
+        return type switch
         {
-            DamageType.Pure when IsCritical => HealthImpactType.CriticalPureDamage,
+            DamageType.Pure when isCritical => HealthImpactType.CriticalPureDamage,
             DamageType.Pure => HealthImpactType.PureDamage,
-            DamageType.Physical when IsCritical => HealthImpactType.CriticalPhysicalDamage,
+            DamageType.Physical when isCritical => HealthImpactType.CriticalPhysicalDamage,
             DamageType.Physical => HealthImpactType.PhysicalDamage,
-            DamageType.Magical when IsCritical => HealthImpactType.CriticalMagicalDamage,
+            DamageType.Magical when isCritical => HealthImpactType.CriticalMagicalDamage,
             DamageType.Magical => HealthImpactType.MagicalDamage,
             _ => HealthImpactType.None
         };

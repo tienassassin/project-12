@@ -24,10 +24,10 @@ MonoBehaviour:
     damageType: 1
     attackRange: 0
     stats:
-      health: 80
-      damage: 16
-      armor: 6
-      resistance: 6
+      health: 800
+      damage: 160
+      armor: 60
+      resistance: 60
       intelligence: 22
       speed: 18
       luck: 5

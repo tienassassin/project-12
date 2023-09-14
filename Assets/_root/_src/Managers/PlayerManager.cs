@@ -145,11 +145,11 @@ public class EntitySaveData
 
     [VerticalGroup("Information")]
     [ProgressBar(0, 100)]
-    public float currentHp;
+    public int currentHp;
 
     [VerticalGroup("Information")]
     [ProgressBar(0, 100)]
-    public float energy;
+    public int energy;
 
     // todo: review later
     // public List<EquipmentData> eqmList;

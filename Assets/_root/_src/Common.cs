@@ -83,6 +83,35 @@ public static class Common
     }
 }
 
+public static class CommonExtensions
+{
+    public static float Percent(this int num)
+    {
+        return num / 100f;
+    }
+
+    public static float Percent(this float num)
+    {
+        return num / 100f;
+    }
+
+    /// <param name="num">original value</param>
+    /// <param name="percentage">value 0 - 100</param>
+    /// <returns>num x percentage(%)</returns>
+    public static int GetValue(this int num, int percentage)
+    {
+        return num * percentage / 100;
+    }
+
+    /// <param name="num">original value</param>
+    /// <param name="percent">value 0 - 1</param>
+    /// <returns>num x percent</returns>
+    public static int GetValue(this int num, float percent)
+    {
+        return (int)(num * percent);
+    }
+}
+
 public static class RectTransformExtensions
 {
     public static void SetRect(this RectTransform rt, float left, float right, float top, float bottom)
