@@ -17,3 +17,7 @@ MonoBehaviour:
     entity: {fileID: 915499880567907905, guid: e459b3a0b1c8ac240b97d65e4041408e, type: 3}
   - prefabID: 01
     entity: {fileID: 7149405924280562833, guid: ec94e21edb88ce44bbe1356ca5014ec6, type: 3}
+  - prefabID: 02
+    entity: {fileID: 4229516553252084475, guid: ed8bbcd0f6c8a7845910d684bebc5af2, type: 3}
+  - prefabID: 03
+    entity: {fileID: 6203064496074629333, guid: bc9067122107715409e2e9db8d3bbb72, type: 3}

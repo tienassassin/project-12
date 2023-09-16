@@ -171,7 +171,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public Vector3 GetRootPosition()
     {
-        return entityRef.rootPos.position + new Vector3(Side == Side.Ally ? 4 : -4, 0, 0);
+        return entityRef.rootPos.position;
     }
 
     public Vector3 GetHitPosition()
@@ -252,13 +252,6 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             Rage = Mathf.Max(0, Rage - 100);
         }
 
-        // RegenEnergy(Stats.intelligence);
-        //
-        // var dmg = new Damage(Stats.damage, DamageType, Stats.accuracy / 100, crit);
-        // float dmgDealt = DealDamage(target, dmg);
-        //
-        // RegenHp(dmgDealt * (Stats.lifeSteal / 100));
-
         var dmgDealt = 0;
         var pureDmg = Stats.damage.GetValue(crit ? Stats.critDamage : 100);
         var dmg = new Damage(pureDmg, DamageType, Stats.accuracy.Percent(), crit);
@@ -289,11 +282,11 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         }
     }
 
-    protected virtual void PlayMeleeAnimation(Vector3 hitPos, Action hitPhase, Action regenPhase, Action finishPhase)
+    protected virtual void PlayMeleeAnimation(Vector3 rootPos, Action hitPhase, Action regenPhase, Action finishPhase)
     {
         var origin = transform.position;
         var seq = DOTween.Sequence();
-        seq.Append(transform.DOMove(hitPos, entityConfig.meleeMoveTime))
+        seq.Append(transform.DOMove(rootPos, entityConfig.meleeMoveTime))
             .AppendCallback(() => entityAnim.PlayAnimation(AnimationState.Attack))
             .AppendInterval(entityConfig.meleeHitTime)
             .AppendCallback(() => { hitPhase?.Invoke(); })

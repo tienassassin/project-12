@@ -727,10 +727,13 @@ MonoBehaviour:
     currentHp: 100
     energy: 0
   enemies:
-  - entityId: 00
+  - entityId: 02
     isBoss: 0
     level: 1
-  - entityId: 01
+  - entityId: 03
+    isBoss: 0
+    level: 1
+  - entityId: 02
     isBoss: 0
     level: 1
 --- !u!1 &1706383537

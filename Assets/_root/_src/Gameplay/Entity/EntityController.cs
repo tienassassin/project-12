@@ -6,7 +6,7 @@ public class EntityController : DuztineBehaviour
 
     private BattleEntity _entity;
     private EntityUI _entityUI;
-    private EntityAutomation _automation;
+    private EntityAutomation _entityAuto;
     private Collider2D _collider;
 
     private bool _isFocused;
@@ -17,7 +17,7 @@ public class EntityController : DuztineBehaviour
     {
         _entity = GetComponent<BattleEntity>();
         _entityUI = GetComponent<EntityUI>();
-        _automation = GetComponent<EntityAutomation>();
+        _entityAuto = GetComponent<EntityAutomation>();
         _collider = GetComponent<Collider2D>();
     }
 
@@ -116,7 +116,7 @@ public class EntityController : DuztineBehaviour
 
     private void AutoAction()
     {
-        var target = _automation.GetTarget();
+        var target = _entityAuto.GetTarget();
         EditorLog.Message($"{name} attacked {target.name}");
         Entity.Attack(target.Entity, AutoEndTurn);
     }

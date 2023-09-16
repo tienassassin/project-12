@@ -12,6 +12,11 @@ public class EntityAnimator : DuztineBehaviour
     [SpineAnimation] [SerializeField] private string animUltimate;
     [SpineAnimation] [SerializeField] private string animDie;
 
+    private void Start()
+    {
+        PlayAnimation(AnimationState.Idle);
+    }
+
     public void Flip()
     {
         skeleton.gameObject.transform.localScale = new Vector3(-1, 1, 1);
