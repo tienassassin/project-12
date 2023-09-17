@@ -40,3 +40,6 @@ MonoBehaviour:
     banner: {fileID: 21300000, guid: aafccb907562e7a4f87f1e3f4e7a533c, type: 3}
     lobbySkeleton: {fileID: 11400000, guid: 4398eebb17795b046ab3feb6949e3983, type: 2}
     battleSkeleton: {fileID: 11400000, guid: 1e457c40ad4d4e8409199673d6e30ec5, type: 2}
+    passiveIcon: {fileID: 21300000, guid: 83b6fd0537c2a554cb9ee6d9e826c297, type: 3}
+    skillIcon: {fileID: 21300000, guid: 38d82baf685efe14588200e1cc6ead31, type: 3}
+    ultimateIcon: {fileID: 21300000, guid: 2a47f8742251b1c43af77766a1255a59, type: 3}

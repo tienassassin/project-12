@@ -8,9 +8,15 @@ public class EntityData : ScriptableObject
 {
     [InfoBox("Some entities cannot be unlocked. (campaign enemies...)")]
     public bool canUnlock;
+    
     [InfoBox("Basic information of entity")]
+    [FoldoutGroup("Info")]
+    [HideLabel]
     public EntityInfo info;
+    
     [InfoBox("Assets of entity")]
+    [FoldoutGroup("Asset")]
+    [HideLabel]
     public EntityAsset asset;
 }
 
@@ -26,17 +32,40 @@ public struct EntityInfo
     public Race race;
     public DamageType damageType;
     public AttackRange attackRange;
+
+    [FoldoutGroup("Stats")]
+    [HideLabel]
     public Stats stats;
 }
 
 [Serializable]
 public struct EntityAsset
 {
+    [PreviewField(ObjectFieldAlignment.Left)]
     public Sprite avatar;
+
     public Sprite splashArt;
     public Sprite banner;
     public SkeletonDataAsset lobbySkeleton;
     public SkeletonDataAsset battleSkeleton;
+
+    [FoldoutGroup("Skill")]
+    [HorizontalGroup("Skill/SkillIcon")]
+    [PreviewField(ObjectFieldAlignment.Left)]
+    [LabelText("Passive:")]
+    public Sprite passiveIcon;
+
+    [FoldoutGroup("Skill")]
+    [HorizontalGroup("Skill/SkillIcon")]
+    [PreviewField(ObjectFieldAlignment.Left)]
+    [LabelText("Skill:")]
+    public Sprite skillIcon;
+
+    [FoldoutGroup("Skill")]
+    [HorizontalGroup("Skill/SkillIcon")]
+    [PreviewField(ObjectFieldAlignment.Left)]
+    [LabelText("Ultimate:")]
+    public Sprite ultimateIcon;
 }
 
 [Serializable]
