@@ -38,8 +38,8 @@ MonoBehaviour:
     avatar: {fileID: 21300000, guid: 3edf5f843f6504a4e831c69dfc7c0127, type: 3}
     splashArt: {fileID: 21300000, guid: cfd534f55b5a60c4b8549643d68315bc, type: 3}
     banner: {fileID: 21300000, guid: 44cdaf795088dee4e98284afb630660c, type: 3}
-    lobbySkeleton: {fileID: 11400000, guid: 31293ca2b0a314f4d90cd1f9eb593626, type: 2}
-    battleSkeleton: {fileID: 11400000, guid: 0d14ae19e6cd2df42a6bf34f5319b489, type: 2}
+    lobbySkeleton: {fileID: 11400000, guid: 0d14ae19e6cd2df42a6bf34f5319b489, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 31293ca2b0a314f4d90cd1f9eb593626, type: 2}
     passiveIcon: {fileID: 21300000, guid: 901c494a1e7cc0747af00a313abf97c4, type: 3}
     skillIcon: {fileID: 21300000, guid: 2f625a4bc94736e4fbf46c661157351a, type: 3}
     ultimateIcon: {fileID: 21300000, guid: 63e3e3ca4cffd9046812d416e3cb9282, type: 3}
