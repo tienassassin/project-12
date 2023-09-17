@@ -35,7 +35,7 @@ public class ValhallaHeroCard : HeroCard
     private void Refresh()
     {
         lockedMark.SetActive(IsLocked);
-        imgElement.color = ColorPalette.Instance.GetElementColor(EntityData.info.element);
+        imgElement.color = ColorPalette.Instance.GetElementColor(EntityData.info.role);
         txtLevel.text = IsLocked ? "1" : Level.ToString();
         sldHp.value = IsLocked ? 1 : (Hp / EntityData.info.stats.health);
         sldEnergy.value = IsLocked ? 1 : (Energy / 100);

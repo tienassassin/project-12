@@ -11,8 +11,8 @@ public class LineUpUI : BaseUI
     [SerializeField] private LineUpDetail detail;
 
     private int _curView;
-    private Dictionary<Element, int> _elementCountDict = new();
-    private Dictionary<Race, int> _raceCountDict = new();
+    private Dictionary<Role, int> _elementCountDict = new();
+    private Dictionary<Realm, int> _raceCountDict = new();
 
     private void OnEnable()
     {
@@ -69,7 +69,7 @@ public class LineUpUI : BaseUI
 
     private void GetRaceAura(List<EntitySaveData> heroList)
     {
-        var raceList = heroList.Where(x => x != null).Select(x => x.GetEntity().info.race).ToList();
+        var raceList = heroList.Where(x => x != null).Select(x => x.GetEntity().info.realm).ToList();
 
         _raceCountDict = raceList.GroupBy(x => x)
             .ToDictionary(x => x.Key, x => x.Count());
@@ -91,7 +91,7 @@ public class LineUpUI : BaseUI
 
     private void GetElementAura(List<EntitySaveData> heroList)
     {
-        var elementList = heroList.Where(x => x != null).Select(x => x.GetEntity().info.element).ToList();
+        var elementList = heroList.Where(x => x != null).Select(x => x.GetEntity().info.role).ToList();
 
         _elementCountDict = elementList.GroupBy(x => x)
             .ToDictionary(x => x.Key, x => x.Count());

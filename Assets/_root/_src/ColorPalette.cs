@@ -36,24 +36,24 @@ public class ColorPalette : Singleton<ColorPalette>
         string prefix = (hasPrefix ? "#" : "");
         return prefix + ColorUtility.ToHtmlStringRGBA(tierColors[(int)t]);
     }
-    
-    public Color GetElementColor(Element e)
+
+    public Color GetElementColor(Role e)
     {
         return elementColors[(int)e];
     }
-    
-    public string GetElementColorHex(Element e, bool hasPrefix = true)
+
+    public string GetElementColorHex(Role e, bool hasPrefix = true)
     {
         string prefix = (hasPrefix ? "#" : "");
         return prefix + ColorUtility.ToHtmlStringRGBA(elementColors[(int)e]);
     }
-    
-    public Color GetRaceColor(Race r)
+
+    public Color GetRaceColor(Realm r)
     {
         return raceColors[(int)r];
     }
-    
-    public string GetRaceColorHex(Race r, bool hasPrefix = true)
+
+    public string GetRaceColorHex(Realm r, bool hasPrefix = true)
     {
         string prefix = (hasPrefix ? "#" : "");
         return prefix + ColorUtility.ToHtmlStringRGBA(raceColors[(int)r]);

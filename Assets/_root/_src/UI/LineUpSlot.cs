@@ -58,11 +58,11 @@ public class LineUpSlot : DuztineBehaviour
         {
             switch (condition)
             {
-                case Race r:
-                    active = (_entityData.info.race == r);
+                case Realm r:
+                    active = _entityData.info.realm == r;
                     break;
-                case Element e:
-                    active = (_entityData.info.element == e);
+                case Role e:
+                    active = _entityData.info.role == e;
                     break;
             }
         }

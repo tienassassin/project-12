@@ -1,3 +1,3 @@
-public class Entity04 : Human
+public class Entity04 : Mortal
 {
 }

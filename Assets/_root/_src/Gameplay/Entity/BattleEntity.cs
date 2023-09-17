@@ -60,8 +60,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         protected set => stats = value;
     }
     public DamageType DamageType => entityData.info.damageType;
-    public Element Element => entityData.info.element;
-    public Race Race => entityData.info.race;
+    public Role Role => entityData.info.role;
+    public Realm Realm => entityData.info.realm;
     public bool IsAlive => hp > 0;
     public float HpPercentage => (float)hp / Stats.health;
 

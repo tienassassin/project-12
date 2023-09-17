@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class RaceFilterOption : FilterOption
 {
-    [SerializeField] private Race race;
+    [SerializeField] private Realm realm;
 
     public override void OnSelect()
     {
-        FilterApplied?.Invoke(race);
+        FilterApplied?.Invoke(realm);
     }
 }

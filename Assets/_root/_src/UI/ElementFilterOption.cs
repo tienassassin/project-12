@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class ElementFilterOption : FilterOption
 {
-    [SerializeField] private Element element;
+    [SerializeField] private Role role;
 
     public override void OnSelect()
     {
-        FilterApplied?.Invoke(element);
+        FilterApplied?.Invoke(role);
     }
 }

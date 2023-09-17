@@ -19,7 +19,7 @@ public class LineUpDetail : DuztineBehaviour
 
     [SerializeField] private FilterOption[] raceFilterOptions;
 
-    private readonly List<Race> _raceOpts = new();
+    private readonly List<Realm> _raceOpts = new();
     private EntityData _entityData;
 
     private int _curSlotId;
@@ -84,10 +84,10 @@ public class LineUpDetail : DuztineBehaviour
     {
         switch (o)
         {
-            case Race r when _raceOpts.Contains(r):
+            case Realm r when _raceOpts.Contains(r):
                 _raceOpts.Remove(r);
                 break;
-            case Race r:
+            case Realm r:
                 _raceOpts.Add(r);
                 break;
             default:
@@ -153,7 +153,7 @@ public class LineUpDetail : DuztineBehaviour
         {
             if (c.name == Constants.EMPTY_MARK) return;
 
-            bool match = (_raceOpts.Contains(c.Race) || acpAllRace);
+            var match = _raceOpts.Contains(c.Realm) || acpAllRace;
             c.gameObject.SetActive(match);
         });
     }

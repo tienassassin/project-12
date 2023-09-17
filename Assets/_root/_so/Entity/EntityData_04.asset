@@ -18,11 +18,11 @@ MonoBehaviour:
     name: Lunary
     alias: Nu than chien binh
     story: 
-    tier: 4
-    element: 0
-    race: 0
+    tier: 2
+    role: 1
+    realm: 1
     damageType: 0
-    attackRange: 0
+    attackRange: 1
     stats:
       health: 900
       damage: 170
@@ -43,3 +43,7 @@ MonoBehaviour:
     passiveIcon: {fileID: 21300000, guid: 901c494a1e7cc0747af00a313abf97c4, type: 3}
     skillIcon: {fileID: 21300000, guid: 2f625a4bc94736e4fbf46c661157351a, type: 3}
     ultimateIcon: {fileID: 21300000, guid: 63e3e3ca4cffd9046812d416e3cb9282, type: 3}
+  price:
+    gold: 0
+    diamond: 1000
+    shard: 39

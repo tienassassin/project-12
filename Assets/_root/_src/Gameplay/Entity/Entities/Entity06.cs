@@ -1,3 +1,3 @@
-﻿public class Entity06 : Human
+﻿public class Entity06 : Mortal
 {
 }

@@ -45,25 +45,25 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
     }
 
     [Button]
-    public void Init(Race race, int rank)
+    public void Init(Realm realm, int rank)
     {
-        _auraType = race;
-        txtTitle.text = $"<color={ColorPalette.Instance.GetRaceColorHex(race)}>" +
+        _auraType = realm;
+        txtTitle.text = $"<color={ColorPalette.Instance.GetRaceColorHex(realm)}>" +
                         "<ico>" +
-                        $"{race} Aura</color>";
-        var auraList = DataManager.Instance.GetAuras(race);
+                        $"{realm} Aura</color>";
+        var auraList = DataManager.Instance.GetAuras(realm);
         RefreshRank(rank);
         RefreshContent(auraList, rank);
     }
 
-    public void Init(Element element, int rank)
+    public void Init(Role role, int rank)
     {
-        _auraType = element;
-        txtTitle.text = $"<color={ColorPalette.Instance.GetElementColorHex(element)}>" +
-                        $"<size=50><sprite name=element-{element}></size> " +
-                        $"{element} Aura</color>";
-        var auraList = DataManager.Instance.GetAuras(element);
-        var colorList = new List<string> { ColorPalette.Instance.GetElementColorHex(element) };
+        _auraType = role;
+        txtTitle.text = $"<color={ColorPalette.Instance.GetElementColorHex(role)}>" +
+                        $"<size=50><sprite name=element-{role}></size> " +
+                        $"{role} Aura</color>";
+        var auraList = DataManager.Instance.GetAuras(role);
+        var colorList = new List<string> { ColorPalette.Instance.GetElementColorHex(role) };
         RefreshRank(rank);
         RefreshContent(auraList, rank, colorList);
     }

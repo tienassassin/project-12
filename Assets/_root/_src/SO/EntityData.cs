@@ -18,6 +18,11 @@ public class EntityData : ScriptableObject
     [FoldoutGroup("Asset")]
     [HideLabel]
     public EntityAsset asset;
+
+    [InfoBox("Prices of entity")]
+    [FoldoutGroup("Price")]
+    [HideLabel]
+    public EntityPrice price;
 }
 
 [Serializable]
@@ -28,8 +33,8 @@ public struct EntityInfo
     public string alias;
     public string story;
     public Tier tier;
-    public Element element;
-    public Race race;
+    public Role role;
+    public Realm realm;
     public DamageType damageType;
     public AttackRange attackRange;
 
@@ -66,6 +71,14 @@ public struct EntityAsset
     [PreviewField(ObjectFieldAlignment.Left)]
     [LabelText("Ultimate:")]
     public Sprite ultimateIcon;
+}
+
+[Serializable]
+public struct EntityPrice
+{
+    public int gold;
+    public int diamond;
+    public int shard;
 }
 
 [Serializable]
@@ -170,6 +183,6 @@ public static partial class DataExtensions
 {
     public static float GetEntityGrowth(this EntityInfo @this)
     {
-        return DataManager.Instance.GetGrowth(@this.race);
+        return DataManager.Instance.GetGrowth(@this.realm);
     }
 }

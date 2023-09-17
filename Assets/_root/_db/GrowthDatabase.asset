@@ -14,5 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   databaseName: GROWTH_DB
   sheet: Growth
-  entityGrowths: []
-  equipmentGrowths: []
+  entityGrowths:
+  - tier: 0
+    growth: 0.05
+  - tier: 1
+    growth: 0.055
+  - tier: 2
+    growth: 0.062
+  - tier: 3
+    growth: 0.071
+  equipmentGrowths:
+  - rarity: 0
+    growth: 0.2
+  - rarity: 1
+    growth: 0.4
+  - rarity: 2
+    growth: 0.6
+  - rarity: 3
+    growth: 0.99

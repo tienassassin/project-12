@@ -28,18 +28,18 @@ public class EntityDatabase : ScriptableDatabase
 
     public List<EntityData> GetEntitiesWithConditions(params object[] conditions)
     {
-        var raceOpts = new List<Race>();
-        var elementOpts = new List<Element>();
+        var raceOpts = new List<Realm>();
+        var elementOpts = new List<Role>();
         var tierOpts = new List<Tier>();
 
         foreach (var condition in conditions)
         {
             switch (condition)
             {
-                case Race race:
+                case Realm race:
                     raceOpts.Add(race);
                     break;
-                case Element element:
+                case Role element:
                     elementOpts.Add(element);
                     break;
                 case Tier tier:
@@ -50,8 +50,8 @@ public class EntityDatabase : ScriptableDatabase
 
         return entities.Where(x =>
             (
-                (raceOpts.Contains(x.info.race) || raceOpts.Count < 1) && // race filter
-                (elementOpts.Contains(x.info.element) || elementOpts.Count < 1) && // element filter
+                (raceOpts.Contains(x.info.realm) || raceOpts.Count < 1) && // race filter
+                (elementOpts.Contains(x.info.role) || elementOpts.Count < 1) && // element filter
                 (tierOpts.Contains(x.info.tier) || tierOpts.Count < 1) // tier filter
             ))
             .ToList();

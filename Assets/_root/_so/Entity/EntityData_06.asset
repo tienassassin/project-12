@@ -18,9 +18,9 @@ MonoBehaviour:
     name: Orobos
     alias: Tu than
     story: 
-    tier: 5
-    element: 0
-    race: 0
+    tier: 3
+    role: 1
+    realm: 0
     damageType: 1
     attackRange: 0
     stats:
@@ -43,3 +43,7 @@ MonoBehaviour:
     passiveIcon: {fileID: 21300000, guid: 80295073561f64540861ea494d7034f2, type: 3}
     skillIcon: {fileID: 21300000, guid: 5b09a5a236079ec4d8f97f21a305a8a2, type: 3}
     ultimateIcon: {fileID: 21300000, guid: 7fbf4ee3f135f40479c455bed4062d9f, type: 3}
+  price:
+    gold: 0
+    diamond: 0
+    shard: 99

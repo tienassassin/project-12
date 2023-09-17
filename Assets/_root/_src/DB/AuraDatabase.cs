@@ -23,8 +23,8 @@ public class AuraDatabase : ScriptableDatabase
     {
         return obj switch
         {
-            Race r => raceAuras.Find(x => x.race == r).auras,
-            Element e => elementAuras.Find(x => x.element == e).auras,
+            Realm r => raceAuras.Find(x => x.realm == r).auras,
+            Role e => elementAuras.Find(x => x.role == e).auras,
             _ => null
         };
     }
@@ -33,14 +33,14 @@ public class AuraDatabase : ScriptableDatabase
 [Serializable]
 public struct RaceAura
 {
-    [HideLabel] public Race race;
+    [HideLabel] public Realm realm;
     public List<Aura> auras;
 }
 
 [Serializable]
 public struct ElementAura
 {
-    [HideLabel] public Element element;
+    [HideLabel] public Role role;
     public List<Aura> auras;
 }
 

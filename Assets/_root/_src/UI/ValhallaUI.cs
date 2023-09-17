@@ -18,8 +18,8 @@ public class ValhallaUI : BaseUI
     private List<ValhallaHeroCard> _activeCards = new();
     private ValhallaHeroCard _selectedCard;
 
-    private List<Element> _elementOpts = new();
-    private List<Race> _raceOpts = new();
+    private List<Role> _elementOpts = new();
+    private List<Realm> _raceOpts = new();
     private List<Tier> _tierOpts = new();
 
     private SortType _lvSort;
@@ -141,8 +141,8 @@ public class ValhallaUI : BaseUI
             if (c.name == Constants.EMPTY_MARK) return;
 
             bool match = (_tierOpts.Contains(c.Tier) || acpAllTier)
-                         && (_elementOpts.Contains(c.Element) || acpAllElement)
-                         && (_raceOpts.Contains(c.Race) || acpAllRace);
+                         && (_elementOpts.Contains(c.Role) || acpAllElement)
+                         && (_raceOpts.Contains(c.Realm) || acpAllRace);
 
             c.gameObject.SetActive(match);
 
@@ -216,16 +216,16 @@ public class ValhallaUI : BaseUI
             case Tier t:
                 _tierOpts.Add(t);
                 break;
-            case Element e when _elementOpts.Contains(e):
+            case Role e when _elementOpts.Contains(e):
                 _elementOpts.Remove(e);
                 break;
-            case Element e:
+            case Role e:
                 _elementOpts.Add(e);
                 break;
-            case Race r when _raceOpts.Contains(r):
+            case Realm r when _raceOpts.Contains(r):
                 _raceOpts.Remove(r);
                 break;
-            case Race r:
+            case Realm r:
                 _raceOpts.Add(r);
                 break;
             default:

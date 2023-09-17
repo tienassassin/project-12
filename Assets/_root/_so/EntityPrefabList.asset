@@ -21,3 +21,9 @@ MonoBehaviour:
     entity: {fileID: 4229516553252084475, guid: ed8bbcd0f6c8a7845910d684bebc5af2, type: 3}
   - prefabID: 03
     entity: {fileID: 6203064496074629333, guid: bc9067122107715409e2e9db8d3bbb72, type: 3}
+  - prefabID: 04
+    entity: {fileID: 3483950406865130977, guid: 73a3472824b09fa4990e23eab5b9d41c, type: 3}
+  - prefabID: 05
+    entity: {fileID: 4103049396414951495, guid: ae2686bf2f084f34697e1d8474645edf, type: 3}
+  - prefabID: 06
+    entity: {fileID: 7414433972753347756, guid: c68ad57c53664c144bd558faeaab58a4, type: 3}

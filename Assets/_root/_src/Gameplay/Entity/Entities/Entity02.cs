@@ -2,7 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 
-public class Entity02 : Beast
+public class Entity02 : Divine
 {
     protected override void PlayMeleeAnimation(Vector3 rootPos, Action hitPhase, Action regenPhase, Action finishPhase)
     {

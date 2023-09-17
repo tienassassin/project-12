@@ -18,9 +18,9 @@ MonoBehaviour:
     name: Nina
     alias: Thien than tinh ai
     story: 
-    tier: 2
-    element: 2
-    race: 0
+    tier: 1
+    role: 2
+    realm: 1
     damageType: 1
     attackRange: 0
     stats:

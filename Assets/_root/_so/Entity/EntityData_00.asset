@@ -19,8 +19,8 @@ MonoBehaviour:
     alias: Quyen vuong
     story: 
     tier: 1
-    element: 0
-    race: 0
+    role: 1
+    realm: 2
     damageType: 0
     attackRange: 1
     stats:

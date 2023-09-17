@@ -1,26 +1,25 @@
-public enum Element
+public enum Role
 {
-    Fire,
-    Ice,
-    Wind,
-    Thunder
+    Tank,
+    Slayer,
+    Support
 }
 
-public enum Race
+public enum Realm
 {
-    Human,
-    Beast,
-    Mecha
+    Chaos,
+    Divine,
+    Mortal,
+    Infernal
 }
 
 public enum Tier
 {
-    D,
     C,
     B,
     A,
     S,
-    X
+    // X
 }
 
 public enum DamageType
@@ -42,8 +41,8 @@ public enum Rarity
     Rare,
     Epic,
     Legendary,
-    Mythic,
-    Relic
+    // Mythic,
+    // Relic
 }
 
 public enum Slot
