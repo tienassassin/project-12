@@ -24,10 +24,10 @@ public class BattleUI : BaseUI
     [SerializeField] private BattleHeroUltimate[] imgUltimateList;
 
     private List<BattleTurn> _turns;
-    private float _turnOffset0 = -75;
+    private float _turnOffset0 = -70;
     private float _turnOffset1 = -60;
-    private float _curTurnScale = 1;
-    private float _normalTurnScale = 0.8f;
+    private float _curTurnScale = 2f;
+    private float _normalTurnScale = 1.7f;
     private Color _colorSkillAvailable = Color.white;
     private Color _colorSkillUnavailable = new(1, 1, 1, 0.2f);
 

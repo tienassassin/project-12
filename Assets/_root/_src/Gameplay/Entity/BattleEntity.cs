@@ -42,6 +42,8 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     #region Public properties
 
+    public EntityInfo Info => entityData.info;
+    public EntityAsset Asset => entityData.asset;
     /// <summary>
     ///     This ID is <b>UNIQUE</b>.
     ///     Used to distinguish entities in the same battle from each other.

@@ -1,13 +1,20 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleExtraTurn : DuztineBehaviour
 {
-    [SerializeField] private TMP_Text txtName;
+    [SerializeField] private Image imgBackground;
+    [SerializeField] private Image imgBanner;
+    [SerializeField] private Sprite sprAlly;
+    [SerializeField] private Sprite sprEnemy;
+    [SerializeField] private Color colorAlly;
+    [SerializeField] private Color colorEnemy;
 
-    public void Init(string entityName)
+    public void Init(TurnInfo turnInfo)
     {
-        txtName.text = entityName;
-        name = entityName;
+        name = turnInfo.name;
+        imgBackground.sprite = (turnInfo.side == Side.Ally ? sprAlly : sprEnemy);
+        imgBackground.color = (turnInfo.side == Side.Ally ? colorAlly : colorEnemy);
+        imgBanner.sprite = turnInfo.img;
     }
 }

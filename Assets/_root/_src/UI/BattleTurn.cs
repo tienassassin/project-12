@@ -1,12 +1,17 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleTurn : DuztineBehaviour
 {
-    [SerializeField] private TMP_Text txtName;
     [SerializeField] private BattleExtraTurn turnPref;
     [SerializeField] private Transform turnContainer;
+    [SerializeField] private Image imgBackground;
+    [SerializeField] private Image imgBanner;
+    [SerializeField] private Sprite sprAlly;
+    [SerializeField] private Sprite sprEnemy;
+    [SerializeField] private Color colorAlly;
+    [SerializeField] private Color colorEnemy;
 
     private List<BattleExtraTurn> _turns;
 
@@ -24,9 +29,11 @@ public class BattleTurn : DuztineBehaviour
     public void Init(Turn data)
     {
         var turnInfo = data.info;
-        txtName.text = turnInfo.name;
         name = turnInfo.name;
-
+        imgBackground.sprite = (turnInfo.side == Side.Ally ? sprAlly : sprEnemy);
+        imgBackground.color = (turnInfo.side == Side.Ally ? colorAlly : colorEnemy);
+        imgBanner.sprite = turnInfo.img;
+        
         var extraTurns = data.extraTurns;
         while (turnContainer.childCount < extraTurns.Count)
         {
@@ -45,7 +52,7 @@ public class BattleTurn : DuztineBehaviour
             }
 
             turn.gameObject.SetActive(true);
-            turn.Init(extraTurns[i].name);
+            turn.Init(extraTurns[i]);
         }
     }
 }

@@ -18,7 +18,10 @@ public class ActionQueue : Singleton<ActionQueue>
         entities.ForEach(x => sortedEntities.Add(x));
         sortedEntities.Sort((e1, e2) => CompareOrder(e2, e1));
 
-        sortedEntities.ForEach(x => { queue.Add(new Turn(x.Entity.UniqueID, x.name, false)); });
+        sortedEntities.ForEach(x =>
+        {
+            queue.Add(new Turn(x.Entity.UniqueID, x.name, x.Entity.Asset.banner, x.Entity.Side, false));
+        });
 
         await UniTask.WaitUntil(() => BattleManager.Instance.State == BattleState.Playing);
 
@@ -69,7 +72,7 @@ public class ActionQueue : Singleton<ActionQueue>
         for (int i = 0; i < lastTurn.extraTurns.Count; i++)
         {
             var extraTurn = lastTurn.extraTurns[i];
-            queue.Insert(i, new Turn(extraTurn.id, extraTurn.name, true));
+            queue.Insert(i, new Turn(extraTurn.id, extraTurn.name, extraTurn.img, extraTurn.side, true));
         }
 
         lastTurn.extraTurns.Clear();
@@ -86,9 +89,9 @@ public class Turn
     public bool isExtra;
     public List<TurnInfo> extraTurns;
 
-    public Turn(int id, string name, bool isExtra)
+    public Turn(int id, string name, Sprite img, Side side, bool isExtra)
     {
-        info = new TurnInfo(id, name);
+        info = new TurnInfo(id, name, img, side);
         this.isExtra = isExtra;
         extraTurns = new List<TurnInfo>();
     }
@@ -104,10 +107,14 @@ public class TurnInfo
 {
     public int id;
     public string name;
+    public Sprite img;
+    public Side side;
 
-    public TurnInfo(int id, string name)
+    public TurnInfo(int id, string name, Sprite img, Side side)
     {
         this.id = id;
         this.name = name;
+        this.img = img;
+        this.side = side;
     }
 }
