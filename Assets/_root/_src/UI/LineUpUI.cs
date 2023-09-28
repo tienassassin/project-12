@@ -51,7 +51,7 @@ public class LineUpUI : BaseUI
         EditorLog.Message(auraStatistics);
     }
 
-    private void RefreshDetailView(int slotId, EntitySaveData saveData)
+    private void RefreshDetailView(int slotId, MyEntity saveData)
     {
         detail.Init(slotId, saveData);
     }
@@ -67,7 +67,7 @@ public class LineUpUI : BaseUI
         }
     }
 
-    private void GetRaceAura(List<EntitySaveData> heroList)
+    private void GetRaceAura(List<MyEntity> heroList)
     {
         var raceList = heroList.Where(x => x != null).Select(x => x.GetEntity().info.realm).ToList();
 
@@ -89,7 +89,7 @@ public class LineUpUI : BaseUI
         }
     }
 
-    private void GetElementAura(List<EntitySaveData> heroList)
+    private void GetElementAura(List<MyEntity> heroList)
     {
         var elementList = heroList.Where(x => x != null).Select(x => x.GetEntity().info.role).ToList();
 

@@ -11,9 +11,9 @@ public class LineUpHeroCard : HeroCard
     [SerializeField] private Slider sldEnergy;
     [SerializeField] private GameObject readyMark;
 
-    private Action<EntitySaveData> _cardSelected;
+    private Action<MyEntity> _cardSelected;
 
-    public void Init(EntitySaveData data, Action<EntitySaveData> cardSelected)
+    public void Init(MyEntity data, Action<MyEntity> cardSelected)
     {
         base.Init(data);
 

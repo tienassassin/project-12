@@ -117,17 +117,17 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
         entityAnim = GetComponent<EntityAnimator>();
     }
 
-    public void Init(EntitySaveData entitySaveData)
+    public void Init(MyEntity myEntity)
     {
         side = Side.Ally;
-        entityData = entitySaveData.GetEntity();
-        level = entitySaveData.GetLevel();
+        entityData = myEntity.GetEntity();
+        level = myEntity.GetLevel();
         SetupInfo();
 
         this.PostEvent(EventID.ON_HEROES_SPAWNED, this);
 
-        Hp = (int)(entitySaveData.currentHp.Percent() * Stats.health);
-        Energy = entitySaveData.energy;
+        Hp = (int)(myEntity.currentHp.Percent() * Stats.health);
+        Energy = myEntity.energy;
         SetupStats();
     }
 

@@ -11,10 +11,10 @@ public class ValhallaHeroCard : HeroCard
     [SerializeField] private Slider sldEnergy;
     [SerializeField] private GameObject lockedMark;
 
-    private Action<EntitySaveData> _cardSelected;
+    private Action<MyEntity> _cardSelected;
     public bool IsLocked { get; private set; }
 
-    public void Init(EntitySaveData saveData, Action<EntitySaveData> cardSelected)
+    public void Init(MyEntity saveData, Action<MyEntity> cardSelected)
     {
         base.Init(saveData);
 

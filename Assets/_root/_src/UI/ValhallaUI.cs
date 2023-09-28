@@ -176,7 +176,7 @@ public class ValhallaUI : BaseUI
         }
     }
 
-    private void ShowCardDetail(EntitySaveData saveData)
+    private void ShowCardDetail(MyEntity saveData)
     {
         heroDetail.gameObject.SetActive(true);
         heroDetail.Init(saveData);

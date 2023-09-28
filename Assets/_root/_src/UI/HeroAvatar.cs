@@ -7,7 +7,7 @@ public class HeroAvatar : HeroCard
     [SerializeField] private Image imgHp;
     [SerializeField] private Image imgEnergy;
 
-    public override void Init(EntitySaveData data)
+    public override void Init(MyEntity data)
     {
         base.Init(data);
         name = (EntityData != null ? EntityData.name : Constants.EMPTY_MARK);

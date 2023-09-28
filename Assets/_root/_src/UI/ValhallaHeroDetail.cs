@@ -33,7 +33,7 @@ public class ValhallaHeroDetail : DuztineBehaviour
         SwitchTab(0);
     }
 
-    public void Init(EntitySaveData saveData)
+    public void Init(MyEntity saveData)
     {
         _entityData = saveData.GetEntity();
         txtName.text = _entityData.name;

@@ -34,7 +34,7 @@ public class LoadingManager : Singleton<LoadingManager>
     [Button]
     private void StartGame()
     {
-        LoadScene(SceneName.HOME_SCENE);
+        LoadScene(SceneName.HOME);
     }
 
     private void ResetCanvas()
@@ -84,6 +84,8 @@ public class LoadingManager : Singleton<LoadingManager>
 
 public static class SceneName
 {
-    public const string HOME_SCENE = "HomeScene";
-    public const string BATTLE_SCENE = "BattleScene";
+    public const string LOGIN = "0_Login";
+    public const string LOADING = "1_Loading";
+    public const string HOME = "2_Home";
+    public const string BATTLE = "3_Battle";
 }

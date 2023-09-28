@@ -15,9 +15,9 @@ public class LineUpSlot : DuztineBehaviour
 
     [SerializeField] private GameObject highlight;
     private EntityData _entityData;
-    private EntitySaveData _saveData;
+    private MyEntity _saveData;
 
-    private Action<int, EntitySaveData> _slotHighlighted;
+    private Action<int, MyEntity> _slotHighlighted;
 
     private void OnEnable()
     {
@@ -29,7 +29,7 @@ public class LineUpSlot : DuztineBehaviour
         this.RemoveListener(EventID.ON_AURA_HIGHLIGHTED, SwitchHighlight);
     }
 
-    public void Init(EntitySaveData data, Action<int, EntitySaveData> slotHighlighted)
+    public void Init(MyEntity data, Action<int, MyEntity> slotHighlighted)
     {
         _saveData = data;
         _entityData = _saveData?.GetEntity();

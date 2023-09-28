@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
+    public int level;
+    public int exp;
+    
     private const string HERO_DB_KEY = "HERO_DB";
     [Header("DUMMY")]
     [SerializeField] private bool isDummy;
@@ -24,17 +28,30 @@ public class PlayerManager : Singleton<PlayerManager>
         else GenerateDummyData();
     }
 
-    public List<EntitySaveData> GetAllHeroes()
+    [Button]
+    public void CheckPlayerID()
     {
-        return entityCollection.unlockedEntities;
+        PlayFabManager.Instance.Load(PlayerKey.PLAYER_ID, data =>
+        {
+            if (data.IsNullOrWhitespace())
+            {
+                // New player, init default data
+                PlayFabManager.Instance.Save(PlayerKey.PLAYER_ID, SystemInfo.deviceUniqueIdentifier);
+            }
+        });
     }
 
-    public List<EntitySaveData> GetReadyHeroes()
+    public List<MyEntity> GetAllHeroes()
     {
-        var readyHeroList = new List<EntitySaveData>();
+        return entityCollection.myEntities;
+    }
+
+    public List<MyEntity> GetReadyHeroes()
+    {
+        var readyHeroList = new List<MyEntity>();
         entityCollection.readyEntities.ForEach(x =>
         {
-            readyHeroList.Add(entityCollection.unlockedEntities.Find(y => y.entityId == x));
+            readyHeroList.Add(entityCollection.myEntities.Find(y => y.entityId == x));
         });
 
         return readyHeroList;
@@ -68,9 +85,9 @@ public class PlayerManager : Singleton<PlayerManager>
         return entityCollection.readyEntities.Contains(heroId);
     }
 
-    public bool IsHeroUnlocked(string heroId, out EntitySaveData hsd)
+    public bool IsHeroUnlocked(string heroId, out MyEntity hsd)
     {
-        hsd = entityCollection.unlockedEntities.Find(h => h.entityId == heroId);
+        hsd = entityCollection.myEntities.Find(h => h.entityId == heroId);
         return hsd != null;
     }
 
@@ -96,7 +113,7 @@ public class PlayerManager : Singleton<PlayerManager>
         {
             string id = allHeroIds[Random.Range(0, allHeroIds.Count)];
             allHeroIds.Remove(id);
-            entityCollection.unlockedEntities.Add(new EntitySaveData
+            entityCollection.myEntities.Add(new MyEntity
             {
                 entityId = id,
                 totalExp = Random.Range(1, 10000),
@@ -129,13 +146,13 @@ public class PlayerManager : Singleton<PlayerManager>
 public class EntityCollection
 {
     [TableList(ShowIndexLabels = true)]
-    public List<EntitySaveData> unlockedEntities = new();
+    public List<MyEntity> myEntities = new();
 
     public List<string> readyEntities = new();
 }
 
 [Serializable]
-public class EntitySaveData
+public class MyEntity
 {
     [VerticalGroup("Information")]
     public string entityId;

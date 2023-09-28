@@ -13,7 +13,7 @@ public class EntityManager : Singleton<EntityManager>
     [SerializeField] private Transform[] enemyPositions;
 
     // fake data
-    public List<EntitySaveData> allies = new();
+    public List<MyEntity> allies = new();
     public List<EnemyData> enemies = new();
     private List<EntityController> _entities = new();
 

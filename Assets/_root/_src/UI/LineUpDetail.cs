@@ -26,8 +26,8 @@ public class LineUpDetail : DuztineBehaviour
     private List<EquipmentCard> _equipmentCards = new();
 
     private List<LineUpHeroCard> _heroCards = new();
-    private List<EntitySaveData> _heroSaveDataList = new();
-    private EntitySaveData _saveData;
+    private List<MyEntity> _heroSaveDataList = new();
+    private MyEntity _saveData;
 
     private void Awake()
     {
@@ -52,7 +52,7 @@ public class LineUpDetail : DuztineBehaviour
         LoadHeroCards();
     }
 
-    public void Init(int slotId, EntitySaveData data)
+    public void Init(int slotId, MyEntity data)
     {
         _curSlotId = slotId;
         _saveData = data;

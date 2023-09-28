@@ -124,7 +124,7 @@ public class DataManager : Singleton<DataManager>
 
 public static partial class DataExtensions
 {
-    public static EntityData GetEntity(this EntitySaveData @this)
+    public static EntityData GetEntity(this MyEntity @this)
     {
         return DataManager.Instance.GetEntityWithID(@this.entityId);
     }
@@ -134,12 +134,12 @@ public static partial class DataExtensions
         return DataManager.Instance.GetEntityWithID(@this.entityId);
     }
 
-    public static int GetLevel(this EntitySaveData @this)
+    public static int GetLevel(this MyEntity @this)
     {
         return DataManager.Instance.GetLevel(@this.totalExp);
     }
 
-    public static Tuple<int, int> GetExp(this EntitySaveData @this)
+    public static Tuple<int, int> GetExp(this MyEntity @this)
     {
         return DataManager.Instance.GetExp(@this.totalExp);
     }
