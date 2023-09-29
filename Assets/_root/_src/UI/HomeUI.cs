@@ -11,6 +11,18 @@ public class HomeUI : BaseUI
     private float _curTime;
     private int _frameCount;
 
+    protected override void Awake()
+    {
+        base.Awake();
+
+        this.AddListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
+    }
+
+    private void OnDestroy()
+    {
+        this.RemoveListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
+    }
+
     private void Start()
     {
         RefreshHeroAvatars();
@@ -27,16 +39,6 @@ public class HomeUI : BaseUI
             _curTime -= logInterval;
             _frameCount = 0;
         }
-    }
-
-    private void OnEnable()
-    {
-        this.AddListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
-    }
-
-    private void OnDisable()
-    {
-        this.RemoveListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
     }
 
     public static void Show()

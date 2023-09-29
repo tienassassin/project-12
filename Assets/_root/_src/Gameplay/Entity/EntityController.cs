@@ -19,15 +19,12 @@ public class EntityController : DuztineBehaviour
         _entityUI = GetComponent<EntityUI>();
         _entityAuto = GetComponent<EntityAutomation>();
         _collider = GetComponent<Collider2D>();
-    }
-
-    private void OnEnable()
-    {
+        
         this.AddListener(EventID.ON_TURN_TAKEN, OnTakeTurn);
         this.AddListener(EventID.ON_TARGET_FOCUSED, OnFocused);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         this.RemoveListener(EventID.ON_TURN_TAKEN, OnTakeTurn);
         this.RemoveListener(EventID.ON_TARGET_FOCUSED, OnFocused);

@@ -12,12 +12,12 @@ public class BattleHeroUltimate : DuztineBehaviour
     private Color _colorAvailable = Color.white;
     private Color _colorUnavailable = new(1, 1, 1, 0.2f);
 
-    private void OnEnable()
+    private void Awake()
     {
         this.AddListener(EventID.ON_ENERGY_UPDATED, OnEnergyUpdated);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         this.RemoveListener(EventID.ON_ENERGY_UPDATED, OnEnergyUpdated);
     }

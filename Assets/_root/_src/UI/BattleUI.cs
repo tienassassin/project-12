@@ -54,10 +54,7 @@ public class BattleUI : BaseUI
             o.SetActive(false);
             _turns.Add(o.GetComponent<BattleTurn>());
         }
-    }
-
-    private void OnEnable()
-    {
+        
         this.AddListener(EventID.ON_ACTION_QUEUE_CHANGED, RefreshQueue);
         this.AddListener(EventID.ON_CURRENT_ENTITY_UPDATED, UpdateCurrentEntity);
         this.AddListener(EventID.ON_FIRE_SPIRIT_UPDATED, UpdateFireSpirit);
@@ -65,7 +62,7 @@ public class BattleUI : BaseUI
         this.AddListener(EventID.ON_HEROES_SPAWNED, SetupUltimateSkills);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         this.RemoveListener(EventID.ON_ACTION_QUEUE_CHANGED, RefreshQueue);
         this.RemoveListener(EventID.ON_CURRENT_ENTITY_UPDATED, UpdateCurrentEntity);

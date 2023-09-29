@@ -33,7 +33,6 @@ public class EventDispatcher : Singleton<EventDispatcher>
         _eventDict[eventID] -= listener;
         if (_eventDict[eventID] != null) return;
 
-        EditorLog.Message($"Event {eventID} will be removed because all its listeners have been removed");
         _eventDict.Remove(eventID);
     }
 
