@@ -39,21 +39,21 @@ public class UIManager : Singleton<UIManager>
         return (T)GetUI(key);
     }
 
-    public void ShowUI(string key, params object[] pars)
+    public void ShowUI(string key, params object[] args)
     {
         var ui = GetUI(key);
         if (ui)
         {
-            ui.Show(pars);
+            ui.Show(args);
         }
     }
 
-    public void HideUI(string key, params object[] pars)
+    public void HideUI(string key, params object[] args)
     {
         var ui = GetUI(key);
         if (ui)
         {
-            ui.Hide(pars);
+            ui.Hide(args);
         }
     }
 
@@ -64,5 +64,23 @@ public class UIManager : Singleton<UIManager>
             if (exceptions.Contains(itm.Key)) continue;
             itm.Value.Hide();
         }
+    }
+}
+
+public static class UIController
+{
+    public static void Open<T>(params object[] args) where T : BaseUI
+    {
+        UIManager.Instance.ShowUI(typeof(T).Name, args);
+    }
+
+    public static void Close<T>(params object[] args) where T : BaseUI
+    {
+        UIManager.Instance.HideUI(typeof(T).Name, args);
+    }
+
+    public static T Get<T>() where T : BaseUI
+    {
+        return UIManager.Instance.GetUI<T>(typeof(T).Name);
     }
 }

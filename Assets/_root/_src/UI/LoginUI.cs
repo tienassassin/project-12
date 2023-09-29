@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using Sirenix.Utilities;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -77,7 +78,7 @@ public class LoginUI : DuztineBehaviour
         }
 
         btnGo.interactable = false;
-        PlayFabManager.Instance.LoginWithCredential(inpEmails[0].text, inpPasswords[0].text, () =>
+        PlayFabManager.Instance.LoginWithCredential(inpEmails[0].text, inpPasswords[0].text, result =>
         {
             GlobalUI.Instance.ShowNotification("Login successfully.");
             btnGo.interactable = true;
@@ -85,8 +86,18 @@ public class LoginUI : DuztineBehaviour
             PlayerPrefs.SetString(PPKeys.EMAIL, remember ? inpEmails[0].text : "");
             PlayerPrefs.SetString(PPKeys.PASSWORD, remember ? inpPasswords[0].text : "");
             PlayerPrefs.SetInt(PPKeys.STAY_SIGNED_IN, remember ? 1 : 0);
-            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f);
-        }, () =>
+            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f, () =>
+            {
+                var profile = result.InfoResultPayload.PlayerProfile;
+                if (profile != null && !profile.DisplayName.IsNullOrWhitespace())
+                {
+                }
+                else
+                {
+                    UIController.Open<UsernameUI>();
+                }
+            });
+        }, error =>
         {
             GlobalUI.Instance.ShowNotification("Login failed. Please check your information.");
             btnGo.interactable = true;
@@ -108,7 +119,7 @@ public class LoginUI : DuztineBehaviour
         }
 
         btnGo.interactable = false;
-        PlayFabManager.Instance.RegisterNewCredential(inpEmails[1].text, inpPasswords[1].text, () =>
+        PlayFabManager.Instance.RegisterNewCredential(inpEmails[1].text, inpPasswords[1].text, result =>
         {
             GlobalUI.Instance.ShowNotification("Login successfully.");
             btnGo.interactable = true;
@@ -116,8 +127,8 @@ public class LoginUI : DuztineBehaviour
             PlayerPrefs.SetString(PPKeys.EMAIL, remember ? inpEmails[1].text : null);
             PlayerPrefs.SetString(PPKeys.PASSWORD, remember ? inpPasswords[1].text : null);
             PlayerPrefs.SetInt(PPKeys.STAY_SIGNED_IN, remember ? 1 : 0);
-            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f);
-        }, () =>
+            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f, () => { UIController.Open<UsernameUI>(); });
+        }, error =>
         {
             GlobalUI.Instance.ShowNotification("Login failed. Please check your information.");
             btnGo.interactable = true;
@@ -133,12 +144,12 @@ public class LoginUI : DuztineBehaviour
         }
 
         btnGo.interactable = false;
-        PlayFabManager.Instance.RecoveryCredential(inpEmails[2].text, () =>
+        PlayFabManager.Instance.RecoveryCredential(inpEmails[2].text, result =>
         {
             GlobalUI.Instance.ShowNotification("Please check your email to reset your password");
             btnGo.interactable = true;
             SwitchView(0);
-        }, () => { btnGo.interactable = true; });
+        }, error => { btnGo.interactable = true; });
     }
 
     private bool IsValidEmail()

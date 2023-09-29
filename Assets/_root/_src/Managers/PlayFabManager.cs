@@ -30,22 +30,30 @@ public class PlayFabManager : Singleton<PlayFabManager>
             });
     }
 
-    public void LoginWithCredential(string email, string password, Action success, Action fail)
+    public void LoginWithCredential(string email, string password,
+        Action<LoginResult> success = null,
+        Action<PlayFabError> fail = null)
     {
         var request = new LoginWithEmailAddressRequest
         {
             Email = email,
-            Password = password
+            Password = password,
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+            {
+                GetPlayerProfile = true
+            }
         };
 
-        PlayFabClientAPI.LoginWithEmailAddress(request, result => { success?.Invoke(); }, error =>
+        PlayFabClientAPI.LoginWithEmailAddress(request, result => { success?.Invoke(result); }, error =>
         {
             EditorLog.Message("PlayFab: Login failed, error: " + error.GenerateErrorReport());
-            fail?.Invoke();
+            fail?.Invoke(error);
         });
     }
 
-    public void RegisterNewCredential(string email, string password, Action success, Action fail)
+    public void RegisterNewCredential(string email, string password,
+        Action<RegisterPlayFabUserResult> success = null,
+        Action<PlayFabError> fail = null)
     {
         var request = new RegisterPlayFabUserRequest
         {
@@ -54,14 +62,16 @@ public class PlayFabManager : Singleton<PlayFabManager>
             RequireBothUsernameAndEmail = false
         };
 
-        PlayFabClientAPI.RegisterPlayFabUser(request, result => { success?.Invoke(); }, error =>
+        PlayFabClientAPI.RegisterPlayFabUser(request, result => { success?.Invoke(result); }, error =>
         {
             EditorLog.Message("PlayFab: Login failed, error: " + error.GenerateErrorReport());
-            fail?.Invoke();
+            fail?.Invoke(error);
         });
     }
 
-    public void RecoveryCredential(string email, Action success, Action fail)
+    public void RecoveryCredential(string email,
+        Action<SendAccountRecoveryEmailResult> success = null,
+        Action<PlayFabError> fail = null)
     {
         var request = new SendAccountRecoveryEmailRequest
         {
@@ -69,14 +79,32 @@ public class PlayFabManager : Singleton<PlayFabManager>
             TitleId = Constants.TITLE_ID
         };
 
-        PlayFabClientAPI.SendAccountRecoveryEmail(request, result => { success?.Invoke(); }, error =>
+        PlayFabClientAPI.SendAccountRecoveryEmail(request, result => { success?.Invoke(result); }, error =>
         {
             EditorLog.Message("PlayFab: Login failed, error: " + error.GenerateErrorReport());
-            fail?.Invoke();
+            fail?.Invoke(error);
         });
     }
 
-    public void Save(string key, string data)
+    public void ChangeUsername(string username,
+        Action<UpdateUserTitleDisplayNameResult> success = null,
+        Action<PlayFabError> fail = null)
+    {
+        var request = new UpdateUserTitleDisplayNameRequest
+        {
+            DisplayName = username
+        };
+
+        PlayFabClientAPI.UpdateUserTitleDisplayName(request, result => { success?.Invoke(result); }, error =>
+        {
+            EditorLog.Message("PlayFab: Update username failed, error: " + error.GenerateErrorReport());
+            fail?.Invoke(error);
+        });
+    }
+
+    public void Save(string key, string data,
+        Action<UpdateUserDataResult> success = null,
+        Action<PlayFabError> fail = null)
     {
         var request = new UpdateUserDataRequest
         {
@@ -84,12 +112,22 @@ public class PlayFabManager : Singleton<PlayFabManager>
         };
 
         PlayFabClientAPI.UpdateUserData(request,
-            result => { EditorLog.Message($"PlayFab: Save user data, key={key} data={data}"); },
-            error => { EditorLog.Error($"PlayFab: Save user data failed, key={key}, error: {error.ErrorMessage}"); });
+            result =>
+            {
+                EditorLog.Message($"PlayFab: Save user data, key={key} data={data}");
+                success?.Invoke(result);
+            },
+            error =>
+            {
+                EditorLog.Error($"PlayFab: Save user data failed, key={key}, error: {error.ErrorMessage}");
+                fail?.Invoke(error);
+            });
     }
 
     [Button]
-    public void Load(string key, Action<string> onLoaded)
+    public void Load(string key, Action<string> onLoaded,
+        Action<GetUserDataResult> success = null,
+        Action<PlayFabError> fail = null)
     {
         PlayFabClientAPI.GetUserData(new GetUserDataRequest(), result =>
         {
@@ -102,7 +140,13 @@ public class PlayFabManager : Singleton<PlayFabManager>
             {
                 EditorLog.Message($"PlayFab: Load user data, key={key} not exist");
             }
-        }, error => { EditorLog.Error($"PlayFab: Load user data failed, key={key}, error: {error.ErrorMessage}"); });
+
+            success?.Invoke(result);
+        }, error =>
+        {
+            EditorLog.Error($"PlayFab: Load user data failed, key={key}, error: {error.ErrorMessage}");
+            fail?.Invoke(error);
+        });
     }
 }
 
