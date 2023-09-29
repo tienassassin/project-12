@@ -81,8 +81,11 @@ public class LoginUI : DuztineBehaviour
         {
             GlobalUI.Instance.ShowNotification("Login successfully.");
             btnGo.interactable = true;
-            PlayerPrefs.SetString(PPKeys.EMAIL, tglRemember.isOn ? inpEmails[1].text : "");
-            PlayerPrefs.SetString(PPKeys.PASSWORD, tglRemember.isOn ? inpPasswords[1].text : "");
+            var remember = tglRemember.isOn;
+            PlayerPrefs.SetString(PPKeys.EMAIL, remember ? inpEmails[0].text : "");
+            PlayerPrefs.SetString(PPKeys.PASSWORD, remember ? inpPasswords[0].text : "");
+            PlayerPrefs.SetInt(PPKeys.STAY_SIGNED_IN, remember ? 1 : 0);
+            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f);
         }, () =>
         {
             GlobalUI.Instance.ShowNotification("Login failed. Please check your information.");
@@ -113,6 +116,7 @@ public class LoginUI : DuztineBehaviour
             PlayerPrefs.SetString(PPKeys.EMAIL, remember ? inpEmails[1].text : null);
             PlayerPrefs.SetString(PPKeys.PASSWORD, remember ? inpPasswords[1].text : null);
             PlayerPrefs.SetInt(PPKeys.STAY_SIGNED_IN, remember ? 1 : 0);
+            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f);
         }, () =>
         {
             GlobalUI.Instance.ShowNotification("Login failed. Please check your information.");

@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2899051802120807856}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.157657, y: 1.0637373, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4948353958673488117
 MonoBehaviour:
@@ -47,22 +47,4 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   chapterList:
   - chapter: 1
-    stageList:
-    - stage: 1
-      phaseList:
-      - phase: 1
-        devilList:
-        - devilId: 00
-          isBoss: 0
-          level: 1
-        - devilId: 00
-          isBoss: 0
-          level: 1
-      - phase: 2
-        devilList:
-        - devilId: 01
-          isBoss: 0
-          level: 1
-        - devilId: 01
-          isBoss: 0
-          level: 1
+    stages: []
