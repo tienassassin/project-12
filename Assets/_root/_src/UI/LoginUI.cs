@@ -32,6 +32,9 @@ public class LoginUI : DuztineBehaviour
         }
 
         tglRemember.isOn = PlayerPrefs.GetInt(PPKeys.STAY_SIGNED_IN, 1) != 0;
+
+        // auto login
+        SignIn();
     }
 
     public void SwitchView(int index)
@@ -86,7 +89,7 @@ public class LoginUI : DuztineBehaviour
             PlayerPrefs.SetString(PPKeys.EMAIL, remember ? inpEmails[0].text : "");
             PlayerPrefs.SetString(PPKeys.PASSWORD, remember ? inpPasswords[0].text : "");
             PlayerPrefs.SetInt(PPKeys.STAY_SIGNED_IN, remember ? 1 : 0);
-            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f, () =>
+            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f, PrepareData, () =>
             {
                 var profile = result.InfoResultPayload.PlayerProfile;
                 if (profile != null && !profile.DisplayName.IsNullOrWhitespace())
@@ -127,7 +130,8 @@ public class LoginUI : DuztineBehaviour
             PlayerPrefs.SetString(PPKeys.EMAIL, remember ? inpEmails[1].text : null);
             PlayerPrefs.SetString(PPKeys.PASSWORD, remember ? inpPasswords[1].text : null);
             PlayerPrefs.SetInt(PPKeys.STAY_SIGNED_IN, remember ? 1 : 0);
-            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f, () => { UIController.Open<UsernameUI>(); });
+            SceneLoader.Instance.LoadScene(SceneName.HOME, 3f, PrepareData,
+                () => { UIController.Open<UsernameUI>(); });
         }, error =>
         {
             GlobalUI.Instance.ShowNotification("Login failed. Please check your information.");
@@ -161,6 +165,12 @@ public class LoginUI : DuztineBehaviour
     private bool IsValidPassword()
     {
         return inpPasswords[_curView].text.Length >= 6;
+    }
+
+    private void PrepareData()
+    {
+        GameManager.Instance.LoadGameDataFromCloud();
+        PlayerManager.Instance.LoadPlayerDataFromCloud();
     }
 
     public void OnClickGo()

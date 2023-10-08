@@ -22,7 +22,7 @@ public class EntityManager : Singleton<EntityManager>
 
     private async void Start()
     {
-        await UniTask.WaitUntil(() => DataManager.Ready);
+        await UniTask.WaitUntil(() => GameDatabase.Ready);
         SpawnAllyTeam();
         SpawnEnemyTeam();
         ActionQueue.Instance.InitQueue(_entities);

@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
-using UnityEngine;
 
-[CreateAssetMenu(fileName = "GrowthDatabase", menuName = "DB/GrowthDatabase")]
-public class GrowthDatabase : ScriptableDatabase
+public class GrowthDatabase : DuztineBehaviour
 {
     [TableList]
     public List<EntityGrowth> entityGrowths = new();
@@ -12,14 +11,37 @@ public class GrowthDatabase : ScriptableDatabase
     [TableList]
     public List<EquipmentGrowth> equipmentGrowths = new();
 
-    public override void Import()
+    public void Init(string data)
     {
-    }
+        var jObjectData = JObject.Parse(data);
+        var jArrayEntityGrowth = (JArray)jObjectData["entity"];
+        var jArrayEqmGrowth = (JArray)jObjectData["equipment"];
 
-    public override void Delete()
-    {
-        entityGrowths.Clear();
-        equipmentGrowths.Clear();
+        if (jArrayEntityGrowth != null)
+        {
+            foreach (var jToken in jArrayEntityGrowth)
+            {
+                var jObject = (JObject)jToken;
+                entityGrowths.Add(new EntityGrowth
+                {
+                    tier = Enum.Parse<Tier>((string)jObject["tier"]),
+                    growth = Common.Parse<float>((string)jObject["growth"])
+                });
+            }
+        }
+
+        if (jArrayEqmGrowth != null)
+        {
+            foreach (var jToken in jArrayEqmGrowth)
+            {
+                var jObject = (JObject)jToken;
+                equipmentGrowths.Add(new EquipmentGrowth
+                {
+                    rarity = Enum.Parse<Rarity>((string)jObject["rarity"]),
+                    growth = Common.Parse<float>((string)jObject["growth"])
+                });
+            }
+        }
     }
 
     public float GetGrowth(object obj)

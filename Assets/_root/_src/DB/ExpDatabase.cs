@@ -1,25 +1,35 @@
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
-using UnityEngine;
 
-[CreateAssetMenu(fileName = "ExpDatabase", menuName = "DB/ExpDatabase")]
-public class ExpDatabase : ScriptableDatabase
+public class ExpDatabase : DuztineBehaviour
 {
     public int levelMax;
 
     [TableList]
     public List<ExpData> expList = new();
 
-    public override void Import()
+    public void Init(string data)
     {
+        var jArray = JArray.Parse(data);
+        var totalExp = 0;
+        foreach (var jToken in jArray)
+        {
+            var jObject = (JObject)jToken;
+            var expData = new ExpData
+            {
+                level = Common.Parse<int>((string)jObject["level"]),
+                exp = Common.Parse<int>((string)jObject["exp"]),
+                totalExp = totalExp
+            };
+
+            expList.Add(expData);
+            totalExp += expData.exp;
+        }
     }
 
-    public override void Delete()
-    {
-        expList.Clear();
-    }
-
+    /*
     [Button]
     public void AutoGen(int num)
     {
@@ -39,6 +49,7 @@ public class ExpDatabase : ScriptableDatabase
             });
         }
     }
+    */
 
     public int GetLevel(int totalExp)
     {

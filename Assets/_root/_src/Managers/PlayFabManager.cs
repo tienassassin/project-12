@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using PlayFab;
 using PlayFab.ClientModels;
 using Sirenix.OdinInspector;
@@ -76,7 +77,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
         var request = new SendAccountRecoveryEmailRequest
         {
             Email = email,
-            TitleId = Constants.TITLE_ID
+            TitleId = PlayFabKey.TITLE_ID
         };
 
         PlayFabClientAPI.SendAccountRecoveryEmail(request, result => { success?.Invoke(result); }, error =>
@@ -102,7 +103,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
         });
     }
 
-    public void Save(string key, string data,
+    public void SavePlayerData(string key, string data,
         Action<UpdateUserDataResult> success = null,
         Action<PlayFabError> fail = null)
     {
@@ -114,18 +115,18 @@ public class PlayFabManager : Singleton<PlayFabManager>
         PlayFabClientAPI.UpdateUserData(request,
             result =>
             {
-                EditorLog.Message($"PlayFab: Save user data, key={key} data={data}");
+                EditorLog.Message($"PlayFab: Save player data, key={key} data={data}");
                 success?.Invoke(result);
             },
             error =>
             {
-                EditorLog.Error($"PlayFab: Save user data failed, key={key}, error: {error.ErrorMessage}");
+                EditorLog.Error($"PlayFab: Save player data failed, key={key}, error: {error.ErrorMessage}");
                 fail?.Invoke(error);
             });
     }
 
     [Button]
-    public void Load(string key, Action<string> onLoaded,
+    public void LoadPlayerData(string key, Action<string> onLoaded,
         Action<GetUserDataResult> success = null,
         Action<PlayFabError> fail = null)
     {
@@ -133,25 +134,83 @@ public class PlayFabManager : Singleton<PlayFabManager>
         {
             if (result != null && result.Data.TryGetValue(key, out var record))
             {
-                EditorLog.Message($"PlayFab: Load user data, key={key} data={record.Value}");
+                EditorLog.Message($"PlayFab: Load player data, key={key} data={record.Value}");
                 onLoaded?.Invoke(record.Value);
             }
             else
             {
-                EditorLog.Message($"PlayFab: Load user data, key={key} not exist");
+                EditorLog.Message($"PlayFab: Load player data, key={key} not exist");
             }
 
             success?.Invoke(result);
         }, error =>
         {
-            EditorLog.Error($"PlayFab: Load user data failed, key={key}, error: {error.ErrorMessage}");
+            EditorLog.Error($"PlayFab: Load player data failed, key={key}, error: {error.ErrorMessage}");
+            fail?.Invoke(error);
+        });
+    }
+
+    public void SaveAllPlayerData(Dictionary<string, string> data,
+        Action<UpdateUserDataResult> success = null,
+        Action<PlayFabError> fail = null)
+    {
+        var request = new UpdateUserDataRequest
+        {
+            Data = data
+        };
+
+        PlayFabClientAPI.UpdateUserData(request, result =>
+        {
+            EditorLog.Message($"PlayFab: Save user data");
+            success?.Invoke(result);
+        }, error =>
+        {
+            EditorLog.Error($"PlayFab: Save player data failed, error: {error.ErrorMessage}");
+            fail?.Invoke(error);
+        });
+    }
+
+    public void LoadAllPlayerData(Action<Dictionary<string, string>> onLoaded,
+        Action<GetUserDataResult> success = null,
+        Action<PlayFabError> fail = null)
+    {
+        PlayFabClientAPI.GetUserData(new GetUserDataRequest(), result =>
+        {
+            if (result != null) onLoaded?.Invoke(result.Data.ToDictionary(pair => pair.Key, pair => pair.Value.Value));
+            success?.Invoke(result);
+        }, error =>
+        {
+            EditorLog.Error($"PlayFab: Load player data failed, error: {error.ErrorMessage}");
+            fail?.Invoke(error);
+        });
+    }
+
+    public void LoadGameData(Action<Dictionary<string, string>> onLoaded,
+        Action<GetTitleDataResult> success = null,
+        Action<PlayFabError> fail = null)
+    {
+        PlayFabClientAPI.GetTitleData(new GetTitleDataRequest(), result =>
+        {
+            if (result != null) onLoaded?.Invoke(result.Data);
+            success?.Invoke(result);
+        }, error =>
+        {
+            EditorLog.Error($"PlayFab: Load game data failed, error: {error.ErrorMessage}");
             fail?.Invoke(error);
         });
     }
 }
 
-public static class PlayerKey
+public static class PlayFabKey
 {
-    public const string PLAYER_ID = "PlayerID";
-    public const string LEVEL = "Level";
+    public const string TITLE_ID = "F8171";
+
+    public const string CURRENCY_GOLD = "GD";
+    public const string CURRENCY_DIAMOND = "DM";
+    public const string CURRENCY_ENERGY = "EN";
+
+    public const string PLAYER_DATA_LEVEL = "level";
+    public const string PLAYER_DATA_EXP = "exp";
+    public const string PLAYER_DATA_UNLOCKED_ENTITIES = "unlockedEntities";
+    public const string PLAYER_DATA_READY_ENTITIES = "readyEntities";
 }

@@ -1,31 +1,69 @@
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+using Newtonsoft.Json.Linq;
+using Sirenix.OdinInspector;
 
-[CreateAssetMenu(fileName = "EntityDatabase", menuName = "DB/EntityDatabase")]
-public class EntityDatabase : ScriptableDatabase
+public class EntityDatabase : DuztineBehaviour
 {
-    public List<EntityData> entities = new();
+    public List<EntityRecord> entities = new();
 
-    public override void Import()
+    public void Init(string data)
     {
-    }
+        var jArray = JArray.Parse(data);
+        foreach (var jToken in jArray)
+        {
+            var jObjectEntity = (JObject)jToken;
+            var entityRcd = new EntityRecord
+            {
+                id = (string)jObjectEntity["id"],
+                canUnlock = (bool)jObjectEntity["canUnlock"],
+                name = (string)jObjectEntity["name"],
+                alias = (string)jObjectEntity["alias"],
+                story = (string)jObjectEntity["story"],
+                tier = Enum.Parse<Tier>((string)jObjectEntity["tier"]),
+                role = Enum.Parse<Role>((string)jObjectEntity["role"]),
+                realm = Enum.Parse<Realm>((string)jObjectEntity["realm"]),
+                damageType = Enum.Parse<DamageType>((string)jObjectEntity["damageType"]),
+                attackRange = Enum.Parse<AttackRange>((string)jObjectEntity["attackRange"])
+            };
 
-    public override void Delete()
-    {
-        entities.Clear();
+            var jObjectStats = (JObject)jObjectEntity["stats"];
+            if (jObjectStats != null)
+            {
+                var stats = new Stats
+                {
+                    health = Common.Parse<int>((string)jObjectStats["health"]),
+                    damage = Common.Parse<int>((string)jObjectStats["damage"]),
+                    armor = Common.Parse<int>((string)jObjectStats["armor"]),
+                    resistance = Common.Parse<int>((string)jObjectStats["resistance"]),
+                    intelligence = Common.Parse<int>((string)jObjectStats["intelligence"]),
+                    speed = Common.Parse<int>((string)jObjectStats["speed"]),
+                    luck = Common.Parse<int>((string)jObjectStats["luck"]),
+                    critDamage = Common.Parse<int>((string)jObjectStats["critDamage"]),
+                    lifeSteal = Common.Parse<int>((string)jObjectStats["lifeSteal"]),
+                    accuracy = Common.Parse<int>((string)jObjectStats["accuracy"])
+                };
+
+                entityRcd.stats = stats;
+            }
+
+            entities.Add(entityRcd);
+        }
     }
 
     public List<EntityData> GetAllEntities()
     {
-        return entities.Where(x => x.canUnlock).ToList();
+        return null;
+        // return entities.Where(x => x.canUnlock).ToList();
     }
-
+    
     public EntityData GetEntityWithID(string id)
     {
-        return entities.Find(x => x.info.id.Equals(id));
+        return null;
+        // return entities.Find(x => x.info.id.Equals(id));
     }
 
+    /*
     public List<EntityData> GetEntitiesWithConditions(params object[] conditions)
     {
         var raceOpts = new List<Realm>();
@@ -56,4 +94,24 @@ public class EntityDatabase : ScriptableDatabase
             ))
             .ToList();
     }
+    */
 }
+
+[Serializable]
+public struct EntityRecord
+{
+    public string id;
+    public bool canUnlock;
+    public string name;
+    public string alias;
+    public string story;
+    public Tier tier;
+    public Role role;
+    public Realm realm;
+    public DamageType damageType;
+    public AttackRange attackRange;
+
+    [FoldoutGroup("Stats")]
+    [HideLabel]
+    public Stats stats;
+} 

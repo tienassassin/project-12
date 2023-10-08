@@ -183,6 +183,6 @@ public static partial class DataExtensions
 {
     public static float GetEntityGrowth(this EntityInfo @this)
     {
-        return DataManager.Instance.GetGrowth(@this.realm);
+        return GameDatabase.Instance.GetGrowth(@this.realm);
     }
 }

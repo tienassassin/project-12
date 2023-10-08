@@ -88,7 +88,7 @@ public class ValhallaStatDetail : DuztineBehaviour, IPointerEnterHandler, IPoint
                 diff0Value = Common.GetFloatString(diff0.intelligence, 1);
                 diff1Value = " (+" + Common.GetFloatString(diff1.intelligence, 1) + ")";
                 valueList.Add(txtStatValue.text);
-                valueList.Add(Common.GetFloatString(DataManager.Instance.GetStatInfo(key).limit, 1));
+                valueList.Add(Common.GetFloatString(GameDatabase.Instance.GetStatInfo(key).limit, 1));
                 break;
             case "speed":
                 txtStatValue.text = Common.GetFloatString(overallStats.speed, 1);
@@ -96,7 +96,7 @@ public class ValhallaStatDetail : DuztineBehaviour, IPointerEnterHandler, IPoint
                 diff0Value = Common.GetFloatString(diff0.speed, 1);
                 diff1Value = " (+" + Common.GetFloatString(diff1.speed, 1) + ")";
                 valueList.Add(txtStatValue.text);
-                valueList.Add(Common.GetFloatString(DataManager.Instance.GetStatInfo(key).limit, 1));
+                valueList.Add(Common.GetFloatString(GameDatabase.Instance.GetStatInfo(key).limit, 1));
                 break;
             case "luck":
                 txtStatValue.text = Common.GetIntString(overallStats.luck);
@@ -138,7 +138,7 @@ public class ValhallaStatDetail : DuztineBehaviour, IPointerEnterHandler, IPoint
                                   $"<color={_hexColorDiff0}>{diff0Value}</color>" +
                                   $"<color={_hexColorDiff1}>{diff1Value}</color>";
 
-        string rawDesc = DataManager.Instance.GetStatInfo(key).description;
+        var rawDesc = GameDatabase.Instance.GetStatInfo(key).description;
         for (int i = 0; i < valueList.Count; i++)
         {
             rawDesc = rawDesc.Replace($"#value{i}", $"{valueList[i]}");
@@ -150,7 +150,7 @@ public class ValhallaStatDetail : DuztineBehaviour, IPointerEnterHandler, IPoint
         }
 
         txtDescription.text = rawDesc;
-        txtTitle.text = Common.GetTitleCaseString(DataManager.Instance.GetStatInfo(key).name);
+        txtTitle.text = Common.GetTitleCaseString(GameDatabase.Instance.GetStatInfo(key).name);
     }
 
     private IEnumerator ShowDetailPanel()

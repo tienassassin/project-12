@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class DataManager : Singleton<DataManager>
+public class GameDatabase : Singleton<GameDatabase>
 {
     public static bool Ready { get; private set; }
 
@@ -126,21 +126,21 @@ public static partial class DataExtensions
 {
     public static EntityData GetEntity(this MyEntity @this)
     {
-        return DataManager.Instance.GetEntityWithID(@this.entityId);
+        return GameDatabase.Instance.GetEntityWithID(@this.entityId);
     }
 
     public static EntityData GetEntity(this EnemyData @this)
     {
-        return DataManager.Instance.GetEntityWithID(@this.entityId);
+        return GameDatabase.Instance.GetEntityWithID(@this.entityId);
     }
 
     public static int GetLevel(this MyEntity @this)
     {
-        return DataManager.Instance.GetLevel(@this.totalExp);
+        return GameDatabase.Instance.GetLevel(@this.totalExp);
     }
 
     public static Tuple<int, int> GetExp(this MyEntity @this)
     {
-        return DataManager.Instance.GetExp(@this.totalExp);
+        return GameDatabase.Instance.GetExp(@this.totalExp);
     }
 }

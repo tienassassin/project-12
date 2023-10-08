@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
-using Sirenix.Utilities;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -27,20 +26,7 @@ public class PlayerManager : Singleton<PlayerManager>
         if (!isDummy) LoadHeroDB();
         else GenerateDummyData();
     }
-
-    [Button]
-    public void CheckPlayerID()
-    {
-        PlayFabManager.Instance.Load(PlayerKey.PLAYER_ID, data =>
-        {
-            if (data.IsNullOrWhitespace())
-            {
-                // New player, init default data
-                PlayFabManager.Instance.Save(PlayerKey.PLAYER_ID, SystemInfo.deviceUniqueIdentifier);
-            }
-        });
-    }
-
+    
     public List<MyEntity> GetAllHeroes()
     {
         return entityCollection.myEntities;
@@ -106,9 +92,9 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private async void GenerateDummyData()
     {
-        await UniTask.WaitUntil(() => DataManager.Ready);
+        await UniTask.WaitUntil(() => GameDatabase.Ready);
         entityCollection = new EntityCollection();
-        var allHeroIds = DataManager.Instance.GetAllEntities().Select(x => x.info.id).ToList();
+        var allHeroIds = GameDatabase.Instance.GetAllEntities().Select(x => x.info.id).ToList();
         for (int i = 0; i < unlockedHeroNum; i++)
         {
             string id = allHeroIds[Random.Range(0, allHeroIds.Count)];
@@ -139,6 +125,37 @@ public class PlayerManager : Singleton<PlayerManager>
     public void DeleteUserDB()
     {
         PlayerPrefs.DeleteKey(HERO_DB_KEY);
+    }
+
+
+    // ==================================================================================
+
+    public void LoadPlayerDataFromCloud()
+    {
+        var defaultDataDict = new Dictionary<string, string>
+        {
+            { PlayFabKey.PLAYER_DATA_LEVEL, "1" },
+            { "just test hehe", "ok" }
+        };
+
+        PlayFabManager.Instance.LoadAllPlayerData(dict =>
+        {
+            var hasUpdated = false;
+
+            foreach (var pair in defaultDataDict)
+            {
+                if (dict.ContainsKey(pair.Key)) continue;
+                dict.Add(pair.Key, pair.Value);
+                hasUpdated = true;
+            }
+
+            if (hasUpdated) PlayFabManager.Instance.SaveAllPlayerData(dict);
+
+            foreach (var pair in dict)
+            {
+                // EditorLog.Message(pair.Key + pair.Value);
+            }
+        });
     }
 }
 

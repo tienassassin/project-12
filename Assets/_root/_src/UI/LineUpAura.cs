@@ -51,7 +51,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         txtTitle.text = $"<color={ColorPalette.Instance.GetRaceColorHex(realm)}>" +
                         "<ico>" +
                         $"{realm} Aura</color>";
-        var auraList = DataManager.Instance.GetAuras(realm);
+        var auraList = GameDatabase.Instance.GetAuras(realm);
         RefreshRank(rank);
         RefreshContent(auraList, rank);
     }
@@ -62,7 +62,7 @@ public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHa
         txtTitle.text = $"<color={ColorPalette.Instance.GetElementColorHex(role)}>" +
                         $"<size=50><sprite name=element-{role}></size> " +
                         $"{role} Aura</color>";
-        var auraList = DataManager.Instance.GetAuras(role);
+        var auraList = GameDatabase.Instance.GetAuras(role);
         var colorList = new List<string> { ColorPalette.Instance.GetElementColorHex(role) };
         RefreshRank(rank);
         RefreshContent(auraList, rank, colorList);

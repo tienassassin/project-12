@@ -41,7 +41,7 @@ public class ValhallaHeroDetail : DuztineBehaviour
         (_curExp, _nextExp) = saveData.GetExp();
 
         txtLevel.text = _level.ToString();
-        bool levelMaxed = _level >= DataManager.Instance.GetLevelMax();
+        var levelMaxed = _level >= GameDatabase.Instance.GetLevelMax();
         txtExp.text = levelMaxed ? "MAX" : $"EXP: {_curExp} / {_nextExp} ({_curExp * 100 / _nextExp}%)";
         sldExp.value = (float)_curExp / _nextExp;
 

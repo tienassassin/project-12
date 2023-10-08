@@ -8,11 +8,14 @@ public class SceneLoader : Singleton<SceneLoader>
     private string _sceneName;
     private float _expectedTime;
     private Action _sceneLoaded;
+    private Action _preparation;
 
-    public void LoadScene(string sceneName, float expectedTime = -1f, Action sceneLoaded = null)
+    public void LoadScene(string sceneName, float expectedTime = -1f, Action preparation = null,
+        Action sceneLoaded = null)
     {
         _sceneName = sceneName;
         _expectedTime = expectedTime;
+        _preparation = preparation;
         _sceneLoaded = sceneLoaded;
         StartCoroutine(LoadSceneAsync());
     }
@@ -29,6 +32,9 @@ public class SceneLoader : Singleton<SceneLoader>
             yield return null;
         }
 
+        _preparation?.Invoke();
+
+        yield return null;
         GlobalUI.Instance.FinishLoading(_sceneLoaded);
     }
 }

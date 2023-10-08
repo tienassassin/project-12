@@ -62,7 +62,7 @@ public class ValhallaUI : BaseUI
         _lvSort = SortType.Descending;
         _tierSort = SortType.None;
 
-        _entities = DataManager.Instance.GetAllEntities();
+        _entities = GameDatabase.Instance.GetAllEntities();
 
         LoadHeroCards();
         Refresh();
