@@ -94,8 +94,8 @@ public class HomeUI : BaseUI
     public void SetPlayerInfo(int level, string avatarID, string avatarFrameID)
     {
         txtLevel.text = $"{level}";
-        imgAvatar.sprite = CommonAssets.Instance.GetAvatar(avatarID).avatar;
-        imgAvatarFrame.sprite = CommonAssets.Instance.GetAvatarFrame(avatarID).avatarFrame;
+        imgAvatar.sprite = AssetLibrary.Instance.GetAvatarAsset(avatarID).avatar;
+        imgAvatarFrame.sprite = AssetLibrary.Instance.GetAvatarFrameAsset(avatarID).avatarFrame;
     }
 
     public void OpenValhalla()

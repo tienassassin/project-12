@@ -4,31 +4,10 @@ using Sirenix.OdinInspector;
 using Spine.Unity;
 using UnityEngine;
 
-public class CommonAssets : Singleton<CommonAssets>
+[CreateAssetMenu(fileName = "EntityLibrary", menuName = "AssetLibrary/EntityLibrary")]
+public class EntityLibrary : ScriptableObject
 {
-    [SerializeField] private List<EntityAsset> entityAssets;
-    [SerializeField] [TableList] private List<ItemAsset> itemAssets;
-    [SerializeField] private AvatarLibrary avatarLibrary;
-
-    public EntityAsset GetEntityAsset(string id)
-    {
-        return entityAssets.Find(x => x.id.Equals(id));
-    }
-
-    public ItemAsset GetItemAsset(string id)
-    {
-        return itemAssets.Find(x => x.id.Equals(id));
-    }
-
-    public AvatarAsset GetAvatar(string id)
-    {
-        return avatarLibrary.avatarAssets.Find(x => x.id.Equals(id));
-    }
-
-    public AvatarFrameAsset GetAvatarFrame(string id)
-    {
-        return avatarLibrary.avatarFrameAssets.Find(x => x.id.Equals(id));
-    }
+    public List<EntityAsset> entityAssets;
 }
 
 [Serializable]
@@ -61,12 +40,4 @@ public struct EntityAsset
     [PreviewField(ObjectFieldAlignment.Left)]
     [LabelText("Ultimate:")]
     public Sprite ultimateIcon;
-}
-
-[Serializable]
-public struct ItemAsset
-{
-    public string id;
-    [PreviewField(ObjectFieldAlignment.Center)]
-    public Sprite icon;
 }

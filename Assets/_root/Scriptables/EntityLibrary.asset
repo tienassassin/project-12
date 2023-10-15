@@ -1,50 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7515764564625096970
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4459115543101158639}
-  - component: {fileID: 313049689456313944}
-  m_Layer: 0
-  m_Name: CommonAssets
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4459115543101158639
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7515764564625096970}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44343546, y: 0.19874799, z: 0.023729324}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &313049689456313944
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7515764564625096970}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fec720a8739adff4b883be43392b5f47, type: 3}
-  m_Name: 
+  m_Script: {fileID: 11500000, guid: c701a9d1dd84cd54a90c173148448f2c, type: 3}
+  m_Name: EntityLibrary
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
   entityAssets:
   - id: 00
     avatar: {fileID: 21300000, guid: 81b3f0b29cc904647837905736d875f0, type: 3}
@@ -109,39 +76,3 @@ MonoBehaviour:
     passiveIcon: {fileID: 21300000, guid: 80295073561f64540861ea494d7034f2, type: 3}
     skillIcon: {fileID: 21300000, guid: 5b09a5a236079ec4d8f97f21a305a8a2, type: 3}
     ultimateIcon: {fileID: 21300000, guid: 7fbf4ee3f135f40479c455bed4062d9f, type: 3}
-  itemAssets:
-  - id: elixir_exp_0_small
-    icon: {fileID: 21300000, guid: b46f30b498c29664898f5aa4be3d60e4, type: 3}
-  - id: elixir_exp_1_medium
-    icon: {fileID: 21300000, guid: 3b7fb9a6ca8980b468f1189f10ed5bd6, type: 3}
-  - id: elixir_exp_2_large
-    icon: {fileID: 21300000, guid: c4f68735b3261a54181cb1d73d89083d, type: 3}
-  - id: elixir_hp_0_small
-    icon: {fileID: 21300000, guid: 8500847a0dd862e48ab77c3afa57aeb8, type: 3}
-  - id: elixir_hp_1_medium
-    icon: {fileID: 21300000, guid: f95ee405707c42445a9aed27d9d37bed, type: 3}
-  - id: elixir_hp_2_large
-    icon: {fileID: 21300000, guid: b7e33bce599381d43a5591ca44b64acb, type: 3}
-  - id: elixir_hp_3_extreme
-    icon: {fileID: 21300000, guid: 0240a0f719eb50246bdddfde60222caf, type: 3}
-  - id: elixir_mp_0_small
-    icon: {fileID: 21300000, guid: 71c75dfa3e1753a4ba29e36195da5e95, type: 3}
-  - id: elixir_mp_1_medium
-    icon: {fileID: 21300000, guid: 93f82638d0cbd9e4fac71feb12fea606, type: 3}
-  - id: elixir_mp_2_large
-    icon: {fileID: 21300000, guid: 3f0badc610d49e345b4449ecc73b3054, type: 3}
-  - id: ticket_golden
-    icon: {fileID: 21300000, guid: 0cf5f079c4ff2af49b38bb356618fc89, type: 3}
-  - id: ticket_normal
-    icon: {fileID: 21300000, guid: 2ad6c616ad7702041994b6c700578755, type: 3}
-  - id: ticket_pack_0_basic
-    icon: {fileID: 21300000, guid: 8ddb31e563123fe498bbefd1a1c5e36b, type: 3}
-  - id: ticket_pack_1_standard
-    icon: {fileID: 21300000, guid: 33f2cebc3c9dd6948901cb9f5b5fc1a9, type: 3}
-  - id: ticket_pack_2_premium
-    icon: {fileID: 21300000, guid: a9d2cc8889276f9428eb3fc9ffe16665, type: 3}
-  - id: ticket_pack_3_deluxe
-    icon: {fileID: 21300000, guid: fc13fe79959f0064997a18156b14f2c2, type: 3}
-  avatarLibrary: {fileID: 11400000, guid: 9311a42d32e4a7f41a518dc96b1809c4, type: 2}
-  itemLibrary: {fileID: 11400000, guid: 4a10d271e088fb642a94d5a85cd3f359, type: 2}
-  entityLibrary: {fileID: 11400000, guid: 93856242d1786b64cb1b2ecb51bdfa91, type: 2}
