@@ -63,6 +63,8 @@ public class EventDispatcher : Singleton<EventDispatcher>
 
 public enum EventID
 {
+    ON_UPDATE_CURRENCIES,
+    
     ON_AURA_HIGHLIGHTED,
     ON_LINEUP_CHANGED,
     ON_BATTLE_SCENE_LOADED,

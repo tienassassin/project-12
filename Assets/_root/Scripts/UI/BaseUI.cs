@@ -9,12 +9,12 @@ public abstract class BaseUI : DuztineBehaviour
         canvas.worldCamera = Camera.main;
     }
 
-    public virtual void Show(params object[] pars)
+    public virtual void Open(params object[] args)
     {
         gameObject.SetActive(true);
     }
 
-    public virtual void Hide(params object[] pars)
+    public virtual void Close(params object[] args)
     {
         gameObject.SetActive(false);
     }

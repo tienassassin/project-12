@@ -86,8 +86,8 @@ public class BattleUI : BaseUI
         var entity = (BattleEntity)data;
 
         var ultimateSkill = imgUltimateList[_ultimateIndex];
-        var skillIcon = Common.GetSkillIcon(entity.EntityID, 2);
-        var heroIcon = Common.GetSkillIcon("00", 0); //todo: review later
+        var skillIcon = Utils.GetSkillIcon(entity.EntityID, 2);
+        var heroIcon = Utils.GetSkillIcon("00", 0); //todo: review later
         ultimateSkill.gameObject.SetActive(true);
         ultimateSkill.Init(entity.UniqueID, skillIcon, heroIcon);
         _ultimateIndex++;
@@ -129,7 +129,7 @@ public class BattleUI : BaseUI
         if (entity.Entity.Side == Side.Ally)
         {
             actionMenu.SetActive(true);
-            imgSkill.sprite = Common.GetSkillIcon(entity.Entity.EntityID, 1);
+            imgSkill.sprite = Utils.GetSkillIcon(entity.Entity.EntityID, 1);
             imgSkill.color = BattleManager.Instance.HasFireSpirit() ? _colorSkillAvailable : _colorSkillUnavailable;
 
             EditorLog.Message("auto select attack");

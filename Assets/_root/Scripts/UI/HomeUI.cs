@@ -1,70 +1,101 @@
-﻿using TMPro;
+﻿using System;
+using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HomeUI : BaseUI
 {
+    [TitleGroup("Basic info:")]
+    [SerializeField] private Image imgAvatar;
+    [SerializeField] private Image imgAvatarFrame;
+    [SerializeField] private TMP_Text txtUsername;
+    [SerializeField] private TMP_Text txtLevel;
+
+    [TitleGroup("Currency:")]
+    [SerializeField] private TMP_Text txtGold;
+    [SerializeField] private TMP_Text txtDiamond;
+    [SerializeField] private TMP_Text txtEnergy;
+
+    [TitleGroup("Time")]
+    [SerializeField] private Image imgTime;
+    [SerializeField] private Sprite[] sprTimes;
+
+    [TitleGroup("Others:")]
     [SerializeField] private TMP_Text fpsTxt;
     [SerializeField] private float logInterval = 0.5f;
 
-    [SerializeField] private HeroAvatar[] avatars;
-
     private float _curTime;
     private int _frameCount;
+
+    public static void Open()
+    {
+        UIManager.Instance.ShowUI(nameof(HomeUI));
+    }
+
+    public static void Close()
+    {
+        UIManager.Instance.HideUI(nameof(HomeUI));
+    }
 
     protected override void Awake()
     {
         base.Awake();
 
-        this.AddListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
+        SetTime();
+
+        this.AddListener(EventID.ON_UPDATE_CURRENCIES, UpdateCurrencies);
     }
 
     private void OnDestroy()
     {
-        this.RemoveListener(EventID.ON_LINEUP_CHANGED, RefreshHeroAvatars);
-    }
-
-    private void Start()
-    {
-        RefreshHeroAvatars();
+        this.RemoveListener(EventID.ON_UPDATE_CURRENCIES, UpdateCurrencies);
     }
 
     private void Update()
+    {
+        CalculateFPS();
+    }
+
+    private void SetTime()
+    {
+        var now = DateTime.Now;
+        imgTime.sprite = sprTimes[now.Hour < 12 ? 0 : 1];
+    }
+
+    private void CalculateFPS()
     {
         _curTime += Time.deltaTime;
         _frameCount++;
         if (_curTime >= logInterval)
         {
-            int fps = Mathf.RoundToInt(_frameCount / _curTime);
+            var fps = Mathf.RoundToInt(_frameCount / _curTime);
             fpsTxt.text = "FPS: " + fps;
             _curTime -= logInterval;
             _frameCount = 0;
         }
     }
 
-    public static void Show()
+    public void UpdateCurrencies(object data = null)
     {
-        UIManager.Instance.ShowUI(nameof(HomeUI));
-    }
-
-    public static void Hide()
-    {
-        UIManager.Instance.HideUI(nameof(HomeUI));
-    }
-
-    private void RefreshHeroAvatars(object _ = null)
-    {
-        var readyHeroList = PlayerManager.Instance.GetReadyHeroes().FindAll(x => x != null);
-        for (int i = 0; i < avatars.Length; i++)
+        PlayFabManager.Instance.FetchCurrencies(dict =>
         {
-            if (i >= readyHeroList.Count)
-            {
-                avatars[i].gameObject.SetActive(false);
-                continue;
-            }
+            txtGold.text = $"{dict[PlayFabKey.CURRENCY_GOLD]}";
+            txtDiamond.text = $"{dict[PlayFabKey.CURRENCY_DIAMOND]}";
+            txtEnergy.text = $"{dict[PlayFabKey.CURRENCY_ENERGY]}/100";
+        });
+    }
 
-            avatars[i].gameObject.SetActive(true);
-            avatars[i].Init(readyHeroList[i]);
-        }
+    public void SetUsername(string username)
+    {
+        txtUsername.text = username;
+    }
+
+    public void SetPlayerInfo(int level, string avatarID, string avatarFrameID)
+    {
+        txtLevel.text = $"{level}";
+        imgAvatar.sprite = CommonAssets.Instance.GetAvatar(avatarID).avatar;
+        imgAvatarFrame.sprite = CommonAssets.Instance.GetAvatarFrame(avatarID).avatarFrame;
     }
 
     public void OpenValhalla()

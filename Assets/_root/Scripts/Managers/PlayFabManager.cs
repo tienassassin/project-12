@@ -199,6 +199,21 @@ public class PlayFabManager : Singleton<PlayFabManager>
             fail?.Invoke(error);
         });
     }
+
+    public void FetchCurrencies(Action<Dictionary<string, int>> onLoaded,
+        Action<GetUserInventoryResult> success = null,
+        Action<PlayFabError> fail = null)
+    {
+        PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(), result =>
+        {
+            if (result != null) onLoaded?.Invoke(result.VirtualCurrency);
+            success?.Invoke(result);
+        }, error =>
+        {
+            EditorLog.Error($"PlayFab: Fetch currencies failed, error: {error.ErrorMessage}");
+            fail?.Invoke(error);
+        });
+    }
 }
 
 public static class PlayFabKey
@@ -211,6 +226,8 @@ public static class PlayFabKey
 
     public const string PLAYER_DATA_LEVEL = "level";
     public const string PLAYER_DATA_EXP = "exp";
+    public const string PLAYER_DATA_AVATAR_ID = "avatar_id";
+    public const string PLAYER_DATA_AVATAR_FRAME_ID = "avatar_frame_id";
     public const string PLAYER_DATA_UNLOCKED_ENTITIES = "unlockedEntities";
     public const string PLAYER_DATA_READY_ENTITIES = "readyEntities";
 }

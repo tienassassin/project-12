@@ -248,7 +248,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
     public virtual void Attack(IDamageTaker target, Action finished)
     {
         Rage += Stats.luck;
-        bool crit = Common.GetRandomResult(Rage);
+        var crit = Utils.GetRandomResult(Rage);
         if (crit)
         {
             Rage = Mathf.Max(0, Rage - 100);

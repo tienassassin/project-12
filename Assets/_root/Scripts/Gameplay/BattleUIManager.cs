@@ -44,7 +44,7 @@ public class BattleUIManager : Singleton<BattleUIManager>
         var ui = GetUI(key);
         if (ui)
         {
-            ui.Show(pars);
+            ui.Open(pars);
         }
     }
 
@@ -53,7 +53,7 @@ public class BattleUIManager : Singleton<BattleUIManager>
         var ui = GetUI(key);
         if (ui)
         {
-            ui.Hide(pars);
+            ui.Close(pars);
         }
     }
 
@@ -62,7 +62,7 @@ public class BattleUIManager : Singleton<BattleUIManager>
         foreach (var itm in _uiDict)
         {
             if (exceptions.Contains(itm.Key)) continue;
-            itm.Value.Hide();
+            itm.Value.Close();
         }
     }
 }

@@ -43,12 +43,14 @@ public class UsernameUI : BaseUI
                                 $"Nếu rảnh bạn có thể tìm tôi ở căn nhà nhỏ dưới gốc cây có tán lá vàng đằng kia. " +
                                 $"Giờ tôi phải đi rồi. Tạm biệt.";
             }
+
+            UIController.Get<HomeUI>().SetUsername(_username);
         });
     }
 
     private string GetRandomUsername()
     {
-        return _randomNames[Random.Range(0, _randomNames.Length)] + $"{Random.Range(0, 1000):000}";
+        return _randomNames[Random.Range(0, _randomNames.Length)] + $"#{Random.Range(0, 1000):000}";
     }
 }
 

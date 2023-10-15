@@ -44,7 +44,7 @@ public class UIManager : Singleton<UIManager>
         var ui = GetUI(key);
         if (ui)
         {
-            ui.Show(args);
+            ui.Open(args);
         }
     }
 
@@ -53,7 +53,7 @@ public class UIManager : Singleton<UIManager>
         var ui = GetUI(key);
         if (ui)
         {
-            ui.Hide(args);
+            ui.Close(args);
         }
     }
 
@@ -62,7 +62,7 @@ public class UIManager : Singleton<UIManager>
         foreach (var itm in _uiDict)
         {
             if (exceptions.Contains(itm.Key)) continue;
-            itm.Value.Hide();
+            itm.Value.Close();
         }
     }
 }

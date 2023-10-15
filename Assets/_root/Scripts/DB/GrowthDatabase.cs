@@ -25,7 +25,7 @@ public class GrowthDatabase : DuztineBehaviour
                 entityGrowths.Add(new EntityGrowth
                 {
                     tier = Enum.Parse<Tier>((string)jObject["tier"]),
-                    growth = Common.Parse<float>((string)jObject["growth"])
+                    growth = Utils.Parse<float>((string)jObject["growth"])
                 });
             }
         }
@@ -38,7 +38,7 @@ public class GrowthDatabase : DuztineBehaviour
                 equipmentGrowths.Add(new EquipmentGrowth
                 {
                     rarity = Enum.Parse<Rarity>((string)jObject["rarity"]),
-                    growth = Common.Parse<float>((string)jObject["growth"])
+                    growth = Utils.Parse<float>((string)jObject["growth"])
                 });
             }
         }

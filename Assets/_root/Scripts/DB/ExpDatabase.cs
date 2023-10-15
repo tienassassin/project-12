@@ -19,8 +19,8 @@ public class ExpDatabase : DuztineBehaviour
             var jObject = (JObject)jToken;
             var expData = new ExpData
             {
-                level = Common.Parse<int>((string)jObject["level"]),
-                exp = Common.Parse<int>((string)jObject["exp"]),
+                level = Utils.Parse<int>((string)jObject["level"]),
+                exp = Utils.Parse<int>((string)jObject["exp"]),
                 totalExp = totalExp
             };
 

@@ -53,81 +53,81 @@ public class ValhallaStatDetail : DuztineBehaviour, IPointerEnterHandler, IPoint
         switch (key)
         {
             case "health":
-                txtStatValue.text = Common.GetIntString(overallStats.health);
-                baseValue = Common.GetIntString(baseStats.health);
-                diff0Value = " (+" + Common.GetIntString(diff0.health) + ")";
-                diff1Value = " (+" + Common.GetIntString(diff1.health) + ")";
+                txtStatValue.text = Utils.GetIntString(overallStats.health);
+                baseValue = Utils.GetIntString(baseStats.health);
+                diff0Value = " (+" + Utils.GetIntString(diff0.health) + ")";
+                diff1Value = " (+" + Utils.GetIntString(diff1.health) + ")";
                 valueList.Add(txtStatValue.text);
                 break;
             case "damage":
-                txtStatValue.text = Common.GetIntString(overallStats.damage);
-                baseValue = Common.GetIntString(baseStats.damage);
-                diff0Value = " (+" + Common.GetIntString(diff0.damage) + ")";
-                diff1Value = " (+" + Common.GetIntString(diff1.damage) + ")";
+                txtStatValue.text = Utils.GetIntString(overallStats.damage);
+                baseValue = Utils.GetIntString(baseStats.damage);
+                diff0Value = " (+" + Utils.GetIntString(diff0.damage) + ")";
+                diff1Value = " (+" + Utils.GetIntString(diff1.damage) + ")";
                 valueList.Add(txtStatValue.text);
                 valueList.Add(dmgTypeName);
                 colorList.Add(dmgTypeColorHex);
                 break;
             case "armor":
-                txtStatValue.text = Common.GetIntString(overallStats.armor);
-                baseValue = Common.GetIntString(baseStats.armor);
-                diff0Value = " (+" + Common.GetIntString(diff0.armor) + ")";
-                diff1Value = " (+" + Common.GetIntString(diff1.armor) + ")";
+                txtStatValue.text = Utils.GetIntString(overallStats.armor);
+                baseValue = Utils.GetIntString(baseStats.armor);
+                diff0Value = " (+" + Utils.GetIntString(diff0.armor) + ")";
+                diff1Value = " (+" + Utils.GetIntString(diff1.armor) + ")";
                 valueList.Add(txtStatValue.text);
                 break;
             case "resistance":
-                txtStatValue.text = Common.GetIntString(overallStats.resistance);
-                baseValue = Common.GetIntString(baseStats.resistance);
-                diff0Value = " (+" + Common.GetIntString(diff0.resistance) + ")";
-                diff1Value = " (+" + Common.GetIntString(diff1.resistance) + ")";
+                txtStatValue.text = Utils.GetIntString(overallStats.resistance);
+                baseValue = Utils.GetIntString(baseStats.resistance);
+                diff0Value = " (+" + Utils.GetIntString(diff0.resistance) + ")";
+                diff1Value = " (+" + Utils.GetIntString(diff1.resistance) + ")";
                 valueList.Add(txtStatValue.text);
                 break;
             case "intelligence":
-                txtStatValue.text = Common.GetFloatString(overallStats.intelligence, 1);
-                baseValue = Common.GetFloatString(baseStats.intelligence, 1);
-                diff0Value = Common.GetFloatString(diff0.intelligence, 1);
-                diff1Value = " (+" + Common.GetFloatString(diff1.intelligence, 1) + ")";
+                txtStatValue.text = Utils.GetFloatString(overallStats.intelligence, 1);
+                baseValue = Utils.GetFloatString(baseStats.intelligence, 1);
+                diff0Value = Utils.GetFloatString(diff0.intelligence, 1);
+                diff1Value = " (+" + Utils.GetFloatString(diff1.intelligence, 1) + ")";
                 valueList.Add(txtStatValue.text);
-                valueList.Add(Common.GetFloatString(GameDatabase.Instance.GetStatInfo(key).limit, 1));
+                valueList.Add(Utils.GetFloatString(GameDatabase.Instance.GetStatInfo(key).limit, 1));
                 break;
             case "speed":
-                txtStatValue.text = Common.GetFloatString(overallStats.speed, 1);
-                baseValue = Common.GetFloatString(baseStats.speed, 1);
-                diff0Value = Common.GetFloatString(diff0.speed, 1);
-                diff1Value = " (+" + Common.GetFloatString(diff1.speed, 1) + ")";
+                txtStatValue.text = Utils.GetFloatString(overallStats.speed, 1);
+                baseValue = Utils.GetFloatString(baseStats.speed, 1);
+                diff0Value = Utils.GetFloatString(diff0.speed, 1);
+                diff1Value = " (+" + Utils.GetFloatString(diff1.speed, 1) + ")";
                 valueList.Add(txtStatValue.text);
-                valueList.Add(Common.GetFloatString(GameDatabase.Instance.GetStatInfo(key).limit, 1));
+                valueList.Add(Utils.GetFloatString(GameDatabase.Instance.GetStatInfo(key).limit, 1));
                 break;
             case "luck":
-                txtStatValue.text = Common.GetIntString(overallStats.luck);
-                baseValue = Common.GetIntString(baseStats.luck);
-                diff0Value = Common.GetIntString(diff0.luck);
-                diff1Value = " (+" + Common.GetIntString(diff1.luck) + ")";
+                txtStatValue.text = Utils.GetIntString(overallStats.luck);
+                baseValue = Utils.GetIntString(baseStats.luck);
+                diff0Value = Utils.GetIntString(diff0.luck);
+                diff1Value = " (+" + Utils.GetIntString(diff1.luck) + ")";
                 valueList.Add(txtStatValue.text);
                 break;
             case "crit damage":
-                txtStatValue.text = Common.GetIntString(overallStats.critDamage);
-                baseValue = Common.GetIntString(baseStats.critDamage);
-                diff0Value = Common.GetIntString(diff0.critDamage);
-                diff1Value = " (+" + Common.GetIntString(diff1.critDamage) + ")";
+                txtStatValue.text = Utils.GetIntString(overallStats.critDamage);
+                baseValue = Utils.GetIntString(baseStats.critDamage);
+                diff0Value = Utils.GetIntString(diff0.critDamage);
+                diff1Value = " (+" + Utils.GetIntString(diff1.critDamage) + ")";
                 valueList.Add(txtStatValue.text);
                 valueList.Add(dmgTypeName);
                 colorList.Add(dmgTypeColorHex);
                 break;
             case "life steal":
-                txtStatValue.text = Common.GetFloatString(overallStats.lifeSteal, 1);
-                baseValue = Common.GetFloatString(baseStats.lifeSteal, 1);
-                diff0Value = Common.GetFloatString(diff0.lifeSteal, 1);
-                diff1Value = " (+" + Common.GetFloatString(diff1.lifeSteal, 1) + ")";
+                txtStatValue.text = Utils.GetFloatString(overallStats.lifeSteal, 1);
+                baseValue = Utils.GetFloatString(baseStats.lifeSteal, 1);
+                diff0Value = Utils.GetFloatString(diff0.lifeSteal, 1);
+                diff1Value = " (+" + Utils.GetFloatString(diff1.lifeSteal, 1) + ")";
                 valueList.Add(txtStatValue.text);
                 valueList.Add(dmgTypeName);
                 colorList.Add(dmgTypeColorHex);
                 break;
             case "accuracy":
-                txtStatValue.text = Common.GetFloatString(overallStats.accuracy, 1);
-                baseValue = Common.GetFloatString(baseStats.accuracy, 1);
-                diff0Value = Common.GetFloatString(diff0.accuracy, 1);
-                diff1Value = " (+" + Common.GetFloatString(diff1.accuracy, 1) + ")";
+                txtStatValue.text = Utils.GetFloatString(overallStats.accuracy, 1);
+                baseValue = Utils.GetFloatString(baseStats.accuracy, 1);
+                diff0Value = Utils.GetFloatString(diff0.accuracy, 1);
+                diff1Value = " (+" + Utils.GetFloatString(diff1.accuracy, 1) + ")";
                 valueList.Add(txtStatValue.text);
                 break;
         }
@@ -150,7 +150,7 @@ public class ValhallaStatDetail : DuztineBehaviour, IPointerEnterHandler, IPoint
         }
 
         txtDescription.text = rawDesc;
-        txtTitle.text = Common.GetTitleCaseString(GameDatabase.Instance.GetStatInfo(key).name);
+        txtTitle.text = Utils.GetTitleCaseString(GameDatabase.Instance.GetStatInfo(key).name);
     }
 
     private IEnumerator ShowDetailPanel()

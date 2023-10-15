@@ -94,6 +94,7 @@ public class LoginUI : DuztineBehaviour
                 var profile = result.InfoResultPayload.PlayerProfile;
                 if (profile != null && !profile.DisplayName.IsNullOrWhitespace())
                 {
+                    UIController.Get<HomeUI>().SetUsername(profile.DisplayName);
                 }
                 else
                 {

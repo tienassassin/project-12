@@ -8,9 +8,6 @@ using Random = UnityEngine.Random;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
-    public int level;
-    public int exp;
-    
     private const string HERO_DB_KEY = "HERO_DB";
     [Header("DUMMY")]
     [SerializeField] private bool isDummy;
@@ -135,7 +132,9 @@ public class PlayerManager : Singleton<PlayerManager>
         var defaultDataDict = new Dictionary<string, string>
         {
             { PlayFabKey.PLAYER_DATA_LEVEL, "1" },
-            { "just test hehe", "ok" }
+            { PlayFabKey.PLAYER_DATA_EXP, "0" },
+            { PlayFabKey.PLAYER_DATA_AVATAR_ID, "00" },
+            { PlayFabKey.PLAYER_DATA_AVATAR_FRAME_ID, "00" }
         };
 
         PlayFabManager.Instance.LoadAllPlayerData(dict =>
@@ -151,11 +150,13 @@ public class PlayerManager : Singleton<PlayerManager>
 
             if (hasUpdated) PlayFabManager.Instance.SaveAllPlayerData(dict);
 
-            foreach (var pair in dict)
-            {
-                // EditorLog.Message(pair.Key + pair.Value);
-            }
+            var level = int.Parse(dict[PlayFabKey.PLAYER_DATA_LEVEL]);
+            var avatarID = dict[PlayFabKey.PLAYER_DATA_AVATAR_ID];
+            var avatarFrameID = dict[PlayFabKey.PLAYER_DATA_AVATAR_FRAME_ID];
+            UIController.Get<HomeUI>().SetPlayerInfo(level, avatarID, avatarFrameID);
         });
+
+        PlayFabManager.Instance.FetchCurrencies(dict => { this.PostEvent(EventID.ON_UPDATE_CURRENCIES, dict); });
     }
 }
 
