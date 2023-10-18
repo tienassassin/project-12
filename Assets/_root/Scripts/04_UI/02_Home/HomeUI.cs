@@ -78,11 +78,12 @@ public class HomeUI : BaseUI
 
     public void UpdateCurrencies(object data = null)
     {
-        PlayFabManager.Instance.FetchCurrencies(dict =>
+        PlayFabManager.Instance.FetchCurrencies((currenciesDict, rechargeDict) =>
         {
-            txtGold.text = $"{dict[PlayFabKey.CURRENCY_GOLD]}";
-            txtDiamond.text = $"{dict[PlayFabKey.CURRENCY_DIAMOND]}";
-            txtEnergy.text = $"{dict[PlayFabKey.CURRENCY_ENERGY]}/100";
+            txtGold.text = $"{currenciesDict[PlayFabKey.CURRENCY_GOLD]}";
+            txtDiamond.text = $"{currenciesDict[PlayFabKey.CURRENCY_DIAMOND]}";
+            txtEnergy.text = $"{currenciesDict[PlayFabKey.CURRENCY_ENERGY]}" +
+                             $"/{rechargeDict[PlayFabKey.CURRENCY_ENERGY].RechargeMax}";
         });
     }
 
@@ -110,11 +111,21 @@ public class HomeUI : BaseUI
 
     public void OpenQuest()
     {
-        QuestUI.Show();
+        // QuestUI.Show();
     }
 
     public void OpenInventory()
     {
-        InventoryUI.Show();
+        // InventoryUI.Show();
+    }
+
+    public void OpenLeaderboard()
+    {
+        //todo
+    }
+
+    public void OpenCampaign()
+    {
+        //todo
     }
 }

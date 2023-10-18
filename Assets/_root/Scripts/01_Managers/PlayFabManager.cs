@@ -200,13 +200,14 @@ public class PlayFabManager : Singleton<PlayFabManager>
         });
     }
 
-    public void FetchCurrencies(Action<Dictionary<string, int>> onLoaded,
+    public void FetchCurrencies(
+        Action<Dictionary<string, int>, Dictionary<string, VirtualCurrencyRechargeTime>> onLoaded,
         Action<GetUserInventoryResult> success = null,
         Action<PlayFabError> fail = null)
     {
         PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(), result =>
         {
-            if (result != null) onLoaded?.Invoke(result.VirtualCurrency);
+            if (result != null) onLoaded?.Invoke(result.VirtualCurrency, result.VirtualCurrencyRechargeTimes);
             success?.Invoke(result);
         }, error =>
         {

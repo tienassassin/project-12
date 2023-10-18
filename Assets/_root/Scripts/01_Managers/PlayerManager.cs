@@ -156,7 +156,7 @@ public class PlayerManager : Singleton<PlayerManager>
             UIController.Get<HomeUI>().SetPlayerInfo(level, avatarID, avatarFrameID);
         });
 
-        PlayFabManager.Instance.FetchCurrencies(dict => { this.PostEvent(EventID.ON_UPDATE_CURRENCIES, dict); });
+        this.PostEvent(EventID.ON_UPDATE_CURRENCIES);
     }
 }
 
