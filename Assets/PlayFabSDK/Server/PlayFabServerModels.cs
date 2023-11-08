@@ -1976,6 +1976,7 @@ namespace PlayFab.ServerModels
         InvalidServiceConfiguration,
         InvalidNamespaceMismatch,
         LeaderboardColumnLengthMismatch,
+        InvalidStatisticScore,
         MatchmakingEntityInvalid,
         MatchmakingPlayerAttributesInvalid,
         MatchmakingQueueNotFound,
@@ -2120,6 +2121,12 @@ namespace PlayFab.ServerModels
         LobbyNewOwnerMustBeConnected,
         LobbyCurrentOwnerStillConnected,
         LobbyMemberIsNotOwner,
+        LobbyAssociatedServerMismatch,
+        LobbyAssociatedServerNotFound,
+        LobbyAssociatedToDifferentServer,
+        LobbyServerAlreadyAssociated,
+        LobbyIsNotClientOwned,
+        LobbyDoesNotUseConnections,
         EventSamplingInvalidRatio,
         EventSamplingInvalidEventNamespace,
         EventSamplingInvalidEventName,
@@ -2143,6 +2150,7 @@ namespace PlayFab.ServerModels
         EventSinkTenantNotFound,
         EventSinkAadNotFound,
         EventSinkDatabaseNotFound,
+        EventSinkTitleUnauthorized,
         OperationCanceled,
         InvalidDisplayNameRandomSuffixLength,
         AllowNonUniquePlayerDisplayNamesDisableNotAllowed,
@@ -2162,7 +2170,9 @@ namespace PlayFab.ServerModels
         PlayerCustomPropertiesDuplicatePropertyName,
         PlayerCustomPropertiesPropertyDoesNotExist,
         AddonAlreadyExists,
-        AddonDoesntExist
+        AddonDoesntExist,
+        CopilotDisabled,
+        CopilotInvalidRequest
     }
 
     [Serializable]
