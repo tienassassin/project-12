@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DuztineBehaviour : MonoBehaviour
+public abstract class DuztineBehaviour : MonoBehaviour
 {
     private Transform _cachedTransform;
 
@@ -15,5 +15,23 @@ public class DuztineBehaviour : MonoBehaviour
 
             return _cachedTransform;
         }   
+    }
+
+    protected virtual void Awake()
+    {
+        RegisterEvents();
+    }
+
+    protected virtual void OnDestroy()
+    {
+        UnregisterEvents();
+    }
+
+    protected virtual void RegisterEvents()
+    {
+    }
+
+    protected virtual void UnregisterEvents()
+    {
     }
 }

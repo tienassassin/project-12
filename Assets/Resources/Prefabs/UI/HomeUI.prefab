@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kho \u0111\u1ED3"
+  m_text: "H\xE0nh trang"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f51cadf3d3d3a5a4bb55fe543d134b8b, type: 2}
   m_sharedMaterial: {fileID: -6290568404739945066, guid: f51cadf3d3d3a5a4bb55fe543d134b8b, type: 2}
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 22.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1611,7 +1611,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Valhalla
+  m_text: "T\u1EEDu qu\xE1n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f51cadf3d3d3a5a4bb55fe543d134b8b, type: 2}
   m_sharedMaterial: {fileID: -6290568404739945066, guid: f51cadf3d3d3a5a4bb55fe543d134b8b, type: 2}
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.65
+  m_fontSize: 24.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1871,6 +1871,12 @@ MonoBehaviour:
   sprTimes:
   - {fileID: 21300000, guid: 2439b5603609c874a843433afa618540, type: 3}
   - {fileID: 21300000, guid: 6455894fa3a7438489ac7aac5c55f115, type: 3}
+  btnTavern: {fileID: 7241593883689945547}
+  btnLineUp: {fileID: 1862762230458838814}
+  btnQuest: {fileID: 114601767839357490}
+  btnInventory: {fileID: 3677654585569470577}
+  btnLeaderboard: {fileID: 5161676993495810447}
+  btnCampaign: {fileID: 6368208128460898170}
   fpsTxt: {fileID: 3753508355999511629}
   logInterval: 0.5
 --- !u!1 &4602463018247835362
@@ -2042,7 +2048,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0110\u1ED9i h\xECnh"
+  m_text: "Chi\u1EBFn \u0111\u1ED9i"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f51cadf3d3d3a5a4bb55fe543d134b8b, type: 2}
   m_sharedMaterial: {fileID: -6290568404739945066, guid: f51cadf3d3d3a5a4bb55fe543d134b8b, type: 2}
@@ -2069,7 +2075,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.5
+  m_fontSize: 25.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2148,7 +2154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 126.84, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &8352408796428384810
@@ -2918,7 +2924,7 @@ GameObject:
   - component: {fileID: 7241593883689945547}
   - component: {fileID: 7012586432694598005}
   m_Layer: 0
-  m_Name: valhalla
+  m_Name: tavern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3028,7 +3034,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4602463017395544677}
         m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
-        m_MethodName: OpenValhalla
+        m_MethodName: OpenTavern
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3627,7 +3633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 253.68, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3523018756506631573

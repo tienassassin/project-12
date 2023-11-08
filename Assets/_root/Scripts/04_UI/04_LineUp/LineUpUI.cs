@@ -22,12 +22,12 @@ public class LineUpUI : BaseUI
 
     public static void Show()
     {
-        UIManager.Instance.ShowUI(nameof(LineUpUI));
+        UIContainer.Instance.ShowUI(nameof(LineUpUI));
     }
 
     public static void Hide()
     {
-        UIManager.Instance.HideUI(nameof(LineUpUI));
+        UIContainer.Instance.HideUI(nameof(LineUpUI));
     }
 
     private void RefreshMainView()

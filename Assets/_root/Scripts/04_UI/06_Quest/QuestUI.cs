@@ -1,14 +1,3 @@
-using UnityEngine;
-
-public class QuestUI : MonoBehaviour
+public class QuestUI : BaseUI
 {
-    public static void Show()
-    {
-        UIManager.Instance.ShowUI(nameof(QuestUI));
-    }
-
-    public static void Hide()
-    {
-        UIManager.Instance.HideUI(nameof(QuestUI));
-    }
 }

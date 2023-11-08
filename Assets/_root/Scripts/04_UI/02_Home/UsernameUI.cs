@@ -18,7 +18,7 @@ public class UsernameUI : BaseUI
 
         if (_state == ChangeUsernameState.Changed)
         {
-            UIController.Close<UsernameUI>();
+            UIManager.Close<UsernameUI>();
             return;
         }
 
@@ -44,7 +44,7 @@ public class UsernameUI : BaseUI
                                 $"Giờ tôi phải đi rồi. Tạm biệt.";
             }
 
-            UIController.Get<HomeUI>().SetUsername(_username);
+            UIManager.Get<HomeUI>().SetUsername(_username);
         });
     }
 

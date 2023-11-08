@@ -2,16 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class UIManager : Singleton<UIManager>
+public class UIContainer : Singleton<UIContainer>
 {
-    [SerializeField] private List<BaseUI> preloadUIList; 
     private readonly Dictionary<string, BaseUI> _uiDict = new();
     private const string PATH = "Prefabs/UI/";
-
-    private void Start()
-    {
-        preloadUIList.ForEach(x => ShowUI(x.name));
-    }
 
     public BaseUI GetUI(string key)
     {
@@ -67,20 +61,20 @@ public class UIManager : Singleton<UIManager>
     }
 }
 
-public static class UIController
+public static class UIManager
 {
     public static void Open<T>(params object[] args) where T : BaseUI
     {
-        UIManager.Instance.ShowUI(typeof(T).Name, args);
+        UIContainer.Instance.ShowUI(typeof(T).Name, args);
     }
 
     public static void Close<T>(params object[] args) where T : BaseUI
     {
-        UIManager.Instance.HideUI(typeof(T).Name, args);
+        UIContainer.Instance.HideUI(typeof(T).Name, args);
     }
 
     public static T Get<T>() where T : BaseUI
     {
-        return UIManager.Instance.GetUI<T>(typeof(T).Name);
+        return UIContainer.Instance.GetUI<T>(typeof(T).Name);
     }
 }

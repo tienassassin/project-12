@@ -3,10 +3,16 @@ using UnityEngine;
 public abstract class BaseUI : DuztineBehaviour
 {
     [SerializeField] private Canvas canvas;
-    
-    protected virtual void Awake()
+
+    protected override void Awake()
     {
+        base.Awake();
         canvas.worldCamera = Camera.main;
+        AssignUICallback();
+    }
+
+    protected virtual void AssignUICallback()
+    {
     }
 
     public virtual void Open(params object[] args)

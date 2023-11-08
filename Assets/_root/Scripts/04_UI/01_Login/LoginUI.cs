@@ -94,11 +94,11 @@ public class LoginUI : DuztineBehaviour
                 var profile = result.InfoResultPayload.PlayerProfile;
                 if (profile != null && !profile.DisplayName.IsNullOrWhitespace())
                 {
-                    UIController.Get<HomeUI>().SetUsername(profile.DisplayName);
+                    UIManager.Get<HomeUI>().SetUsername(profile.DisplayName);
                 }
                 else
                 {
-                    UIController.Open<UsernameUI>();
+                    UIManager.Open<UsernameUI>();
                 }
             });
         }, error =>
@@ -132,7 +132,7 @@ public class LoginUI : DuztineBehaviour
             PlayerPrefs.SetString(PPKeys.PASSWORD, remember ? inpPasswords[1].text : null);
             PlayerPrefs.SetInt(PPKeys.STAY_SIGNED_IN, remember ? 1 : 0);
             SceneLoader.Instance.LoadScene(SceneName.HOME, 3f, PrepareData,
-                () => { UIController.Open<UsernameUI>(); });
+                () => { UIManager.Open<UsernameUI>(); });
         }, error =>
         {
             GlobalUI.Instance.ShowNotification("Login failed. Please check your information.");

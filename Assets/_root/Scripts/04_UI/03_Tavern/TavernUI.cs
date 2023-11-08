@@ -25,6 +25,8 @@ public class TavernUI : BaseUI
     [SerializeField] private Button btnSlayer;
     [SerializeField] private Button btnSupport;
 
+    [TitleGroup("Others:")]
+    [SerializeField] private Button btnBack;
 
     [SerializeField] private FilterOption[] tierFilterOptions;
     [SerializeField] private FilterOption[] elementFilterOptions;
@@ -51,7 +53,6 @@ public class TavernUI : BaseUI
     protected override void Awake()
     {
         base.Awake();
-        AssignUICallback();
 
         // foreach (var opt in tierFilterOptions)
         // {
@@ -92,27 +93,13 @@ public class TavernUI : BaseUI
         // Refresh();
     }
 
-    public static void Show()
+    protected override void AssignUICallback()
     {
-        UIManager.Instance.ShowUI(nameof(TavernUI));
-    }
-
-    public static void Hide()
-    {
-        UIManager.Instance.HideUI(nameof(TavernUI));
-    }
-
-    private void AssignUICallback()
-    {
-        togShowLocked.onValueChanged.AddListener(SwitchShowLocked);
         btnApply.onClick.AddListener(ApplyFilterAndSort);
         btnTank.onClick.AddListener(() => { SwitchContainerVisibility(containerTank); });
         btnSlayer.onClick.AddListener(() => { SwitchContainerVisibility(containerSlayer); });
         btnSupport.onClick.AddListener(() => { SwitchContainerVisibility(containerSupport); });
-    }
-
-    private void SwitchShowLocked(bool value)
-    {
+        btnBack.onClick.AddListener(() => { });
     }
 
     private void SwitchContainerVisibility(Transform container)
@@ -122,6 +109,7 @@ public class TavernUI : BaseUI
 
     private void ApplyFilterAndSort()
     {
+        var showLocked = togShowLocked.isOn;
         var realmOption = drpRealm.value;
         var dmgTypeOption = drpDamageType.value;
         var atkRangeOption = drpAttackRange.value;
@@ -299,13 +287,4 @@ public class TavernUI : BaseUI
         _tierSort = (asc ? SortType.Ascending : SortType.Descending);
         Refresh();
     }
-
-    #region Buttons
-
-    public void OnClickBack()
-    {
-        Hide();
-    }
-
-    #endregion
 }

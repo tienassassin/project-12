@@ -21,6 +21,14 @@ public class HomeUI : BaseUI
     [SerializeField] private Image imgTime;
     [SerializeField] private Sprite[] sprTimes;
 
+    [TitleGroup("Bot bar:")]
+    [SerializeField] private Button btnTavern;
+    [SerializeField] private Button btnLineUp;
+    [SerializeField] private Button btnQuest;
+    [SerializeField] private Button btnInventory;
+    [SerializeField] private Button btnLeaderboard;
+    [SerializeField] private Button btnCampaign;
+
     [TitleGroup("Others:")]
     [SerializeField] private TMP_Text fpsTxt;
     [SerializeField] private float logInterval = 0.5f;
@@ -28,33 +36,35 @@ public class HomeUI : BaseUI
     private float _curTime;
     private int _frameCount;
 
-    public static void Open()
-    {
-        UIManager.Instance.ShowUI(nameof(HomeUI));
-    }
-
-    public static void Close()
-    {
-        UIManager.Instance.HideUI(nameof(HomeUI));
-    }
-
     protected override void Awake()
     {
         base.Awake();
-
         SetTime();
-
-        this.AddListener(EventID.ON_UPDATE_CURRENCIES, UpdateCurrencies);
-    }
-
-    private void OnDestroy()
-    {
-        this.RemoveListener(EventID.ON_UPDATE_CURRENCIES, UpdateCurrencies);
     }
 
     private void Update()
     {
         CalculateFPS();
+    }
+
+    protected override void RegisterEvents()
+    {
+        this.AddListener(EventID.ON_UPDATE_CURRENCIES, UpdateCurrencies);
+    }
+
+    protected override void UnregisterEvents()
+    {
+        this.RemoveListener(EventID.ON_UPDATE_CURRENCIES, UpdateCurrencies);
+    }
+
+    protected override void AssignUICallback()
+    {
+        btnTavern.onClick.AddListener(OpenTavern);
+        btnLineUp.onClick.AddListener(OpenLineUp);
+        btnQuest.onClick.AddListener(OpenQuest);
+        btnInventory.onClick.AddListener(OpenInventory);
+        btnLeaderboard.onClick.AddListener(OpenLeaderboard);
+        btnCampaign.onClick.AddListener(OpenCampaign);
     }
 
     private void SetTime()
@@ -76,7 +86,7 @@ public class HomeUI : BaseUI
         }
     }
 
-    public void UpdateCurrencies(object data = null)
+    private void UpdateCurrencies(object data = null)
     {
         PlayFabManager.Instance.FetchCurrencies((currenciesDict, rechargeDict) =>
         {
@@ -99,24 +109,24 @@ public class HomeUI : BaseUI
         imgAvatarFrame.sprite = AssetLibrary.Instance.GetAvatarFrameAsset(avatarID).avatarFrame;
     }
 
-    public void OpenValhalla()
+    public void OpenTavern()
     {
-        TavernUI.Show();
+        UIManager.Open<TavernUI>();
     }
 
     public void OpenLineUp()
     {
-        LineUpUI.Show();
+        UIManager.Open<LineUpUI>();
     }
 
     public void OpenQuest()
     {
-        // QuestUI.Show();
+        UIManager.Open<QuestUI>();
     }
 
     public void OpenInventory()
     {
-        // InventoryUI.Show();
+        UIManager.Open<InventoryUI>();
     }
 
     public void OpenLeaderboard()

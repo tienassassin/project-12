@@ -153,7 +153,7 @@ public class PlayerManager : Singleton<PlayerManager>
             var level = int.Parse(dict[PlayFabKey.PLAYER_DATA_LEVEL]);
             var avatarID = dict[PlayFabKey.PLAYER_DATA_AVATAR_ID];
             var avatarFrameID = dict[PlayFabKey.PLAYER_DATA_AVATAR_FRAME_ID];
-            UIController.Get<HomeUI>().SetPlayerInfo(level, avatarID, avatarFrameID);
+            UIManager.Get<HomeUI>().SetPlayerInfo(level, avatarID, avatarFrameID);
         });
 
         this.PostEvent(EventID.ON_UPDATE_CURRENCIES);
