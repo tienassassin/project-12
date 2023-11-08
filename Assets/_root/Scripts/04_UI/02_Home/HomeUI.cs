@@ -101,7 +101,7 @@ public class HomeUI : BaseUI
 
     public void OpenValhalla()
     {
-        ValhallaUI.Show();
+        TavernUI.Show();
     }
 
     public void OpenLineUp()

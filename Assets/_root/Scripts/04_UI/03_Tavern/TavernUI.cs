@@ -1,8 +1,31 @@
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ValhallaUI : BaseUI
+public class TavernUI : BaseUI
 {
+    [TitleGroup("Filter & Sort:")]
+    [SerializeField] private Toggle togShowLocked;
+    [SerializeField] private TMP_Dropdown drpRealm;
+    [SerializeField] private TMP_Dropdown drpDamageType;
+    [SerializeField] private TMP_Dropdown drpAttackRange;
+    [SerializeField] private TMP_Dropdown drpSort;
+    [SerializeField] private Button btnApply;
+
+    [TitleGroup("Entities:")]
+    [SerializeField] private TMP_Text txtTank;
+    [SerializeField] private TMP_Text txtSlayer;
+    [SerializeField] private TMP_Text txtSupport;
+    [SerializeField] private Transform containerTank;
+    [SerializeField] private Transform containerSlayer;
+    [SerializeField] private Transform containerSupport;
+    [SerializeField] private Button btnTank;
+    [SerializeField] private Button btnSlayer;
+    [SerializeField] private Button btnSupport;
+
+
     [SerializeField] private FilterOption[] tierFilterOptions;
     [SerializeField] private FilterOption[] elementFilterOptions;
     [SerializeField] private FilterOption[] raceFilterOptions;
@@ -28,54 +51,81 @@ public class ValhallaUI : BaseUI
     protected override void Awake()
     {
         base.Awake();
+        AssignUICallback();
 
-        foreach (var opt in tierFilterOptions)
-        {
-            opt.SetEvent(AddOptionToFilter);
-        }
-
-        foreach (var opt in elementFilterOptions)
-        {
-            opt.SetEvent(AddOptionToFilter);
-        }
-
-        foreach (var opt in raceFilterOptions)
-        {
-            opt.SetEvent(AddOptionToFilter);
-        }
-
-        _cards = new List<ValhallaHeroCard>();
-        foreach (Transform child in heroCardContainer)
-        {
-            _cards.Add(child.gameObject.GetComponent<ValhallaHeroCard>());
-        }
-
-        heroDetail.gameObject.SetActive(false);
+        // foreach (var opt in tierFilterOptions)
+        // {
+        //     opt.SetEvent(AddOptionToFilter);
+        // }
+        //
+        // foreach (var opt in elementFilterOptions)
+        // {
+        //     opt.SetEvent(AddOptionToFilter);
+        // }
+        //
+        // foreach (var opt in raceFilterOptions)
+        // {
+        //     opt.SetEvent(AddOptionToFilter);
+        // }
+        //
+        // _cards = new List<ValhallaHeroCard>();
+        // foreach (Transform child in heroCardContainer)
+        // {
+        //     _cards.Add(child.gameObject.GetComponent<ValhallaHeroCard>());
+        // }
+        //
+        // heroDetail.gameObject.SetActive(false);
     }
 
     private void OnEnable()
     {
-        _tierOpts.Clear();
-        _elementOpts.Clear();
-        _raceOpts.Clear();
-
-        _lvSort = SortType.Descending;
-        _tierSort = SortType.None;
-
-        _entities = GameDatabase.Instance.GetAllEntities();
-
-        LoadHeroCards();
-        Refresh();
+        // _tierOpts.Clear();
+        // _elementOpts.Clear();
+        // _raceOpts.Clear();
+        //
+        // _lvSort = SortType.Descending;
+        // _tierSort = SortType.None;
+        //
+        // _entities = GameDatabase.Instance.GetAllEntities();
+        //
+        // LoadHeroCards();
+        // Refresh();
     }
 
     public static void Show()
     {
-        UIManager.Instance.ShowUI(nameof(ValhallaUI));
+        UIManager.Instance.ShowUI(nameof(TavernUI));
     }
 
     public static void Hide()
     {
-        UIManager.Instance.HideUI(nameof(ValhallaUI));
+        UIManager.Instance.HideUI(nameof(TavernUI));
+    }
+
+    private void AssignUICallback()
+    {
+        togShowLocked.onValueChanged.AddListener(SwitchShowLocked);
+        btnApply.onClick.AddListener(ApplyFilterAndSort);
+        btnTank.onClick.AddListener(() => { SwitchContainerVisibility(containerTank); });
+        btnSlayer.onClick.AddListener(() => { SwitchContainerVisibility(containerSlayer); });
+        btnSupport.onClick.AddListener(() => { SwitchContainerVisibility(containerSupport); });
+    }
+
+    private void SwitchShowLocked(bool value)
+    {
+    }
+
+    private void SwitchContainerVisibility(Transform container)
+    {
+        container.gameObject.SetActive(!container.gameObject.activeSelf);
+    }
+
+    private void ApplyFilterAndSort()
+    {
+        var realmOption = drpRealm.value;
+        var dmgTypeOption = drpDamageType.value;
+        var atkRangeOption = drpAttackRange.value;
+        var sortOption = drpSort.value;
     }
 
     private void LoadHeroCards()
@@ -86,7 +136,7 @@ public class ValhallaUI : BaseUI
             _cards.Add(o);
         }
 
-        for (int i = 0; i < _cards.Count; i++)
+        for (var i = 0; i < _cards.Count; i++)
         {
             var card = _cards[i];
             if (i >= _entities.Count)
@@ -116,9 +166,9 @@ public class ValhallaUI : BaseUI
 
     private void Refresh()
     {
-        bool acpAllTier = _tierOpts.Count < 1;
-        bool acpAllElement = _elementOpts.Count < 1;
-        bool acpAllRace = _raceOpts.Count < 1;
+        var acpAllTier = _tierOpts.Count < 1;
+        var acpAllElement = _elementOpts.Count < 1;
+        var acpAllRace = _raceOpts.Count < 1;
 
         if (_lvSort != SortType.None)
         {
@@ -140,9 +190,9 @@ public class ValhallaUI : BaseUI
             c.transform.SetAsLastSibling();
             if (c.name == Constants.EMPTY_MARK) return;
 
-            bool match = (_tierOpts.Contains(c.Tier) || acpAllTier)
-                         && (_elementOpts.Contains(c.Role) || acpAllElement)
-                         && (_raceOpts.Contains(c.Realm) || acpAllRace);
+            var match = (_tierOpts.Contains(c.Tier) || acpAllTier)
+                        && (_elementOpts.Contains(c.Role) || acpAllElement)
+                        && (_raceOpts.Contains(c.Realm) || acpAllRace);
 
             c.gameObject.SetActive(match);
 
@@ -154,11 +204,11 @@ public class ValhallaUI : BaseUI
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;
 
-            int lockComparision = c1.IsLocked.CompareTo(c2.IsLocked);
+            var lockComparision = c1.IsLocked.CompareTo(c2.IsLocked);
             if (lockComparision != 0) return lockComparision;
-            int levelComparision = c1.Level.CompareTo(c2.Level);
+            var levelComparision = c1.Level.CompareTo(c2.Level);
             if (levelComparision != 0) return ascending ? levelComparision : -levelComparision;
-            int tierComparision = c1.Tier.CompareTo(c2.Tier);
+            var tierComparision = c1.Tier.CompareTo(c2.Tier);
             return ascending ? tierComparision : -tierComparision;
         }
 
@@ -167,11 +217,11 @@ public class ValhallaUI : BaseUI
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;
 
-            int lockComparision = c1.IsLocked.CompareTo(c2.IsLocked);
+            var lockComparision = c1.IsLocked.CompareTo(c2.IsLocked);
             if (lockComparision != 0) return lockComparision;
-            int tierComparision = c1.Tier.CompareTo(c2.Tier);
+            var tierComparision = c1.Tier.CompareTo(c2.Tier);
             if (tierComparision != 0) return ascending ? tierComparision : -tierComparision;
-            int levelComparision = c1.Level.CompareTo(c2.Level);
+            var levelComparision = c1.Level.CompareTo(c2.Level);
             return ascending ? levelComparision : -levelComparision;
         }
     }
@@ -192,7 +242,7 @@ public class ValhallaUI : BaseUI
     {
         if (!_selectedCard || _activeCards.Count < 2) return;
 
-        int nextIndex = _activeCards.IndexOf(_selectedCard) + 1;
+        var nextIndex = _activeCards.IndexOf(_selectedCard) + 1;
         if (nextIndex >= _activeCards.Count) nextIndex = 0;
         _activeCards[nextIndex].SelectCard();
     }
@@ -201,7 +251,7 @@ public class ValhallaUI : BaseUI
     {
         if (!_selectedCard || _activeCards.Count < 2) return;
 
-        int nextIndex = _activeCards.IndexOf(_selectedCard) - 1;
+        var nextIndex = _activeCards.IndexOf(_selectedCard) - 1;
         if (nextIndex < 0) nextIndex = _activeCards.Count - 1;
         _activeCards[nextIndex].SelectCard();
     }
