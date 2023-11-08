@@ -13,7 +13,7 @@ public class GameManager : Singleton<GameManager>
         {
             foreach (var pair in dict)
             {
-                EditorLog.Message(pair.Key + " " + pair.Value);
+                DebugLog.Message(pair.Key + " " + pair.Value);
             }
 
             growthDB.Init(dict["growth"]);

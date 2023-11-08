@@ -26,7 +26,7 @@ public class BattleUIManager : Singleton<BattleUIManager>
             }
             else
             {
-                EditorLog.Error($"UI {key} is undefined!");
+                DebugLog.Error($"UI {key} is undefined!");
             }
         }
 

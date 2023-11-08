@@ -105,8 +105,8 @@ public class HomeUI : BaseUI
     public void SetPlayerInfo(int level, string avatarID, string avatarFrameID)
     {
         txtLevel.text = $"{level}";
-        imgAvatar.sprite = AssetLibrary.Instance.GetAvatarAsset(avatarID).avatar;
-        imgAvatarFrame.sprite = AssetLibrary.Instance.GetAvatarFrameAsset(avatarID).avatarFrame;
+        imgAvatar.sprite = AssetLibrary.Instance.GetAvatar(avatarID);
+        imgAvatarFrame.sprite = AssetLibrary.Instance.GetAvatarFrame(avatarID);
     }
 
     public void OpenTavern()

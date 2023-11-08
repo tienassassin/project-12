@@ -20,7 +20,7 @@ public class UIContainer : Singleton<UIContainer>
             }
             else
             {
-                EditorLog.Error($"UI {key} is undefined!");
+                DebugLog.Error($"UI {key} is undefined!");
             } 
         }
 

@@ -34,12 +34,12 @@ public class BattleManager : Singleton<BattleManager>
             switch (state)
             {
                 case BattleState.Victory:
-                    EditorLog.Message("<color=yellow>BATTLE END: VICTORY</color>");
+                    DebugLog.Message("<color=yellow>BATTLE END: VICTORY</color>");
                     // todo: review later
                     break;
 
                 case BattleState.Loss:
-                    EditorLog.Message("<color=yellow>BATTLE END: LOSS</color>");
+                    DebugLog.Message("<color=yellow>BATTLE END: LOSS</color>");
                     // todo: review later
                     break;
             }
@@ -56,7 +56,7 @@ public class BattleManager : Singleton<BattleManager>
     private async void StartBattle()
     {
         await UniTask.Delay(TimeSpan.FromSeconds(3));
-        EditorLog.Message("<color=yellow>BATTLE START!</color>");
+        DebugLog.Message("<color=yellow>BATTLE START!</color>");
         state = BattleState.Playing;
     }
 
@@ -73,7 +73,7 @@ public class BattleManager : Singleton<BattleManager>
 
         if (selectedEntity)
         {
-            EditorLog.Message("Selected " + entity.name);
+            DebugLog.Message("Selected " + entity.name);
             selectedEntity.SwitchActionPanel(true);
         }
     }
@@ -117,7 +117,7 @@ public class BattleManager : Singleton<BattleManager>
         this.PostEvent(EventID.ON_TARGET_FOCUSED, SkillTargetType.Enemy);
         _targetConfirmed = target =>
         {
-            EditorLog.Message($"{CurrentEntity.name} attacked {target.name}");
+            DebugLog.Message($"{CurrentEntity.name} attacked {target.name}");
             CurrentEntity.Entity.Attack(target.Entity, () =>
             {
                 _targetConfirmed = null;
@@ -132,7 +132,7 @@ public class BattleManager : Singleton<BattleManager>
         this.PostEvent(EventID.ON_TARGET_FOCUSED, CurrentEntity.Entity.SkillTargetType);
         _targetConfirmed = target =>
         {
-            EditorLog.Message($"{CurrentEntity.name} used skill on {target.name}");
+            DebugLog.Message($"{CurrentEntity.name} used skill on {target.name}");
             // todo: review later
             CurrentEntity.Entity.UseSkill(target.Entity);
         };
@@ -144,7 +144,7 @@ public class BattleManager : Singleton<BattleManager>
         this.PostEvent(EventID.ON_TARGET_FOCUSED, CurrentEntity.Entity.UltimateTargetType);
         _targetConfirmed = target =>
         {
-            EditorLog.Message($"{CurrentEntity.name} used ultimate on {target.name}");
+            DebugLog.Message($"{CurrentEntity.name} used ultimate on {target.name}");
             // todo: review later
             CurrentEntity.Entity.UseUltimate(target.Entity);
         };

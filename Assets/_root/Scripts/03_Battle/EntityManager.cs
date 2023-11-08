@@ -43,7 +43,7 @@ public class EntityManager : Singleton<EntityManager>
             _allyCount++;
         }
 
-        EditorLog.Message("Ally team loaded");
+        DebugLog.Message("Ally team loaded");
     }
 
     private void SpawnEnemyTeam()
@@ -61,7 +61,7 @@ public class EntityManager : Singleton<EntityManager>
             _enemyCount++;
         }
 
-        EditorLog.Message("Enemy team loaded");
+        DebugLog.Message("Enemy team loaded");
     }
 
     private int GetFirstPositionIndex(int quantity)

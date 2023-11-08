@@ -91,7 +91,7 @@ public class LineUpDetail : DuztineBehaviour
                 _raceOpts.Add(r);
                 break;
             default:
-                EditorLog.Error($"Object {o} is not a valid filter option");
+                DebugLog.Error($"Object {o} is not a valid filter option");
                 return;
         }
 

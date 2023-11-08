@@ -26,7 +26,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
         PlayFabClientAPI.LoginWithCustomID(request,
             result => { GlobalUI.Instance.ShowNotification("Login successfully."); }, error =>
             {
-                EditorLog.Message("PlayFab: Login failed, error: " + error.ErrorMessage);
+                DebugLog.Message("PlayFab: Login failed, error: " + error.ErrorMessage);
                 GlobalUI.Instance.ShowNotification("Login failed. Please check your information.");
             });
     }
@@ -47,7 +47,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
 
         PlayFabClientAPI.LoginWithEmailAddress(request, result => { success?.Invoke(result); }, error =>
         {
-            EditorLog.Message("PlayFab: Login failed, error: " + error.GenerateErrorReport());
+            DebugLog.Message("PlayFab: Login failed, error: " + error.GenerateErrorReport());
             fail?.Invoke(error);
         });
     }
@@ -65,7 +65,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
 
         PlayFabClientAPI.RegisterPlayFabUser(request, result => { success?.Invoke(result); }, error =>
         {
-            EditorLog.Message("PlayFab: Login failed, error: " + error.GenerateErrorReport());
+            DebugLog.Message("PlayFab: Login failed, error: " + error.GenerateErrorReport());
             fail?.Invoke(error);
         });
     }
@@ -82,7 +82,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
 
         PlayFabClientAPI.SendAccountRecoveryEmail(request, result => { success?.Invoke(result); }, error =>
         {
-            EditorLog.Message("PlayFab: Login failed, error: " + error.GenerateErrorReport());
+            DebugLog.Message("PlayFab: Login failed, error: " + error.GenerateErrorReport());
             fail?.Invoke(error);
         });
     }
@@ -98,7 +98,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
 
         PlayFabClientAPI.UpdateUserTitleDisplayName(request, result => { success?.Invoke(result); }, error =>
         {
-            EditorLog.Message("PlayFab: Update username failed, error: " + error.GenerateErrorReport());
+            DebugLog.Message("PlayFab: Update username failed, error: " + error.GenerateErrorReport());
             fail?.Invoke(error);
         });
     }
@@ -115,12 +115,12 @@ public class PlayFabManager : Singleton<PlayFabManager>
         PlayFabClientAPI.UpdateUserData(request,
             result =>
             {
-                EditorLog.Message($"PlayFab: Save player data, key={key} data={data}");
+                DebugLog.Message($"PlayFab: Save player data, key={key} data={data}");
                 success?.Invoke(result);
             },
             error =>
             {
-                EditorLog.Error($"PlayFab: Save player data failed, key={key}, error: {error.ErrorMessage}");
+                DebugLog.Error($"PlayFab: Save player data failed, key={key}, error: {error.ErrorMessage}");
                 fail?.Invoke(error);
             });
     }
@@ -134,18 +134,18 @@ public class PlayFabManager : Singleton<PlayFabManager>
         {
             if (result != null && result.Data.TryGetValue(key, out var record))
             {
-                EditorLog.Message($"PlayFab: Load player data, key={key} data={record.Value}");
+                DebugLog.Message($"PlayFab: Load player data, key={key} data={record.Value}");
                 onLoaded?.Invoke(record.Value);
             }
             else
             {
-                EditorLog.Message($"PlayFab: Load player data, key={key} not exist");
+                DebugLog.Message($"PlayFab: Load player data, key={key} not exist");
             }
 
             success?.Invoke(result);
         }, error =>
         {
-            EditorLog.Error($"PlayFab: Load player data failed, key={key}, error: {error.ErrorMessage}");
+            DebugLog.Error($"PlayFab: Load player data failed, key={key}, error: {error.ErrorMessage}");
             fail?.Invoke(error);
         });
     }
@@ -161,11 +161,11 @@ public class PlayFabManager : Singleton<PlayFabManager>
 
         PlayFabClientAPI.UpdateUserData(request, result =>
         {
-            EditorLog.Message($"PlayFab: Save user data");
+            DebugLog.Message($"PlayFab: Save user data");
             success?.Invoke(result);
         }, error =>
         {
-            EditorLog.Error($"PlayFab: Save player data failed, error: {error.ErrorMessage}");
+            DebugLog.Error($"PlayFab: Save player data failed, error: {error.ErrorMessage}");
             fail?.Invoke(error);
         });
     }
@@ -180,7 +180,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
             success?.Invoke(result);
         }, error =>
         {
-            EditorLog.Error($"PlayFab: Load player data failed, error: {error.ErrorMessage}");
+            DebugLog.Error($"PlayFab: Load player data failed, error: {error.ErrorMessage}");
             fail?.Invoke(error);
         });
     }
@@ -195,7 +195,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
             success?.Invoke(result);
         }, error =>
         {
-            EditorLog.Error($"PlayFab: Load game data failed, error: {error.ErrorMessage}");
+            DebugLog.Error($"PlayFab: Load game data failed, error: {error.ErrorMessage}");
             fail?.Invoke(error);
         });
     }
@@ -211,7 +211,7 @@ public class PlayFabManager : Singleton<PlayFabManager>
             success?.Invoke(result);
         }, error =>
         {
-            EditorLog.Error($"PlayFab: Fetch currencies failed, error: {error.ErrorMessage}");
+            DebugLog.Error($"PlayFab: Fetch currencies failed, error: {error.ErrorMessage}");
             fail?.Invoke(error);
         });
     }

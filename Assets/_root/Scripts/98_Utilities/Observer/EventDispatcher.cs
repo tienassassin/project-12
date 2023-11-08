@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventDispatcher : Singleton<EventDispatcher>
+public static class EventDispatcher
 {
-    private Dictionary<EventID, Action<object>> _eventDict = new();
+    private static Dictionary<EventID, Action<object>> _eventDict = new();
 
     /// <summary>
     ///     Add a listener to EventDispatcher
     /// </summary>
     /// <param name="eventID">EventID that object want to register</param>
     /// <param name="listener">Callback will be invoked when post this EventID</param>
-    public void AddListener(EventID eventID, Action<object> listener)
+    public static void AddListener(EventID eventID, Action<object> listener)
     {
         _eventDict.TryAdd(eventID, null);
         _eventDict[eventID] += listener;
@@ -22,11 +22,11 @@ public class EventDispatcher : Singleton<EventDispatcher>
     /// </summary>
     /// <param name="eventID">EventID that object want to unregister</param>
     /// <param name="listener">Callback will not be invoked anymore when post this EventID</param>
-    public void RemoveListener(EventID eventID, Action<object> listener)
+    public static void RemoveListener(EventID eventID, Action<object> listener)
     {
         if (!_eventDict.ContainsKey(eventID))
         {
-            EditorLog.Message($"Event {eventID} has 0 listeners");
+            DebugLog.Message($"Event {eventID} has 0 listeners");
             return;
         }
 
@@ -41,11 +41,11 @@ public class EventDispatcher : Singleton<EventDispatcher>
     /// </summary>
     /// <param name="eventID">EventID that will be posted</param>
     /// <param name="payload">Attached data, can be anything (class, struct...)</param>
-    public void PostEvent(EventID eventID, object payload = null)
+    public static void PostEvent(EventID eventID, object payload = null)
     {
         if (!_eventDict.ContainsKey(eventID))
         {
-            EditorLog.Message($"Event {eventID} has 0 listeners");
+            DebugLog.Message($"Event {eventID} has 0 listeners");
             return;
         }
 
@@ -55,7 +55,7 @@ public class EventDispatcher : Singleton<EventDispatcher>
     /// <summary>
     ///     Remove all events and their listeners
     /// </summary>
-    public void RemoveAllListener()
+    public static void RemoveAllListener()
     {
         _eventDict.Clear();
     }
@@ -85,16 +85,16 @@ public static class EventDispatcherExtensions
 {
     public static void AddListener(this MonoBehaviour obj, EventID eventID, Action<object> listener)
     {
-        EventDispatcher.Instance.AddListener(eventID, listener);
+        EventDispatcher.AddListener(eventID, listener);
     }
 
     public static void RemoveListener(this MonoBehaviour obj, EventID eventID, Action<object> listener)
     {
-        EventDispatcher.Instance.RemoveListener(eventID, listener);
+        EventDispatcher.RemoveListener(eventID, listener);
     }
 
     public static void PostEvent(this MonoBehaviour obj, EventID eventID, object payload = null)
     {
-        EventDispatcher.Instance.PostEvent(eventID, payload);
+        EventDispatcher.PostEvent(eventID, payload);
     }
 }

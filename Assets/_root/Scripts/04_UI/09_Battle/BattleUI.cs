@@ -132,7 +132,7 @@ public class BattleUI : BaseUI
             imgSkill.sprite = Utils.GetSkillIcon(entity.Entity.EntityID, 1);
             imgSkill.color = BattleManager.Instance.HasFireSpirit() ? _colorSkillAvailable : _colorSkillUnavailable;
 
-            EditorLog.Message("auto select attack");
+            DebugLog.Message("auto select attack");
             SelectAttack();
         }
         else

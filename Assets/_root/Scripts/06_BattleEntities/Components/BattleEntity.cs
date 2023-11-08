@@ -207,7 +207,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
             string dmgTxt = (impactType.IsNull() ? "immortal" : "+0");
             var o = ObjectPool.Instance.SpawnObject<HpText>(entityRef.hpTextPrefab, entityRef.hpTextPos.position);
             o.Init(impactType, dmgTxt);
-            EditorLog.Message(name + dmgTxt);
+            DebugLog.Message(name + dmgTxt);
         }
         else
         {
@@ -220,7 +220,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
                 string dmgTxt = (impactType.IsHealing() ? "+" : "-") + amountPerHit;
                 var o = ObjectPool.Instance.SpawnObject<HpText>(entityRef.hpTextPrefab, entityRef.hpTextPos.position);
                 o.Init(impactType, dmgTxt);
-                EditorLog.Message(name + dmgTxt);
+                DebugLog.Message(name + dmgTxt);
             }
         }
     }
@@ -430,7 +430,7 @@ public abstract class BattleEntity : DuztineBehaviour, IDamageDealer, IDamageTak
 
     public virtual void Die()
     {
-        EditorLog.Message($"<color=red>{name} dead</color>");
+        DebugLog.Message($"<color=red>{name} dead</color>");
 
         entityAnim.PlayAnimation(AnimationState.Die);
         ActionQueue.Instance.RemoveEntity(UniqueID);

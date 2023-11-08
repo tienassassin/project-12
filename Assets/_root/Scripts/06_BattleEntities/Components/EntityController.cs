@@ -43,7 +43,7 @@ public class EntityController : DuztineBehaviour
             return;
         }
 
-        EditorLog.Message("=====> " + name + "'s turn!");
+        DebugLog.Message("=====> " + name + "'s turn!");
         _entityUI.SwitchHighlight(true);
         BattleManager.Instance.CurrentEntity = this;
 
@@ -114,7 +114,7 @@ public class EntityController : DuztineBehaviour
     private void AutoAction()
     {
         var target = _entityAuto.GetTarget();
-        EditorLog.Message($"{name} attacked {target.name}");
+        DebugLog.Message($"{name} attacked {target.name}");
         Entity.Attack(target.Entity, AutoEndTurn);
     }
 

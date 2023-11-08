@@ -1,28 +1,37 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AssetLibrary : Singleton<AssetLibrary>
 {
-    [SerializeField] private AvatarLibrary avatarLibrary;
-    [SerializeField] private ItemLibrary itemLibrary;
     [SerializeField] private EntityLibrary entityLibrary;
 
-    public EntityAsset GetEntityAsset(string id)
+    private const string AvatarPath = "Sprites/Avatars/";
+    private const string AvatarFramePath = "Sprites/AvatarFrames/";
+    private const string ItemPath = "Sprites/Items/";
+
+    protected override void Awake()
+    {
+        base.Awake();
+        SceneManager.activeSceneChanged += (scene0, scene1) => { Resources.UnloadUnusedAssets(); };
+    }
+
+    public EntityAsset GetEntity(string id)
     {
         return entityLibrary.entityAssets.Find(x => x.id.Equals(id));
     }
 
-    public ItemAsset GetItemAsset(string id)
+    public Sprite GetAvatar(string id)
     {
-        return itemLibrary.itemAssets.Find(x => x.id.Equals(id));
+        return Resources.Load<Sprite>(AvatarPath + id);
     }
 
-    public AvatarAsset GetAvatarAsset(string id)
+    public Sprite GetAvatarFrame(string id)
     {
-        return avatarLibrary.avatarAssets.Find(x => x.id.Equals(id));
+        return Resources.Load<Sprite>(AvatarFramePath + id);
     }
 
-    public AvatarFrameAsset GetAvatarFrameAsset(string id)
+    public Sprite GetItem(string id)
     {
-        return avatarLibrary.avatarFrameAssets.Find(x => x.id.Equals(id));
+        return Resources.Load<Sprite>(ItemPath + id);
     }
 }

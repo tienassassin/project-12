@@ -48,7 +48,7 @@ public class LineUpUI : BaseUI
         string auraStatistics = "Aura statistics: ";
         foreach (var kv in _raceCountDict) auraStatistics += $"\n{kv.Key} x {kv.Value}";
         foreach (var kv in _elementCountDict) auraStatistics += $"\n{kv.Key} x {kv.Value}";
-        EditorLog.Message(auraStatistics);
+        DebugLog.Message(auraStatistics);
     }
 
     private void RefreshDetailView(int slotId, MyEntity saveData)

@@ -66,7 +66,7 @@ public static class Utils
             return match.Groups[1].Value;
         }
 
-        EditorLog.Error($"{raw} not match pattern {pattern}");
+        DebugLog.Error($"{raw} not match pattern {pattern}");
         return raw;
     }
 
