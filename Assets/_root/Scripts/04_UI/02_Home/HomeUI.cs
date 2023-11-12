@@ -17,10 +17,6 @@ public class HomeUI : BaseUI
     [SerializeField] private TMP_Text txtDiamond;
     [SerializeField] private TMP_Text txtEnergy;
 
-    [TitleGroup("Time")]
-    [SerializeField] private Image imgTime;
-    [SerializeField] private Sprite[] sprTimes;
-
     [TitleGroup("Bot bar:")]
     [SerializeField] private Button btnTavern;
     [SerializeField] private Button btnLineUp;
@@ -35,12 +31,6 @@ public class HomeUI : BaseUI
 
     private float _curTime;
     private int _frameCount;
-
-    protected override void Awake()
-    {
-        base.Awake();
-        SetTime();
-    }
 
     private void Update()
     {
@@ -65,12 +55,6 @@ public class HomeUI : BaseUI
         btnInventory.onClick.AddListener(OpenInventory);
         btnLeaderboard.onClick.AddListener(OpenLeaderboard);
         btnCampaign.onClick.AddListener(OpenCampaign);
-    }
-
-    private void SetTime()
-    {
-        var now = DateTime.Now;
-        imgTime.sprite = sprTimes[now.Hour < 12 ? 0 : 1];
     }
 
     private void CalculateFPS()
