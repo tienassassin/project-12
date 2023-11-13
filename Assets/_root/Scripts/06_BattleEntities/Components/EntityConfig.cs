@@ -1,7 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class EntityConfig : DuztineBehaviour
+public class EntityConfig : AssassinBehaviour
 {
     [TitleGroup("Basic attack timing:")]
     [InfoBox("0: All / 1: Melee Config / 2: Ranged Config")]

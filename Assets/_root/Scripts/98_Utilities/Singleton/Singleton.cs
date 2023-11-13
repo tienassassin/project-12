@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Singleton<T> : DuztineBehaviour where T : DuztineBehaviour
+public class Singleton<T> : AssassinBehaviour where T : AssassinBehaviour
 {
     [SerializeField] private bool dontDestroyOnLoad;
 

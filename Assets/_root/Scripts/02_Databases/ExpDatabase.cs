@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 
-public class ExpDatabase : DuztineBehaviour
+public class ExpDatabase : AssassinBehaviour
 {
     public int levelMax;
 

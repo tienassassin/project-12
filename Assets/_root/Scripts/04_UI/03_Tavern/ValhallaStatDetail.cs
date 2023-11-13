@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ValhallaStatDetail : DuztineBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ValhallaStatDetail : AssassinBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private string key;
     [SerializeField] private TMP_Text txtTitle;

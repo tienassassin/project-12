@@ -1,4 +1,4 @@
-public class BaseEquipmentCard : DuztineBehaviour
+public class BaseEquipmentCard : AssassinBehaviour
 {
     // [TitleGroup("BASE DATA")]
     // protected Equipment SystemData;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class DuztineBehaviour : MonoBehaviour
+public abstract class AssassinBehaviour : MonoBehaviour
 {
     private Transform _cachedTransform;
 
@@ -27,11 +27,7 @@ public abstract class DuztineBehaviour : MonoBehaviour
         UnregisterEvents();
     }
 
-    protected virtual void RegisterEvents()
-    {
-    }
+    protected virtual void RegisterEvents() { }
 
-    protected virtual void UnregisterEvents()
-    {
-    }
+    protected virtual void UnregisterEvents() { }
 }

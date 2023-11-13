@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -20,5 +21,10 @@ public class GameManager : Singleton<GameManager>
             expData.Init(dict["exp"]);
             entityDB.Init(dict["entity"]);
         });
+    }
+
+    public List<EntityRecord> GetEntities()
+    {
+        return entityDB.entities;
     }
 }

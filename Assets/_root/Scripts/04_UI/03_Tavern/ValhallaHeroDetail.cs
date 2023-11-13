@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ValhallaHeroDetail : DuztineBehaviour
+public class ValhallaHeroDetail : AssassinBehaviour
 {
     [SerializeField] private GameObject[] tabs;
 

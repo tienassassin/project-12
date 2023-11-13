@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LineUpDetail : DuztineBehaviour
+public class LineUpDetail : AssassinBehaviour
 {
     [SerializeField] private GameObject info;
     [SerializeField] private GameObject equipmentGroup;
@@ -153,8 +153,8 @@ public class LineUpDetail : DuztineBehaviour
         {
             if (c.name == Constants.EMPTY_MARK) return;
 
-            var match = _raceOpts.Contains(c.Realm) || acpAllRace;
-            c.gameObject.SetActive(match);
+            // var match = _raceOpts.Contains(c.Realm) || acpAllRace;
+            // c.gameObject.SetActive(match);
         });
     }
 
@@ -169,10 +169,12 @@ public class LineUpDetail : DuztineBehaviour
             if (c1.name == Constants.EMPTY_MARK) return 1;
             if (c2.name == Constants.EMPTY_MARK) return -1;
 
-            int levelComparision = c1.Level.CompareTo(c2.Level);
-            if (levelComparision != 0) return ascending ? levelComparision : -levelComparision;
-            int tierComparision = c1.Tier.CompareTo(c2.Tier);
-            return ascending ? tierComparision : -tierComparision;
+            // int levelComparision = c1.Level.CompareTo(c2.Level);
+            // if (levelComparision != 0) return ascending ? levelComparision : -levelComparision;
+            // int tierComparision = c1.Tier.CompareTo(c2.Tier);
+            // return ascending ? tierComparision : -tierComparision;
+
+            return 0;
         }
     }
 

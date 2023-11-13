@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoginUI : DuztineBehaviour
+public class LoginUI : AssassinBehaviour
 {
     [SerializeField] private TMP_Text txtVersion;
     [SerializeField] private GameObject[] views;

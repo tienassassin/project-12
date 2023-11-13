@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class EntityDatabase : DuztineBehaviour
+public class EntityDatabase : AssassinBehaviour
 {
     public List<EntityRecord> entities = new();
 

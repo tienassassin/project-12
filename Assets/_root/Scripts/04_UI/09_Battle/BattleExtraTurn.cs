@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BattleExtraTurn : DuztineBehaviour
+public class BattleExtraTurn : AssassinBehaviour
 {
     [SerializeField] private Image imgBackground;
     [SerializeField] private Image imgBanner;

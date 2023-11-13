@@ -1,7 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class EntityReferenceHolder : DuztineBehaviour
+public class EntityReferenceHolder : AssassinBehaviour
 {
     [TitleGroup("Hp Impact:")]
     public Transform hpTextPos;

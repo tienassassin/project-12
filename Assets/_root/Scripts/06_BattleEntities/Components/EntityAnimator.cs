@@ -2,7 +2,7 @@ using Sirenix.OdinInspector;
 using Spine.Unity;
 using UnityEngine;
 
-public class EntityAnimator : DuztineBehaviour
+public class EntityAnimator : AssassinBehaviour
 {
     [SerializeField] private SkeletonAnimation skeleton;
     [SpineAnimation] [SerializeField] private string animIdle;

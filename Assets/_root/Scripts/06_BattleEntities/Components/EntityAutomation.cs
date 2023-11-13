@@ -4,7 +4,7 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class EntityAutomation : DuztineBehaviour
+public class EntityAutomation : AssassinBehaviour
 {
     [SerializeField] private TargetSelectRate[] targetSelectRates;
 

@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LineUpAura : DuztineBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class LineUpAura : AssassinBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private int minRank;
     [SerializeField] private int maxRank;

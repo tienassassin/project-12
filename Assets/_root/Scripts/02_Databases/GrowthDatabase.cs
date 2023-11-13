@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 
-public class GrowthDatabase : DuztineBehaviour
+public class GrowthDatabase : AssassinBehaviour
 {
     [TableList]
     public List<EntityGrowth> entityGrowths = new();

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BattleTurn : DuztineBehaviour
+public class BattleTurn : AssassinBehaviour
 {
     [SerializeField] private BattleExtraTurn turnPref;
     [SerializeField] private Transform turnContainer;

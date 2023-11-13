@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BattleHeroUltimate : DuztineBehaviour
+public class BattleHeroUltimate : AssassinBehaviour
 {
     [SerializeField] private Image imgSkill;
     [SerializeField] private Image imgHero;

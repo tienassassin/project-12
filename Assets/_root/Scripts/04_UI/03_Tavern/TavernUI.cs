@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -6,46 +7,46 @@ using UnityEngine.UI;
 
 public class TavernUI : BaseUI
 {
-    [TitleGroup("Filter & Sort:")]
-    [SerializeField] private Toggle togShowLocked;
-    [SerializeField] private TMP_Dropdown drpRealm;
-    [SerializeField] private TMP_Dropdown drpDamageType;
-    [SerializeField] private TMP_Dropdown drpAttackRange;
-    [SerializeField] private TMP_Dropdown drpSort;
-    [SerializeField] private Button btnApply;
+    // todo:
+    // [TitleGroup("Filter & Sort:")]
+    // [SerializeField] private Toggle togShowLocked;
+    // [SerializeField] private TMP_Dropdown drpRealm;
+    // [SerializeField] private TMP_Dropdown drpDamageType;
+    // [SerializeField] private TMP_Dropdown drpAttackRange;
+    // [SerializeField] private TMP_Dropdown drpSort;
+    // [SerializeField] private Button btnApply;
+    [TitleGroup("Entity:")]
+    [SerializeField] private TavernCell cellPrefab;
 
-    [TitleGroup("Entities:")]
-    [SerializeField] private TMP_Text txtTank;
-    [SerializeField] private TMP_Text txtSlayer;
-    [SerializeField] private TMP_Text txtSupport;
-    [SerializeField] private Transform containerTank;
-    [SerializeField] private Transform containerSlayer;
-    [SerializeField] private Transform containerSupport;
-    [SerializeField] private Button btnTank;
-    [SerializeField] private Button btnSlayer;
-    [SerializeField] private Button btnSupport;
+    [TitleGroup("Categories:")]
+    [SerializeField] private TMP_Text txtMortalNumber;
+    [SerializeField] private TMP_Text txtDivineNumber;
+    [SerializeField] private TMP_Text txtInfernalNumber;
+    [SerializeField] private TMP_Text txtChaosNumber;
+    [SerializeField] private Transform containerMortal;
+    [SerializeField] private Transform containerDivine;
+    [SerializeField] private Transform containerInfernal;
+    [SerializeField] private Transform containerChaos;
 
     [TitleGroup("Others:")]
-    [SerializeField] private Button btnBack;
+    [SerializeField] private Button btnClose;
 
-    [SerializeField] private FilterOption[] tierFilterOptions;
-    [SerializeField] private FilterOption[] elementFilterOptions;
-    [SerializeField] private FilterOption[] raceFilterOptions;
+    private List<TavernCell> _mortalCells = new();
+    private List<TavernCell> _divineCells = new();
+    private List<TavernCell> _infernalCells = new();
+    private List<TavernCell> _chaosCells = new();
+    
+    
+    
 
-    [SerializeField] private ValhallaHeroCard heroCardPref;
-    [SerializeField] private Transform heroCardContainer;
+    
 
-    [SerializeField] private ValhallaHeroDetail heroDetail;
+   
 
-    private List<EntityData> _entities = new();
 
-    private List<ValhallaHeroCard> _cards = new();
+    
     private List<ValhallaHeroCard> _activeCards = new();
     private ValhallaHeroCard _selectedCard;
-
-    private List<Role> _elementOpts = new();
-    private List<Realm> _raceOpts = new();
-    private List<Tier> _tierOpts = new();
 
     private SortType _lvSort;
     private SortType _tierSort;
@@ -53,177 +54,87 @@ public class TavernUI : BaseUI
     protected override void Awake()
     {
         base.Awake();
-
-        // foreach (var opt in tierFilterOptions)
-        // {
-        //     opt.SetEvent(AddOptionToFilter);
-        // }
-        //
-        // foreach (var opt in elementFilterOptions)
-        // {
-        //     opt.SetEvent(AddOptionToFilter);
-        // }
-        //
-        // foreach (var opt in raceFilterOptions)
-        // {
-        //     opt.SetEvent(AddOptionToFilter);
-        // }
-        //
-        // _cards = new List<ValhallaHeroCard>();
-        // foreach (Transform child in heroCardContainer)
-        // {
-        //     _cards.Add(child.gameObject.GetComponent<ValhallaHeroCard>());
-        // }
-        //
-        // heroDetail.gameObject.SetActive(false);
+        CleanUp();
     }
 
     private void OnEnable()
     {
-        // _tierOpts.Clear();
-        // _elementOpts.Clear();
-        // _raceOpts.Clear();
-        //
-        // _lvSort = SortType.Descending;
-        // _tierSort = SortType.None;
-        //
-        // _entities = GameDatabase.Instance.GetAllEntities();
-        //
-        // LoadHeroCards();
-        // Refresh();
+        UpdateEntityCells();
     }
 
     protected override void AssignUICallback()
     {
-        btnApply.onClick.AddListener(ApplyFilterAndSort);
-        btnTank.onClick.AddListener(() => { SwitchContainerVisibility(containerTank); });
-        btnSlayer.onClick.AddListener(() => { SwitchContainerVisibility(containerSlayer); });
-        btnSupport.onClick.AddListener(() => { SwitchContainerVisibility(containerSupport); });
-        btnBack.onClick.AddListener(() => { });
+        // btnApply.onClick.AddListener(ApplyFilterAndSort);
+        btnClose.onClick.AddListener(() => { });
     }
 
-    private void SwitchContainerVisibility(Transform container)
+    private void CleanUp()
     {
-        container.gameObject.SetActive(!container.gameObject.activeSelf);
+        foreach (Transform child in containerMortal) { Destroy(child.gameObject); }
+
+        foreach (Transform child in containerDivine) { Destroy(child.gameObject); }
+
+        foreach (Transform child in containerInfernal) { Destroy(child.gameObject); }
+
+        foreach (Transform child in containerChaos) { Destroy(child.gameObject); }
     }
 
     private void ApplyFilterAndSort()
     {
-        var showLocked = togShowLocked.isOn;
-        var realmOption = drpRealm.value;
-        var dmgTypeOption = drpDamageType.value;
-        var atkRangeOption = drpAttackRange.value;
-        var sortOption = drpSort.value;
+        // var showLocked = togShowLocked.isOn;
+        // var realmOption = drpRealm.value;
+        // var dmgTypeOption = drpDamageType.value;
+        // var atkRangeOption = drpAttackRange.value;
+        // var sortOption = drpSort.value;
     }
 
-    private void LoadHeroCards()
+    public void UpdateEntityCell(string id)
     {
-        while (heroCardContainer.childCount < _entities.Count)
+    }
+
+    public void UpdateEntityCells()
+    {
+        var allEntities = GameManager.Instance.GetEntities();
+        var mortalEntities = allEntities.Where(x => x.realm == Realm.Mortal).ToList();
+        var divineEntities = allEntities.Where(x => x.realm == Realm.Divine).ToList();
+        var infernalEntities = allEntities.Where(x => x.realm == Realm.Infernal).ToList();
+        var chaosEntities = allEntities.Where(x => x.realm == Realm.Chaos).ToList();
+
+        UpdateEntityCells(mortalEntities, _mortalCells, containerMortal, txtMortalNumber);
+        UpdateEntityCells(divineEntities, _divineCells, containerDivine, txtDivineNumber);
+        UpdateEntityCells(infernalEntities, _infernalCells, containerInfernal, txtInfernalNumber);
+        UpdateEntityCells(chaosEntities, _chaosCells, containerChaos, txtChaosNumber);
+    }
+
+    private void UpdateEntityCells(List<EntityRecord> records, List<TavernCell> cells, Transform container,
+        TMP_Text number)
+    {
+        if (records == null || records.Count == 0)
         {
-            var o = Instantiate(heroCardPref, heroCardContainer);
-            _cards.Add(o);
+            container.gameObject.SetActive(false);
+            number.gameObject.SetActive(false);
+            return;
         }
 
-        for (var i = 0; i < _cards.Count; i++)
+        container.gameObject.SetActive(true);
+        number.gameObject.SetActive(true);
+        number.text = $"[{records.Count}/{records.Count}]";
+        while (cells.Count < records.Count)
         {
-            var card = _cards[i];
-            if (i >= _entities.Count)
+            var clone = Instantiate(cellPrefab, container);
+            cells.Add(clone);
+        }
+
+        for (int i = 0; i < cells.Count; i++)
+        {
+            if (i >= records.Count)
             {
-                card.gameObject.SetActive(false);
-                card.name = Constants.EMPTY_MARK;
+                cells[i].gameObject.SetActive(false);
                 continue;
             }
 
-            card.gameObject.SetActive(true);
-            if (PlayerManager.Instance.IsHeroUnlocked(_entities[i].info.id, out var hsd))
-            {
-                // unlocked hero
-                card.Init(hsd, saveData =>
-                {
-                    ShowCardDetail(saveData);
-                    _selectedCard = card;
-                });
-            }
-            else
-            {
-                // locked hero
-                card.Init(_entities[i]);
-            }
+            cells[i].Init(records[i]);
         }
-    }
-
-    private void Refresh()
-    {
-        var acpAllTier = _tierOpts.Count < 1;
-        var acpAllElement = _elementOpts.Count < 1;
-        var acpAllRace = _raceOpts.Count < 1;
-
-        if (_lvSort != SortType.None)
-        {
-            _cards.Sort((c1, c2) =>
-                CompareLevel(c1, c2, _lvSort != SortType.Descending)
-            );
-        }
-        else if (_tierSort != SortType.None)
-        {
-            _cards.Sort((c1, c2) =>
-                CompareTier(c1, c2, _tierSort != SortType.Descending)
-            );
-        }
-
-        _activeCards.Clear();
-
-        _cards.ForEach(c =>
-        {
-            c.transform.SetAsLastSibling();
-            if (c.name == Constants.EMPTY_MARK) return;
-
-            var match = (_tierOpts.Contains(c.Tier) || acpAllTier)
-                        && (_elementOpts.Contains(c.Role) || acpAllElement)
-                        && (_raceOpts.Contains(c.Realm) || acpAllRace);
-
-            c.gameObject.SetActive(match);
-
-            if (match) _activeCards.Add(c);
-        });
-
-        int CompareLevel(ValhallaHeroCard c1, ValhallaHeroCard c2, bool ascending)
-        {
-            if (c1.name == Constants.EMPTY_MARK) return 1;
-            if (c2.name == Constants.EMPTY_MARK) return -1;
-
-            var lockComparision = c1.IsLocked.CompareTo(c2.IsLocked);
-            if (lockComparision != 0) return lockComparision;
-            var levelComparision = c1.Level.CompareTo(c2.Level);
-            if (levelComparision != 0) return ascending ? levelComparision : -levelComparision;
-            var tierComparision = c1.Tier.CompareTo(c2.Tier);
-            return ascending ? tierComparision : -tierComparision;
-        }
-
-        int CompareTier(ValhallaHeroCard c1, ValhallaHeroCard c2, bool ascending)
-        {
-            if (c1.name == Constants.EMPTY_MARK) return 1;
-            if (c2.name == Constants.EMPTY_MARK) return -1;
-
-            var lockComparision = c1.IsLocked.CompareTo(c2.IsLocked);
-            if (lockComparision != 0) return lockComparision;
-            var tierComparision = c1.Tier.CompareTo(c2.Tier);
-            if (tierComparision != 0) return ascending ? tierComparision : -tierComparision;
-            var levelComparision = c1.Level.CompareTo(c2.Level);
-            return ascending ? levelComparision : -levelComparision;
-        }
-    }
-
-    private void ShowCardDetail(MyEntity saveData)
-    {
-        heroDetail.gameObject.SetActive(true);
-        heroDetail.Init(saveData);
-    }
-
-    public void HideCardDetail()
-    {
-        heroDetail.gameObject.SetActive(false);
-        _selectedCard = null;
     }
 
     public void SelectNextCard()
@@ -242,49 +153,5 @@ public class TavernUI : BaseUI
         var nextIndex = _activeCards.IndexOf(_selectedCard) - 1;
         if (nextIndex < 0) nextIndex = _activeCards.Count - 1;
         _activeCards[nextIndex].SelectCard();
-    }
-
-    private void AddOptionToFilter(object o)
-    {
-        switch (o)
-        {
-            case Tier t when _tierOpts.Contains(t):
-                _tierOpts.Remove(t);
-                break;
-            case Tier t:
-                _tierOpts.Add(t);
-                break;
-            case Role e when _elementOpts.Contains(e):
-                _elementOpts.Remove(e);
-                break;
-            case Role e:
-                _elementOpts.Add(e);
-                break;
-            case Realm r when _raceOpts.Contains(r):
-                _raceOpts.Remove(r);
-                break;
-            case Realm r:
-                _raceOpts.Add(r);
-                break;
-            default:
-                DebugLog.Error($"Object {o} is not a valid filter option");
-                return;
-        }
-
-        Refresh();
-    }
-
-    public void SortByLevel(bool asc)
-    {
-        _lvSort = (asc ? SortType.Ascending : SortType.Descending);
-        _tierSort = SortType.None;
-        Refresh();
-    }
-
-    public void SortByTier(bool asc)
-    {
-        _lvSort = SortType.None;
-        _tierSort = (asc ? SortType.Ascending : SortType.Descending);
-        Refresh();
     }
 }

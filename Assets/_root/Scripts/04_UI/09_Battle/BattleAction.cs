@@ -1,3 +1,3 @@
-public class BattleAction : DuztineBehaviour
+public class BattleAction : AssassinBehaviour
 {
 }

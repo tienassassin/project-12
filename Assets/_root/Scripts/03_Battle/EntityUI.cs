@@ -3,7 +3,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EntityUI : DuztineBehaviour
+public class EntityUI : AssassinBehaviour
 {
     [TitleGroup("Colors:")]
     [SerializeField] private Color colorPositive;

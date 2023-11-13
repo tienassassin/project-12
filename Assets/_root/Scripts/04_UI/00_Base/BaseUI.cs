@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class BaseUI : DuztineBehaviour
+public abstract class BaseUI : AssassinBehaviour
 {
     [SerializeField] private Canvas canvas;
 

@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LineUpSlot : DuztineBehaviour
+public class LineUpSlot : AssassinBehaviour
 {
     [SerializeField] private int slotId;
     [SerializeField] private GameObject hero;

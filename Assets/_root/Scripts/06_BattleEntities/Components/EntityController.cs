@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EntityController : DuztineBehaviour
+public class EntityController : AssassinBehaviour
 {
     [SerializeField] private bool automatic;
 

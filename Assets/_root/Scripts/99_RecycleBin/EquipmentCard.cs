@@ -1,6 +1,4 @@
-using UnityEngine;
-
-public class EquipmentCard : DuztineBehaviour
+public class EquipmentCard : AssassinBehaviour
 {
     
 }
