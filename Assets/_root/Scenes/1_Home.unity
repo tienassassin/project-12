@@ -2495,8 +2495,8 @@ MonoBehaviour:
   cameraAxes: 0
   perspectiveZoomMode: 0
   camZoomMin: 4
-  camZoomMax: 7
-  camOverzoomMargin: 1
+  camZoomMax: 6
+  camOverzoomMargin: 0
   camOverdragMargin: 0
   boundaryMin: {x: -13.5, y: -7}
   boundaryMax: {x: 13.2, y: 12}

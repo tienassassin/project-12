@@ -65,7 +65,7 @@ public class TavernUI : BaseUI
     protected override void AssignUICallback()
     {
         // btnApply.onClick.AddListener(ApplyFilterAndSort);
-        btnClose.onClick.AddListener(() => { });
+        btnClose.onClick.AddListener(Close);
     }
 
     private void CleanUp()
@@ -95,10 +95,10 @@ public class TavernUI : BaseUI
     public void UpdateEntityCells()
     {
         var allEntities = GameManager.Instance.GetEntities();
-        var mortalEntities = allEntities.Where(x => x.realm == Realm.Mortal).ToList();
-        var divineEntities = allEntities.Where(x => x.realm == Realm.Divine).ToList();
-        var infernalEntities = allEntities.Where(x => x.realm == Realm.Infernal).ToList();
-        var chaosEntities = allEntities.Where(x => x.realm == Realm.Chaos).ToList();
+        var mortalEntities = allEntities.Where(x => x.canUnlock && x.realm == Realm.Mortal).ToList();
+        var divineEntities = allEntities.Where(x => x.canUnlock && x.realm == Realm.Divine).ToList();
+        var infernalEntities = allEntities.Where(x => x.canUnlock && x.realm == Realm.Infernal).ToList();
+        var chaosEntities = allEntities.Where(x => x.canUnlock && x.realm == Realm.Chaos).ToList();
 
         UpdateEntityCells(mortalEntities, _mortalCells, containerMortal, txtMortalNumber);
         UpdateEntityCells(divineEntities, _divineCells, containerDivine, txtDivineNumber);
@@ -112,12 +112,12 @@ public class TavernUI : BaseUI
         if (records == null || records.Count == 0)
         {
             container.gameObject.SetActive(false);
-            number.gameObject.SetActive(false);
+            number.transform.parent.gameObject.SetActive(false);
             return;
         }
 
         container.gameObject.SetActive(true);
-        number.gameObject.SetActive(true);
+        number.transform.parent.gameObject.SetActive(true);
         number.text = $"[{records.Count}/{records.Count}]";
         while (cells.Count < records.Count)
         {
@@ -153,5 +153,10 @@ public class TavernUI : BaseUI
         var nextIndex = _activeCards.IndexOf(_selectedCard) - 1;
         if (nextIndex < 0) nextIndex = _activeCards.Count - 1;
         _activeCards[nextIndex].SelectCard();
+    }
+
+    private void Close()
+    {
+        UIManager.Close<TavernUI>();
     }
 }

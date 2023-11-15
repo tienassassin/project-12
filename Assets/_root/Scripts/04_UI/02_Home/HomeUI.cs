@@ -1,5 +1,4 @@
-﻿using System;
-using Sirenix.OdinInspector;
+﻿using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -90,7 +89,7 @@ public class HomeUI : BaseUI
     {
         txtLevel.text = $"{level}";
         imgAvatar.sprite = AssetLibrary.Instance.GetAvatar(avatarID);
-        imgAvatarFrame.sprite = AssetLibrary.Instance.GetAvatarFrame(avatarID);
+        imgAvatarFrame.sprite = AssetLibrary.Instance.GetAvatarFrame(avatarFrameID);
     }
 
     public void OpenTavern()

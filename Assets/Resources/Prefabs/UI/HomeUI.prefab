@@ -1749,6 +1749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4602463017395544674}
   - component: {fileID: 4602463017395544677}
+  - component: {fileID: 4940843064559980735}
   m_Layer: 0
   m_Name: HomeUI
   m_TagString: Untagged
@@ -1800,6 +1801,19 @@ MonoBehaviour:
   btnCampaign: {fileID: 6368208128460898170}
   fpsTxt: {fileID: 3753508355999511629}
   logInterval: 0.5
+--- !u!114 &4940843064559980735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4602463017395544675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359e42cb28f492a4ca53444d6cb2e876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchInputController: {fileID: 0}
 --- !u!1 &4602463018247835362
 GameObject:
   m_ObjectHideFlags: 0

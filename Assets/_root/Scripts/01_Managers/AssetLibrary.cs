@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -59,4 +60,12 @@ public class AssetLibrary : Singleton<AssetLibrary>
     }
 
     #endregion
+
+    //debug
+
+    [Button]
+    public void DebugGetAvatar(string id)
+    {
+        DebugLog.Message(GetAvatar(id).name);
+    }
 }

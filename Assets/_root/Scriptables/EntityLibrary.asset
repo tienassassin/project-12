@@ -28,9 +28,9 @@ MonoBehaviour:
     banner: {fileID: 21300000, guid: a3f11ca11b291a64c81fb173f1e15bea, type: 3}
     lobbySkeleton: {fileID: 11400000, guid: b702904831d773844bd37c18af184e6d, type: 2}
     battleSkeleton: {fileID: 11400000, guid: daf3a6c552d34fd44808b2e4b1bd3eaa, type: 2}
-    passiveIcon: {fileID: 21300000, guid: 50d8456b2da1c6a4e99aa1f9e8969094, type: 3}
-    skillIcon: {fileID: 21300000, guid: 3557423f23951db479e375977c8b784a, type: 3}
-    ultimateIcon: {fileID: 21300000, guid: 4dd511cf4702f3a4d9a2672ac1c27304, type: 3}
+    passiveIcon: {fileID: 21300000, guid: 6ddb92261bf0afb4d8d445154b7b2576, type: 3}
+    skillIcon: {fileID: 21300000, guid: b60a38c7178fd614397fe027ce17063f, type: 3}
+    ultimateIcon: {fileID: 21300000, guid: 09a51dd274dac7041ae483346bf47e55, type: 3}
   - id: 02
     avatar: {fileID: 21300000, guid: b1059f4e66edd984e8e43f6621c9377c, type: 3}
     splashArt: {fileID: 21300000, guid: 2dc4d128314debd4a94b0418f614544f, type: 3}
@@ -76,3 +76,642 @@ MonoBehaviour:
     passiveIcon: {fileID: 21300000, guid: 80295073561f64540861ea494d7034f2, type: 3}
     skillIcon: {fileID: 21300000, guid: 5b09a5a236079ec4d8f97f21a305a8a2, type: 3}
     ultimateIcon: {fileID: 21300000, guid: 7fbf4ee3f135f40479c455bed4062d9f, type: 3}
+  - id: 07
+    avatar: {fileID: 21300000, guid: fad29d5efd10a3844bd7a17b24e33227, type: 3}
+    splashArt: {fileID: 21300000, guid: dea1094e390ea3840970159058027111, type: 3}
+    banner: {fileID: 21300000, guid: 7c1e44419771ac749befa01cab22ea01, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 1bbaf82958326e54c83aa45fd64b2492, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: f5ffcfdff7836d94a9121bf95266aeae, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 08
+    avatar: {fileID: 21300000, guid: 4ef5962a15758964b92718629aab070b, type: 3}
+    splashArt: {fileID: 21300000, guid: f24dec791544a0f46940c51b92b57c38, type: 3}
+    banner: {fileID: 21300000, guid: 9b19b54f1db173a40901a63b6d95e72c, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: a253ea161bce7b142880319d43954f5e, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 86dbfcc49443f724fbe8d9d5b0d6d071, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 09
+    avatar: {fileID: 21300000, guid: a027d1f49374a07489a99bd95857848b, type: 3}
+    splashArt: {fileID: 21300000, guid: e20608a202e036c4c804c069ca04e050, type: 3}
+    banner: {fileID: 21300000, guid: 21d4a13b94a86fc419eb0b89927d63f2, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 40cbd1ef06ae9c94884241ce649e9f4e, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: bf8ecf85d284450419e4fe1518ddc2dc, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 10
+    avatar: {fileID: 21300000, guid: eb1c251c1db627542ace357df13fb4b1, type: 3}
+    splashArt: {fileID: 21300000, guid: 3c1601d74fbd80e4097db0ee28daa245, type: 3}
+    banner: {fileID: 21300000, guid: aa5d54dba9aec5b43b999829eb31a1f9, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 8f236e46fd3ce524292a00503c61c159, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 4f0c8f6ed9ff561458ec9868b22adc64, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 11
+    avatar: {fileID: 21300000, guid: d1ccb439d869e4f46a17496bc9039ed4, type: 3}
+    splashArt: {fileID: 21300000, guid: 2727d588a893e1d48894760575e11ce3, type: 3}
+    banner: {fileID: 21300000, guid: 552e149b34f378a418e5848d7ca2ce8c, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 7f52a1eeebf9dd44594eae3183152dcd, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: b581f0b6e3bdd724fa02d184b30eddac, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 12
+    avatar: {fileID: 21300000, guid: a71fe6975cf96d44fb285be6e80c725a, type: 3}
+    splashArt: {fileID: 21300000, guid: 02ed7754df8d7424d90e8b304e237055, type: 3}
+    banner: {fileID: 21300000, guid: f9f63ed3f84e63549a10411f08a98adc, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 1bd95217acfc3e144bd5feb2c4709d06, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 8fbf68831971ce84a9306dae5a6fb7e4, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 13
+    avatar: {fileID: 21300000, guid: 00f40aff291fdc44bb7e90863c6d60ba, type: 3}
+    splashArt: {fileID: 21300000, guid: 04a8f8d1a200df14e8fef4abc909ea44, type: 3}
+    banner: {fileID: 21300000, guid: 5e29b25fa17eeb840adbc13d5b6a8449, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 056b490b2e216e6479fc557aae4866ba, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: affa40ba395a4a2498ce87b4d0dfd6b0, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 14
+    avatar: {fileID: 21300000, guid: 4d6f7b52d2f74e54695dc349be4734ac, type: 3}
+    splashArt: {fileID: 21300000, guid: 7b11e1a954fc90444b24d53eadb3ae4f, type: 3}
+    banner: {fileID: 21300000, guid: c2fc16697ba968f4482d8958fcefa1a7, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: feebada011bf75f4abdfe7cddd842c53, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: a66c862dd44ca8c4a8259fca4edb9937, type: 2}
+    passiveIcon: {fileID: 21300000, guid: 70b21b4d26e09294b82383d7c180ebac, type: 3}
+    skillIcon: {fileID: 21300000, guid: b7dfc8639d6ce874dae587b97e98e087, type: 3}
+    ultimateIcon: {fileID: 21300000, guid: b22c847146d782844b08d5f0e8f88e60, type: 3}
+  - id: 15
+    avatar: {fileID: 21300000, guid: 626e3454b1799fa4c938d47553640959, type: 3}
+    splashArt: {fileID: 21300000, guid: cfe10ab8d1b33be49bcef0474eff19e8, type: 3}
+    banner: {fileID: 21300000, guid: 6e1d04507e8d1bb4e84b50d5b8a841c2, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 72229cfbd7f811748bea4c209f414b7e, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: ab5bc770e30f7b94ca122fab3268ca25, type: 2}
+    passiveIcon: {fileID: 21300000, guid: 75b668063eef010428d30f2145612d06, type: 3}
+    skillIcon: {fileID: 21300000, guid: 959e7c32e6440bb4993a91f926136b9d, type: 3}
+    ultimateIcon: {fileID: 21300000, guid: 4bebab4c4a325c44785e82b6b05e3190, type: 3}
+  - id: 16
+    avatar: {fileID: 21300000, guid: 831d0855a56f28a47b8fe902a1c37842, type: 3}
+    splashArt: {fileID: 21300000, guid: e88997ec0a62eab439ea56bf1daa4c4f, type: 3}
+    banner: {fileID: 21300000, guid: fdcbaebde6d23514692add0dc6f25744, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: dbf285f22a1e03b49b61933fba89da1b, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: a5945fd0b33203c41bd80b4313ccc57b, type: 2}
+    passiveIcon: {fileID: 21300000, guid: b59ff086ebd8d3243b7939b77c849eae, type: 3}
+    skillIcon: {fileID: 21300000, guid: 12ea504f07b4a4140ab59a50477ca12f, type: 3}
+    ultimateIcon: {fileID: 21300000, guid: d58935d99417b284d82001e803cfaac7, type: 3}
+  - id: 17
+    avatar: {fileID: 21300000, guid: 4765f61da39615e44a67c4ec1a0190d4, type: 3}
+    splashArt: {fileID: 21300000, guid: 7cf43cc20f8a27e4483b32ccf6657dbe, type: 3}
+    banner: {fileID: 21300000, guid: 7f10de32834618b46aa62b9809c8cd26, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 8e4c7b5e106a74d41a13b818ca310bb5, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: b3a357a8a197b4349a6f5ea4b10a0b89, type: 2}
+    passiveIcon: {fileID: 21300000, guid: 52156cd66823a544bb15151802d50fbf, type: 3}
+    skillIcon: {fileID: 21300000, guid: 40c8ee0d4b865874dbb1a28c58a14913, type: 3}
+    ultimateIcon: {fileID: 21300000, guid: d5359505d0d78b547be72289a3c4ede3, type: 3}
+  - id: 18
+    avatar: {fileID: 21300000, guid: 078657a1d98bbd140b26a3f1e47c25ab, type: 3}
+    splashArt: {fileID: 21300000, guid: 814351a36deeb5c4894c5410bdb5872b, type: 3}
+    banner: {fileID: 21300000, guid: 81dcf97a781b00d4b8b03deb41d52f84, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 5ebe32b9ce374924c966f48bfe3cbaaa, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 18c8cae5b31aa6b43a8ecc43a037e6bc, type: 2}
+    passiveIcon: {fileID: 21300000, guid: 92a71b76c51998e48b56f2f1759a0d75, type: 3}
+    skillIcon: {fileID: 21300000, guid: 5ebcaebab5b968f4d84e4fca2cde4938, type: 3}
+    ultimateIcon: {fileID: 21300000, guid: 68d456b65eec76346819d14bb2a561ec, type: 3}
+  - id: 19
+    avatar: {fileID: 21300000, guid: 38c6ea2ffa50e204e81e51a22548390e, type: 3}
+    splashArt: {fileID: 21300000, guid: a716abe7b6b28d842b0b2a2a91548421, type: 3}
+    banner: {fileID: 21300000, guid: ec057065158e01e4d8eadf6570d4feb2, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 1fbe4c19114b1bf4a98a460aae3f5bc6, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 4134fd3ad7c41654bbf6d73d4c176daa, type: 2}
+    passiveIcon: {fileID: 21300000, guid: 202d7c5104b1a154f890bef44a9f82b3, type: 3}
+    skillIcon: {fileID: 21300000, guid: a1c10050ea68bbc4f9efbdbe8ee5675b, type: 3}
+    ultimateIcon: {fileID: 21300000, guid: b914826959a4c034dbe9a6ab1331c5b7, type: 3}
+  - id: 20
+    avatar: {fileID: 21300000, guid: fe65da70482ddab4182405446dbdc83c, type: 3}
+    splashArt: {fileID: 21300000, guid: cf84322a6469cfc47be521064ccce90e, type: 3}
+    banner: {fileID: 21300000, guid: f5e837246a03d9c4bbfc8bce9c173a2b, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: cf447ecddb4d5d346864db0fe165d3c7, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: a0f19c13cbbac2e45a13864c0b486a8c, type: 2}
+    passiveIcon: {fileID: 21300000, guid: b01929b8fbb9f214d939a3730b6ab272, type: 3}
+    skillIcon: {fileID: 21300000, guid: 07caded35da392b4fa25d7fae38f4b20, type: 3}
+    ultimateIcon: {fileID: 21300000, guid: 9369156db467c8941998550a87f62b5f, type: 3}
+  - id: 24
+    avatar: {fileID: 21300000, guid: 0f1edc605bcad22478f7695646424c23, type: 3}
+    splashArt: {fileID: 21300000, guid: 85c800fbfa3c57e4e9a2ff65a6e02f6d, type: 3}
+    banner: {fileID: 21300000, guid: 7f1a5d25f9263354892cd7cd5b70aa16, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 8c62aa7fd0480dd4ca534b0f80ab9673, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 6f7140b4acdd895448b33bcdb4cccdba, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 26
+    avatar: {fileID: 21300000, guid: d323d352fe03c294eb31c391403a9c07, type: 3}
+    splashArt: {fileID: 21300000, guid: 941419903244a4b4f8027af9322fa7fc, type: 3}
+    banner: {fileID: 21300000, guid: 6bbc526f31c5e974e9c94026405d31b5, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 454718769a1002d4da4543d02a3fe758, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 05b0bd17c27d04d4aaf6eed77f3bfa34, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 27
+    avatar: {fileID: 21300000, guid: 3b04b5afd9788ff4496eed0c6f6ffd86, type: 3}
+    splashArt: {fileID: 21300000, guid: 1c493b55efe62cf46b36eebfb6e28e00, type: 3}
+    banner: {fileID: 21300000, guid: 9c2bf1034187a4142baa97089677123c, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: e7064e316d106fa4181a9e256b88cc1f, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 93414974e66ee864085b44c7bc37cce9, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 24
+    avatar: {fileID: 21300000, guid: 0db1d2a4672a7954c93cfd0e1fead1ac, type: 3}
+    splashArt: {fileID: 21300000, guid: 978c0faaf1ea29640aef6423ac3ec1eb, type: 3}
+    banner: {fileID: 21300000, guid: 44caa112ee0d8fd4b848a7142fe956a2, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: b83fa409d4abd974ab238fe473371ad9, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 36f88d061bf1ca0419c8328bb3606d4e, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 25
+    avatar: {fileID: 21300000, guid: fd14c0d7db29b5146a0cf4abd11b226c, type: 3}
+    splashArt: {fileID: 21300000, guid: c368aebac34cb3b40be7c59c763d0ee4, type: 3}
+    banner: {fileID: 21300000, guid: 197c558facc9c2c4dbd226769a426c95, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: ebc22bb38a2f925448c8e1fde9f56f4d, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 08534b5171bf29545b764510f485ced7, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 26
+    avatar: {fileID: 21300000, guid: 5348afa54d4a3254a83bd6cb9fa56d62, type: 3}
+    splashArt: {fileID: 21300000, guid: d3ac7d93f83213e428eda4ba91a79e89, type: 3}
+    banner: {fileID: 21300000, guid: a94347013fd8e7e4fa80a6e81cfb0029, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 508f3b9d9667c604d90a685fdcec4972, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: ff7be78d04938ff478b1e885c0cf0e7d, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 27
+    avatar: {fileID: 21300000, guid: 83df61d64c174bc4e9140b2751527a1d, type: 3}
+    splashArt: {fileID: 21300000, guid: e996bbf88de80b543933168f8363115f, type: 3}
+    banner: {fileID: 21300000, guid: ddfc0170dc8540540bda79501c3da60a, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 2a0c594ab4251f4458f2741ad510d3e7, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 97eda8305818b414ca327bd4553e05ab, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 28
+    avatar: {fileID: 21300000, guid: 44790f916e1d4ed40a7ea8dda5078087, type: 3}
+    splashArt: {fileID: 21300000, guid: ef92006220d167b449299ec0a78e17a3, type: 3}
+    banner: {fileID: 21300000, guid: ccd22d15d796eef41aa38b76f1ec8830, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 2a8e2519b7ceb7743abfaedf0f09e3bf, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 24b911e13c427da4bb77474b0f672a61, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 29
+    avatar: {fileID: 21300000, guid: 97b4241a7dd712e41a65462544eb6cf1, type: 3}
+    splashArt: {fileID: 21300000, guid: 658ede567f57c7041a2592a7ae40b374, type: 3}
+    banner: {fileID: 21300000, guid: 4cb03b4df3439964b8f479ddfd43a726, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 76ef9c8d67fd3a54cb369fbca3822ab7, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 228a66027d886fb4b9246663dc0ef9e7, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 30
+    avatar: {fileID: 21300000, guid: a23ba8046d0c8d94bb0b292197d3f6cf, type: 3}
+    splashArt: {fileID: 21300000, guid: 759cfe7a553ff254ba542242f6222bd6, type: 3}
+    banner: {fileID: 21300000, guid: 2af5c0d6681d5564189a434bc245a9b3, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 0a25f048394f752459f32eab8d11206f, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: a2c530463c7b7f34f9e66a579a9d282d, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 31
+    avatar: {fileID: 21300000, guid: f6f8f21e7f00c2845830b4ed79ec0e1e, type: 3}
+    splashArt: {fileID: 21300000, guid: 03701f481a29a3d498780dd6009b8917, type: 3}
+    banner: {fileID: 21300000, guid: 2b2249af93a06654c802838f0ec2031b, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 749b1d6523bc5084c960fc8e6014d72c, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: cba494d14e4a0a542845a74fc92ee168, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 32
+    avatar: {fileID: 21300000, guid: e7d698bb23739644099ccc421c1cd9fc, type: 3}
+    splashArt: {fileID: 21300000, guid: 3d60611a2e910f24f93204ef03d6abad, type: 3}
+    banner: {fileID: 21300000, guid: 7d18fb17e03907348b440ff331a55f4f, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: b2c06e65559fa814f9d70a5495983b37, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: cf8902b2535e37a4e8eae4352e3a8fa8, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 33
+    avatar: {fileID: 21300000, guid: 64a7a0d3c1c44f14fa70b78bc43778bc, type: 3}
+    splashArt: {fileID: 21300000, guid: 16439eb840cc5784d97b6f82134f1b08, type: 3}
+    banner: {fileID: 21300000, guid: 2e931964405c66847bfcb559681ec370, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 5ae1fac3999336b489f5f995c095c566, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: bcc565ec32659434285965e10932f4fc, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 34
+    avatar: {fileID: 21300000, guid: af974f49a566dfb4ebafc9429cab3d61, type: 3}
+    splashArt: {fileID: 21300000, guid: cc00801c616d2124daef1580f6dab7c5, type: 3}
+    banner: {fileID: 21300000, guid: 5208a5e9c2825a4488635ac2b0389adc, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 6f46cf79c5c03854597ad546f796fd65, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 3babbd2b6432f0a4489b471d29a90374, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 35
+    avatar: {fileID: 21300000, guid: 65e2f2d3f355a9d4b81754d2f035330b, type: 3}
+    splashArt: {fileID: 21300000, guid: 5bd152fe5f6b64b4a8919096e300ae04, type: 3}
+    banner: {fileID: 21300000, guid: 029b885591f75d147b28efeffe1e4912, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 457758b144ea43b4a9bc87c532c79fb3, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 452ff926c7982ea46831792a17a8c03c, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 36
+    avatar: {fileID: 21300000, guid: 16464290c1a94f74cb0ecb3cf2da6228, type: 3}
+    splashArt: {fileID: 21300000, guid: 30181803ebdf40d4a855de5c43c1e297, type: 3}
+    banner: {fileID: 21300000, guid: dede9a3702b851f4d8207407a7f34604, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: a75be7b08c2213c4abb241333fc26be8, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 0d38a06f53361b94f803260a5c6b5668, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 37
+    avatar: {fileID: 21300000, guid: 920108c2992532c47889fb0a82fb4086, type: 3}
+    splashArt: {fileID: 21300000, guid: b6ee89ffdfcf3214eb49489751bb4d80, type: 3}
+    banner: {fileID: 21300000, guid: 6744aec22a568ca4ca4ed41d714fe77c, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: c909cc519bd59134b90b2678ff12f797, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 9ef6f13ac9d81c149bc677ec8b965125, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 38
+    avatar: {fileID: 21300000, guid: 1dabb5b2ab9bbd84b8de97b672ac1a9a, type: 3}
+    splashArt: {fileID: 21300000, guid: d4df419cf56e29b43a81b6c9030826ba, type: 3}
+    banner: {fileID: 21300000, guid: bba719e79256cc44e94c0295dde4fe6b, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 1c43ebb5eaed8ec47968ccdbe984b520, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 56273f9b192dce542bc59ea00b4cab0f, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 39
+    avatar: {fileID: 21300000, guid: c39c98f89d48cbc47b94a2e893b39748, type: 3}
+    splashArt: {fileID: 21300000, guid: c086338c0da2c1540a450ac545510dee, type: 3}
+    banner: {fileID: 21300000, guid: 911a12a1d4c3fd24cb8b4b914c493a13, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 079c593ace1a75f4db00c598b13d3744, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 6ee6c9fa1b4c9ba4d9978c4881d5015b, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 40
+    avatar: {fileID: 21300000, guid: a96831f57f7568642b524bc936d56d1f, type: 3}
+    splashArt: {fileID: 21300000, guid: 18d619515cbf169428af5516b4639010, type: 3}
+    banner: {fileID: 21300000, guid: 7e880e25d31a3934e896a52a4dafafb2, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 1d9341890c5a5ea46ac6d132d435ad77, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 20a4026892b1a4549830816df645f292, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 41
+    avatar: {fileID: 21300000, guid: 3e4b5e86d0e8fe349bd1e6599e62665d, type: 3}
+    splashArt: {fileID: 21300000, guid: 97b9030a1c088db4cbccd02a178c4eb4, type: 3}
+    banner: {fileID: 21300000, guid: 16da651529e8b964ba929b3f5dc50934, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: b6b839a57c37cac47bb8113c44ac3d50, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 38248a297b3b12f4692b5aa94f8dbdc6, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 42
+    avatar: {fileID: 21300000, guid: 4c7bd375b18e76146b03ede73d6709a2, type: 3}
+    splashArt: {fileID: 21300000, guid: a7d0d078cc5afa247b06b03e63290034, type: 3}
+    banner: {fileID: 21300000, guid: de230bdd1c8b8a543b8dcf8ee4a8907f, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 5b5b3fc0f09786445871bff4f7e423de, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 7879b9e575daac945b6e3ddf4d81eaac, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 43
+    avatar: {fileID: 21300000, guid: 71dc124ee44d99e469ffeaa23bd717d8, type: 3}
+    splashArt: {fileID: 21300000, guid: 5e9ed4785a1fe0247bf4a9ac70e655d1, type: 3}
+    banner: {fileID: 21300000, guid: 4e66abe0410811449bdaff36f9487204, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: b47037ca0f3f07c4aaf0e9921c4f6d7a, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 00d605394b89ec14a9e70b6f3bb0f056, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 44
+    avatar: {fileID: 21300000, guid: 648fe8df3cd831247ac64d9ca3ecbbd2, type: 3}
+    splashArt: {fileID: 21300000, guid: 9349e514ef59f2941bcb41fde768b12f, type: 3}
+    banner: {fileID: 21300000, guid: ccd9fd82b97caa4498ece7ccea3f0094, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 6c7254a87c10b0942bb0bb35d9fb6103, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 1eefb6af939f38f4b90adc786e9dd68e, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 45
+    avatar: {fileID: 21300000, guid: b7422a4d25053144e8ced95946e7d6a9, type: 3}
+    splashArt: {fileID: 21300000, guid: d7cb2c5ec5bf42e41b60615be6643c83, type: 3}
+    banner: {fileID: 21300000, guid: 140da1b37019c074cabc80e0229b8a56, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 68ac220f8c4b51940b56605b3f52d955, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 31fa3cf5319e3d445913da73484eb096, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 46
+    avatar: {fileID: 21300000, guid: 9a318e9bd7fe595499c2084b265a9f7c, type: 3}
+    splashArt: {fileID: 21300000, guid: ce13d58f6500bd34d808f7d48d5bf2ab, type: 3}
+    banner: {fileID: 21300000, guid: 99632f3e8c4cd6846bee171db364b551, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 370f0af545b1687409a22efbdc248604, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: db0d41faeef217b469270cbe334d4a94, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 47
+    avatar: {fileID: 21300000, guid: 6be01173360aac9429d6fc589c968f8a, type: 3}
+    splashArt: {fileID: 21300000, guid: 86f32f552925af34cb6634dbb577da89, type: 3}
+    banner: {fileID: 21300000, guid: 2c12e2d4d2bb3054ea4f0ce0c9622b47, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: f0fa3997dd515c64fa1106f4bad60f5d, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: ddff5c58aed39db49a4455220a10632b, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 48
+    avatar: {fileID: 21300000, guid: 3da058d2a56e9464198abe1b15cfcde9, type: 3}
+    splashArt: {fileID: 21300000, guid: 22fff07fd4be981479a130e1f1ed7984, type: 3}
+    banner: {fileID: 21300000, guid: 617053f751779164e81a328dfd18d237, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: c23347ad3f34c2a41b4b27cc27e8d08d, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 56e617947f38cb24097103ef48930f10, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 49
+    avatar: {fileID: 21300000, guid: 6bfbd884c7ca9254493f63b827056bf3, type: 3}
+    splashArt: {fileID: 21300000, guid: 19b02b87483d8ce47a50dcd6ef9acaf1, type: 3}
+    banner: {fileID: 21300000, guid: 5a9e8e69fae27c7439f6665b417576d1, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: d0ce82e7d802bbf48b097b69dad8d008, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 150bd27f9419d694abd126e982e327c4, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 50
+    avatar: {fileID: 21300000, guid: 6efaa5398c5e3c94084b763296cebdc3, type: 3}
+    splashArt: {fileID: 21300000, guid: 2776a4c03822dc546ac75f36cbac3a37, type: 3}
+    banner: {fileID: 21300000, guid: a33baac490a4a88498d1444c3f410bab, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: d096e5b92785b224d814112c7bbe3483, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: c6ef601d8d5b69442ad5e459aeadd553, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 51
+    avatar: {fileID: 21300000, guid: 8011581a8146cc04eb6f6d8934c38cff, type: 3}
+    splashArt: {fileID: 21300000, guid: 0b602a7fdfd04df40a74407a4304ce9d, type: 3}
+    banner: {fileID: 21300000, guid: 01d63ace83f193645993caad0a220dbd, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 63622b4b9786f4c49815f8d6215ab131, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 5a37975bbec4e0c41b67dd37d4f47b51, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 52
+    avatar: {fileID: 21300000, guid: b995582b82fa85348af5bfc68267d2f4, type: 3}
+    splashArt: {fileID: 21300000, guid: 3002786a4e034f943b317c55a1a147b5, type: 3}
+    banner: {fileID: 21300000, guid: 875842cac01618b4491db873682c72a2, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: a68f1beb205b9d7449eea8df1707e47e, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 2bb9909f666099c4da25502193161168, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 53
+    avatar: {fileID: 21300000, guid: 5f9580cec2032d743a067f364849e24a, type: 3}
+    splashArt: {fileID: 21300000, guid: 1103c7fc4d1cc9349bde37d5e96a85ab, type: 3}
+    banner: {fileID: 21300000, guid: 34ad000c81e428b4c9edc31102063457, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 2ffc80d18936f944889c5d8902aaba69, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 684249b179ebefe4cb9fcabcaee2d801, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 54
+    avatar: {fileID: 21300000, guid: d7c4a5c5cbd362b41a3ea58008b9c1e4, type: 3}
+    splashArt: {fileID: 21300000, guid: e44db41dd0315a547b5a160a386ddc8e, type: 3}
+    banner: {fileID: 21300000, guid: 259de9839c8fd3c448a9bf0e63f6f9cd, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 8952d0b70a561b64f9d055b77fb024c9, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: a37297a0b141fe6469fcc83a0fa11687, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 55
+    avatar: {fileID: 21300000, guid: ce004269f89986f4291891b0de861386, type: 3}
+    splashArt: {fileID: 21300000, guid: 56a25624794058a4988a439eee52ff55, type: 3}
+    banner: {fileID: 21300000, guid: d79a0d233daa7664695dc938212a4e72, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 68453cf82d880324a86092fb6fd913d1, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: f6e061a2ffa3fee4f881cd5b14dbe947, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 56
+    avatar: {fileID: 21300000, guid: 61f753732fce43b46a03d42678a93a16, type: 3}
+    splashArt: {fileID: 21300000, guid: f865524f4870a7c4fa024ca0813950c2, type: 3}
+    banner: {fileID: 21300000, guid: a9eca505b75aa484a869c67a3770e3f7, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 9064578944221e644b3019179f40fea4, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 3c3c17f63ed93304db857f7f19fed66b, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 57
+    avatar: {fileID: 21300000, guid: c76edda411785534193bfaf21b5cbb95, type: 3}
+    splashArt: {fileID: 21300000, guid: b84586633cf7b6140a67ce69139436fc, type: 3}
+    banner: {fileID: 21300000, guid: 449f4c89753899447a2aa6567b9d51f4, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: d297378843a2507498113ede02a0ed4b, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 3735806e7771da7418062ab1d094bca9, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 58
+    avatar: {fileID: 21300000, guid: a96799efc2185b24b9ffe882a83c4565, type: 3}
+    splashArt: {fileID: 21300000, guid: d02630aef25dc5f4ea6e257997064287, type: 3}
+    banner: {fileID: 21300000, guid: cd80f80d4b5908b4491c9fc93fd3457b, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 23424e1016da3ba4f872e79eb881f16e, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: c028ce1da1967eb43a33a0f685db5830, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 59
+    avatar: {fileID: 21300000, guid: e4d5c76fea68d7d4eb8109179955bb58, type: 3}
+    splashArt: {fileID: 21300000, guid: 06c06d83baf9db940afe70eb8217f17b, type: 3}
+    banner: {fileID: 21300000, guid: e66bc88e006387f4a89783323ed3e82e, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 69f9f3b8f2d010243a56cf437f885518, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 5d013a80158b9734bbae58d812b4b717, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 60
+    avatar: {fileID: 21300000, guid: 5081899c5c9fdc340961f8662791f97a, type: 3}
+    splashArt: {fileID: 21300000, guid: 064f2773e4458aa429ff8234c4f27c56, type: 3}
+    banner: {fileID: 21300000, guid: 6edee38d0c4cb054193c13169619e90c, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: d1af156d34eeb524ab957a1f0e1cf0bb, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: bd35963749e35524fb2e9cfad732fcee, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 61
+    avatar: {fileID: 21300000, guid: 8552f568887e71047b288fc098526ce8, type: 3}
+    splashArt: {fileID: 21300000, guid: 9c8408bfbfdb13e42987063ffecb63a0, type: 3}
+    banner: {fileID: 21300000, guid: d7bcc9f6d00bd304da7dcc9156516aa7, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: c85410df96b4912408fb2599efa76812, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: b9f475ed646e1c34fbf0bd80ad2372c3, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 62
+    avatar: {fileID: 21300000, guid: 9e7a9a560a3d8754c8a5df91c77cc6eb, type: 3}
+    splashArt: {fileID: 21300000, guid: f97f47dca290baf438df83f53c5d9715, type: 3}
+    banner: {fileID: 21300000, guid: 039dbd8196c66984aadb38d6d61efaf8, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: dd28b4044625bb64cabb10c48fa9c360, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: e503de6cc76af0e40b408949bed4772b, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 63
+    avatar: {fileID: 21300000, guid: 61b8eb401fdf3cb48b75e2397078162f, type: 3}
+    splashArt: {fileID: 21300000, guid: 60004b07002b8664fa3f0e5b5e2e1a89, type: 3}
+    banner: {fileID: 21300000, guid: f75110362c08c9e45a008148c8369b53, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 04b01c97aefd93447a1ebc4ff641b68e, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 6298f432626cf9f49846d127816c428f, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 64
+    avatar: {fileID: 21300000, guid: 7ce78ffbf2e826346957721c51961927, type: 3}
+    splashArt: {fileID: 21300000, guid: a56e6acbe14df484e8d26ca92f477edc, type: 3}
+    banner: {fileID: 21300000, guid: ddf5fe1d4c7ca5845b24a71a6def1772, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 062d597627d6cf34d8a05bd8b79e1c4c, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 2ece4878a2f97df41aed1408682b1fbf, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 65
+    avatar: {fileID: 21300000, guid: e8f704ec087ca7f499170a1825620b38, type: 3}
+    splashArt: {fileID: 21300000, guid: 340fc6be05128414dbb765c8a161b3d8, type: 3}
+    banner: {fileID: 21300000, guid: ae5310a4110805545a29e31af1959438, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 68f6dcdd5fc6c9140ace8213e4af0251, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 915fbadc9af519a479fc1afc86aca8ff, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 66
+    avatar: {fileID: 21300000, guid: f1797e756a5d90d48bed40b2acfbb625, type: 3}
+    splashArt: {fileID: 21300000, guid: a210e72b99753ae46870f99b494629e8, type: 3}
+    banner: {fileID: 21300000, guid: 4e1f8ca36aa36424ca699caf1ed98470, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 6182b6d84f1d6a149a59cf73b5131e4a, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 7cf6aec2e0de6d049a0635168a217f8c, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 67
+    avatar: {fileID: 21300000, guid: 342eec6d058b4134f8d227341e64518b, type: 3}
+    splashArt: {fileID: 21300000, guid: 9727f5df6869cba4c973f4ab7d1288c1, type: 3}
+    banner: {fileID: 21300000, guid: 59fdc2bc1d434834ebe3efe5c78f6a20, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 879a3ca998a862b4ebb7609d0e853164, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: c4654f447e2c5db4789b0ba07f8707d9, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 68
+    avatar: {fileID: 21300000, guid: b38690672bae5454a96c7cde7b5aa08b, type: 3}
+    splashArt: {fileID: 21300000, guid: a00f607085b80264c82a687038b9a1e1, type: 3}
+    banner: {fileID: 21300000, guid: 9feff7dcb12f5a04aa8ec1aa038ede6d, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: eec0c3925012a294a8a369532169f259, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: a033babb0d10e9543b3fc9fecc9e9521, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 69
+    avatar: {fileID: 21300000, guid: ca477deb7683235419c4f1e8749681d2, type: 3}
+    splashArt: {fileID: 21300000, guid: f5a4e666dba3d304eb67e47cabfa56bf, type: 3}
+    banner: {fileID: 21300000, guid: e07a2e10a658f5544bd4491988dddeb4, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: c771090d4d387464bacc13b50b45b844, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: e2e293f20f027ab43a45eaaf8ff83edf, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 70
+    avatar: {fileID: 21300000, guid: 98315c4d31f72bb4dba06f0ecdc92108, type: 3}
+    splashArt: {fileID: 21300000, guid: d71a9252350db874882a077936f52ec2, type: 3}
+    banner: {fileID: 21300000, guid: 8de9dfd82c284fd42b5181601e6c3f96, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 9c5c0a6f3603cf148854b98a5c8d3f04, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: f313837c15d083643a07e683f4b519fb, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 71
+    avatar: {fileID: 21300000, guid: 3fe7f89e9a7e82f4cbe7ce181f9a715c, type: 3}
+    splashArt: {fileID: 21300000, guid: a994abc3d2e1caf46b43ad42d8abd049, type: 3}
+    banner: {fileID: 21300000, guid: 02412af8550f7cf4c8259e4df1468336, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 2541a640b26a03749a36118264749d29, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: d446268524af0f84899ae3107c89f818, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 72
+    avatar: {fileID: 21300000, guid: 704872cd0e3678849b2f8846b82bc351, type: 3}
+    splashArt: {fileID: 21300000, guid: 4c3a5c24822186d41abf7b4420b92386, type: 3}
+    banner: {fileID: 21300000, guid: 93fc3df5b5c179f40b16f92dc3fcd363, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 26d0f64f2aad85f4d8226ea3c29f9360, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: b2db4c78eb5a0c243b96c3f33ea691b2, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 73
+    avatar: {fileID: 21300000, guid: 33fd775126262f24dac5149c41279ce8, type: 3}
+    splashArt: {fileID: 21300000, guid: 1ed24d66193ab7c44ab13d9e040a6479, type: 3}
+    banner: {fileID: 21300000, guid: 65c41d15555f9e045bc936be153d5a2d, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 0589a3854f0800e4d99b858cbaa7cac8, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: b6ef413b583162041abaf4f79fd84720, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 74
+    avatar: {fileID: 21300000, guid: 63c83eb0945a1f4489acdc09c8953243, type: 3}
+    splashArt: {fileID: 21300000, guid: 5cdaa1026fae66947a8a65251b85d3fd, type: 3}
+    banner: {fileID: 21300000, guid: c3d0b56311dffce4bb29ff633e6e0d88, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: a7a1503f08f0da14bbf3fd32e8cf42ad, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 59b3e9e381a6ee84f817b63c1949e570, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 75
+    avatar: {fileID: 21300000, guid: d1adb75d2bfb66c4790cc8d2600bde87, type: 3}
+    splashArt: {fileID: 21300000, guid: ffa6893f14386a24999a6f2e4f5a6903, type: 3}
+    banner: {fileID: 21300000, guid: 3743f1b8e8289cc42af84f5a1972e748, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 30c03dd20fda45b408c69a6822d40e2e, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 31d3a00942159b64fb703509478ba601, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 76
+    avatar: {fileID: 21300000, guid: 998d3883989c33948af2a16c9c847416, type: 3}
+    splashArt: {fileID: 21300000, guid: db2e8cfdd64f49d4c822d3a64f6cae8b, type: 3}
+    banner: {fileID: 21300000, guid: e58f562f9bece81488f1aedd374d4cb4, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 318a24157f12720489983f24399eeca7, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: 68d79a1bed782484eb0bbfc63ae90f43, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}
+  - id: 77
+    avatar: {fileID: 21300000, guid: 72aaefd3aa0bdb94eb39df8c62afc1d7, type: 3}
+    splashArt: {fileID: 21300000, guid: 8264533f9762e054aa4462e7fa47758f, type: 3}
+    banner: {fileID: 21300000, guid: 25d30da43e96eca43a102f09baf5836b, type: 3}
+    lobbySkeleton: {fileID: 11400000, guid: 5910d23cee5b3aa448a4a1e4e3b9ff5d, type: 2}
+    battleSkeleton: {fileID: 11400000, guid: a5e50a0794f823547961b38e346384e9, type: 2}
+    passiveIcon: {fileID: 0}
+    skillIcon: {fileID: 0}
+    ultimateIcon: {fileID: 0}

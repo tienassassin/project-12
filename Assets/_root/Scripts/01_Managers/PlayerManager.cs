@@ -151,8 +151,11 @@ public class PlayerManager : Singleton<PlayerManager>
             if (hasUpdated) PlayFabManager.Instance.SaveAllPlayerData(dict);
 
             var level = int.Parse(dict[PlayFabKey.PLAYER_DATA_LEVEL]);
+            DebugLog.Message("Level: " + level);
             var avatarID = dict[PlayFabKey.PLAYER_DATA_AVATAR_ID];
+            DebugLog.Message("AvatarID: " + avatarID);
             var avatarFrameID = dict[PlayFabKey.PLAYER_DATA_AVATAR_FRAME_ID];
+            DebugLog.Message("AvatarFrameID: " + avatarFrameID);
             UIManager.Get<HomeUI>().SetPlayerInfo(level, avatarID, avatarFrameID);
         });
 
