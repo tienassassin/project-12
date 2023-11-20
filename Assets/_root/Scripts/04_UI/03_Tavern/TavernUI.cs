@@ -16,27 +16,25 @@ public class TavernUI : BaseUI
     // [SerializeField] private TMP_Dropdown drpSort;
     // [SerializeField] private Button btnApply;
     [TitleGroup("Entity:")]
-    [SerializeField] private TavernCell cellPrefab;
+    [SerializeField] private TavernCell _cellPrefab;
 
     [TitleGroup("Categories:")]
-    [SerializeField] private TMP_Text txtMortalNumber;
-    [SerializeField] private TMP_Text txtDivineNumber;
-    [SerializeField] private TMP_Text txtInfernalNumber;
-    [SerializeField] private TMP_Text txtChaosNumber;
-    [SerializeField] private Transform containerMortal;
-    [SerializeField] private Transform containerDivine;
-    [SerializeField] private Transform containerInfernal;
-    [SerializeField] private Transform containerChaos;
+    [SerializeField] private TMP_Text _txtMortalNumber;
+    [SerializeField] private TMP_Text _txtDivineNumber;
+    [SerializeField] private TMP_Text _txtInfernalNumber;
+    [SerializeField] private TMP_Text _txtChaosNumber;
+    [SerializeField] private Transform _containerMortal;
+    [SerializeField] private Transform _containerDivine;
+    [SerializeField] private Transform _containerInfernal;
+    [SerializeField] private Transform _containerChaos;
 
     [TitleGroup("Others:")]
-    [SerializeField] private Button btnClose;
+    [SerializeField] private Button _btnClose;
 
     private List<TavernCell> _mortalCells = new();
     private List<TavernCell> _divineCells = new();
     private List<TavernCell> _infernalCells = new();
     private List<TavernCell> _chaosCells = new();
-    
-    
     
 
     
@@ -65,18 +63,18 @@ public class TavernUI : BaseUI
     protected override void AssignUICallback()
     {
         // btnApply.onClick.AddListener(ApplyFilterAndSort);
-        btnClose.onClick.AddListener(Close);
+        _btnClose.onClick.AddListener(Close);
     }
 
     private void CleanUp()
     {
-        foreach (Transform child in containerMortal) { Destroy(child.gameObject); }
+        foreach (Transform child in _containerMortal) { Destroy(child.gameObject); }
 
-        foreach (Transform child in containerDivine) { Destroy(child.gameObject); }
+        foreach (Transform child in _containerDivine) { Destroy(child.gameObject); }
 
-        foreach (Transform child in containerInfernal) { Destroy(child.gameObject); }
+        foreach (Transform child in _containerInfernal) { Destroy(child.gameObject); }
 
-        foreach (Transform child in containerChaos) { Destroy(child.gameObject); }
+        foreach (Transform child in _containerChaos) { Destroy(child.gameObject); }
     }
 
     private void ApplyFilterAndSort()
@@ -95,15 +93,15 @@ public class TavernUI : BaseUI
     public void UpdateEntityCells()
     {
         var allEntities = GameManager.Instance.GetEntities();
-        var mortalEntities = allEntities.Where(x => x.canUnlock && x.realm == Realm.Mortal).ToList();
-        var divineEntities = allEntities.Where(x => x.canUnlock && x.realm == Realm.Divine).ToList();
-        var infernalEntities = allEntities.Where(x => x.canUnlock && x.realm == Realm.Infernal).ToList();
-        var chaosEntities = allEntities.Where(x => x.canUnlock && x.realm == Realm.Chaos).ToList();
+        var mortalEntities = allEntities.Where(x => x.canUnlock && x.Is(Realm.Mortal)).ToList();
+        var divineEntities = allEntities.Where(x => x.canUnlock && x.Is(Realm.Divine)).ToList();
+        var infernalEntities = allEntities.Where(x => x.canUnlock && x.Is(Realm.Infernal)).ToList();
+        var chaosEntities = allEntities.Where(x => x.canUnlock && x.Is(Realm.Chaos)).ToList();
 
-        UpdateEntityCells(mortalEntities, _mortalCells, containerMortal, txtMortalNumber);
-        UpdateEntityCells(divineEntities, _divineCells, containerDivine, txtDivineNumber);
-        UpdateEntityCells(infernalEntities, _infernalCells, containerInfernal, txtInfernalNumber);
-        UpdateEntityCells(chaosEntities, _chaosCells, containerChaos, txtChaosNumber);
+        UpdateEntityCells(mortalEntities, _mortalCells, _containerMortal, _txtMortalNumber);
+        UpdateEntityCells(divineEntities, _divineCells, _containerDivine, _txtDivineNumber);
+        UpdateEntityCells(infernalEntities, _infernalCells, _containerInfernal, _txtInfernalNumber);
+        UpdateEntityCells(chaosEntities, _chaosCells, _containerChaos, _txtChaosNumber);
     }
 
     private void UpdateEntityCells(List<EntityRecord> records, List<TavernCell> cells, Transform container,
@@ -121,7 +119,7 @@ public class TavernUI : BaseUI
         number.text = $"[{records.Count}/{records.Count}]";
         while (cells.Count < records.Count)
         {
-            var clone = Instantiate(cellPrefab, container);
+            var clone = Instantiate(_cellPrefab, container);
             cells.Add(clone);
         }
 

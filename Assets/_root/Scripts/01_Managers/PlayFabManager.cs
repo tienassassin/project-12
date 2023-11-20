@@ -222,7 +222,7 @@ public static class PlayFabKey
     public const string TITLE_ID = "F8171";
 
     public const string CURRENCY_GOLD = "GD";
-    public const string CURRENCY_DIAMOND = "DM";
+    public const string CURRENCY_COIN = "CN";
     public const string CURRENCY_ENERGY = "EN";
 
     public const string PLAYER_DATA_LEVEL = "level";

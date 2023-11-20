@@ -38,7 +38,7 @@ public class ValhallaStatDetail : AssassinBehaviour, IPointerEnterHandler, IPoin
         detailPanel.SetActive(false);
     }
 
-    public void Init(Stats baseStats, Stats nonEqmStats, Stats overallStats, DamageType dmgType)
+    public void Init(EStats baseStats, EStats nonEqmStats, EStats overallStats, DamageType dmgType)
     {
         var diff0 = nonEqmStats - baseStats;
         var diff1 = overallStats - nonEqmStats;

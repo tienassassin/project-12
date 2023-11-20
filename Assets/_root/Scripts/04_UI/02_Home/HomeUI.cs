@@ -73,8 +73,8 @@ public class HomeUI : BaseUI
     {
         PlayFabManager.Instance.FetchCurrencies((currenciesDict, rechargeDict) =>
         {
-            txtGold.text = $"{currenciesDict[PlayFabKey.CURRENCY_GOLD]}";
-            txtDiamond.text = $"{currenciesDict[PlayFabKey.CURRENCY_DIAMOND]}";
+            txtGold.text = $"{currenciesDict[PlayFabKey.CURRENCY_COIN]}";
+            txtDiamond.text = $"{currenciesDict[PlayFabKey.CURRENCY_GOLD]}";
             txtEnergy.text = $"{currenciesDict[PlayFabKey.CURRENCY_ENERGY]}" +
                              $"/{rechargeDict[PlayFabKey.CURRENCY_ENERGY].RechargeMax}";
         });

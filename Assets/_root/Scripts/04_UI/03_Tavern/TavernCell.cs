@@ -12,8 +12,8 @@ public class TavernCell : AssassinBehaviour
     {
         _entityRecord = entityRecord;
         imgEntityAvatar.sprite = AssetLibrary.Instance.GetEntity(_entityRecord.id).avatar;
-        string roleSuffix = _entityRecord.role != Role.Slayer ? null :
-            _entityRecord.damageType == DamageType.Magical ? "_MDmg" : "_PDmg";
-        imgRole.sprite = AssetLibrary.Instance.GetRole(_entityRecord.role, roleSuffix);
+        string roleSuffix = _entityRecord.IsNot(Role.Slayer) ? null :
+            _entityRecord.Is(DamageType.Magical) ? "_MDmg" : "_PDmg";
+        imgRole.sprite = AssetLibrary.Instance.GetRole(_entityRecord.type.role, roleSuffix);
     }
 }

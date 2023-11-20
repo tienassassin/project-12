@@ -7208,16 +7208,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4602463018247835366}
-  cellPrefab: {fileID: 183282983930496728, guid: 6b7a0c6d1c8ef314caef73fb06da29c6, type: 3}
-  txtMortalNumber: {fileID: 8978575168088098157}
-  txtDivineNumber: {fileID: 3332213094866958908}
-  txtInfernalNumber: {fileID: 7601145288434593613}
-  txtChaosNumber: {fileID: 4521259310060003770}
-  containerMortal: {fileID: 4817793957856590225}
-  containerDivine: {fileID: 4393704699802678080}
-  containerInfernal: {fileID: 3781877286257409363}
-  containerChaos: {fileID: 1405019133532558024}
-  btnClose: {fileID: 1837581459776830518}
+  _cellPrefab: {fileID: 183282983930496728, guid: 6b7a0c6d1c8ef314caef73fb06da29c6, type: 3}
+  _txtMortalNumber: {fileID: 8978575168088098157}
+  _txtDivineNumber: {fileID: 3332213094866958908}
+  _txtInfernalNumber: {fileID: 7601145288434593613}
+  _txtChaosNumber: {fileID: 4521259310060003770}
+  _containerMortal: {fileID: 4817793957856590225}
+  _containerDivine: {fileID: 4393704699802678080}
+  _containerInfernal: {fileID: 3781877286257409363}
+  _containerChaos: {fileID: 1405019133532558024}
+  _btnClose: {fileID: 1837581459776830518}
 --- !u!114 &993501636121194380
 MonoBehaviour:
   m_ObjectHideFlags: 0

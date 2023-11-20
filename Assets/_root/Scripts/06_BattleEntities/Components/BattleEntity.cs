@@ -15,7 +15,7 @@ public abstract class BattleEntity : AssassinBehaviour, IDamageDealer, IDamageTa
     // [SerializeField] protected List<Equipment> eqmList = new();
 
     [TitleGroup("IN-GAME STATS:")]
-    [SerializeField] private Stats stats;
+    [SerializeField] private EStats stats;
 
     [SerializeField] private int hp;
     [SerializeField] private int virtualHp;
@@ -56,7 +56,8 @@ public abstract class BattleEntity : AssassinBehaviour, IDamageDealer, IDamageTa
     /// </summary>
     public string EntityID => entityData.info.id;
     public Side Side => side;
-    public Stats Stats
+
+    public EStats Stats
     {
         get => stats;
         protected set => stats = value;

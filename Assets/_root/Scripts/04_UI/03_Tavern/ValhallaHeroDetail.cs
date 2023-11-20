@@ -21,12 +21,12 @@ public class ValhallaHeroDetail : AssassinBehaviour
 
     private EntityData _entityData;
 
-    private Stats _baseStats;
+    private EStats _baseStats;
     private int _curExp;
     private int _level;
     private int _nextExp;
-    private Stats _nonEqmStats;
-    private Stats _overallStats;
+    private EStats _nonEqmStats;
+    private EStats _overallStats;
 
     private void OnEnable()
     {

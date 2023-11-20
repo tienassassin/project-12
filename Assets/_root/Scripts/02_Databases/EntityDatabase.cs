@@ -14,40 +14,50 @@ public class EntityDatabase : AssassinBehaviour
         foreach (var jToken in jArray)
         {
             var jObjectEntity = (JObject)jToken;
-            var entityRcd = new EntityRecord
+            var entityRcd = new EntityRecord();
+
+            entityRcd.id = (int)jObjectEntity["id"];
+            entityRcd.canUnlock = (bool)jObjectEntity["canUnlock"];
+            var info = new EInfo();
+            var type = new EType();
+            var stats = new EStats();
+
+            var jObjectInfo = (JObject)jObjectEntity["info"];
+            if (jObjectInfo != null)
             {
-                id = (string)jObjectEntity["id"],
-                canUnlock = (bool)jObjectEntity["canUnlock"],
-                name = (string)jObjectEntity["name"],
-                alias = (string)jObjectEntity["alias"],
-                story = (string)jObjectEntity["story"],
-                tier = Enum.Parse<Tier>((string)jObjectEntity["tier"]),
-                role = Enum.Parse<Role>((string)jObjectEntity["role"]),
-                realm = Enum.Parse<Realm>((string)jObjectEntity["realm"]),
-                damageType = Enum.Parse<DamageType>((string)jObjectEntity["damageType"]),
-                attackRange = Enum.Parse<AttackRange>((string)jObjectEntity["attackRange"])
-            };
+                info.name = (string)jObjectInfo["name"];
+                info.alias = (string)jObjectInfo["alias"];
+                info.story = (string)jObjectInfo["story"];
+            }
+
+            var jObjectType = (JObject)jObjectEntity["type"];
+            if (jObjectType != null)
+            {
+                type.tier = Enum.Parse<Tier>((string)jObjectType["tier"]);
+                type.role = Enum.Parse<Role>((string)jObjectType["role"]);
+                type.realm = Enum.Parse<Realm>((string)jObjectType["realm"]);
+                type.damageType = Enum.Parse<DamageType>((string)jObjectType["damageType"]);
+                type.attackRange = Enum.Parse<AttackRange>((string)jObjectType["attackRange"]);
+            }
 
             var jObjectStats = (JObject)jObjectEntity["stats"];
             if (jObjectStats != null)
             {
-                var stats = new Stats
-                {
-                    health = Utils.Parse<int>((string)jObjectStats["health"]),
-                    damage = Utils.Parse<int>((string)jObjectStats["damage"]),
-                    armor = Utils.Parse<int>((string)jObjectStats["armor"]),
-                    resistance = Utils.Parse<int>((string)jObjectStats["resistance"]),
-                    intelligence = Utils.Parse<int>((string)jObjectStats["intelligence"]),
-                    speed = Utils.Parse<int>((string)jObjectStats["speed"]),
-                    luck = Utils.Parse<int>((string)jObjectStats["luck"]),
-                    critDamage = Utils.Parse<int>((string)jObjectStats["critDamage"]),
-                    lifeSteal = Utils.Parse<int>((string)jObjectStats["lifeSteal"]),
-                    accuracy = Utils.Parse<int>((string)jObjectStats["accuracy"])
-                };
-
-                entityRcd.stats = stats;
+                stats.health = Utils.Parse<int>((string)jObjectStats["health"]);
+                stats.damage = Utils.Parse<int>((string)jObjectStats["damage"]);
+                stats.armor = Utils.Parse<int>((string)jObjectStats["armor"]);
+                stats.resistance = Utils.Parse<int>((string)jObjectStats["resistance"]);
+                stats.intelligence = Utils.Parse<int>((string)jObjectStats["intelligence"]);
+                stats.speed = Utils.Parse<int>((string)jObjectStats["speed"]);
+                stats.luck = Utils.Parse<int>((string)jObjectStats["luck"]);
+                stats.critDamage = Utils.Parse<int>((string)jObjectStats["critDamage"]);
+                stats.lifeSteal = Utils.Parse<int>((string)jObjectStats["lifeSteal"]);
+                stats.accuracy = Utils.Parse<int>((string)jObjectStats["accuracy"]);
             }
 
+            entityRcd.info = info;
+            entityRcd.type = type;
+            entityRcd.stats = stats;
             entities.Add(entityRcd);
         }
     }
@@ -101,24 +111,54 @@ public class EntityDatabase : AssassinBehaviour
 [Serializable]
 public struct EntityRecord
 {
-    public string id;
+    public int id;
     public bool canUnlock;
+    [FoldoutGroup("Info")] [HideLabel]
+    public EInfo info;
+    [FoldoutGroup("Type")] [HideLabel]
+    public EType type;
+    [FoldoutGroup("Stats")] [HideLabel]
+    public EStats stats;
+
+    public bool Is(object condition)
+    {
+        return condition switch
+        {
+            Tier tier => type.tier == tier,
+            Role role => type.role == role,
+            Realm realm => type.realm == realm,
+            DamageType dmgType => type.damageType == dmgType,
+            AttackRange atkRange => type.attackRange == atkRange,
+            _ => false
+        };
+    }
+
+    public bool IsNot(object condition)
+    {
+        return !Is(condition);
+    }
+}
+
+[Serializable]
+public struct EInfo
+{
     public string name;
     public string alias;
     public string story;
+}
+
+[Serializable]
+public struct EType
+{
     public Tier tier;
     public Role role;
     public Realm realm;
     public DamageType damageType;
     public AttackRange attackRange;
-
-    [FoldoutGroup("Stats")]
-    [HideLabel]
-    public Stats stats;
 }
 
 [Serializable]
-public struct Stats
+public struct EStats
 {
     public int health;
     public int damage;
@@ -133,9 +173,9 @@ public struct Stats
     public int lifeSteal;
     public int accuracy;
 
-    public Stats GetStatsByLevel(int level, float growth)
+    public EStats GetStatsByLevel(int level, float growth)
     {
-        return new Stats
+        return new EStats
         {
             health = (int)(health * Mathf.Pow(1 + growth, level - 1)),
             damage = (int)(damage * Mathf.Pow(1 + growth, level - 1)),
@@ -152,9 +192,9 @@ public struct Stats
         };
     }
 
-    public static Stats operator +(Stats st1, Stats st2)
+    public static EStats operator +(EStats st1, EStats st2)
     {
-        return new Stats
+        return new EStats
         {
             health = st1.health + st2.health,
             damage = st1.damage + st2.damage,
@@ -171,9 +211,9 @@ public struct Stats
         };
     }
 
-    public static Stats operator -(Stats st1, Stats st2)
+    public static EStats operator -(EStats st1, EStats st2)
     {
-        return new Stats
+        return new EStats
         {
             health = st1.health - st2.health,
             damage = st1.damage - st2.damage,
@@ -190,9 +230,9 @@ public struct Stats
         };
     }
 
-    public static Stats operator *(Stats st1, float rate)
+    public static EStats operator *(EStats st1, float rate)
     {
-        return new Stats
+        return new EStats
         {
             health = (int)(st1.health * rate),
             damage = (int)(st1.damage * rate),

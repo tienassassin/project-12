@@ -1,6 +1,5 @@
 using System;
 using Sirenix.OdinInspector;
-using Spine.Unity;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "EntityData", menuName = "DB/EntityData")]
@@ -35,7 +34,7 @@ public struct EntityInfo
 
     [FoldoutGroup("Stats")]
     [HideLabel]
-    public Stats stats;
+    public EStats stats;
 }
 
 

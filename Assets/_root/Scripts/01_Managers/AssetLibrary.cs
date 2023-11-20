@@ -44,9 +44,9 @@ public class AssetLibrary : Singleton<AssetLibrary>
 
     #region Entities
 
-    public EntityAsset GetEntity(string id)
+    public EntityAsset GetEntity(int id)
     {
-        return entityLibrary.entityAssets.Find(x => x.id.Equals(id));
+        return entityLibrary.entityAssets.Find(x => x.id == id);
     }
 
     public Sprite GetRole(Role role, string suffix = null)
